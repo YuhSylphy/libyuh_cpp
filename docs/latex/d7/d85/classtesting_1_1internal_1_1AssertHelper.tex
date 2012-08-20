@@ -1,0 +1,167 @@
+\hypertarget{classtesting_1_1internal_1_1AssertHelper}{\section{\-Assert\-Helper \-Class \-Reference}
+\label{d7/d85/classtesting_1_1internal_1_1AssertHelper}\index{\-Assert\-Helper@{\-Assert\-Helper}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtesting_1_1internal_1_1AssertHelper_1_1AssertHelperData}{\-Assert\-Helper\-Data}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1AssertHelper_ad2f02ef373bd4828ea059b997adf2ded}{\-Assert\-Helper} (\hyperlink{classtesting_1_1TestPartResult_a1d1cfd8ffb84e947f82999c682b666a7}{\-Test\-Part\-Result\-::\-Type} type, const char $\ast$file, int line, const char $\ast$message)
+\item 
+\hyperlink{classtesting_1_1internal_1_1AssertHelper_a8b4957313ec967080674296be5b6e1bc}{$\sim$\-Assert\-Helper} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1AssertHelper_ad4e11743a05a2239e6e73b711c89e6d3}{operator=} (const \hyperlink{classtesting_1_1Message}{\-Message} \&message) const 
+\item 
+\hyperlink{classtesting_1_1internal_1_1AssertHelper_ad2f02ef373bd4828ea059b997adf2ded}{\-Assert\-Helper} (\hyperlink{classtesting_1_1TestPartResult_a1d1cfd8ffb84e947f82999c682b666a7}{\-Test\-Part\-Result\-::\-Type} type, const char $\ast$file, int line, const char $\ast$message)
+\item 
+\hyperlink{classtesting_1_1internal_1_1AssertHelper_a8b4957313ec967080674296be5b6e1bc}{$\sim$\-Assert\-Helper} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1AssertHelper_ad4e11743a05a2239e6e73b711c89e6d3}{operator=} (const \hyperlink{classtesting_1_1Message}{\-Message} \&message) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1AssertHelper_a37f75fff63325e9474ccc5e3d854c8ed}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1AssertHelper}{\-Assert\-Helper})
+\item 
+\hyperlink{classtesting_1_1internal_1_1AssertHelper_a37f75fff63325e9474ccc5e3d854c8ed}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1AssertHelper}{\-Assert\-Helper})
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtesting_1_1internal_1_1AssertHelper_1_1AssertHelperData}{\-Assert\-Helper\-Data} $\ast$const \hyperlink{classtesting_1_1internal_1_1AssertHelper_acb74cc67a1b0371db63e76b73ebf3a13}{data\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 18616 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1AssertHelper_ad2f02ef373bd4828ea059b997adf2ded}{\index{testing\-::internal\-::\-Assert\-Helper@{testing\-::internal\-::\-Assert\-Helper}!\-Assert\-Helper@{\-Assert\-Helper}}
+\index{\-Assert\-Helper@{\-Assert\-Helper}!testing::internal::AssertHelper@{testing\-::internal\-::\-Assert\-Helper}}
+\subsubsection[{\-Assert\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assert\-Helper} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Part\-Result\-::\-Type}}]{type, }
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{d7/d85/classtesting_1_1internal_1_1AssertHelper_ad2f02ef373bd4828ea059b997adf2ded}
+
+
+\-Definition at line 1644 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+    : data_(new AssertHelperData(type, file, line, message)) {
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1AssertHelper_a8b4957313ec967080674296be5b6e1bc}{\index{testing\-::internal\-::\-Assert\-Helper@{testing\-::internal\-::\-Assert\-Helper}!$\sim$\-Assert\-Helper@{$\sim$\-Assert\-Helper}}
+\index{$\sim$\-Assert\-Helper@{$\sim$\-Assert\-Helper}!testing::internal::AssertHelper@{testing\-::internal\-::\-Assert\-Helper}}
+\subsubsection[{$\sim$\-Assert\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Assert\-Helper} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d7/d85/classtesting_1_1internal_1_1AssertHelper_a8b4957313ec967080674296be5b6e1bc}
+
+
+\-Definition at line 1651 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                            {
+  delete data_;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1AssertHelper_ad2f02ef373bd4828ea059b997adf2ded}{\index{testing\-::internal\-::\-Assert\-Helper@{testing\-::internal\-::\-Assert\-Helper}!\-Assert\-Helper@{\-Assert\-Helper}}
+\index{\-Assert\-Helper@{\-Assert\-Helper}!testing::internal::AssertHelper@{testing\-::internal\-::\-Assert\-Helper}}
+\subsubsection[{\-Assert\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assert\-Helper} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Part\-Result\-::\-Type}}]{type, }
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{d7/d85/classtesting_1_1internal_1_1AssertHelper_ad2f02ef373bd4828ea059b997adf2ded}
+\hypertarget{classtesting_1_1internal_1_1AssertHelper_a8b4957313ec967080674296be5b6e1bc}{\index{testing\-::internal\-::\-Assert\-Helper@{testing\-::internal\-::\-Assert\-Helper}!$\sim$\-Assert\-Helper@{$\sim$\-Assert\-Helper}}
+\index{$\sim$\-Assert\-Helper@{$\sim$\-Assert\-Helper}!testing::internal::AssertHelper@{testing\-::internal\-::\-Assert\-Helper}}
+\subsubsection[{$\sim$\-Assert\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Assert\-Helper} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d7/d85/classtesting_1_1internal_1_1AssertHelper_a8b4957313ec967080674296be5b6e1bc}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1AssertHelper_a37f75fff63325e9474ccc5e3d854c8ed}{\index{testing\-::internal\-::\-Assert\-Helper@{testing\-::internal\-::\-Assert\-Helper}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::AssertHelper@{testing\-::internal\-::\-Assert\-Helper}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Assert\-Helper}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d85/classtesting_1_1internal_1_1AssertHelper_a37f75fff63325e9474ccc5e3d854c8ed}
+\hypertarget{classtesting_1_1internal_1_1AssertHelper_a37f75fff63325e9474ccc5e3d854c8ed}{\index{testing\-::internal\-::\-Assert\-Helper@{testing\-::internal\-::\-Assert\-Helper}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::AssertHelper@{testing\-::internal\-::\-Assert\-Helper}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Assert\-Helper}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d85/classtesting_1_1internal_1_1AssertHelper_a37f75fff63325e9474ccc5e3d854c8ed}
+\hypertarget{classtesting_1_1internal_1_1AssertHelper_ad4e11743a05a2239e6e73b711c89e6d3}{\index{testing\-::internal\-::\-Assert\-Helper@{testing\-::internal\-::\-Assert\-Helper}!operator=@{operator=}}
+\index{operator=@{operator=}!testing::internal::AssertHelper@{testing\-::internal\-::\-Assert\-Helper}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Message} \&}]{message}
+\end{DoxyParamCaption}
+) const}}\label{d7/d85/classtesting_1_1internal_1_1AssertHelper_ad4e11743a05a2239e6e73b711c89e6d3}
+\hypertarget{classtesting_1_1internal_1_1AssertHelper_ad4e11743a05a2239e6e73b711c89e6d3}{\index{testing\-::internal\-::\-Assert\-Helper@{testing\-::internal\-::\-Assert\-Helper}!operator=@{operator=}}
+\index{operator=@{operator=}!testing::internal::AssertHelper@{testing\-::internal\-::\-Assert\-Helper}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Message} \&}]{message}
+\end{DoxyParamCaption}
+) const}}\label{d7/d85/classtesting_1_1internal_1_1AssertHelper_ad4e11743a05a2239e6e73b711c89e6d3}
+
+
+\-Definition at line 1656 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                         {
+  UnitTest::GetInstance()->
+    AddTestPartResult(data_->type, data_->file, data_->line,
+                      AppendUserMessage(data_->message, message),
+                      UnitTest::GetInstance()->impl()
+                      ->CurrentOsStackTraceExceptTop(1)
+                      // Skips the stack frame for this function itself.
+                      );  // NOLINT
+}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1AssertHelper_acb74cc67a1b0371db63e76b73ebf3a13}{\index{testing\-::internal\-::\-Assert\-Helper@{testing\-::internal\-::\-Assert\-Helper}!data\-\_\-@{data\-\_\-}}
+\index{data\-\_\-@{data\-\_\-}!testing::internal::AssertHelper@{testing\-::internal\-::\-Assert\-Helper}}
+\subsubsection[{data\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assert\-Helper\-Data} $\ast$const {\bf data\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d85/classtesting_1_1internal_1_1AssertHelper_acb74cc67a1b0371db63e76b73ebf3a13}
+
+
+\-Definition at line 18650 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/\hyperlink{include_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}

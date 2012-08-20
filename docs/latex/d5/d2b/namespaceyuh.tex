@@ -1,0 +1,162 @@
+\hypertarget{namespaceyuh}{\section{yuh \-Namespace \-Reference}
+\label{d5/d2b/namespaceyuh}\index{yuh@{yuh}}
+}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceyuh_1_1range__detail}{range\-\_\-detail}
+\end{DoxyCompactItemize}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}
+\item 
+class \hyperlink{classyuh_1_1prime__range}{prime\-\_\-range}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}$<$ \-Integer $>$ \hyperlink{namespaceyuh_a11988532f81d143e1b5b74d461dd8067}{fibonacci} (\-Integer first=0)
+\item 
+{\footnotesize template$<$typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}$<$ \-Integer $>$ \hyperlink{namespaceyuh_a17b1d33879798b95bdefe171df90380a}{fibonacci} (\-Integer first, \-Integer last)
+\item 
+\hyperlink{classyuh_1_1prime__range}{prime\-\_\-range} \hyperlink{namespaceyuh_ad0e08caa71b8e5172b1535657bbc0648}{prime} (int first=1)
+\item 
+\hyperlink{classyuh_1_1prime__range}{prime\-\_\-range} \hyperlink{namespaceyuh_a31e810e0c57ef83ca515b12f1aac0bf3}{prime} (int first, int last)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{namespaceyuh_af542f8440602da42322ddb7ea8242336}{\index{yuh@{yuh}!prime\-\_\-type@{prime\-\_\-type}}
+\index{prime\-\_\-type@{prime\-\_\-type}!yuh@{yuh}}
+\subsubsection[{prime\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef long long {\bf prime\-\_\-type}}}\label{d5/d2b/namespaceyuh_af542f8440602da42322ddb7ea8242336}
+
+
+\-Definition at line 11 of file prime.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespaceyuh_a11988532f81d143e1b5b74d461dd8067}{\index{yuh@{yuh}!fibonacci@{fibonacci}}
+\index{fibonacci@{fibonacci}!yuh@{yuh}}
+\subsubsection[{fibonacci}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fibonacci\-\_\-range}$<$\-Integer$>$ {\bf yuh\-::fibonacci} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{first = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_a11988532f81d143e1b5b74d461dd8067}
+無限フィボナッチ数列 index指定 \mbox{[}first, \-Inf) 単純にalgorithmに渡したりすると無限ループなので注意
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, \-Inf)のフィボナッチ数列を表すrange 
+\end{DoxyReturn}
+
+
+\-Definition at line 206 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        BOOST_ASSERT( first >= 0 );
+        return fibonacci_range<Integer>(first);
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a17b1d33879798b95bdefe171df90380a}{\index{yuh@{yuh}!fibonacci@{fibonacci}}
+\index{fibonacci@{fibonacci}!yuh@{yuh}}
+\subsubsection[{fibonacci}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fibonacci\-\_\-range}$<$\-Integer$>$ {\bf yuh\-::fibonacci} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{first, }
+\item[{\-Integer}]{last}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_a17b1d33879798b95bdefe171df90380a}
+有限フィボナッチ数列 index指定 \mbox{[}first, last) 
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+{\em last} & 範囲の終わり(含まない) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, last)のフィボナッチ数列を表すrange 
+\end{DoxyReturn}
+
+
+\-Definition at line 220 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        BOOST_ASSERT( first <= last );
+        BOOST_ASSERT( first >= 0 );
+        return fibonacci_range<Integer>(first, last);
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_ad0e08caa71b8e5172b1535657bbc0648}{\index{yuh@{yuh}!prime@{prime}}
+\index{prime@{prime}!yuh@{yuh}}
+\subsubsection[{prime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prime\-\_\-range} {\bf prime} (
+\begin{DoxyParamCaption}
+\item[{int}]{first = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_ad0e08caa71b8e5172b1535657bbc0648}
+無限素数列 index指定 \mbox{[}first, \-Inf) 単純にalgorithmに渡したりすると無限ループなので注意
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, \-Inf)の素数列を表すrange 
+\end{DoxyReturn}
+
+
+\-Definition at line 146 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        BOOST_ASSERT( first >= 1 );
+        return prime_range(first);
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a31e810e0c57ef83ca515b12f1aac0bf3}{\index{yuh@{yuh}!prime@{prime}}
+\index{prime@{prime}!yuh@{yuh}}
+\subsubsection[{prime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prime\-\_\-range} {\bf prime} (
+\begin{DoxyParamCaption}
+\item[{int}]{first, }
+\item[{int}]{last}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_a31e810e0c57ef83ca515b12f1aac0bf3}
+有限素数列 index指定 \mbox{[}first, last)
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+{\em last} & 範囲の終わり(含まない) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, last)の素数列を表すrange 
+\end{DoxyReturn}
+
+
+\-Definition at line 152 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        BOOST_ASSERT( first <= last );
+        BOOST_ASSERT( first >= 1 );
+        return prime_range(first, last);
+    }
+\end{DoxyCode}

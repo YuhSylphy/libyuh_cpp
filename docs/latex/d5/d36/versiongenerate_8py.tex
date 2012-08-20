@@ -1,0 +1,35 @@
+\hypertarget{versiongenerate_8py}{\section{gtest-\/1.6.0/xcode/\-Scripts/versiongenerate.py \-File \-Reference}
+\label{d5/d36/versiongenerate_8py}\index{gtest-\/1.\-6.\-0/xcode/\-Scripts/versiongenerate.\-py@{gtest-\/1.\-6.\-0/xcode/\-Scripts/versiongenerate.\-py}}
+}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceversiongenerate}{versiongenerate}
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespaceversiongenerate_ab23e267aae4e1eeda524f6c6feaab267}{input\-\_\-dir} = sys.\-argv\mbox{[}1\mbox{]}
+\item 
+list \hyperlink{namespaceversiongenerate_ae82ead30c0dfff23c81a0aa557d3602f}{output\-\_\-dir} = sys.\-argv\mbox{[}2\mbox{]}
+\item 
+tuple \hyperlink{namespaceversiongenerate_ae6512f1802b7f1f9cc6f196a0938db60}{config\-\_\-file} = open(\char`\"{}\%s/configure.\-ac\char`\"{} \% input\-\_\-dir, 'r')
+\item 
+int \hyperlink{namespaceversiongenerate_af22ff4ab7a026e6c3b4b08eafb2df027}{buffer\-\_\-size} = 1024
+\item 
+tuple \hyperlink{namespaceversiongenerate_a8e26931bb0a705d8513c611d655b676e}{opening\-\_\-string} = config\-\_\-file.\-read(buffer\-\_\-size)
+\item 
+tuple \hyperlink{namespaceversiongenerate_ac98c4fe7ce8062977b7c87a7befa10a1}{version\-\_\-expression}
+\item 
+tuple \hyperlink{namespaceversiongenerate_a35eb88dbd6495135f918fcd2966afe32}{version\-\_\-values} = version\-\_\-expression.\-search(opening\-\_\-string)
+\item 
+tuple \hyperlink{namespaceversiongenerate_ac557741270717fefb4c17ddc82079890}{major\-\_\-version} = version\-\_\-values.\-group(1)
+\item 
+tuple \hyperlink{namespaceversiongenerate_a0c85aae24f1a132c061845c52511f5a5}{minor\-\_\-version} = version\-\_\-values.\-group(2)
+\item 
+tuple \hyperlink{namespaceversiongenerate_ab2bab3169056e57b2e0e10df8eac77aa}{fix\-\_\-version} = version\-\_\-values.\-group(3)
+\item 
+string \hyperlink{namespaceversiongenerate_a0cb0dcaab1cc3237a0c88b100cab3b32}{file\-\_\-data}
+\item 
+tuple \hyperlink{namespaceversiongenerate_afa99387d0fcf7e17fe4328fcdc9e9b09}{version\-\_\-file} = open(\char`\"{}\%s/\-Version.\-h\char`\"{} \% output\-\_\-dir, 'w')
+\end{DoxyCompactItemize}

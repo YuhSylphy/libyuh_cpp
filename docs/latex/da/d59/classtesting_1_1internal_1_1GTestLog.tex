@@ -1,0 +1,170 @@
+\hypertarget{classtesting_1_1internal_1_1GTestLog}{\section{\-G\-Test\-Log \-Class \-Reference}
+\label{da/d59/classtesting_1_1internal_1_1GTestLog}\index{\-G\-Test\-Log@{\-G\-Test\-Log}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1GTestLog_a42659176d108d5be556dc5b2d7052cbd}{\-G\-Test\-Log} (\hyperlink{namespacetesting_1_1internal_ae0fec1ef790bf38b60329e0ca9538e9a}{\-G\-Test\-Log\-Severity} severity, const char $\ast$file, int line)
+\item 
+\hyperlink{classtesting_1_1internal_1_1GTestLog_a940c2f4f55e8acf2c5dd52a75f828186}{$\sim$\-G\-Test\-Log} ()
+\item 
+\-::std\-::ostream \& \hyperlink{classtesting_1_1internal_1_1GTestLog_a7f92cb631b3e86fed035acac6a11a929}{\-Get\-Stream} ()
+\item 
+\hyperlink{classtesting_1_1internal_1_1GTestLog_a42659176d108d5be556dc5b2d7052cbd}{\-G\-Test\-Log} (\hyperlink{namespacetesting_1_1internal_ae0fec1ef790bf38b60329e0ca9538e9a}{\-G\-Test\-Log\-Severity} severity, const char $\ast$file, int line)
+\item 
+\hyperlink{classtesting_1_1internal_1_1GTestLog_a940c2f4f55e8acf2c5dd52a75f828186}{$\sim$\-G\-Test\-Log} ()
+\item 
+\-::std\-::ostream \& \hyperlink{classtesting_1_1internal_1_1GTestLog_a7f92cb631b3e86fed035acac6a11a929}{\-Get\-Stream} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1GTestLog_ab634134d3562ed5846deef1a12b00425}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1GTestLog}{\-G\-Test\-Log})
+\item 
+\hyperlink{classtesting_1_1internal_1_1GTestLog_ab634134d3562ed5846deef1a12b00425}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1GTestLog}{\-G\-Test\-Log})
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{namespacetesting_1_1internal_ae0fec1ef790bf38b60329e0ca9538e9a}{\-G\-Test\-Log\-Severity} \hyperlink{classtesting_1_1internal_1_1GTestLog_a6c8b1af920457ac4f42706bbd995100b}{severity\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 1970 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1GTestLog_a42659176d108d5be556dc5b2d7052cbd}{\index{testing\-::internal\-::\-G\-Test\-Log@{testing\-::internal\-::\-G\-Test\-Log}!\-G\-Test\-Log@{\-G\-Test\-Log}}
+\index{\-G\-Test\-Log@{\-G\-Test\-Log}!testing::internal::GTestLog@{testing\-::internal\-::\-G\-Test\-Log}}
+\subsubsection[{\-G\-Test\-Log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-Test\-Log} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-G\-Test\-Log\-Severity}}]{severity, }
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)}}\label{da/d59/classtesting_1_1internal_1_1GTestLog_a42659176d108d5be556dc5b2d7052cbd}
+
+
+\-Definition at line 8262 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+    : severity_(severity) {
+  const char* const marker =
+      severity == GTEST_INFO ?    "[  INFO ]" :
+      severity == GTEST_WARNING ? "[WARNING]" :
+      severity == GTEST_ERROR ?   "[ ERROR ]" : "[ FATAL ]";
+  GetStream() << ::std::endl << marker << " "
+              << FormatFileLocation(file, line).c_str() << ": ";
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1GTestLog_a940c2f4f55e8acf2c5dd52a75f828186}{\index{testing\-::internal\-::\-G\-Test\-Log@{testing\-::internal\-::\-G\-Test\-Log}!$\sim$\-G\-Test\-Log@{$\sim$\-G\-Test\-Log}}
+\index{$\sim$\-G\-Test\-Log@{$\sim$\-G\-Test\-Log}!testing::internal::GTestLog@{testing\-::internal\-::\-G\-Test\-Log}}
+\subsubsection[{$\sim$\-G\-Test\-Log}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-G\-Test\-Log} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{da/d59/classtesting_1_1internal_1_1GTestLog_a940c2f4f55e8acf2c5dd52a75f828186}
+
+
+\-Definition at line 8273 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                    {
+  GetStream() << ::std::endl;
+  if (severity_ == GTEST_FATAL) {
+    fflush(stderr);
+    posix::Abort();
+  }
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1GTestLog_a42659176d108d5be556dc5b2d7052cbd}{\index{testing\-::internal\-::\-G\-Test\-Log@{testing\-::internal\-::\-G\-Test\-Log}!\-G\-Test\-Log@{\-G\-Test\-Log}}
+\index{\-G\-Test\-Log@{\-G\-Test\-Log}!testing::internal::GTestLog@{testing\-::internal\-::\-G\-Test\-Log}}
+\subsubsection[{\-G\-Test\-Log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-Test\-Log} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-G\-Test\-Log\-Severity}}]{severity, }
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)}}\label{da/d59/classtesting_1_1internal_1_1GTestLog_a42659176d108d5be556dc5b2d7052cbd}
+\hypertarget{classtesting_1_1internal_1_1GTestLog_a940c2f4f55e8acf2c5dd52a75f828186}{\index{testing\-::internal\-::\-G\-Test\-Log@{testing\-::internal\-::\-G\-Test\-Log}!$\sim$\-G\-Test\-Log@{$\sim$\-G\-Test\-Log}}
+\index{$\sim$\-G\-Test\-Log@{$\sim$\-G\-Test\-Log}!testing::internal::GTestLog@{testing\-::internal\-::\-G\-Test\-Log}}
+\subsubsection[{$\sim$\-G\-Test\-Log}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-G\-Test\-Log} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{da/d59/classtesting_1_1internal_1_1GTestLog_a940c2f4f55e8acf2c5dd52a75f828186}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1GTestLog_a7f92cb631b3e86fed035acac6a11a929}{\index{testing\-::internal\-::\-G\-Test\-Log@{testing\-::internal\-::\-G\-Test\-Log}!\-Get\-Stream@{\-Get\-Stream}}
+\index{\-Get\-Stream@{\-Get\-Stream}!testing::internal::GTestLog@{testing\-::internal\-::\-G\-Test\-Log}}
+\subsubsection[{\-Get\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}\-::std\-::ostream\& {\bf \-Get\-Stream} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/d59/classtesting_1_1internal_1_1GTestLog_a7f92cb631b3e86fed035acac6a11a929}
+
+
+\-Definition at line 915 of file gtest-\/port.\-h.
+
+
+\begin{DoxyCode}
+{ return ::std::cerr; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1GTestLog_a7f92cb631b3e86fed035acac6a11a929}{\index{testing\-::internal\-::\-G\-Test\-Log@{testing\-::internal\-::\-G\-Test\-Log}!\-Get\-Stream@{\-Get\-Stream}}
+\index{\-Get\-Stream@{\-Get\-Stream}!testing::internal::GTestLog@{testing\-::internal\-::\-G\-Test\-Log}}
+\subsubsection[{\-Get\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}\-::std\-::ostream\& {\bf \-Get\-Stream} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/d59/classtesting_1_1internal_1_1GTestLog_a7f92cb631b3e86fed035acac6a11a929}
+
+
+\-Definition at line 1977 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return ::std::cerr; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1GTestLog_ab634134d3562ed5846deef1a12b00425}{\index{testing\-::internal\-::\-G\-Test\-Log@{testing\-::internal\-::\-G\-Test\-Log}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::GTestLog@{testing\-::internal\-::\-G\-Test\-Log}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-G\-Test\-Log}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d59/classtesting_1_1internal_1_1GTestLog_ab634134d3562ed5846deef1a12b00425}
+\hypertarget{classtesting_1_1internal_1_1GTestLog_ab634134d3562ed5846deef1a12b00425}{\index{testing\-::internal\-::\-G\-Test\-Log@{testing\-::internal\-::\-G\-Test\-Log}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::GTestLog@{testing\-::internal\-::\-G\-Test\-Log}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-G\-Test\-Log}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d59/classtesting_1_1internal_1_1GTestLog_ab634134d3562ed5846deef1a12b00425}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1GTestLog_a6c8b1af920457ac4f42706bbd995100b}{\index{testing\-::internal\-::\-G\-Test\-Log@{testing\-::internal\-::\-G\-Test\-Log}!severity\-\_\-@{severity\-\_\-}}
+\index{severity\-\_\-@{severity\-\_\-}!testing::internal::GTestLog@{testing\-::internal\-::\-G\-Test\-Log}}
+\subsubsection[{severity\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-G\-Test\-Log\-Severity} {\bf severity\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d59/classtesting_1_1internal_1_1GTestLog_a6c8b1af920457ac4f42706bbd995100b}
+
+
+\-Definition at line 1980 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/internal/\hyperlink{gtest-port_8h}{gtest-\/port.\-h}\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest-port_8cc}{gtest-\/port.\-cc}\end{DoxyCompactItemize}

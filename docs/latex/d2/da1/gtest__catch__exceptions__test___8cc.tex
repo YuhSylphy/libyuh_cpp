@@ -1,0 +1,36 @@
+\hypertarget{gtest__catch__exceptions__test___8cc}{\section{gtest-\/1.6.0/test/gtest\-\_\-catch\-\_\-exceptions\-\_\-test\-\_\-.cc \-File \-Reference}
+\label{d2/da1/gtest__catch__exceptions__test___8cc}\index{gtest-\/1.\-6.\-0/test/gtest\-\_\-catch\-\_\-exceptions\-\_\-test\-\_\-.\-cc@{gtest-\/1.\-6.\-0/test/gtest\-\_\-catch\-\_\-exceptions\-\_\-test\-\_\-.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gtest__catch__exceptions__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest__catch__exceptions__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{gtest\-\_\-catch\-\_\-exceptions\-\_\-test\-\_\-.\-cc@{gtest\-\_\-catch\-\_\-exceptions\-\_\-test\-\_\-.\-cc}!main@{main}}
+\index{main@{main}!gtest_catch_exceptions_test_.cc@{gtest\-\_\-catch\-\_\-exceptions\-\_\-test\-\_\-.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{d2/da1/gtest__catch__exceptions__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 302 of file gtest\-\_\-catch\-\_\-exceptions\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+#if GTEST_HAS_EXCEPTIONS
+  std::set_terminate(&TerminateHandler);
+#endif
+  testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
+\end{DoxyCode}

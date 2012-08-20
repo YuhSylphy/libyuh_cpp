@@ -1,0 +1,212 @@
+\hypertarget{gtest-listener__test_8cc}{\section{gtest-\/1.6.0/test/gtest-\/listener\-\_\-test.cc \-File \-Reference}
+\label{de/d83/gtest-listener__test_8cc}\index{gtest-\/1.\-6.\-0/test/gtest-\/listener\-\_\-test.\-cc@{gtest-\/1.\-6.\-0/test/gtest-\/listener\-\_\-test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+{\ttfamily \#include $<$vector$>$}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1EventRecordingListener}{\-Event\-Recording\-Listener}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1EnvironmentInvocationCatcher}{\-Environment\-Invocation\-Catcher}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1ListenerTest}{\-Listener\-Test}
+\end{DoxyCompactItemize}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacetesting}{testing}
+\item 
+namespace \hyperlink{namespacetesting_1_1internal}{testing\-::internal}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetesting_1_1internal_a7e113e9c70d45d89fe1703e58ff083b9}{\-T\-E\-S\-T\-\_\-\-F} (\-Listener\-Test, \-Does\-Foo)
+\item 
+\hyperlink{namespacetesting_1_1internal_a02cef32090020d164460dd3d9f8e2852}{\-T\-E\-S\-T\-\_\-\-F} (\-Listener\-Test, \-Does\-Bar)
+\item 
+void \hyperlink{gtest-listener__test_8cc_aaf03d11ca0b4a59d0fafe112a9259580}{\-Verify\-Results} (const std\-::vector$<$ \-String $>$ \&data, const char $\ast$const $\ast$expected\-\_\-data, int expected\-\_\-data\-\_\-size)
+\item 
+int \hyperlink{gtest-listener__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \-String $>$ $\ast$ \hyperlink{gtest-listener__test_8cc_a0206e6dfe3da7c39b78bdc2492c08c6d}{g\-\_\-events} = \-N\-U\-L\-L
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest-listener__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{gtest-\/listener\-\_\-test.\-cc@{gtest-\/listener\-\_\-test.\-cc}!main@{main}}
+\index{main@{main}!gtest-listener_test.cc@{gtest-\/listener\-\_\-test.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{de/d83/gtest-listener__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 203 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+  std::vector<String> events;
+  g_events = &events;
+  InitGoogleTest(&argc, argv);
+
+  UnitTest::GetInstance()->listeners().Append(
+      new EventRecordingListener("1st"));
+  UnitTest::GetInstance()->listeners().Append(
+      new EventRecordingListener("2nd"));
+
+  AddGlobalTestEnvironment(new EnvironmentInvocationCatcher);
+
+  GTEST_CHECK_(events.size() == 0)
+      << "AddGlobalTestEnvironment should not generate any events itself.";
+
+  ::testing::GTEST_FLAG(repeat) = 2;
+  int ret_val = RUN_ALL_TESTS();
+
+  const char* const expected_events[] = {
+    "1st.OnTestProgramStart",
+    "2nd.OnTestProgramStart",
+    "1st.OnTestIterationStart(0)",
+    "2nd.OnTestIterationStart(0)",
+    "1st.OnEnvironmentsSetUpStart",
+    "2nd.OnEnvironmentsSetUpStart",
+    "Environment::SetUp",
+    "2nd.OnEnvironmentsSetUpEnd",
+    "1st.OnEnvironmentsSetUpEnd",
+    "1st.OnTestCaseStart",
+    "2nd.OnTestCaseStart",
+    "ListenerTest::SetUpTestCase",
+    "1st.OnTestStart",
+    "2nd.OnTestStart",
+    "ListenerTest::SetUp",
+    "ListenerTest::* Test Body",
+    "1st.OnTestPartResult",
+    "2nd.OnTestPartResult",
+    "ListenerTest::TearDown",
+    "2nd.OnTestEnd",
+    "1st.OnTestEnd",
+    "1st.OnTestStart",
+    "2nd.OnTestStart",
+    "ListenerTest::SetUp",
+    "ListenerTest::* Test Body",
+    "1st.OnTestPartResult",
+    "2nd.OnTestPartResult",
+    "ListenerTest::TearDown",
+    "2nd.OnTestEnd",
+    "1st.OnTestEnd",
+    "ListenerTest::TearDownTestCase",
+    "2nd.OnTestCaseEnd",
+    "1st.OnTestCaseEnd",
+    "1st.OnEnvironmentsTearDownStart",
+    "2nd.OnEnvironmentsTearDownStart",
+    "Environment::TearDown",
+    "2nd.OnEnvironmentsTearDownEnd",
+    "1st.OnEnvironmentsTearDownEnd",
+    "2nd.OnTestIterationEnd(0)",
+    "1st.OnTestIterationEnd(0)",
+    "1st.OnTestIterationStart(1)",
+    "2nd.OnTestIterationStart(1)",
+    "1st.OnEnvironmentsSetUpStart",
+    "2nd.OnEnvironmentsSetUpStart",
+    "Environment::SetUp",
+    "2nd.OnEnvironmentsSetUpEnd",
+    "1st.OnEnvironmentsSetUpEnd",
+    "1st.OnTestCaseStart",
+    "2nd.OnTestCaseStart",
+    "ListenerTest::SetUpTestCase",
+    "1st.OnTestStart",
+    "2nd.OnTestStart",
+    "ListenerTest::SetUp",
+    "ListenerTest::* Test Body",
+    "1st.OnTestPartResult",
+    "2nd.OnTestPartResult",
+    "ListenerTest::TearDown",
+    "2nd.OnTestEnd",
+    "1st.OnTestEnd",
+    "1st.OnTestStart",
+    "2nd.OnTestStart",
+    "ListenerTest::SetUp",
+    "ListenerTest::* Test Body",
+    "1st.OnTestPartResult",
+    "2nd.OnTestPartResult",
+    "ListenerTest::TearDown",
+    "2nd.OnTestEnd",
+    "1st.OnTestEnd",
+    "ListenerTest::TearDownTestCase",
+    "2nd.OnTestCaseEnd",
+    "1st.OnTestCaseEnd",
+    "1st.OnEnvironmentsTearDownStart",
+    "2nd.OnEnvironmentsTearDownStart",
+    "Environment::TearDown",
+    "2nd.OnEnvironmentsTearDownEnd",
+    "1st.OnEnvironmentsTearDownEnd",
+    "2nd.OnTestIterationEnd(1)",
+    "1st.OnTestIterationEnd(1)",
+    "2nd.OnTestProgramEnd",
+    "1st.OnTestProgramEnd"
+  };
+  VerifyResults(events,
+                expected_events,
+                sizeof(expected_events)/sizeof(expected_events[0]));
+
+  // We need to check manually for ad hoc test failures that happen after
+  // RUN_ALL_TESTS finishes.
+  if (UnitTest::GetInstance()->Failed())
+    ret_val = 1;
+
+  return ret_val;
+}
+\end{DoxyCode}
+\hypertarget{gtest-listener__test_8cc_aaf03d11ca0b4a59d0fafe112a9259580}{\index{gtest-\/listener\-\_\-test.\-cc@{gtest-\/listener\-\_\-test.\-cc}!\-Verify\-Results@{\-Verify\-Results}}
+\index{\-Verify\-Results@{\-Verify\-Results}!gtest-listener_test.cc@{gtest-\/listener\-\_\-test.\-cc}}
+\subsubsection[{\-Verify\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verify\-Results} (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ \-String $>$ \&}]{data, }
+\item[{const char $\ast$const $\ast$}]{expected\-\_\-data, }
+\item[{int}]{expected\-\_\-data\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{de/d83/gtest-listener__test_8cc_aaf03d11ca0b4a59d0fafe112a9259580}
+
+
+\-Definition at line 180 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                           {
+  const int actual_size = data.size();
+  // If the following assertion fails, a new entry will be appended to
+  // data.  Hence we save data.size() first.
+  EXPECT_EQ(expected_data_size, actual_size);
+
+  // Compares the common prefix.
+  const int shorter_size = expected_data_size <= actual_size ?
+      expected_data_size : actual_size;
+  int i = 0;
+  for (; i < shorter_size; ++i) {
+    ASSERT_STREQ(expected_data[i], data[i].c_str())
+        << "at position " << i;
+  }
+
+  // Prints extra elements in the actual data.
+  for (; i < actual_size; ++i) {
+    printf("  Actual event #%d: %s\n", i, data[i].c_str());
+  }
+}
+\end{DoxyCode}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{gtest-listener__test_8cc_a0206e6dfe3da7c39b78bdc2492c08c6d}{\index{gtest-\/listener\-\_\-test.\-cc@{gtest-\/listener\-\_\-test.\-cc}!g\-\_\-events@{g\-\_\-events}}
+\index{g\-\_\-events@{g\-\_\-events}!gtest-listener_test.cc@{gtest-\/listener\-\_\-test.\-cc}}
+\subsubsection[{g\-\_\-events}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$\-String$>$$\ast$ {\bf g\-\_\-events} = \-N\-U\-L\-L}}\label{de/d83/gtest-listener__test_8cc_a0206e6dfe3da7c39b78bdc2492c08c6d}
+
+
+\-Definition at line 51 of file gtest-\/listener\-\_\-test.\-cc.
+

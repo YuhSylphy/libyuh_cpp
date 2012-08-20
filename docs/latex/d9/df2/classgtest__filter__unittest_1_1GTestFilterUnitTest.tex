@@ -1,0 +1,929 @@
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest}{\section{\-G\-Test\-Filter\-Unit\-Test \-Class \-Reference}
+\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest}\index{\-G\-Test\-Filter\-Unit\-Test@{\-G\-Test\-Filter\-Unit\-Test}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a5235ce27a6c53e2d73d0f6f26d9335b1}{\-Assert\-Set\-Equal}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a89c17cb4761c12f08088a3214acdfd81}{\-Assert\-Partition\-Is\-Valid}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a2dc8d19f5c81f6a8d03a9bd65ea3d2cc}{\-Adjust\-For\-Parameterized\-Tests}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_adc02f4ab231c886fc73ece7b7ee533c1}{\-Run\-And\-Verify}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_ada7337544a6bd7e4e1658afdd8e7ee81}{\-Run\-And\-Verify\-With\-Sharding}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a27cd49468ecd99dff9093ea74030a299}{\-Run\-And\-Verify\-Allowing\-Disabled}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_ac47956db61147fc100027de51240dcd7}{set\-Up}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a9da84d75ab4797f2c3730d5974ed3823}{test\-Default\-Behavior}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a76485dd5b8a54abd72dc765ef491cae1}{test\-Default\-Behavior\-With\-Shards}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_aaf0b496c03f2f282f135e907d8c94bf3}{test\-Empty\-Filter}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_aa1a795f4b6fcb3373b7c050c740f5d7a}{test\-Bad\-Filter}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a7558aed26a1dd69723409bc062a10640}{test\-Full\-Name}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_abb3f1672b52d8e948f844490370a1784}{test\-Universal\-Filters}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_aafa4bcaa6c548bcd013f1b48fb218fd5}{test\-Filter\-By\-Test\-Case}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a170b8efccaa005be648a552aad155c4f}{test\-Filter\-By\-Test}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a4ea8177f70a866f265f1928dc56d6804}{test\-Filter\-Disabled\-Tests}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_abf623deb2f06b59539e27cfb835e268a}{test\-Wildcard\-In\-Test\-Case\-Name}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a4af4acae2128bc1e38ad7cb9469b0a94}{test\-Wildcard\-In\-Test\-Name}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a380b6c3d4392a85f2dba0bad735361b9}{test\-Filter\-Without\-Dot}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a77b819fcfd18a250535be29b81ad1cea}{test\-Two\-Patterns}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_af3a9bd921a064ab4440ebe93b05b5ae8}{test\-Three\-Patterns}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_aadbaa7222398310d4f5106215780e698}{test\-Negative\-Filters}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_acfa6c563d6c35b14e6d2749a0da630f6}{test\-Flag\-Overrides\-Env\-Var}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a84cc3ba566ebd3f7fa6280cca2250b26}{test\-Shard\-Status\-File\-Is\-Created}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_ac8d1717e463456a1d6349d8cad116e6d}{test\-Shard\-Status\-File\-Is\-Created\-With\-List\-Tests}
+\item 
+def \hyperlink{classgtest__filter__unittest_1_1GTestFilterUnitTest_a5347a028e4a78b700fd61e2eca6f4ce9}{test\-Sharding\-Works\-With\-Death\-Tests}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}Tests the env variable or the command line flag to filter tests.\end{DoxyVerb}
+ 
+
+\-Definition at line 225 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a2dc8d19f5c81f6a8d03a9bd65ea3d2cc}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!\-Adjust\-For\-Parameterized\-Tests@{\-Adjust\-For\-Parameterized\-Tests}}
+\index{\-Adjust\-For\-Parameterized\-Tests@{\-Adjust\-For\-Parameterized\-Tests}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{\-Adjust\-For\-Parameterized\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Adjust\-For\-Parameterized\-Tests} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{tests\-\_\-to\-\_\-run}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a2dc8d19f5c81f6a8d03a9bd65ea3d2cc}
+\begin{DoxyVerb}Adjust tests_to_run in case value parameterized tests are disabled.\end{DoxyVerb}
+ 
+
+\-Definition at line 248 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+248 
+249   def AdjustForParameterizedTests(self, tests_to_run):
+250     """Adjust tests_to_run in case value parameterized tests are disabled."""
+251 
+252     global param_tests_present
+253     if not param_tests_present:
+254       return list(sets.Set(tests_to_run) - sets.Set(PARAM_TESTS))
+255     else:
+256       return tests_to_run
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a89c17cb4761c12f08088a3214acdfd81}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!\-Assert\-Partition\-Is\-Valid@{\-Assert\-Partition\-Is\-Valid}}
+\index{\-Assert\-Partition\-Is\-Valid@{\-Assert\-Partition\-Is\-Valid}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{\-Assert\-Partition\-Is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Assert\-Partition\-Is\-Valid} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{set\-\_\-var, }
+\item[{}]{list\-\_\-of\-\_\-sets}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a89c17cb4761c12f08088a3214acdfd81}
+\begin{DoxyVerb}Asserts that list_of_sets is a valid partition of set_var.\end{DoxyVerb}
+ 
+
+\-Definition at line 239 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+239 
+240   def AssertPartitionIsValid(self, set_var, list_of_sets):
+241     """Asserts that list_of_sets is a valid partition of set_var."""
+242 
+243     full_partition = []
+244     for slice_var in list_of_sets:
+245       full_partition.extend(slice_var)
+246     self.assertEqual(len(set_var), len(full_partition))
+247     self.assertEqual(sets.Set(set_var), sets.Set(full_partition))
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a5235ce27a6c53e2d73d0f6f26d9335b1}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!\-Assert\-Set\-Equal@{\-Assert\-Set\-Equal}}
+\index{\-Assert\-Set\-Equal@{\-Assert\-Set\-Equal}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{\-Assert\-Set\-Equal}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Assert\-Set\-Equal} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{lhs, }
+\item[{}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a5235ce27a6c53e2d73d0f6f26d9335b1}
+\begin{DoxyVerb}Asserts that two sets are equal.\end{DoxyVerb}
+ 
+
+\-Definition at line 230 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+230 
+231   def AssertSetEqual(self, lhs, rhs):
+232     """Asserts that two sets are equal."""
+233 
+234     for elem in lhs:
+235       self.assert_(elem in rhs, '%s in %s' % (elem, rhs))
+236 
+237     for elem in rhs:
+238       self.assert_(elem in lhs, '%s in %s' % (elem, lhs))
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_adc02f4ab231c886fc73ece7b7ee533c1}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!\-Run\-And\-Verify@{\-Run\-And\-Verify}}
+\index{\-Run\-And\-Verify@{\-Run\-And\-Verify}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{\-Run\-And\-Verify}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Run\-And\-Verify} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{gtest\-\_\-filter, }
+\item[{}]{tests\-\_\-to\-\_\-run}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_adc02f4ab231c886fc73ece7b7ee533c1}
+\begin{DoxyVerb}Checks that the binary runs correct set of tests for a given filter.\end{DoxyVerb}
+ 
+
+\-Definition at line 257 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+257 
+258   def RunAndVerify(self, gtest_filter, tests_to_run):
+259     """Checks that the binary runs correct set of tests for a given filter."""
+260 
+261     tests_to_run = self.AdjustForParameterizedTests(tests_to_run)
+262 
+263     # First, tests using the environment variable.
+264 
+265     # Windows removes empty variables from the environment when passing it
+266     # to a new process.  This means it is impossible to pass an empty filter
+267     # into a process using the environment variable.  However, we can still
+268     # test the case when the variable is not supplied (i.e., gtest_filter is
+269     # None).
+270     # pylint: disable-msg=C6403
+271     if CAN_TEST_EMPTY_FILTER or gtest_filter != '':
+272       SetEnvVar(FILTER_ENV_VAR, gtest_filter)
+273       tests_run = RunAndExtractTestList()[0]
+274       SetEnvVar(FILTER_ENV_VAR, None)
+275       self.AssertSetEqual(tests_run, tests_to_run)
+276     # pylint: enable-msg=C6403
+277 
+278     # Next, tests using the command line flag.
+279 
+280     if gtest_filter is None:
+281       args = []
+282     else:
+283       args = ['--%s=%s' % (FILTER_FLAG, gtest_filter)]
+284 
+285     tests_run = RunAndExtractTestList(args)[0]
+286     self.AssertSetEqual(tests_run, tests_to_run)
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a27cd49468ecd99dff9093ea74030a299}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!\-Run\-And\-Verify\-Allowing\-Disabled@{\-Run\-And\-Verify\-Allowing\-Disabled}}
+\index{\-Run\-And\-Verify\-Allowing\-Disabled@{\-Run\-And\-Verify\-Allowing\-Disabled}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{\-Run\-And\-Verify\-Allowing\-Disabled}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Run\-And\-Verify\-Allowing\-Disabled} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{gtest\-\_\-filter, }
+\item[{}]{tests\-\_\-to\-\_\-run}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a27cd49468ecd99dff9093ea74030a299}
+\begin{DoxyVerb}Checks that the binary runs correct set of tests for the given filter.
+
+Runs gtest_filter_unittest_ with the given filter, and enables
+disabled tests. Verifies that the right set of tests were run.
+
+Args:
+  gtest_filter: A filter to apply to the tests.
+  tests_to_run: A set of tests expected to run.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 325 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+325 
+326   def RunAndVerifyAllowingDisabled(self, gtest_filter, tests_to_run):
+327     """Checks that the binary runs correct set of tests for the given filter.
+328 
+329     Runs gtest_filter_unittest_ with the given filter, and enables
+330     disabled tests. Verifies that the right set of tests were run.
+331 
+332     Args:
+333       gtest_filter: A filter to apply to the tests.
+334       tests_to_run: A set of tests expected to run.
+335     """
+336 
+337     tests_to_run = self.AdjustForParameterizedTests(tests_to_run)
+338 
+339     # Construct the command line.
+340     args = ['--%s' % ALSO_RUN_DISABED_TESTS_FLAG]
+341     if gtest_filter is not None:
+342       args.append('--%s=%s' % (FILTER_FLAG, gtest_filter))
+343 
+344     tests_run = RunAndExtractTestList(args)[0]
+345     self.AssertSetEqual(tests_run, tests_to_run)
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_ada7337544a6bd7e4e1658afdd8e7ee81}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!\-Run\-And\-Verify\-With\-Sharding@{\-Run\-And\-Verify\-With\-Sharding}}
+\index{\-Run\-And\-Verify\-With\-Sharding@{\-Run\-And\-Verify\-With\-Sharding}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{\-Run\-And\-Verify\-With\-Sharding}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Run\-And\-Verify\-With\-Sharding} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{gtest\-\_\-filter, }
+\item[{}]{total\-\_\-shards, }
+\item[{}]{tests\-\_\-to\-\_\-run, }
+\item[{}]{args = {\ttfamily \-None}, }
+\item[{}]{check\-\_\-exit\-\_\-0 = {\ttfamily \-False}}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_ada7337544a6bd7e4e1658afdd8e7ee81}
+\begin{DoxyVerb}Checks that binary runs correct tests for the given filter and shard.
+
+Runs all shards of gtest_filter_unittest_ with the given filter, and
+verifies that the right set of tests were run. The union of tests run
+on each shard should be identical to tests_to_run, without duplicates.
+
+Args:
+  gtest_filter: A filter to apply to the tests.
+  total_shards: A total number of shards to split test run into.
+  tests_to_run: A set of tests expected to run.
+  args   :      Arguments to pass to the to the test binary.
+  check_exit_0: When set to a true value, make sure that all shards
+            return 0.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 287 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+287 
+288   def RunAndVerifyWithSharding(self, gtest_filter, total_shards, tests_to_run,
+289                                args=None, check_exit_0=False):
+290     """Checks that binary runs correct tests for the given filter and shard.
+291 
+292     Runs all shards of gtest_filter_unittest_ with the given filter, and
+293     verifies that the right set of tests were run. The union of tests run
+294     on each shard should be identical to tests_to_run, without duplicates.
+295 
+296     Args:
+297       gtest_filter: A filter to apply to the tests.
+298       total_shards: A total number of shards to split test run into.
+299       tests_to_run: A set of tests expected to run.
+300       args   :      Arguments to pass to the to the test binary.
+301       check_exit_0: When set to a true value, make sure that all shards
+302                     return 0.
+303     """
+304 
+305     tests_to_run = self.AdjustForParameterizedTests(tests_to_run)
+306 
+307     # Windows removes empty variables from the environment when passing it
+308     # to a new process.  This means it is impossible to pass an empty filter
+309     # into a process using the environment variable.  However, we can still
+310     # test the case when the variable is not supplied (i.e., gtest_filter is
+311     # None).
+312     # pylint: disable-msg=C6403
+313     if CAN_TEST_EMPTY_FILTER or gtest_filter != '':
+314       SetEnvVar(FILTER_ENV_VAR, gtest_filter)
+315       partition = []
+316       for i in range(0, total_shards):
+317         (tests_run, exit_code) = RunWithSharding(total_shards, i, args)
+318         if check_exit_0:
+319           self.assertEqual(0, exit_code)
+320         partition.append(tests_run)
+321 
+322       self.AssertPartitionIsValid(tests_to_run, partition)
+323       SetEnvVar(FILTER_ENV_VAR, None)
+324     # pylint: enable-msg=C6403
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_ac47956db61147fc100027de51240dcd7}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!set\-Up@{set\-Up}}
+\index{set\-Up@{set\-Up}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf set\-Up} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_ac47956db61147fc100027de51240dcd7}
+\begin{DoxyVerb}Sets up test case.
+
+Determines whether value-parameterized tests are enabled in the binary and
+sets the flags accordingly.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 346 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+346 
+347   def setUp(self):
+348     """Sets up test case.
+349 
+350     Determines whether value-parameterized tests are enabled in the binary and
+351     sets the flags accordingly.
+352     """
+353 
+354     global param_tests_present
+355     if param_tests_present is None:
+356       param_tests_present = PARAM_TEST_REGEX.search(
+357           RunAndReturnOutput()) is not None
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_aa1a795f4b6fcb3373b7c050c740f5d7a}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Bad\-Filter@{test\-Bad\-Filter}}
+\index{test\-Bad\-Filter@{test\-Bad\-Filter}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Bad\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Bad\-Filter} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_aa1a795f4b6fcb3373b7c050c740f5d7a}
+\begin{DoxyVerb}Tests a filter that matches nothing.\end{DoxyVerb}
+ 
+
+\-Definition at line 379 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+379 
+380   def testBadFilter(self):
+381     """Tests a filter that matches nothing."""
+382 
+383     self.RunAndVerify('BadFilter', [])
+384     self.RunAndVerifyAllowingDisabled('BadFilter', [])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a9da84d75ab4797f2c3730d5974ed3823}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Default\-Behavior@{test\-Default\-Behavior}}
+\index{test\-Default\-Behavior@{test\-Default\-Behavior}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Default\-Behavior}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Default\-Behavior} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a9da84d75ab4797f2c3730d5974ed3823}
+\begin{DoxyVerb}Tests the behavior of not specifying the filter.\end{DoxyVerb}
+ 
+
+\-Definition at line 358 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+358 
+359   def testDefaultBehavior(self):
+360     """Tests the behavior of not specifying the filter."""
+361 
+362     self.RunAndVerify(None, ACTIVE_TESTS)
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a76485dd5b8a54abd72dc765ef491cae1}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Default\-Behavior\-With\-Shards@{test\-Default\-Behavior\-With\-Shards}}
+\index{test\-Default\-Behavior\-With\-Shards@{test\-Default\-Behavior\-With\-Shards}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Default\-Behavior\-With\-Shards}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Default\-Behavior\-With\-Shards} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a76485dd5b8a54abd72dc765ef491cae1}
+\begin{DoxyVerb}Tests the behavior without the filter, with sharding enabled.\end{DoxyVerb}
+ 
+
+\-Definition at line 363 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+363 
+364   def testDefaultBehaviorWithShards(self):
+365     """Tests the behavior without the filter, with sharding enabled."""
+366 
+367     self.RunAndVerifyWithSharding(None, 1, ACTIVE_TESTS)
+368     self.RunAndVerifyWithSharding(None, 2, ACTIVE_TESTS)
+369     self.RunAndVerifyWithSharding(None, len(ACTIVE_TESTS) - 1, ACTIVE_TESTS)
+370     self.RunAndVerifyWithSharding(None, len(ACTIVE_TESTS), ACTIVE_TESTS)
+371     self.RunAndVerifyWithSharding(None, len(ACTIVE_TESTS) + 1, ACTIVE_TESTS)
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_aaf0b496c03f2f282f135e907d8c94bf3}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Empty\-Filter@{test\-Empty\-Filter}}
+\index{test\-Empty\-Filter@{test\-Empty\-Filter}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Empty\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Empty\-Filter} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_aaf0b496c03f2f282f135e907d8c94bf3}
+\begin{DoxyVerb}Tests an empty filter.\end{DoxyVerb}
+ 
+
+\-Definition at line 372 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+372 
+373   def testEmptyFilter(self):
+374     """Tests an empty filter."""
+375 
+376     self.RunAndVerify('', [])
+377     self.RunAndVerifyWithSharding('', 1, [])
+378     self.RunAndVerifyWithSharding('', 2, [])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a170b8efccaa005be648a552aad155c4f}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Filter\-By\-Test@{test\-Filter\-By\-Test}}
+\index{test\-Filter\-By\-Test@{test\-Filter\-By\-Test}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Filter\-By\-Test}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Filter\-By\-Test} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a170b8efccaa005be648a552aad155c4f}
+\begin{DoxyVerb}Tests filtering by test name.\end{DoxyVerb}
+ 
+
+\-Definition at line 411 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+411 
+412   def testFilterByTest(self):
+413     """Tests filtering by test name."""
+414 
+415     self.RunAndVerify('*.TestOne', ['BarTest.TestOne', 'BazTest.TestOne'])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_aafa4bcaa6c548bcd013f1b48fb218fd5}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Filter\-By\-Test\-Case@{test\-Filter\-By\-Test\-Case}}
+\index{test\-Filter\-By\-Test\-Case@{test\-Filter\-By\-Test\-Case}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Filter\-By\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Filter\-By\-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_aafa4bcaa6c548bcd013f1b48fb218fd5}
+\begin{DoxyVerb}Tests filtering by test case name.\end{DoxyVerb}
+ 
+
+\-Definition at line 401 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+401 
+402   def testFilterByTestCase(self):
+403     """Tests filtering by test case name."""
+404 
+405     self.RunAndVerify('FooTest.*', ['FooTest.Abc', 'FooTest.Xyz'])
+406 
+407     BAZ_TESTS = ['BazTest.TestOne', 'BazTest.TestA', 'BazTest.TestB']
+408     self.RunAndVerify('BazTest.*', BAZ_TESTS)
+409     self.RunAndVerifyAllowingDisabled('BazTest.*',
+410                                       BAZ_TESTS + ['BazTest.DISABLED_TestC'])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a4ea8177f70a866f265f1928dc56d6804}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Filter\-Disabled\-Tests@{test\-Filter\-Disabled\-Tests}}
+\index{test\-Filter\-Disabled\-Tests@{test\-Filter\-Disabled\-Tests}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Filter\-Disabled\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Filter\-Disabled\-Tests} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a4ea8177f70a866f265f1928dc56d6804}
+\begin{DoxyVerb}Select only the disabled tests to run.\end{DoxyVerb}
+ 
+
+\-Definition at line 416 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+416 
+417   def testFilterDisabledTests(self):
+418     """Select only the disabled tests to run."""
+419 
+420     self.RunAndVerify('DISABLED_FoobarTest.Test1', [])
+421     self.RunAndVerifyAllowingDisabled('DISABLED_FoobarTest.Test1',
+422                                       ['DISABLED_FoobarTest.Test1'])
+423 
+424     self.RunAndVerify('*DISABLED_*', [])
+425     self.RunAndVerifyAllowingDisabled('*DISABLED_*', DISABLED_TESTS)
+426 
+427     self.RunAndVerify('*.DISABLED_*', [])
+428     self.RunAndVerifyAllowingDisabled('*.DISABLED_*', [
+429         'BarTest.DISABLED_TestFour',
+430         'BarTest.DISABLED_TestFive',
+431         'BazTest.DISABLED_TestC',
+432         'DISABLED_FoobarTest.DISABLED_Test2',
+433         ])
+434 
+435     self.RunAndVerify('DISABLED_*', [])
+436     self.RunAndVerifyAllowingDisabled('DISABLED_*', [
+437         'DISABLED_FoobarTest.Test1',
+438         'DISABLED_FoobarTest.DISABLED_Test2',
+439         'DISABLED_FoobarbazTest.TestA',
+440         ])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a380b6c3d4392a85f2dba0bad735361b9}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Filter\-Without\-Dot@{test\-Filter\-Without\-Dot}}
+\index{test\-Filter\-Without\-Dot@{test\-Filter\-Without\-Dot}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Filter\-Without\-Dot}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Filter\-Without\-Dot} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a380b6c3d4392a85f2dba0bad735361b9}
+\begin{DoxyVerb}Tests a filter that has no '.' in it.\end{DoxyVerb}
+ 
+
+\-Definition at line 458 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+458 
+459   def testFilterWithoutDot(self):
+460     """Tests a filter that has no '.' in it."""
+461 
+462     self.RunAndVerify('*z*', [
+463         'FooTest.Xyz',
+464 
+465         'BazTest.TestOne',
+466         'BazTest.TestA',
+467         'BazTest.TestB',
+468         ])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_acfa6c563d6c35b14e6d2749a0da630f6}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Flag\-Overrides\-Env\-Var@{test\-Flag\-Overrides\-Env\-Var}}
+\index{test\-Flag\-Overrides\-Env\-Var@{test\-Flag\-Overrides\-Env\-Var}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Flag\-Overrides\-Env\-Var}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Flag\-Overrides\-Env\-Var} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_acfa6c563d6c35b14e6d2749a0da630f6}
+\begin{DoxyVerb}Tests that the filter flag overrides the filtering env. variable.\end{DoxyVerb}
+ 
+
+\-Definition at line 563 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+563 
+564   def testFlagOverridesEnvVar(self):
+565     """Tests that the filter flag overrides the filtering env. variable."""
+566 
+567     SetEnvVar(FILTER_ENV_VAR, 'Foo*')
+568     args = ['--%s=%s' % (FILTER_FLAG, '*One')]
+569     tests_run = RunAndExtractTestList(args)[0]
+570     SetEnvVar(FILTER_ENV_VAR, None)
+571 
+572     self.AssertSetEqual(tests_run, ['BarTest.TestOne', 'BazTest.TestOne'])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a7558aed26a1dd69723409bc062a10640}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Full\-Name@{test\-Full\-Name}}
+\index{test\-Full\-Name@{test\-Full\-Name}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Full\-Name}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Full\-Name} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a7558aed26a1dd69723409bc062a10640}
+\begin{DoxyVerb}Tests filtering by full name.\end{DoxyVerb}
+ 
+
+\-Definition at line 385 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+385 
+386   def testFullName(self):
+387     """Tests filtering by full name."""
+388 
+389     self.RunAndVerify('FooTest.Xyz', ['FooTest.Xyz'])
+390     self.RunAndVerifyAllowingDisabled('FooTest.Xyz', ['FooTest.Xyz'])
+391     self.RunAndVerifyWithSharding('FooTest.Xyz', 5, ['FooTest.Xyz'])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_aadbaa7222398310d4f5106215780e698}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Negative\-Filters@{test\-Negative\-Filters}}
+\index{test\-Negative\-Filters@{test\-Negative\-Filters}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Negative\-Filters}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Negative\-Filters} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_aadbaa7222398310d4f5106215780e698}
+
+
+\-Definition at line 511 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+511 
+512   def testNegativeFilters(self):
+513     self.RunAndVerify('*-BazTest.TestOne', [
+514         'FooTest.Abc',
+515         'FooTest.Xyz',
+516 
+517         'BarTest.TestOne',
+518         'BarTest.TestTwo',
+519         'BarTest.TestThree',
+520 
+521         'BazTest.TestA',
+522         'BazTest.TestB',
+523         ] + DEATH_TESTS + PARAM_TESTS)
+524 
+525     self.RunAndVerify('*-FooTest.Abc:BazTest.*', [
+526         'FooTest.Xyz',
+527 
+528         'BarTest.TestOne',
+529         'BarTest.TestTwo',
+530         'BarTest.TestThree',
+531         ] + DEATH_TESTS + PARAM_TESTS)
+532 
+533     self.RunAndVerify('BarTest.*-BarTest.TestOne', [
+534         'BarTest.TestTwo',
+535         'BarTest.TestThree',
+536         ])
+537 
+538     # Tests without leading '*'.
+539     self.RunAndVerify('-FooTest.Abc:FooTest.Xyz:BazTest.*', [
+540         'BarTest.TestOne',
+541         'BarTest.TestTwo',
+542         'BarTest.TestThree',
+543         ] + DEATH_TESTS + PARAM_TESTS)
+544 
+545     # Value parameterized tests.
+546     self.RunAndVerify('*/*', PARAM_TESTS)
+547 
+548     # Value parameterized tests filtering by the sequence name.
+549     self.RunAndVerify('SeqP/*', [
+550         'SeqP/ParamTest.TestX/0',
+551         'SeqP/ParamTest.TestX/1',
+552         'SeqP/ParamTest.TestY/0',
+553         'SeqP/ParamTest.TestY/1',
+554         ])
+555 
+556     # Value parameterized tests filtering by the test name.
+557     self.RunAndVerify('*/0', [
+558         'SeqP/ParamTest.TestX/0',
+559         'SeqP/ParamTest.TestY/0',
+560         'SeqQ/ParamTest.TestX/0',
+561         'SeqQ/ParamTest.TestY/0',
+562         ])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a5347a028e4a78b700fd61e2eca6f4ce9}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Sharding\-Works\-With\-Death\-Tests@{test\-Sharding\-Works\-With\-Death\-Tests}}
+\index{test\-Sharding\-Works\-With\-Death\-Tests@{test\-Sharding\-Works\-With\-Death\-Tests}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Sharding\-Works\-With\-Death\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Sharding\-Works\-With\-Death\-Tests} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a5347a028e4a78b700fd61e2eca6f4ce9}
+\begin{DoxyVerb}Tests integration with death tests and sharding.\end{DoxyVerb}
+ 
+
+\-Definition at line 611 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+611 
+612     def testShardingWorksWithDeathTests(self):
+613       """Tests integration with death tests and sharding."""
+614 
+615       gtest_filter = 'HasDeathTest.*:SeqP/*'
+616       expected_tests = [
+617           'HasDeathTest.Test1',
+618           'HasDeathTest.Test2',
+619 
+620           'SeqP/ParamTest.TestX/0',
+621           'SeqP/ParamTest.TestX/1',
+622           'SeqP/ParamTest.TestY/0',
+623           'SeqP/ParamTest.TestY/1',
+624           ]
+625 
+626       for flag in ['--gtest_death_test_style=threadsafe',
+627                    '--gtest_death_test_style=fast']:
+628         self.RunAndVerifyWithSharding(gtest_filter, 3, expected_tests,
+629                                       check_exit_0=True, args=[flag])
+630         self.RunAndVerifyWithSharding(gtest_filter, 5, expected_tests,
+631                                       check_exit_0=True, args=[flag])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a84cc3ba566ebd3f7fa6280cca2250b26}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Shard\-Status\-File\-Is\-Created@{test\-Shard\-Status\-File\-Is\-Created}}
+\index{test\-Shard\-Status\-File\-Is\-Created@{test\-Shard\-Status\-File\-Is\-Created}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Shard\-Status\-File\-Is\-Created}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Shard\-Status\-File\-Is\-Created} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a84cc3ba566ebd3f7fa6280cca2250b26}
+\begin{DoxyVerb}Tests that the shard file is created if specified in the environment.\end{DoxyVerb}
+ 
+
+\-Definition at line 573 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+573 
+574   def testShardStatusFileIsCreated(self):
+575     """Tests that the shard file is created if specified in the environment."""
+576 
+577     shard_status_file = os.path.join(gtest_test_utils.GetTempDir(),
+578                                      'shard_status_file')
+579     self.assert_(not os.path.exists(shard_status_file))
+580 
+581     extra_env = {SHARD_STATUS_FILE_ENV_VAR: shard_status_file}
+582     try:
+583       InvokeWithModifiedEnv(extra_env, RunAndReturnOutput)
+584     finally:
+585       self.assert_(os.path.exists(shard_status_file))
+586       os.remove(shard_status_file)
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_ac8d1717e463456a1d6349d8cad116e6d}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Shard\-Status\-File\-Is\-Created\-With\-List\-Tests@{test\-Shard\-Status\-File\-Is\-Created\-With\-List\-Tests}}
+\index{test\-Shard\-Status\-File\-Is\-Created\-With\-List\-Tests@{test\-Shard\-Status\-File\-Is\-Created\-With\-List\-Tests}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Shard\-Status\-File\-Is\-Created\-With\-List\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Shard\-Status\-File\-Is\-Created\-With\-List\-Tests} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_ac8d1717e463456a1d6349d8cad116e6d}
+\begin{DoxyVerb}Tests that the shard file is created with the "list_tests" flag.\end{DoxyVerb}
+ 
+
+\-Definition at line 587 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+587 
+588   def testShardStatusFileIsCreatedWithListTests(self):
+589     """Tests that the shard file is created with the "list_tests" flag."""
+590 
+591     shard_status_file = os.path.join(gtest_test_utils.GetTempDir(),
+592                                      'shard_status_file2')
+593     self.assert_(not os.path.exists(shard_status_file))
+594 
+595     extra_env = {SHARD_STATUS_FILE_ENV_VAR: shard_status_file}
+596     try:
+597       output = InvokeWithModifiedEnv(extra_env,
+598                                      RunAndReturnOutput,
+599                                      [LIST_TESTS_FLAG])
+600     finally:
+601       # This assertion ensures that Google Test enumerated the tests as
+602       # opposed to running them.
+603       self.assert_('[==========]' not in output,
+604                    'Unexpected output during test enumeration.\n'
+605                    'Please ensure that LIST_TESTS_FLAG is assigned the\n'
+606                    'correct flag value for listing Google Test tests.')
+607 
+608       self.assert_(os.path.exists(shard_status_file))
+609       os.remove(shard_status_file)
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_af3a9bd921a064ab4440ebe93b05b5ae8}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Three\-Patterns@{test\-Three\-Patterns}}
+\index{test\-Three\-Patterns@{test\-Three\-Patterns}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Three\-Patterns}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Three\-Patterns} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_af3a9bd921a064ab4440ebe93b05b5ae8}
+\begin{DoxyVerb}Tests filters that consist of three patterns.\end{DoxyVerb}
+ 
+
+\-Definition at line 482 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+482 
+483   def testThreePatterns(self):
+484     """Tests filters that consist of three patterns."""
+485 
+486     self.RunAndVerify('*oo*:*A*:*One', [
+487         'FooTest.Abc',
+488         'FooTest.Xyz',
+489 
+490         'BarTest.TestOne',
+491 
+492         'BazTest.TestOne',
+493         'BazTest.TestA',
+494         ])
+495 
+496     # The 2nd pattern is empty.
+497     self.RunAndVerify('*oo*::*One', [
+498         'FooTest.Abc',
+499         'FooTest.Xyz',
+500 
+501         'BarTest.TestOne',
+502 
+503         'BazTest.TestOne',
+504         ])
+505 
+506     # The last 2 patterns are empty.
+507     self.RunAndVerify('*oo*::', [
+508         'FooTest.Abc',
+509         'FooTest.Xyz',
+510         ])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a77b819fcfd18a250535be29b81ad1cea}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Two\-Patterns@{test\-Two\-Patterns}}
+\index{test\-Two\-Patterns@{test\-Two\-Patterns}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Two\-Patterns}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Two\-Patterns} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a77b819fcfd18a250535be29b81ad1cea}
+\begin{DoxyVerb}Tests filters that consist of two patterns.\end{DoxyVerb}
+ 
+
+\-Definition at line 469 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+469 
+470   def testTwoPatterns(self):
+471     """Tests filters that consist of two patterns."""
+472 
+473     self.RunAndVerify('Foo*.*:*A*', [
+474         'FooTest.Abc',
+475         'FooTest.Xyz',
+476 
+477         'BazTest.TestA',
+478         ])
+479 
+480     # An empty pattern + a non-empty one
+481     self.RunAndVerify(':*A*', ['FooTest.Abc', 'BazTest.TestA'])
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_abb3f1672b52d8e948f844490370a1784}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Universal\-Filters@{test\-Universal\-Filters}}
+\index{test\-Universal\-Filters@{test\-Universal\-Filters}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Universal\-Filters}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Universal\-Filters} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_abb3f1672b52d8e948f844490370a1784}
+\begin{DoxyVerb}Tests filters that match everything.\end{DoxyVerb}
+ 
+
+\-Definition at line 392 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+392 
+393   def testUniversalFilters(self):
+394     """Tests filters that match everything."""
+395 
+396     self.RunAndVerify('*', ACTIVE_TESTS)
+397     self.RunAndVerify('*.*', ACTIVE_TESTS)
+398     self.RunAndVerifyWithSharding('*.*', len(ACTIVE_TESTS) - 3, ACTIVE_TESTS)
+399     self.RunAndVerifyAllowingDisabled('*', ACTIVE_TESTS + DISABLED_TESTS)
+400     self.RunAndVerifyAllowingDisabled('*.*', ACTIVE_TESTS + DISABLED_TESTS)
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_abf623deb2f06b59539e27cfb835e268a}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Wildcard\-In\-Test\-Case\-Name@{test\-Wildcard\-In\-Test\-Case\-Name}}
+\index{test\-Wildcard\-In\-Test\-Case\-Name@{test\-Wildcard\-In\-Test\-Case\-Name}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Wildcard\-In\-Test\-Case\-Name}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Wildcard\-In\-Test\-Case\-Name} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_abf623deb2f06b59539e27cfb835e268a}
+\begin{DoxyVerb}Tests using wildcard in the test case name.\end{DoxyVerb}
+ 
+
+\-Definition at line 441 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+441 
+442   def testWildcardInTestCaseName(self):
+443     """Tests using wildcard in the test case name."""
+444 
+445     self.RunAndVerify('*a*.*', [
+446         'BarTest.TestOne',
+447         'BarTest.TestTwo',
+448         'BarTest.TestThree',
+449 
+450         'BazTest.TestOne',
+451         'BazTest.TestA',
+452         'BazTest.TestB', ] + DEATH_TESTS + PARAM_TESTS)
+
+\end{DoxyCode}
+\hypertarget{classgtest__filter__unittest_1_1GTestFilterUnitTest_a4af4acae2128bc1e38ad7cb9469b0a94}{\index{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}!test\-Wildcard\-In\-Test\-Name@{test\-Wildcard\-In\-Test\-Name}}
+\index{test\-Wildcard\-In\-Test\-Name@{test\-Wildcard\-In\-Test\-Name}!gtest_filter_unittest::GTestFilterUnitTest@{gtest\-\_\-filter\-\_\-unittest\-::\-G\-Test\-Filter\-Unit\-Test}}
+\subsubsection[{test\-Wildcard\-In\-Test\-Name}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Wildcard\-In\-Test\-Name} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d9/df2/classgtest__filter__unittest_1_1GTestFilterUnitTest_a4af4acae2128bc1e38ad7cb9469b0a94}
+\begin{DoxyVerb}Tests using wildcard in the test name.\end{DoxyVerb}
+ 
+
+\-Definition at line 453 of file gtest\-\_\-filter\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+453 
+454   def testWildcardInTestName(self):
+455     """Tests using wildcard in the test name."""
+456 
+457     self.RunAndVerify('*.*A*', ['FooTest.Abc', 'BazTest.TestA'])
+
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__filter__unittest_8py}{gtest\-\_\-filter\-\_\-unittest.\-py}\end{DoxyCompactItemize}

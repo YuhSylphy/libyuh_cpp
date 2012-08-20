@@ -1,0 +1,473 @@
+\hypertarget{gtest-printers__test_8cc}{\section{gtest-\/1.6.0/test/gtest-\/printers\-\_\-test.cc \-File \-Reference}
+\label{d9/dc3/gtest-printers__test_8cc}\index{gtest-\/1.\-6.\-0/test/gtest-\/printers\-\_\-test.\-cc@{gtest-\/1.\-6.\-0/test/gtest-\/printers\-\_\-test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest-\/printers.\-h\char`\"{}}\*
+{\ttfamily \#include $<$ctype.\-h$>$}\*
+{\ttfamily \#include $<$limits.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$algorithm$>$}\*
+{\ttfamily \#include $<$deque$>$}\*
+{\ttfamily \#include $<$list$>$}\*
+{\ttfamily \#include $<$map$>$}\*
+{\ttfamily \#include $<$set$>$}\*
+{\ttfamily \#include $<$sstream$>$}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include $<$utility$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classBiggestIntConvertible}{\-Biggest\-Int\-Convertible}
+\item 
+class \hyperlink{classUnprintableTemplateInGlobal}{\-Unprintable\-Template\-In\-Global$<$ T $>$}
+\item 
+class \hyperlink{classStreamableInGlobal}{\-Streamable\-In\-Global}
+\item 
+class \hyperlink{classfoo_1_1UnprintableInFoo}{\-Unprintable\-In\-Foo}
+\item 
+struct \hyperlink{structfoo_1_1PrintableViaPrintTo}{\-Printable\-Via\-Print\-To}
+\item 
+struct \hyperlink{structfoo_1_1PointerPrintable}{\-Pointer\-Printable}
+\item 
+class \hyperlink{classfoo_1_1PrintableViaPrintToTemplate}{\-Printable\-Via\-Print\-To\-Template$<$ T $>$}
+\item 
+class \hyperlink{classfoo_1_1StreamableTemplateInFoo}{\-Streamable\-Template\-In\-Foo$<$ T $>$}
+\item 
+struct \hyperlink{structtesting_1_1gtest__printers__test_1_1Foo}{\-Foo}
+\item 
+class \hyperlink{classtesting_1_1gtest__printers__test_1_1AllowsGenericStreaming}{\-Allows\-Generic\-Streaming}
+\item 
+class \hyperlink{classtesting_1_1gtest__printers__test_1_1AllowsGenericStreamingTemplate}{\-Allows\-Generic\-Streaming\-Template$<$ T $>$}
+\item 
+class \hyperlink{classtesting_1_1gtest__printers__test_1_1AllowsGenericStreamingAndImplicitConversionTemplate}{\-Allows\-Generic\-Streaming\-And\-Implicit\-Conversion\-Template$<$ T $>$}
+\item 
+struct \hyperlink{structtesting_1_1gtest__printers__test_1_1iterator}{iterator}
+\item 
+struct \hyperlink{structtesting_1_1gtest__printers__test_1_1const__iterator}{const\-\_\-iterator}
+\item 
+struct \hyperlink{structtesting_1_1gtest__printers__test_1_1Big}{\-Big}
+\end{DoxyCompactItemize}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacefoo}{foo}
+\item 
+namespace \hyperlink{namespacetesting}{testing}
+\item 
+namespace \hyperlink{namespacetesting_1_1gtest__printers__test}{testing\-::gtest\-\_\-printers\-\_\-test}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gtest-printers__test_8cc_aa0ed482a6777cce04eecd24c530c78ec}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-I\-N\-T\-\_\-\-T\-O\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-}(value, expected\-\_\-string)
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{gtest-printers__test_8cc_a7a5ee9fe858568a85d80af1312aefb8b}{\-Anonymous\-Enum} \{ \hyperlink{gtest-printers__test_8cc_a7a5ee9fe858568a85d80af1312aefb8ba1a36d0a263e18ed9a4e3562b4cd6e8e6}{k\-A\-E1} =  -\/1, 
+\hyperlink{gtest-printers__test_8cc_a7a5ee9fe858568a85d80af1312aefb8ba67ee14379c1b9fd5ae5616a1b3f0d5d5}{k\-A\-E2} =  1
+ \}
+\item 
+enum \hyperlink{gtest-printers__test_8cc_a404f735da62338180a19ae16f80e09c8}{\-Enum\-Without\-Printer} \{ \hyperlink{gtest-printers__test_8cc_a404f735da62338180a19ae16f80e09c8ad65f74b95d76a8a471a823fa69139393}{k\-E\-W\-P1} =  -\/2, 
+\hyperlink{gtest-printers__test_8cc_a404f735da62338180a19ae16f80e09c8ae3b0361263e2ff24730ff9f2e2177a11}{k\-E\-W\-P2} =  42
+ \}
+\item 
+enum \hyperlink{gtest-printers__test_8cc_a52d9f846ca7a081ba3acf88dd6cd46dc}{\-Enum\-With\-Streaming} \{ \hyperlink{gtest-printers__test_8cc_a52d9f846ca7a081ba3acf88dd6cd46dca8d4bcf477f5a23ce8569a2a404327839}{k\-E\-W\-S1} =  10
+ \}
+\item 
+enum \hyperlink{gtest-printers__test_8cc_a904d619d593201ed509be794aed041ec}{\-Enum\-With\-Print\-To} \{ \hyperlink{gtest-printers__test_8cc_a904d619d593201ed509be794aed041eca72ccaf1f38be3cad8d1d6b0811467125}{k\-E\-W\-P\-T1} =  1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{gtest-printers__test_8cc_ab3395b6b04bac565a0bd2fb36fbbb339}{operator$<$$<$} (std\-::ostream \&os, \hyperlink{gtest-printers__test_8cc_a52d9f846ca7a081ba3acf88dd6cd46dc}{\-Enum\-With\-Streaming} e)
+\item 
+void \hyperlink{gtest-printers__test_8cc_aad8245a4b48cd65607b86153d0f9dbe6}{\-Print\-To} (\hyperlink{gtest-printers__test_8cc_a904d619d593201ed509be794aed041ec}{\-Enum\-With\-Print\-To} e, std\-::ostream $\ast$os)
+\item 
+void \hyperlink{gtest-printers__test_8cc_a7b9d893679e433b9a70f15a9c9d6446c}{operator$<$$<$} (\-::std\-::ostream \&os, const \hyperlink{classStreamableInGlobal}{\-Streamable\-In\-Global} \&)
+\item 
+void \hyperlink{gtest-printers__test_8cc_a0794c66a458fe922bfb717080d047311}{operator$<$$<$} (\-::std\-::ostream \&os, const \hyperlink{classStreamableInGlobal}{\-Streamable\-In\-Global} $\ast$)
+\item 
+void \hyperlink{namespacefoo_a6808585dc0cb2884adeb4f39e3cb95cf}{\-Print\-To} (const \-Printable\-Via\-Print\-To \&x,\-::std\-::ostream $\ast$os)
+\item 
+\-::std\-::ostream \& \hyperlink{namespacefoo_a65f8809f6af7f69f5cc842493caf4491}{operator$<$$<$} (\-::std\-::ostream \&os, const \-Pointer\-Printable $\ast$)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespacefoo_a27945da9cb5c9d3d51b69e6429c2f46d}{\-Print\-To} (const \-Printable\-Via\-Print\-To\-Template$<$ \-T $>$ \&x,\-::std\-::ostream $\ast$os)
+\item 
+{\footnotesize template$<$typename T $>$ }\\inline\-::std\-::ostream \& \hyperlink{namespacefoo_abe04f604d114085b0b9af25600ef00da}{operator$<$$<$} (\-::std\-::ostream \&os, const \-Streamable\-Template\-In\-Foo$<$ \-T $>$ \&x)
+\item 
+{\footnotesize template$<$typename T $>$ }\\string \hyperlink{namespacetesting_1_1gtest__printers__test_adab26e59d2d7781c06a2c1c5948a8f65}{\-Print} (const \-T \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\string \hyperlink{namespacetesting_1_1gtest__printers__test_a8e4be1dea6a05e53db4fd20d259ffdd7}{\-Print\-By\-Ref} (const \-T \&value)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ac79ac1529e754dddbaff5ba108ba3de3}{\-T\-E\-S\-T} (\-Print\-Enum\-Test, \hyperlink{gtest-printers__test_8cc_a7a5ee9fe858568a85d80af1312aefb8b}{\-Anonymous\-Enum})
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ae435934e9be88c7813ac6aee2ce0ce53}{\-T\-E\-S\-T} (\-Print\-Enum\-Test, \hyperlink{gtest-printers__test_8cc_a404f735da62338180a19ae16f80e09c8}{\-Enum\-Without\-Printer})
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a152cda5e11caecc372208103022726d1}{\-T\-E\-S\-T} (\-Print\-Enum\-Test, \hyperlink{gtest-printers__test_8cc_a52d9f846ca7a081ba3acf88dd6cd46dc}{\-Enum\-With\-Streaming})
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a171e23e5a52e6b7355c00daf8391ec12}{\-T\-E\-S\-T} (\-Print\-Enum\-Test, \hyperlink{gtest-printers__test_8cc_a904d619d593201ed509be794aed041ec}{\-Enum\-With\-Print\-To})
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a46ee2873cfeb51db5f56be0960ce333b}{\-T\-E\-S\-T} (\-Print\-Class\-Test, \hyperlink{classBiggestIntConvertible}{\-Biggest\-Int\-Convertible})
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_aa0a012b88bd8dee46707bf308aa312d1}{\-T\-E\-S\-T} (\-Print\-Char\-Test, \-Plain\-Char)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a08fe11b61c0ff62931f0172dc05c971b}{\-T\-E\-S\-T} (\-Print\-Char\-Test, \-Signed\-Char)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a54554ba079349cf09dcb6d522cfb70de}{\-T\-E\-S\-T} (\-Print\-Char\-Test, \-Unsigned\-Char)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a6f08c464dc0b8eb822368f552d4467ad}{\-T\-E\-S\-T} (\-Print\-Built\-In\-Type\-Test, \hyperlink{structBool}{\-Bool})
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ab567ebd97eff0a4b9a20a5f5cb77d678}{\-T\-E\-S\-T} (\-Print\-Built\-In\-Type\-Test, \-Wchar\-\_\-t)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a705ec4c2886606a22194107397fceea6}{\-T\-E\-S\-T} (\-Print\-Type\-Size\-Test, \-Wchar\-\_\-t)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a278d53e99390c7b31ff531524fe5e86e}{\-T\-E\-S\-T} (\-Print\-Built\-In\-Type\-Test, \-Integer)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a991dc124d153742c3ca126b2fa9ccab5}{\-T\-E\-S\-T} (\-Print\-Built\-In\-Type\-Test, \-Size\-\_\-t)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_acde0b28d177604ddb5e185d7b107f6f7}{\-T\-E\-S\-T} (\-Print\-Built\-In\-Type\-Test, \-Floating\-Points)
+\item 
+static string \hyperlink{namespacetesting_1_1gtest__printers__test_a647fd599f6c81755c3cff8ceeba1740d}{\-Print\-Pointer} (const void $\ast$p)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a6cd47b21ad8d9ac66ba57b5b6415a924}{\-T\-E\-S\-T} (\-Print\-C\-String\-Test, \-Const)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a89d9905fecee1b976c26d35498734dd4}{\-T\-E\-S\-T} (\-Print\-C\-String\-Test, \-Non\-Const)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ad29b97d58a4d1e5e8dd4d854f66b9e22}{\-T\-E\-S\-T} (\-Print\-C\-String\-Test, \-Null)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a140030b990011abab91d4c0b59f21edd}{\-T\-E\-S\-T} (\-Print\-C\-String\-Test, \-Escapes\-Properly)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a4caa1f81979cdc6f5ada95e01a4fae63}{\-T\-E\-S\-T} (\-Print\-Wide\-C\-String\-Test, \-Const)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a8812b5f088e13083ebb8a7e35fbcdae7}{\-T\-E\-S\-T} (\-Print\-Wide\-C\-String\-Test, \-Non\-Const)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_acd1267d49d61ad53b2b8a88f68fca3a7}{\-T\-E\-S\-T} (\-Print\-Wide\-C\-String\-Test, \-Null)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_aa80d6bb47e6bf997dacf0c75322d12cf}{\-T\-E\-S\-T} (\-Print\-Wide\-C\-String\-Test, \-Escapes\-Properly)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_acd7a56709621a91dca669023d192bdc7}{\-T\-E\-S\-T} (\-Print\-Char\-Pointer\-Test, \-Signed\-Char)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ae854b0ca4d06ffc273c391f262884681}{\-T\-E\-S\-T} (\-Print\-Char\-Pointer\-Test, \-Const\-Signed\-Char)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_afb9a6a26323b287b7666b6adb5bdb149}{\-T\-E\-S\-T} (\-Print\-Char\-Pointer\-Test, \-Unsigned\-Char)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_aa0487f8fd5052f7d6afe2b18ad7931f9}{\-T\-E\-S\-T} (\-Print\-Char\-Pointer\-Test, \-Const\-Unsigned\-Char)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ad08dcd672b1e66a802a564eb974c400a}{\-T\-E\-S\-T} (\-Print\-Pointer\-To\-Built\-In\-Type\-Test, \hyperlink{structBool}{\-Bool})
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ac6d8b84db9386b399eb431b5b1668e87}{\-T\-E\-S\-T} (\-Print\-Pointer\-To\-Built\-In\-Type\-Test, \-Void)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a8819fb42392faae72e8bc594d498085d}{\-T\-E\-S\-T} (\-Print\-Pointer\-To\-Built\-In\-Type\-Test, \-Const\-Void)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_afee54807b15b623718c62008bd743d4b}{\-T\-E\-S\-T} (\-Print\-Pointer\-To\-Pointer\-Test, \-Int\-Pointer\-Pointer)
+\item 
+void \hyperlink{namespacetesting_1_1gtest__printers__test_adf0e590d6776ecb7095a989ff2272d7b}{\-My\-Function} (int)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_aa3cb60cf6f3a4a0cd7d9873cd597ffd8}{\-T\-E\-S\-T} (\-Print\-Pointer\-Test, \-Non\-Member\-Function\-Pointer)
+\item 
+{\footnotesize template$<$typename String\-Type $>$ }\\\-Assertion\-Result \hyperlink{namespacetesting_1_1gtest__printers__test_abbd436200da6c80944c8a7504fb56ea1}{\-Has\-Prefix} (const \-String\-Type \&str, const \-String\-Type \&prefix)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a434cafcc1dbee409992bbb1593034480}{\-T\-E\-S\-T} (\-Print\-Pointer\-Test, \-Member\-Variable\-Pointer)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a9d998b210890d3d7e085d01c457f650f}{\-T\-E\-S\-T} (\-Print\-Pointer\-Test, \-Member\-Function\-Pointer)
+\item 
+{\footnotesize template$<$typename T , size\-\_\-t \-N$>$ }\\string \hyperlink{namespacetesting_1_1gtest__printers__test_a10300ded1e327c98c6a36beb7ad49e58}{\-Print\-Array\-Helper} (\-T(\&a)\mbox{[}\-N\mbox{]})
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a3845c4717b03cb5ad309c7d9a37acb0a}{\-T\-E\-S\-T} (\-Print\-Array\-Test, \-One\-Dimensional\-Array)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ac366b9ec749b2499d21583d3b8f86273}{\-T\-E\-S\-T} (\-Print\-Array\-Test, \-Two\-Dimensional\-Array)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a8b5638f178c12f58707ca0f02a3b4d41}{\-T\-E\-S\-T} (\-Print\-Array\-Test, \-Const\-Array)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a82441850ddadc324b1a7ab57b4247bc7}{\-T\-E\-S\-T} (\-Print\-Array\-Test, \-Char\-Array)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_af8e9c48c5a28dc9e02631f4527b11556}{\-T\-E\-S\-T} (\-Print\-Array\-Test, \-Const\-Char\-Array)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_af91d8ad9d6c7547913fe05c7acc44114}{\-T\-E\-S\-T} (\-Print\-Array\-Test, \-Object\-Array)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a596493b56489aa1571fa26d1402e7116}{\-T\-E\-S\-T} (\-Print\-Array\-Test, \-Big\-Array)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_abbd355e76033f0defd76c37523ad0f60}{\-T\-E\-S\-T} (\-Print\-String\-Test, \-String\-In\-Std\-Namespace)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ac20ee165500471e363011c3f664d2fb8}{\-T\-E\-S\-T} (\-Print\-String\-Test, \-String\-Ambiguous\-Hex)
+\item 
+{\footnotesize template$<$typename Char , typename Char\-Traits $>$ }\\std\-::basic\-\_\-ostream$<$ \-Char, \*
+\-Char\-Traits $>$ \& \hyperlink{namespacetesting_1_1gtest__printers__test_a1eb0213095e639d357692066e8505887}{operator$<$$<$} (std\-::basic\-\_\-ostream$<$ \-Char, \-Char\-Traits $>$ \&os, const \-Allows\-Generic\-Streaming \&)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a9272037c799c4779e1d79476dad66cb6}{\-T\-E\-S\-T} (\-Print\-Type\-With\-Generic\-Streaming\-Test, \-Non\-Template\-Type)
+\item 
+{\footnotesize template$<$typename Char , typename Char\-Traits , typename T $>$ }\\std\-::basic\-\_\-ostream$<$ \-Char, \*
+\-Char\-Traits $>$ \& \hyperlink{namespacetesting_1_1gtest__printers__test_a5464168e925b1adf29986c8e544e908e}{operator$<$$<$} (std\-::basic\-\_\-ostream$<$ \-Char, \-Char\-Traits $>$ \&os, const \-Allows\-Generic\-Streaming\-Template$<$ \-T $>$ \&)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a6e180c85f307712a995985f7bc735fd1}{\-T\-E\-S\-T} (\-Print\-Type\-With\-Generic\-Streaming\-Test, \-Template\-Type)
+\item 
+{\footnotesize template$<$typename Char , typename Char\-Traits , typename T $>$ }\\std\-::basic\-\_\-ostream$<$ \-Char, \*
+\-Char\-Traits $>$ \& \hyperlink{namespacetesting_1_1gtest__printers__test_a09eedfbca613302efe6438d2a537f419}{operator$<$$<$} (std\-::basic\-\_\-ostream$<$ \-Char, \-Char\-Traits $>$ \&os, const \-Allows\-Generic\-Streaming\-And\-Implicit\-Conversion\-Template$<$ \-T $>$ \&)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a68877c5e1ec7a53281798310c30e1776}{\-T\-E\-S\-T} (\-Print\-Type\-With\-Generic\-Streaming\-Test, \-Type\-Implicitly\-Convertible)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a1ce10b8a3634e0f6bfbfbb5888c04a95}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Empty\-Deque)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a249d482cf4a1525bd043489dcbd3e200}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Non\-Empty\-Deque)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_aaa135672ff79ecaef82c6046f2ab8d29}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-List)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a3d701a1866f260a42411e9041894c49c}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Map)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a8a498c956a5b1c0358d126e1ad56fac0}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Multi\-Map)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_abdc498462741033074f8e86b7c0bd480}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Set)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_adaa3e1cfa3feca377b3958edb41fc0f1}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Multi\-Set)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ad5d3e873b00c1c9e3f5924e106dd7831}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Pair)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_abfab1ea62f0285c0cdbcca500be0dac8}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Vector)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a55eca253f3365ad26183bcc711cb257a}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Long\-Sequence)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ad8fb463805baecdfb95154dec6ec4f27}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Nested\-Container)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a6dd59bbdea483f662fe62e2c55c106ce}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-One\-Dimensional\-Native\-Array)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_aca371c218e2248562ed258eaf385f4d1}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Two\-Dimensional\-Native\-Array)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a01ec32faf0032f9fbcf4895d8d6e4aa9}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Iterator)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a3b54f9a039804190b7ff2e818169c0f2}{\-T\-E\-S\-T} (\-Print\-Stl\-Container\-Test, \-Const\-Iterator)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a805264fd24de8e65cba977a798abc54c}{\-T\-E\-S\-T} (\-Print\-Unprintable\-Type\-Test, \-In\-Global\-Namespace)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a0aa1499e978bdde6c71e49ecc9db695b}{\-T\-E\-S\-T} (\-Print\-Unprintable\-Type\-Test, \-In\-User\-Namespace)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a6b6fba2a191094244f8aa78a4933a2c5}{\-T\-E\-S\-T} (\-Print\-Unpritable\-Type\-Test, \-Big\-Object)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a80fe9d71227a97b12fd5336a823c3d17}{\-T\-E\-S\-T} (\-Print\-Streamable\-Type\-Test, \-In\-Global\-Namespace)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a8ccd96504d676671a0429073d5012ff1}{\-T\-E\-S\-T} (\-Print\-Streamable\-Type\-Test, \-Template\-Type\-In\-User\-Namespace)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a52f5df394111bcc55aecc59ce426088d}{\-T\-E\-S\-T} (\-Print\-Printable\-Type\-Test, \-In\-User\-Namespace)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a3da6191eff6b016540024c2bfccdd90b}{\-T\-E\-S\-T} (\-Print\-Printable\-Type\-Test, \-Pointer\-In\-User\-Namespace)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_aa697a3cf25b7f51f26ab49ed8ac3dd31}{\-T\-E\-S\-T} (\-Print\-Printable\-Type\-Test, \-Template\-In\-User\-Namespace)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_aeae9b61a9fe582c72580db1466631846}{\-T\-E\-S\-T} (\-Print\-Reference\-Test, \-Prints\-Address\-And\-Value)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_aab47074bb60b087e80675a44ad8c88ba}{\-T\-E\-S\-T} (\-Print\-Reference\-Test, \-Handles\-Function\-Pointer)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a88f9089e0b19be4bda74a953d6a47d7b}{\-T\-E\-S\-T} (\-Print\-Reference\-Test, \-Handles\-Member\-Function\-Pointer)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_af9c63486049ac0ec2a1db65904702eb3}{\-T\-E\-S\-T} (\-Print\-Reference\-Test, \-Handles\-Member\-Variable\-Pointer)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a5d1bc4b12c18ccaec2ced9f45c092567}{\-T\-E\-S\-T} (\-Print\-To\-String\-Test, \-Works\-For\-Scalar)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a68100148758516ebab9c761ca7778586}{\-T\-E\-S\-T} (\-Print\-To\-String\-Test, \-Works\-For\-Pointer\-To\-Const\-Char)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a1db34d8760c17157572ce2877007d15a}{\-T\-E\-S\-T} (\-Print\-To\-String\-Test, \-Works\-For\-Pointer\-To\-Non\-Const\-Char)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a78bd89af8a8505880b78ec2a001d3cb8}{\-T\-E\-S\-T} (\-Print\-To\-String\-Test, \-Works\-For\-Array)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ab49ff6527b0b01411b725fe46e1af65c}{\-T\-E\-S\-T} (\-Universal\-Terse\-Print\-Test, \-Works\-For\-Non\-Reference)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ab7adb58a0e08e0830157a5a1c7bceac5}{\-T\-E\-S\-T} (\-Universal\-Terse\-Print\-Test, \-Works\-For\-Reference)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ab11252e228a240a349d747546bc222d2}{\-T\-E\-S\-T} (\-Universal\-Terse\-Print\-Test, \-Works\-For\-C\-String)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a43d4efc91c2ea7d8220891df9b0437df}{\-T\-E\-S\-T} (\-Universal\-Print\-Test, \-Works\-For\-Non\-Reference)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_a58ad7c81884e852b09646764ce14a47e}{\-T\-E\-S\-T} (\-Universal\-Print\-Test, \-Works\-For\-Reference)
+\item 
+\hyperlink{namespacetesting_1_1gtest__printers__test_ac20aca012aca1ca9589dbf7483fbbbd1}{\-T\-E\-S\-T} (\-Universal\-Print\-Test, \-Works\-For\-C\-String)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{gtest-printers__test_8cc_aa0ed482a6777cce04eecd24c530c78ec}{\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-I\-N\-T\-\_\-\-T\-O\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-I\-N\-T\-\_\-\-T\-O\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-I\-N\-T\-\_\-\-T\-O\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-I\-N\-T\-\_\-\-T\-O\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-}!gtest-printers_test.cc@{gtest-\/printers\-\_\-test.\-cc}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-I\-N\-T\-\_\-\-T\-O\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-I\-N\-T\-\_\-\-T\-O\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{value, }
+\item[{}]{expected\-\_\-string}
+\end{DoxyParamCaption}
+)}}\label{d9/dc3/gtest-printers__test_8cc_aa0ed482a6777cce04eecd24c530c78ec}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+EXPECT_TRUE(PrintToString(value) == (expected_string))        \
+      << " where " #value " prints as " << (PrintToString(value))
+\end{DoxyCode}
+
+
+\-Definition at line 1188 of file gtest-\/printers\-\_\-test.\-cc.
+
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{gtest-printers__test_8cc_a7a5ee9fe858568a85d80af1312aefb8b}{\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!\-Anonymous\-Enum@{\-Anonymous\-Enum}}
+\index{\-Anonymous\-Enum@{\-Anonymous\-Enum}!gtest-printers_test.cc@{gtest-\/printers\-\_\-test.\-cc}}
+\subsubsection[{\-Anonymous\-Enum}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Anonymous\-Enum}}}\label{d9/dc3/gtest-printers__test_8cc_a7a5ee9fe858568a85d80af1312aefb8b}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-A\-E1@{k\-A\-E1}!gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}}\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!k\-A\-E1@{k\-A\-E1}}\item[{\em 
+\hypertarget{gtest-printers__test_8cc_a7a5ee9fe858568a85d80af1312aefb8ba1a36d0a263e18ed9a4e3562b4cd6e8e6}{k\-A\-E1}\label{d9/dc3/gtest-printers__test_8cc_a7a5ee9fe858568a85d80af1312aefb8ba1a36d0a263e18ed9a4e3562b4cd6e8e6}
+}]\index{k\-A\-E2@{k\-A\-E2}!gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}}\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!k\-A\-E2@{k\-A\-E2}}\item[{\em 
+\hypertarget{gtest-printers__test_8cc_a7a5ee9fe858568a85d80af1312aefb8ba67ee14379c1b9fd5ae5616a1b3f0d5d5}{k\-A\-E2}\label{d9/dc3/gtest-printers__test_8cc_a7a5ee9fe858568a85d80af1312aefb8ba67ee14379c1b9fd5ae5616a1b3f0d5d5}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 64 of file gtest-\/printers\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                   {
+  kAE1 = -1,
+  kAE2 = 1
+};
+\end{DoxyCode}
+\hypertarget{gtest-printers__test_8cc_a404f735da62338180a19ae16f80e09c8}{\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!\-Enum\-Without\-Printer@{\-Enum\-Without\-Printer}}
+\index{\-Enum\-Without\-Printer@{\-Enum\-Without\-Printer}!gtest-printers_test.cc@{gtest-\/printers\-\_\-test.\-cc}}
+\subsubsection[{\-Enum\-Without\-Printer}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Enum\-Without\-Printer}}}\label{d9/dc3/gtest-printers__test_8cc_a404f735da62338180a19ae16f80e09c8}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-E\-W\-P1@{k\-E\-W\-P1}!gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}}\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!k\-E\-W\-P1@{k\-E\-W\-P1}}\item[{\em 
+\hypertarget{gtest-printers__test_8cc_a404f735da62338180a19ae16f80e09c8ad65f74b95d76a8a471a823fa69139393}{k\-E\-W\-P1}\label{d9/dc3/gtest-printers__test_8cc_a404f735da62338180a19ae16f80e09c8ad65f74b95d76a8a471a823fa69139393}
+}]\index{k\-E\-W\-P2@{k\-E\-W\-P2}!gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}}\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!k\-E\-W\-P2@{k\-E\-W\-P2}}\item[{\em 
+\hypertarget{gtest-printers__test_8cc_a404f735da62338180a19ae16f80e09c8ae3b0361263e2ff24730ff9f2e2177a11}{k\-E\-W\-P2}\label{d9/dc3/gtest-printers__test_8cc_a404f735da62338180a19ae16f80e09c8ae3b0361263e2ff24730ff9f2e2177a11}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 70 of file gtest-\/printers\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                        {
+  kEWP1 = -2,
+  kEWP2 = 42
+};
+\end{DoxyCode}
+\hypertarget{gtest-printers__test_8cc_a904d619d593201ed509be794aed041ec}{\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!\-Enum\-With\-Print\-To@{\-Enum\-With\-Print\-To}}
+\index{\-Enum\-With\-Print\-To@{\-Enum\-With\-Print\-To}!gtest-printers_test.cc@{gtest-\/printers\-\_\-test.\-cc}}
+\subsubsection[{\-Enum\-With\-Print\-To}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Enum\-With\-Print\-To}}}\label{d9/dc3/gtest-printers__test_8cc_a904d619d593201ed509be794aed041ec}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-E\-W\-P\-T1@{k\-E\-W\-P\-T1}!gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}}\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!k\-E\-W\-P\-T1@{k\-E\-W\-P\-T1}}\item[{\em 
+\hypertarget{gtest-printers__test_8cc_a904d619d593201ed509be794aed041eca72ccaf1f38be3cad8d1d6b0811467125}{k\-E\-W\-P\-T1}\label{d9/dc3/gtest-printers__test_8cc_a904d619d593201ed509be794aed041eca72ccaf1f38be3cad8d1d6b0811467125}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 85 of file gtest-\/printers\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                     {
+  kEWPT1 = 1
+};
+\end{DoxyCode}
+\hypertarget{gtest-printers__test_8cc_a52d9f846ca7a081ba3acf88dd6cd46dc}{\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!\-Enum\-With\-Streaming@{\-Enum\-With\-Streaming}}
+\index{\-Enum\-With\-Streaming@{\-Enum\-With\-Streaming}!gtest-printers_test.cc@{gtest-\/printers\-\_\-test.\-cc}}
+\subsubsection[{\-Enum\-With\-Streaming}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Enum\-With\-Streaming}}}\label{d9/dc3/gtest-printers__test_8cc_a52d9f846ca7a081ba3acf88dd6cd46dc}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{k\-E\-W\-S1@{k\-E\-W\-S1}!gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}}\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!k\-E\-W\-S1@{k\-E\-W\-S1}}\item[{\em 
+\hypertarget{gtest-printers__test_8cc_a52d9f846ca7a081ba3acf88dd6cd46dca8d4bcf477f5a23ce8569a2a404327839}{k\-E\-W\-S1}\label{d9/dc3/gtest-printers__test_8cc_a52d9f846ca7a081ba3acf88dd6cd46dca8d4bcf477f5a23ce8569a2a404327839}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 76 of file gtest-\/printers\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+  kEWS1 = 10
+};
+\end{DoxyCode}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest-printers__test_8cc_ab3395b6b04bac565a0bd2fb36fbbb339}{\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!gtest-printers_test.cc@{gtest-\/printers\-\_\-test.\-cc}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os, }
+\item[{{\bf \-Enum\-With\-Streaming}}]{e}
+\end{DoxyParamCaption}
+)}}\label{d9/dc3/gtest-printers__test_8cc_ab3395b6b04bac565a0bd2fb36fbbb339}
+
+
+\-Definition at line 80 of file gtest-\/printers\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                            {
+  return os << (e == kEWS1 ? "kEWS1" : "invalid");
+}
+\end{DoxyCode}
+\hypertarget{gtest-printers__test_8cc_a7b9d893679e433b9a70f15a9c9d6446c}{\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!gtest-printers_test.cc@{gtest-\/printers\-\_\-test.\-cc}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream \&}]{os, }
+\item[{const {\bf \-Streamable\-In\-Global} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d9/dc3/gtest-printers__test_8cc_a7b9d893679e433b9a70f15a9c9d6446c}
+
+
+\-Definition at line 114 of file gtest-\/printers\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                                    {
+  os << "StreamableInGlobal";
+}
+\end{DoxyCode}
+\hypertarget{gtest-printers__test_8cc_a0794c66a458fe922bfb717080d047311}{\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!gtest-printers_test.cc@{gtest-\/printers\-\_\-test.\-cc}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream \&}]{os, }
+\item[{const {\bf \-Streamable\-In\-Global} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{d9/dc3/gtest-printers__test_8cc_a0794c66a458fe922bfb717080d047311}
+
+
+\-Definition at line 118 of file gtest-\/printers\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                             {
+  os << "StreamableInGlobal*";
+}
+\end{DoxyCode}
+\hypertarget{gtest-printers__test_8cc_aad8245a4b48cd65607b86153d0f9dbe6}{\index{gtest-\/printers\-\_\-test.\-cc@{gtest-\/printers\-\_\-test.\-cc}!\-Print\-To@{\-Print\-To}}
+\index{\-Print\-To@{\-Print\-To}!gtest-printers_test.cc@{gtest-\/printers\-\_\-test.\-cc}}
+\subsubsection[{\-Print\-To}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Print\-To} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Enum\-With\-Print\-To}}]{e, }
+\item[{std\-::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)}}\label{d9/dc3/gtest-printers__test_8cc_aad8245a4b48cd65607b86153d0f9dbe6}
+
+
+\-Definition at line 89 of file gtest-\/printers\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                {
+  *os << (e == kEWPT1 ? "kEWPT1" : "invalid");
+}
+\end{DoxyCode}

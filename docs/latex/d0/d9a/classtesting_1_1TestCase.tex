@@ -1,0 +1,1166 @@
+\hypertarget{classtesting_1_1TestCase}{\section{\-Test\-Case \-Class \-Reference}
+\label{d0/d9a/classtesting_1_1TestCase}\index{\-Test\-Case@{\-Test\-Case}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1TestCase_adf0dcf842d3506fd22c91de33f79df86}{\-Test\-Case} (const char $\ast$\hyperlink{classtesting_1_1TestCase_a862958aa3c2b9bf36903f1f0f2e81c54}{name}, const char $\ast$a\-\_\-type\-\_\-param, \hyperlink{classtesting_1_1Test_a2df065892efeff7ca91bb2d2fbe00975}{\-Test\-::\-Set\-Up\-Test\-Case\-Func} set\-\_\-up\-\_\-tc, \hyperlink{classtesting_1_1Test_a4ae7a4e140c70dee5c9cb82e13ae570c}{\-Test\-::\-Tear\-Down\-Test\-Case\-Func} tear\-\_\-down\-\_\-tc)
+\item 
+virtual \hyperlink{classtesting_1_1TestCase_ab5565cf238c1b95c8113950cf9eb80b5}{$\sim$\-Test\-Case} ()
+\item 
+const char $\ast$ \hyperlink{classtesting_1_1TestCase_a862958aa3c2b9bf36903f1f0f2e81c54}{name} () const 
+\item 
+const char $\ast$ \hyperlink{classtesting_1_1TestCase_ad596248661b2f4017c041425fa4c8b10}{type\-\_\-param} () const 
+\item 
+bool \hyperlink{classtesting_1_1TestCase_ad82d0b35f1d10f27e8d03440f16ca467}{should\-\_\-run} () const 
+\item 
+int \hyperlink{classtesting_1_1TestCase_ab955f67bc1fe8ef62a7e72906ccece2a}{successful\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1TestCase_afd8bbd35c7ee99960abb321cfdff3119}{failed\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1TestCase_a10ec677118627074973fc20c9271b204}{disabled\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1TestCase_aa6eccf86072f4f8ddd0bea30dfd45912}{test\-\_\-to\-\_\-run\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1TestCase_a0eb7286957aeb126d9926c33407a15a3}{total\-\_\-test\-\_\-count} () const 
+\item 
+bool \hyperlink{classtesting_1_1TestCase_ac97d5073365af8a73262fd9f6bf18656}{\-Passed} () const 
+\item 
+bool \hyperlink{classtesting_1_1TestCase_a7cf078354304c964c1934f53bf2bb4d7}{\-Failed} () const 
+\item 
+\hyperlink{namespacetesting_a338e9fd9474f0d8fafcb28b05f66a630}{\-Time\-In\-Millis} \hyperlink{classtesting_1_1TestCase_a4f91886b546ea9cc5ba2d374a62f3a9c}{elapsed\-\_\-time} () const 
+\item 
+const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ \hyperlink{classtesting_1_1TestCase_aae10a34f0c8f706d33844333c38f0d8a}{\-Get\-Test\-Info} (int i) const 
+\item 
+\hyperlink{classtesting_1_1TestCase_adf0dcf842d3506fd22c91de33f79df86}{\-Test\-Case} (const char $\ast$\hyperlink{classtesting_1_1TestCase_a862958aa3c2b9bf36903f1f0f2e81c54}{name}, const char $\ast$a\-\_\-type\-\_\-param, \hyperlink{classtesting_1_1Test_a2df065892efeff7ca91bb2d2fbe00975}{\-Test\-::\-Set\-Up\-Test\-Case\-Func} set\-\_\-up\-\_\-tc, \hyperlink{classtesting_1_1Test_a4ae7a4e140c70dee5c9cb82e13ae570c}{\-Test\-::\-Tear\-Down\-Test\-Case\-Func} tear\-\_\-down\-\_\-tc)
+\item 
+virtual \hyperlink{classtesting_1_1TestCase_acc72ca1291990751d79abe38f199bb3f}{$\sim$\-Test\-Case} ()
+\item 
+const char $\ast$ \hyperlink{classtesting_1_1TestCase_a862958aa3c2b9bf36903f1f0f2e81c54}{name} () const 
+\item 
+const char $\ast$ \hyperlink{classtesting_1_1TestCase_ad596248661b2f4017c041425fa4c8b10}{type\-\_\-param} () const 
+\item 
+bool \hyperlink{classtesting_1_1TestCase_ad82d0b35f1d10f27e8d03440f16ca467}{should\-\_\-run} () const 
+\item 
+int \hyperlink{classtesting_1_1TestCase_ab955f67bc1fe8ef62a7e72906ccece2a}{successful\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1TestCase_afd8bbd35c7ee99960abb321cfdff3119}{failed\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1TestCase_a10ec677118627074973fc20c9271b204}{disabled\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1TestCase_aa6eccf86072f4f8ddd0bea30dfd45912}{test\-\_\-to\-\_\-run\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1TestCase_a0eb7286957aeb126d9926c33407a15a3}{total\-\_\-test\-\_\-count} () const 
+\item 
+bool \hyperlink{classtesting_1_1TestCase_ac97d5073365af8a73262fd9f6bf18656}{\-Passed} () const 
+\item 
+bool \hyperlink{classtesting_1_1TestCase_a7cf078354304c964c1934f53bf2bb4d7}{\-Failed} () const 
+\item 
+\hyperlink{namespacetesting_a338e9fd9474f0d8fafcb28b05f66a630}{\-Time\-In\-Millis} \hyperlink{classtesting_1_1TestCase_a4f91886b546ea9cc5ba2d374a62f3a9c}{elapsed\-\_\-time} () const 
+\item 
+const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ \hyperlink{classtesting_1_1TestCase_ad2a7e943688a31c1db24b59c82076005}{\-Get\-Test\-Info} (int i) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ $>$ \& \hyperlink{classtesting_1_1TestCase_aaa94fcfd7f8161d39504f535fa995c2d}{test\-\_\-info\-\_\-list} ()
+\item 
+const std\-::vector$<$ \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ $>$ \& \hyperlink{classtesting_1_1TestCase_af56750ff9e6c7865f20ae51cfc8d793e}{test\-\_\-info\-\_\-list} () const 
+\item 
+\hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ \hyperlink{classtesting_1_1TestCase_aeea35099284cdd7127924592152e3b73}{\-Get\-Mutable\-Test\-Info} (int i)
+\item 
+void \hyperlink{classtesting_1_1TestCase_ab3f3dbe8ef52473f912aef44d04193d5}{set\-\_\-should\-\_\-run} (bool should)
+\item 
+void \hyperlink{classtesting_1_1TestCase_a2a0417de1ee92080aae4676c77318b01}{\-Add\-Test\-Info} (\hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+void \hyperlink{classtesting_1_1TestCase_a566dca6156477ed747aa781f341d13d5}{\-Clear\-Result} ()
+\item 
+void \hyperlink{classtesting_1_1TestCase_aa3eca255b6be227d7d901cc2a72017a5}{\-Run} ()
+\item 
+void \hyperlink{classtesting_1_1TestCase_a0a9185d58f27f485506f4c0dedaab124}{\-Run\-Set\-Up\-Test\-Case} ()
+\item 
+void \hyperlink{classtesting_1_1TestCase_a68c2b3492b96c37271344d40a79caa84}{\-Run\-Tear\-Down\-Test\-Case} ()
+\item 
+void \hyperlink{classtesting_1_1TestCase_a0005a140538304e16d0bbd0bf08b3b65}{\-Shuffle\-Tests} (\hyperlink{classtesting_1_1internal_1_1Random}{internal\-::\-Random} $\ast$random)
+\item 
+void \hyperlink{classtesting_1_1TestCase_ae4c0afbfb6a7d13aece4c3a256a5d01d}{\-Unshuffle\-Tests} ()
+\item 
+\hyperlink{classtesting_1_1TestCase_a589179a7edfbdc3809f75a5bd7090dee}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1TestCase}{\-Test\-Case})
+\item 
+std\-::vector$<$ \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ $>$ \& \hyperlink{classtesting_1_1TestCase_aaa94fcfd7f8161d39504f535fa995c2d}{test\-\_\-info\-\_\-list} ()
+\item 
+const std\-::vector$<$ \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ $>$ \& \hyperlink{classtesting_1_1TestCase_af56750ff9e6c7865f20ae51cfc8d793e}{test\-\_\-info\-\_\-list} () const 
+\item 
+\hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ \hyperlink{classtesting_1_1TestCase_af8ef3f6fc704ca1dc6723ce078c9ee6e}{\-Get\-Mutable\-Test\-Info} (int i)
+\item 
+void \hyperlink{classtesting_1_1TestCase_ab3f3dbe8ef52473f912aef44d04193d5}{set\-\_\-should\-\_\-run} (bool should)
+\item 
+void \hyperlink{classtesting_1_1TestCase_a2a0417de1ee92080aae4676c77318b01}{\-Add\-Test\-Info} (\hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+void \hyperlink{classtesting_1_1TestCase_a566dca6156477ed747aa781f341d13d5}{\-Clear\-Result} ()
+\item 
+void \hyperlink{classtesting_1_1TestCase_aa3eca255b6be227d7d901cc2a72017a5}{\-Run} ()
+\item 
+void \hyperlink{classtesting_1_1TestCase_a0a9185d58f27f485506f4c0dedaab124}{\-Run\-Set\-Up\-Test\-Case} ()
+\item 
+void \hyperlink{classtesting_1_1TestCase_a68c2b3492b96c37271344d40a79caa84}{\-Run\-Tear\-Down\-Test\-Case} ()
+\item 
+void \hyperlink{classtesting_1_1TestCase_a0005a140538304e16d0bbd0bf08b3b65}{\-Shuffle\-Tests} (\hyperlink{classtesting_1_1internal_1_1Random}{internal\-::\-Random} $\ast$random)
+\item 
+void \hyperlink{classtesting_1_1TestCase_ae4c0afbfb6a7d13aece4c3a256a5d01d}{\-Unshuffle\-Tests} ()
+\item 
+\hyperlink{classtesting_1_1TestCase_a589179a7edfbdc3809f75a5bd7090dee}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1TestCase}{\-Test\-Case})
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtesting_1_1TestCase_ad1d1fd605ca6c25a6f71b40c5216a8e0}{\-Clear\-Test\-Case\-Result} (\hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$test\-\_\-case)
+\item 
+static bool \hyperlink{classtesting_1_1TestCase_a90cec168fde1398dfc3b1db6e1a797a4}{\-Test\-Passed} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+static bool \hyperlink{classtesting_1_1TestCase_a34e1cd8d648d9df54eedbb17f02587a4}{\-Test\-Failed} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+static bool \hyperlink{classtesting_1_1TestCase_a8cab09cdd57af464aec68c4dc9f45e96}{\-Test\-Disabled} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+static bool \hyperlink{classtesting_1_1TestCase_a8fdbfd24fea404421eb50c2450382e1d}{\-Should\-Run\-Test} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+static void \hyperlink{classtesting_1_1TestCase_ad1d1fd605ca6c25a6f71b40c5216a8e0}{\-Clear\-Test\-Case\-Result} (\hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$test\-\_\-case)
+\item 
+static bool \hyperlink{classtesting_1_1TestCase_a90cec168fde1398dfc3b1db6e1a797a4}{\-Test\-Passed} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+static bool \hyperlink{classtesting_1_1TestCase_a34e1cd8d648d9df54eedbb17f02587a4}{\-Test\-Failed} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+static bool \hyperlink{classtesting_1_1TestCase_a8cab09cdd57af464aec68c4dc9f45e96}{\-Test\-Disabled} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+static bool \hyperlink{classtesting_1_1TestCase_a8fdbfd24fea404421eb50c2450382e1d}{\-Should\-Run\-Test} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1String}{internal\-::\-String} \hyperlink{classtesting_1_1TestCase_a405ae26bae83121bb8a0991436141b78}{name\-\_\-}
+\item 
+const \hyperlink{classtesting_1_1internal_1_1scoped__ptr}{internal\-::scoped\-\_\-ptr}\*
+$<$ const \-::std\-::string $>$ \hyperlink{classtesting_1_1TestCase_a85fc352afd22204cc3515cb59a7d5b38}{type\-\_\-param\-\_\-}
+\item 
+std\-::vector$<$ \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ $>$ \hyperlink{classtesting_1_1TestCase_a65416ad78055a5f6a8ea21fa0ed8ac9c}{test\-\_\-info\-\_\-list\-\_\-}
+\item 
+std\-::vector$<$ int $>$ \hyperlink{classtesting_1_1TestCase_a01ce3b1011c9e64d1e78efe620dc00dc}{test\-\_\-indices\-\_\-}
+\item 
+\hyperlink{classtesting_1_1Test_a2df065892efeff7ca91bb2d2fbe00975}{\-Test\-::\-Set\-Up\-Test\-Case\-Func} \hyperlink{classtesting_1_1TestCase_a168acfe04861100ab0d0175d14b1fce7}{set\-\_\-up\-\_\-tc\-\_\-}
+\item 
+\hyperlink{classtesting_1_1Test_a4ae7a4e140c70dee5c9cb82e13ae570c}{\-Test\-::\-Tear\-Down\-Test\-Case\-Func} \hyperlink{classtesting_1_1TestCase_a152e0eba7294d5301d205822b0eae136}{tear\-\_\-down\-\_\-tc\-\_\-}
+\item 
+bool \hyperlink{classtesting_1_1TestCase_ade0e3d581d82aaeaf7263d575564cb40}{should\-\_\-run\-\_\-}
+\item 
+\hyperlink{namespacetesting_a338e9fd9474f0d8fafcb28b05f66a630}{\-Time\-In\-Millis} \hyperlink{classtesting_1_1TestCase_a97b9c166ebee95ae4c9ef26cf3155617}{elapsed\-\_\-time\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtesting_1_1TestCase_ab085d1bf4cff8b1045750706b11f8662}{\-Test}
+\item 
+class \hyperlink{classtesting_1_1TestCase_aa684cc13a8f91b00c0c9ce41ec7474eb}{internal\-::\-Unit\-Test\-Impl}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 17765 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1TestCase_adf0dcf842d3506fd22c91de33f79df86}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Test\-Case@{\-Test\-Case}}
+\index{\-Test\-Case@{\-Test\-Case}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{a\-\_\-type\-\_\-param, }
+\item[{{\bf \-Test\-::\-Set\-Up\-Test\-Case\-Func}}]{set\-\_\-up\-\_\-tc, }
+\item[{{\bf \-Test\-::\-Tear\-Down\-Test\-Case\-Func}}]{tear\-\_\-down\-\_\-tc}
+\end{DoxyParamCaption}
+)}}\label{d0/d9a/classtesting_1_1TestCase_adf0dcf842d3506fd22c91de33f79df86}
+
+
+\-Definition at line 3695 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+    : name_(a_name),
+      type_param_(a_type_param ? new std::string(a_type_param) : NULL),
+      set_up_tc_(set_up_tc),
+      tear_down_tc_(tear_down_tc),
+      should_run_(false),
+      elapsed_time_(0) {
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ab5565cf238c1b95c8113950cf9eb80b5}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!$\sim$\-Test\-Case@{$\sim$\-Test\-Case}}
+\index{$\sim$\-Test\-Case@{$\sim$\-Test\-Case}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{$\sim$\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Test\-Case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ab5565cf238c1b95c8113950cf9eb80b5}
+
+
+\-Definition at line 3707 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                    {
+  // Deletes every Test in the collection.
+  ForEach(test_info_list_, internal::Delete<TestInfo>);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_adf0dcf842d3506fd22c91de33f79df86}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Test\-Case@{\-Test\-Case}}
+\index{\-Test\-Case@{\-Test\-Case}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{a\-\_\-type\-\_\-param, }
+\item[{{\bf \-Test\-::\-Set\-Up\-Test\-Case\-Func}}]{set\-\_\-up\-\_\-tc, }
+\item[{{\bf \-Test\-::\-Tear\-Down\-Test\-Case\-Func}}]{tear\-\_\-down\-\_\-tc}
+\end{DoxyParamCaption}
+)}}\label{d0/d9a/classtesting_1_1TestCase_adf0dcf842d3506fd22c91de33f79df86}
+\hypertarget{classtesting_1_1TestCase_acc72ca1291990751d79abe38f199bb3f}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!$\sim$\-Test\-Case@{$\sim$\-Test\-Case}}
+\index{$\sim$\-Test\-Case@{$\sim$\-Test\-Case}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{$\sim$\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}virtual $\sim${\bf \-Test\-Case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_acc72ca1291990751d79abe38f199bb3f}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1TestCase_a2a0417de1ee92080aae4676c77318b01}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Add\-Test\-Info@{\-Add\-Test\-Info}}
+\index{\-Add\-Test\-Info@{\-Add\-Test\-Info}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Add\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Add\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a2a0417de1ee92080aae4676c77318b01}
+\hypertarget{classtesting_1_1TestCase_a2a0417de1ee92080aae4676c77318b01}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Add\-Test\-Info@{\-Add\-Test\-Info}}
+\index{\-Add\-Test\-Info@{\-Add\-Test\-Info}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Add\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Add\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a2a0417de1ee92080aae4676c77318b01}
+
+
+\-Definition at line 3728 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                               {
+  test_info_list_.push_back(test_info);
+  test_indices_.push_back(static_cast<int>(test_indices_.size()));
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a566dca6156477ed747aa781f341d13d5}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Clear\-Result@{\-Clear\-Result}}
+\index{\-Clear\-Result@{\-Clear\-Result}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Clear\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Clear\-Result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a566dca6156477ed747aa781f341d13d5}
+\hypertarget{classtesting_1_1TestCase_a566dca6156477ed747aa781f341d13d5}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Clear\-Result@{\-Clear\-Result}}
+\index{\-Clear\-Result@{\-Clear\-Result}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Clear\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Clear\-Result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a566dca6156477ed747aa781f341d13d5}
+
+
+\-Definition at line 3762 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                           {
+  ForEach(test_info_list_, TestInfo::ClearTestResult);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ad1d1fd605ca6c25a6f71b40c5216a8e0}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Clear\-Test\-Case\-Result@{\-Clear\-Test\-Case\-Result}}
+\index{\-Clear\-Test\-Case\-Result@{\-Clear\-Test\-Case\-Result}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Clear\-Test\-Case\-Result}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Clear\-Test\-Case\-Result} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Case} $\ast$}]{test\-\_\-case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ad1d1fd605ca6c25a6f71b40c5216a8e0}
+
+
+\-Definition at line 830 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                       {
+    test_case->ClearResult();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ad1d1fd605ca6c25a6f71b40c5216a8e0}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Clear\-Test\-Case\-Result@{\-Clear\-Test\-Case\-Result}}
+\index{\-Clear\-Test\-Case\-Result@{\-Clear\-Test\-Case\-Result}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Clear\-Test\-Case\-Result}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Clear\-Test\-Case\-Result} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Case} $\ast$}]{test\-\_\-case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ad1d1fd605ca6c25a6f71b40c5216a8e0}
+
+
+\-Definition at line 17855 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                       {
+    test_case->ClearResult();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a10ec677118627074973fc20c9271b204}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!disabled\-\_\-test\-\_\-count@{disabled\-\_\-test\-\_\-count}}
+\index{disabled\-\_\-test\-\_\-count@{disabled\-\_\-test\-\_\-count}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{disabled\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf disabled\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_a10ec677118627074973fc20c9271b204}
+\hypertarget{classtesting_1_1TestCase_a10ec677118627074973fc20c9271b204}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!disabled\-\_\-test\-\_\-count@{disabled\-\_\-test\-\_\-count}}
+\index{disabled\-\_\-test\-\_\-count@{disabled\-\_\-test\-\_\-count}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{disabled\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf disabled\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_a10ec677118627074973fc20c9271b204}
+
+
+\-Definition at line 3672 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                        {
+  return CountIf(test_info_list_, TestDisabled);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a4f91886b546ea9cc5ba2d374a62f3a9c}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!elapsed\-\_\-time@{elapsed\-\_\-time}}
+\index{elapsed\-\_\-time@{elapsed\-\_\-time}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{elapsed\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Time\-In\-Millis} {\bf elapsed\-\_\-time} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a4f91886b546ea9cc5ba2d374a62f3a9c}
+
+
+\-Definition at line 797 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return elapsed_time_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a4f91886b546ea9cc5ba2d374a62f3a9c}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!elapsed\-\_\-time@{elapsed\-\_\-time}}
+\index{elapsed\-\_\-time@{elapsed\-\_\-time}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{elapsed\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Time\-In\-Millis} {\bf elapsed\-\_\-time} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a4f91886b546ea9cc5ba2d374a62f3a9c}
+
+
+\-Definition at line 17822 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return elapsed_time_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a7cf078354304c964c1934f53bf2bb4d7}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Failed@{\-Failed}}
+\index{\-Failed@{\-Failed}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Failed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Failed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a7cf078354304c964c1934f53bf2bb4d7}
+
+
+\-Definition at line 794 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return failed_test_count() > 0; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a7cf078354304c964c1934f53bf2bb4d7}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Failed@{\-Failed}}
+\index{\-Failed@{\-Failed}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Failed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Failed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a7cf078354304c964c1934f53bf2bb4d7}
+
+
+\-Definition at line 17819 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return failed_test_count() > 0; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_afd8bbd35c7ee99960abb321cfdff3119}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!failed\-\_\-test\-\_\-count@{failed\-\_\-test\-\_\-count}}
+\index{failed\-\_\-test\-\_\-count@{failed\-\_\-test\-\_\-count}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{failed\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf failed\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_afd8bbd35c7ee99960abb321cfdff3119}
+\hypertarget{classtesting_1_1TestCase_afd8bbd35c7ee99960abb321cfdff3119}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!failed\-\_\-test\-\_\-count@{failed\-\_\-test\-\_\-count}}
+\index{failed\-\_\-test\-\_\-count@{failed\-\_\-test\-\_\-count}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{failed\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf failed\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_afd8bbd35c7ee99960abb321cfdff3119}
+
+
+\-Definition at line 3668 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                      {
+  return CountIf(test_info_list_, TestFailed);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_af8ef3f6fc704ca1dc6723ce078c9ee6e}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Get\-Mutable\-Test\-Info@{\-Get\-Mutable\-Test\-Info}}
+\index{\-Get\-Mutable\-Test\-Info@{\-Get\-Mutable\-Test\-Info}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Get\-Mutable\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Info}$\ast$ {\bf \-Get\-Mutable\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_af8ef3f6fc704ca1dc6723ce078c9ee6e}
+\hypertarget{classtesting_1_1TestCase_aeea35099284cdd7127924592152e3b73}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Get\-Mutable\-Test\-Info@{\-Get\-Mutable\-Test\-Info}}
+\index{\-Get\-Mutable\-Test\-Info@{\-Get\-Mutable\-Test\-Info}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Get\-Mutable\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Info} $\ast$ {\bf \-Get\-Mutable\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_aeea35099284cdd7127924592152e3b73}
+
+
+\-Definition at line 3721 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                            {
+  const int index = GetElementOr(test_indices_, i, -1);
+  return index < 0 ? NULL : test_info_list_[index];
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ad2a7e943688a31c1db24b59c82076005}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Get\-Test\-Info@{\-Get\-Test\-Info}}
+\index{\-Get\-Test\-Info@{\-Get\-Test\-Info}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Get\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Info}$\ast$ {\bf \-Get\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_ad2a7e943688a31c1db24b59c82076005}
+\hypertarget{classtesting_1_1TestCase_aae10a34f0c8f706d33844333c38f0d8a}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Get\-Test\-Info@{\-Get\-Test\-Info}}
+\index{\-Get\-Test\-Info@{\-Get\-Test\-Info}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Get\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Info} $\ast$ {\bf \-Get\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_aae10a34f0c8f706d33844333c38f0d8a}
+
+
+\-Definition at line 3714 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                 {
+  const int index = GetElementOr(test_indices_, i, -1);
+  return index < 0 ? NULL : test_info_list_[index];
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a589179a7edfbdc3809f75a5bd7090dee}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Case}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a589179a7edfbdc3809f75a5bd7090dee}
+\hypertarget{classtesting_1_1TestCase_a589179a7edfbdc3809f75a5bd7090dee}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Case}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a589179a7edfbdc3809f75a5bd7090dee}
+\hypertarget{classtesting_1_1TestCase_a862958aa3c2b9bf36903f1f0f2e81c54}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!name@{name}}
+\index{name@{name}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf name} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a862958aa3c2b9bf36903f1f0f2e81c54}
+
+
+\-Definition at line 762 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return name_.c_str(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a862958aa3c2b9bf36903f1f0f2e81c54}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!name@{name}}
+\index{name@{name}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf name} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a862958aa3c2b9bf36903f1f0f2e81c54}
+
+
+\-Definition at line 17787 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return name_.c_str(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ac97d5073365af8a73262fd9f6bf18656}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Passed@{\-Passed}}
+\index{\-Passed@{\-Passed}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Passed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Passed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ac97d5073365af8a73262fd9f6bf18656}
+
+
+\-Definition at line 791 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return !Failed(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ac97d5073365af8a73262fd9f6bf18656}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Passed@{\-Passed}}
+\index{\-Passed@{\-Passed}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Passed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Passed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ac97d5073365af8a73262fd9f6bf18656}
+
+
+\-Definition at line 17816 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return !Failed(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_aa3eca255b6be227d7d901cc2a72017a5}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Run@{\-Run}}
+\index{\-Run@{\-Run}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Run} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_aa3eca255b6be227d7d901cc2a72017a5}
+\hypertarget{classtesting_1_1TestCase_aa3eca255b6be227d7d901cc2a72017a5}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Run@{\-Run}}
+\index{\-Run@{\-Run}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Run} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_aa3eca255b6be227d7d901cc2a72017a5}
+
+
+\-Definition at line 3734 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                   {
+  if (!should_run_) return;
+
+  internal::UnitTestImpl* const impl = internal::GetUnitTestImpl();
+  impl->set_current_test_case(this);
+
+  TestEventListener* repeater = UnitTest::GetInstance()->listeners().repeater()
+      ;
+
+  repeater->OnTestCaseStart(*this);
+  impl->os_stack_trace_getter()->UponLeavingGTest();
+  internal::HandleExceptionsInMethodIfSupported(
+      this, &TestCase::RunSetUpTestCase, "SetUpTestCase()");
+
+  const internal::TimeInMillis start = internal::GetTimeInMillis();
+  for (int i = 0; i < total_test_count(); i++) {
+    GetMutableTestInfo(i)->Run();
+  }
+  elapsed_time_ = internal::GetTimeInMillis() - start;
+
+  impl->os_stack_trace_getter()->UponLeavingGTest();
+  internal::HandleExceptionsInMethodIfSupported(
+      this, &TestCase::RunTearDownTestCase, "TearDownTestCase()");
+
+  repeater->OnTestCaseEnd(*this);
+  impl->set_current_test_case(NULL);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a0a9185d58f27f485506f4c0dedaab124}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Run\-Set\-Up\-Test\-Case@{\-Run\-Set\-Up\-Test\-Case}}
+\index{\-Run\-Set\-Up\-Test\-Case@{\-Run\-Set\-Up\-Test\-Case}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Run\-Set\-Up\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Run\-Set\-Up\-Test\-Case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a0a9185d58f27f485506f4c0dedaab124}
+
+
+\-Definition at line 839 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ (*set_up_tc_)(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a0a9185d58f27f485506f4c0dedaab124}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Run\-Set\-Up\-Test\-Case@{\-Run\-Set\-Up\-Test\-Case}}
+\index{\-Run\-Set\-Up\-Test\-Case@{\-Run\-Set\-Up\-Test\-Case}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Run\-Set\-Up\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Run\-Set\-Up\-Test\-Case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a0a9185d58f27f485506f4c0dedaab124}
+
+
+\-Definition at line 17864 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ (*set_up_tc_)(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a68c2b3492b96c37271344d40a79caa84}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Run\-Tear\-Down\-Test\-Case@{\-Run\-Tear\-Down\-Test\-Case}}
+\index{\-Run\-Tear\-Down\-Test\-Case@{\-Run\-Tear\-Down\-Test\-Case}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Run\-Tear\-Down\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Run\-Tear\-Down\-Test\-Case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a68c2b3492b96c37271344d40a79caa84}
+
+
+\-Definition at line 843 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ (*tear_down_tc_)(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a68c2b3492b96c37271344d40a79caa84}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Run\-Tear\-Down\-Test\-Case@{\-Run\-Tear\-Down\-Test\-Case}}
+\index{\-Run\-Tear\-Down\-Test\-Case@{\-Run\-Tear\-Down\-Test\-Case}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Run\-Tear\-Down\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Run\-Tear\-Down\-Test\-Case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a68c2b3492b96c37271344d40a79caa84}
+
+
+\-Definition at line 17868 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ (*tear_down_tc_)(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ab3f3dbe8ef52473f912aef44d04193d5}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!set\-\_\-should\-\_\-run@{set\-\_\-should\-\_\-run}}
+\index{set\-\_\-should\-\_\-run@{set\-\_\-should\-\_\-run}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{set\-\_\-should\-\_\-run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-should\-\_\-run} (
+\begin{DoxyParamCaption}
+\item[{bool}]{should}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ab3f3dbe8ef52473f912aef44d04193d5}
+
+
+\-Definition at line 820 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ should_run_ = should; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ab3f3dbe8ef52473f912aef44d04193d5}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!set\-\_\-should\-\_\-run@{set\-\_\-should\-\_\-run}}
+\index{set\-\_\-should\-\_\-run@{set\-\_\-should\-\_\-run}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{set\-\_\-should\-\_\-run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-should\-\_\-run} (
+\begin{DoxyParamCaption}
+\item[{bool}]{should}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ab3f3dbe8ef52473f912aef44d04193d5}
+
+
+\-Definition at line 17845 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ should_run_ = should; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ad82d0b35f1d10f27e8d03440f16ca467}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!should\-\_\-run@{should\-\_\-run}}
+\index{should\-\_\-run@{should\-\_\-run}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{should\-\_\-run}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf should\-\_\-run} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ad82d0b35f1d10f27e8d03440f16ca467}
+
+
+\-Definition at line 773 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return should_run_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ad82d0b35f1d10f27e8d03440f16ca467}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!should\-\_\-run@{should\-\_\-run}}
+\index{should\-\_\-run@{should\-\_\-run}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{should\-\_\-run}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf should\-\_\-run} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ad82d0b35f1d10f27e8d03440f16ca467}
+
+
+\-Definition at line 17798 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return should_run_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a8fdbfd24fea404421eb50c2450382e1d}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Should\-Run\-Test@{\-Should\-Run\-Test}}
+\index{\-Should\-Run\-Test@{\-Should\-Run\-Test}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Should\-Run\-Test}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Should\-Run\-Test} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a8fdbfd24fea404421eb50c2450382e1d}
+
+
+\-Definition at line 861 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                       {
+    return test_info->should_run();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a8fdbfd24fea404421eb50c2450382e1d}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Should\-Run\-Test@{\-Should\-Run\-Test}}
+\index{\-Should\-Run\-Test@{\-Should\-Run\-Test}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Should\-Run\-Test}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Should\-Run\-Test} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a8fdbfd24fea404421eb50c2450382e1d}
+
+
+\-Definition at line 17886 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                       {
+    return test_info->should_run();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a0005a140538304e16d0bbd0bf08b3b65}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Shuffle\-Tests@{\-Shuffle\-Tests}}
+\index{\-Shuffle\-Tests@{\-Shuffle\-Tests}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Shuffle\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Shuffle\-Tests} (
+\begin{DoxyParamCaption}
+\item[{{\bf internal\-::\-Random} $\ast$}]{random}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a0005a140538304e16d0bbd0bf08b3b65}
+\hypertarget{classtesting_1_1TestCase_a0005a140538304e16d0bbd0bf08b3b65}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Shuffle\-Tests@{\-Shuffle\-Tests}}
+\index{\-Shuffle\-Tests@{\-Shuffle\-Tests}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Shuffle\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Shuffle\-Tests} (
+\begin{DoxyParamCaption}
+\item[{{\bf internal\-::\-Random} $\ast$}]{random}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a0005a140538304e16d0bbd0bf08b3b65}
+
+
+\-Definition at line 3767 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                  {
+  Shuffle(random, &test_indices_);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ab955f67bc1fe8ef62a7e72906ccece2a}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!successful\-\_\-test\-\_\-count@{successful\-\_\-test\-\_\-count}}
+\index{successful\-\_\-test\-\_\-count@{successful\-\_\-test\-\_\-count}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{successful\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf successful\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_ab955f67bc1fe8ef62a7e72906ccece2a}
+\hypertarget{classtesting_1_1TestCase_ab955f67bc1fe8ef62a7e72906ccece2a}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!successful\-\_\-test\-\_\-count@{successful\-\_\-test\-\_\-count}}
+\index{successful\-\_\-test\-\_\-count@{successful\-\_\-test\-\_\-count}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{successful\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf successful\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_ab955f67bc1fe8ef62a7e72906ccece2a}
+
+
+\-Definition at line 3663 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                          {
+  return CountIf(test_info_list_, TestPassed);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_aaa94fcfd7f8161d39504f535fa995c2d}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!test\-\_\-info\-\_\-list@{test\-\_\-info\-\_\-list}}
+\index{test\-\_\-info\-\_\-list@{test\-\_\-info\-\_\-list}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{test\-\_\-info\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf \-Test\-Info}$\ast$$>$\& {\bf test\-\_\-info\-\_\-list} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_aaa94fcfd7f8161d39504f535fa995c2d}
+
+
+\-Definition at line 808 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return test_info_list_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_af56750ff9e6c7865f20ae51cfc8d793e}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!test\-\_\-info\-\_\-list@{test\-\_\-info\-\_\-list}}
+\index{test\-\_\-info\-\_\-list@{test\-\_\-info\-\_\-list}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{test\-\_\-info\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<${\bf \-Test\-Info}$\ast$$>$\& {\bf test\-\_\-info\-\_\-list} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_af56750ff9e6c7865f20ae51cfc8d793e}
+
+
+\-Definition at line 811 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                     {
+    return test_info_list_;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_aaa94fcfd7f8161d39504f535fa995c2d}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!test\-\_\-info\-\_\-list@{test\-\_\-info\-\_\-list}}
+\index{test\-\_\-info\-\_\-list@{test\-\_\-info\-\_\-list}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{test\-\_\-info\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf \-Test\-Info}$\ast$$>$\& {\bf test\-\_\-info\-\_\-list} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_aaa94fcfd7f8161d39504f535fa995c2d}
+
+
+\-Definition at line 17833 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return test_info_list_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_af56750ff9e6c7865f20ae51cfc8d793e}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!test\-\_\-info\-\_\-list@{test\-\_\-info\-\_\-list}}
+\index{test\-\_\-info\-\_\-list@{test\-\_\-info\-\_\-list}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{test\-\_\-info\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<${\bf \-Test\-Info}$\ast$$>$\& {\bf test\-\_\-info\-\_\-list} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_af56750ff9e6c7865f20ae51cfc8d793e}
+
+
+\-Definition at line 17836 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                     {
+    return test_info_list_;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_aa6eccf86072f4f8ddd0bea30dfd45912}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!test\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-to\-\_\-run\-\_\-count}}
+\index{test\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-to\-\_\-run\-\_\-count}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{test\-\_\-to\-\_\-run\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf test\-\_\-to\-\_\-run\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_aa6eccf86072f4f8ddd0bea30dfd45912}
+\hypertarget{classtesting_1_1TestCase_aa6eccf86072f4f8ddd0bea30dfd45912}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!test\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-to\-\_\-run\-\_\-count}}
+\index{test\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-to\-\_\-run\-\_\-count}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{test\-\_\-to\-\_\-run\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf test\-\_\-to\-\_\-run\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_aa6eccf86072f4f8ddd0bea30dfd45912}
+
+
+\-Definition at line 3677 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                      {
+  return CountIf(test_info_list_, ShouldRunTest);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a8cab09cdd57af464aec68c4dc9f45e96}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Test\-Disabled@{\-Test\-Disabled}}
+\index{\-Test\-Disabled@{\-Test\-Disabled}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Test\-Disabled}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Test\-Disabled} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a8cab09cdd57af464aec68c4dc9f45e96}
+
+
+\-Definition at line 856 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                      {
+    return test_info->is_disabled_;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a8cab09cdd57af464aec68c4dc9f45e96}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Test\-Disabled@{\-Test\-Disabled}}
+\index{\-Test\-Disabled@{\-Test\-Disabled}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Test\-Disabled}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Test\-Disabled} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a8cab09cdd57af464aec68c4dc9f45e96}
+
+
+\-Definition at line 17881 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                      {
+    return test_info->is_disabled_;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a34e1cd8d648d9df54eedbb17f02587a4}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Test\-Failed@{\-Test\-Failed}}
+\index{\-Test\-Failed@{\-Test\-Failed}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Test\-Failed}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Test\-Failed} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a34e1cd8d648d9df54eedbb17f02587a4}
+
+
+\-Definition at line 851 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                    {
+    return test_info->should_run() && test_info->result()->Failed();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a34e1cd8d648d9df54eedbb17f02587a4}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Test\-Failed@{\-Test\-Failed}}
+\index{\-Test\-Failed@{\-Test\-Failed}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Test\-Failed}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Test\-Failed} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a34e1cd8d648d9df54eedbb17f02587a4}
+
+
+\-Definition at line 17876 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                    {
+    return test_info->should_run() && test_info->result()->Failed();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a90cec168fde1398dfc3b1db6e1a797a4}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Test\-Passed@{\-Test\-Passed}}
+\index{\-Test\-Passed@{\-Test\-Passed}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Test\-Passed}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Test\-Passed} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a90cec168fde1398dfc3b1db6e1a797a4}
+
+
+\-Definition at line 846 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                    {
+    return test_info->should_run() && test_info->result()->Passed();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a90cec168fde1398dfc3b1db6e1a797a4}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Test\-Passed@{\-Test\-Passed}}
+\index{\-Test\-Passed@{\-Test\-Passed}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Test\-Passed}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Test\-Passed} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a90cec168fde1398dfc3b1db6e1a797a4}
+
+
+\-Definition at line 17871 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                    {
+    return test_info->should_run() && test_info->result()->Passed();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_a0eb7286957aeb126d9926c33407a15a3}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!total\-\_\-test\-\_\-count@{total\-\_\-test\-\_\-count}}
+\index{total\-\_\-test\-\_\-count@{total\-\_\-test\-\_\-count}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{total\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf total\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_a0eb7286957aeb126d9926c33407a15a3}
+\hypertarget{classtesting_1_1TestCase_a0eb7286957aeb126d9926c33407a15a3}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!total\-\_\-test\-\_\-count@{total\-\_\-test\-\_\-count}}
+\index{total\-\_\-test\-\_\-count@{total\-\_\-test\-\_\-count}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{total\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf total\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/d9a/classtesting_1_1TestCase_a0eb7286957aeb126d9926c33407a15a3}
+
+
+\-Definition at line 3682 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                     {
+  return static_cast<int>(test_info_list_.size());
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ad596248661b2f4017c041425fa4c8b10}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!type\-\_\-param@{type\-\_\-param}}
+\index{type\-\_\-param@{type\-\_\-param}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{type\-\_\-param}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf type\-\_\-param} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ad596248661b2f4017c041425fa4c8b10}
+
+
+\-Definition at line 766 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                 {
+    if (type_param_.get() != NULL)
+      return type_param_->c_str();
+    return NULL;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ad596248661b2f4017c041425fa4c8b10}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!type\-\_\-param@{type\-\_\-param}}
+\index{type\-\_\-param@{type\-\_\-param}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{type\-\_\-param}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf type\-\_\-param} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ad596248661b2f4017c041425fa4c8b10}
+
+
+\-Definition at line 17791 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                 {
+    if (type_param_.get() != NULL)
+      return type_param_->c_str();
+    return NULL;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestCase_ae4c0afbfb6a7d13aece4c3a256a5d01d}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Unshuffle\-Tests@{\-Unshuffle\-Tests}}
+\index{\-Unshuffle\-Tests@{\-Unshuffle\-Tests}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Unshuffle\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Unshuffle\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ae4c0afbfb6a7d13aece4c3a256a5d01d}
+\hypertarget{classtesting_1_1TestCase_ae4c0afbfb6a7d13aece4c3a256a5d01d}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Unshuffle\-Tests@{\-Unshuffle\-Tests}}
+\index{\-Unshuffle\-Tests@{\-Unshuffle\-Tests}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Unshuffle\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Unshuffle\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ae4c0afbfb6a7d13aece4c3a256a5d01d}
+
+
+\-Definition at line 3772 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                              {
+  for (size_t i = 0; i < test_indices_.size(); i++) {
+    test_indices_[i] = static_cast<int>(i);
+  }
+}
+\end{DoxyCode}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classtesting_1_1TestCase_aa684cc13a8f91b00c0c9ce41ec7474eb}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!internal\-::\-Unit\-Test\-Impl@{internal\-::\-Unit\-Test\-Impl}}
+\index{internal\-::\-Unit\-Test\-Impl@{internal\-::\-Unit\-Test\-Impl}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{internal\-::\-Unit\-Test\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf internal\-::\-Unit\-Test\-Impl}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_aa684cc13a8f91b00c0c9ce41ec7474eb}
+
+
+\-Definition at line 17830 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1TestCase_ab085d1bf4cff8b1045750706b11f8662}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!\-Test@{\-Test}}
+\index{\-Test@{\-Test}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{\-Test}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ab085d1bf4cff8b1045750706b11f8662}
+
+
+\-Definition at line 17829 of file gtest.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1TestCase_a97b9c166ebee95ae4c9ef26cf3155617}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!elapsed\-\_\-time\-\_\-@{elapsed\-\_\-time\-\_\-}}
+\index{elapsed\-\_\-time\-\_\-@{elapsed\-\_\-time\-\_\-}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{elapsed\-\_\-time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Time\-In\-Millis} {\bf elapsed\-\_\-time\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a97b9c166ebee95ae4c9ef26cf3155617}
+
+
+\-Definition at line 17915 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1TestCase_a405ae26bae83121bb8a0991436141b78}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf internal\-::\-String} {\bf name\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a405ae26bae83121bb8a0991436141b78}
+
+
+\-Definition at line 17897 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1TestCase_a168acfe04861100ab0d0175d14b1fce7}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!set\-\_\-up\-\_\-tc\-\_\-@{set\-\_\-up\-\_\-tc\-\_\-}}
+\index{set\-\_\-up\-\_\-tc\-\_\-@{set\-\_\-up\-\_\-tc\-\_\-}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{set\-\_\-up\-\_\-tc\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-::\-Set\-Up\-Test\-Case\-Func} {\bf set\-\_\-up\-\_\-tc\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a168acfe04861100ab0d0175d14b1fce7}
+
+
+\-Definition at line 17909 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1TestCase_ade0e3d581d82aaeaf7263d575564cb40}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!should\-\_\-run\-\_\-@{should\-\_\-run\-\_\-}}
+\index{should\-\_\-run\-\_\-@{should\-\_\-run\-\_\-}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{should\-\_\-run\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf should\-\_\-run\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_ade0e3d581d82aaeaf7263d575564cb40}
+
+
+\-Definition at line 17913 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1TestCase_a152e0eba7294d5301d205822b0eae136}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!tear\-\_\-down\-\_\-tc\-\_\-@{tear\-\_\-down\-\_\-tc\-\_\-}}
+\index{tear\-\_\-down\-\_\-tc\-\_\-@{tear\-\_\-down\-\_\-tc\-\_\-}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{tear\-\_\-down\-\_\-tc\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-::\-Tear\-Down\-Test\-Case\-Func} {\bf tear\-\_\-down\-\_\-tc\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a152e0eba7294d5301d205822b0eae136}
+
+
+\-Definition at line 17911 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1TestCase_a01ce3b1011c9e64d1e78efe620dc00dc}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!test\-\_\-indices\-\_\-@{test\-\_\-indices\-\_\-}}
+\index{test\-\_\-indices\-\_\-@{test\-\_\-indices\-\_\-}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{test\-\_\-indices\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ int $>$ {\bf test\-\_\-indices\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a01ce3b1011c9e64d1e78efe620dc00dc}
+
+
+\-Definition at line 17907 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1TestCase_a65416ad78055a5f6a8ea21fa0ed8ac9c}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!test\-\_\-info\-\_\-list\-\_\-@{test\-\_\-info\-\_\-list\-\_\-}}
+\index{test\-\_\-info\-\_\-list\-\_\-@{test\-\_\-info\-\_\-list\-\_\-}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{test\-\_\-info\-\_\-list\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf \-Test\-Info} $\ast$ $>$ {\bf test\-\_\-info\-\_\-list\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a65416ad78055a5f6a8ea21fa0ed8ac9c}
+
+
+\-Definition at line 17903 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1TestCase_a85fc352afd22204cc3515cb59a7d5b38}{\index{testing\-::\-Test\-Case@{testing\-::\-Test\-Case}!type\-\_\-param\-\_\-@{type\-\_\-param\-\_\-}}
+\index{type\-\_\-param\-\_\-@{type\-\_\-param\-\_\-}!testing::TestCase@{testing\-::\-Test\-Case}}
+\subsubsection[{type\-\_\-param\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf internal\-::scoped\-\_\-ptr}$<$ const \-::std\-::string $>$ {\bf type\-\_\-param\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d9a/classtesting_1_1TestCase_a85fc352afd22204cc3515cb59a7d5b38}
+
+
+\-Definition at line 17900 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/\hyperlink{include_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}

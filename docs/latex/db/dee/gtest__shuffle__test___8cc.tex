@@ -1,0 +1,38 @@
+\hypertarget{gtest__shuffle__test___8cc}{\section{gtest-\/1.6.0/test/gtest\-\_\-shuffle\-\_\-test\-\_\-.cc \-File \-Reference}
+\label{db/dee/gtest__shuffle__test___8cc}\index{gtest-\/1.\-6.\-0/test/gtest\-\_\-shuffle\-\_\-test\-\_\-.\-cc@{gtest-\/1.\-6.\-0/test/gtest\-\_\-shuffle\-\_\-test\-\_\-.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gtest__shuffle__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest__shuffle__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{gtest\-\_\-shuffle\-\_\-test\-\_\-.\-cc@{gtest\-\_\-shuffle\-\_\-test\-\_\-.\-cc}!main@{main}}
+\index{main@{main}!gtest_shuffle_test_.cc@{gtest\-\_\-shuffle\-\_\-test\-\_\-.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{db/dee/gtest__shuffle__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 94 of file gtest\-\_\-shuffle\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+  InitGoogleTest(&argc, argv);
+
+  // Replaces the default printer with TestNamePrinter, which prints
+  // the test name only.
+  TestEventListeners& listeners = UnitTest::GetInstance()->listeners();
+  delete listeners.Release(listeners.default_result_printer());
+  listeners.Append(new TestNamePrinter);
+
+  return RUN_ALL_TESTS();
+}
+\end{DoxyCode}

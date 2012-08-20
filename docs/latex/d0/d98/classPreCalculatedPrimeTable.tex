@@ -1,0 +1,185 @@
+\hypertarget{classPreCalculatedPrimeTable}{\section{\-Pre\-Calculated\-Prime\-Table \-Class \-Reference}
+\label{d0/d98/classPreCalculatedPrimeTable}\index{\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}}
+}
+
+
+{\ttfamily \#include $<$prime\-\_\-tables.\-h$>$}
+
+\-Inheritance diagram for \-Pre\-Calculated\-Prime\-Table\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/d98/classPreCalculatedPrimeTable}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPreCalculatedPrimeTable_a29c87e283e38c38fd3b570914e06323f}{\-Pre\-Calculated\-Prime\-Table} (int max)
+\item 
+virtual \hyperlink{classPreCalculatedPrimeTable_a9040dc9624dad5cee68511bac8b89685}{$\sim$\-Pre\-Calculated\-Prime\-Table} ()
+\item 
+virtual bool \hyperlink{classPreCalculatedPrimeTable_a8511f4f0202c5e13abf58e386aee2b20}{\-Is\-Prime} (int n) const 
+\item 
+virtual int \hyperlink{classPreCalculatedPrimeTable_a35b8e0007e98997525a14c34a6632be3}{\-Get\-Next\-Prime} (int p) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPreCalculatedPrimeTable_aee4610d45bea776afd5de3998df58e8d}{\-Calculate\-Primes\-Up\-To} (int max)
+\item 
+void \hyperlink{classPreCalculatedPrimeTable_afb3106e0f5389ace664592d74bf481fd}{operator=} (const \hyperlink{classPreCalculatedPrimeTable}{\-Pre\-Calculated\-Prime\-Table} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{classPreCalculatedPrimeTable_ae6fa6e8f433a65445488ab6a45ecc176}{is\-\_\-prime\-\_\-size\-\_\-}
+\item 
+bool $\ast$const \hyperlink{classPreCalculatedPrimeTable_a36e1be2e6b18d90573b87438061c0816}{is\-\_\-prime\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 80 of file prime\-\_\-tables.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classPreCalculatedPrimeTable_a29c87e283e38c38fd3b570914e06323f}{\index{\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}!\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}}
+\index{\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}!PreCalculatedPrimeTable@{\-Pre\-Calculated\-Prime\-Table}}
+\subsubsection[{\-Pre\-Calculated\-Prime\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Pre\-Calculated\-Prime\-Table} (
+\begin{DoxyParamCaption}
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{d0/d98/classPreCalculatedPrimeTable_a29c87e283e38c38fd3b570914e06323f}
+
+
+\-Definition at line 83 of file prime\-\_\-tables.\-h.
+
+
+\begin{DoxyCode}
+      : is_prime_size_(max + 1), is_prime_(new bool[max + 1]) {
+    CalculatePrimesUpTo(max);
+  }
+\end{DoxyCode}
+\hypertarget{classPreCalculatedPrimeTable_a9040dc9624dad5cee68511bac8b89685}{\index{\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}!$\sim$\-Pre\-Calculated\-Prime\-Table@{$\sim$\-Pre\-Calculated\-Prime\-Table}}
+\index{$\sim$\-Pre\-Calculated\-Prime\-Table@{$\sim$\-Pre\-Calculated\-Prime\-Table}!PreCalculatedPrimeTable@{\-Pre\-Calculated\-Prime\-Table}}
+\subsubsection[{$\sim$\-Pre\-Calculated\-Prime\-Table}]{\setlength{\rightskip}{0pt plus 5cm}virtual $\sim${\bf \-Pre\-Calculated\-Prime\-Table} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d0/d98/classPreCalculatedPrimeTable_a9040dc9624dad5cee68511bac8b89685}
+
+
+\-Definition at line 87 of file prime\-\_\-tables.\-h.
+
+
+\begin{DoxyCode}
+{ delete[] is_prime_; }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classPreCalculatedPrimeTable_aee4610d45bea776afd5de3998df58e8d}{\index{\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}!\-Calculate\-Primes\-Up\-To@{\-Calculate\-Primes\-Up\-To}}
+\index{\-Calculate\-Primes\-Up\-To@{\-Calculate\-Primes\-Up\-To}!PreCalculatedPrimeTable@{\-Pre\-Calculated\-Prime\-Table}}
+\subsubsection[{\-Calculate\-Primes\-Up\-To}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Calculate\-Primes\-Up\-To} (
+\begin{DoxyParamCaption}
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/d98/classPreCalculatedPrimeTable_aee4610d45bea776afd5de3998df58e8d}
+
+
+\-Definition at line 102 of file prime\-\_\-tables.\-h.
+
+
+\begin{DoxyCode}
+                                    {
+    ::std::fill(is_prime_, is_prime_ + is_prime_size_, true);
+    is_prime_[0] = is_prime_[1] = false;
+
+    for (int i = 2; i <= max; i++) {
+      if (!is_prime_[i]) continue;
+
+      // Marks all multiples of i (except i itself) as non-prime.
+      for (int j = 2*i; j <= max; j += i) {
+        is_prime_[j] = false;
+      }
+    }
+  }
+\end{DoxyCode}
+\hypertarget{classPreCalculatedPrimeTable_a35b8e0007e98997525a14c34a6632be3}{\index{\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}!\-Get\-Next\-Prime@{\-Get\-Next\-Prime}}
+\index{\-Get\-Next\-Prime@{\-Get\-Next\-Prime}!PreCalculatedPrimeTable@{\-Pre\-Calculated\-Prime\-Table}}
+\subsubsection[{\-Get\-Next\-Prime}]{\setlength{\rightskip}{0pt plus 5cm}virtual int {\bf \-Get\-Next\-Prime} (
+\begin{DoxyParamCaption}
+\item[{int}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d0/d98/classPreCalculatedPrimeTable_a35b8e0007e98997525a14c34a6632be3}
+
+
+\-Implements \hyperlink{classPrimeTable_ace1bef4952983e48a9bbe097b6181710}{\-Prime\-Table}.
+
+
+
+\-Definition at line 93 of file prime\-\_\-tables.\-h.
+
+
+\begin{DoxyCode}
+                                        {
+    for (int n = p + 1; n < is_prime_size_; n++) {
+      if (is_prime_[n]) return n;
+    }
+
+    return -1;
+  }
+\end{DoxyCode}
+\hypertarget{classPreCalculatedPrimeTable_a8511f4f0202c5e13abf58e386aee2b20}{\index{\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}!\-Is\-Prime@{\-Is\-Prime}}
+\index{\-Is\-Prime@{\-Is\-Prime}!PreCalculatedPrimeTable@{\-Pre\-Calculated\-Prime\-Table}}
+\subsubsection[{\-Is\-Prime}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Is\-Prime} (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d0/d98/classPreCalculatedPrimeTable_a8511f4f0202c5e13abf58e386aee2b20}
+
+
+\-Implements \hyperlink{classPrimeTable_a5431df4c1243f67a965d16674619311c}{\-Prime\-Table}.
+
+
+
+\-Definition at line 89 of file prime\-\_\-tables.\-h.
+
+
+\begin{DoxyCode}
+                                    {
+    return 0 <= n && n < is_prime_size_ && is_prime_[n];
+  }
+\end{DoxyCode}
+\hypertarget{classPreCalculatedPrimeTable_afb3106e0f5389ace664592d74bf481fd}{\index{\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}!operator=@{operator=}}
+\index{operator=@{operator=}!PreCalculatedPrimeTable@{\-Pre\-Calculated\-Prime\-Table}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Pre\-Calculated\-Prime\-Table} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d98/classPreCalculatedPrimeTable_afb3106e0f5389ace664592d74bf481fd}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classPreCalculatedPrimeTable_a36e1be2e6b18d90573b87438061c0816}{\index{\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}!is\-\_\-prime\-\_\-@{is\-\_\-prime\-\_\-}}
+\index{is\-\_\-prime\-\_\-@{is\-\_\-prime\-\_\-}!PreCalculatedPrimeTable@{\-Pre\-Calculated\-Prime\-Table}}
+\subsubsection[{is\-\_\-prime\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$ const {\bf is\-\_\-prime\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d98/classPreCalculatedPrimeTable_a36e1be2e6b18d90573b87438061c0816}
+
+
+\-Definition at line 117 of file prime\-\_\-tables.\-h.
+
+\hypertarget{classPreCalculatedPrimeTable_ae6fa6e8f433a65445488ab6a45ecc176}{\index{\-Pre\-Calculated\-Prime\-Table@{\-Pre\-Calculated\-Prime\-Table}!is\-\_\-prime\-\_\-size\-\_\-@{is\-\_\-prime\-\_\-size\-\_\-}}
+\index{is\-\_\-prime\-\_\-size\-\_\-@{is\-\_\-prime\-\_\-size\-\_\-}!PreCalculatedPrimeTable@{\-Pre\-Calculated\-Prime\-Table}}
+\subsubsection[{is\-\_\-prime\-\_\-size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf is\-\_\-prime\-\_\-size\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d98/classPreCalculatedPrimeTable_ae6fa6e8f433a65445488ab6a45ecc176}
+
+
+\-Definition at line 116 of file prime\-\_\-tables.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/samples/\hyperlink{prime__tables_8h}{prime\-\_\-tables.\-h}\end{DoxyCompactItemize}

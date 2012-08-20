@@ -1,0 +1,211 @@
+\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest}{\section{\-Throw\-On\-Failure\-Test \-Class \-Reference}
+\label{de/dec/classgtest__throw__on__failure__test_1_1ThrowOnFailureTest}\index{\-Throw\-On\-Failure\-Test@{\-Throw\-On\-Failure\-Test}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_adc02f4ab231c886fc73ece7b7ee533c1}{\-Run\-And\-Verify}
+\item 
+def \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a9da84d75ab4797f2c3730d5974ed3823}{test\-Default\-Behavior}
+\item 
+def \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a5509d0a7a0e3f469105c907cfa7e9770}{test\-Throw\-On\-Failure\-Env\-Var}
+\item 
+def \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a66ec8a0b0bac9fc0a70dc5e4bc3a94e3}{test\-Throw\-On\-Failure\-Flag}
+\item 
+def \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a79f6236e5ecece421f3cd62c906c1758}{test\-Throw\-On\-Failure\-Flag\-Overrides\-Env\-Var}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}Tests the throw-on-failure mode.\end{DoxyVerb}
+ 
+
+\-Definition at line 80 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_adc02f4ab231c886fc73ece7b7ee533c1}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test}!\-Run\-And\-Verify@{\-Run\-And\-Verify}}
+\index{\-Run\-And\-Verify@{\-Run\-And\-Verify}!gtest_throw_on_failure_test::ThrowOnFailureTest@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test}}
+\subsubsection[{\-Run\-And\-Verify}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Run\-And\-Verify} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{env\-\_\-var\-\_\-value, }
+\item[{}]{flag\-\_\-value, }
+\item[{}]{should\-\_\-fail}
+\end{DoxyParamCaption}
+)}}\label{de/dec/classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_adc02f4ab231c886fc73ece7b7ee533c1}
+\begin{DoxyVerb}Runs gtest_throw_on_failure_test_ and verifies that it does
+(or does not) exit with a non-zero code.
+
+Args:
+  env_var_value:    value of the GTEST_BREAK_ON_FAILURE environment
+                variable; None if the variable should be unset.
+  flag_value:       value of the --gtest_break_on_failure flag;
+                None if the flag should not be present.
+  should_fail:      True iff the program is expected to fail.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 83 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+83 
+84   def RunAndVerify(self, env_var_value, flag_value, should_fail):
+85     """Runs gtest_throw_on_failure_test_ and verifies that it does
+86     (or does not) exit with a non-zero code.
+87 
+88     Args:
+89       env_var_value:    value of the GTEST_BREAK_ON_FAILURE environment
+90                         variable; None if the variable should be unset.
+91       flag_value:       value of the --gtest_break_on_failure flag;
+92                         None if the flag should not be present.
+93       should_fail:      True iff the program is expected to fail.
+94     """
+95 
+96     SetEnvVar(THROW_ON_FAILURE, env_var_value)
+97 
+98     if env_var_value is None:
+99       env_var_value_msg = ' is not set'
+100     else:
+101       env_var_value_msg = '=' + env_var_value
+102 
+103     if flag_value is None:
+104       flag = ''
+105     elif flag_value == '0':
+106       flag = '--%s=0' % THROW_ON_FAILURE
+107     else:
+108       flag = '--%s' % THROW_ON_FAILURE
+109 
+110     command = [EXE_PATH]
+111     if flag:
+112       command.append(flag)
+113 
+114     if should_fail:
+115       should_or_not = 'should'
+116     else:
+117       should_or_not = 'should not'
+118 
+119     failed = not Run(command)
+120 
+121     SetEnvVar(THROW_ON_FAILURE, None)
+122 
+123     msg = ('when %s%s, an assertion failure in "%s" %s cause a non-zero '
+124            'exit code.' %
+125            (THROW_ON_FAILURE, env_var_value_msg, ' '.join(command),
+126             should_or_not))
+127     self.assert_(failed == should_fail, msg)
+
+\end{DoxyCode}
+\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a9da84d75ab4797f2c3730d5974ed3823}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test}!test\-Default\-Behavior@{test\-Default\-Behavior}}
+\index{test\-Default\-Behavior@{test\-Default\-Behavior}!gtest_throw_on_failure_test::ThrowOnFailureTest@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test}}
+\subsubsection[{test\-Default\-Behavior}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Default\-Behavior} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{de/dec/classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a9da84d75ab4797f2c3730d5974ed3823}
+\begin{DoxyVerb}Tests the behavior of the default mode.\end{DoxyVerb}
+ 
+
+\-Definition at line 128 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+128 
+129   def testDefaultBehavior(self):
+130     """Tests the behavior of the default mode."""
+131 
+132     self.RunAndVerify(env_var_value=None, flag_value=None, should_fail=False)
+
+\end{DoxyCode}
+\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a5509d0a7a0e3f469105c907cfa7e9770}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test}!test\-Throw\-On\-Failure\-Env\-Var@{test\-Throw\-On\-Failure\-Env\-Var}}
+\index{test\-Throw\-On\-Failure\-Env\-Var@{test\-Throw\-On\-Failure\-Env\-Var}!gtest_throw_on_failure_test::ThrowOnFailureTest@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test}}
+\subsubsection[{test\-Throw\-On\-Failure\-Env\-Var}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Throw\-On\-Failure\-Env\-Var} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{de/dec/classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a5509d0a7a0e3f469105c907cfa7e9770}
+\begin{DoxyVerb}Tests using the GTEST_THROW_ON_FAILURE environment variable.\end{DoxyVerb}
+ 
+
+\-Definition at line 133 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+133 
+134   def testThrowOnFailureEnvVar(self):
+135     """Tests using the GTEST_THROW_ON_FAILURE environment variable."""
+136 
+137     self.RunAndVerify(env_var_value='0',
+138                       flag_value=None,
+139                       should_fail=False)
+140     self.RunAndVerify(env_var_value='1',
+141                       flag_value=None,
+142                       should_fail=True)
+
+\end{DoxyCode}
+\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a66ec8a0b0bac9fc0a70dc5e4bc3a94e3}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test}!test\-Throw\-On\-Failure\-Flag@{test\-Throw\-On\-Failure\-Flag}}
+\index{test\-Throw\-On\-Failure\-Flag@{test\-Throw\-On\-Failure\-Flag}!gtest_throw_on_failure_test::ThrowOnFailureTest@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test}}
+\subsubsection[{test\-Throw\-On\-Failure\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Throw\-On\-Failure\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{de/dec/classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a66ec8a0b0bac9fc0a70dc5e4bc3a94e3}
+\begin{DoxyVerb}Tests using the --gtest_throw_on_failure flag.\end{DoxyVerb}
+ 
+
+\-Definition at line 143 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+143 
+144   def testThrowOnFailureFlag(self):
+145     """Tests using the --gtest_throw_on_failure flag."""
+146 
+147     self.RunAndVerify(env_var_value=None,
+148                       flag_value='0',
+149                       should_fail=False)
+150     self.RunAndVerify(env_var_value=None,
+151                       flag_value='1',
+152                       should_fail=True)
+
+\end{DoxyCode}
+\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a79f6236e5ecece421f3cd62c906c1758}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test}!test\-Throw\-On\-Failure\-Flag\-Overrides\-Env\-Var@{test\-Throw\-On\-Failure\-Flag\-Overrides\-Env\-Var}}
+\index{test\-Throw\-On\-Failure\-Flag\-Overrides\-Env\-Var@{test\-Throw\-On\-Failure\-Flag\-Overrides\-Env\-Var}!gtest_throw_on_failure_test::ThrowOnFailureTest@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test\-::\-Throw\-On\-Failure\-Test}}
+\subsubsection[{test\-Throw\-On\-Failure\-Flag\-Overrides\-Env\-Var}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Throw\-On\-Failure\-Flag\-Overrides\-Env\-Var} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{de/dec/classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a79f6236e5ecece421f3cd62c906c1758}
+\begin{DoxyVerb}Tests that --gtest_throw_on_failure overrides GTEST_THROW_ON_FAILURE.\end{DoxyVerb}
+ 
+
+\-Definition at line 153 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+153 
+154   def testThrowOnFailureFlagOverridesEnvVar(self):
+155     """Tests that --gtest_throw_on_failure overrides GTEST_THROW_ON_FAILURE."""
+156 
+157     self.RunAndVerify(env_var_value='0',
+158                       flag_value='0',
+159                       should_fail=False)
+160     self.RunAndVerify(env_var_value='0',
+161                       flag_value='1',
+162                       should_fail=True)
+163     self.RunAndVerify(env_var_value='1',
+164                       flag_value='0',
+165                       should_fail=False)
+166     self.RunAndVerify(env_var_value='1',
+167                       flag_value='1',
+168                       should_fail=True)
+169 
+
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__throw__on__failure__test_8py}{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py}\end{DoxyCompactItemize}

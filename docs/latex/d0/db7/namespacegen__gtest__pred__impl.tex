@@ -1,0 +1,987 @@
+\hypertarget{namespacegen__gtest__pred__impl}{\section{gen\-\_\-gtest\-\_\-pred\-\_\-impl \-Namespace \-Reference}
+\label{d0/db7/namespacegen__gtest__pred__impl}\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a94611cbb902fe725a0c566bd0d9c0817}{\-Header\-Preamble}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a017b437499e68412572fc726edf8ddd2}{\-Arity}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a629029b6fef00578cb886c7eca25cf67}{\-Title}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a369482efbd71b1ddf21a4a520e8769b4}{\-One\-To}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a230080bd07390d99521308904d7f6e3c}{\-Iter}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a7334eb8b396d40c01c9bbd64a63c8ce1}{\-Implementation\-For\-Arity}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a3741b573bde4a614f34aa55587292c5f}{\-Header\-Postamble}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a996717114b48d38f2ff2722070d70188}{\-Generate\-File}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a7392ee5b86f41d4c66fd496ac5e53da2}{\-Generate\-Header}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_ad34b57e3bcbd48ecc394398a7b71b267}{\-Unit\-Test\-Preamble}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a6e2865e6f6be1dd3a691320e1e8fda0f}{\-Tests\-For\-Arity}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a610d36b8a024985a2a80f9244eb61902}{\-Unit\-Test\-Postamble}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_af6ebf6710b82cd16112ecdf75a751952}{\-Generate\-Unit\-Test}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_ad4c8f98be21aec3cac96f82b32cae356}{\-\_\-\-Main}
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacegen__gtest__pred__impl_a629d61dfe4da763164a4d1a2d85b0afd}{\-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'
+\item 
+tuple \hyperlink{namespacegen__gtest__pred__impl_a4d93d2dae90998f96a05fb95f8b395ef}{\-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R} = os.\-path.\-dirname(sys.\-argv\mbox{[}0\mbox{]})
+\item 
+tuple \hyperlink{namespacegen__gtest__pred__impl_a063f4e5a0eb0fad596fcb9e68cb98a7a}{\-H\-E\-A\-D\-E\-R} = os.\-path.\-join(\hyperlink{namespacegen__gtest__pred__impl_a4d93d2dae90998f96a05fb95f8b395ef}{\-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R}, '../include/gtest/gtest\-\_\-pred\-\_\-impl.\-h')
+\item 
+tuple \hyperlink{namespacegen__gtest__pred__impl_acab6433f6bcd5170abb94fded3418201}{\-U\-N\-I\-T\-\_\-\-T\-E\-S\-T} = os.\-path.\-join(\hyperlink{namespacegen__gtest__pred__impl_a4d93d2dae90998f96a05fb95f8b395ef}{\-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R}, '../test/gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc')
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespacegen__gtest__pred__impl_ad4c8f98be21aec3cac96f82b32cae356}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-\_\-\-Main@{\-\_\-\-Main}}
+\index{\-\_\-\-Main@{\-\_\-\-Main}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-\_\-\-Main}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-\_\-\-Main} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/db7/namespacegen__gtest__pred__impl_ad4c8f98be21aec3cac96f82b32cae356}
+\begin{DoxyVerb}The entry point of the script.  Generates the header file and its
+unit test.\end{DoxyVerb}
+ 
+
+\-Definition at line 715 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+715 
+716 def _Main():
+717   """The entry point of the script.  Generates the header file and its
+718   unit test."""
+719 
+720   if len(sys.argv) != 2:
+721     print __doc__
+722     print 'Author: ' + __author__
+723     sys.exit(1)
+724 
+725   n = int(sys.argv[1])
+726   GenerateHeader(n)
+727   GenerateUnitTest(n)
+728 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a017b437499e68412572fc726edf8ddd2}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Arity@{\-Arity}}
+\index{\-Arity@{\-Arity}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Arity}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Arity} (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a017b437499e68412572fc726edf8ddd2}
+\begin{DoxyVerb}Returns the English name of the given arity.\end{DoxyVerb}
+ 
+
+\-Definition at line 164 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+164 
+165 def Arity(n):
+166   """Returns the English name of the given arity."""
+167 
+168   if n < 0:
+169     return None
+170   elif n <= 3:
+171     return ['nullary', 'unary', 'binary', 'ternary'][n]
+172   else:
+173     return '%s-ary' % n
+174 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a996717114b48d38f2ff2722070d70188}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Generate\-File@{\-Generate\-File}}
+\index{\-Generate\-File@{\-Generate\-File}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Generate\-File}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Generate\-File} (
+\begin{DoxyParamCaption}
+\item[{}]{path, }
+\item[{}]{content}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a996717114b48d38f2ff2722070d70188}
+\begin{DoxyVerb}Given a file path and a content string, overwrites it with the
+given content.\end{DoxyVerb}
+ 
+
+\-Definition at line 302 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+302 
+303 def GenerateFile(path, content):
+304   """Given a file path and a content string, overwrites it with the
+305   given content."""
+306 
+307   print 'Updating file %s . . .' % path
+308 
+309   f = file(path, 'w+')
+310   print >>f, content,
+311   f.close()
+312 
+313   print 'File %s has been updated.' % path
+314 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a7392ee5b86f41d4c66fd496ac5e53da2}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Generate\-Header@{\-Generate\-Header}}
+\index{\-Generate\-Header@{\-Generate\-Header}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Generate\-Header}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Generate\-Header} (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a7392ee5b86f41d4c66fd496ac5e53da2}
+\begin{DoxyVerb}Given the maximum arity n, updates the header file that implements
+the predicate assertions.\end{DoxyVerb}
+ 
+
+\-Definition at line 315 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+315 
+316 def GenerateHeader(n):
+317   """Given the maximum arity n, updates the header file that implements
+318   the predicate assertions."""
+319 
+320   GenerateFile(HEADER,
+321                HeaderPreamble(n)
+322                + ''.join([ImplementationForArity(i) for i in OneTo(n)])
+323                + HeaderPostamble())
+324 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_af6ebf6710b82cd16112ecdf75a751952}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Generate\-Unit\-Test@{\-Generate\-Unit\-Test}}
+\index{\-Generate\-Unit\-Test@{\-Generate\-Unit\-Test}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Generate\-Unit\-Test}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Generate\-Unit\-Test} (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_af6ebf6710b82cd16112ecdf75a751952}
+\begin{DoxyVerb}Returns the tests for up-to n-ary predicate assertions.\end{DoxyVerb}
+ 
+
+\-Definition at line 706 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+706 
+707 def GenerateUnitTest(n):
+708   """Returns the tests for up-to n-ary predicate assertions."""
+709 
+710   GenerateFile(UNIT_TEST,
+711                UnitTestPreamble()
+712                + ''.join([TestsForArity(i) for i in OneTo(n)])
+713                + UnitTestPostamble())
+714 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a3741b573bde4a614f34aa55587292c5f}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Header\-Postamble@{\-Header\-Postamble}}
+\index{\-Header\-Postamble@{\-Header\-Postamble}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Header\-Postamble}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Header\-Postamble} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a3741b573bde4a614f34aa55587292c5f}
+\begin{DoxyVerb}Returns the postamble for the header file.\end{DoxyVerb}
+ 
+
+\-Definition at line 293 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+293 
+294 def HeaderPostamble():
+295   """Returns the postamble for the header file."""
+296 
+297   return """
+298 
+299 #endif  // GTEST_INCLUDE_GTEST_GTEST_PRED_IMPL_H_
+300 """
+301 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a94611cbb902fe725a0c566bd0d9c0817}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Header\-Preamble@{\-Header\-Preamble}}
+\index{\-Header\-Preamble@{\-Header\-Preamble}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Header\-Preamble}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Header\-Preamble} (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a94611cbb902fe725a0c566bd0d9c0817}
+\begin{DoxyVerb}Returns the preamble for the header file.
+
+Args:
+  n:  the maximum arity of the predicate macros to be generated.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 65 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+65 
+66 def HeaderPreamble(n):
+67   """Returns the preamble for the header file.
+68 
+69   Args:
+70     n:  the maximum arity of the predicate macros to be generated.
+71   """
+72 
+73   # A map that defines the values used in the preamble template.
+74   DEFS = {
+75     'today' : time.strftime('%m/%d/%Y'),
+76     'year' : time.strftime('%Y'),
+77     'command' : '%s %s' % (os.path.basename(sys.argv[0]), n),
+78     'n' : n
+79     }
+80 
+81   return (
+82 """// Copyright 2006, Google Inc.
+83 // All rights reserved.
+84 //
+85 // Redistribution and use in source and binary forms, with or without
+86 // modification, are permitted provided that the following conditions are
+87 // met:
+88 //
+89 //     * Redistributions of source code must retain the above copyright
+90 // notice, this list of conditions and the following disclaimer.
+91 //     * Redistributions in binary form must reproduce the above
+92 // copyright notice, this list of conditions and the following disclaimer
+93 // in the documentation and/or other materials provided with the
+94 // distribution.
+95 //     * Neither the name of Google Inc. nor the names of its
+96 // contributors may be used to endorse or promote products derived from
+97 // this software without specific prior written permission.
+98 //
+99 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+100 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+101 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+102 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+103 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+104 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+105 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+106 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+107 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+108 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+109 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+110 
+111 // This file is AUTOMATICALLY GENERATED on %(today)s by command
+112 // '%(command)s'.  DO NOT EDIT BY HAND!
+113 //
+114 // Implements a family of generic predicate assertion macros.
+115 
+116 #ifndef GTEST_INCLUDE_GTEST_GTEST_PRED_IMPL_H_
+117 #define GTEST_INCLUDE_GTEST_GTEST_PRED_IMPL_H_
+118 
+119 // Makes sure this header is not included before gtest.h.
+120 #ifndef GTEST_INCLUDE_GTEST_GTEST_H_
+121 #error Do not include gtest_pred_impl.h directly.  Include gtest.h instead.
+122 #endif  // GTEST_INCLUDE_GTEST_GTEST_H_
+123 
+124 // This header implements a family of generic predicate assertion
+125 // macros:
+126 //
+127 //   ASSERT_PRED_FORMAT1(pred_format, v1)
+128 //   ASSERT_PRED_FORMAT2(pred_format, v1, v2)
+129 //   ...
+130 //
+131 // where pred_format is a function or functor that takes n (in the
+132 // case of ASSERT_PRED_FORMATn) values and their source expression
+133 // text, and returns a testing::AssertionResult.  See the definition
+134 // of ASSERT_EQ in gtest.h for an example.
+135 //
+136 // If you don't care about formatting, you can use the more
+137 // restrictive version:
+138 //
+139 //   ASSERT_PRED1(pred, v1)
+140 //   ASSERT_PRED2(pred, v1, v2)
+141 //   ...
+142 //
+143 // where pred is an n-ary function or functor that returns bool,
+144 // and the values v1, v2, ..., must support the << operator for
+145 // streaming to std::ostream.
+146 //
+147 // We also define the EXPECT_* variations.
+148 //
+149 // For now we only support predicates whose arity is at most %(n)s.
+150 // Please email googletestframework@googlegroups.com if you need
+151 // support for higher arities.
+152 
+153 // GTEST_ASSERT_ is the basic statement to which all of the assertions
+154 // in this file reduce.  Don't use this in your code.
+155 
+156 #define GTEST_ASSERT_(expression, on_failure) \\
+157   GTEST_AMBIGUOUS_ELSE_BLOCKER_ \\
+158   if (const ::testing::AssertionResult gtest_ar = (expression)) \\
+159     ; \\
+160   else \\
+161     on_failure(gtest_ar.failure_message())
+162 """ % DEFS)
+163 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a7334eb8b396d40c01c9bbd64a63c8ce1}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Implementation\-For\-Arity@{\-Implementation\-For\-Arity}}
+\index{\-Implementation\-For\-Arity@{\-Implementation\-For\-Arity}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Implementation\-For\-Arity}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Implementation\-For\-Arity} (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a7334eb8b396d40c01c9bbd64a63c8ce1}
+\begin{DoxyVerb}Returns the implementation of n-ary predicate assertions.\end{DoxyVerb}
+ 
+
+\-Definition at line 205 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+205 
+206 def ImplementationForArity(n):
+207   """Returns the implementation of n-ary predicate assertions."""
+208 
+209   # A map the defines the values used in the implementation template.
+210   DEFS = {
+211     'n' : str(n),
+212     'vs' : Iter(n, 'v%s', sep=', '),
+213     'vts' : Iter(n, '#v%s', sep=', '),
+214     'arity' : Arity(n),
+215     'Arity' : Title(Arity(n))
+216     }
+217 
+218   impl = """
+219 
+220 // Helper function for implementing {EXPECT|ASSERT}_PRED%(n)s.  Don't use
+221 // this in your code.
+222 template <typename Pred""" % DEFS
+223 
+224   impl += Iter(n, """,
+225           typename T%s""")
+226 
+227   impl += """>
+228 AssertionResult AssertPred%(n)sHelper(const char* pred_text""" % DEFS
+229 
+230   impl += Iter(n, """,
+231                                   const char* e%s""")
+232 
+233   impl += """,
+234                                   Pred pred"""
+235 
+236   impl += Iter(n, """,
+237                                   const T%s& v%s""")
+238 
+239   impl += """) {
+240   if (pred(%(vs)s)) return AssertionSuccess();
+241 
+242 """ % DEFS
+243 
+244   impl += '  return AssertionFailure() << pred_text << "("'
+245 
+246   impl += Iter(n, """
+247                             << e%s""", sep=' << ", "')
+248 
+249   impl += ' << ") evaluates to false, where"'
+250 
+251   impl += Iter(n, """
+252                             << "\\n" << e%s << " evaluates to " << v%s""")
+253 
+254   impl += """;
+255 }
+256 
+257 // Internal macro for implementing {EXPECT|ASSERT}_PRED_FORMAT%(n)s.
+258 // Don't use this in your code.
+259 #define GTEST_PRED_FORMAT%(n)s_(pred_format, %(vs)s, on_failure)\\
+260   GTEST_ASSERT_(pred_format(%(vts)s, %(vs)s),\\
+261                 on_failure)
+262 
+263 // Internal macro for implementing {EXPECT|ASSERT}_PRED%(n)s.  Don't use
+264 // this in your code.
+265 #define GTEST_PRED%(n)s_(pred, %(vs)s, on_failure)\\
+266   GTEST_ASSERT_(::testing::AssertPred%(n)sHelper(#pred""" % DEFS
+267 
+268   impl += Iter(n, """, \\
+269                                              #v%s""")
+270 
+271   impl += """, \\
+272                                              pred"""
+273 
+274   impl += Iter(n, """, \\
+275                                              v%s""")
+276 
+277   impl += """), on_failure)
+278 
+279 // %(Arity)s predicate assertion macros.
+280 #define EXPECT_PRED_FORMAT%(n)s(pred_format, %(vs)s) \\
+281   GTEST_PRED_FORMAT%(n)s_(pred_format, %(vs)s, GTEST_NONFATAL_FAILURE_)
+282 #define EXPECT_PRED%(n)s(pred, %(vs)s) \\
+283   GTEST_PRED%(n)s_(pred, %(vs)s, GTEST_NONFATAL_FAILURE_)
+284 #define ASSERT_PRED_FORMAT%(n)s(pred_format, %(vs)s) \\
+285   GTEST_PRED_FORMAT%(n)s_(pred_format, %(vs)s, GTEST_FATAL_FAILURE_)
+286 #define ASSERT_PRED%(n)s(pred, %(vs)s) \\
+287   GTEST_PRED%(n)s_(pred, %(vs)s, GTEST_FATAL_FAILURE_)
+288 
+289 """ % DEFS
+290 
+291   return impl
+292 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a230080bd07390d99521308904d7f6e3c}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Iter@{\-Iter}}
+\index{\-Iter@{\-Iter}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Iter}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Iter} (
+\begin{DoxyParamCaption}
+\item[{}]{n, }
+\item[{}]{format, }
+\item[{}]{sep = {\ttfamily ''}}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a230080bd07390d99521308904d7f6e3c}
+\begin{DoxyVerb}Given a positive integer n, a format string that contains 0 or
+more '%s' format specs, and optionally a separator string, returns
+the join of n strings, each formatted with the format string on an
+iterator ranged from 1 to n.
+
+Example:
+
+Iter(3, 'v%s', sep=', ') returns 'v1, v2, v3'.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 189 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+189 
+190 def Iter(n, format, sep=''):
+191   """Given a positive integer n, a format string that contains 0 or
+192   more '%s' format specs, and optionally a separator string, returns
+193   the join of n strings, each formatted with the format string on an
+194   iterator ranged from 1 to n.
+195 
+196   Example:
+197 
+198   Iter(3, 'v%s', sep=', ') returns 'v1, v2, v3'.
+199   """
+200 
+201   # How many '%s' specs are in format?
+202   spec_count = len(format.split('%s')) - 1
+203   return sep.join([format % (spec_count * (i,)) for i in OneTo(n)])
+204 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a369482efbd71b1ddf21a4a520e8769b4}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-One\-To@{\-One\-To}}
+\index{\-One\-To@{\-One\-To}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-One\-To}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-One\-To} (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a369482efbd71b1ddf21a4a520e8769b4}
+\begin{DoxyVerb}Returns the list [1, 2, 3, ..., n].\end{DoxyVerb}
+ 
+
+\-Definition at line 183 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+183 
+184 def OneTo(n):
+185   """Returns the list [1, 2, 3, ..., n]."""
+186 
+187   return range(1, n + 1)
+188 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a6e2865e6f6be1dd3a691320e1e8fda0f}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Tests\-For\-Arity@{\-Tests\-For\-Arity}}
+\index{\-Tests\-For\-Arity@{\-Tests\-For\-Arity}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Tests\-For\-Arity}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Tests\-For\-Arity} (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a6e2865e6f6be1dd3a691320e1e8fda0f}
+\begin{DoxyVerb}Returns the tests for n-ary predicate assertions.\end{DoxyVerb}
+ 
+
+\-Definition at line 411 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+411 
+412 def TestsForArity(n):
+413   """Returns the tests for n-ary predicate assertions."""
+414 
+415   # A map that defines the values used in the template for the tests.
+416   DEFS = {
+417     'n' : n,
+418     'es' : Iter(n, 'e%s', sep=', '),
+419     'vs' : Iter(n, 'v%s', sep=', '),
+420     'vts' : Iter(n, '#v%s', sep=', '),
+421     'tvs' : Iter(n, 'T%s v%s', sep=', '),
+422     'int_vs' : Iter(n, 'int v%s', sep=', '),
+423     'Bool_vs' : Iter(n, 'Bool v%s', sep=', '),
+424     'types' : Iter(n, 'typename T%s', sep=', '),
+425     'v_sum' : Iter(n, 'v%s', sep=' + '),
+426     'arity' : Arity(n),
+427     'Arity' : Title(Arity(n)),
+428     }
+429 
+430   tests = (
+431 """// Sample functions/functors for testing %(arity)s predicate assertions.
+432 
+433 // A %(arity)s predicate function.
+434 template <%(types)s>
+435 bool PredFunction%(n)s(%(tvs)s) {
+436   return %(v_sum)s > 0;
+437 }
+438 
+439 // The following two functions are needed to circumvent a bug in
+440 // gcc 2.95.3, which sometimes has problem with the above template
+441 // function.
+442 bool PredFunction%(n)sInt(%(int_vs)s) {
+443   return %(v_sum)s > 0;
+444 }
+445 bool PredFunction%(n)sBool(%(Bool_vs)s) {
+446   return %(v_sum)s > 0;
+447 }
+448 """ % DEFS)
+449 
+450   tests += """
+451 // A %(arity)s predicate functor.
+452 struct PredFunctor%(n)s {
+453   template <%(types)s>
+454   bool operator()(""" % DEFS
+455 
+456   tests += Iter(n, 'const T%s& v%s', sep=""",
+457                   """)
+458 
+459   tests += """) {
+460     return %(v_sum)s > 0;
+461   }
+462 };
+463 """ % DEFS
+464 
+465   tests += """
+466 // A %(arity)s predicate-formatter function.
+467 template <%(types)s>
+468 testing::AssertionResult PredFormatFunction%(n)s(""" % DEFS
+469 
+470   tests += Iter(n, 'const char* e%s', sep=""",
+471                                              """)
+472 
+473   tests += Iter(n, """,
+474                                              const T%s& v%s""")
+475 
+476   tests += """) {
+477   if (PredFunction%(n)s(%(vs)s))
+478     return testing::AssertionSuccess();
+479 
+480   return testing::AssertionFailure()
+481       << """ % DEFS
+482 
+483   tests += Iter(n, 'e%s', sep=' << " + " << ')
+484 
+485   tests += """
+486       << " is expected to be positive, but evaluates to "
+487       << %(v_sum)s << ".";
+488 }
+489 """ % DEFS
+490 
+491   tests += """
+492 // A %(arity)s predicate-formatter functor.
+493 struct PredFormatFunctor%(n)s {
+494   template <%(types)s>
+495   testing::AssertionResult operator()(""" % DEFS
+496 
+497   tests += Iter(n, 'const char* e%s', sep=""",
+498                                       """)
+499 
+500   tests += Iter(n, """,
+501                                       const T%s& v%s""")
+502 
+503   tests += """) const {
+504     return PredFormatFunction%(n)s(%(es)s, %(vs)s);
+505   }
+506 };
+507 """ % DEFS
+508 
+509   tests += """
+510 // Tests for {EXPECT|ASSERT}_PRED_FORMAT%(n)s.
+511 
+512 class Predicate%(n)sTest : public testing::Test {
+513  protected:
+514   virtual void SetUp() {
+515     expected_to_finish_ = true;
+516     finished_ = false;""" % DEFS
+517 
+518   tests += """
+519     """ + Iter(n, 'n%s_ = ') + """0;
+520   }
+521 """
+522 
+523   tests += """
+524   virtual void TearDown() {
+525     // Verifies that each of the predicate's arguments was evaluated
+526     // exactly once."""
+527 
+528   tests += ''.join(["""
+529     EXPECT_EQ(1, n%s_) <<
+530         "The predicate assertion didn't evaluate argument %s "
+531         "exactly once.";""" % (i, i + 1) for i in OneTo(n)])
+532 
+533   tests += """
+534 
+535     // Verifies that the control flow in the test function is expected.
+536     if (expected_to_finish_ && !finished_) {
+537       FAIL() << "The predicate assertion unexpactedly aborted the test.";
+538     } else if (!expected_to_finish_ && finished_) {
+539       FAIL() << "The failed predicate assertion didn't abort the test "
+540                 "as expected.";
+541     }
+542   }
+543 
+544   // true iff the test function is expected to run to finish.
+545   static bool expected_to_finish_;
+546 
+547   // true iff the test function did run to finish.
+548   static bool finished_;
+549 """ % DEFS
+550 
+551   tests += Iter(n, """
+552   static int n%s_;""")
+553 
+554   tests += """
+555 };
+556 
+557 bool Predicate%(n)sTest::expected_to_finish_;
+558 bool Predicate%(n)sTest::finished_;
+559 """ % DEFS
+560 
+561   tests += Iter(n, """int Predicate%%(n)sTest::n%s_;
+562 """) % DEFS
+563 
+564   tests += """
+565 typedef Predicate%(n)sTest EXPECT_PRED_FORMAT%(n)sTest;
+566 typedef Predicate%(n)sTest ASSERT_PRED_FORMAT%(n)sTest;
+567 typedef Predicate%(n)sTest EXPECT_PRED%(n)sTest;
+568 typedef Predicate%(n)sTest ASSERT_PRED%(n)sTest;
+569 """ % DEFS
+570 
+571   def GenTest(use_format, use_assert, expect_failure,
+572               use_functor, use_user_type):
+573     """Returns the test for a predicate assertion macro.
+574 
+575     Args:
+576       use_format:     true iff the assertion is a *_PRED_FORMAT*.
+577       use_assert:     true iff the assertion is a ASSERT_*.
+578       expect_failure: true iff the assertion is expected to fail.
+579       use_functor:    true iff the first argument of the assertion is
+580                       a functor (as opposed to a function)
+581       use_user_type:  true iff the predicate functor/function takes
+582                       argument(s) of a user-defined type.
+583 
+584     Example:
+585 
+586       GenTest(1, 0, 0, 1, 0) returns a test that tests the behavior
+587       of a successful EXPECT_PRED_FORMATn() that takes a functor
+588       whose arguments have built-in types."""
+589 
+590     if use_assert:
+591       assrt = 'ASSERT'  # 'assert' is reserved, so we cannot use
+592                         # that identifier here.
+593     else:
+594       assrt = 'EXPECT'
+595 
+596     assertion = assrt + '_PRED'
+597 
+598     if use_format:
+599       pred_format = 'PredFormat'
+600       assertion += '_FORMAT'
+601     else:
+602       pred_format = 'Pred'
+603 
+604     assertion += '%(n)s' % DEFS
+605 
+606     if use_functor:
+607       pred_format_type = 'functor'
+608       pred_format += 'Functor%(n)s()'
+609     else:
+610       pred_format_type = 'function'
+611       pred_format += 'Function%(n)s'
+612       if not use_format:
+613         if use_user_type:
+614           pred_format += 'Bool'
+615         else:
+616           pred_format += 'Int'
+617 
+618     test_name = pred_format_type.title()
+619 
+620     if use_user_type:
+621       arg_type = 'user-defined type (Bool)'
+622       test_name += 'OnUserType'
+623       if expect_failure:
+624         arg = 'Bool(n%s_++)'
+625       else:
+626         arg = 'Bool(++n%s_)'
+627     else:
+628       arg_type = 'built-in type (int)'
+629       test_name += 'OnBuiltInType'
+630       if expect_failure:
+631         arg = 'n%s_++'
+632       else:
+633         arg = '++n%s_'
+634 
+635     if expect_failure:
+636       successful_or_failed = 'failed'
+637       expected_or_not = 'expected.'
+638       test_name +=  'Failure'
+639     else:
+640       successful_or_failed = 'successful'
+641       expected_or_not = 'UNEXPECTED!'
+642       test_name +=  'Success'
+643 
+644     # A map that defines the values used in the test template.
+645     defs = DEFS.copy()
+646     defs.update({
+647       'assert' : assrt,
+648       'assertion' : assertion,
+649       'test_name' : test_name,
+650       'pf_type' : pred_format_type,
+651       'pf' : pred_format,
+652       'arg_type' : arg_type,
+653       'arg' : arg,
+654       'successful' : successful_or_failed,
+655       'expected' : expected_or_not,
+656       })
+657 
+658     test = """
+659 // Tests a %(successful)s %(assertion)s where the
+660 // predicate-formatter is a %(pf_type)s on a %(arg_type)s.
+661 TEST_F(%(assertion)sTest, %(test_name)s) {""" % defs
+662 
+663     indent = (len(assertion) + 3)*' '
+664     extra_indent = ''
+665 
+666     if expect_failure:
+667       extra_indent = '  '
+668       if use_assert:
+669         test += """
+670   expected_to_finish_ = false;
+671   EXPECT_FATAL_FAILURE({  // NOLINT"""
+672       else:
+673         test += """
+674   EXPECT_NONFATAL_FAILURE({  // NOLINT"""
+675 
+676     test += '\n' + extra_indent + """  %(assertion)s(%(pf)s""" % defs
+677 
+678     test = test % defs
+679     test += Iter(n, ',\n' + indent + extra_indent + '%(arg)s' % defs)
+680     test += ');\n' + extra_indent + '  finished_ = true;\n'
+681 
+682     if expect_failure:
+683       test += '  }, "");\n'
+684 
+685     test += '}\n'
+686     return test
+687 
+688   # Generates tests for all 2**6 = 64 combinations.
+689   tests += ''.join([GenTest(use_format, use_assert, expect_failure,
+690                             use_functor, use_user_type)
+691                     for use_format in [0, 1]
+692                     for use_assert in [0, 1]
+693                     for expect_failure in [0, 1]
+694                     for use_functor in [0, 1]
+695                     for use_user_type in [0, 1]
+696                     ])
+697 
+698   return tests
+699 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a629029b6fef00578cb886c7eca25cf67}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Title@{\-Title}}
+\index{\-Title@{\-Title}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Title}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Title} (
+\begin{DoxyParamCaption}
+\item[{}]{word}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a629029b6fef00578cb886c7eca25cf67}
+\begin{DoxyVerb}Returns the given word in title case.  The difference between
+this and string's title() method is that Title('4-ary') is '4-ary'
+while '4-ary'.title() is '4-Ary'.\end{DoxyVerb}
+ 
+
+\-Definition at line 175 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+175 
+176 def Title(word):
+177   """Returns the given word in title case.  The difference between
+178   this and string's title() method is that Title('4-ary') is '4-ary'
+179   while '4-ary'.title() is '4-Ary'."""
+180 
+181   return word[0].upper() + word[1:]
+182 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_a610d36b8a024985a2a80f9244eb61902}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Unit\-Test\-Postamble@{\-Unit\-Test\-Postamble}}
+\index{\-Unit\-Test\-Postamble@{\-Unit\-Test\-Postamble}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Unit\-Test\-Postamble}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Unit\-Test\-Postamble} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_a610d36b8a024985a2a80f9244eb61902}
+\begin{DoxyVerb}Returns the postamble for the tests.\end{DoxyVerb}
+ 
+
+\-Definition at line 700 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+700 
+701 def UnitTestPostamble():
+702   """Returns the postamble for the tests."""
+703 
+704   return ''
+705 
+
+\end{DoxyCode}
+\hypertarget{namespacegen__gtest__pred__impl_ad34b57e3bcbd48ecc394398a7b71b267}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-Unit\-Test\-Preamble@{\-Unit\-Test\-Preamble}}
+\index{\-Unit\-Test\-Preamble@{\-Unit\-Test\-Preamble}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-Unit\-Test\-Preamble}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-Unit\-Test\-Preamble} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/db7/namespacegen__gtest__pred__impl_ad34b57e3bcbd48ecc394398a7b71b267}
+\begin{DoxyVerb}Returns the preamble for the unit test file.\end{DoxyVerb}
+ 
+
+\-Definition at line 325 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+
+\begin{DoxyCode}
+325 
+326 def UnitTestPreamble():
+327   """Returns the preamble for the unit test file."""
+328 
+329   # A map that defines the values used in the preamble template.
+330   DEFS = {
+331     'today' : time.strftime('%m/%d/%Y'),
+332     'year' : time.strftime('%Y'),
+333     'command' : '%s %s' % (os.path.basename(sys.argv[0]), sys.argv[1]),
+334     }
+335 
+336   return (
+337 """// Copyright 2006, Google Inc.
+338 // All rights reserved.
+339 //
+340 // Redistribution and use in source and binary forms, with or without
+341 // modification, are permitted provided that the following conditions are
+342 // met:
+343 //
+344 //     * Redistributions of source code must retain the above copyright
+345 // notice, this list of conditions and the following disclaimer.
+346 //     * Redistributions in binary form must reproduce the above
+347 // copyright notice, this list of conditions and the following disclaimer
+348 // in the documentation and/or other materials provided with the
+349 // distribution.
+350 //     * Neither the name of Google Inc. nor the names of its
+351 // contributors may be used to endorse or promote products derived from
+352 // this software without specific prior written permission.
+353 //
+354 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+355 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+356 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+357 // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+358 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+359 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+360 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+361 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+362 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+363 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+364 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+365 
+366 // This file is AUTOMATICALLY GENERATED on %(today)s by command
+367 // '%(command)s'.  DO NOT EDIT BY HAND!
+368 
+369 // Regression test for gtest_pred_impl.h
+370 //
+371 // This file is generated by a script and quite long.  If you intend to
+372 // learn how Google Test works by reading its unit tests, read
+373 // gtest_unittest.cc instead.
+374 //
+375 // This is intended as a regression test for the Google Test predicate
+376 // assertions.  We compile it as part of the gtest_unittest target
+377 // only to keep the implementation tidy and compact, as it is quite
+378 // involved to set up the stage for testing Google Test using Google
+379 // Test itself.
+380 //
+381 // Currently, gtest_unittest takes ~11 seconds to run in the testing
+382 // daemon.  In the future, if it grows too large and needs much more
+383 // time to finish, we should consider separating this file into a
+384 // stand-alone regression test.
+385 
+386 #include <iostream>
+387 
+388 #include "gtest/gtest.h"
+389 #include "gtest/gtest-spi.h"
+390 
+391 // A user-defined data type.
+392 struct Bool {
+393   explicit Bool(int val) : value(val != 0) {}
+394 
+395   bool operator>(int n) const { return value > Bool(n).value; }
+396 
+397   Bool operator+(const Bool& rhs) const { return Bool(value + rhs.value); }
+398 
+399   bool operator==(const Bool& rhs) const { return value == rhs.value; }
+400 
+401   bool value;
+402 };
+403 
+404 // Enables Bool to be used in assertions.
+405 std::ostream& operator<<(std::ostream& os, const Bool& x) {
+406   return os << (x.value ? "true" : "false");
+407 }
+408 
+409 """ % DEFS)
+410 
+
+\end{DoxyCode}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{namespacegen__gtest__pred__impl_a629d61dfe4da763164a4d1a2d85b0afd}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-\_\-\-\_\-author\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'}}\label{d0/db7/namespacegen__gtest__pred__impl_a629d61dfe4da763164a4d1a2d85b0afd}
+
+
+\-Definition at line 49 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+\hypertarget{namespacegen__gtest__pred__impl_a063f4e5a0eb0fad596fcb9e68cb98a7a}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-H\-E\-A\-D\-E\-R@{\-H\-E\-A\-D\-E\-R}}
+\index{\-H\-E\-A\-D\-E\-R@{\-H\-E\-A\-D\-E\-R}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-H\-E\-A\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf \-H\-E\-A\-D\-E\-R} = os.\-path.\-join({\bf \-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R}, '../include/gtest/gtest\-\_\-pred\-\_\-impl.\-h')}}\label{d0/db7/namespacegen__gtest__pred__impl_a063f4e5a0eb0fad596fcb9e68cb98a7a}
+
+
+\-Definition at line 59 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+\hypertarget{namespacegen__gtest__pred__impl_a4d93d2dae90998f96a05fb95f8b395ef}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R@{\-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R}}
+\index{\-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R@{\-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf \-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R} = os.\-path.\-dirname(sys.\-argv\mbox{[}0\mbox{]})}}\label{d0/db7/namespacegen__gtest__pred__impl_a4d93d2dae90998f96a05fb95f8b395ef}
+
+
+\-Definition at line 56 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+
+\hypertarget{namespacegen__gtest__pred__impl_acab6433f6bcd5170abb94fded3418201}{\index{gen\-\_\-gtest\-\_\-pred\-\_\-impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}!\-U\-N\-I\-T\-\_\-\-T\-E\-S\-T@{\-U\-N\-I\-T\-\_\-\-T\-E\-S\-T}}
+\index{\-U\-N\-I\-T\-\_\-\-T\-E\-S\-T@{\-U\-N\-I\-T\-\_\-\-T\-E\-S\-T}!gen_gtest_pred_impl@{gen\-\_\-gtest\-\_\-pred\-\_\-impl}}
+\subsubsection[{\-U\-N\-I\-T\-\_\-\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf \-U\-N\-I\-T\-\_\-\-T\-E\-S\-T} = os.\-path.\-join({\bf \-S\-C\-R\-I\-P\-T\-\_\-\-D\-I\-R}, '../test/gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc')}}\label{d0/db7/namespacegen__gtest__pred__impl_acab6433f6bcd5170abb94fded3418201}
+
+
+\-Definition at line 62 of file gen\-\_\-gtest\-\_\-pred\-\_\-impl.\-py.
+

@@ -1,0 +1,137 @@
+\hypertarget{classTestListener}{\section{\-Test\-Listener \-Class \-Reference}
+\label{d4/d81/classTestListener}\index{\-Test\-Listener@{\-Test\-Listener}}
+}
+\-Inheritance diagram for \-Test\-Listener\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d4/d81/classTestListener}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTestListener_acaca19395621640847c7d3706217eb2a}{\-Test\-Listener} ()
+\item 
+\hyperlink{classTestListener_aa94b81fa38ae79f6f6181d4900493718}{\-Test\-Listener} (int $\ast$on\-\_\-start\-\_\-counter, bool $\ast$is\-\_\-destroyed)
+\item 
+virtual \hyperlink{classTestListener_a08bd0af4874a731bfab7cd7f0ab0df54}{$\sim$\-Test\-Listener} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classTestListener_a9d43d6e5c4c37ade824998de2d83bd20}{\-On\-Test\-Program\-Start} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{classTestListener_a6cec3b3ede5f422fc838ea5729c7fa8d}{on\-\_\-start\-\_\-counter\-\_\-}
+\item 
+bool $\ast$ \hyperlink{classTestListener_a77af937493a52de2449bc2701314c146}{is\-\_\-destroyed\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 6616 of file gtest\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classTestListener_acaca19395621640847c7d3706217eb2a}{\index{\-Test\-Listener@{\-Test\-Listener}!\-Test\-Listener@{\-Test\-Listener}}
+\index{\-Test\-Listener@{\-Test\-Listener}!TestListener@{\-Test\-Listener}}
+\subsubsection[{\-Test\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Listener} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d4/d81/classTestListener_acaca19395621640847c7d3706217eb2a}
+
+
+\-Definition at line 6618 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+: on_start_counter_(NULL), is_destroyed_(NULL) {}
+\end{DoxyCode}
+\hypertarget{classTestListener_aa94b81fa38ae79f6f6181d4900493718}{\index{\-Test\-Listener@{\-Test\-Listener}!\-Test\-Listener@{\-Test\-Listener}}
+\index{\-Test\-Listener@{\-Test\-Listener}!TestListener@{\-Test\-Listener}}
+\subsubsection[{\-Test\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Listener} (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{on\-\_\-start\-\_\-counter, }
+\item[{bool $\ast$}]{is\-\_\-destroyed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d4/d81/classTestListener_aa94b81fa38ae79f6f6181d4900493718}
+
+
+\-Definition at line 6619 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+      : on_start_counter_(on_start_counter),
+        is_destroyed_(is_destroyed) {}
+\end{DoxyCode}
+\hypertarget{classTestListener_a08bd0af4874a731bfab7cd7f0ab0df54}{\index{\-Test\-Listener@{\-Test\-Listener}!$\sim$\-Test\-Listener@{$\sim$\-Test\-Listener}}
+\index{$\sim$\-Test\-Listener@{$\sim$\-Test\-Listener}!TestListener@{\-Test\-Listener}}
+\subsubsection[{$\sim$\-Test\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}virtual $\sim${\bf \-Test\-Listener} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d4/d81/classTestListener_a08bd0af4874a731bfab7cd7f0ab0df54}
+
+
+\-Definition at line 6623 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+    if (is_destroyed_)
+      *is_destroyed_ = true;
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classTestListener_a9d43d6e5c4c37ade824998de2d83bd20}{\index{\-Test\-Listener@{\-Test\-Listener}!\-On\-Test\-Program\-Start@{\-On\-Test\-Program\-Start}}
+\index{\-On\-Test\-Program\-Start@{\-On\-Test\-Program\-Start}!TestListener@{\-Test\-Listener}}
+\subsubsection[{\-On\-Test\-Program\-Start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Program\-Start} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d4/d81/classTestListener_a9d43d6e5c4c37ade824998de2d83bd20}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1EmptyTestEventListener_a9d43d6e5c4c37ade824998de2d83bd20}{\-Empty\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 6629 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                     {
+    if (on_start_counter_ != NULL)
+      (*on_start_counter_)++;
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classTestListener_a77af937493a52de2449bc2701314c146}{\index{\-Test\-Listener@{\-Test\-Listener}!is\-\_\-destroyed\-\_\-@{is\-\_\-destroyed\-\_\-}}
+\index{is\-\_\-destroyed\-\_\-@{is\-\_\-destroyed\-\_\-}!TestListener@{\-Test\-Listener}}
+\subsubsection[{is\-\_\-destroyed\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$ {\bf is\-\_\-destroyed\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d4/d81/classTestListener_a77af937493a52de2449bc2701314c146}
+
+
+\-Definition at line 6636 of file gtest\-\_\-unittest.\-cc.
+
+\hypertarget{classTestListener_a6cec3b3ede5f422fc838ea5729c7fa8d}{\index{\-Test\-Listener@{\-Test\-Listener}!on\-\_\-start\-\_\-counter\-\_\-@{on\-\_\-start\-\_\-counter\-\_\-}}
+\index{on\-\_\-start\-\_\-counter\-\_\-@{on\-\_\-start\-\_\-counter\-\_\-}!TestListener@{\-Test\-Listener}}
+\subsubsection[{on\-\_\-start\-\_\-counter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf on\-\_\-start\-\_\-counter\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d4/d81/classTestListener_a6cec3b3ede5f422fc838ea5729c7fa8d}
+
+
+\-Definition at line 6635 of file gtest\-\_\-unittest.\-cc.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__unittest_8cc}{gtest\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

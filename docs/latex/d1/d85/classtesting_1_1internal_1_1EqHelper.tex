@@ -1,0 +1,120 @@
+\hypertarget{classtesting_1_1internal_1_1EqHelper}{\section{\-Eq\-Helper$<$ lhs\-\_\-is\-\_\-null\-\_\-literal $>$ \-Class \-Template \-Reference}
+\label{d1/d85/classtesting_1_1internal_1_1EqHelper}\index{\-Eq\-Helper$<$ lhs\-\_\-is\-\_\-null\-\_\-literal $>$@{\-Eq\-Helper$<$ lhs\-\_\-is\-\_\-null\-\_\-literal $>$}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static \hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \hyperlink{classtesting_1_1internal_1_1EqHelper_acc78a1bad0edc8409d4ba7007dba5563}{\-Compare} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, const \-T1 \&expected, const \-T2 \&actual)
+\item 
+static \hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \hyperlink{classtesting_1_1internal_1_1EqHelper_a20389e2c5459d28b3821fc9af316bd14}{\-Compare} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, \hyperlink{namespacetesting_1_1internal_ae8f73370150f905887720532fa9f572e}{\-Biggest\-Int} expected, \hyperlink{namespacetesting_1_1internal_ae8f73370150f905887720532fa9f572e}{\-Biggest\-Int} actual)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static \hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \hyperlink{classtesting_1_1internal_1_1EqHelper_acc78a1bad0edc8409d4ba7007dba5563}{\-Compare} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, const \-T1 \&expected, const \-T2 \&actual)
+\item 
+static \hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \hyperlink{classtesting_1_1internal_1_1EqHelper_a20389e2c5459d28b3821fc9af316bd14}{\-Compare} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, \hyperlink{namespacetesting_1_1internal_ae8f73370150f905887720532fa9f572e}{\-Biggest\-Int} expected, \hyperlink{namespacetesting_1_1internal_ae8f73370150f905887720532fa9f572e}{\-Biggest\-Int} actual)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$bool lhs\-\_\-is\-\_\-null\-\_\-literal$>$class testing\-::internal\-::\-Eq\-Helper$<$ lhs\-\_\-is\-\_\-null\-\_\-literal $>$}
+
+
+
+\-Definition at line 18369 of file gtest.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1EqHelper_acc78a1bad0edc8409d4ba7007dba5563}{\index{testing\-::internal\-::\-Eq\-Helper@{testing\-::internal\-::\-Eq\-Helper}!\-Compare@{\-Compare}}
+\index{\-Compare@{\-Compare}!testing::internal::EqHelper@{testing\-::internal\-::\-Eq\-Helper}}
+\subsubsection[{\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Assertion\-Result} {\bf \-Compare} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expected\-\_\-expression, }
+\item[{const char $\ast$}]{actual\-\_\-expression, }
+\item[{const \-T1 \&}]{expected, }
+\item[{const \-T2 \&}]{actual}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d1/d85/classtesting_1_1internal_1_1EqHelper_acc78a1bad0edc8409d4ba7007dba5563}
+
+
+\-Definition at line 1348 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                   {
+    return CmpHelperEQ(expected_expression, actual_expression, expected,
+                       actual);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EqHelper_a20389e2c5459d28b3821fc9af316bd14}{\index{testing\-::internal\-::\-Eq\-Helper@{testing\-::internal\-::\-Eq\-Helper}!\-Compare@{\-Compare}}
+\index{\-Compare@{\-Compare}!testing::internal::EqHelper@{testing\-::internal\-::\-Eq\-Helper}}
+\subsubsection[{\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Assertion\-Result} {\bf \-Compare} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expected\-\_\-expression, }
+\item[{const char $\ast$}]{actual\-\_\-expression, }
+\item[{{\bf \-Biggest\-Int}}]{expected, }
+\item[{{\bf \-Biggest\-Int}}]{actual}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d1/d85/classtesting_1_1internal_1_1EqHelper_a20389e2c5459d28b3821fc9af316bd14}
+
+
+\-Definition at line 1362 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                    {
+    return CmpHelperEQ(expected_expression, actual_expression, expected,
+                       actual);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EqHelper_acc78a1bad0edc8409d4ba7007dba5563}{\index{testing\-::internal\-::\-Eq\-Helper@{testing\-::internal\-::\-Eq\-Helper}!\-Compare@{\-Compare}}
+\index{\-Compare@{\-Compare}!testing::internal::EqHelper@{testing\-::internal\-::\-Eq\-Helper}}
+\subsubsection[{\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Assertion\-Result} {\bf \-Compare} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expected\-\_\-expression, }
+\item[{const char $\ast$}]{actual\-\_\-expression, }
+\item[{const \-T1 \&}]{expected, }
+\item[{const \-T2 \&}]{actual}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d1/d85/classtesting_1_1internal_1_1EqHelper_acc78a1bad0edc8409d4ba7007dba5563}
+
+
+\-Definition at line 18373 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                   {
+    return CmpHelperEQ(expected_expression, actual_expression, expected,
+                       actual);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EqHelper_a20389e2c5459d28b3821fc9af316bd14}{\index{testing\-::internal\-::\-Eq\-Helper@{testing\-::internal\-::\-Eq\-Helper}!\-Compare@{\-Compare}}
+\index{\-Compare@{\-Compare}!testing::internal::EqHelper@{testing\-::internal\-::\-Eq\-Helper}}
+\subsubsection[{\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Assertion\-Result} {\bf \-Compare} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expected\-\_\-expression, }
+\item[{const char $\ast$}]{actual\-\_\-expression, }
+\item[{{\bf \-Biggest\-Int}}]{expected, }
+\item[{{\bf \-Biggest\-Int}}]{actual}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d1/d85/classtesting_1_1internal_1_1EqHelper_a20389e2c5459d28b3821fc9af316bd14}
+
+
+\-Definition at line 18387 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                    {
+    return CmpHelperEQ(expected_expression, actual_expression, expected,
+                       actual);
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/\hyperlink{include_2gtest_2gtest_8h}{gtest.\-h}\end{DoxyCompactItemize}

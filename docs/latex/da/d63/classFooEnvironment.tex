@@ -1,0 +1,74 @@
+\hypertarget{classFooEnvironment}{\section{\-Foo\-Environment \-Class \-Reference}
+\label{da/d63/classFooEnvironment}\index{\-Foo\-Environment@{\-Foo\-Environment}}
+}
+\-Inheritance diagram for \-Foo\-Environment\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/d63/classFooEnvironment}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classFooEnvironment_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\item 
+virtual void \hyperlink{classFooEnvironment_a870a092058305911f3d42df45dd657e5}{\-Tear\-Down} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 951 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classFooEnvironment_a901706a587f9ae84df8b2395fbe759cb}{\index{\-Foo\-Environment@{\-Foo\-Environment}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!FooEnvironment@{\-Foo\-Environment}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{da/d63/classFooEnvironment_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Environment_a901706a587f9ae84df8b2395fbe759cb}{\-Environment}.
+
+
+
+\-Definition at line 953 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    printf("%s", "FooEnvironment::SetUp() called.\n");
+  }
+\end{DoxyCode}
+\hypertarget{classFooEnvironment_a870a092058305911f3d42df45dd657e5}{\index{\-Foo\-Environment@{\-Foo\-Environment}!\-Tear\-Down@{\-Tear\-Down}}
+\index{\-Tear\-Down@{\-Tear\-Down}!FooEnvironment@{\-Foo\-Environment}}
+\subsubsection[{\-Tear\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Tear\-Down} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{da/d63/classFooEnvironment_a870a092058305911f3d42df45dd657e5}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Environment_a870a092058305911f3d42df45dd657e5}{\-Environment}.
+
+
+
+\-Definition at line 957 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+    printf("%s", "FooEnvironment::TearDown() called.\n");
+    FAIL() << "Expected fatal failure.";
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__output__test___8cc}{gtest\-\_\-output\-\_\-test\-\_\-.\-cc}\end{DoxyCompactItemize}

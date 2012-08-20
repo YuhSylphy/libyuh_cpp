@@ -1,0 +1,400 @@
+\hypertarget{classtesting_1_1AssertionResult}{\section{\-Assertion\-Result \-Class \-Reference}
+\label{dd/d5f/classtesting_1_1AssertionResult}\index{\-Assertion\-Result@{\-Assertion\-Result}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1AssertionResult_adfc7c37883985778a3d3f4f8cf0fecf1}{\-Assertion\-Result} (const \hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \&other)
+\item 
+\hyperlink{classtesting_1_1AssertionResult_a0b9b65a26886b23693cbc71bcb242c2f}{\-Assertion\-Result} (bool success)
+\item 
+\hyperlink{classtesting_1_1AssertionResult_aa385aa18f5e42db5a415c25a90f4193d}{operator bool} () const 
+\item 
+\hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \hyperlink{classtesting_1_1AssertionResult_a8569a100f4db8e2861d390326b1b9794}{operator!} () const 
+\item 
+const char $\ast$ \hyperlink{classtesting_1_1AssertionResult_a9477c5ee8f0751018d646f748d5730b0}{message} () const 
+\item 
+const char $\ast$ \hyperlink{classtesting_1_1AssertionResult_abcd7608307338bfa5ce51e045ba09833}{failure\-\_\-message} () const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \& \hyperlink{classtesting_1_1AssertionResult_aba40d0b5bf8bfa326fc5c841f292aca4}{operator$<$$<$} (const \-T \&value)
+\item 
+\hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \& \hyperlink{classtesting_1_1AssertionResult_a5363ebd66dbf2d1f2226032c470def13}{operator$<$$<$} (\-::std\-::ostream \&($\ast$basic\-\_\-manipulator)(\-::std\-::ostream \&stream))
+\item 
+\hyperlink{classtesting_1_1AssertionResult_adfc7c37883985778a3d3f4f8cf0fecf1}{\-Assertion\-Result} (const \hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \&other)
+\item 
+\hyperlink{classtesting_1_1AssertionResult_a0b9b65a26886b23693cbc71bcb242c2f}{\-Assertion\-Result} (bool success)
+\item 
+\hyperlink{classtesting_1_1AssertionResult_aa385aa18f5e42db5a415c25a90f4193d}{operator bool} () const 
+\item 
+\hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \hyperlink{classtesting_1_1AssertionResult_a8569a100f4db8e2861d390326b1b9794}{operator!} () const 
+\item 
+const char $\ast$ \hyperlink{classtesting_1_1AssertionResult_a9477c5ee8f0751018d646f748d5730b0}{message} () const 
+\item 
+const char $\ast$ \hyperlink{classtesting_1_1AssertionResult_abcd7608307338bfa5ce51e045ba09833}{failure\-\_\-message} () const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \& \hyperlink{classtesting_1_1AssertionResult_aba40d0b5bf8bfa326fc5c841f292aca4}{operator$<$$<$} (const \-T \&value)
+\item 
+\hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \& \hyperlink{classtesting_1_1AssertionResult_a5363ebd66dbf2d1f2226032c470def13}{operator$<$$<$} (\-::std\-::ostream \&($\ast$basic\-\_\-manipulator)(\-::std\-::ostream \&stream))
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtesting_1_1AssertionResult_af5a0f627b22e44c51dbfd428ade27d76}{\-Append\-Message} (const \hyperlink{classtesting_1_1Message}{\-Message} \&a\-\_\-message)
+\item 
+\hyperlink{classtesting_1_1AssertionResult_ac530119bcd23860c788cef6dadba5568}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result})
+\item 
+void \hyperlink{classtesting_1_1AssertionResult_af5a0f627b22e44c51dbfd428ade27d76}{\-Append\-Message} (const \hyperlink{classtesting_1_1Message}{\-Message} \&a\-\_\-message)
+\item 
+\hyperlink{classtesting_1_1AssertionResult_ac530119bcd23860c788cef6dadba5568}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result})
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classtesting_1_1AssertionResult_af269425d62c74663296db74fb636833d}{success\-\_\-}
+\item 
+\hyperlink{classtesting_1_1internal_1_1scoped__ptr}{internal\-::scoped\-\_\-ptr}\*
+$<$ \-::std\-::string $>$ \hyperlink{classtesting_1_1AssertionResult_a9933c5cd488d58e22fbf84f7c4c96707}{message\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 17290 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1AssertionResult_adfc7c37883985778a3d3f4f8cf0fecf1}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!\-Assertion\-Result@{\-Assertion\-Result}}
+\index{\-Assertion\-Result@{\-Assertion\-Result}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{\-Assertion\-Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assertion\-Result} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Assertion\-Result} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{dd/d5f/classtesting_1_1AssertionResult_adfc7c37883985778a3d3f4f8cf0fecf1}
+
+
+\-Definition at line 2254 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+    : success_(other.success_),
+      message_(other.message_.get() != NULL ?
+               new ::std::string(*other.message_) :
+               static_cast< ::std::string*>(NULL)) {
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_a0b9b65a26886b23693cbc71bcb242c2f}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!\-Assertion\-Result@{\-Assertion\-Result}}
+\index{\-Assertion\-Result@{\-Assertion\-Result}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{\-Assertion\-Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assertion\-Result} (
+\begin{DoxyParamCaption}
+\item[{bool}]{success}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_a0b9b65a26886b23693cbc71bcb242c2f}
+
+
+\-Definition at line 17296 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+: success_(success) {}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_adfc7c37883985778a3d3f4f8cf0fecf1}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!\-Assertion\-Result@{\-Assertion\-Result}}
+\index{\-Assertion\-Result@{\-Assertion\-Result}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{\-Assertion\-Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assertion\-Result} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Assertion\-Result} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{dd/d5f/classtesting_1_1AssertionResult_adfc7c37883985778a3d3f4f8cf0fecf1}
+\hypertarget{classtesting_1_1AssertionResult_a0b9b65a26886b23693cbc71bcb242c2f}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!\-Assertion\-Result@{\-Assertion\-Result}}
+\index{\-Assertion\-Result@{\-Assertion\-Result}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{\-Assertion\-Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assertion\-Result} (
+\begin{DoxyParamCaption}
+\item[{bool}]{success}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_a0b9b65a26886b23693cbc71bcb242c2f}
+
+
+\-Definition at line 271 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+: success_(success) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1AssertionResult_af5a0f627b22e44c51dbfd428ade27d76}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!\-Append\-Message@{\-Append\-Message}}
+\index{\-Append\-Message@{\-Append\-Message}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{\-Append\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Append\-Message} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Message} \&}]{a\-\_\-message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_af5a0f627b22e44c51dbfd428ade27d76}
+
+
+\-Definition at line 306 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                               {
+    if (message_.get() == NULL)
+      message_.reset(new ::std::string);
+    message_->append(a_message.GetString().c_str());
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_af5a0f627b22e44c51dbfd428ade27d76}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!\-Append\-Message@{\-Append\-Message}}
+\index{\-Append\-Message@{\-Append\-Message}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{\-Append\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Append\-Message} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Message} \&}]{a\-\_\-message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_af5a0f627b22e44c51dbfd428ade27d76}
+
+
+\-Definition at line 17331 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                               {
+    if (message_.get() == NULL)
+      message_.reset(new ::std::string);
+    message_->append(a_message.GetString().c_str());
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_abcd7608307338bfa5ce51e045ba09833}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!failure\-\_\-message@{failure\-\_\-message}}
+\index{failure\-\_\-message@{failure\-\_\-message}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{failure\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf failure\-\_\-message} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_abcd7608307338bfa5ce51e045ba09833}
+
+
+\-Definition at line 288 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return message(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_abcd7608307338bfa5ce51e045ba09833}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!failure\-\_\-message@{failure\-\_\-message}}
+\index{failure\-\_\-message@{failure\-\_\-message}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{failure\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf failure\-\_\-message} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_abcd7608307338bfa5ce51e045ba09833}
+
+
+\-Definition at line 17313 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return message(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_ac530119bcd23860c788cef6dadba5568}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Assertion\-Result}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_ac530119bcd23860c788cef6dadba5568}
+\hypertarget{classtesting_1_1AssertionResult_ac530119bcd23860c788cef6dadba5568}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Assertion\-Result}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_ac530119bcd23860c788cef6dadba5568}
+\hypertarget{classtesting_1_1AssertionResult_a9477c5ee8f0751018d646f748d5730b0}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!message@{message}}
+\index{message@{message}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{message}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf message} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_a9477c5ee8f0751018d646f748d5730b0}
+
+
+\-Definition at line 283 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                              {
+    return message_.get() != NULL ?  message_->c_str() : "";
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_a9477c5ee8f0751018d646f748d5730b0}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!message@{message}}
+\index{message@{message}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{message}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf message} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_a9477c5ee8f0751018d646f748d5730b0}
+
+
+\-Definition at line 17308 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                              {
+    return message_.get() != NULL ?  message_->c_str() : "";
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_aa385aa18f5e42db5a415c25a90f4193d}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{operator bool}]{\setlength{\rightskip}{0pt plus 5cm}operator bool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_aa385aa18f5e42db5a415c25a90f4193d}
+
+
+\-Definition at line 274 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return success_; }  // NOLINT
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_aa385aa18f5e42db5a415c25a90f4193d}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{operator bool}]{\setlength{\rightskip}{0pt plus 5cm}operator bool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_aa385aa18f5e42db5a415c25a90f4193d}
+
+
+\-Definition at line 17299 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return success_; }  // NOLINT
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_a8569a100f4db8e2861d390326b1b9794}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!operator!@{operator!}}
+\index{operator!@{operator!}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{operator!}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assertion\-Result} {\bf operator!} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{dd/d5f/classtesting_1_1AssertionResult_a8569a100f4db8e2861d390326b1b9794}
+\hypertarget{classtesting_1_1AssertionResult_a8569a100f4db8e2861d390326b1b9794}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!operator!@{operator!}}
+\index{operator!@{operator!}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{operator!}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assertion\-Result} {\bf operator!} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{dd/d5f/classtesting_1_1AssertionResult_a8569a100f4db8e2861d390326b1b9794}
+
+
+\-Definition at line 2262 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                 {
+  AssertionResult negation(!success_);
+  if (message_.get() != NULL)
+    negation << *message_;
+  return negation;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_aba40d0b5bf8bfa326fc5c841f292aca4}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assertion\-Result}\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_aba40d0b5bf8bfa326fc5c841f292aca4}
+
+
+\-Definition at line 291 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                                    {
+    AppendMessage(Message() << value);
+    return *this;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_a5363ebd66dbf2d1f2226032c470def13}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assertion\-Result}\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream \&($\ast$)(\-::std\-::ostream \&stream)}]{basic\-\_\-manipulator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_a5363ebd66dbf2d1f2226032c470def13}
+
+
+\-Definition at line 298 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                            {
+    AppendMessage(Message() << basic_manipulator);
+    return *this;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_aba40d0b5bf8bfa326fc5c841f292aca4}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assertion\-Result}\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_aba40d0b5bf8bfa326fc5c841f292aca4}
+
+
+\-Definition at line 17316 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                                    {
+    AppendMessage(Message() << value);
+    return *this;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1AssertionResult_a5363ebd66dbf2d1f2226032c470def13}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Assertion\-Result}\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream \&($\ast$)(\-::std\-::ostream \&stream)}]{basic\-\_\-manipulator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_a5363ebd66dbf2d1f2226032c470def13}
+
+
+\-Definition at line 17323 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                            {
+    AppendMessage(Message() << basic_manipulator);
+    return *this;
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1AssertionResult_a9933c5cd488d58e22fbf84f7c4c96707}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!message\-\_\-@{message\-\_\-}}
+\index{message\-\_\-@{message\-\_\-}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{message\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf internal\-::scoped\-\_\-ptr}$<$\-::std\-::string $>$ {\bf message\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_a9933c5cd488d58e22fbf84f7c4c96707}
+
+
+\-Definition at line 17343 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1AssertionResult_af269425d62c74663296db74fb636833d}{\index{testing\-::\-Assertion\-Result@{testing\-::\-Assertion\-Result}!success\-\_\-@{success\-\_\-}}
+\index{success\-\_\-@{success\-\_\-}!testing::AssertionResult@{testing\-::\-Assertion\-Result}}
+\subsubsection[{success\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf success\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{dd/d5f/classtesting_1_1AssertionResult_af269425d62c74663296db74fb636833d}
+
+
+\-Definition at line 17338 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/\hyperlink{include_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}

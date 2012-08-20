@@ -1,0 +1,106 @@
+\hypertarget{classtesting_1_1internal_1_1ConstAndNonConstCastable}{\section{\-Const\-And\-Non\-Const\-Castable \-Class \-Reference}
+\label{d3/d02/classtesting_1_1internal_1_1ConstAndNonConstCastable}\index{\-Const\-And\-Non\-Const\-Castable@{\-Const\-And\-Non\-Const\-Castable}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ConstAndNonConstCastable_a41a8f5ffa5793d6e5406eff44bd51ea4}{\-Const\-And\-Non\-Const\-Castable} (bool $\ast$converted, bool $\ast$const\-\_\-converted)
+\item 
+\hyperlink{classtesting_1_1internal_1_1ConstAndNonConstCastable_af54f90fea7b6604f893833095e77c165}{operator Base} ()
+\item 
+\hyperlink{classtesting_1_1internal_1_1ConstAndNonConstCastable_a7342de20f79f04b0736acc2aff3f508f}{operator Base} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool $\ast$ \hyperlink{classtesting_1_1internal_1_1ConstAndNonConstCastable_aa9e9eeb1a81afc42911a2a8b17e9618b}{converted\-\_\-}
+\item 
+bool $\ast$ \hyperlink{classtesting_1_1internal_1_1ConstAndNonConstCastable_a9bb62a6b80a01596c18d29006428a0cc}{const\-\_\-converted\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 131 of file gtest-\/port\-\_\-test.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ConstAndNonConstCastable_a41a8f5ffa5793d6e5406eff44bd51ea4}{\index{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable@{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable}!\-Const\-And\-Non\-Const\-Castable@{\-Const\-And\-Non\-Const\-Castable}}
+\index{\-Const\-And\-Non\-Const\-Castable@{\-Const\-And\-Non\-Const\-Castable}!testing::internal::ConstAndNonConstCastable@{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable}}
+\subsubsection[{\-Const\-And\-Non\-Const\-Castable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Const\-And\-Non\-Const\-Castable} (
+\begin{DoxyParamCaption}
+\item[{bool $\ast$}]{converted, }
+\item[{bool $\ast$}]{const\-\_\-converted}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d02/classtesting_1_1internal_1_1ConstAndNonConstCastable_a41a8f5ffa5793d6e5406eff44bd51ea4}
+
+
+\-Definition at line 133 of file gtest-\/port\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+      : converted_(converted), const_converted_(const_converted) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ConstAndNonConstCastable_af54f90fea7b6604f893833095e77c165}{\index{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable@{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable}!operator Base@{operator Base}}
+\index{operator Base@{operator Base}!testing::internal::ConstAndNonConstCastable@{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable}}
+\subsubsection[{operator Base}]{\setlength{\rightskip}{0pt plus 5cm}operator {\bf \-Base} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d02/classtesting_1_1internal_1_1ConstAndNonConstCastable_af54f90fea7b6604f893833095e77c165}
+
+
+\-Definition at line 135 of file gtest-\/port\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                  {
+    *converted_ = true;
+    return Base();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1ConstAndNonConstCastable_a7342de20f79f04b0736acc2aff3f508f}{\index{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable@{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable}!operator Base@{operator Base}}
+\index{operator Base@{operator Base}!testing::internal::ConstAndNonConstCastable@{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable}}
+\subsubsection[{operator Base}]{\setlength{\rightskip}{0pt plus 5cm}operator {\bf \-Base} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d02/classtesting_1_1internal_1_1ConstAndNonConstCastable_a7342de20f79f04b0736acc2aff3f508f}
+
+
+\-Definition at line 139 of file gtest-\/port\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                        {
+    *const_converted_ = true;
+    return Base();
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ConstAndNonConstCastable_a9bb62a6b80a01596c18d29006428a0cc}{\index{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable@{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable}!const\-\_\-converted\-\_\-@{const\-\_\-converted\-\_\-}}
+\index{const\-\_\-converted\-\_\-@{const\-\_\-converted\-\_\-}!testing::internal::ConstAndNonConstCastable@{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable}}
+\subsubsection[{const\-\_\-converted\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$ {\bf const\-\_\-converted\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d3/d02/classtesting_1_1internal_1_1ConstAndNonConstCastable_a9bb62a6b80a01596c18d29006428a0cc}
+
+
+\-Definition at line 146 of file gtest-\/port\-\_\-test.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1ConstAndNonConstCastable_aa9e9eeb1a81afc42911a2a8b17e9618b}{\index{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable@{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable}!converted\-\_\-@{converted\-\_\-}}
+\index{converted\-\_\-@{converted\-\_\-}!testing::internal::ConstAndNonConstCastable@{testing\-::internal\-::\-Const\-And\-Non\-Const\-Castable}}
+\subsubsection[{converted\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$ {\bf converted\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d3/d02/classtesting_1_1internal_1_1ConstAndNonConstCastable_aa9e9eeb1a81afc42911a2a8b17e9618b}
+
+
+\-Definition at line 145 of file gtest-\/port\-\_\-test.\-cc.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest-port__test_8cc}{gtest-\/port\-\_\-test.\-cc}\end{DoxyCompactItemize}

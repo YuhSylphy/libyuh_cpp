@@ -1,0 +1,78 @@
+\hypertarget{classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4}{\section{\-Universal\-Printer$<$ \-T \& $>$ \-Class \-Template \-Reference}
+\label{db/d6e/classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4}\index{\-Universal\-Printer$<$ T \& $>$@{\-Universal\-Printer$<$ T \& $>$}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4_a8db16abe866b095dc7d56db72ac2b99b}{\-Print} (const \-T \&value,\-::std\-::ostream $\ast$os)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4_a8db16abe866b095dc7d56db72ac2b99b}{\-Print} (const \-T \&value,\-::std\-::ostream $\ast$os)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename T$>$class testing\-::internal\-::\-Universal\-Printer$<$ T \& $>$}
+
+
+
+\-Definition at line 9835 of file gtest.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4_a8db16abe866b095dc7d56db72ac2b99b}{\index{testing\-::internal\-::\-Universal\-Printer$<$ T \& $>$@{testing\-::internal\-::\-Universal\-Printer$<$ T \& $>$}!\-Print@{\-Print}}
+\index{\-Print@{\-Print}!testing::internal::UniversalPrinter< T & >@{testing\-::internal\-::\-Universal\-Printer$<$ T \& $>$}}
+\subsubsection[{\-Print}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Print} (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{value, }
+\item[{\-::std\-::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/d6e/classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4_a8db16abe866b095dc7d56db72ac2b99b}
+
+
+\-Definition at line 659 of file gtest-\/printers.\-h.
+
+
+\begin{DoxyCode}
+                                                    {
+    // Prints the address of the value.  We use reinterpret_cast here
+    // as static_cast doesn't compile when T is a function type.
+    *os << "@" << reinterpret_cast<const void*>(&value) << " ";
+
+    // Then prints the value itself.
+    UniversalPrint(value, os);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4_a8db16abe866b095dc7d56db72ac2b99b}{\index{testing\-::internal\-::\-Universal\-Printer$<$ T \& $>$@{testing\-::internal\-::\-Universal\-Printer$<$ T \& $>$}!\-Print@{\-Print}}
+\index{\-Print@{\-Print}!testing::internal::UniversalPrinter< T & >@{testing\-::internal\-::\-Universal\-Printer$<$ T \& $>$}}
+\subsubsection[{\-Print}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Print} (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{value, }
+\item[{\-::std\-::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/d6e/classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4_a8db16abe866b095dc7d56db72ac2b99b}
+
+
+\-Definition at line 9844 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                    {
+    // Prints the address of the value.  We use reinterpret_cast here
+    // as static_cast doesn't compile when T is a function type.
+    *os << "@" << reinterpret_cast<const void*>(&value) << " ";
+
+    // Then prints the value itself.
+    UniversalPrint(value, os);
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/\hyperlink{gtest-printers_8h}{gtest-\/printers.\-h}\end{DoxyCompactItemize}

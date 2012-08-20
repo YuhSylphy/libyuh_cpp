@@ -1,0 +1,262 @@
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator}{\section{\-Range\-Generator$<$ \-T, \-Increment\-T $>$\-:\-:\-Iterator \-Class \-Reference}
+\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator}\index{\-Range\-Generator$<$ T, Increment\-T $>$\-::\-Iterator@{\-Range\-Generator$<$ T, Increment\-T $>$\-::\-Iterator}}
+}
+\-Inheritance diagram for \-Range\-Generator$<$ \-T, \-Increment\-T $>$\-:\-:\-Iterator\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a853cc6516bfe7f8c4fd82e3466ab3007}{\-Iterator} (const \hyperlink{classtesting_1_1internal_1_1ParamGeneratorInterface}{\-Param\-Generator\-Interface}$<$ \-T $>$ $\ast$base, \-T value, int index, \-Increment\-T step)
+\item 
+virtual \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a47b331bac1d130f2bab2c40e76ccb54a}{$\sim$\-Iterator} ()
+\item 
+virtual const \*
+\hyperlink{classtesting_1_1internal_1_1ParamGeneratorInterface}{\-Param\-Generator\-Interface}$<$ \-T $>$ $\ast$ \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a150e3ccaeb07362b8d88a94fecd4a6b6}{\-Base\-Generator} () const 
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_aaa5a890708f89affa1a7726cf152c872}{\-Advance} ()
+\item 
+virtual \hyperlink{classtesting_1_1internal_1_1ParamIteratorInterface}{\-Param\-Iterator\-Interface}\*
+$<$ \-T $>$ $\ast$ \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a68b8ee0444cdc7c84f4a82e910e66893}{\-Clone} () const 
+\item 
+virtual const \-T $\ast$ \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a11285bd5236d32bdacd8fbeb6ecfa4c4}{\-Current} () const 
+\item 
+virtual bool \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_af9c7ebdba09d6bd866f0967359e02ad8}{\-Equals} (const \hyperlink{classtesting_1_1internal_1_1ParamIteratorInterface}{\-Param\-Iterator\-Interface}$<$ \-T $>$ \&other) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a2b76c2e597bc9393f2b99e869e4fa8d2}{\-Iterator} (const \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator}{\-Iterator} \&other)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_ac087d740f6aa05ec07afd0c5c0327105}{operator=} (const \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator}{\-Iterator} \&other)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classtesting_1_1internal_1_1ParamGeneratorInterface}{\-Param\-Generator\-Interface}\*
+$<$ \-T $>$ $\ast$const \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a93e2c6416427150cd20cce832f699e19}{base\-\_\-}
+\item 
+\-T \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_ae496c0f6edafccdab7ef2e2b9d0c7e03}{value\-\_\-}
+\item 
+int \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_aaaf1ac02dfa554a3cdffc647d512a77b}{index\-\_\-}
+\item 
+const \-Increment\-T \hyperlink{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_ab1ed3e7cdff8cb7dd4d077c865a66c1a}{step\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename T, typename Increment\-T$>$class testing\-::internal\-::\-Range\-Generator$<$ T, Increment\-T $>$\-::\-Iterator}
+
+
+
+\-Definition at line 10132 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a853cc6516bfe7f8c4fd82e3466ab3007}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!\-Iterator@{\-Iterator}}
+\index{\-Iterator@{\-Iterator}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Iterator} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Param\-Generator\-Interface}$<$ \-T $>$ $\ast$}]{base, }
+\item[{\-T}]{value, }
+\item[{int}]{index, }
+\item[{\-Increment\-T}]{step}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a853cc6516bfe7f8c4fd82e3466ab3007}
+
+
+\-Definition at line 10134 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+        : base_(base), value_(value), index_(index), step_(step) {}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a47b331bac1d130f2bab2c40e76ccb54a}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!$\sim$\-Iterator@{$\sim$\-Iterator}}
+\index{$\sim$\-Iterator@{$\sim$\-Iterator}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{$\sim$\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}virtual $\sim${\bf \-Iterator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a47b331bac1d130f2bab2c40e76ccb54a}
+
+
+\-Definition at line 10137 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a2b76c2e597bc9393f2b99e869e4fa8d2}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!\-Iterator@{\-Iterator}}
+\index{\-Iterator@{\-Iterator}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Iterator} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Iterator} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a2b76c2e597bc9393f2b99e869e4fa8d2}
+
+
+\-Definition at line 10162 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+        : ParamIteratorInterface<T>(),
+          base_(other.base_), value_(other.value_), index_(other.index_),
+          step_(other.step_) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_aaa5a890708f89affa1a7726cf152c872}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!\-Advance@{\-Advance}}
+\index{\-Advance@{\-Advance}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{\-Advance}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Advance} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_aaa5a890708f89affa1a7726cf152c872}
+
+
+\-Implements \hyperlink{classtesting_1_1internal_1_1ParamIteratorInterface_ac30cd9e8cf3f7a749726c329fdebfd7c}{\-Param\-Iterator\-Interface$<$ T $>$}.
+
+
+
+\-Definition at line 10142 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                           {
+      value_ = value_ + step_;
+      index_++;
+    }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a150e3ccaeb07362b8d88a94fecd4a6b6}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!\-Base\-Generator@{\-Base\-Generator}}
+\index{\-Base\-Generator@{\-Base\-Generator}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{\-Base\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf \-Param\-Generator\-Interface}$<$\-T$>$$\ast$ {\bf \-Base\-Generator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a150e3ccaeb07362b8d88a94fecd4a6b6}
+
+
+\-Implements \hyperlink{classtesting_1_1internal_1_1ParamIteratorInterface_a31ed0ef215b10d69bbd1b480c4451232}{\-Param\-Iterator\-Interface$<$ T $>$}.
+
+
+
+\-Definition at line 10139 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                                    {
+      return base_;
+    }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a68b8ee0444cdc7c84f4a82e910e66893}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!\-Clone@{\-Clone}}
+\index{\-Clone@{\-Clone}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{\-Clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf \-Param\-Iterator\-Interface}$<$\-T$>$$\ast$ {\bf \-Clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a68b8ee0444cdc7c84f4a82e910e66893}
+
+
+\-Implements \hyperlink{classtesting_1_1internal_1_1ParamIteratorInterface_a13d3ca351e0bd6a00fe9bdd46ae4cd76}{\-Param\-Iterator\-Interface$<$ T $>$}.
+
+
+
+\-Definition at line 10146 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                     {
+      return new Iterator(*this);
+    }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a11285bd5236d32bdacd8fbeb6ecfa4c4}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!\-Current@{\-Current}}
+\index{\-Current@{\-Current}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{\-Current}]{\setlength{\rightskip}{0pt plus 5cm}virtual const \-T$\ast$ {\bf \-Current} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a11285bd5236d32bdacd8fbeb6ecfa4c4}
+
+
+\-Implements \hyperlink{classtesting_1_1internal_1_1ParamIteratorInterface_a752f54639dad3c961a7b5ea375db8a01}{\-Param\-Iterator\-Interface$<$ T $>$}.
+
+
+
+\-Definition at line 10149 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return &value_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_af9c7ebdba09d6bd866f0967359e02ad8}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!\-Equals@{\-Equals}}
+\index{\-Equals@{\-Equals}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{\-Equals}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Equals} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Param\-Iterator\-Interface}$<$ \-T $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_af9c7ebdba09d6bd866f0967359e02ad8}
+
+
+\-Definition at line 10150 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                                      {
+      // Having the same base generator guarantees that the other
+      // iterator is of the same type and we can downcast.
+      GTEST_CHECK_(BaseGenerator() == other.BaseGenerator())
+          << "The program attempted to compare iterators "
+          << "from different generators." << std::endl;
+      const int other_index =
+          CheckedDowncastToActualType<const Iterator>(&other)->index_;
+      return index_ == other_index;
+    }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_ac087d740f6aa05ec07afd0c5c0327105}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Iterator} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_ac087d740f6aa05ec07afd0c5c0327105}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a93e2c6416427150cd20cce832f699e19}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!base\-\_\-@{base\-\_\-}}
+\index{base\-\_\-@{base\-\_\-}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{base\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Param\-Generator\-Interface}$<$\-T$>$$\ast$ const {\bf base\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_a93e2c6416427150cd20cce832f699e19}
+
+
+\-Definition at line 10170 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_aaaf1ac02dfa554a3cdffc647d512a77b}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!index\-\_\-@{index\-\_\-}}
+\index{index\-\_\-@{index\-\_\-}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{index\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf index\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_aaaf1ac02dfa554a3cdffc647d512a77b}
+
+
+\-Definition at line 10172 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_ab1ed3e7cdff8cb7dd4d077c865a66c1a}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!step\-\_\-@{step\-\_\-}}
+\index{step\-\_\-@{step\-\_\-}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{step\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const \-Increment\-T {\bf step\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_ab1ed3e7cdff8cb7dd4d077c865a66c1a}
+
+
+\-Definition at line 10173 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_ae496c0f6edafccdab7ef2e2b9d0c7e03}{\index{testing\-::internal\-::\-Range\-Generator\-::\-Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}!value\-\_\-@{value\-\_\-}}
+\index{value\-\_\-@{value\-\_\-}!testing::internal::RangeGenerator::Iterator@{testing\-::internal\-::\-Range\-Generator\-::\-Iterator}}
+\subsubsection[{value\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\-T {\bf value\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/dfa/classtesting_1_1internal_1_1RangeGenerator_1_1Iterator_ae496c0f6edafccdab7ef2e2b9d0c7e03}
+
+
+\-Definition at line 10171 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\end{DoxyCompactItemize}

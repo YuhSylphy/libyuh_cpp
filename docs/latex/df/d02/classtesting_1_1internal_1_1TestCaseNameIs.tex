@@ -1,0 +1,112 @@
+\hypertarget{classtesting_1_1internal_1_1TestCaseNameIs}{\section{\-Test\-Case\-Name\-Is \-Class \-Reference}
+\label{df/d02/classtesting_1_1internal_1_1TestCaseNameIs}\index{\-Test\-Case\-Name\-Is@{\-Test\-Case\-Name\-Is}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1TestCaseNameIs_af26113c34450ae4e37c0864c2894f30f}{\-Test\-Case\-Name\-Is} (const \hyperlink{classtesting_1_1internal_1_1String}{\-String} \&name)
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1TestCaseNameIs_abeb26d81f2810a4cd5083d4c32e58629}{operator()} (const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$test\-\_\-case) const 
+\item 
+\hyperlink{classtesting_1_1internal_1_1TestCaseNameIs_af26113c34450ae4e37c0864c2894f30f}{\-Test\-Case\-Name\-Is} (const \hyperlink{classtesting_1_1internal_1_1String}{\-String} \&name)
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1TestCaseNameIs_abeb26d81f2810a4cd5083d4c32e58629}{operator()} (const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$test\-\_\-case) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1TestCaseNameIs_a46d25a1d56b8ab56e84b8bd0c7581e8f}{name\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 5373 of file gtest-\/all.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1TestCaseNameIs_af26113c34450ae4e37c0864c2894f30f}{\index{testing\-::internal\-::\-Test\-Case\-Name\-Is@{testing\-::internal\-::\-Test\-Case\-Name\-Is}!\-Test\-Case\-Name\-Is@{\-Test\-Case\-Name\-Is}}
+\index{\-Test\-Case\-Name\-Is@{\-Test\-Case\-Name\-Is}!testing::internal::TestCaseNameIs@{testing\-::internal\-::\-Test\-Case\-Name\-Is}}
+\subsubsection[{\-Test\-Case\-Name\-Is}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case\-Name\-Is} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-String} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{df/d02/classtesting_1_1internal_1_1TestCaseNameIs_af26113c34450ae4e37c0864c2894f30f}
+
+
+\-Definition at line 5376 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+      : name_(name) {}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestCaseNameIs_af26113c34450ae4e37c0864c2894f30f}{\index{testing\-::internal\-::\-Test\-Case\-Name\-Is@{testing\-::internal\-::\-Test\-Case\-Name\-Is}!\-Test\-Case\-Name\-Is@{\-Test\-Case\-Name\-Is}}
+\index{\-Test\-Case\-Name\-Is@{\-Test\-Case\-Name\-Is}!testing::internal::TestCaseNameIs@{testing\-::internal\-::\-Test\-Case\-Name\-Is}}
+\subsubsection[{\-Test\-Case\-Name\-Is}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case\-Name\-Is} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-String} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{df/d02/classtesting_1_1internal_1_1TestCaseNameIs_af26113c34450ae4e37c0864c2894f30f}
+
+
+\-Definition at line 4072 of file gtest.\-cc.
+
+
+\begin{DoxyCode}
+      : name_(name) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1TestCaseNameIs_abeb26d81f2810a4cd5083d4c32e58629}{\index{testing\-::internal\-::\-Test\-Case\-Name\-Is@{testing\-::internal\-::\-Test\-Case\-Name\-Is}!operator()@{operator()}}
+\index{operator()@{operator()}!testing::internal::TestCaseNameIs@{testing\-::internal\-::\-Test\-Case\-Name\-Is}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}bool operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Case} $\ast$}]{test\-\_\-case}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{df/d02/classtesting_1_1internal_1_1TestCaseNameIs_abeb26d81f2810a4cd5083d4c32e58629}
+
+
+\-Definition at line 4076 of file gtest.\-cc.
+
+
+\begin{DoxyCode}
+                                                   {
+    return test_case != NULL && strcmp(test_case->name(), name_.c_str()) == 0;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestCaseNameIs_abeb26d81f2810a4cd5083d4c32e58629}{\index{testing\-::internal\-::\-Test\-Case\-Name\-Is@{testing\-::internal\-::\-Test\-Case\-Name\-Is}!operator()@{operator()}}
+\index{operator()@{operator()}!testing::internal::TestCaseNameIs@{testing\-::internal\-::\-Test\-Case\-Name\-Is}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}bool operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Case} $\ast$}]{test\-\_\-case}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{df/d02/classtesting_1_1internal_1_1TestCaseNameIs_abeb26d81f2810a4cd5083d4c32e58629}
+
+
+\-Definition at line 5380 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                   {
+    return test_case != NULL && strcmp(test_case->name(), name_.c_str()) == 0;
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1TestCaseNameIs_a46d25a1d56b8ab56e84b8bd0c7581e8f}{\index{testing\-::internal\-::\-Test\-Case\-Name\-Is@{testing\-::internal\-::\-Test\-Case\-Name\-Is}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!testing::internal::TestCaseNameIs@{testing\-::internal\-::\-Test\-Case\-Name\-Is}}
+\subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf name\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{df/d02/classtesting_1_1internal_1_1TestCaseNameIs_a46d25a1d56b8ab56e84b8bd0c7581e8f}
+
+
+\-Definition at line 5385 of file gtest-\/all.\-cc.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}

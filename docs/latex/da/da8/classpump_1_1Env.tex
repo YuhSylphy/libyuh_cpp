@@ -1,0 +1,265 @@
+\hypertarget{classpump_1_1Env}{\section{\-Env \-Class \-Reference}
+\label{da/da8/classpump_1_1Env}\index{\-Env@{\-Env}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classpump_1_1Env_ac775ee34451fdfa742b318538164070e}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Env_aff981755ef197de06774d0c1cf6cceb9}{\-Clone}
+\item 
+def \hyperlink{classpump_1_1Env_ad15bfa5e02880960d286a9e65baa9970}{\-Push\-Variable}
+\item 
+def \hyperlink{classpump_1_1Env_a0737f9f157a0f0be4afd96e6dc3ac593}{\-Pop\-Variable}
+\item 
+def \hyperlink{classpump_1_1Env_af7e99fe7b9308e38d5b9ca4a8db4d56b}{\-Push\-Range}
+\item 
+def \hyperlink{classpump_1_1Env_a3e7851a1a19d0482235a323e97dce8ff}{\-Pop\-Range}
+\item 
+def \hyperlink{classpump_1_1Env_a6ad5f2dce23561603333027d43b0cc2e}{\-Get\-Value}
+\item 
+def \hyperlink{classpump_1_1Env_a015f55a8b9d3a8c6694baa05d0970b33}{\-Eval\-Exp}
+\item 
+def \hyperlink{classpump_1_1Env_a7689fcbdac40eafa498ffca7cbe2bf7d}{\-Get\-Range}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpump_1_1Env_a626e63c7be6e71872233832cce1dccc0}{variables}
+\item 
+\hyperlink{classpump_1_1Env_ad11a1805dd4f6710e9566106c6f795f2}{ranges}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 584 of file pump.\-py.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classpump_1_1Env_ac775ee34451fdfa742b318538164070e}{\index{pump\-::\-Env@{pump\-::\-Env}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/da8/classpump_1_1Env_ac775ee34451fdfa742b318538164070e}
+
+
+\-Definition at line 585 of file pump.\-py.
+
+
+\begin{DoxyCode}
+585 
+586   def __init__(self):
+587     self.variables = []
+588     self.ranges = []
+
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classpump_1_1Env_aff981755ef197de06774d0c1cf6cceb9}{\index{pump\-::\-Env@{pump\-::\-Env}!\-Clone@{\-Clone}}
+\index{\-Clone@{\-Clone}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{\-Clone}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Clone} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/da8/classpump_1_1Env_aff981755ef197de06774d0c1cf6cceb9}
+
+
+\-Definition at line 589 of file pump.\-py.
+
+
+\begin{DoxyCode}
+589 
+590   def Clone(self):
+591     clone = Env()
+592     clone.variables = self.variables[:]
+593     clone.ranges = self.ranges[:]
+594     return clone
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Env_a015f55a8b9d3a8c6694baa05d0970b33}{\index{pump\-::\-Env@{pump\-::\-Env}!\-Eval\-Exp@{\-Eval\-Exp}}
+\index{\-Eval\-Exp@{\-Eval\-Exp}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{\-Eval\-Exp}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Eval\-Exp} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{exp}
+\end{DoxyParamCaption}
+)}}\label{da/da8/classpump_1_1Env_a015f55a8b9d3a8c6694baa05d0970b33}
+
+
+\-Definition at line 622 of file pump.\-py.
+
+
+\begin{DoxyCode}
+622 
+623   def EvalExp(self, exp):
+624     try:
+625       result = eval(exp.python_exp)
+626     except Exception, e:
+627       print 'ERROR: caught exception %s: %s' % (e.__class__.__name__, e)
+628       print ('ERROR: failed to evaluate meta expression %s at %s' %
+629              (exp.python_exp, exp.token.start))
+630       sys.exit(1)
+631     return result
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Env_a7689fcbdac40eafa498ffca7cbe2bf7d}{\index{pump\-::\-Env@{pump\-::\-Env}!\-Get\-Range@{\-Get\-Range}}
+\index{\-Get\-Range@{\-Get\-Range}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{\-Get\-Range}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Get\-Range} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)}}\label{da/da8/classpump_1_1Env_a7689fcbdac40eafa498ffca7cbe2bf7d}
+
+
+\-Definition at line 632 of file pump.\-py.
+
+
+\begin{DoxyCode}
+632 
+633   def GetRange(self, identifier):
+634     for (var, lower, upper) in self.ranges:
+635       if identifier == var:
+636         return (lower, upper)
+637 
+638     print 'ERROR: range %s is undefined.' % (identifier,)
+639     sys.exit(1)
+640 
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Env_a6ad5f2dce23561603333027d43b0cc2e}{\index{pump\-::\-Env@{pump\-::\-Env}!\-Get\-Value@{\-Get\-Value}}
+\index{\-Get\-Value@{\-Get\-Value}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{\-Get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Get\-Value} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)}}\label{da/da8/classpump_1_1Env_a6ad5f2dce23561603333027d43b0cc2e}
+
+
+\-Definition at line 614 of file pump.\-py.
+
+
+\begin{DoxyCode}
+614 
+615   def GetValue(self, identifier):
+616     for (var, value) in self.variables:
+617       if identifier == var:
+618         return value
+619 
+620     print 'ERROR: meta variable %s is undefined.' % (identifier,)
+621     sys.exit(1)
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Env_a3e7851a1a19d0482235a323e97dce8ff}{\index{pump\-::\-Env@{pump\-::\-Env}!\-Pop\-Range@{\-Pop\-Range}}
+\index{\-Pop\-Range@{\-Pop\-Range}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{\-Pop\-Range}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Pop\-Range} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/da8/classpump_1_1Env_a3e7851a1a19d0482235a323e97dce8ff}
+
+
+\-Definition at line 611 of file pump.\-py.
+
+
+\begin{DoxyCode}
+611 
+612   def PopRange(self):
+613     self.ranges[:1] = []
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Env_a0737f9f157a0f0be4afd96e6dc3ac593}{\index{pump\-::\-Env@{pump\-::\-Env}!\-Pop\-Variable@{\-Pop\-Variable}}
+\index{\-Pop\-Variable@{\-Pop\-Variable}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{\-Pop\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Pop\-Variable} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/da8/classpump_1_1Env_a0737f9f157a0f0be4afd96e6dc3ac593}
+
+
+\-Definition at line 605 of file pump.\-py.
+
+
+\begin{DoxyCode}
+605 
+606   def PopVariable(self):
+607     self.variables[:1] = []
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Env_af7e99fe7b9308e38d5b9ca4a8db4d56b}{\index{pump\-::\-Env@{pump\-::\-Env}!\-Push\-Range@{\-Push\-Range}}
+\index{\-Push\-Range@{\-Push\-Range}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{\-Push\-Range}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Push\-Range} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{var, }
+\item[{}]{lower, }
+\item[{}]{upper}
+\end{DoxyParamCaption}
+)}}\label{da/da8/classpump_1_1Env_af7e99fe7b9308e38d5b9ca4a8db4d56b}
+
+
+\-Definition at line 608 of file pump.\-py.
+
+
+\begin{DoxyCode}
+608 
+609   def PushRange(self, var, lower, upper):
+610     self.ranges[:0] = [(var, lower, upper)]
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Env_ad15bfa5e02880960d286a9e65baa9970}{\index{pump\-::\-Env@{pump\-::\-Env}!\-Push\-Variable@{\-Push\-Variable}}
+\index{\-Push\-Variable@{\-Push\-Variable}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{\-Push\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Push\-Variable} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{var, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}\label{da/da8/classpump_1_1Env_ad15bfa5e02880960d286a9e65baa9970}
+
+
+\-Definition at line 595 of file pump.\-py.
+
+
+\begin{DoxyCode}
+595 
+596   def PushVariable(self, var, value):
+597     # If value looks like an int, store it as an int.
+598     try:
+599       int_value = int(value)
+600       if ('%s' % int_value) == value:
+601         value = int_value
+602     except Exception:
+603       pass
+604     self.variables[:0] = [(var, value)]
+
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classpump_1_1Env_ad11a1805dd4f6710e9566106c6f795f2}{\index{pump\-::\-Env@{pump\-::\-Env}!ranges@{ranges}}
+\index{ranges@{ranges}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{ranges}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ranges}}}\label{da/da8/classpump_1_1Env_ad11a1805dd4f6710e9566106c6f795f2}
+
+
+\-Definition at line 585 of file pump.\-py.
+
+\hypertarget{classpump_1_1Env_a626e63c7be6e71872233832cce1dccc0}{\index{pump\-::\-Env@{pump\-::\-Env}!variables@{variables}}
+\index{variables@{variables}!pump::Env@{pump\-::\-Env}}
+\subsubsection[{variables}]{\setlength{\rightskip}{0pt plus 5cm}{\bf variables}}}\label{da/da8/classpump_1_1Env_a626e63c7be6e71872233832cce1dccc0}
+
+
+\-Definition at line 585 of file pump.\-py.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/scripts/\hyperlink{pump_8py}{pump.\-py}\end{DoxyCompactItemize}

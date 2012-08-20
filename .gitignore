@@ -1,0 +1,12 @@
+GTAGS
+GPATH
+GRTAGS
+HTML
+*.o
+*.d
+#*#
+*~
+gtest-1.6.0/*
+*.exe
+*.pch
+*.a

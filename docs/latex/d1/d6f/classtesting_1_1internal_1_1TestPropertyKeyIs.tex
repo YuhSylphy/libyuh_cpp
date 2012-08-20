@@ -1,0 +1,116 @@
+\hypertarget{classtesting_1_1internal_1_1TestPropertyKeyIs}{\section{\-Test\-Property\-Key\-Is \-Class \-Reference}
+\label{d1/d6f/classtesting_1_1internal_1_1TestPropertyKeyIs}\index{\-Test\-Property\-Key\-Is@{\-Test\-Property\-Key\-Is}}
+}
+
+
+{\ttfamily \#include $<$gtest-\/internal-\/inl.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1TestPropertyKeyIs_a53dffadd80b0ce39f5de2fa0c7246d9d}{\-Test\-Property\-Key\-Is} (const char $\ast$key)
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1TestPropertyKeyIs_a92885f50d2b646718e347767f165b30d}{operator()} (const \hyperlink{classtesting_1_1TestProperty}{\-Test\-Property} \&test\-\_\-property) const 
+\item 
+\hyperlink{classtesting_1_1internal_1_1TestPropertyKeyIs_a53dffadd80b0ce39f5de2fa0c7246d9d}{\-Test\-Property\-Key\-Is} (const char $\ast$key)
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1TestPropertyKeyIs_a92885f50d2b646718e347767f165b30d}{operator()} (const \hyperlink{classtesting_1_1TestProperty}{\-Test\-Property} \&test\-\_\-property) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1TestPropertyKeyIs_afdc9c0d8472fabfa4466b1a0eb0d0ff2}{key\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 735 of file gtest-\/all.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1TestPropertyKeyIs_a53dffadd80b0ce39f5de2fa0c7246d9d}{\index{testing\-::internal\-::\-Test\-Property\-Key\-Is@{testing\-::internal\-::\-Test\-Property\-Key\-Is}!\-Test\-Property\-Key\-Is@{\-Test\-Property\-Key\-Is}}
+\index{\-Test\-Property\-Key\-Is@{\-Test\-Property\-Key\-Is}!testing::internal::TestPropertyKeyIs@{testing\-::internal\-::\-Test\-Property\-Key\-Is}}
+\subsubsection[{\-Test\-Property\-Key\-Is}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Property\-Key\-Is} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{d1/d6f/classtesting_1_1internal_1_1TestPropertyKeyIs_a53dffadd80b0ce39f5de2fa0c7246d9d}
+
+
+\-Definition at line 740 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+      : key_(key) {}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestPropertyKeyIs_a53dffadd80b0ce39f5de2fa0c7246d9d}{\index{testing\-::internal\-::\-Test\-Property\-Key\-Is@{testing\-::internal\-::\-Test\-Property\-Key\-Is}!\-Test\-Property\-Key\-Is@{\-Test\-Property\-Key\-Is}}
+\index{\-Test\-Property\-Key\-Is@{\-Test\-Property\-Key\-Is}!testing::internal::TestPropertyKeyIs@{testing\-::internal\-::\-Test\-Property\-Key\-Is}}
+\subsubsection[{\-Test\-Property\-Key\-Is}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Property\-Key\-Is} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{d1/d6f/classtesting_1_1internal_1_1TestPropertyKeyIs_a53dffadd80b0ce39f5de2fa0c7246d9d}
+
+
+\-Definition at line 342 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+      : key_(key) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1TestPropertyKeyIs_a92885f50d2b646718e347767f165b30d}{\index{testing\-::internal\-::\-Test\-Property\-Key\-Is@{testing\-::internal\-::\-Test\-Property\-Key\-Is}!operator()@{operator()}}
+\index{operator()@{operator()}!testing::internal::TestPropertyKeyIs@{testing\-::internal\-::\-Test\-Property\-Key\-Is}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}bool operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Property} \&}]{test\-\_\-property}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d1/d6f/classtesting_1_1internal_1_1TestPropertyKeyIs_a92885f50d2b646718e347767f165b30d}
+
+
+\-Definition at line 346 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                                           {
+    return String(test_property.key()).Compare(key_) == 0;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestPropertyKeyIs_a92885f50d2b646718e347767f165b30d}{\index{testing\-::internal\-::\-Test\-Property\-Key\-Is@{testing\-::internal\-::\-Test\-Property\-Key\-Is}!operator()@{operator()}}
+\index{operator()@{operator()}!testing::internal::TestPropertyKeyIs@{testing\-::internal\-::\-Test\-Property\-Key\-Is}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}bool operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Property} \&}]{test\-\_\-property}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d1/d6f/classtesting_1_1internal_1_1TestPropertyKeyIs_a92885f50d2b646718e347767f165b30d}
+
+
+\-Definition at line 744 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                           {
+    return String(test_property.key()).Compare(key_) == 0;
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1TestPropertyKeyIs_afdc9c0d8472fabfa4466b1a0eb0d0ff2}{\index{testing\-::internal\-::\-Test\-Property\-Key\-Is@{testing\-::internal\-::\-Test\-Property\-Key\-Is}!key\-\_\-@{key\-\_\-}}
+\index{key\-\_\-@{key\-\_\-}!testing::internal::TestPropertyKeyIs@{testing\-::internal\-::\-Test\-Property\-Key\-Is}}
+\subsubsection[{key\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf key\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d6f/classtesting_1_1internal_1_1TestPropertyKeyIs_afdc9c0d8472fabfa4466b1a0eb0d0ff2}
+
+
+\-Definition at line 749 of file gtest-\/all.\-cc.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest-internal-inl_8h}{gtest-\/internal-\/inl.\-h}\end{DoxyCompactItemize}

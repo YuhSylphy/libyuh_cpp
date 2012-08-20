@@ -1,0 +1,179 @@
+\hypertarget{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry}{\section{\-Parameterized\-Test\-Case\-Registry \-Class \-Reference}
+\label{d3/dd0/classtesting_1_1internal_1_1ParameterizedTestCaseRegistry}\index{\-Parameterized\-Test\-Case\-Registry@{\-Parameterized\-Test\-Case\-Registry}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_aa0720d76362ab76cd008a98a976bbc34}{\-Parameterized\-Test\-Case\-Registry} ()
+\item 
+\hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_ac74d7de838869f7971997c61a97dafd3}{$\sim$\-Parameterized\-Test\-Case\-Registry} ()
+\item 
+{\footnotesize template$<$class Test\-Case $>$ }\\\hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseInfo}{\-Parameterized\-Test\-Case\-Info}\*
+$<$ \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $>$ $\ast$ \hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a308b866e4aa3ffc18d7ea01047bc4157}{\-Get\-Test\-Case\-Pattern\-Holder} (const char $\ast$test\-\_\-case\-\_\-name, const char $\ast$file, int line)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_ad7b8501e8086a10448dba6ac0d0d448c}{\-Register\-Tests} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \-::std\-::vector\*
+$<$ \hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseInfoBase}{\-Parameterized\-Test\-Case\-Info\-Base} $\ast$ $>$ \hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a10ec5a4c58b471acb6ee18cbdf3388f3}{\-Test\-Case\-Info\-Container}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a1ff279d84c19cc5ce9c43e9d590e72ce}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry}{\-Parameterized\-Test\-Case\-Registry})
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a10ec5a4c58b471acb6ee18cbdf3388f3}{\-Test\-Case\-Info\-Container} \hyperlink{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a4b32d9d227772ac373b2677619134b03}{test\-\_\-case\-\_\-infos\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 10490 of file gtest.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a10ec5a4c58b471acb6ee18cbdf3388f3}{\index{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}!\-Test\-Case\-Info\-Container@{\-Test\-Case\-Info\-Container}}
+\index{\-Test\-Case\-Info\-Container@{\-Test\-Case\-Info\-Container}!testing::internal::ParameterizedTestCaseRegistry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}}
+\subsubsection[{\-Test\-Case\-Info\-Container}]{\setlength{\rightskip}{0pt plus 5cm}typedef \-::std\-::vector$<${\bf \-Parameterized\-Test\-Case\-Info\-Base}$\ast$$>$ {\bf \-Test\-Case\-Info\-Container}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d3/dd0/classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a10ec5a4c58b471acb6ee18cbdf3388f3}
+
+
+\-Definition at line 10541 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_aa0720d76362ab76cd008a98a976bbc34}{\index{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}!\-Parameterized\-Test\-Case\-Registry@{\-Parameterized\-Test\-Case\-Registry}}
+\index{\-Parameterized\-Test\-Case\-Registry@{\-Parameterized\-Test\-Case\-Registry}!testing::internal::ParameterizedTestCaseRegistry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}}
+\subsubsection[{\-Parameterized\-Test\-Case\-Registry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Parameterized\-Test\-Case\-Registry} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/dd0/classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_aa0720d76362ab76cd008a98a976bbc34}
+
+
+\-Definition at line 10492 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_ac74d7de838869f7971997c61a97dafd3}{\index{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}!$\sim$\-Parameterized\-Test\-Case\-Registry@{$\sim$\-Parameterized\-Test\-Case\-Registry}}
+\index{$\sim$\-Parameterized\-Test\-Case\-Registry@{$\sim$\-Parameterized\-Test\-Case\-Registry}!testing::internal::ParameterizedTestCaseRegistry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}}
+\subsubsection[{$\sim$\-Parameterized\-Test\-Case\-Registry}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Parameterized\-Test\-Case\-Registry} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/dd0/classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_ac74d7de838869f7971997c61a97dafd3}
+
+
+\-Definition at line 10493 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                   {
+    for (TestCaseInfoContainer::iterator it = test_case_infos_.begin();
+         it != test_case_infos_.end(); ++it) {
+      delete *it;
+    }
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a308b866e4aa3ffc18d7ea01047bc4157}{\index{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}!\-Get\-Test\-Case\-Pattern\-Holder@{\-Get\-Test\-Case\-Pattern\-Holder}}
+\index{\-Get\-Test\-Case\-Pattern\-Holder@{\-Get\-Test\-Case\-Pattern\-Holder}!testing::internal::ParameterizedTestCaseRegistry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}}
+\subsubsection[{\-Get\-Test\-Case\-Pattern\-Holder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Parameterized\-Test\-Case\-Info}$<${\bf \-Test\-Case}$>$$\ast$ {\bf \-Get\-Test\-Case\-Pattern\-Holder} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{test\-\_\-case\-\_\-name, }
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/dd0/classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a308b866e4aa3ffc18d7ea01047bc4157}
+
+
+\-Definition at line 10503 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                {
+    ParameterizedTestCaseInfo<TestCase>* typed_test_info = NULL;
+    for (TestCaseInfoContainer::iterator it = test_case_infos_.begin();
+         it != test_case_infos_.end(); ++it) {
+      if ((*it)->GetTestCaseName() == test_case_name) {
+        if ((*it)->GetTestCaseTypeId() != GetTypeId<TestCase>()) {
+          // Complain about incorrect usage of Google Test facilities
+          // and terminate the program since we cannot guaranty correct
+          // test case setup and tear-down in this case.
+          ReportInvalidTestCaseType(test_case_name,  file, line);
+          posix::Abort();
+        } else {
+          // At this point we are sure that the object we found is of the same
+          // type we are looking for, so we downcast it to that type
+          // without further checks.
+          typed_test_info = CheckedDowncastToActualType<
+              ParameterizedTestCaseInfo<TestCase> >(*it);
+        }
+        break;
+      }
+    }
+    if (typed_test_info == NULL) {
+      typed_test_info = new ParameterizedTestCaseInfo<TestCase>(test_case_name)
+      ;
+      test_case_infos_.push_back(typed_test_info);
+    }
+    return typed_test_info;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a1ff279d84c19cc5ce9c43e9d590e72ce}{\index{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::ParameterizedTestCaseRegistry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Parameterized\-Test\-Case\-Registry}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d3/dd0/classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a1ff279d84c19cc5ce9c43e9d590e72ce}
+\hypertarget{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_ad7b8501e8086a10448dba6ac0d0d448c}{\index{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}!\-Register\-Tests@{\-Register\-Tests}}
+\index{\-Register\-Tests@{\-Register\-Tests}!testing::internal::ParameterizedTestCaseRegistry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}}
+\subsubsection[{\-Register\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Register\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/dd0/classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_ad7b8501e8086a10448dba6ac0d0d448c}
+
+
+\-Definition at line 10533 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                       {
+    for (TestCaseInfoContainer::iterator it = test_case_infos_.begin();
+         it != test_case_infos_.end(); ++it) {
+      (*it)->RegisterTests();
+    }
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a4b32d9d227772ac373b2677619134b03}{\index{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}!test\-\_\-case\-\_\-infos\-\_\-@{test\-\_\-case\-\_\-infos\-\_\-}}
+\index{test\-\_\-case\-\_\-infos\-\_\-@{test\-\_\-case\-\_\-infos\-\_\-}!testing::internal::ParameterizedTestCaseRegistry@{testing\-::internal\-::\-Parameterized\-Test\-Case\-Registry}}
+\subsubsection[{test\-\_\-case\-\_\-infos\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case\-Info\-Container} {\bf test\-\_\-case\-\_\-infos\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d3/dd0/classtesting_1_1internal_1_1ParameterizedTestCaseRegistry_a4b32d9d227772ac373b2677619134b03}
+
+
+\-Definition at line 10543 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\end{DoxyCompactItemize}

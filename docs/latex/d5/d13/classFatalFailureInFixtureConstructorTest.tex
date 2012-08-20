@@ -1,0 +1,141 @@
+\hypertarget{classFatalFailureInFixtureConstructorTest}{\section{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test \-Class \-Reference}
+\label{d5/d13/classFatalFailureInFixtureConstructorTest}\index{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}}
+}
+\-Inheritance diagram for \-Fatal\-Failure\-In\-Fixture\-Constructor\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d5/d13/classFatalFailureInFixtureConstructorTest}
+\end{center}
+\end{figure}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFatalFailureInFixtureConstructorTest_ac4dc608b5e9fccd0d0ea75c40684480c}{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test} ()
+\item 
+\hyperlink{classFatalFailureInFixtureConstructorTest_a5faa8636f24efc25c517e09661bef10c}{$\sim$\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test} ()
+\item 
+virtual void \hyperlink{classFatalFailureInFixtureConstructorTest_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\item 
+virtual void \hyperlink{classFatalFailureInFixtureConstructorTest_a870a092058305911f3d42df45dd657e5}{\-Tear\-Down} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classFatalFailureInFixtureConstructorTest_a1e3b6d38df0786ccf7f938d60e386aae}{\-Init} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 359 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classFatalFailureInFixtureConstructorTest_ac4dc608b5e9fccd0d0ea75c40684480c}{\index{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}!\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}}
+\index{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}!FatalFailureInFixtureConstructorTest@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}}
+\subsubsection[{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Fatal\-Failure\-In\-Fixture\-Constructor\-Test} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}\label{d5/d13/classFatalFailureInFixtureConstructorTest_ac4dc608b5e9fccd0d0ea75c40684480c}
+
+
+\-Definition at line 361 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                                         {
+    printf("(expecting 2 failures)\n");
+    Init();
+  }
+\end{DoxyCode}
+\hypertarget{classFatalFailureInFixtureConstructorTest_a5faa8636f24efc25c517e09661bef10c}{\index{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}!$\sim$\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test@{$\sim$\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}}
+\index{$\sim$\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test@{$\sim$\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}!FatalFailureInFixtureConstructorTest@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}}
+\subsubsection[{$\sim$\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Fatal\-Failure\-In\-Fixture\-Constructor\-Test} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}\label{d5/d13/classFatalFailureInFixtureConstructorTest_a5faa8636f24efc25c517e09661bef10c}
+
+
+\-Definition at line 366 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                                          {
+    ADD_FAILURE() << "Expected failure #2, in the test fixture d'tor.";
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classFatalFailureInFixtureConstructorTest_a1e3b6d38df0786ccf7f938d60e386aae}{\index{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}!\-Init@{\-Init}}
+\index{\-Init@{\-Init}!FatalFailureInFixtureConstructorTest@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}}
+\subsubsection[{\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d5/d13/classFatalFailureInFixtureConstructorTest_a1e3b6d38df0786ccf7f938d60e386aae}
+
+
+\-Definition at line 382 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+              {
+    FAIL() << "Expected failure #1, in the test fixture c'tor.";
+  }
+\end{DoxyCode}
+\hypertarget{classFatalFailureInFixtureConstructorTest_a901706a587f9ae84df8b2395fbe759cb}{\index{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!FatalFailureInFixtureConstructorTest@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d5/d13/classFatalFailureInFixtureConstructorTest_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a1b06560e0e01a806b92c2386220d0b57}{\-Test}.
+
+
+
+\-Definition at line 370 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    ADD_FAILURE() << "UNEXPECTED failure in SetUp().  "
+                  << "We should never get here, as the test fixture c'tor "
+                  << "had a fatal failure.";
+  }
+\end{DoxyCode}
+\hypertarget{classFatalFailureInFixtureConstructorTest_a870a092058305911f3d42df45dd657e5}{\index{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}!\-Tear\-Down@{\-Tear\-Down}}
+\index{\-Tear\-Down@{\-Tear\-Down}!FatalFailureInFixtureConstructorTest@{\-Fatal\-Failure\-In\-Fixture\-Constructor\-Test}}
+\subsubsection[{\-Tear\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Tear\-Down} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d5/d13/classFatalFailureInFixtureConstructorTest_a870a092058305911f3d42df45dd657e5}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a931587596081ef8178c2b128facb0411}{\-Test}.
+
+
+
+\-Definition at line 376 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+    ADD_FAILURE() << "UNEXPECTED failure in TearDown().  "
+                  << "We should never get here, as the test fixture c'tor "
+                  << "had a fatal failure.";
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__output__test___8cc}{gtest\-\_\-output\-\_\-test\-\_\-.\-cc}\end{DoxyCompactItemize}

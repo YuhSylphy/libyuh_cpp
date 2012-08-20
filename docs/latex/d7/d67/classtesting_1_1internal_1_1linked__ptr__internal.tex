@@ -1,0 +1,177 @@
+\hypertarget{classtesting_1_1internal_1_1linked__ptr__internal}{\section{linked\-\_\-ptr\-\_\-internal \-Class \-Reference}
+\label{d7/d67/classtesting_1_1internal_1_1linked__ptr__internal}\index{linked\-\_\-ptr\-\_\-internal@{linked\-\_\-ptr\-\_\-internal}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtesting_1_1internal_1_1linked__ptr__internal_a079f6335d19865e8f3c8ceb1dba2bb4d}{join\-\_\-new} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1linked__ptr__internal_a5d470b93c8bbde0516f2df9e3e06eb72}{join} (\hyperlink{classtesting_1_1internal_1_1linked__ptr__internal}{linked\-\_\-ptr\-\_\-internal} const $\ast$ptr)
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1linked__ptr__internal_a904bf8d3cc06d04817ef205ce7ea2963}{depart} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1linked__ptr__internal_a079f6335d19865e8f3c8ceb1dba2bb4d}{join\-\_\-new} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1linked__ptr__internal_a5d470b93c8bbde0516f2df9e3e06eb72}{join} (\hyperlink{classtesting_1_1internal_1_1linked__ptr__internal}{linked\-\_\-ptr\-\_\-internal} const $\ast$ptr)
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1linked__ptr__internal_a904bf8d3cc06d04817ef205ce7ea2963}{depart} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1linked__ptr__internal}{linked\-\_\-ptr\-\_\-internal} const $\ast$ \hyperlink{classtesting_1_1internal_1_1linked__ptr__internal_a3373437814bc3d37f0f3d4b821698b71}{next\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 9043 of file gtest.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1linked__ptr__internal_a904bf8d3cc06d04817ef205ce7ea2963}{\index{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}!depart@{depart}}
+\index{depart@{depart}!testing::internal::linked_ptr_internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}}
+\subsubsection[{depart}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf depart} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d67/classtesting_1_1internal_1_1linked__ptr__internal_a904bf8d3cc06d04817ef205ce7ea2963}
+
+
+\-Definition at line 121 of file gtest-\/linked\-\_\-ptr.\-h.
+
+
+\begin{DoxyCode}
+                {
+    MutexLock lock(&g_linked_ptr_mutex);
+
+    if (next_ == this) return true;
+    linked_ptr_internal const* p = next_;
+    while (p->next_ != this) p = p->next_;
+    p->next_ = next_;
+    return false;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1linked__ptr__internal_a904bf8d3cc06d04817ef205ce7ea2963}{\index{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}!depart@{depart}}
+\index{depart@{depart}!testing::internal::linked_ptr_internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}}
+\subsubsection[{depart}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf depart} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d67/classtesting_1_1internal_1_1linked__ptr__internal_a904bf8d3cc06d04817ef205ce7ea2963}
+
+
+\-Definition at line 9075 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                {
+    MutexLock lock(&g_linked_ptr_mutex);
+
+    if (next_ == this) return true;
+    linked_ptr_internal const* p = next_;
+    while (p->next_ != this) p = p->next_;
+    p->next_ = next_;
+    return false;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1linked__ptr__internal_a5d470b93c8bbde0516f2df9e3e06eb72}{\index{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}!join@{join}}
+\index{join@{join}!testing::internal::linked_ptr_internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}}
+\subsubsection[{join}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf join} (
+\begin{DoxyParamCaption}
+\item[{{\bf linked\-\_\-ptr\-\_\-internal} const $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d67/classtesting_1_1internal_1_1linked__ptr__internal_a5d470b93c8bbde0516f2df9e3e06eb72}
+
+
+\-Definition at line 109 of file gtest-\/linked\-\_\-ptr.\-h.
+
+
+\begin{DoxyCode}
+                                            {
+    MutexLock lock(&g_linked_ptr_mutex);
+
+    linked_ptr_internal const* p = ptr;
+    while (p->next_ != ptr) p = p->next_;
+    p->next_ = this;
+    next_ = ptr;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1linked__ptr__internal_a5d470b93c8bbde0516f2df9e3e06eb72}{\index{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}!join@{join}}
+\index{join@{join}!testing::internal::linked_ptr_internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}}
+\subsubsection[{join}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf join} (
+\begin{DoxyParamCaption}
+\item[{{\bf linked\-\_\-ptr\-\_\-internal} const $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d67/classtesting_1_1internal_1_1linked__ptr__internal_a5d470b93c8bbde0516f2df9e3e06eb72}
+
+
+\-Definition at line 9063 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                            {
+    MutexLock lock(&g_linked_ptr_mutex);
+
+    linked_ptr_internal const* p = ptr;
+    while (p->next_ != ptr) p = p->next_;
+    p->next_ = this;
+    next_ = ptr;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1linked__ptr__internal_a079f6335d19865e8f3c8ceb1dba2bb4d}{\index{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}!join\-\_\-new@{join\-\_\-new}}
+\index{join\-\_\-new@{join\-\_\-new}!testing::internal::linked_ptr_internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}}
+\subsubsection[{join\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf join\-\_\-new} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d67/classtesting_1_1internal_1_1linked__ptr__internal_a079f6335d19865e8f3c8ceb1dba2bb4d}
+
+
+\-Definition at line 92 of file gtest-\/linked\-\_\-ptr.\-h.
+
+
+\begin{DoxyCode}
+                  {
+    next_ = this;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1linked__ptr__internal_a079f6335d19865e8f3c8ceb1dba2bb4d}{\index{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}!join\-\_\-new@{join\-\_\-new}}
+\index{join\-\_\-new@{join\-\_\-new}!testing::internal::linked_ptr_internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}}
+\subsubsection[{join\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf join\-\_\-new} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d67/classtesting_1_1internal_1_1linked__ptr__internal_a079f6335d19865e8f3c8ceb1dba2bb4d}
+
+
+\-Definition at line 9046 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                  {
+    next_ = this;
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1linked__ptr__internal_a3373437814bc3d37f0f3d4b821698b71}{\index{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}!next\-\_\-@{next\-\_\-}}
+\index{next\-\_\-@{next\-\_\-}!testing::internal::linked_ptr_internal@{testing\-::internal\-::linked\-\_\-ptr\-\_\-internal}}
+\subsubsection[{next\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linked\-\_\-ptr\-\_\-internal} const $\ast$ {\bf next\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}mutable, private\mbox{]}}}}\label{d7/d67/classtesting_1_1internal_1_1linked__ptr__internal_a3373437814bc3d37f0f3d4b821698b71}
+
+
+\-Definition at line 9086 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/internal/\hyperlink{gtest-linked__ptr_8h}{gtest-\/linked\-\_\-ptr.\-h}\end{DoxyCompactItemize}

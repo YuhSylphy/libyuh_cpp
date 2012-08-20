@@ -1,0 +1,284 @@
+\hypertarget{classgtest__help__test_1_1GTestHelpTest}{\section{\-G\-Test\-Help\-Test \-Class \-Reference}
+\label{dd/da9/classgtest__help__test_1_1GTestHelpTest}\index{\-G\-Test\-Help\-Test@{\-G\-Test\-Help\-Test}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__help__test_1_1GTestHelpTest_a03e87eebc39e569017484cd05fe252bf}{\-Test\-Help\-Flag}
+\item 
+def \hyperlink{classgtest__help__test_1_1GTestHelpTest_ab9d0587c5e45d5df173827096723c192}{\-Test\-Non\-Help\-Flag}
+\item 
+def \hyperlink{classgtest__help__test_1_1GTestHelpTest_afb52db7d5401acc46f6b182dbba2e759}{test\-Prints\-Help\-With\-Full\-Flag}
+\item 
+def \hyperlink{classgtest__help__test_1_1GTestHelpTest_a86344f7c6c3788a0f7bca932db672c54}{test\-Prints\-Help\-With\-Short\-Flag}
+\item 
+def \hyperlink{classgtest__help__test_1_1GTestHelpTest_a30847ff0696c787f3e7b8c18b1a5911f}{test\-Prints\-Help\-With\-Question\-Flag}
+\item 
+def \hyperlink{classgtest__help__test_1_1GTestHelpTest_a60f258020cf217001701fd677375635d}{test\-Prints\-Help\-With\-Windows\-Style\-Question\-Flag}
+\item 
+def \hyperlink{classgtest__help__test_1_1GTestHelpTest_aadaa0acca8e5322ce25a031a7e3ae4c9}{test\-Prints\-Help\-With\-Unrecognized\-Google\-Test\-Flag}
+\item 
+def \hyperlink{classgtest__help__test_1_1GTestHelpTest_a1e45a8e47d4c8e2ab01f47fafcfb5922}{test\-Prints\-Help\-With\-Incorrect\-Flag\-Style}
+\item 
+def \hyperlink{classgtest__help__test_1_1GTestHelpTest_a1650e6efdcd2340224d7de713160e49d}{test\-Runs\-Tests\-Without\-Help\-Flag}
+\item 
+def \hyperlink{classgtest__help__test_1_1GTestHelpTest_a4cf9a2c7acfa303f0e209dc9151da845}{test\-Runs\-Tests\-With\-Gtest\-Internal\-Flag}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}Tests the --help flag and its equivalent forms.\end{DoxyVerb}
+ 
+
+\-Definition at line 98 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgtest__help__test_1_1GTestHelpTest_a03e87eebc39e569017484cd05fe252bf}{\index{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}!\-Test\-Help\-Flag@{\-Test\-Help\-Flag}}
+\index{\-Test\-Help\-Flag@{\-Test\-Help\-Flag}!gtest_help_test::GTestHelpTest@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}}
+\subsubsection[{\-Test\-Help\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Test\-Help\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)}}\label{dd/da9/classgtest__help__test_1_1GTestHelpTest_a03e87eebc39e569017484cd05fe252bf}
+\begin{DoxyVerb}Verifies correct behavior when help flag is specified.
+
+The right message must be printed and the tests must
+skipped when the given flag is specified.
+
+Args:
+  flag:  A flag to pass to the binary or None.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 101 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+101 
+102   def TestHelpFlag(self, flag):
+103     """Verifies correct behavior when help flag is specified.
+104 
+105     The right message must be printed and the tests must
+106     skipped when the given flag is specified.
+107 
+108     Args:
+109       flag:  A flag to pass to the binary or None.
+110     """
+111 
+112     exit_code, output = RunWithFlag(flag)
+113     self.assertEquals(0, exit_code)
+114     self.assert_(HELP_REGEX.search(output), output)
+115 
+116     if IS_LINUX:
+117       self.assert_(STREAM_RESULT_TO_FLAG in output, output)
+118     else:
+119       self.assert_(STREAM_RESULT_TO_FLAG not in output, output)
+120 
+121     if SUPPORTS_DEATH_TESTS and not IS_WINDOWS:
+122       self.assert_(DEATH_TEST_STYLE_FLAG in output, output)
+123     else:
+124       self.assert_(DEATH_TEST_STYLE_FLAG not in output, output)
+
+\end{DoxyCode}
+\hypertarget{classgtest__help__test_1_1GTestHelpTest_ab9d0587c5e45d5df173827096723c192}{\index{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}!\-Test\-Non\-Help\-Flag@{\-Test\-Non\-Help\-Flag}}
+\index{\-Test\-Non\-Help\-Flag@{\-Test\-Non\-Help\-Flag}!gtest_help_test::GTestHelpTest@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}}
+\subsubsection[{\-Test\-Non\-Help\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Test\-Non\-Help\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)}}\label{dd/da9/classgtest__help__test_1_1GTestHelpTest_ab9d0587c5e45d5df173827096723c192}
+\begin{DoxyVerb}Verifies correct behavior when no help flag is specified.
+
+Verifies that when no help flag is specified, the tests are run
+and the help message is not printed.
+
+Args:
+  flag:  A flag to pass to the binary or None.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 125 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+125 
+126   def TestNonHelpFlag(self, flag):
+127     """Verifies correct behavior when no help flag is specified.
+128 
+129     Verifies that when no help flag is specified, the tests are run
+130     and the help message is not printed.
+131 
+132     Args:
+133       flag:  A flag to pass to the binary or None.
+134     """
+135 
+136     exit_code, output = RunWithFlag(flag)
+137     self.assert_(exit_code != 0)
+138     self.assert_(not HELP_REGEX.search(output), output)
+
+\end{DoxyCode}
+\hypertarget{classgtest__help__test_1_1GTestHelpTest_afb52db7d5401acc46f6b182dbba2e759}{\index{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}!test\-Prints\-Help\-With\-Full\-Flag@{test\-Prints\-Help\-With\-Full\-Flag}}
+\index{test\-Prints\-Help\-With\-Full\-Flag@{test\-Prints\-Help\-With\-Full\-Flag}!gtest_help_test::GTestHelpTest@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}}
+\subsubsection[{test\-Prints\-Help\-With\-Full\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Prints\-Help\-With\-Full\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/da9/classgtest__help__test_1_1GTestHelpTest_afb52db7d5401acc46f6b182dbba2e759}
+
+
+\-Definition at line 139 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+139 
+140   def testPrintsHelpWithFullFlag(self):
+141     self.TestHelpFlag('--help')
+
+\end{DoxyCode}
+\hypertarget{classgtest__help__test_1_1GTestHelpTest_a1e45a8e47d4c8e2ab01f47fafcfb5922}{\index{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}!test\-Prints\-Help\-With\-Incorrect\-Flag\-Style@{test\-Prints\-Help\-With\-Incorrect\-Flag\-Style}}
+\index{test\-Prints\-Help\-With\-Incorrect\-Flag\-Style@{test\-Prints\-Help\-With\-Incorrect\-Flag\-Style}!gtest_help_test::GTestHelpTest@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}}
+\subsubsection[{test\-Prints\-Help\-With\-Incorrect\-Flag\-Style}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Prints\-Help\-With\-Incorrect\-Flag\-Style} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/da9/classgtest__help__test_1_1GTestHelpTest_a1e45a8e47d4c8e2ab01f47fafcfb5922}
+
+
+\-Definition at line 154 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+154 
+155   def testPrintsHelpWithIncorrectFlagStyle(self):
+156     for incorrect_flag in INCORRECT_FLAG_VARIANTS:
+157       self.TestHelpFlag(incorrect_flag)
+
+\end{DoxyCode}
+\hypertarget{classgtest__help__test_1_1GTestHelpTest_a30847ff0696c787f3e7b8c18b1a5911f}{\index{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}!test\-Prints\-Help\-With\-Question\-Flag@{test\-Prints\-Help\-With\-Question\-Flag}}
+\index{test\-Prints\-Help\-With\-Question\-Flag@{test\-Prints\-Help\-With\-Question\-Flag}!gtest_help_test::GTestHelpTest@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}}
+\subsubsection[{test\-Prints\-Help\-With\-Question\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Prints\-Help\-With\-Question\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/da9/classgtest__help__test_1_1GTestHelpTest_a30847ff0696c787f3e7b8c18b1a5911f}
+
+
+\-Definition at line 145 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+145 
+146   def testPrintsHelpWithQuestionFlag(self):
+147     self.TestHelpFlag('-?')
+
+\end{DoxyCode}
+\hypertarget{classgtest__help__test_1_1GTestHelpTest_a86344f7c6c3788a0f7bca932db672c54}{\index{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}!test\-Prints\-Help\-With\-Short\-Flag@{test\-Prints\-Help\-With\-Short\-Flag}}
+\index{test\-Prints\-Help\-With\-Short\-Flag@{test\-Prints\-Help\-With\-Short\-Flag}!gtest_help_test::GTestHelpTest@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}}
+\subsubsection[{test\-Prints\-Help\-With\-Short\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Prints\-Help\-With\-Short\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/da9/classgtest__help__test_1_1GTestHelpTest_a86344f7c6c3788a0f7bca932db672c54}
+
+
+\-Definition at line 142 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+142 
+143   def testPrintsHelpWithShortFlag(self):
+144     self.TestHelpFlag('-h')
+
+\end{DoxyCode}
+\hypertarget{classgtest__help__test_1_1GTestHelpTest_aadaa0acca8e5322ce25a031a7e3ae4c9}{\index{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}!test\-Prints\-Help\-With\-Unrecognized\-Google\-Test\-Flag@{test\-Prints\-Help\-With\-Unrecognized\-Google\-Test\-Flag}}
+\index{test\-Prints\-Help\-With\-Unrecognized\-Google\-Test\-Flag@{test\-Prints\-Help\-With\-Unrecognized\-Google\-Test\-Flag}!gtest_help_test::GTestHelpTest@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}}
+\subsubsection[{test\-Prints\-Help\-With\-Unrecognized\-Google\-Test\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Prints\-Help\-With\-Unrecognized\-Google\-Test\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/da9/classgtest__help__test_1_1GTestHelpTest_aadaa0acca8e5322ce25a031a7e3ae4c9}
+
+
+\-Definition at line 151 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+151 
+152   def testPrintsHelpWithUnrecognizedGoogleTestFlag(self):
+153     self.TestHelpFlag(UNKNOWN_FLAG)
+
+\end{DoxyCode}
+\hypertarget{classgtest__help__test_1_1GTestHelpTest_a60f258020cf217001701fd677375635d}{\index{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}!test\-Prints\-Help\-With\-Windows\-Style\-Question\-Flag@{test\-Prints\-Help\-With\-Windows\-Style\-Question\-Flag}}
+\index{test\-Prints\-Help\-With\-Windows\-Style\-Question\-Flag@{test\-Prints\-Help\-With\-Windows\-Style\-Question\-Flag}!gtest_help_test::GTestHelpTest@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}}
+\subsubsection[{test\-Prints\-Help\-With\-Windows\-Style\-Question\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Prints\-Help\-With\-Windows\-Style\-Question\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/da9/classgtest__help__test_1_1GTestHelpTest_a60f258020cf217001701fd677375635d}
+
+
+\-Definition at line 148 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+148 
+149   def testPrintsHelpWithWindowsStyleQuestionFlag(self):
+150     self.TestHelpFlag('/?')
+
+\end{DoxyCode}
+\hypertarget{classgtest__help__test_1_1GTestHelpTest_a4cf9a2c7acfa303f0e209dc9151da845}{\index{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}!test\-Runs\-Tests\-With\-Gtest\-Internal\-Flag@{test\-Runs\-Tests\-With\-Gtest\-Internal\-Flag}}
+\index{test\-Runs\-Tests\-With\-Gtest\-Internal\-Flag@{test\-Runs\-Tests\-With\-Gtest\-Internal\-Flag}!gtest_help_test::GTestHelpTest@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}}
+\subsubsection[{test\-Runs\-Tests\-With\-Gtest\-Internal\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Runs\-Tests\-With\-Gtest\-Internal\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/da9/classgtest__help__test_1_1GTestHelpTest_a4cf9a2c7acfa303f0e209dc9151da845}
+\begin{DoxyVerb}Verifies that the tests are run and no help message is printed when
+a flag starting with Google Test prefix and 'internal_' is supplied.\end{DoxyVerb}
+ 
+
+\-Definition at line 164 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+164 
+165   def testRunsTestsWithGtestInternalFlag(self):
+166     """Verifies that the tests are run and no help message is printed when
+167     a flag starting with Google Test prefix and 'internal_' is supplied."""
+168 
+169     self.TestNonHelpFlag(INTERNAL_FLAG_FOR_TESTING)
+170 
+
+\end{DoxyCode}
+\hypertarget{classgtest__help__test_1_1GTestHelpTest_a1650e6efdcd2340224d7de713160e49d}{\index{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}!test\-Runs\-Tests\-Without\-Help\-Flag@{test\-Runs\-Tests\-Without\-Help\-Flag}}
+\index{test\-Runs\-Tests\-Without\-Help\-Flag@{test\-Runs\-Tests\-Without\-Help\-Flag}!gtest_help_test::GTestHelpTest@{gtest\-\_\-help\-\_\-test\-::\-G\-Test\-Help\-Test}}
+\subsubsection[{test\-Runs\-Tests\-Without\-Help\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Runs\-Tests\-Without\-Help\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/da9/classgtest__help__test_1_1GTestHelpTest_a1650e6efdcd2340224d7de713160e49d}
+\begin{DoxyVerb}Verifies that when no help flag is specified, the tests are run
+and the help message is not printed.\end{DoxyVerb}
+ 
+
+\-Definition at line 158 of file gtest\-\_\-help\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+158 
+159   def testRunsTestsWithoutHelpFlag(self):
+160     """Verifies that when no help flag is specified, the tests are run
+161     and the help message is not printed."""
+162 
+163     self.TestNonHelpFlag(None)
+
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__help__test_8py}{gtest\-\_\-help\-\_\-test.\-py}\end{DoxyCompactItemize}

@@ -1,0 +1,278 @@
+\hypertarget{test__fibonacci_8cpp}{\section{test/test\-\_\-fibonacci.cpp \-File \-Reference}
+\label{d5/df5/test__fibonacci_8cpp}\index{test/test\-\_\-fibonacci.\-cpp@{test/test\-\_\-fibonacci.\-cpp}}
+}
+{\ttfamily \#include $<$gtest/gtest.\-h$>$}\*
+{\ttfamily \#include \char`\"{}../include/yuh/fibonacci.\-hpp\char`\"{}}\*
+{\ttfamily \#include $<$vector$>$}\*
+{\ttfamily \#include $<$iterator$>$}\*
+{\ttfamily \#include $<$boost/range/algorithm.\-hpp$>$}\*
+{\ttfamily \#include $<$boost/range/combine.\-hpp$>$}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{test__fibonacci_8cpp_a5248f48893c86ed4cca8fd46327aede3}{\-T\-E\-S\-T} (fibonacci\-\_\-iterator, ctor\-\_\-raw\-\_\-values)
+\item 
+\hyperlink{test__fibonacci_8cpp_a04958a627b444b0d043217e1db78c03d}{\-T\-E\-S\-T} (fibonacci\-\_\-iterator, nth\-\_\-fib)
+\item 
+\hyperlink{test__fibonacci_8cpp_a0dabfc3e708c5036ba8f1b60fd9ef3bc}{\-T\-E\-S\-T} (fibonacci\-\_\-iterator, ctor\-\_\-index)
+\item 
+\hyperlink{test__fibonacci_8cpp_a7c1194d1ae9a493a94ebd77491960d12}{\-T\-E\-S\-T} (fibonacci\-\_\-iterator, distance)
+\item 
+\hyperlink{test__fibonacci_8cpp_a4e7c9cf106349d3376e49c1de720550a}{\-T\-E\-S\-T} (\hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}, ctor\-\_\-finite)
+\item 
+\hyperlink{test__fibonacci_8cpp_a2f85ae4d470be42ebc7c0f30174ccdaf}{\-T\-E\-S\-T} (\hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}, ctor\-\_\-infinite)
+\item 
+\hyperlink{test__fibonacci_8cpp_af9c7a259a049f86ed5bc5660c30f538e}{\-T\-E\-S\-T} (fibonacci, infinite)
+\item 
+\hyperlink{test__fibonacci_8cpp_a85ec98c540dfb87bea11697095a09539}{\-T\-E\-S\-T} (fibonacci, finite)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{test__fibonacci_8cpp_a5248f48893c86ed4cca8fd46327aede3}{\index{test\-\_\-fibonacci.\-cpp@{test\-\_\-fibonacci.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!test_fibonacci.cpp@{test\-\_\-fibonacci.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{fibonacci\-\_\-iterator}]{, }
+\item[{ctor\-\_\-raw\-\_\-values}]{}
+\end{DoxyParamCaption}
+)}}\label{d5/df5/test__fibonacci_8cpp_a5248f48893c86ed4cca8fd46327aede3}
+
+
+\-Definition at line 12 of file test\-\_\-fibonacci.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    range_detail::fibonacci_iterator<int> it(0, 1);
+
+    EXPECT_EQ(*it++, 0);
+    EXPECT_EQ(*it++, 1);
+    EXPECT_EQ(*it++, 1);
+    EXPECT_EQ(*it++, 2);
+    EXPECT_EQ(*it++, 3);
+    EXPECT_EQ(*it++, 5);
+    EXPECT_EQ(*it++, 8);
+    EXPECT_EQ(*it++, 13);
+    EXPECT_EQ(*it++, 21);
+    EXPECT_EQ(*it++, 34);
+    EXPECT_EQ(*it++, 55);
+
+    EXPECT_EQ(*it--, 89);
+    EXPECT_EQ(*it--, 55);
+    EXPECT_EQ(*it--, 34);
+    EXPECT_EQ(*it--, 21);
+    EXPECT_EQ(*it--, 13);
+    EXPECT_EQ(*it--, 8);
+    EXPECT_EQ(*it--, 5);
+    EXPECT_EQ(*it--, 3);
+    EXPECT_EQ(*it--, 2);
+    EXPECT_EQ(*it--, 1);
+    EXPECT_EQ(*it--, 1);
+    EXPECT_EQ(*it--, 0);
+
+}
+\end{DoxyCode}
+\hypertarget{test__fibonacci_8cpp_a04958a627b444b0d043217e1db78c03d}{\index{test\-\_\-fibonacci.\-cpp@{test\-\_\-fibonacci.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!test_fibonacci.cpp@{test\-\_\-fibonacci.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{fibonacci\-\_\-iterator}]{, }
+\item[{nth\-\_\-fib}]{}
+\end{DoxyParamCaption}
+)}}\label{d5/df5/test__fibonacci_8cpp_a04958a627b444b0d043217e1db78c03d}
+
+
+\-Definition at line 43 of file test\-\_\-fibonacci.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    typedef range_detail::fibonacci_iterator<int> iter_type;
+    EXPECT_EQ(iter_type::nth_fibonacci(1), 1);
+    EXPECT_EQ(iter_type::nth_fibonacci(2), 1);
+    EXPECT_EQ(iter_type::nth_fibonacci(3), 2);
+    EXPECT_EQ(iter_type::nth_fibonacci(4), 3);
+    EXPECT_EQ(iter_type::nth_fibonacci(5), 5);
+    EXPECT_EQ(iter_type::nth_fibonacci(6), 8);
+    EXPECT_EQ(iter_type::nth_fibonacci(7), 13);
+    EXPECT_EQ(iter_type::nth_fibonacci(8), 21);
+    EXPECT_EQ(iter_type::nth_fibonacci(9), 34);
+    EXPECT_EQ(iter_type::nth_fibonacci(10), 55);
+}
+\end{DoxyCode}
+\hypertarget{test__fibonacci_8cpp_a0dabfc3e708c5036ba8f1b60fd9ef3bc}{\index{test\-\_\-fibonacci.\-cpp@{test\-\_\-fibonacci.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!test_fibonacci.cpp@{test\-\_\-fibonacci.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{fibonacci\-\_\-iterator}]{, }
+\item[{ctor\-\_\-index}]{}
+\end{DoxyParamCaption}
+)}}\label{d5/df5/test__fibonacci_8cpp_a0dabfc3e708c5036ba8f1b60fd9ef3bc}
+
+
+\-Definition at line 58 of file test\-\_\-fibonacci.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    typedef range_detail::fibonacci_iterator<int> iter_type;
+    EXPECT_EQ(*iter_type(1), 1);
+    EXPECT_EQ(*iter_type(2), 1);
+    EXPECT_EQ(*iter_type(3), 2);
+    EXPECT_EQ(*iter_type(4), 3);
+    EXPECT_EQ(*iter_type(5), 5);
+    EXPECT_EQ(*iter_type(6), 8);
+    EXPECT_EQ(*iter_type(7), 13);
+    EXPECT_EQ(*iter_type(8), 21);
+    EXPECT_EQ(*iter_type(9), 34);
+    EXPECT_EQ(*iter_type(10), 55);
+}
+\end{DoxyCode}
+\hypertarget{test__fibonacci_8cpp_a7c1194d1ae9a493a94ebd77491960d12}{\index{test\-\_\-fibonacci.\-cpp@{test\-\_\-fibonacci.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!test_fibonacci.cpp@{test\-\_\-fibonacci.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{fibonacci\-\_\-iterator}]{, }
+\item[{distance}]{}
+\end{DoxyParamCaption}
+)}}\label{d5/df5/test__fibonacci_8cpp_a7c1194d1ae9a493a94ebd77491960d12}
+
+
+\-Definition at line 73 of file test\-\_\-fibonacci.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    typedef range_detail::fibonacci_iterator<int> iter_type;
+    
+    EXPECT_EQ(std::distance(iter_type(1), iter_type(4)), 3);
+    EXPECT_EQ(std::distance(iter_type(5), iter_type(5)), 0);
+    // EXPECT_EQ(std::distance(iter_type(3), iter_type(2)), -1); //無限ループ
+}
+\end{DoxyCode}
+\hypertarget{test__fibonacci_8cpp_a4e7c9cf106349d3376e49c1de720550a}{\index{test\-\_\-fibonacci.\-cpp@{test\-\_\-fibonacci.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!test_fibonacci.cpp@{test\-\_\-fibonacci.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{{\bf fibonacci\-\_\-range}}]{, }
+\item[{ctor\-\_\-finite}]{}
+\end{DoxyParamCaption}
+)}}\label{d5/df5/test__fibonacci_8cpp_a4e7c9cf106349d3376e49c1de720550a}
+
+
+\-Definition at line 82 of file test\-\_\-fibonacci.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    const auto check = [](
+        const fibonacci_range<int>& tgt,
+        const std::vector<int>& exp
+        ) 
+    {
+    boost::for_each(
+        boost::combine(tgt, exp),
+        [](const boost::tuple<int , int>& t) {
+            EXPECT_EQ(boost::get<0>(t), boost::get<1>(t));
+        }
+        );
+    };
+
+    check(fibonacci_range<int>(0, 10),
+          {0,1,1,2,3,5,8,13,21,34}
+        );
+    check(fibonacci_range<int>(10, 15),
+          {55,89,144,233,377}
+        );
+}
+\end{DoxyCode}
+\hypertarget{test__fibonacci_8cpp_a2f85ae4d470be42ebc7c0f30174ccdaf}{\index{test\-\_\-fibonacci.\-cpp@{test\-\_\-fibonacci.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!test_fibonacci.cpp@{test\-\_\-fibonacci.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{{\bf fibonacci\-\_\-range}}]{, }
+\item[{ctor\-\_\-infinite}]{}
+\end{DoxyParamCaption}
+)}}\label{d5/df5/test__fibonacci_8cpp_a2f85ae4d470be42ebc7c0f30174ccdaf}
+
+
+\-Definition at line 105 of file test\-\_\-fibonacci.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    int i = 0;
+    for( const auto fib: fibonacci_range<int>(0) )
+    {
+        if ( i > 30 ) break;
+        EXPECT_EQ(fib, range_detail::fibonacci_iterator<int>::nth_fibonacci(i))
+      ;
+
+        i++;
+    }
+}
+\end{DoxyCode}
+\hypertarget{test__fibonacci_8cpp_af9c7a259a049f86ed5bc5660c30f538e}{\index{test\-\_\-fibonacci.\-cpp@{test\-\_\-fibonacci.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!test_fibonacci.cpp@{test\-\_\-fibonacci.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{fibonacci}]{, }
+\item[{infinite}]{}
+\end{DoxyParamCaption}
+)}}\label{d5/df5/test__fibonacci_8cpp_af9c7a259a049f86ed5bc5660c30f538e}
+
+
+\-Definition at line 117 of file test\-\_\-fibonacci.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    //引数なし: 最初から
+    int i = 0;
+    for ( const auto fib: fibonacci() )
+    {
+        if ( i > 30 ) break;
+        EXPECT_EQ(fib, range_detail::fibonacci_iterator<int>::nth_fibonacci(i))
+      ;
+
+        i++;
+    }
+
+    //途中から
+    i = 5;
+    for ( const auto fib: fibonacci(i) )
+    {
+        if ( i > 10 ) break;
+        EXPECT_EQ(fib, range_detail::fibonacci_iterator<int>::nth_fibonacci(i))
+      ;
+
+        i++;
+    }
+}
+\end{DoxyCode}
+\hypertarget{test__fibonacci_8cpp_a85ec98c540dfb87bea11697095a09539}{\index{test\-\_\-fibonacci.\-cpp@{test\-\_\-fibonacci.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!test_fibonacci.cpp@{test\-\_\-fibonacci.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{fibonacci}]{, }
+\item[{finite}]{}
+\end{DoxyParamCaption}
+)}}\label{d5/df5/test__fibonacci_8cpp_a85ec98c540dfb87bea11697095a09539}
+
+
+\-Definition at line 140 of file test\-\_\-fibonacci.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    //有限範囲
+    int i = 10;
+    for ( const auto fib: fibonacci(10, 20) )
+    {
+        EXPECT_EQ(fib, range_detail::fibonacci_iterator<int>::nth_fibonacci(i))
+      ;
+        i++;
+    }
+}
+\end{DoxyCode}

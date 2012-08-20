@@ -1,0 +1,105 @@
+\hypertarget{classpump_1_1Output}{\section{\-Output \-Class \-Reference}
+\label{d7/d0c/classpump_1_1Output}\index{\-Output@{\-Output}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classpump_1_1Output_ac775ee34451fdfa742b318538164070e}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Output_a776673d5e749b2ea87aa856b41a0b070}{\-Get\-Last\-Line}
+\item 
+def \hyperlink{classpump_1_1Output_ad562afdeaee2b695fc856e826250babf}{\-Append}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpump_1_1Output_a338951b7e7607b65262fb051e7804d91}{string}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 641 of file pump.\-py.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classpump_1_1Output_ac775ee34451fdfa742b318538164070e}{\index{pump\-::\-Output@{pump\-::\-Output}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!pump::Output@{pump\-::\-Output}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d7/d0c/classpump_1_1Output_ac775ee34451fdfa742b318538164070e}
+
+
+\-Definition at line 642 of file pump.\-py.
+
+
+\begin{DoxyCode}
+642 
+643   def __init__(self):
+644     self.string = ''
+
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classpump_1_1Output_ad562afdeaee2b695fc856e826250babf}{\index{pump\-::\-Output@{pump\-::\-Output}!\-Append@{\-Append}}
+\index{\-Append@{\-Append}!pump::Output@{pump\-::\-Output}}
+\subsubsection[{\-Append}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Append} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{s}
+\end{DoxyParamCaption}
+)}}\label{d7/d0c/classpump_1_1Output_ad562afdeaee2b695fc856e826250babf}
+
+
+\-Definition at line 652 of file pump.\-py.
+
+
+\begin{DoxyCode}
+652 
+653   def Append(self, s):
+654     self.string += s
+655 
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Output_a776673d5e749b2ea87aa856b41a0b070}{\index{pump\-::\-Output@{pump\-::\-Output}!\-Get\-Last\-Line@{\-Get\-Last\-Line}}
+\index{\-Get\-Last\-Line@{\-Get\-Last\-Line}!pump::Output@{pump\-::\-Output}}
+\subsubsection[{\-Get\-Last\-Line}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Get\-Last\-Line} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d7/d0c/classpump_1_1Output_a776673d5e749b2ea87aa856b41a0b070}
+
+
+\-Definition at line 645 of file pump.\-py.
+
+
+\begin{DoxyCode}
+645 
+646   def GetLastLine(self):
+647     index = self.string.rfind('\n')
+648     if index < 0:
+649       return ''
+650 
+651     return self.string[index + 1:]
+
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classpump_1_1Output_a338951b7e7607b65262fb051e7804d91}{\index{pump\-::\-Output@{pump\-::\-Output}!string@{string}}
+\index{string@{string}!pump::Output@{pump\-::\-Output}}
+\subsubsection[{string}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string}}}\label{d7/d0c/classpump_1_1Output_a338951b7e7607b65262fb051e7804d91}
+
+
+\-Definition at line 642 of file pump.\-py.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/scripts/\hyperlink{pump_8py}{pump.\-py}\end{DoxyCompactItemize}

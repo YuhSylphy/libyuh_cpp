@@ -1,0 +1,321 @@
+\hypertarget{classQueue}{\section{\-Queue$<$ \-E $>$ \-Class \-Template \-Reference}
+\label{d7/d56/classQueue}\index{\-Queue$<$ E $>$@{\-Queue$<$ E $>$}}
+}
+
+
+{\ttfamily \#include $<$sample3-\/inl.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQueue_a9419268280646dc4ab7b01d6fa3741c8}{\-Queue} ()
+\item 
+\hyperlink{classQueue_a240bdcfcc136e53aeaac3aa454cc26bf}{$\sim$\-Queue} ()
+\item 
+void \hyperlink{classQueue_aa71d36872f416feaa853788a7a7a7ef8}{\-Clear} ()
+\item 
+size\-\_\-t \hyperlink{classQueue_ab3bace7b51e6e7d78048999bc2189e27}{\-Size} () const 
+\item 
+\hyperlink{classQueueNode}{\-Queue\-Node}$<$ \-E $>$ $\ast$ \hyperlink{classQueue_aafc502dcedf6903246577e0d15603092}{\-Head} ()
+\item 
+const \hyperlink{classQueueNode}{\-Queue\-Node}$<$ \-E $>$ $\ast$ \hyperlink{classQueue_a270a7fd7e09189733ae725811c99c0c3}{\-Head} () const 
+\item 
+\hyperlink{classQueueNode}{\-Queue\-Node}$<$ \-E $>$ $\ast$ \hyperlink{classQueue_a72c52962e495d31c63555ec29889d1c0}{\-Last} ()
+\item 
+const \hyperlink{classQueueNode}{\-Queue\-Node}$<$ \-E $>$ $\ast$ \hyperlink{classQueue_aecd94d67910e35f726b7eaa0eda7080b}{\-Last} () const 
+\item 
+void \hyperlink{classQueue_a3e019cae41556c63cac3a8d99c2e554a}{\-Enqueue} (const \-E \&element)
+\item 
+\-E $\ast$ \hyperlink{classQueue_a0c48bf5279950c6c26da4d38f1fc41f3}{\-Dequeue} ()
+\item 
+{\footnotesize template$<$typename F $>$ }\\\hyperlink{classQueue}{\-Queue} $\ast$ \hyperlink{classQueue_a439f9c613fe4576b3568021ca4713251}{\-Map} (\-F function) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQueue_aafce87119954d48c508a3f35ba392e44}{\-Queue} (const \hyperlink{classQueue}{\-Queue} \&)
+\item 
+const \hyperlink{classQueue}{\-Queue} \& \hyperlink{classQueue_a9ebd0e2259cf32152bf34cee4f9aa607}{operator=} (const \hyperlink{classQueue}{\-Queue} \&)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQueueNode}{\-Queue\-Node}$<$ \-E $>$ $\ast$ \hyperlink{classQueue_a10efd3919664ace9dffa7a84594ddcb3}{head\-\_\-}
+\item 
+\hyperlink{classQueueNode}{\-Queue\-Node}$<$ \-E $>$ $\ast$ \hyperlink{classQueue_a558345d7686195f8fc10efa7ec0f215f}{last\-\_\-}
+\item 
+size\-\_\-t \hyperlink{classQueue_a5f31775800bbb46b35b5791def1f3acc}{size\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename \-E$>$class Queue$<$ E $>$}
+
+
+
+\-Definition at line 74 of file sample3-\/inl.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classQueue_a9419268280646dc4ab7b01d6fa3741c8}{\index{\-Queue@{\-Queue}!\-Queue@{\-Queue}}
+\index{\-Queue@{\-Queue}!Queue@{\-Queue}}
+\subsubsection[{\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_a9419268280646dc4ab7b01d6fa3741c8}
+
+
+\-Definition at line 78 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+: head_(NULL), last_(NULL), size_(0) {}
+\end{DoxyCode}
+\hypertarget{classQueue_a240bdcfcc136e53aeaac3aa454cc26bf}{\index{\-Queue@{\-Queue}!$\sim$\-Queue@{$\sim$\-Queue}}
+\index{$\sim$\-Queue@{$\sim$\-Queue}!Queue@{\-Queue}}
+\subsubsection[{$\sim$\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_a240bdcfcc136e53aeaac3aa454cc26bf}
+
+
+\-Definition at line 81 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ Clear(); }
+\end{DoxyCode}
+\hypertarget{classQueue_aafce87119954d48c508a3f35ba392e44}{\index{\-Queue@{\-Queue}!\-Queue@{\-Queue}}
+\index{\-Queue@{\-Queue}!Queue@{\-Queue}}
+\subsubsection[{\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Queue}$<$ \-E $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d56/classQueue_aafce87119954d48c508a3f35ba392e44}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classQueue_aa71d36872f416feaa853788a7a7a7ef8}{\index{\-Queue@{\-Queue}!\-Clear@{\-Clear}}
+\index{\-Clear@{\-Clear}!Queue@{\-Queue}}
+\subsubsection[{\-Clear}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Clear} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_aa71d36872f416feaa853788a7a7a7ef8}
+
+
+\-Definition at line 84 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+               {
+    if (size_ > 0) {
+      // 1. Deletes every node.
+      QueueNode<E>* node = head_;
+      QueueNode<E>* next = node->next();
+      for (; ;) {
+        delete node;
+        node = next;
+        if (node == NULL) break;
+        next = node->next();
+      }
+
+      // 2. Resets the member variables.
+      head_ = last_ = NULL;
+      size_ = 0;
+    }
+  }
+\end{DoxyCode}
+\hypertarget{classQueue_a0c48bf5279950c6c26da4d38f1fc41f3}{\index{\-Queue@{\-Queue}!\-Dequeue@{\-Dequeue}}
+\index{\-Dequeue@{\-Dequeue}!Queue@{\-Queue}}
+\subsubsection[{\-Dequeue}]{\setlength{\rightskip}{0pt plus 5cm}\-E$\ast$ {\bf \-Dequeue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_a0c48bf5279950c6c26da4d38f1fc41f3}
+
+
+\-Definition at line 132 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+               {
+    if (size_ == 0) {
+      return NULL;
+    }
+
+    const QueueNode<E>* const old_head = head_;
+    head_ = head_->next_;
+    size_--;
+    if (size_ == 0) {
+      last_ = NULL;
+    }
+
+    E* element = new E(old_head->element());
+    delete old_head;
+
+    return element;
+  }
+\end{DoxyCode}
+\hypertarget{classQueue_a3e019cae41556c63cac3a8d99c2e554a}{\index{\-Queue@{\-Queue}!\-Enqueue@{\-Enqueue}}
+\index{\-Enqueue@{\-Enqueue}!Queue@{\-Queue}}
+\subsubsection[{\-Enqueue}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Enqueue} (
+\begin{DoxyParamCaption}
+\item[{const \-E \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_a3e019cae41556c63cac3a8d99c2e554a}
+
+
+\-Definition at line 117 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                 {
+    QueueNode<E>* new_node = new QueueNode<E>(element);
+
+    if (size_ == 0) {
+      head_ = last_ = new_node;
+      size_ = 1;
+    } else {
+      last_->next_ = new_node;
+      last_ = new_node;
+      size_++;
+    }
+  }
+\end{DoxyCode}
+\hypertarget{classQueue_aafc502dcedf6903246577e0d15603092}{\index{\-Queue@{\-Queue}!\-Head@{\-Head}}
+\index{\-Head@{\-Head}!Queue@{\-Queue}}
+\subsubsection[{\-Head}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue\-Node}$<$\-E$>$$\ast$ {\bf \-Head} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_aafc502dcedf6903246577e0d15603092}
+
+
+\-Definition at line 106 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return head_; }
+\end{DoxyCode}
+\hypertarget{classQueue_a270a7fd7e09189733ae725811c99c0c3}{\index{\-Queue@{\-Queue}!\-Head@{\-Head}}
+\index{\-Head@{\-Head}!Queue@{\-Queue}}
+\subsubsection[{\-Head}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Queue\-Node}$<$\-E$>$$\ast$ {\bf \-Head} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_a270a7fd7e09189733ae725811c99c0c3}
+
+
+\-Definition at line 107 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return head_; }
+\end{DoxyCode}
+\hypertarget{classQueue_a72c52962e495d31c63555ec29889d1c0}{\index{\-Queue@{\-Queue}!\-Last@{\-Last}}
+\index{\-Last@{\-Last}!Queue@{\-Queue}}
+\subsubsection[{\-Last}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue\-Node}$<$\-E$>$$\ast$ {\bf \-Last} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_a72c52962e495d31c63555ec29889d1c0}
+
+
+\-Definition at line 110 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return last_; }
+\end{DoxyCode}
+\hypertarget{classQueue_aecd94d67910e35f726b7eaa0eda7080b}{\index{\-Queue@{\-Queue}!\-Last@{\-Last}}
+\index{\-Last@{\-Last}!Queue@{\-Queue}}
+\subsubsection[{\-Last}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Queue\-Node}$<$\-E$>$$\ast$ {\bf \-Last} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_aecd94d67910e35f726b7eaa0eda7080b}
+
+
+\-Definition at line 111 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return last_; }
+\end{DoxyCode}
+\hypertarget{classQueue_a439f9c613fe4576b3568021ca4713251}{\index{\-Queue@{\-Queue}!\-Map@{\-Map}}
+\index{\-Map@{\-Map}!Queue@{\-Queue}}
+\subsubsection[{\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue}$\ast$ {\bf \-Map} (
+\begin{DoxyParamCaption}
+\item[{\-F}]{function}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_a439f9c613fe4576b3568021ca4713251}
+
+
+\-Definition at line 154 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                               {
+    Queue* new_queue = new Queue();
+    for (const QueueNode<E>* node = head_; node != NULL; node = node->next_) {
+      new_queue->Enqueue(function(node->element()));
+    }
+
+    return new_queue;
+  }
+\end{DoxyCode}
+\hypertarget{classQueue_a9ebd0e2259cf32152bf34cee4f9aa607}{\index{\-Queue@{\-Queue}!operator=@{operator=}}
+\index{operator=@{operator=}!Queue@{\-Queue}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Queue}\& operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Queue}$<$ \-E $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d56/classQueue_a9ebd0e2259cf32152bf34cee4f9aa607}
+\hypertarget{classQueue_ab3bace7b51e6e7d78048999bc2189e27}{\index{\-Queue@{\-Queue}!\-Size@{\-Size}}
+\index{\-Size@{\-Size}!Queue@{\-Queue}}
+\subsubsection[{\-Size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf \-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d56/classQueue_ab3bace7b51e6e7d78048999bc2189e27}
+
+
+\-Definition at line 103 of file sample3-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return size_; }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classQueue_a10efd3919664ace9dffa7a84594ddcb3}{\index{\-Queue@{\-Queue}!head\-\_\-@{head\-\_\-}}
+\index{head\-\_\-@{head\-\_\-}!Queue@{\-Queue}}
+\subsubsection[{head\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue\-Node}$<$\-E$>$$\ast$ {\bf head\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d56/classQueue_a10efd3919664ace9dffa7a84594ddcb3}
+
+
+\-Definition at line 164 of file sample3-\/inl.\-h.
+
+\hypertarget{classQueue_a558345d7686195f8fc10efa7ec0f215f}{\index{\-Queue@{\-Queue}!last\-\_\-@{last\-\_\-}}
+\index{last\-\_\-@{last\-\_\-}!Queue@{\-Queue}}
+\subsubsection[{last\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue\-Node}$<$\-E$>$$\ast$ {\bf last\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d56/classQueue_a558345d7686195f8fc10efa7ec0f215f}
+
+
+\-Definition at line 165 of file sample3-\/inl.\-h.
+
+\hypertarget{classQueue_a5f31775800bbb46b35b5791def1f3acc}{\index{\-Queue@{\-Queue}!size\-\_\-@{size\-\_\-}}
+\index{size\-\_\-@{size\-\_\-}!Queue@{\-Queue}}
+\subsubsection[{size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf size\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d56/classQueue_a5f31775800bbb46b35b5791def1f3acc}
+
+
+\-Definition at line 166 of file sample3-\/inl.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/samples/\hyperlink{sample3-inl_8h}{sample3-\/inl.\-h}\end{DoxyCompactItemize}

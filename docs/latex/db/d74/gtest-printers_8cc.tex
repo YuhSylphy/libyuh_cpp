@@ -1,0 +1,64 @@
+\hypertarget{gtest-printers_8cc}{\section{gtest-\/1.6.0/src/gtest-\/printers.cc \-File \-Reference}
+\label{db/d74/gtest-printers_8cc}\index{gtest-\/1.\-6.\-0/src/gtest-\/printers.\-cc@{gtest-\/1.\-6.\-0/src/gtest-\/printers.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest-\/printers.\-h\char`\"{}}\*
+{\ttfamily \#include $<$ctype.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$ostream$>$}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include \char`\"{}gtest/internal/gtest-\/port.\-h\char`\"{}}\*
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacetesting}{testing}
+\item 
+namespace \hyperlink{namespacetesting_1_1internal2}{testing\-::internal2}
+\item 
+namespace \hyperlink{namespacetesting_1_1internal}{testing\-::internal}
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacetesting_1_1internal_a86978cfc154f3443116d1405a5777539}{\-Char\-Format} \{ \*
+\hyperlink{namespacetesting_1_1internal_a86978cfc154f3443116d1405a5777539adf6cff2f73fc12c1d8125fa5aa9de2a7}{k\-As\-Is}, 
+\hyperlink{namespacetesting_1_1internal_a86978cfc154f3443116d1405a5777539a679e38e7d99974d29e419befbe5c114f}{k\-Hex\-Escape}, 
+\hyperlink{namespacetesting_1_1internal_a86978cfc154f3443116d1405a5777539a3b49cdd59f5aca823d8148fdfd55373c}{k\-Special\-Escape}, 
+\hyperlink{namespacetesting_1_1internal_a86978cfc154f3443116d1405a5777539adf6cff2f73fc12c1d8125fa5aa9de2a7}{k\-As\-Is}, 
+\*
+\hyperlink{namespacetesting_1_1internal_a86978cfc154f3443116d1405a5777539a679e38e7d99974d29e419befbe5c114f}{k\-Hex\-Escape}, 
+\hyperlink{namespacetesting_1_1internal_a86978cfc154f3443116d1405a5777539a3b49cdd59f5aca823d8148fdfd55373c}{k\-Special\-Escape}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacetesting_1_1internal2_abfb9aa80365f93b952e9a4bea09947a8}{\-Print\-Bytes\-In\-Object\-To} (const unsigned char $\ast$obj\-\_\-bytes, size\-\_\-t count, ostream $\ast$os)
+\item 
+bool \hyperlink{namespacetesting_1_1internal_ae7c464130d5d4632bb08df350c66869f}{\-Is\-Printable\-Ascii} (wchar\-\_\-t c)
+\item 
+{\footnotesize template$<$typename Unsigned\-Char , typename Char $>$ }\\static \-Char\-Format \hyperlink{namespacetesting_1_1internal_a5472be419321e05354788f87d8409a79}{\-Print\-As\-Char\-Literal\-To} (\-Char c, ostream $\ast$os)
+\item 
+static \-Char\-Format \hyperlink{namespacetesting_1_1internal_a25cbfd96a9ccc7314c8b4472980cbb5c}{\-Print\-As\-Wide\-String\-Literal\-To} (wchar\-\_\-t c, ostream $\ast$os)
+\item 
+static \-Char\-Format \hyperlink{namespacetesting_1_1internal_ae8bdfe0d29f4b506f147ce1b1c57cea1}{\-Print\-As\-Narrow\-String\-Literal\-To} (char c, ostream $\ast$os)
+\item 
+{\footnotesize template$<$typename Unsigned\-Char , typename Char $>$ }\\void \hyperlink{namespacetesting_1_1internal_a117e16766ae3c43766d495a7e6c9c83c}{\-Print\-Char\-And\-Code\-To} (\-Char c, ostream $\ast$os)
+\item 
+void \hyperlink{namespacetesting_1_1internal_a5f9c0007343edeecab8e18be2d27f26d}{\-Print\-To} (unsigned char c,\-::std\-::ostream $\ast$os)
+\item 
+void \hyperlink{namespacetesting_1_1internal_a16c1e1401b5c161a1e44953aa25814d9}{\-Print\-To} (signed char c,\-::std\-::ostream $\ast$os)
+\item 
+void \hyperlink{namespacetesting_1_1internal_a111d66cb3eb7512a837e2e9195efe7cf}{\-Print\-To} (wchar\-\_\-t wc, ostream $\ast$os)
+\item 
+static void \hyperlink{namespacetesting_1_1internal_a3eae22103d281abcff8c348a7278c9ed}{\-Print\-Chars\-As\-String\-To} (const char $\ast$begin, size\-\_\-t len, ostream $\ast$os)
+\item 
+void \hyperlink{namespacetesting_1_1internal_a555e9351033d7eafe4482423a9b7d6ca}{\-Universal\-Print\-Array} (const char $\ast$begin, size\-\_\-t len, ostream $\ast$os)
+\item 
+static void \hyperlink{namespacetesting_1_1internal_a60bad79058a982c131958131851db58e}{\-Print\-Wide\-Chars\-As\-String\-To} (const wchar\-\_\-t $\ast$begin, size\-\_\-t len, ostream $\ast$os)
+\item 
+void \hyperlink{namespacetesting_1_1internal_af161ef56e52a196ae8cacddaf757c2c2}{\-Print\-To} (const char $\ast$s, ostream $\ast$os)
+\item 
+void \hyperlink{namespacetesting_1_1internal_a1cde7bde221aa8b4437d83e74edcf386}{\-Print\-To} (const wchar\-\_\-t $\ast$s, ostream $\ast$os)
+\item 
+void \hyperlink{namespacetesting_1_1internal_acc8f9f38c881dc01d2ed18b0c6bf3197}{\-Print\-String\-To} (const \-::std\-::string \&s, ostream $\ast$os)
+\end{DoxyCompactItemize}

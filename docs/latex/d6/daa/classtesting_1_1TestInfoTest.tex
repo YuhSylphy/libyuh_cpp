@@ -1,0 +1,73 @@
+\hypertarget{classtesting_1_1TestInfoTest}{\section{\-Test\-Info\-Test \-Class \-Reference}
+\label{d6/daa/classtesting_1_1TestInfoTest}\index{\-Test\-Info\-Test@{\-Test\-Info\-Test}}
+}
+\-Inheritance diagram for \-Test\-Info\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d6/daa/classtesting_1_1TestInfoTest}
+\end{center}
+\end{figure}
+\subsection*{\-Static \-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ \hyperlink{classtesting_1_1TestInfoTest_a8babb07704450dba7d58d31864a80fef}{\-Get\-Test\-Info} (const char $\ast$test\-\_\-name)
+\item 
+static const \hyperlink{classtesting_1_1TestResult}{\-Test\-Result} $\ast$ \hyperlink{classtesting_1_1TestInfoTest_a0af2dc99cece84724947e7ad820c5954}{\-Get\-Test\-Result} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 5100 of file gtest\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1TestInfoTest_a8babb07704450dba7d58d31864a80fef}{\index{testing\-::\-Test\-Info\-Test@{testing\-::\-Test\-Info\-Test}!\-Get\-Test\-Info@{\-Get\-Test\-Info}}
+\index{\-Get\-Test\-Info@{\-Get\-Test\-Info}!testing::TestInfoTest@{testing\-::\-Test\-Info\-Test}}
+\subsubsection[{\-Get\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf \-Test\-Info}$\ast$ {\bf \-Get\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{test\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}\label{d6/daa/classtesting_1_1TestInfoTest_a8babb07704450dba7d58d31864a80fef}
+
+
+\-Definition at line 5102 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                            {
+    const TestCase* const test_case = GetUnitTestImpl()->
+        GetTestCase("TestInfoTest", "", NULL, NULL);
+
+    for (int i = 0; i < test_case->total_test_count(); ++i) {
+      const TestInfo* const test_info = test_case->GetTestInfo(i);
+      if (strcmp(test_name, test_info->name()) == 0)
+        return test_info;
+    }
+    return NULL;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1TestInfoTest_a0af2dc99cece84724947e7ad820c5954}{\index{testing\-::\-Test\-Info\-Test@{testing\-::\-Test\-Info\-Test}!\-Get\-Test\-Result@{\-Get\-Test\-Result}}
+\index{\-Get\-Test\-Result@{\-Get\-Test\-Result}!testing::TestInfoTest@{testing\-::\-Test\-Info\-Test}}
+\subsubsection[{\-Get\-Test\-Result}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf \-Test\-Result}$\ast$ {\bf \-Get\-Test\-Result} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}\label{d6/daa/classtesting_1_1TestInfoTest_a0af2dc99cece84724947e7ad820c5954}
+
+
+\-Definition at line 5114 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                 {
+    return test_info->result();
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__unittest_8cc}{gtest\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

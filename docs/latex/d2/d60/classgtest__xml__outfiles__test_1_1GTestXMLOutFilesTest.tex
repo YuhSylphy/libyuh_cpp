@@ -1,0 +1,214 @@
+\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest}{\section{\-G\-Test\-X\-M\-L\-Out\-Files\-Test \-Class \-Reference}
+\label{d2/d60/classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest}\index{\-G\-Test\-X\-M\-L\-Out\-Files\-Test@{\-G\-Test\-X\-M\-L\-Out\-Files\-Test}}
+}
+\-Inheritance diagram for \-G\-Test\-X\-M\-L\-Out\-Files\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d2/d60/classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_ac47956db61147fc100027de51240dcd7}{set\-Up}
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_ac975c98b6cd3c9d3d578faff95728cdf}{tear\-Down}
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a34515dd29bceb5813dc1f24516f34bc3}{\-Delete\-Files\-And\-Dir}
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a4a8cab8640de504a04df8cdddda7fad1}{test\-Outfile1}
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a07f425a152af066edbe613f5f8b6e4bd}{test\-Outfile2}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a5440e2d1179d4c71570162e9f6c1bd34}{output\-\_\-dir\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a0974af62f0f46df0fa47874949f77001}{\-\_\-\-Test\-Out\-File}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}Unit test for Google Test's XML output functionality.\end{DoxyVerb}
+ 
+
+\-Definition at line 64 of file gtest\-\_\-xml\-\_\-outfiles\-\_\-test.\-py.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a0974af62f0f46df0fa47874949f77001}{\index{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}!\-\_\-\-Test\-Out\-File@{\-\_\-\-Test\-Out\-File}}
+\index{\-\_\-\-Test\-Out\-File@{\-\_\-\-Test\-Out\-File}!gtest_xml_outfiles_test::GTestXMLOutFilesTest@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}}
+\subsubsection[{\-\_\-\-Test\-Out\-File}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-Test\-Out\-File} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{test\-\_\-name, }
+\item[{}]{expected\-\_\-xml}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d60/classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a0974af62f0f46df0fa47874949f77001}
+
+
+\-Definition at line 98 of file gtest\-\_\-xml\-\_\-outfiles\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+98 
+99   def _TestOutFile(self, test_name, expected_xml):
+100     gtest_prog_path = gtest_test_utils.GetTestExecutablePath(test_name)
+101     command = [gtest_prog_path, "--gtest_output=xml:%s" % self.output_dir_]
+102     p = gtest_test_utils.Subprocess(command,
+103                                     working_dir=gtest_test_utils.GetTempDir())
+104     self.assert_(p.exited)
+105     self.assertEquals(0, p.exit_code)
+106 
+107     # TODO(wan@google.com): libtool causes the built test binary to be
+108     #   named lt-gtest_xml_outfiles_test_ instead of
+109     #   gtest_xml_outfiles_test_.  To account for this possibillity, we
+110     #   allow both names in the following code.  We should remove this
+111     #   hack when Chandler Carruth's libtool replacement tool is ready.
+112     output_file_name1 = test_name + ".xml"
+113     output_file1 = os.path.join(self.output_dir_, output_file_name1)
+114     output_file_name2 = 'lt-' + output_file_name1
+115     output_file2 = os.path.join(self.output_dir_, output_file_name2)
+116     self.assert_(os.path.isfile(output_file1) or os.path.isfile(output_file2),
+117                  output_file1)
+118 
+119     expected = minidom.parseString(expected_xml)
+120     if os.path.isfile(output_file1):
+121       actual = minidom.parse(output_file1)
+122     else:
+123       actual = minidom.parse(output_file2)
+124     self.NormalizeXml(actual.documentElement)
+125     self.AssertEquivalentNodes(expected.documentElement,
+126                                actual.documentElement)
+127     expected.unlink()
+128     actual.unlink()
+129 
+
+\end{DoxyCode}
+\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a34515dd29bceb5813dc1f24516f34bc3}{\index{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}!\-Delete\-Files\-And\-Dir@{\-Delete\-Files\-And\-Dir}}
+\index{\-Delete\-Files\-And\-Dir@{\-Delete\-Files\-And\-Dir}!gtest_xml_outfiles_test::GTestXMLOutFilesTest@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}}
+\subsubsection[{\-Delete\-Files\-And\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Delete\-Files\-And\-Dir} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d2/d60/classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a34515dd29bceb5813dc1f24516f34bc3}
+
+
+\-Definition at line 78 of file gtest\-\_\-xml\-\_\-outfiles\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+78 
+79   def DeleteFilesAndDir(self):
+80     try:
+81       os.remove(os.path.join(self.output_dir_, GTEST_OUTPUT_1_TEST + ".xml"))
+82     except os.error:
+83       pass
+84     try:
+85       os.remove(os.path.join(self.output_dir_, GTEST_OUTPUT_2_TEST + ".xml"))
+86     except os.error:
+87       pass
+88     try:
+89       os.rmdir(self.output_dir_)
+90     except os.error:
+91       pass
+
+\end{DoxyCode}
+\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_ac47956db61147fc100027de51240dcd7}{\index{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}!set\-Up@{set\-Up}}
+\index{set\-Up@{set\-Up}!gtest_xml_outfiles_test::GTestXMLOutFilesTest@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}}
+\subsubsection[{set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf set\-Up} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d2/d60/classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_ac47956db61147fc100027de51240dcd7}
+
+
+\-Definition at line 67 of file gtest\-\_\-xml\-\_\-outfiles\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+67 
+68   def setUp(self):
+69     # We want the trailing '/' that the last "" provides in os.path.join, for
+70     # telling Google Test to create an output directory instead of a single
+       file
+71     # for xml output.
+72     self.output_dir_ = os.path.join(gtest_test_utils.GetTempDir(),
+73                                     GTEST_OUTPUT_SUBDIR, "")
+74     self.DeleteFilesAndDir()
+
+\end{DoxyCode}
+\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_ac975c98b6cd3c9d3d578faff95728cdf}{\index{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}!tear\-Down@{tear\-Down}}
+\index{tear\-Down@{tear\-Down}!gtest_xml_outfiles_test::GTestXMLOutFilesTest@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}}
+\subsubsection[{tear\-Down}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf tear\-Down} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d2/d60/classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_ac975c98b6cd3c9d3d578faff95728cdf}
+
+
+\-Definition at line 75 of file gtest\-\_\-xml\-\_\-outfiles\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+75 
+76   def tearDown(self):
+77     self.DeleteFilesAndDir()
+
+\end{DoxyCode}
+\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a4a8cab8640de504a04df8cdddda7fad1}{\index{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}!test\-Outfile1@{test\-Outfile1}}
+\index{test\-Outfile1@{test\-Outfile1}!gtest_xml_outfiles_test::GTestXMLOutFilesTest@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}}
+\subsubsection[{test\-Outfile1}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Outfile1} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d2/d60/classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a4a8cab8640de504a04df8cdddda7fad1}
+
+
+\-Definition at line 92 of file gtest\-\_\-xml\-\_\-outfiles\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+92 
+93   def testOutfile1(self):
+94     self._TestOutFile(GTEST_OUTPUT_1_TEST, EXPECTED_XML_1)
+
+\end{DoxyCode}
+\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a07f425a152af066edbe613f5f8b6e4bd}{\index{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}!test\-Outfile2@{test\-Outfile2}}
+\index{test\-Outfile2@{test\-Outfile2}!gtest_xml_outfiles_test::GTestXMLOutFilesTest@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}}
+\subsubsection[{test\-Outfile2}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Outfile2} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d2/d60/classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a07f425a152af066edbe613f5f8b6e4bd}
+
+
+\-Definition at line 95 of file gtest\-\_\-xml\-\_\-outfiles\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+95 
+96   def testOutfile2(self):
+97     self._TestOutFile(GTEST_OUTPUT_2_TEST, EXPECTED_XML_2)
+
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a5440e2d1179d4c71570162e9f6c1bd34}{\index{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}!output\-\_\-dir\-\_\-@{output\-\_\-dir\-\_\-}}
+\index{output\-\_\-dir\-\_\-@{output\-\_\-dir\-\_\-}!gtest_xml_outfiles_test::GTestXMLOutFilesTest@{gtest\-\_\-xml\-\_\-outfiles\-\_\-test\-::\-G\-Test\-X\-M\-L\-Out\-Files\-Test}}
+\subsubsection[{output\-\_\-dir\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf output\-\_\-dir\-\_\-}}}\label{d2/d60/classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a5440e2d1179d4c71570162e9f6c1bd34}
+
+
+\-Definition at line 67 of file gtest\-\_\-xml\-\_\-outfiles\-\_\-test.\-py.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__xml__outfiles__test_8py}{gtest\-\_\-xml\-\_\-outfiles\-\_\-test.\-py}\end{DoxyCompactItemize}

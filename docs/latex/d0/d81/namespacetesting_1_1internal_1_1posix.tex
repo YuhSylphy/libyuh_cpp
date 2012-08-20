@@ -1,0 +1,383 @@
+\hypertarget{namespacetesting_1_1internal_1_1posix}{\section{testing\-:\-:internal\-:\-:posix \-Namespace \-Reference}
+\label{d0/d81/namespacetesting_1_1internal_1_1posix}\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}}
+}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct stat \hyperlink{namespacetesting_1_1internal_1_1posix_a28f577553e4511ddefedf8c62dda12cd}{\-Stat\-Struct}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacetesting_1_1internal_1_1posix_ad74bd19d3fa41052bbd53ec4ead31880}{\-File\-No} (\-F\-I\-L\-E $\ast$file)
+\item 
+int \hyperlink{namespacetesting_1_1internal_1_1posix_a95de7f4c27e0ed8d1b8a2dae5b8cd4aa}{\-Is\-A\-T\-T\-Y} (int fd)
+\item 
+int \hyperlink{namespacetesting_1_1internal_1_1posix_a2b61bd7c4e89210f1b7ef8be3decf6c8}{\-Stat} (const char $\ast$path, \hyperlink{namespacetesting_1_1internal_1_1posix_a28f577553e4511ddefedf8c62dda12cd}{\-Stat\-Struct} $\ast$buf)
+\item 
+int \hyperlink{namespacetesting_1_1internal_1_1posix_a4f3409b17d947f9e3a8f45d82ef6c862}{\-Str\-Case\-Cmp} (const char $\ast$s1, const char $\ast$s2)
+\item 
+char $\ast$ \hyperlink{namespacetesting_1_1internal_1_1posix_a95b18e04f2142b9e775030b633edc851}{\-Str\-Dup} (const char $\ast$src)
+\item 
+int \hyperlink{namespacetesting_1_1internal_1_1posix_ab1b01a6ad8be63acf95b6ab74b517ec3}{\-Rm\-Dir} (const char $\ast$dir)
+\item 
+bool \hyperlink{namespacetesting_1_1internal_1_1posix_abee7434e7bcb311fff367f690e97cfcd}{\-Is\-Dir} (const \hyperlink{namespacetesting_1_1internal_1_1posix_a28f577553e4511ddefedf8c62dda12cd}{\-Stat\-Struct} \&st)
+\item 
+const char $\ast$ \hyperlink{namespacetesting_1_1internal_1_1posix_a261b7136efb272312daa5c1f82e88c79}{\-Str\-N\-Cpy} (char $\ast$dest, const char $\ast$src, size\-\_\-t n)
+\item 
+int \hyperlink{namespacetesting_1_1internal_1_1posix_a99a868de1d5ace7a494124cabfe5f119}{\-Ch\-Dir} (const char $\ast$dir)
+\item 
+\-F\-I\-L\-E $\ast$ \hyperlink{namespacetesting_1_1internal_1_1posix_a71d8d763c7a5feba8bbb9a65fdc4cc87}{\-F\-Open} (const char $\ast$path, const char $\ast$mode)
+\item 
+\-F\-I\-L\-E $\ast$ \hyperlink{namespacetesting_1_1internal_1_1posix_a97431e0bfd874f9d198aff7807139e36}{\-F\-Reopen} (const char $\ast$path, const char $\ast$mode, \-F\-I\-L\-E $\ast$stream)
+\item 
+\-F\-I\-L\-E $\ast$ \hyperlink{namespacetesting_1_1internal_1_1posix_a91847cc22a69779893a4eda11daeabdc}{\-F\-D\-Open} (int fd, const char $\ast$mode)
+\item 
+int \hyperlink{namespacetesting_1_1internal_1_1posix_a69185e213a0e903723d28fe4db39e5ae}{\-F\-Close} (\-F\-I\-L\-E $\ast$fp)
+\item 
+int \hyperlink{namespacetesting_1_1internal_1_1posix_a6c02983bd73d8083cd46e47b7cd114f1}{\-Read} (int fd, void $\ast$buf, unsigned int count)
+\item 
+int \hyperlink{namespacetesting_1_1internal_1_1posix_a9bb8588c4b70daa75e2507d8c845e224}{\-Write} (int fd, const void $\ast$buf, unsigned int count)
+\item 
+int \hyperlink{namespacetesting_1_1internal_1_1posix_a6f8ed9be61fa28cc4bcf197d99d3e898}{\-Close} (int fd)
+\item 
+const char $\ast$ \hyperlink{namespacetesting_1_1internal_1_1posix_a63c0c6ba1a8123ba43417a7199250f15}{\-Str\-Error} (int errnum)
+\item 
+const char $\ast$ \hyperlink{namespacetesting_1_1internal_1_1posix_a7ed11bcd211f76641b16e60b5f0594eb}{\-Get\-Env} (const char $\ast$name)
+\item 
+void \hyperlink{namespacetesting_1_1internal_1_1posix_a12b9283f52eaf7610afe4b04fbca2ff0}{\-Abort} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a28f577553e4511ddefedf8c62dda12cd}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Stat\-Struct@{\-Stat\-Struct}}
+\index{\-Stat\-Struct@{\-Stat\-Struct}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Stat\-Struct}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct stat {\bf \-Stat\-Struct}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a28f577553e4511ddefedf8c62dda12cd}
+
+
+\-Definition at line 2649 of file gtest.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a12b9283f52eaf7610afe4b04fbca2ff0}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Abort@{\-Abort}}
+\index{\-Abort@{\-Abort}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Abort}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Abort} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a12b9283f52eaf7610afe4b04fbca2ff0}
+
+
+\-Definition at line 2726 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ abort(); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a99a868de1d5ace7a494124cabfe5f119}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Ch\-Dir@{\-Ch\-Dir}}
+\index{\-Ch\-Dir@{\-Ch\-Dir}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Ch\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Ch\-Dir} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a99a868de1d5ace7a494124cabfe5f119}
+
+
+\-Definition at line 2680 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return chdir(dir); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a6f8ed9be61fa28cc4bcf197d99d3e898}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Close@{\-Close}}
+\index{\-Close@{\-Close}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Close}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Close} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a6f8ed9be61fa28cc4bcf197d99d3e898}
+
+
+\-Definition at line 2699 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return close(fd); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a69185e213a0e903723d28fe4db39e5ae}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-F\-Close@{\-F\-Close}}
+\index{\-F\-Close@{\-F\-Close}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-F\-Close}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-F\-Close} (
+\begin{DoxyParamCaption}
+\item[{\-F\-I\-L\-E $\ast$}]{fp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a69185e213a0e903723d28fe4db39e5ae}
+
+
+\-Definition at line 2691 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return fclose(fp); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a91847cc22a69779893a4eda11daeabdc}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-F\-D\-Open@{\-F\-D\-Open}}
+\index{\-F\-D\-Open@{\-F\-D\-Open}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-F\-D\-Open}]{\setlength{\rightskip}{0pt plus 5cm}\-F\-I\-L\-E $\ast$ {\bf \-F\-D\-Open} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{const char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a91847cc22a69779893a4eda11daeabdc}
+
+
+\-Definition at line 2689 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return fdopen(fd, mode); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_ad74bd19d3fa41052bbd53ec4ead31880}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-File\-No@{\-File\-No}}
+\index{\-File\-No@{\-File\-No}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-File\-No}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-File\-No} (
+\begin{DoxyParamCaption}
+\item[{\-F\-I\-L\-E $\ast$}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_ad74bd19d3fa41052bbd53ec4ead31880}
+
+
+\-Definition at line 2651 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return fileno(file); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a71d8d763c7a5feba8bbb9a65fdc4cc87}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-F\-Open@{\-F\-Open}}
+\index{\-F\-Open@{\-F\-Open}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-F\-Open}]{\setlength{\rightskip}{0pt plus 5cm}\-F\-I\-L\-E $\ast$ {\bf \-F\-Open} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{const char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a71d8d763c7a5feba8bbb9a65fdc4cc87}
+
+
+\-Definition at line 2682 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                       {
+  return fopen(path, mode);
+}
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a97431e0bfd874f9d198aff7807139e36}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-F\-Reopen@{\-F\-Reopen}}
+\index{\-F\-Reopen@{\-F\-Reopen}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-F\-Reopen}]{\setlength{\rightskip}{0pt plus 5cm}\-F\-I\-L\-E $\ast$ {\bf \-F\-Reopen} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{const char $\ast$}]{mode, }
+\item[{\-F\-I\-L\-E $\ast$}]{stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a97431e0bfd874f9d198aff7807139e36}
+
+
+\-Definition at line 2686 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                                       {
+  return freopen(path, mode, stream);
+}
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a7ed11bcd211f76641b16e60b5f0594eb}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Get\-Env@{\-Get\-Env}}
+\index{\-Get\-Env@{\-Get\-Env}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Get\-Env}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf \-Get\-Env} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a7ed11bcd211f76641b16e60b5f0594eb}
+
+
+\-Definition at line 2702 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                            {
+#if GTEST_OS_WINDOWS_MOBILE
+  // We are on Windows CE, which has no environment variables.
+  return NULL;
+#elif defined(__BORLANDC__) || defined(__SunOS_5_8) || defined(__SunOS_5_9)
+  // Environment variables which we programmatically clear will be set to the
+  // empty string rather than unset (NULL).  Handle that case.
+  const char* const env = getenv(name);
+  return (env != NULL && env[0] != '\0') ? env : NULL;
+#else
+  return getenv(name);
+#endif
+}
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a95de7f4c27e0ed8d1b8a2dae5b8cd4aa}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Is\-A\-T\-T\-Y@{\-Is\-A\-T\-T\-Y}}
+\index{\-Is\-A\-T\-T\-Y@{\-Is\-A\-T\-T\-Y}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Is\-A\-T\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Is\-A\-T\-T\-Y} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a95de7f4c27e0ed8d1b8a2dae5b8cd4aa}
+
+
+\-Definition at line 2652 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return isatty(fd); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_abee7434e7bcb311fff367f690e97cfcd}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Is\-Dir@{\-Is\-Dir}}
+\index{\-Is\-Dir@{\-Is\-Dir}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Is\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Is\-Dir} (
+\begin{DoxyParamCaption}
+\item[{const \-Stat\-Struct \&}]{st}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_abee7434e7bcb311fff367f690e97cfcd}
+
+
+\-Definition at line 2659 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return S_ISDIR(st.st_mode); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a6c02983bd73d8083cd46e47b7cd114f1}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Read@{\-Read}}
+\index{\-Read@{\-Read}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Read}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Read} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{void $\ast$}]{buf, }
+\item[{unsigned int}]{count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a6c02983bd73d8083cd46e47b7cd114f1}
+
+
+\-Definition at line 2693 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                       {
+  return static_cast<int>(read(fd, buf, count));
+}
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_ab1b01a6ad8be63acf95b6ab74b517ec3}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Rm\-Dir@{\-Rm\-Dir}}
+\index{\-Rm\-Dir@{\-Rm\-Dir}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Rm\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Rm\-Dir} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_ab1b01a6ad8be63acf95b6ab74b517ec3}
+
+
+\-Definition at line 2658 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return rmdir(dir); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a2b61bd7c4e89210f1b7ef8be3decf6c8}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Stat@{\-Stat}}
+\index{\-Stat@{\-Stat}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Stat}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Stat} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{\-Stat\-Struct $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a2b61bd7c4e89210f1b7ef8be3decf6c8}
+
+
+\-Definition at line 2653 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return stat(path, buf); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a4f3409b17d947f9e3a8f45d82ef6c862}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Str\-Case\-Cmp@{\-Str\-Case\-Cmp}}
+\index{\-Str\-Case\-Cmp@{\-Str\-Case\-Cmp}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Str\-Case\-Cmp}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Str\-Case\-Cmp} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a4f3409b17d947f9e3a8f45d82ef6c862}
+
+
+\-Definition at line 2654 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                      {
+  return strcasecmp(s1, s2);
+}
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a95b18e04f2142b9e775030b633edc851}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Str\-Dup@{\-Str\-Dup}}
+\index{\-Str\-Dup@{\-Str\-Dup}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Str\-Dup}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ {\bf \-Str\-Dup} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{src}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a95b18e04f2142b9e775030b633edc851}
+
+
+\-Definition at line 2657 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return strdup(src); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a63c0c6ba1a8123ba43417a7199250f15}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Str\-Error@{\-Str\-Error}}
+\index{\-Str\-Error@{\-Str\-Error}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Str\-Error}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf \-Str\-Error} (
+\begin{DoxyParamCaption}
+\item[{int}]{errnum}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a63c0c6ba1a8123ba43417a7199250f15}
+
+
+\-Definition at line 2700 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return strerror(errnum); }
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a261b7136efb272312daa5c1f82e88c79}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Str\-N\-Cpy@{\-Str\-N\-Cpy}}
+\index{\-Str\-N\-Cpy@{\-Str\-N\-Cpy}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Str\-N\-Cpy}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf \-Str\-N\-Cpy} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const char $\ast$}]{src, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a261b7136efb272312daa5c1f82e88c79}
+
+
+\-Definition at line 2671 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                                  {
+  return strncpy(dest, src, n);
+}
+\end{DoxyCode}
+\hypertarget{namespacetesting_1_1internal_1_1posix_a9bb8588c4b70daa75e2507d8c845e224}{\index{testing\-::internal\-::posix@{testing\-::internal\-::posix}!\-Write@{\-Write}}
+\index{\-Write@{\-Write}!testing::internal::posix@{testing\-::internal\-::posix}}
+\subsubsection[{\-Write}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Write} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{const void $\ast$}]{buf, }
+\item[{unsigned int}]{count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d81/namespacetesting_1_1internal_1_1posix_a9bb8588c4b70daa75e2507d8c845e224}
+
+
+\-Definition at line 2696 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                              {
+  return static_cast<int>(write(fd, buf, count));
+}
+\end{DoxyCode}

@@ -1,0 +1,120 @@
+\hypertarget{classPredicate1Test}{\section{\-Predicate1\-Test \-Class \-Reference}
+\label{da/d9a/classPredicate1Test}\index{\-Predicate1\-Test@{\-Predicate1\-Test}}
+}
+\-Inheritance diagram for \-Predicate1\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/d9a/classPredicate1Test}
+\end{center}
+\end{figure}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classPredicate1Test_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\item 
+virtual void \hyperlink{classPredicate1Test_a870a092058305911f3d42df45dd657e5}{\-Tear\-Down} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classPredicate1Test_af30fae6aaebdd5a6cb055c420573754d}{expected\-\_\-to\-\_\-finish\-\_\-}
+\item 
+static bool \hyperlink{classPredicate1Test_a9189d6cfedf2ace6f5f6aa152ba38f83}{finished\-\_\-}
+\item 
+static int \hyperlink{classPredicate1Test_a7a61c539c18d10f12696fc25b115d699}{n1\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 123 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classPredicate1Test_a901706a587f9ae84df8b2395fbe759cb}{\index{\-Predicate1\-Test@{\-Predicate1\-Test}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!Predicate1Test@{\-Predicate1\-Test}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{da/d9a/classPredicate1Test_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a1b06560e0e01a806b92c2386220d0b57}{\-Test}.
+
+
+
+\-Definition at line 125 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    expected_to_finish_ = true;
+    finished_ = false;
+    n1_ = 0;
+  }
+\end{DoxyCode}
+\hypertarget{classPredicate1Test_a870a092058305911f3d42df45dd657e5}{\index{\-Predicate1\-Test@{\-Predicate1\-Test}!\-Tear\-Down@{\-Tear\-Down}}
+\index{\-Tear\-Down@{\-Tear\-Down}!Predicate1Test@{\-Predicate1\-Test}}
+\subsubsection[{\-Tear\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Tear\-Down} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{da/d9a/classPredicate1Test_a870a092058305911f3d42df45dd657e5}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a931587596081ef8178c2b128facb0411}{\-Test}.
+
+
+
+\-Definition at line 131 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+    // Verifies that each of the predicate's arguments was evaluated
+    // exactly once.
+    EXPECT_EQ(1, n1_) <<
+        "The predicate assertion didn't evaluate argument 2 "
+        "exactly once.";
+
+    // Verifies that the control flow in the test function is expected.
+    if (expected_to_finish_ && !finished_) {
+      FAIL() << "The predicate assertion unexpactedly aborted the test.";
+    } else if (!expected_to_finish_ && finished_) {
+      FAIL() << "The failed predicate assertion didn't abort the test "
+                "as expected.";
+    }
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classPredicate1Test_af30fae6aaebdd5a6cb055c420573754d}{\index{\-Predicate1\-Test@{\-Predicate1\-Test}!expected\-\_\-to\-\_\-finish\-\_\-@{expected\-\_\-to\-\_\-finish\-\_\-}}
+\index{expected\-\_\-to\-\_\-finish\-\_\-@{expected\-\_\-to\-\_\-finish\-\_\-}!Predicate1Test@{\-Predicate1\-Test}}
+\subsubsection[{expected\-\_\-to\-\_\-finish\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf expected\-\_\-to\-\_\-finish\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{da/d9a/classPredicate1Test_af30fae6aaebdd5a6cb055c420573754d}
+
+
+\-Definition at line 148 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+\hypertarget{classPredicate1Test_a9189d6cfedf2ace6f5f6aa152ba38f83}{\index{\-Predicate1\-Test@{\-Predicate1\-Test}!finished\-\_\-@{finished\-\_\-}}
+\index{finished\-\_\-@{finished\-\_\-}!Predicate1Test@{\-Predicate1\-Test}}
+\subsubsection[{finished\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf finished\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{da/d9a/classPredicate1Test_a9189d6cfedf2ace6f5f6aa152ba38f83}
+
+
+\-Definition at line 151 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+\hypertarget{classPredicate1Test_a7a61c539c18d10f12696fc25b115d699}{\index{\-Predicate1\-Test@{\-Predicate1\-Test}!n1\-\_\-@{n1\-\_\-}}
+\index{n1\-\_\-@{n1\-\_\-}!Predicate1Test@{\-Predicate1\-Test}}
+\subsubsection[{n1\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf n1\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{da/d9a/classPredicate1Test_a7a61c539c18d10f12696fc25b115d699}
+
+
+\-Definition at line 153 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__pred__impl__unittest_8cc}{gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

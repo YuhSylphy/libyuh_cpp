@@ -1,0 +1,144 @@
+\hypertarget{classtesting_1_1internal_1_1TestResultAccessor}{\section{\-Test\-Result\-Accessor \-Class \-Reference}
+\label{db/d32/classtesting_1_1internal_1_1TestResultAccessor}\index{\-Test\-Result\-Accessor@{\-Test\-Result\-Accessor}}
+}
+
+
+{\ttfamily \#include $<$gtest-\/internal-\/inl.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1TestResultAccessor_ae1e40c9bdc29a0f91fc07cf688f8f66f}{\-Record\-Property} (\hyperlink{classtesting_1_1TestResult}{\-Test\-Result} $\ast$test\-\_\-result, const \hyperlink{classtesting_1_1TestProperty}{\-Test\-Property} \&property)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1TestResultAccessor_aa2da51f41436229f032c3ea7cffc53e1}{\-Clear\-Test\-Part\-Results} (\hyperlink{classtesting_1_1TestResult}{\-Test\-Result} $\ast$test\-\_\-result)
+\item 
+static const std\-::vector\*
+$<$ \hyperlink{classtesting_1_1TestPartResult}{testing\-::\-Test\-Part\-Result} $>$ \& \hyperlink{classtesting_1_1internal_1_1TestResultAccessor_a018e4cce093eef01adc2d4cd6d1371bf}{test\-\_\-part\-\_\-results} (const \hyperlink{classtesting_1_1TestResult}{\-Test\-Result} \&test\-\_\-result)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1TestResultAccessor_ae1e40c9bdc29a0f91fc07cf688f8f66f}{\-Record\-Property} (\hyperlink{classtesting_1_1TestResult}{\-Test\-Result} $\ast$test\-\_\-result, const \hyperlink{classtesting_1_1TestProperty}{\-Test\-Property} \&property)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1TestResultAccessor_aa2da51f41436229f032c3ea7cffc53e1}{\-Clear\-Test\-Part\-Results} (\hyperlink{classtesting_1_1TestResult}{\-Test\-Result} $\ast$test\-\_\-result)
+\item 
+static const std\-::vector\*
+$<$ \hyperlink{classtesting_1_1TestPartResult}{testing\-::\-Test\-Part\-Result} $>$ \& \hyperlink{classtesting_1_1internal_1_1TestResultAccessor_a018e4cce093eef01adc2d4cd6d1371bf}{test\-\_\-part\-\_\-results} (const \hyperlink{classtesting_1_1TestResult}{\-Test\-Result} \&test\-\_\-result)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 1416 of file gtest-\/all.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1TestResultAccessor_aa2da51f41436229f032c3ea7cffc53e1}{\index{testing\-::internal\-::\-Test\-Result\-Accessor@{testing\-::internal\-::\-Test\-Result\-Accessor}!\-Clear\-Test\-Part\-Results@{\-Clear\-Test\-Part\-Results}}
+\index{\-Clear\-Test\-Part\-Results@{\-Clear\-Test\-Part\-Results}!testing::internal::TestResultAccessor@{testing\-::internal\-::\-Test\-Result\-Accessor}}
+\subsubsection[{\-Clear\-Test\-Part\-Results}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Clear\-Test\-Part\-Results} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Result} $\ast$}]{test\-\_\-result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/d32/classtesting_1_1internal_1_1TestResultAccessor_aa2da51f41436229f032c3ea7cffc53e1}
+
+
+\-Definition at line 1025 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                                            {
+    test_result->ClearTestPartResults();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestResultAccessor_aa2da51f41436229f032c3ea7cffc53e1}{\index{testing\-::internal\-::\-Test\-Result\-Accessor@{testing\-::internal\-::\-Test\-Result\-Accessor}!\-Clear\-Test\-Part\-Results@{\-Clear\-Test\-Part\-Results}}
+\index{\-Clear\-Test\-Part\-Results@{\-Clear\-Test\-Part\-Results}!testing::internal::TestResultAccessor@{testing\-::internal\-::\-Test\-Result\-Accessor}}
+\subsubsection[{\-Clear\-Test\-Part\-Results}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Clear\-Test\-Part\-Results} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Result} $\ast$}]{test\-\_\-result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/d32/classtesting_1_1internal_1_1TestResultAccessor_aa2da51f41436229f032c3ea7cffc53e1}
+
+
+\-Definition at line 1423 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                            {
+    test_result->ClearTestPartResults();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestResultAccessor_ae1e40c9bdc29a0f91fc07cf688f8f66f}{\index{testing\-::internal\-::\-Test\-Result\-Accessor@{testing\-::internal\-::\-Test\-Result\-Accessor}!\-Record\-Property@{\-Record\-Property}}
+\index{\-Record\-Property@{\-Record\-Property}!testing::internal::TestResultAccessor@{testing\-::internal\-::\-Test\-Result\-Accessor}}
+\subsubsection[{\-Record\-Property}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Record\-Property} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Result} $\ast$}]{test\-\_\-result, }
+\item[{const {\bf \-Test\-Property} \&}]{property}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/d32/classtesting_1_1internal_1_1TestResultAccessor_ae1e40c9bdc29a0f91fc07cf688f8f66f}
+
+
+\-Definition at line 1020 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                                           {
+    test_result->RecordProperty(property);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestResultAccessor_ae1e40c9bdc29a0f91fc07cf688f8f66f}{\index{testing\-::internal\-::\-Test\-Result\-Accessor@{testing\-::internal\-::\-Test\-Result\-Accessor}!\-Record\-Property@{\-Record\-Property}}
+\index{\-Record\-Property@{\-Record\-Property}!testing::internal::TestResultAccessor@{testing\-::internal\-::\-Test\-Result\-Accessor}}
+\subsubsection[{\-Record\-Property}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Record\-Property} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Result} $\ast$}]{test\-\_\-result, }
+\item[{const {\bf \-Test\-Property} \&}]{property}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/d32/classtesting_1_1internal_1_1TestResultAccessor_ae1e40c9bdc29a0f91fc07cf688f8f66f}
+
+
+\-Definition at line 1418 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                           {
+    test_result->RecordProperty(property);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestResultAccessor_a018e4cce093eef01adc2d4cd6d1371bf}{\index{testing\-::internal\-::\-Test\-Result\-Accessor@{testing\-::internal\-::\-Test\-Result\-Accessor}!test\-\_\-part\-\_\-results@{test\-\_\-part\-\_\-results}}
+\index{test\-\_\-part\-\_\-results@{test\-\_\-part\-\_\-results}!testing::internal::TestResultAccessor@{testing\-::internal\-::\-Test\-Result\-Accessor}}
+\subsubsection[{test\-\_\-part\-\_\-results}]{\setlength{\rightskip}{0pt plus 5cm}static const std\-::vector$<${\bf testing\-::\-Test\-Part\-Result}$>$\& {\bf test\-\_\-part\-\_\-results} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Result} \&}]{test\-\_\-result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/d32/classtesting_1_1internal_1_1TestResultAccessor_a018e4cce093eef01adc2d4cd6d1371bf}
+
+
+\-Definition at line 1029 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                     {
+    return test_result.test_part_results();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestResultAccessor_a018e4cce093eef01adc2d4cd6d1371bf}{\index{testing\-::internal\-::\-Test\-Result\-Accessor@{testing\-::internal\-::\-Test\-Result\-Accessor}!test\-\_\-part\-\_\-results@{test\-\_\-part\-\_\-results}}
+\index{test\-\_\-part\-\_\-results@{test\-\_\-part\-\_\-results}!testing::internal::TestResultAccessor@{testing\-::internal\-::\-Test\-Result\-Accessor}}
+\subsubsection[{test\-\_\-part\-\_\-results}]{\setlength{\rightskip}{0pt plus 5cm}static const std\-::vector$<${\bf testing\-::\-Test\-Part\-Result}$>$\& {\bf test\-\_\-part\-\_\-results} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Result} \&}]{test\-\_\-result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/d32/classtesting_1_1internal_1_1TestResultAccessor_a018e4cce093eef01adc2d4cd6d1371bf}
+
+
+\-Definition at line 1427 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                     {
+    return test_result.test_part_results();
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest-internal-inl_8h}{gtest-\/internal-\/inl.\-h}\end{DoxyCompactItemize}

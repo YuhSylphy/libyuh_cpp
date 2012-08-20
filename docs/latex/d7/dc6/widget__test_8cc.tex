@@ -1,0 +1,60 @@
+\hypertarget{widget__test_8cc}{\section{gtest-\/1.6.0/xcode/\-Samples/\-Framework\-Sample/widget\-\_\-test.cc \-File \-Reference}
+\label{d7/dc6/widget__test_8cc}\index{gtest-\/1.\-6.\-0/xcode/\-Samples/\-Framework\-Sample/widget\-\_\-test.\-cc@{gtest-\/1.\-6.\-0/xcode/\-Samples/\-Framework\-Sample/widget\-\_\-test.\-cc}}
+}
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+{\ttfamily \#include $<$\-Widget/widget.\-h$>$}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{widget__test_8cc_a291536a26f617362e0c4b58941eeaead}{\-T\-E\-S\-T} (\-Widget\-Initializer\-Test, \-Test\-Constructor)
+\item 
+\hyperlink{widget__test_8cc_ab0b72ae0a336fd2a4470c6b5566cd8c0}{\-T\-E\-S\-T} (\-Widget\-Initializer\-Test, \-Test\-Conversion)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{widget__test_8cc_a291536a26f617362e0c4b58941eeaead}{\index{widget\-\_\-test.\-cc@{widget\-\_\-test.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!widget_test.cc@{widget\-\_\-test.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Widget\-Initializer\-Test}]{, }
+\item[{\-Test\-Constructor}]{}
+\end{DoxyParamCaption}
+)}}\label{d7/dc6/widget__test_8cc_a291536a26f617362e0c4b58941eeaead}
+
+
+\-Definition at line 45 of file widget\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                             {
+  Widget widget(1.0f, "name");
+  EXPECT_FLOAT_EQ(1.0f, widget.GetFloatValue());
+  EXPECT_EQ(std::string("name"), widget.GetStringValue());
+}
+\end{DoxyCode}
+\hypertarget{widget__test_8cc_ab0b72ae0a336fd2a4470c6b5566cd8c0}{\index{widget\-\_\-test.\-cc@{widget\-\_\-test.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!widget_test.cc@{widget\-\_\-test.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Widget\-Initializer\-Test}]{, }
+\item[{\-Test\-Conversion}]{}
+\end{DoxyParamCaption}
+)}}\label{d7/dc6/widget__test_8cc_ab0b72ae0a336fd2a4470c6b5566cd8c0}
+
+
+\-Definition at line 53 of file widget\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                            {
+  Widget widget(1.0f, "name");
+  EXPECT_EQ(1, widget.GetIntValue());
+
+  size_t max_size = 128;
+  char buffer[max_size];
+  widget.GetCharPtrValue(buffer, max_size);
+  EXPECT_STREQ("name", buffer);
+}
+\end{DoxyCode}

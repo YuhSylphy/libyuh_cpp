@@ -1,0 +1,118 @@
+\hypertarget{classtesting_1_1internal_1_1TestEventListenersAccessor}{\section{\-Test\-Event\-Listeners\-Accessor \-Class \-Reference}
+\label{d8/d01/classtesting_1_1internal_1_1TestEventListenersAccessor}\index{\-Test\-Event\-Listeners\-Accessor@{\-Test\-Event\-Listeners\-Accessor}}
+}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classtesting_1_1TestEventListener}{\-Test\-Event\-Listener} $\ast$ \hyperlink{classtesting_1_1internal_1_1TestEventListenersAccessor_a10226b457b5713fd15cd1f6b16d53e16}{\-Get\-Repeater} (\hyperlink{classtesting_1_1TestEventListeners}{\-Test\-Event\-Listeners} $\ast$listeners)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1TestEventListenersAccessor_a5564329b693a831a188062139fffb4aa}{\-Set\-Default\-Result\-Printer} (\hyperlink{classtesting_1_1TestEventListeners}{\-Test\-Event\-Listeners} $\ast$listeners, \hyperlink{classtesting_1_1TestEventListener}{\-Test\-Event\-Listener} $\ast$listener)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1TestEventListenersAccessor_a003f64b346a313ae93e320f66768f68f}{\-Set\-Default\-Xml\-Generator} (\hyperlink{classtesting_1_1TestEventListeners}{\-Test\-Event\-Listeners} $\ast$listeners, \hyperlink{classtesting_1_1TestEventListener}{\-Test\-Event\-Listener} $\ast$listener)
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1TestEventListenersAccessor_a56e024fd5b04f8e49bb9404284925fed}{\-Event\-Forwarding\-Enabled} (const \hyperlink{classtesting_1_1TestEventListeners}{\-Test\-Event\-Listeners} \&listeners)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1TestEventListenersAccessor_a80636797082f6d8961204df473cf3687}{\-Suppress\-Event\-Forwarding} (\hyperlink{classtesting_1_1TestEventListeners}{\-Test\-Event\-Listeners} $\ast$listeners)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 83 of file gtest\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1TestEventListenersAccessor_a56e024fd5b04f8e49bb9404284925fed}{\index{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor@{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor}!\-Event\-Forwarding\-Enabled@{\-Event\-Forwarding\-Enabled}}
+\index{\-Event\-Forwarding\-Enabled@{\-Event\-Forwarding\-Enabled}!testing::internal::TestEventListenersAccessor@{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor}}
+\subsubsection[{\-Event\-Forwarding\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Event\-Forwarding\-Enabled} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Event\-Listeners} \&}]{listeners}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d8/d01/classtesting_1_1internal_1_1TestEventListenersAccessor_a56e024fd5b04f8e49bb9404284925fed}
+
+
+\-Definition at line 98 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                                          {
+    return listeners.EventForwardingEnabled();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestEventListenersAccessor_a10226b457b5713fd15cd1f6b16d53e16}{\index{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor@{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor}!\-Get\-Repeater@{\-Get\-Repeater}}
+\index{\-Get\-Repeater@{\-Get\-Repeater}!testing::internal::TestEventListenersAccessor@{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor}}
+\subsubsection[{\-Get\-Repeater}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Test\-Event\-Listener}$\ast$ {\bf \-Get\-Repeater} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Event\-Listeners} $\ast$}]{listeners}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d8/d01/classtesting_1_1internal_1_1TestEventListenersAccessor_a10226b457b5713fd15cd1f6b16d53e16}
+
+
+\-Definition at line 85 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                                       {
+    return listeners->repeater();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestEventListenersAccessor_a5564329b693a831a188062139fffb4aa}{\index{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor@{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor}!\-Set\-Default\-Result\-Printer@{\-Set\-Default\-Result\-Printer}}
+\index{\-Set\-Default\-Result\-Printer@{\-Set\-Default\-Result\-Printer}!testing::internal::TestEventListenersAccessor@{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor}}
+\subsubsection[{\-Set\-Default\-Result\-Printer}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Set\-Default\-Result\-Printer} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Event\-Listeners} $\ast$}]{listeners, }
+\item[{{\bf \-Test\-Event\-Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d8/d01/classtesting_1_1internal_1_1TestEventListenersAccessor_a5564329b693a831a188062139fffb4aa}
+
+
+\-Definition at line 89 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                                   {
+    listeners->SetDefaultResultPrinter(listener);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestEventListenersAccessor_a003f64b346a313ae93e320f66768f68f}{\index{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor@{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor}!\-Set\-Default\-Xml\-Generator@{\-Set\-Default\-Xml\-Generator}}
+\index{\-Set\-Default\-Xml\-Generator@{\-Set\-Default\-Xml\-Generator}!testing::internal::TestEventListenersAccessor@{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor}}
+\subsubsection[{\-Set\-Default\-Xml\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Set\-Default\-Xml\-Generator} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Event\-Listeners} $\ast$}]{listeners, }
+\item[{{\bf \-Test\-Event\-Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d8/d01/classtesting_1_1internal_1_1TestEventListenersAccessor_a003f64b346a313ae93e320f66768f68f}
+
+
+\-Definition at line 93 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                                  {
+    listeners->SetDefaultXmlGenerator(listener);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1TestEventListenersAccessor_a80636797082f6d8961204df473cf3687}{\index{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor@{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor}!\-Suppress\-Event\-Forwarding@{\-Suppress\-Event\-Forwarding}}
+\index{\-Suppress\-Event\-Forwarding@{\-Suppress\-Event\-Forwarding}!testing::internal::TestEventListenersAccessor@{testing\-::internal\-::\-Test\-Event\-Listeners\-Accessor}}
+\subsubsection[{\-Suppress\-Event\-Forwarding}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Suppress\-Event\-Forwarding} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Event\-Listeners} $\ast$}]{listeners}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d8/d01/classtesting_1_1internal_1_1TestEventListenersAccessor_a80636797082f6d8961204df473cf3687}
+
+
+\-Definition at line 102 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                                     {
+    listeners->SuppressEventForwarding();
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__unittest_8cc}{gtest\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\hypertarget{sample5__unittest_8cc}{\section{gtest-\/1.6.0/samples/sample5\-\_\-unittest.cc \-File \-Reference}
+\label{d4/d38/sample5__unittest_8cc}\index{gtest-\/1.\-6.\-0/samples/sample5\-\_\-unittest.\-cc@{gtest-\/1.\-6.\-0/samples/sample5\-\_\-unittest.\-cc}}
+}
+{\ttfamily \#include $<$limits.\-h$>$}\*
+{\ttfamily \#include $<$time.\-h$>$}\*
+{\ttfamily \#include \char`\"{}sample3-\/inl.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}sample1.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classQuickTest}{\-Quick\-Test}
+\item 
+class \hyperlink{classIntegerFunctionTest}{\-Integer\-Function\-Test}
+\item 
+class \hyperlink{classQueueTest}{\-Queue\-Test}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sample5__unittest_8cc_ad7679328025ef6d95ee2f45d5604aa89}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{classIntegerFunctionTest}{\-Integer\-Function\-Test}, \hyperlink{sample1_8h_a0e7da4d7a69c5b5afb707807aa177017}{\-Factorial})
+\item 
+\hyperlink{sample5__unittest_8cc_ab941323e5a68b9aa8125cb81f5ff3d7c}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{classIntegerFunctionTest}{\-Integer\-Function\-Test}, \hyperlink{sample1_8h_a7093217f5edc11fe277d03bd064e5f11}{\-Is\-Prime})
+\item 
+\hyperlink{sample5__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{classQueueTest}{\-Queue\-Test}, \-Default\-Constructor)
+\item 
+\hyperlink{sample5__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{classQueueTest}{\-Queue\-Test}, \-Dequeue)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{sample5__unittest_8cc_ad7679328025ef6d95ee2f45d5604aa89}{\index{sample5\-\_\-unittest.\-cc@{sample5\-\_\-unittest.\-cc}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!sample5_unittest.cc@{sample5\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Integer\-Function\-Test}}]{, }
+\item[{{\bf \-Factorial}}]{}
+\end{DoxyParamCaption}
+)}}\label{d4/d38/sample5__unittest_8cc_ad7679328025ef6d95ee2f45d5604aa89}
+
+
+\-Definition at line 100 of file sample5\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                       {
+  // Tests factorial of negative numbers.
+  EXPECT_EQ(1, Factorial(-5));
+  EXPECT_EQ(1, Factorial(-1));
+  EXPECT_TRUE(Factorial(-10) > 0);
+
+  // Tests factorial of 0.
+  EXPECT_EQ(1, Factorial(0));
+
+  // Tests factorial of positive numbers.
+  EXPECT_EQ(1, Factorial(1));
+  EXPECT_EQ(2, Factorial(2));
+  EXPECT_EQ(6, Factorial(3));
+  EXPECT_EQ(40320, Factorial(8));
+}
+\end{DoxyCode}
+\hypertarget{sample5__unittest_8cc_ab941323e5a68b9aa8125cb81f5ff3d7c}{\index{sample5\-\_\-unittest.\-cc@{sample5\-\_\-unittest.\-cc}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!sample5_unittest.cc@{sample5\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Integer\-Function\-Test}}]{, }
+\item[{{\bf \-Is\-Prime}}]{}
+\end{DoxyParamCaption}
+)}}\label{d4/d38/sample5__unittest_8cc_ab941323e5a68b9aa8125cb81f5ff3d7c}
+
+
+\-Definition at line 118 of file sample5\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                     {
+  // Tests negative input.
+  EXPECT_TRUE(!IsPrime(-1));
+  EXPECT_TRUE(!IsPrime(-2));
+  EXPECT_TRUE(!IsPrime(INT_MIN));
+
+  // Tests some trivial cases.
+  EXPECT_TRUE(!IsPrime(0));
+  EXPECT_TRUE(!IsPrime(1));
+  EXPECT_TRUE(IsPrime(2));
+  EXPECT_TRUE(IsPrime(3));
+
+  // Tests positive input.
+  EXPECT_TRUE(!IsPrime(4));
+  EXPECT_TRUE(IsPrime(5));
+  EXPECT_TRUE(!IsPrime(6));
+  EXPECT_TRUE(IsPrime(23));
+}
+\end{DoxyCode}
+\hypertarget{sample5__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}{\index{sample5\-\_\-unittest.\-cc@{sample5\-\_\-unittest.\-cc}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!sample5_unittest.cc@{sample5\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Queue\-Test}}]{, }
+\item[{\-Default\-Constructor}]{}
+\end{DoxyParamCaption}
+)}}\label{d4/d38/sample5__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}
+
+
+\-Definition at line 173 of file sample5\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                      {
+  EXPECT_EQ(0u, q0_.Size());
+}
+\end{DoxyCode}
+\hypertarget{sample5__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}{\index{sample5\-\_\-unittest.\-cc@{sample5\-\_\-unittest.\-cc}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!sample5_unittest.cc@{sample5\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Queue\-Test}}]{, }
+\item[{\-Dequeue}]{}
+\end{DoxyParamCaption}
+)}}\label{d4/d38/sample5__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}
+
+
+\-Definition at line 178 of file sample5\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                           {
+  int* n = q0_.Dequeue();
+  EXPECT_TRUE(n == NULL);
+
+  n = q1_.Dequeue();
+  EXPECT_TRUE(n != NULL);
+  EXPECT_EQ(1, *n);
+  EXPECT_EQ(0u, q1_.Size());
+  delete n;
+
+  n = q2_.Dequeue();
+  EXPECT_TRUE(n != NULL);
+  EXPECT_EQ(2, *n);
+  EXPECT_EQ(1u, q2_.Size());
+  delete n;
+}
+\end{DoxyCode}

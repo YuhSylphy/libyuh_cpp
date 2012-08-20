@@ -1,0 +1,107 @@
+\hypertarget{structBool}{\section{\-Bool \-Struct \-Reference}
+\label{d9/d2b/structBool}\index{\-Bool@{\-Bool}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structBool_a8bab34dc6764a0a81b06326c3fe7c231}{\-Bool} (int val)
+\item 
+bool \hyperlink{structBool_a5d5bb4a4e0ef702ea8a8f93217419d12}{operator$>$} (int n) const 
+\item 
+\hyperlink{structBool}{\-Bool} \hyperlink{structBool_a5a923359f3de21a46240e5c40f30a428}{operator+} (const \hyperlink{structBool}{\-Bool} \&rhs) const 
+\item 
+bool \hyperlink{structBool_ac9d2a580e155d7e90fc0df4a8be82e63}{operator==} (const \hyperlink{structBool}{\-Bool} \&rhs) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structBool_a0376be5904d0dd864b7d97c9ce1295ab}{value}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 56 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{structBool_a8bab34dc6764a0a81b06326c3fe7c231}{\index{\-Bool@{\-Bool}!\-Bool@{\-Bool}}
+\index{\-Bool@{\-Bool}!Bool@{\-Bool}}
+\subsubsection[{\-Bool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Bool} (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{d9/d2b/structBool_a8bab34dc6764a0a81b06326c3fe7c231}
+
+
+\-Definition at line 57 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+: value(val != 0) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{structBool_a5a923359f3de21a46240e5c40f30a428}{\index{\-Bool@{\-Bool}!operator+@{operator+}}
+\index{operator+@{operator+}!Bool@{\-Bool}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Bool} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Bool} \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d9/d2b/structBool_a5a923359f3de21a46240e5c40f30a428}
+
+
+\-Definition at line 61 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+{ return Bool(value + rhs.value); }
+\end{DoxyCode}
+\hypertarget{structBool_ac9d2a580e155d7e90fc0df4a8be82e63}{\index{\-Bool@{\-Bool}!operator==@{operator==}}
+\index{operator==@{operator==}!Bool@{\-Bool}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Bool} \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d9/d2b/structBool_ac9d2a580e155d7e90fc0df4a8be82e63}
+
+
+\-Definition at line 63 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+{ return value == rhs.value; }
+\end{DoxyCode}
+\hypertarget{structBool_a5d5bb4a4e0ef702ea8a8f93217419d12}{\index{\-Bool@{\-Bool}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Bool@{\-Bool}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d9/d2b/structBool_a5d5bb4a4e0ef702ea8a8f93217419d12}
+
+
+\-Definition at line 59 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+{ return value > Bool(n).value; }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{structBool_a0376be5904d0dd864b7d97c9ce1295ab}{\index{\-Bool@{\-Bool}!value@{value}}
+\index{value@{value}!Bool@{\-Bool}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf value}}}\label{d9/d2b/structBool_a0376be5904d0dd864b7d97c9ce1295ab}
+
+
+\-Definition at line 65 of file gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__pred__impl__unittest_8cc}{gtest\-\_\-pred\-\_\-impl\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,777 @@
+\hypertarget{gtest__pred__impl_8h}{\section{gtest-\/1.6.0/include/gtest/gtest\-\_\-pred\-\_\-impl.h \-File \-Reference}
+\label{db/d6e/gtest__pred__impl_8h}\index{gtest-\/1.\-6.\-0/include/gtest/gtest\-\_\-pred\-\_\-impl.\-h@{gtest-\/1.\-6.\-0/include/gtest/gtest\-\_\-pred\-\_\-impl.\-h}}
+}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a8c09939dd67f1bb5b68c9f6a44ea75db}{\-G\-T\-E\-S\-T\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-}(expression, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_aa3e3bfe04bb0e54d7f0e57e2f991d1eb}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-}(pred\-\_\-format, v1, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_ad44cf322952076d85305bbdf39769ac1}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-}(pred, v1, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a07132aa62cf4902e50e68d0265f573b6}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1}(pred\-\_\-format, v1)~\hyperlink{gtest__pred__impl_8h_aa3e3bfe04bb0e54d7f0e57e2f991d1eb}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-}(pred\-\_\-format, v1, \hyperlink{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642}{\-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D1}(pred, v1)~\hyperlink{gtest__pred__impl_8h_ad44cf322952076d85305bbdf39769ac1}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-}(pred, v1, \hyperlink{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642}{\-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a3771ca0d1a72013aebc3d66e046491ed}{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1}(pred\-\_\-format, v1)~\hyperlink{gtest__pred__impl_8h_aa3e3bfe04bb0e54d7f0e57e2f991d1eb}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-}(pred\-\_\-format, v1, \hyperlink{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358}{\-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a7d72f779b7d39b8f73a563ebc6d0604b}{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D1}(pred, v1)~\hyperlink{gtest__pred__impl_8h_ad44cf322952076d85305bbdf39769ac1}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-}(pred, v1, \hyperlink{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358}{\-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a115c18d1f752b7f091d577fb69cac372}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-}(pred\-\_\-format, v1, v2, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_ac560264104bd030b64034505d294a7b6}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-}(pred, v1, v2, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_af0141918615a5e2d5247e9cda8324dae}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2}(pred\-\_\-format, v1, v2)~\hyperlink{gtest__pred__impl_8h_a115c18d1f752b7f091d577fb69cac372}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-}(pred\-\_\-format, v1, v2, \hyperlink{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642}{\-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D2}(pred, v1, v2)~\hyperlink{gtest__pred__impl_8h_ac560264104bd030b64034505d294a7b6}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-}(pred, v1, v2, \hyperlink{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642}{\-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_ac452685a1a98ea3d96eb956a062ee210}{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2}(pred\-\_\-format, v1, v2)~\hyperlink{gtest__pred__impl_8h_a115c18d1f752b7f091d577fb69cac372}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-}(pred\-\_\-format, v1, v2, \hyperlink{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358}{\-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a4e9b777cce4e5423f4c2e491be7aa818}{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D2}(pred, v1, v2)~\hyperlink{gtest__pred__impl_8h_ac560264104bd030b64034505d294a7b6}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-}(pred, v1, v2, \hyperlink{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358}{\-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a49cdf8707268ee932bb772d879a226cc}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-}(pred\-\_\-format, v1, v2, v3, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_af30518f03233bc4486b55284b0827eb8}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-}(pred, v1, v2, v3, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a7285708fa5d37d6d8ed5b5e59da08bae}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3}(pred\-\_\-format, v1, v2, v3)~\hyperlink{gtest__pred__impl_8h_a49cdf8707268ee932bb772d879a226cc}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-}(pred\-\_\-format, v1, v2, v3, \hyperlink{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642}{\-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D3}(pred, v1, v2, v3)~\hyperlink{gtest__pred__impl_8h_af30518f03233bc4486b55284b0827eb8}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-}(pred, v1, v2, v3, \hyperlink{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642}{\-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a494e3b8dc22f4765f7e041f16c930e3d}{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3}(pred\-\_\-format, v1, v2, v3)~\hyperlink{gtest__pred__impl_8h_a49cdf8707268ee932bb772d879a226cc}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-}(pred\-\_\-format, v1, v2, v3, \hyperlink{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358}{\-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_aa7688f3ab9f09a2c1dbf13bd1f29d8fd}{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D3}(pred, v1, v2, v3)~\hyperlink{gtest__pred__impl_8h_af30518f03233bc4486b55284b0827eb8}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-}(pred, v1, v2, v3, \hyperlink{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358}{\-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_abd207ed869491ba4bba29f8df37b7355}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-}(pred\-\_\-format, v1, v2, v3, v4, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a14e8c70455104fac032efec097ef668b}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-}(pred, v1, v2, v3, v4, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a3354347de0f2445400b509cf39dce1dc}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4}(pred\-\_\-format, v1, v2, v3, v4)~\hyperlink{gtest__pred__impl_8h_abd207ed869491ba4bba29f8df37b7355}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-}(pred\-\_\-format, v1, v2, v3, v4, \hyperlink{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642}{\-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D4}(pred, v1, v2, v3, v4)~\hyperlink{gtest__pred__impl_8h_a14e8c70455104fac032efec097ef668b}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-}(pred, v1, v2, v3, v4, \hyperlink{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642}{\-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a1842593c1dfb13c9a4b33b01540a8b40}{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4}(pred\-\_\-format, v1, v2, v3, v4)~\hyperlink{gtest__pred__impl_8h_abd207ed869491ba4bba29f8df37b7355}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-}(pred\-\_\-format, v1, v2, v3, v4, \hyperlink{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358}{\-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_addc030c521775610e4619a01541a2167}{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D4}(pred, v1, v2, v3, v4)~\hyperlink{gtest__pred__impl_8h_a14e8c70455104fac032efec097ef668b}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-}(pred, v1, v2, v3, v4, \hyperlink{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358}{\-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a107623ee191560f703a3fdc983803c8e}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-}(pred\-\_\-format, v1, v2, v3, v4, v5, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a2c42692f7d910dc2fe57869883190e6c}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-}(pred, v1, v2, v3, v4, v5, on\-\_\-failure)
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_a74beddf9661e4460f9969fe211b9e80e}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5}(pred\-\_\-format, v1, v2, v3, v4, v5)~\hyperlink{gtest__pred__impl_8h_a107623ee191560f703a3fdc983803c8e}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-}(pred\-\_\-format, v1, v2, v3, v4, v5, \hyperlink{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642}{\-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D5}(pred, v1, v2, v3, v4, v5)~\hyperlink{gtest__pred__impl_8h_a2c42692f7d910dc2fe57869883190e6c}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-}(pred, v1, v2, v3, v4, v5, \hyperlink{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642}{\-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_abd7cb4f36d6aa2cb346ab3ac812568f3}{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5}(pred\-\_\-format, v1, v2, v3, v4, v5)~\hyperlink{gtest__pred__impl_8h_a107623ee191560f703a3fdc983803c8e}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-}(pred\-\_\-format, v1, v2, v3, v4, v5, \hyperlink{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358}{\-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\item 
+\#define \hyperlink{gtest__pred__impl_8h_af8e510af2b4a14d90eef66ace17d1c30}{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D5}(pred, v1, v2, v3, v4, v5)~\hyperlink{gtest__pred__impl_8h_a2c42692f7d910dc2fe57869883190e6c}{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-}(pred, v1, v2, v3, v4, v5, \hyperlink{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358}{\-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Pred , typename T1 $>$ }\\\-Assertion\-Result \hyperlink{gtest__pred__impl_8h_a41d32b74fac585ac04cc9ba037c9fed4}{\-Assert\-Pred1\-Helper} (const char $\ast$pred\-\_\-text, const char $\ast$e1, \-Pred pred, const \-T1 \&v1)
+\item 
+{\footnotesize template$<$typename Pred , typename T1 , typename T2 $>$ }\\\-Assertion\-Result \hyperlink{gtest__pred__impl_8h_aa21b5175030ef2d76837bde68459effe}{\-Assert\-Pred2\-Helper} (const char $\ast$pred\-\_\-text, const char $\ast$e1, const char $\ast$e2, \-Pred pred, const \-T1 \&v1, const \-T2 \&v2)
+\item 
+{\footnotesize template$<$typename Pred , typename T1 , typename T2 , typename T3 $>$ }\\\-Assertion\-Result \hyperlink{gtest__pred__impl_8h_ae48a4ec033f85849b47bcbd2aa94baab}{\-Assert\-Pred3\-Helper} (const char $\ast$pred\-\_\-text, const char $\ast$e1, const char $\ast$e2, const char $\ast$e3, \-Pred pred, const \-T1 \&v1, const \-T2 \&v2, const \-T3 \&v3)
+\item 
+{\footnotesize template$<$typename Pred , typename T1 , typename T2 , typename T3 , typename T4 $>$ }\\\-Assertion\-Result \hyperlink{gtest__pred__impl_8h_a22f4e27e6b18091281c45d4395c98517}{\-Assert\-Pred4\-Helper} (const char $\ast$pred\-\_\-text, const char $\ast$e1, const char $\ast$e2, const char $\ast$e3, const char $\ast$e4, \-Pred pred, const \-T1 \&v1, const \-T2 \&v2, const \-T3 \&v3, const \-T4 \&v4)
+\item 
+{\footnotesize template$<$typename Pred , typename T1 , typename T2 , typename T3 , typename T4 , typename T5 $>$ }\\\-Assertion\-Result \hyperlink{gtest__pred__impl_8h_a1012d0b317e600d13b1a74712f0d8a48}{\-Assert\-Pred5\-Helper} (const char $\ast$pred\-\_\-text, const char $\ast$e1, const char $\ast$e2, const char $\ast$e3, const char $\ast$e4, const char $\ast$e5, \-Pred pred, const \-T1 \&v1, const \-T2 \&v2, const \-T3 \&v3, const \-T4 \&v4, const \-T5 \&v5)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{gtest__pred__impl_8h_a7d72f779b7d39b8f73a563ebc6d0604b}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D1@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D1}}
+\index{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D1@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D1}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D1}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D1}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-}(pred, v1, {\bf \-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a7d72f779b7d39b8f73a563ebc6d0604b}
+
+
+\-Definition at line 119 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a4e9b777cce4e5423f4c2e491be7aa818}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D2@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D2}}
+\index{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D2@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D2}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D2}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-}(pred, v1, v2, {\bf \-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a4e9b777cce4e5423f4c2e491be7aa818}
+
+
+\-Definition at line 167 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_aa7688f3ab9f09a2c1dbf13bd1f29d8fd}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D3@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D3}}
+\index{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D3@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D3}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D3}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D3}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-}(pred, v1, v2, v3, {\bf \-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_aa7688f3ab9f09a2c1dbf13bd1f29d8fd}
+
+
+\-Definition at line 222 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_addc030c521775610e4619a01541a2167}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D4@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D4}}
+\index{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D4@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D4}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D4}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D4}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-}(pred, v1, v2, v3, v4, {\bf \-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_addc030c521775610e4619a01541a2167}
+
+
+\-Definition at line 284 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_af8e510af2b4a14d90eef66ace17d1c30}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D5@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D5}}
+\index{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D5@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D5}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D5}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D5}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4, }
+\item[{}]{v5}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-}(pred, v1, v2, v3, v4, v5, {\bf \-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_af8e510af2b4a14d90eef66ace17d1c30}
+
+
+\-Definition at line 353 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a3771ca0d1a72013aebc3d66e046491ed}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1}}
+\index{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-}(pred\-\_\-format, v1, {\bf \-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a3771ca0d1a72013aebc3d66e046491ed}
+
+
+\-Definition at line 117 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_ac452685a1a98ea3d96eb956a062ee210}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2}}
+\index{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-}(pred\-\_\-format, v1, v2, {\bf \-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_ac452685a1a98ea3d96eb956a062ee210}
+
+
+\-Definition at line 165 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a494e3b8dc22f4765f7e041f16c930e3d}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3}}
+\index{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-}(pred\-\_\-format, v1, v2, v3, {\bf \-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a494e3b8dc22f4765f7e041f16c930e3d}
+
+
+\-Definition at line 220 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a1842593c1dfb13c9a4b33b01540a8b40}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4}}
+\index{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-}(pred\-\_\-format, v1, v2, v3, v4, {\bf \-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a1842593c1dfb13c9a4b33b01540a8b40}
+
+
+\-Definition at line 282 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_abd7cb4f36d6aa2cb346ab3ac812568f3}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5}}
+\index{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5@{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-S\-S\-E\-R\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4, }
+\item[{}]{v5}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-}(pred\-\_\-format, v1, v2, v3, v4, v5, {\bf \-G\-T\-E\-S\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_abd7cb4f36d6aa2cb346ab3ac812568f3}
+
+
+\-Definition at line 351 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D1@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D1}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D1@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D1}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D1}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D1}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-}(pred, v1, {\bf \-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}
+
+
+\-Definition at line 115 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D2@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D2}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D2@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D2}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D2}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-}(pred, v1, v2, {\bf \-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}
+
+
+\-Definition at line 163 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D3@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D3}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D3@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D3}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D3}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D3}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-}(pred, v1, v2, v3, {\bf \-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}
+
+
+\-Definition at line 218 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D4@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D4}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D4@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D4}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D4}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D4}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-}(pred, v1, v2, v3, v4, {\bf \-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}
+
+
+\-Definition at line 280 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D5@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D5}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D5@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D5}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D5}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D5}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4, }
+\item[{}]{v5}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-}(pred, v1, v2, v3, v4, v5, {\bf \-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}
+
+
+\-Definition at line 349 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a07132aa62cf4902e50e68d0265f573b6}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-}(pred\-\_\-format, v1, {\bf \-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a07132aa62cf4902e50e68d0265f573b6}
+
+
+\-Definition at line 113 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_af0141918615a5e2d5247e9cda8324dae}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-}(pred\-\_\-format, v1, v2, {\bf \-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_af0141918615a5e2d5247e9cda8324dae}
+
+
+\-Definition at line 161 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a7285708fa5d37d6d8ed5b5e59da08bae}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-}(pred\-\_\-format, v1, v2, v3, {\bf \-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a7285708fa5d37d6d8ed5b5e59da08bae}
+
+
+\-Definition at line 216 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a3354347de0f2445400b509cf39dce1dc}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-}(pred\-\_\-format, v1, v2, v3, v4, {\bf \-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a3354347de0f2445400b509cf39dce1dc}
+
+
+\-Definition at line 278 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a74beddf9661e4460f9969fe211b9e80e}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5@{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4, }
+\item[{}]{v5}
+\end{DoxyParamCaption}
+)~{\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-}(pred\-\_\-format, v1, v2, v3, v4, v5, {\bf \-G\-T\-E\-S\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-})}}\label{db/d6e/gtest__pred__impl_8h_a74beddf9661e4460f9969fe211b9e80e}
+
+
+\-Definition at line 347 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a8c09939dd67f1bb5b68c9f6a44ea75db}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{expression, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_a8c09939dd67f1bb5b68c9f6a44ea75db}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_AMBIGUOUS_ELSE_BLOCKER_ \
+  if (const ::testing::AssertionResult gtest_ar = (expression)) \
+    ; \
+  else \
+    on_failure(gtest_ar.failure_message())
+\end{DoxyCode}
+
+
+\-Definition at line 75 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_ad44cf322952076d85305bbdf39769ac1}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D1\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_ad44cf322952076d85305bbdf39769ac1}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_ASSERT_(::testing::AssertPred1Helper(#pred, \
+                                             #v1, \
+                                             pred, \
+                                             v1), on_failure)
+\end{DoxyCode}
+
+
+\-Definition at line 106 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_ac560264104bd030b64034505d294a7b6}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D2\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_ac560264104bd030b64034505d294a7b6}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_ASSERT_(::testing::AssertPred2Helper(#pred, \
+                                             #v1, \
+                                             #v2, \
+                                             pred, \
+                                             v1, \
+                                             v2), on_failure)
+\end{DoxyCode}
+
+
+\-Definition at line 152 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_af30518f03233bc4486b55284b0827eb8}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D3\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_af30518f03233bc4486b55284b0827eb8}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_ASSERT_(::testing::AssertPred3Helper(#pred, \
+                                             #v1, \
+                                             #v2, \
+                                             #v3, \
+                                             pred, \
+                                             v1, \
+                                             v2, \
+                                             v3), on_failure)
+\end{DoxyCode}
+
+
+\-Definition at line 205 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a14e8c70455104fac032efec097ef668b}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D4\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_a14e8c70455104fac032efec097ef668b}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_ASSERT_(::testing::AssertPred4Helper(#pred, \
+                                             #v1, \
+                                             #v2, \
+                                             #v3, \
+                                             #v4, \
+                                             pred, \
+                                             v1, \
+                                             v2, \
+                                             v3, \
+                                             v4), on_failure)
+\end{DoxyCode}
+
+
+\-Definition at line 265 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a2c42692f7d910dc2fe57869883190e6c}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D5\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{pred, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4, }
+\item[{}]{v5, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_a2c42692f7d910dc2fe57869883190e6c}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_ASSERT_(::testing::AssertPred5Helper(#pred, \
+                                             #v1, \
+                                             #v2, \
+                                             #v3, \
+                                             #v4, \
+                                             #v5, \
+                                             pred, \
+                                             v1, \
+                                             v2, \
+                                             v3, \
+                                             v4, \
+                                             v5), on_failure)
+\end{DoxyCode}
+
+
+\-Definition at line 332 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_aa3e3bfe04bb0e54d7f0e57e2f991d1eb}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T1\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_aa3e3bfe04bb0e54d7f0e57e2f991d1eb}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_ASSERT_(pred_format(#v1, v1),\
+                on_failure)
+\end{DoxyCode}
+
+
+\-Definition at line 100 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a115c18d1f752b7f091d577fb69cac372}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T2\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_a115c18d1f752b7f091d577fb69cac372}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\
+                on_failure)
+\end{DoxyCode}
+
+
+\-Definition at line 146 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a49cdf8707268ee932bb772d879a226cc}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T3\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_a49cdf8707268ee932bb772d879a226cc}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_ASSERT_(pred_format(#v1, #v2, #v3, v1, v2, v3),\
+                on_failure)
+\end{DoxyCode}
+
+
+\-Definition at line 199 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_abd207ed869491ba4bba29f8df37b7355}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T4\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_abd207ed869491ba4bba29f8df37b7355}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_ASSERT_(pred_format(#v1, #v2, #v3, #v4, v1, v2, v3, v4),\
+                on_failure)
+\end{DoxyCode}
+
+
+\-Definition at line 259 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+\hypertarget{gtest__pred__impl_8h_a107623ee191560f703a3fdc983803c8e}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-P\-R\-E\-D\-\_\-\-F\-O\-R\-M\-A\-T5\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{pred\-\_\-format, }
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v3, }
+\item[{}]{v4, }
+\item[{}]{v5, }
+\item[{}]{on\-\_\-failure}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_a107623ee191560f703a3fdc983803c8e}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+GTEST_ASSERT_(pred_format(#v1, #v2, #v3, #v4, #v5, v1, v2, v3, v4, v5),\
+                on_failure)
+\end{DoxyCode}
+
+
+\-Definition at line 326 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest__pred__impl_8h_a41d32b74fac585ac04cc9ba037c9fed4}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-Assert\-Pred1\-Helper@{\-Assert\-Pred1\-Helper}}
+\index{\-Assert\-Pred1\-Helper@{\-Assert\-Pred1\-Helper}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-Assert\-Pred1\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}\-Assertion\-Result {\bf \-Assert\-Pred1\-Helper} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pred\-\_\-text, }
+\item[{const char $\ast$}]{e1, }
+\item[{\-Pred}]{pred, }
+\item[{const \-T1 \&}]{v1}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_a41d32b74fac585ac04cc9ba037c9fed4}
+
+
+\-Definition at line 87 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+
+\begin{DoxyCode}
+                                                {
+  if (pred(v1)) return AssertionSuccess();
+
+  return AssertionFailure() << pred_text << "("
+                            << e1 << ") evaluates to false, where"
+                            << "\n" << e1 << " evaluates to " << v1;
+}
+\end{DoxyCode}
+\hypertarget{gtest__pred__impl_8h_aa21b5175030ef2d76837bde68459effe}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-Assert\-Pred2\-Helper@{\-Assert\-Pred2\-Helper}}
+\index{\-Assert\-Pred2\-Helper@{\-Assert\-Pred2\-Helper}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-Assert\-Pred2\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}\-Assertion\-Result {\bf \-Assert\-Pred2\-Helper} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pred\-\_\-text, }
+\item[{const char $\ast$}]{e1, }
+\item[{const char $\ast$}]{e2, }
+\item[{\-Pred}]{pred, }
+\item[{const \-T1 \&}]{v1, }
+\item[{const \-T2 \&}]{v2}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_aa21b5175030ef2d76837bde68459effe}
+
+
+\-Definition at line 129 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+
+\begin{DoxyCode}
+                                                {
+  if (pred(v1, v2)) return AssertionSuccess();
+
+  return AssertionFailure() << pred_text << "("
+                            << e1 << ", "
+                            << e2 << ") evaluates to false, where"
+                            << "\n" << e1 << " evaluates to " << v1
+                            << "\n" << e2 << " evaluates to " << v2;
+}
+\end{DoxyCode}
+\hypertarget{gtest__pred__impl_8h_ae48a4ec033f85849b47bcbd2aa94baab}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-Assert\-Pred3\-Helper@{\-Assert\-Pred3\-Helper}}
+\index{\-Assert\-Pred3\-Helper@{\-Assert\-Pred3\-Helper}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-Assert\-Pred3\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}\-Assertion\-Result {\bf \-Assert\-Pred3\-Helper} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pred\-\_\-text, }
+\item[{const char $\ast$}]{e1, }
+\item[{const char $\ast$}]{e2, }
+\item[{const char $\ast$}]{e3, }
+\item[{\-Pred}]{pred, }
+\item[{const \-T1 \&}]{v1, }
+\item[{const \-T2 \&}]{v2, }
+\item[{const \-T3 \&}]{v3}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_ae48a4ec033f85849b47bcbd2aa94baab}
+
+
+\-Definition at line 178 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+
+\begin{DoxyCode}
+                                                {
+  if (pred(v1, v2, v3)) return AssertionSuccess();
+
+  return AssertionFailure() << pred_text << "("
+                            << e1 << ", "
+                            << e2 << ", "
+                            << e3 << ") evaluates to false, where"
+                            << "\n" << e1 << " evaluates to " << v1
+                            << "\n" << e2 << " evaluates to " << v2
+                            << "\n" << e3 << " evaluates to " << v3;
+}
+\end{DoxyCode}
+\hypertarget{gtest__pred__impl_8h_a22f4e27e6b18091281c45d4395c98517}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-Assert\-Pred4\-Helper@{\-Assert\-Pred4\-Helper}}
+\index{\-Assert\-Pred4\-Helper@{\-Assert\-Pred4\-Helper}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-Assert\-Pred4\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}\-Assertion\-Result {\bf \-Assert\-Pred4\-Helper} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pred\-\_\-text, }
+\item[{const char $\ast$}]{e1, }
+\item[{const char $\ast$}]{e2, }
+\item[{const char $\ast$}]{e3, }
+\item[{const char $\ast$}]{e4, }
+\item[{\-Pred}]{pred, }
+\item[{const \-T1 \&}]{v1, }
+\item[{const \-T2 \&}]{v2, }
+\item[{const \-T3 \&}]{v3, }
+\item[{const \-T4 \&}]{v4}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_a22f4e27e6b18091281c45d4395c98517}
+
+
+\-Definition at line 234 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+
+\begin{DoxyCode}
+                                                {
+  if (pred(v1, v2, v3, v4)) return AssertionSuccess();
+
+  return AssertionFailure() << pred_text << "("
+                            << e1 << ", "
+                            << e2 << ", "
+                            << e3 << ", "
+                            << e4 << ") evaluates to false, where"
+                            << "\n" << e1 << " evaluates to " << v1
+                            << "\n" << e2 << " evaluates to " << v2
+                            << "\n" << e3 << " evaluates to " << v3
+                            << "\n" << e4 << " evaluates to " << v4;
+}
+\end{DoxyCode}
+\hypertarget{gtest__pred__impl_8h_a1012d0b317e600d13b1a74712f0d8a48}{\index{gtest\-\_\-pred\-\_\-impl.\-h@{gtest\-\_\-pred\-\_\-impl.\-h}!\-Assert\-Pred5\-Helper@{\-Assert\-Pred5\-Helper}}
+\index{\-Assert\-Pred5\-Helper@{\-Assert\-Pred5\-Helper}!gtest_pred_impl.h@{gtest\-\_\-pred\-\_\-impl.\-h}}
+\subsubsection[{\-Assert\-Pred5\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}\-Assertion\-Result {\bf \-Assert\-Pred5\-Helper} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pred\-\_\-text, }
+\item[{const char $\ast$}]{e1, }
+\item[{const char $\ast$}]{e2, }
+\item[{const char $\ast$}]{e3, }
+\item[{const char $\ast$}]{e4, }
+\item[{const char $\ast$}]{e5, }
+\item[{\-Pred}]{pred, }
+\item[{const \-T1 \&}]{v1, }
+\item[{const \-T2 \&}]{v2, }
+\item[{const \-T3 \&}]{v3, }
+\item[{const \-T4 \&}]{v4, }
+\item[{const \-T5 \&}]{v5}
+\end{DoxyParamCaption}
+)}}\label{db/d6e/gtest__pred__impl_8h_a1012d0b317e600d13b1a74712f0d8a48}
+
+
+\-Definition at line 297 of file gtest\-\_\-pred\-\_\-impl.\-h.
+
+
+\begin{DoxyCode}
+                                                {
+  if (pred(v1, v2, v3, v4, v5)) return AssertionSuccess();
+
+  return AssertionFailure() << pred_text << "("
+                            << e1 << ", "
+                            << e2 << ", "
+                            << e3 << ", "
+                            << e4 << ", "
+                            << e5 << ") evaluates to false, where"
+                            << "\n" << e1 << " evaluates to " << v1
+                            << "\n" << e2 << " evaluates to " << v2
+                            << "\n" << e3 << " evaluates to " << v3
+                            << "\n" << e4 << " evaluates to " << v4
+                            << "\n" << e5 << " evaluates to " << v5;
+}
+\end{DoxyCode}

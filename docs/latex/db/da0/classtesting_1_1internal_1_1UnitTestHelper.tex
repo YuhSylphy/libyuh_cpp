@@ -1,0 +1,102 @@
+\hypertarget{classtesting_1_1internal_1_1UnitTestHelper}{\section{\-Unit\-Test\-Helper \-Class \-Reference}
+\label{db/da0/classtesting_1_1internal_1_1UnitTestHelper}\index{\-Unit\-Test\-Helper@{\-Unit\-Test\-Helper}}
+}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} const $\ast$$\ast$const \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a4af2e3e5503e213f664ab59a744c9bf8}{\-Get\-Sorted\-Test\-Cases} ()
+\item 
+static const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a32d472221b9837d830cc1f8c9a750545}{\-Find\-Test\-Case} (const char $\ast$name)
+\item 
+static \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} const $\ast$$\ast$const \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a5cf6c6a568ec8e5644b38e2d5d302ad2}{\-Get\-Sorted\-Tests} (const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$test\-\_\-case)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 53 of file gtest-\/unittest-\/api\-\_\-test.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1UnitTestHelper_a32d472221b9837d830cc1f8c9a750545}{\index{testing\-::internal\-::\-Unit\-Test\-Helper@{testing\-::internal\-::\-Unit\-Test\-Helper}!\-Find\-Test\-Case@{\-Find\-Test\-Case}}
+\index{\-Find\-Test\-Case@{\-Find\-Test\-Case}!testing::internal::UnitTestHelper@{testing\-::internal\-::\-Unit\-Test\-Helper}}
+\subsubsection[{\-Find\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf \-Test\-Case}$\ast$ {\bf \-Find\-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/da0/classtesting_1_1internal_1_1UnitTestHelper_a32d472221b9837d830cc1f8c9a750545}
+
+
+\-Definition at line 73 of file gtest-\/unittest-\/api\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                        {
+    UnitTest& unit_test = *UnitTest::GetInstance();
+    for (int i = 0; i < unit_test.total_test_case_count(); ++i) {
+      const TestCase* test_case = unit_test.GetTestCase(i);
+      if (0 == strcmp(test_case->name(), name))
+        return test_case;
+    }
+    return NULL;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestHelper_a4af2e3e5503e213f664ab59a744c9bf8}{\index{testing\-::internal\-::\-Unit\-Test\-Helper@{testing\-::internal\-::\-Unit\-Test\-Helper}!\-Get\-Sorted\-Test\-Cases@{\-Get\-Sorted\-Test\-Cases}}
+\index{\-Get\-Sorted\-Test\-Cases@{\-Get\-Sorted\-Test\-Cases}!testing::internal::UnitTestHelper@{testing\-::internal\-::\-Unit\-Test\-Helper}}
+\subsubsection[{\-Get\-Sorted\-Test\-Cases}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Test\-Case} const$\ast$$\ast$ const {\bf \-Get\-Sorted\-Test\-Cases} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/da0/classtesting_1_1internal_1_1UnitTestHelper_a4af2e3e5503e213f664ab59a744c9bf8}
+
+
+\-Definition at line 57 of file gtest-\/unittest-\/api\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                     {
+    UnitTest& unit_test = *UnitTest::GetInstance();
+    TestCase const** const test_cases =
+        new const TestCase*[unit_test.total_test_case_count()];
+
+    for (int i = 0; i < unit_test.total_test_case_count(); ++i)
+      test_cases[i] = unit_test.GetTestCase(i);
+
+    std::sort(test_cases,
+              test_cases + unit_test.total_test_case_count(),
+              LessByName<TestCase>());
+    return test_cases;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestHelper_a5cf6c6a568ec8e5644b38e2d5d302ad2}{\index{testing\-::internal\-::\-Unit\-Test\-Helper@{testing\-::internal\-::\-Unit\-Test\-Helper}!\-Get\-Sorted\-Tests@{\-Get\-Sorted\-Tests}}
+\index{\-Get\-Sorted\-Tests@{\-Get\-Sorted\-Tests}!testing::internal::UnitTestHelper@{testing\-::internal\-::\-Unit\-Test\-Helper}}
+\subsubsection[{\-Get\-Sorted\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Test\-Info} const$\ast$$\ast$ const {\bf \-Get\-Sorted\-Tests} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Case} $\ast$}]{test\-\_\-case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/da0/classtesting_1_1internal_1_1UnitTestHelper_a5cf6c6a568ec8e5644b38e2d5d302ad2}
+
+
+\-Definition at line 86 of file gtest-\/unittest-\/api\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                                          {
+    TestInfo const** const tests =
+        new const TestInfo*[test_case->total_test_count()];
+
+    for (int i = 0; i < test_case->total_test_count(); ++i)
+      tests[i] = test_case->GetTestInfo(i);
+
+    std::sort(tests, tests + test_case->total_test_count(),
+              LessByName<TestInfo>());
+    return tests;
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest-unittest-api__test_8cc}{gtest-\/unittest-\/api\-\_\-test.\-cc}\end{DoxyCompactItemize}

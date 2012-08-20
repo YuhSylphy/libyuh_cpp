@@ -1,0 +1,109 @@
+\hypertarget{gtest__repeat__test_8cc}{\section{gtest-\/1.6.0/test/gtest\-\_\-repeat\-\_\-test.cc \-File \-Reference}
+\label{d3/d4c/gtest__repeat__test_8cc}\index{gtest-\/1.\-6.\-0/test/gtest\-\_\-repeat\-\_\-test.\-cc@{gtest-\/1.\-6.\-0/test/gtest\-\_\-repeat\-\_\-test.\-cc}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}src/gtest-\/internal-\/inl.\-h\char`\"{}}\*
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacetesting}{testing}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gtest__repeat__test_8cc_a83bd232fd1077579fada92c31bb7469f}{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}~1
+\item 
+\#define \hyperlink{gtest__repeat__test_8cc_a7e5ba7c523079f679398b4c730184de3}{\-G\-T\-E\-S\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-I\-N\-T\-\_\-\-E\-Q\-\_\-}(expected, actual)
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetesting_a01dc67468f68811e10b5feab417f8220}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-string\-\_\-} (death\-\_\-test\-\_\-style)
+\item 
+\hyperlink{namespacetesting_a4c624a5efd425b1d1ec252507716c9e4}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-string\-\_\-} (filter)
+\item 
+\hyperlink{namespacetesting_a797265979cd4ed202c63419b29d26b9a}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-int32\-\_\-} (repeat)
+\item 
+int \hyperlink{gtest__repeat__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{gtest__repeat__test_8cc_a7e5ba7c523079f679398b4c730184de3}{\index{gtest\-\_\-repeat\-\_\-test.\-cc@{gtest\-\_\-repeat\-\_\-test.\-cc}!\-G\-T\-E\-S\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-I\-N\-T\-\_\-\-E\-Q\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-I\-N\-T\-\_\-\-E\-Q\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-I\-N\-T\-\_\-\-E\-Q\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-I\-N\-T\-\_\-\-E\-Q\-\_\-}!gtest_repeat_test.cc@{gtest\-\_\-repeat\-\_\-test.\-cc}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-I\-N\-T\-\_\-\-E\-Q\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-I\-N\-T\-\_\-\-E\-Q\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{expected, }
+\item[{}]{actual}
+\end{DoxyParamCaption}
+)}}\label{d3/d4c/gtest__repeat__test_8cc_a7e5ba7c523079f679398b4c730184de3}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+do {\
+    const int expected_val = (expected);\
+    const int actual_val = (actual);\
+    if (::testing::internal::IsTrue(expected_val != actual_val)) {\
+      ::std::cout << "Value of: " #actual "\n"\
+                  << "  Actual: " << actual_val << "\n"\
+                  << "Expected: " #expected "\n"\
+                  << "Which is: " << expected_val << "\n";\
+      ::testing::internal::posix::Abort();\
+    }\
+  } while(::testing::internal::AlwaysFalse())
+\end{DoxyCode}
+
+
+\-Definition at line 63 of file gtest\-\_\-repeat\-\_\-test.\-cc.
+
+\hypertarget{gtest__repeat__test_8cc_a83bd232fd1077579fada92c31bb7469f}{\index{gtest\-\_\-repeat\-\_\-test.\-cc@{gtest\-\_\-repeat\-\_\-test.\-cc}!\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}!gtest_repeat_test.cc@{gtest\-\_\-repeat\-\_\-test.\-cc}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}~1}}\label{d3/d4c/gtest__repeat__test_8cc_a83bd232fd1077579fada92c31bb7469f}
+
+
+\-Definition at line 43 of file gtest\-\_\-repeat\-\_\-test.\-cc.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest__repeat__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{gtest\-\_\-repeat\-\_\-test.\-cc@{gtest\-\_\-repeat\-\_\-test.\-cc}!main@{main}}
+\index{main@{main}!gtest_repeat_test.cc@{gtest\-\_\-repeat\-\_\-test.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{d3/d4c/gtest__repeat__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 229 of file gtest\-\_\-repeat\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+  testing::InitGoogleTest(&argc, argv);
+  testing::AddGlobalTestEnvironment(new MyEnvironment);
+
+  TestRepeatUnspecified();
+  TestRepeat(0);
+  TestRepeat(1);
+  TestRepeat(5);
+
+  TestRepeatWithEmptyFilter(2);
+  TestRepeatWithEmptyFilter(3);
+
+  TestRepeatWithFilterForSuccessfulTests(3);
+
+  TestRepeatWithFilterForFailedTests(4);
+
+  // It would be nice to verify that the tests indeed loop forever
+  // when GTEST_FLAG(repeat) is negative, but this test will be quite
+  // complicated to write.  Since this flag is for interactive
+  // debugging only and doesn't affect the normal test result, such a
+  // test would be an overkill.
+
+  printf("PASS\n");
+  return 0;
+}
+\end{DoxyCode}

@@ -1,0 +1,169 @@
+\hypertarget{classgtest__color__test_1_1GTestColorTest}{\section{\-G\-Test\-Color\-Test \-Class \-Reference}
+\label{dc/d00/classgtest__color__test_1_1GTestColorTest}\index{\-G\-Test\-Color\-Test@{\-G\-Test\-Color\-Test}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__color__test_1_1GTestColorTest_ac9fed777a27fd73438eac52101d78c36}{test\-No\-Env\-Var\-No\-Flag}
+\item 
+def \hyperlink{classgtest__color__test_1_1GTestColorTest_a97176c86bc0900df4d92cb233b207f9d}{test\-Flag\-Only}
+\item 
+def \hyperlink{classgtest__color__test_1_1GTestColorTest_a0cf830ec33572a754e340dde3a73e6ff}{test\-Env\-Var\-Only}
+\item 
+def \hyperlink{classgtest__color__test_1_1GTestColorTest_a8bfc2689d97b71ba93bcec69e3ff86f7}{test\-Env\-Var\-And\-Flag}
+\item 
+def \hyperlink{classgtest__color__test_1_1GTestColorTest_ade169e295fc0f24bc4173f09aa7d3c2c}{test\-Aliases\-Of\-Yes\-And\-No}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 70 of file gtest\-\_\-color\-\_\-test.\-py.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgtest__color__test_1_1GTestColorTest_ade169e295fc0f24bc4173f09aa7d3c2c}{\index{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test@{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test}!test\-Aliases\-Of\-Yes\-And\-No@{test\-Aliases\-Of\-Yes\-And\-No}}
+\index{test\-Aliases\-Of\-Yes\-And\-No@{test\-Aliases\-Of\-Yes\-And\-No}!gtest_color_test::GTestColorTest@{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test}}
+\subsubsection[{test\-Aliases\-Of\-Yes\-And\-No}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Aliases\-Of\-Yes\-And\-No} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dc/d00/classgtest__color__test_1_1GTestColorTest_ade169e295fc0f24bc4173f09aa7d3c2c}
+\begin{DoxyVerb}Tests using aliases in specifying --gtest_color.\end{DoxyVerb}
+ 
+
+\-Definition at line 115 of file gtest\-\_\-color\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+115 
+116   def testAliasesOfYesAndNo(self):
+117     """Tests using aliases in specifying --gtest_color."""
+118 
+119     self.assert_(UsesColor('dumb', None, 'true'))
+120     self.assert_(UsesColor('dumb', None, 'YES'))
+121     self.assert_(UsesColor('dumb', None, 'T'))
+122     self.assert_(UsesColor('dumb', None, '1'))
+123 
+124     self.assert_(not UsesColor('xterm', None, 'f'))
+125     self.assert_(not UsesColor('xterm', None, 'false'))
+126     self.assert_(not UsesColor('xterm', None, '0'))
+127     self.assert_(not UsesColor('xterm', None, 'unknown'))
+128 
+
+\end{DoxyCode}
+\hypertarget{classgtest__color__test_1_1GTestColorTest_a8bfc2689d97b71ba93bcec69e3ff86f7}{\index{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test@{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test}!test\-Env\-Var\-And\-Flag@{test\-Env\-Var\-And\-Flag}}
+\index{test\-Env\-Var\-And\-Flag@{test\-Env\-Var\-And\-Flag}!gtest_color_test::GTestColorTest@{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test}}
+\subsubsection[{test\-Env\-Var\-And\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Env\-Var\-And\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dc/d00/classgtest__color__test_1_1GTestColorTest_a8bfc2689d97b71ba93bcec69e3ff86f7}
+\begin{DoxyVerb}Tests the case when there are both GTEST_COLOR and --gtest_color.\end{DoxyVerb}
+ 
+
+\-Definition at line 108 of file gtest\-\_\-color\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+108 
+109   def testEnvVarAndFlag(self):
+110     """Tests the case when there are both GTEST_COLOR and --gtest_color."""
+111 
+112     self.assert_(not UsesColor('xterm-color', 'no', 'no'))
+113     self.assert_(UsesColor('dumb', 'no', 'yes'))
+114     self.assert_(UsesColor('xterm-color', 'no', 'auto'))
+
+\end{DoxyCode}
+\hypertarget{classgtest__color__test_1_1GTestColorTest_a0cf830ec33572a754e340dde3a73e6ff}{\index{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test@{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test}!test\-Env\-Var\-Only@{test\-Env\-Var\-Only}}
+\index{test\-Env\-Var\-Only@{test\-Env\-Var\-Only}!gtest_color_test::GTestColorTest@{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test}}
+\subsubsection[{test\-Env\-Var\-Only}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Env\-Var\-Only} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dc/d00/classgtest__color__test_1_1GTestColorTest_a0cf830ec33572a754e340dde3a73e6ff}
+\begin{DoxyVerb}Tests the case when there's GTEST_COLOR but not --gtest_color.\end{DoxyVerb}
+ 
+
+\-Definition at line 97 of file gtest\-\_\-color\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+97 
+98   def testEnvVarOnly(self):
+99     """Tests the case when there's GTEST_COLOR but not --gtest_color."""
+100 
+101     self.assert_(not UsesColor('dumb', 'no', None))
+102     self.assert_(not UsesColor('xterm-color', 'no', None))
+103     if not IS_WINDOWS:
+104       self.assert_(not UsesColor('dumb', 'auto', None))
+105     self.assert_(UsesColor('xterm-color', 'auto', None))
+106     self.assert_(UsesColor('dumb', 'yes', None))
+107     self.assert_(UsesColor('xterm-color', 'yes', None))
+
+\end{DoxyCode}
+\hypertarget{classgtest__color__test_1_1GTestColorTest_a97176c86bc0900df4d92cb233b207f9d}{\index{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test@{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test}!test\-Flag\-Only@{test\-Flag\-Only}}
+\index{test\-Flag\-Only@{test\-Flag\-Only}!gtest_color_test::GTestColorTest@{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test}}
+\subsubsection[{test\-Flag\-Only}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Flag\-Only} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dc/d00/classgtest__color__test_1_1GTestColorTest_a97176c86bc0900df4d92cb233b207f9d}
+\begin{DoxyVerb}Tests the case when there's --gtest_color but not GTEST_COLOR.\end{DoxyVerb}
+ 
+
+\-Definition at line 86 of file gtest\-\_\-color\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+86 
+87   def testFlagOnly(self):
+88     """Tests the case when there's --gtest_color but not GTEST_COLOR."""
+89 
+90     self.assert_(not UsesColor('dumb', None, 'no'))
+91     self.assert_(not UsesColor('xterm-color', None, 'no'))
+92     if not IS_WINDOWS:
+93       self.assert_(not UsesColor('emacs', None, 'auto'))
+94     self.assert_(UsesColor('xterm', None, 'auto'))
+95     self.assert_(UsesColor('dumb', None, 'yes'))
+96     self.assert_(UsesColor('xterm', None, 'yes'))
+
+\end{DoxyCode}
+\hypertarget{classgtest__color__test_1_1GTestColorTest_ac9fed777a27fd73438eac52101d78c36}{\index{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test@{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test}!test\-No\-Env\-Var\-No\-Flag@{test\-No\-Env\-Var\-No\-Flag}}
+\index{test\-No\-Env\-Var\-No\-Flag@{test\-No\-Env\-Var\-No\-Flag}!gtest_color_test::GTestColorTest@{gtest\-\_\-color\-\_\-test\-::\-G\-Test\-Color\-Test}}
+\subsubsection[{test\-No\-Env\-Var\-No\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-No\-Env\-Var\-No\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dc/d00/classgtest__color__test_1_1GTestColorTest_ac9fed777a27fd73438eac52101d78c36}
+\begin{DoxyVerb}Tests the case when there's neither GTEST_COLOR nor --gtest_color.\end{DoxyVerb}
+ 
+
+\-Definition at line 71 of file gtest\-\_\-color\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+71 
+72   def testNoEnvVarNoFlag(self):
+73     """Tests the case when there's neither GTEST_COLOR nor --gtest_color."""
+74 
+75     if not IS_WINDOWS:
+76       self.assert_(not UsesColor('dumb', None, None))
+77       self.assert_(not UsesColor('emacs', None, None))
+78       self.assert_(not UsesColor('xterm-mono', None, None))
+79       self.assert_(not UsesColor('unknown', None, None))
+80       self.assert_(not UsesColor(None, None, None))
+81     self.assert_(UsesColor('linux', None, None))
+82     self.assert_(UsesColor('cygwin', None, None))
+83     self.assert_(UsesColor('xterm', None, None))
+84     self.assert_(UsesColor('xterm-color', None, None))
+85     self.assert_(UsesColor('xterm-256color', None, None))
+
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__color__test_8py}{gtest\-\_\-color\-\_\-test.\-py}\end{DoxyCompactItemize}

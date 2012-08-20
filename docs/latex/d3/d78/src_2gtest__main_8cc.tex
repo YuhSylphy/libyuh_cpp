@@ -1,0 +1,34 @@
+\hypertarget{src_2gtest__main_8cc}{\section{gtest-\/1.6.0/src/gtest\-\_\-main.cc \-File \-Reference}
+\label{d3/d78/src_2gtest__main_8cc}\index{gtest-\/1.\-6.\-0/src/gtest\-\_\-main.\-cc@{gtest-\/1.\-6.\-0/src/gtest\-\_\-main.\-cc}}
+}
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} int \hyperlink{src_2gtest__main_8cc_a7f83bdc516d2cb86e20235d94ddf055a}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{src_2gtest__main_8cc_a7f83bdc516d2cb86e20235d94ddf055a}{\index{src/gtest\-\_\-main.\-cc@{src/gtest\-\_\-main.\-cc}!main@{main}}
+\index{main@{main}!src/gtest_main.cc@{src/gtest\-\_\-main.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{d3/d78/src_2gtest__main_8cc_a7f83bdc516d2cb86e20235d94ddf055a}
+
+
+\-Definition at line 34 of file gtest\-\_\-main.\-cc.
+
+
+\begin{DoxyCode}
+                                           {
+  std::cout << "Running main() from gtest_main.cc\n";
+
+  testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
+\end{DoxyCode}

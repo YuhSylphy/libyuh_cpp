@@ -1,0 +1,98 @@
+\hypertarget{classQuickTest}{\section{\-Quick\-Test \-Class \-Reference}
+\label{dd/df0/classQuickTest}\index{\-Quick\-Test@{\-Quick\-Test}}
+}
+\-Inheritance diagram for \-Quick\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{dd/df0/classQuickTest}
+\end{center}
+\end{figure}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classQuickTest_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\item 
+virtual void \hyperlink{classQuickTest_a870a092058305911f3d42df45dd657e5}{\-Tear\-Down} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+time\-\_\-t \hyperlink{classQuickTest_a146511d2ae2f8b5c118eb262868e9b68}{start\-\_\-time\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 63 of file sample5\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classQuickTest_a901706a587f9ae84df8b2395fbe759cb}{\index{\-Quick\-Test@{\-Quick\-Test}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!QuickTest@{\-Quick\-Test}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{dd/df0/classQuickTest_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a1b06560e0e01a806b92c2386220d0b57}{\-Test}.
+
+
+
+\-Reimplemented in \hyperlink{classQueueTest_a901706a587f9ae84df8b2395fbe759cb}{\-Queue\-Test}, and \hyperlink{classQueueTest_a901706a587f9ae84df8b2395fbe759cb}{\-Queue\-Test}.
+
+
+
+\-Definition at line 67 of file sample5\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    start_time_ = time(NULL);
+  }
+\end{DoxyCode}
+\hypertarget{classQuickTest_a870a092058305911f3d42df45dd657e5}{\index{\-Quick\-Test@{\-Quick\-Test}!\-Tear\-Down@{\-Tear\-Down}}
+\index{\-Tear\-Down@{\-Tear\-Down}!QuickTest@{\-Quick\-Test}}
+\subsubsection[{\-Tear\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Tear\-Down} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{dd/df0/classQuickTest_a870a092058305911f3d42df45dd657e5}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a931587596081ef8178c2b128facb0411}{\-Test}.
+
+
+
+\-Definition at line 73 of file sample5\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+    // Gets the time when the test finishes
+    const time_t end_time = time(NULL);
+
+    // Asserts that the test took no more than ~5 seconds.  Did you
+    // know that you can use assertions in SetUp() and TearDown() as
+    // well?
+    EXPECT_TRUE(end_time - start_time_ <= 5) << "The test took too long.";
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classQuickTest_a146511d2ae2f8b5c118eb262868e9b68}{\index{\-Quick\-Test@{\-Quick\-Test}!start\-\_\-time\-\_\-@{start\-\_\-time\-\_\-}}
+\index{start\-\_\-time\-\_\-@{start\-\_\-time\-\_\-}!QuickTest@{\-Quick\-Test}}
+\subsubsection[{start\-\_\-time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}time\-\_\-t {\bf start\-\_\-time\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{dd/df0/classQuickTest_a146511d2ae2f8b5c118eb262868e9b68}
+
+
+\-Definition at line 84 of file sample5\-\_\-unittest.\-cc.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/samples/\hyperlink{sample5__unittest_8cc}{sample5\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

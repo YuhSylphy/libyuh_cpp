@@ -1,0 +1,47 @@
+\hypertarget{gtest__no__test__unittest_8cc}{\section{gtest-\/1.6.0/test/gtest\-\_\-no\-\_\-test\-\_\-unittest.cc \-File \-Reference}
+\label{de/da4/gtest__no__test__unittest_8cc}\index{gtest-\/1.\-6.\-0/test/gtest\-\_\-no\-\_\-test\-\_\-unittest.\-cc@{gtest-\/1.\-6.\-0/test/gtest\-\_\-no\-\_\-test\-\_\-unittest.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gtest__no__test__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest__no__test__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{gtest\-\_\-no\-\_\-test\-\_\-unittest.\-cc@{gtest\-\_\-no\-\_\-test\-\_\-unittest.\-cc}!main@{main}}
+\index{main@{main}!gtest_no_test_unittest.cc@{gtest\-\_\-no\-\_\-test\-\_\-unittest.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{de/da4/gtest__no__test__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 38 of file gtest\-\_\-no\-\_\-test\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+  testing::InitGoogleTest(&argc, argv);
+
+  // An ad-hoc assertion outside of all tests.
+  //
+  // This serves three purposes:
+  //
+  // 1. It verifies that an ad-hoc assertion can be executed even if
+  //    no test is defined.
+  // 2. It verifies that a failed ad-hoc assertion causes the test
+  //    program to fail.
+  // 3. We had a bug where the XML output won't be generated if an
+  //    assertion is executed before RUN_ALL_TESTS() is called, even
+  //    though --gtest_output=xml is specified.  This makes sure the
+  //    bug is fixed and doesn't regress.
+  EXPECT_EQ(1, 2);
+
+  // The above EXPECT_EQ() should cause RUN_ALL_TESTS() to return non-zero.
+  return RUN_ALL_TESTS() ? 0 : 1;
+}
+\end{DoxyCode}

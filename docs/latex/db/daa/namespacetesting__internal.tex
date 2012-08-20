@@ -1,0 +1,55 @@
+\hypertarget{namespacetesting__internal}{\section{testing\-\_\-internal \-Namespace \-Reference}
+\label{db/daa/namespacetesting__internal}\index{testing\-\_\-internal@{testing\-\_\-internal}}
+}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespacetesting__internal_acaa78655abf2c4f9a18daf4881b75afd}{\-Default\-Print\-Non\-Container\-To} (const \-T \&value,\-::std\-::ostream $\ast$os)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespacetesting__internal_acaa78655abf2c4f9a18daf4881b75afd}{\index{testing\-\_\-internal@{testing\-\_\-internal}!\-Default\-Print\-Non\-Container\-To@{\-Default\-Print\-Non\-Container\-To}}
+\index{\-Default\-Print\-Non\-Container\-To@{\-Default\-Print\-Non\-Container\-To}!testing_internal@{testing\-\_\-internal}}
+\subsubsection[{\-Default\-Print\-Non\-Container\-To}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Default\-Print\-Non\-Container\-To} (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{value, }
+\item[{\-::std\-::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)}}\label{db/daa/namespacetesting__internal_acaa78655abf2c4f9a18daf4881b75afd}
+
+
+\-Definition at line 9403 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                                {
+  // With the following statement, during unqualified name lookup,
+  // testing::internal2::operator<< appears as if it was declared in
+  // the nearest enclosing namespace that contains both
+  // ::testing_internal and ::testing::internal2, i.e. the global
+  // namespace.  For more details, refer to the C++ Standard section
+  // 7.3.4-1 [namespace.udir].  This allows us to fall back onto
+  // testing::internal2::operator<< in case T doesn't come with a <<
+  // operator.
+  //
+  // We cannot write 'using ::testing::internal2::operator<<;', which
+  // gcc 3.3 fails to compile due to a compiler bug.
+  using namespace ::testing::internal2;  // NOLINT
+
+  // Assuming T is defined in namespace foo, in the next statement,
+  // the compiler will consider all of:
+  //
+  //   1. foo::operator<< (thanks to Koenig look-up),
+  //   2. ::operator<< (as the current namespace is enclosed in ::),
+  //   3. testing::internal2::operator<< (thanks to the using statement above).
+  //
+  // The operator<< whose type matches T best will be picked.
+  //
+  // We deliberately allow #2 to be a candidate, as sometimes it's
+  // impossible to define #1 (e.g. when foo is ::std, defining
+  // anything in it is undefined behavior unless you are a compiler
+  // vendor.).
+  *os << value;
+}
+\end{DoxyCode}

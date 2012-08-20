@@ -1,0 +1,114 @@
+\hypertarget{classyuh_1_1fibonacci__range}{\section{fibonacci\-\_\-range$<$ \-Integer $>$ \-Class \-Template \-Reference}
+\label{db/de6/classyuh_1_1fibonacci__range}\index{fibonacci\-\_\-range$<$ Integer $>$@{fibonacci\-\_\-range$<$ Integer $>$}}
+}
+
+
+{\ttfamily \#include $<$fibonacci.\-hpp$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1fibonacci__range_ab3a2681e52208de267de23d86976d5e0}{fibonacci\-\_\-range} (\-Integer first, \-Integer last)
+\item 
+\hyperlink{classyuh_1_1fibonacci__range_aaae77161b33d731f696702b4d23f57ff}{fibonacci\-\_\-range} (\-Integer first)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \*
+\hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator}{range\-\_\-detail\-::fibonacci\-\_\-iterator}\*
+$<$ \-Integer $>$ \hyperlink{classyuh_1_1fibonacci__range_a8d8b78b59079e797d7c2e623de6779b9}{iterator\-\_\-t}
+\item 
+typedef boost\-::iterator\-\_\-range\*
+$<$ \hyperlink{classyuh_1_1fibonacci__range_a8d8b78b59079e797d7c2e623de6779b9}{iterator\-\_\-t} $>$ \hyperlink{classyuh_1_1fibonacci__range_a9d51b0fc63206906184824c5b08403b2}{base\-\_\-t}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename \-Integer$>$class yuh\-::fibonacci\-\_\-range$<$ Integer $>$}
+
+フィボナッチ数列の範囲 無限数列・有限数列どちらも表現可能 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Integer} & フィボナッチ数を表現する整数型 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 163 of file fibonacci.\-hpp.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classyuh_1_1fibonacci__range_a9d51b0fc63206906184824c5b08403b2}{\index{yuh\-::fibonacci\-\_\-range@{yuh\-::fibonacci\-\_\-range}!base\-\_\-t@{base\-\_\-t}}
+\index{base\-\_\-t@{base\-\_\-t}!yuh::fibonacci_range@{yuh\-::fibonacci\-\_\-range}}
+\subsubsection[{base\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::iterator\-\_\-range$<${\bf iterator\-\_\-t}$>$ {\bf base\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{db/de6/classyuh_1_1fibonacci__range_a9d51b0fc63206906184824c5b08403b2}
+基底クラス(iterator\-\_\-range) 
+
+\-Definition at line 173 of file fibonacci.\-hpp.
+
+\hypertarget{classyuh_1_1fibonacci__range_a8d8b78b59079e797d7c2e623de6779b9}{\index{yuh\-::fibonacci\-\_\-range@{yuh\-::fibonacci\-\_\-range}!iterator\-\_\-t@{iterator\-\_\-t}}
+\index{iterator\-\_\-t@{iterator\-\_\-t}!yuh::fibonacci_range@{yuh\-::fibonacci\-\_\-range}}
+\subsubsection[{iterator\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf range\-\_\-detail\-::fibonacci\-\_\-iterator}$<$\-Integer$>$ {\bf iterator\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{db/de6/classyuh_1_1fibonacci__range_a8d8b78b59079e797d7c2e623de6779b9}
+イテレータの型 
+
+\-Definition at line 169 of file fibonacci.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1fibonacci__range_ab3a2681e52208de267de23d86976d5e0}{\index{yuh\-::fibonacci\-\_\-range@{yuh\-::fibonacci\-\_\-range}!fibonacci\-\_\-range@{fibonacci\-\_\-range}}
+\index{fibonacci\-\_\-range@{fibonacci\-\_\-range}!yuh::fibonacci_range@{yuh\-::fibonacci\-\_\-range}}
+\subsubsection[{fibonacci\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fibonacci\-\_\-range} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{first, }
+\item[{\-Integer}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{db/de6/classyuh_1_1fibonacci__range_ab3a2681e52208de267de23d86976d5e0}
+有限フィボナッチ数列 index指定 \mbox{[}first, last) 
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+{\em last} & 範囲の終わり(含まない) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, last)のフィボナッチ数列a\-\_\-n 
+\end{DoxyReturn}
+
+
+\-Definition at line 181 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+            : base_t(iterator_t(first), iterator_t(last))
+        { }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1fibonacci__range_aaae77161b33d731f696702b4d23f57ff}{\index{yuh\-::fibonacci\-\_\-range@{yuh\-::fibonacci\-\_\-range}!fibonacci\-\_\-range@{fibonacci\-\_\-range}}
+\index{fibonacci\-\_\-range@{fibonacci\-\_\-range}!yuh::fibonacci_range@{yuh\-::fibonacci\-\_\-range}}
+\subsubsection[{fibonacci\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fibonacci\-\_\-range} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{first}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{db/de6/classyuh_1_1fibonacci__range_aaae77161b33d731f696702b4d23f57ff}
+無限フィボナッチ数列 index指定 \mbox{[}first, \-Inf) 単純にalgorithmに渡したりすると無限ループなので注意 
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, \-Inf)のフィボナッチ数列a\-\_\-n 
+\end{DoxyReturn}
+
+
+\-Definition at line 190 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+            : base_t(iterator_t(first), iterator_t())
+        { }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{fibonacci_8hpp}{fibonacci.\-hpp}\end{DoxyCompactItemize}

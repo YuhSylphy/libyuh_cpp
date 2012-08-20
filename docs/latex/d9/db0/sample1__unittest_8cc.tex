@@ -1,0 +1,164 @@
+\hypertarget{sample1__unittest_8cc}{\section{gtest-\/1.6.0/samples/sample1\-\_\-unittest.cc \-File \-Reference}
+\label{d9/db0/sample1__unittest_8cc}\index{gtest-\/1.\-6.\-0/samples/sample1\-\_\-unittest.\-cc@{gtest-\/1.\-6.\-0/samples/sample1\-\_\-unittest.\-cc}}
+}
+{\ttfamily \#include $<$limits.\-h$>$}\*
+{\ttfamily \#include \char`\"{}sample1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sample1__unittest_8cc_a9f39ae0b3ba1a58dc77bb6c7bf2fcd8e}{\-T\-E\-S\-T} (\-Factorial\-Test, \-Negative)
+\item 
+\hyperlink{sample1__unittest_8cc_aed37f025eb84edfd0edc9e29b633877e}{\-T\-E\-S\-T} (\-Factorial\-Test, \-Zero)
+\item 
+\hyperlink{sample1__unittest_8cc_a006ab5cccd5c3e744db1542a75479b72}{\-T\-E\-S\-T} (\-Factorial\-Test, \-Positive)
+\item 
+\hyperlink{sample1__unittest_8cc_a554b5f4a4ab160915f3a74c558f85d6e}{\-T\-E\-S\-T} (\-Is\-Prime\-Test, \-Negative)
+\item 
+\hyperlink{sample1__unittest_8cc_a01c6e03a88a1a9091d5c27994b81d401}{\-T\-E\-S\-T} (\-Is\-Prime\-Test, \-Trivial)
+\item 
+\hyperlink{sample1__unittest_8cc_a884e065fa25f1441f9fde23e0eb2067b}{\-T\-E\-S\-T} (\-Is\-Prime\-Test, \-Positive)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{sample1__unittest_8cc_a9f39ae0b3ba1a58dc77bb6c7bf2fcd8e}{\index{sample1\-\_\-unittest.\-cc@{sample1\-\_\-unittest.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!sample1_unittest.cc@{sample1\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Factorial\-Test}]{, }
+\item[{\-Negative}]{}
+\end{DoxyParamCaption}
+)}}\label{d9/db0/sample1__unittest_8cc_a9f39ae0b3ba1a58dc77bb6c7bf2fcd8e}
+
+
+\-Definition at line 79 of file sample1\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                              {
+  // This test is named "Negative", and belongs to the "FactorialTest"
+  // test case.
+  EXPECT_EQ(1, Factorial(-5));
+  EXPECT_EQ(1, Factorial(-1));
+  EXPECT_TRUE(Factorial(-10) > 0);
+
+  // <TechnicalDetails>
+  //
+  // EXPECT_EQ(expected, actual) is the same as
+  //
+  //   EXPECT_TRUE((expected) == (actual))
+  //
+  // except that it will print both the expected value and the actual
+  // value when the assertion fails.  This is very helpful for
+  // debugging.  Therefore in this case EXPECT_EQ is preferred.
+  //
+  // On the other hand, EXPECT_TRUE accepts any Boolean expression,
+  // and is thus more general.
+  //
+  // </TechnicalDetails>
+}
+\end{DoxyCode}
+\hypertarget{sample1__unittest_8cc_aed37f025eb84edfd0edc9e29b633877e}{\index{sample1\-\_\-unittest.\-cc@{sample1\-\_\-unittest.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!sample1_unittest.cc@{sample1\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Factorial\-Test}]{, }
+\item[{\-Zero}]{}
+\end{DoxyParamCaption}
+)}}\label{d9/db0/sample1__unittest_8cc_aed37f025eb84edfd0edc9e29b633877e}
+
+
+\-Definition at line 103 of file sample1\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+  EXPECT_EQ(1, Factorial(0));
+}
+\end{DoxyCode}
+\hypertarget{sample1__unittest_8cc_a006ab5cccd5c3e744db1542a75479b72}{\index{sample1\-\_\-unittest.\-cc@{sample1\-\_\-unittest.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!sample1_unittest.cc@{sample1\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Factorial\-Test}]{, }
+\item[{\-Positive}]{}
+\end{DoxyParamCaption}
+)}}\label{d9/db0/sample1__unittest_8cc_a006ab5cccd5c3e744db1542a75479b72}
+
+
+\-Definition at line 108 of file sample1\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                              {
+  EXPECT_EQ(1, Factorial(1));
+  EXPECT_EQ(2, Factorial(2));
+  EXPECT_EQ(6, Factorial(3));
+  EXPECT_EQ(40320, Factorial(8));
+}
+\end{DoxyCode}
+\hypertarget{sample1__unittest_8cc_a554b5f4a4ab160915f3a74c558f85d6e}{\index{sample1\-\_\-unittest.\-cc@{sample1\-\_\-unittest.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!sample1_unittest.cc@{sample1\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Is\-Prime\-Test}]{, }
+\item[{\-Negative}]{}
+\end{DoxyParamCaption}
+)}}\label{d9/db0/sample1__unittest_8cc_a554b5f4a4ab160915f3a74c558f85d6e}
+
+
+\-Definition at line 119 of file sample1\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                            {
+  // This test belongs to the IsPrimeTest test case.
+
+  EXPECT_FALSE(IsPrime(-1));
+  EXPECT_FALSE(IsPrime(-2));
+  EXPECT_FALSE(IsPrime(INT_MIN));
+}
+\end{DoxyCode}
+\hypertarget{sample1__unittest_8cc_a01c6e03a88a1a9091d5c27994b81d401}{\index{sample1\-\_\-unittest.\-cc@{sample1\-\_\-unittest.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!sample1_unittest.cc@{sample1\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Is\-Prime\-Test}]{, }
+\item[{\-Trivial}]{}
+\end{DoxyParamCaption}
+)}}\label{d9/db0/sample1__unittest_8cc_a01c6e03a88a1a9091d5c27994b81d401}
+
+
+\-Definition at line 128 of file sample1\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                           {
+  EXPECT_FALSE(IsPrime(0));
+  EXPECT_FALSE(IsPrime(1));
+  EXPECT_TRUE(IsPrime(2));
+  EXPECT_TRUE(IsPrime(3));
+}
+\end{DoxyCode}
+\hypertarget{sample1__unittest_8cc_a884e065fa25f1441f9fde23e0eb2067b}{\index{sample1\-\_\-unittest.\-cc@{sample1\-\_\-unittest.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!sample1_unittest.cc@{sample1\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Is\-Prime\-Test}]{, }
+\item[{\-Positive}]{}
+\end{DoxyParamCaption}
+)}}\label{d9/db0/sample1__unittest_8cc_a884e065fa25f1441f9fde23e0eb2067b}
+
+
+\-Definition at line 136 of file sample1\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                            {
+  EXPECT_FALSE(IsPrime(4));
+  EXPECT_TRUE(IsPrime(5));
+  EXPECT_FALSE(IsPrime(6));
+  EXPECT_TRUE(IsPrime(23));
+}
+\end{DoxyCode}

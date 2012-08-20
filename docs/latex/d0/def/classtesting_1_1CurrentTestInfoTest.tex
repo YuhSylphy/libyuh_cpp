@@ -1,0 +1,80 @@
+\hypertarget{classtesting_1_1CurrentTestInfoTest}{\section{\-Current\-Test\-Info\-Test \-Class \-Reference}
+\label{d0/def/classtesting_1_1CurrentTestInfoTest}\index{\-Current\-Test\-Info\-Test@{\-Current\-Test\-Info\-Test}}
+}
+\-Inheritance diagram for \-Current\-Test\-Info\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/def/classtesting_1_1CurrentTestInfoTest}
+\end{center}
+\end{figure}
+\subsection*{\-Static \-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtesting_1_1CurrentTestInfoTest_aad8181b222f27240e9f07dcb6e620fa3}{\-Set\-Up\-Test\-Case} ()
+\item 
+static void \hyperlink{classtesting_1_1CurrentTestInfoTest_aaff0dc66f57f643a49ad3dd6bcb56916}{\-Tear\-Down\-Test\-Case} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 6157 of file gtest\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1CurrentTestInfoTest_aad8181b222f27240e9f07dcb6e620fa3}{\index{testing\-::\-Current\-Test\-Info\-Test@{testing\-::\-Current\-Test\-Info\-Test}!\-Set\-Up\-Test\-Case@{\-Set\-Up\-Test\-Case}}
+\index{\-Set\-Up\-Test\-Case@{\-Set\-Up\-Test\-Case}!testing::CurrentTestInfoTest@{testing\-::\-Current\-Test\-Info\-Test}}
+\subsubsection[{\-Set\-Up\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Set\-Up\-Test\-Case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}\label{d0/def/classtesting_1_1CurrentTestInfoTest_aad8181b222f27240e9f07dcb6e620fa3}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_aad8181b222f27240e9f07dcb6e620fa3}{\-Test}.
+
+
+
+\-Definition at line 6161 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                              {
+    // There should be no tests running at this point.
+    const TestInfo* test_info =
+      UnitTest::GetInstance()->current_test_info();
+    EXPECT_TRUE(test_info == NULL)
+        << "There should be no tests running at this point.";
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1CurrentTestInfoTest_aaff0dc66f57f643a49ad3dd6bcb56916}{\index{testing\-::\-Current\-Test\-Info\-Test@{testing\-::\-Current\-Test\-Info\-Test}!\-Tear\-Down\-Test\-Case@{\-Tear\-Down\-Test\-Case}}
+\index{\-Tear\-Down\-Test\-Case@{\-Tear\-Down\-Test\-Case}!testing::CurrentTestInfoTest@{testing\-::\-Current\-Test\-Info\-Test}}
+\subsubsection[{\-Tear\-Down\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Tear\-Down\-Test\-Case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}\label{d0/def/classtesting_1_1CurrentTestInfoTest_aaff0dc66f57f643a49ad3dd6bcb56916}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_aaff0dc66f57f643a49ad3dd6bcb56916}{\-Test}.
+
+
+
+\-Definition at line 6171 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                 {
+    const TestInfo* test_info =
+      UnitTest::GetInstance()->current_test_info();
+    EXPECT_TRUE(test_info == NULL)
+        << "There should be no tests running at this point.";
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__unittest_8cc}{gtest\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

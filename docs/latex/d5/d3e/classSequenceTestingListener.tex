@@ -1,0 +1,202 @@
+\hypertarget{classSequenceTestingListener}{\section{\-Sequence\-Testing\-Listener \-Class \-Reference}
+\label{d5/d3e/classSequenceTestingListener}\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}}
+}
+\-Inheritance diagram for \-Sequence\-Testing\-Listener\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d5/d3e/classSequenceTestingListener}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSequenceTestingListener_a77ba82d3b8812a4269d3aec36fd0d4a6}{\-Sequence\-Testing\-Listener} (std\-::vector$<$ \hyperlink{classtesting_1_1internal_1_1String}{\-String} $>$ $\ast$vector, const char $\ast$id)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classSequenceTestingListener_a9d43d6e5c4c37ade824998de2d83bd20}{\-On\-Test\-Program\-Start} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&)
+\item 
+virtual void \hyperlink{classSequenceTestingListener_a79232f629150d6a1e560f6729271e729}{\-On\-Test\-Program\-End} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&)
+\item 
+virtual void \hyperlink{classSequenceTestingListener_abd0cb3cd389369f180bed8a9f855d30f}{\-On\-Test\-Iteration\-Start} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&, int)
+\item 
+virtual void \hyperlink{classSequenceTestingListener_ae2104e936a08019242b519d2274237eb}{\-On\-Test\-Iteration\-End} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&, int)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classSequenceTestingListener_ac55da7d68e30ecf604f43d5562466e08}{\-Get\-Event\-Description} (const char $\ast$method)
+\item 
+\hyperlink{classSequenceTestingListener_aadfe45b6e67202c6c5937b573d5dadb9}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classSequenceTestingListener}{\-Sequence\-Testing\-Listener})
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{classtesting_1_1internal_1_1String}{\-String} $>$ $\ast$ \hyperlink{classSequenceTestingListener_acf67cca6269f360d7f600dc694c9b670}{vector\-\_\-}
+\item 
+const char $\ast$const \hyperlink{classSequenceTestingListener_aa6350be3210e8039dbb157ef31c421df}{id\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 6693 of file gtest\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classSequenceTestingListener_a77ba82d3b8812a4269d3aec36fd0d4a6}{\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}!\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}}
+\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}!SequenceTestingListener@{\-Sequence\-Testing\-Listener}}
+\subsubsection[{\-Sequence\-Testing\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Sequence\-Testing\-Listener} (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf \-String} $>$ $\ast$}]{vector, }
+\item[{const char $\ast$}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d3e/classSequenceTestingListener_a77ba82d3b8812a4269d3aec36fd0d4a6}
+
+
+\-Definition at line 6695 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+      : vector_(vector), id_(id) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classSequenceTestingListener_ac55da7d68e30ecf604f43d5562466e08}{\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}!\-Get\-Event\-Description@{\-Get\-Event\-Description}}
+\index{\-Get\-Event\-Description@{\-Get\-Event\-Description}!SequenceTestingListener@{\-Sequence\-Testing\-Listener}}
+\subsubsection[{\-Get\-Event\-Description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf \-Get\-Event\-Description} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{method}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d5/d3e/classSequenceTestingListener_ac55da7d68e30ecf604f43d5562466e08}
+
+
+\-Definition at line 6718 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                 {
+    Message message;
+    message << id_ << "." << method;
+    return message.GetString();
+  }
+\end{DoxyCode}
+\hypertarget{classSequenceTestingListener_aadfe45b6e67202c6c5937b573d5dadb9}{\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!SequenceTestingListener@{\-Sequence\-Testing\-Listener}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Sequence\-Testing\-Listener}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/d3e/classSequenceTestingListener_aadfe45b6e67202c6c5937b573d5dadb9}
+\hypertarget{classSequenceTestingListener_ae2104e936a08019242b519d2274237eb}{\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}!\-On\-Test\-Iteration\-End@{\-On\-Test\-Iteration\-End}}
+\index{\-On\-Test\-Iteration\-End@{\-On\-Test\-Iteration\-End}!SequenceTestingListener@{\-Sequence\-Testing\-Listener}}
+\subsubsection[{\-On\-Test\-Iteration\-End}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Iteration\-End} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d5/d3e/classSequenceTestingListener_ae2104e936a08019242b519d2274237eb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1EmptyTestEventListener_ae2104e936a08019242b519d2274237eb}{\-Empty\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 6712 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                         {
+    vector_->push_back(GetEventDescription("OnTestIterationEnd"));
+  }
+\end{DoxyCode}
+\hypertarget{classSequenceTestingListener_abd0cb3cd389369f180bed8a9f855d30f}{\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}!\-On\-Test\-Iteration\-Start@{\-On\-Test\-Iteration\-Start}}
+\index{\-On\-Test\-Iteration\-Start@{\-On\-Test\-Iteration\-Start}!SequenceTestingListener@{\-Sequence\-Testing\-Listener}}
+\subsubsection[{\-On\-Test\-Iteration\-Start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Iteration\-Start} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d5/d3e/classSequenceTestingListener_abd0cb3cd389369f180bed8a9f855d30f}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1EmptyTestEventListener_abd0cb3cd389369f180bed8a9f855d30f}{\-Empty\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 6707 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                           {
+    vector_->push_back(GetEventDescription("OnTestIterationStart"));
+  }
+\end{DoxyCode}
+\hypertarget{classSequenceTestingListener_a79232f629150d6a1e560f6729271e729}{\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}!\-On\-Test\-Program\-End@{\-On\-Test\-Program\-End}}
+\index{\-On\-Test\-Program\-End@{\-On\-Test\-Program\-End}!SequenceTestingListener@{\-Sequence\-Testing\-Listener}}
+\subsubsection[{\-On\-Test\-Program\-End}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Program\-End} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d5/d3e/classSequenceTestingListener_a79232f629150d6a1e560f6729271e729}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1EmptyTestEventListener_a79232f629150d6a1e560f6729271e729}{\-Empty\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 6703 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                   {
+    vector_->push_back(GetEventDescription("OnTestProgramEnd"));
+  }
+\end{DoxyCode}
+\hypertarget{classSequenceTestingListener_a9d43d6e5c4c37ade824998de2d83bd20}{\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}!\-On\-Test\-Program\-Start@{\-On\-Test\-Program\-Start}}
+\index{\-On\-Test\-Program\-Start@{\-On\-Test\-Program\-Start}!SequenceTestingListener@{\-Sequence\-Testing\-Listener}}
+\subsubsection[{\-On\-Test\-Program\-Start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Program\-Start} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d5/d3e/classSequenceTestingListener_a9d43d6e5c4c37ade824998de2d83bd20}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1EmptyTestEventListener_a9d43d6e5c4c37ade824998de2d83bd20}{\-Empty\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 6699 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                     {
+    vector_->push_back(GetEventDescription("OnTestProgramStart"));
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classSequenceTestingListener_aa6350be3210e8039dbb157ef31c421df}{\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}!id\-\_\-@{id\-\_\-}}
+\index{id\-\_\-@{id\-\_\-}!SequenceTestingListener@{\-Sequence\-Testing\-Listener}}
+\subsubsection[{id\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ const {\bf id\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/d3e/classSequenceTestingListener_aa6350be3210e8039dbb157ef31c421df}
+
+
+\-Definition at line 6725 of file gtest\-\_\-unittest.\-cc.
+
+\hypertarget{classSequenceTestingListener_acf67cca6269f360d7f600dc694c9b670}{\index{\-Sequence\-Testing\-Listener@{\-Sequence\-Testing\-Listener}!vector\-\_\-@{vector\-\_\-}}
+\index{vector\-\_\-@{vector\-\_\-}!SequenceTestingListener@{\-Sequence\-Testing\-Listener}}
+\subsubsection[{vector\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf \-String}$>$$\ast$ {\bf vector\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/d3e/classSequenceTestingListener_acf67cca6269f360d7f600dc694c9b670}
+
+
+\-Definition at line 6724 of file gtest\-\_\-unittest.\-cc.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__unittest_8cc}{gtest\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

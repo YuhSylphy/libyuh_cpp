@@ -1,0 +1,342 @@
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator}{\section{fibonacci\-\_\-iterator$<$ \-Integer $>$ \-Class \-Template \-Reference}
+\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator}\index{fibonacci\-\_\-iterator$<$ Integer $>$@{fibonacci\-\_\-iterator$<$ Integer $>$}}
+}
+
+
+{\ttfamily \#include $<$fibonacci.\-hpp$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef base\-\_\-t\-::value\-\_\-type \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type}
+\item 
+typedef base\-\_\-t\-::difference\-\_\-type \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_a9ac6039762e1b262cecb98589ffc1d75}{difference\-\_\-type}
+\item 
+typedef base\-\_\-t\-::reference \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_aa5d67140d1557795cc6c30a2849d4e05}{reference}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_a3ff526e1378fe7cd1b2cf306e9bfbcbd}{fibonacci\-\_\-iterator} ()
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_a78ff832f7e7584465406a979f7ae91e1}{fibonacci\-\_\-iterator} (\hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type} a0, \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type} a1)
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_a45c40764a3e5a2bfeeaf8c4c3f4b36de}{fibonacci\-\_\-iterator} (size\-\_\-t index)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_acc92d21c640d472b2a076ccaee3a4cbf}{nth\-\_\-fibonacci} (size\-\_\-t n)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::iterator\-\_\-facade\*
+$<$ \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator}{fibonacci\-\_\-iterator}$<$ \-Integer $>$\*
+, \-Integer, \*
+boost\-::bidirectional\-\_\-traversal\-\_\-tag, \*
+\-Integer, std\-::ptrdiff\-\_\-t $>$ \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_a81abbaeb18ba3b07e8a00e7e8d66979f}{base\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_aeb2624c7a86b765725fd80cd426e147d}{increment} ()
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_af998f1201f6ff5160003144e5818b8ba}{decrement} ()
+\item 
+bool \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_a93ee330d72c3d94165f81d2f039cbca4}{equal} (const \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator}{fibonacci\-\_\-iterator} \&rhs) const 
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_aa5d67140d1557795cc6c30a2849d4e05}{reference} \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_a1b739c629ff6d9f19e13216adc65a999}{dereference} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_a188fdb4f867cf1bd468eca769d02e4ba}{a0\-\_\-}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_ab72f8fd5789483ff52778966e56e0929}{a1\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator_a986bf0deaa7559f361d03122eeea4c86}{\-::boost\-::iterator\-\_\-core\-\_\-access}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename Integer$>$class yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator$<$ Integer $>$}
+
+フィボナッチ数列を走査するイテレータ 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Integer} & フィボナッチ数を表現する整数型 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 18 of file fibonacci.\-hpp.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_a81abbaeb18ba3b07e8a00e7e8d66979f}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!base\-\_\-t@{base\-\_\-t}}
+\index{base\-\_\-t@{base\-\_\-t}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{base\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::iterator\-\_\-facade$<$ {\bf fibonacci\-\_\-iterator}$<$\-Integer$>$, \-Integer, boost\-::bidirectional\-\_\-traversal\-\_\-tag, \-Integer, std\-::ptrdiff\-\_\-t $>$ {\bf base\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_a81abbaeb18ba3b07e8a00e7e8d66979f}
+基底クラス(iterator\-\_\-facade) 
+
+\-Definition at line 36 of file fibonacci.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_a9ac6039762e1b262cecb98589ffc1d75}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!difference\-\_\-type@{difference\-\_\-type}}
+\index{difference\-\_\-type@{difference\-\_\-type}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{difference\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::difference\-\_\-type {\bf difference\-\_\-type}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_a9ac6039762e1b262cecb98589ffc1d75}
+イテレータの距離を示す型 
+
+\-Definition at line 46 of file fibonacci.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_aa5d67140d1557795cc6c30a2849d4e05}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!reference@{reference}}
+\index{reference@{reference}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::reference {\bf reference}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_aa5d67140d1557795cc6c30a2849d4e05}
+参照を剥がした際の型 
+
+\-Definition at line 50 of file fibonacci.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!value\-\_\-type@{value\-\_\-type}}
+\index{value\-\_\-type@{value\-\_\-type}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::value\-\_\-type {\bf value\-\_\-type}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}
+渡された値型 
+
+\-Definition at line 42 of file fibonacci.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_a3ff526e1378fe7cd1b2cf306e9bfbcbd}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!fibonacci\-\_\-iterator@{fibonacci\-\_\-iterator}}
+\index{fibonacci\-\_\-iterator@{fibonacci\-\_\-iterator}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{fibonacci\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fibonacci\-\_\-iterator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_a3ff526e1378fe7cd1b2cf306e9bfbcbd}
+無限範囲終端イテレータ用
+
+前後どちらに動かしても変化しない 
+
+\-Definition at line 57 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+: a0_(0), a1_(0){}
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_a78ff832f7e7584465406a979f7ae91e1}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!fibonacci\-\_\-iterator@{fibonacci\-\_\-iterator}}
+\index{fibonacci\-\_\-iterator@{fibonacci\-\_\-iterator}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{fibonacci\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fibonacci\-\_\-iterator} (
+\begin{DoxyParamCaption}
+\item[{{\bf value\-\_\-type}}]{a0, }
+\item[{{\bf value\-\_\-type}}]{a1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_a78ff832f7e7584465406a979f7ae91e1}
+内部表現の値を直接指定する
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em a0} & イテレータが示すフィボナッチ数そのもの \\
+\hline
+{\em a1} & この次のイテレータが示すべきフィボナッチ数 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 64 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+                                                            : 
+                a0_(a0), a1_(a1) {}
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_a45c40764a3e5a2bfeeaf8c4c3f4b36de}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!fibonacci\-\_\-iterator@{fibonacci\-\_\-iterator}}
+\index{fibonacci\-\_\-iterator@{fibonacci\-\_\-iterator}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{fibonacci\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fibonacci\-\_\-iterator} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_a45c40764a3e5a2bfeeaf8c4c3f4b36de}
+指定インデックスのフィボナッチ数を示す
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em index} & このイテレータが示すフィボナッチ数の添字 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 71 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+                : a0_(nth_fibonacci( index )),
+                  a1_(nth_fibonacci( index + 1 ))
+                {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_af998f1201f6ff5160003144e5818b8ba}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!decrement@{decrement}}
+\index{decrement@{decrement}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{decrement}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf decrement} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_af998f1201f6ff5160003144e5818b8ba}
+operator-\/-\/で呼ばれる 
+
+\-Definition at line 113 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                const auto t = a0_;
+                a0_ = a1_ - a0_;
+                a1_ = t;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_a1b739c629ff6d9f19e13216adc65a999}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!dereference@{dereference}}
+\index{dereference@{dereference}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{dereference}]{\setlength{\rightskip}{0pt plus 5cm}{\bf reference} {\bf dereference} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_a1b739c629ff6d9f19e13216adc65a999}
+参照剥がし
+
+\begin{DoxyReturn}{\-Returns}
+このイテレータが指すフィボナッチ数 
+\end{DoxyReturn}
+
+
+\-Definition at line 136 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return a0_;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_a93ee330d72c3d94165f81d2f039cbca4}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!equal@{equal}}
+\index{equal@{equal}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{equal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf equal} (
+\begin{DoxyParamCaption}
+\item[{const {\bf fibonacci\-\_\-iterator}$<$ \-Integer $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_a93ee330d72c3d94165f81d2f039cbca4}
+等値チェック
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & operator==の右辺に取る値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+内部表現が等しければ真 
+\end{DoxyReturn}
+
+
+\-Definition at line 126 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return a0_ == rhs.a0_ && a1_ == rhs.a1_;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_aeb2624c7a86b765725fd80cd426e147d}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!increment@{increment}}
+\index{increment@{increment}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{increment}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf increment} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_aeb2624c7a86b765725fd80cd426e147d}
+operator++で呼ばれる 
+
+\-Definition at line 103 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                const auto t = a1_;
+                a1_ = a0_ + a1_;
+                a0_ = t;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_acc92d21c640d472b2a076ccaee3a4cbf}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!nth\-\_\-fibonacci@{nth\-\_\-fibonacci}}
+\index{nth\-\_\-fibonacci@{nth\-\_\-fibonacci}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{nth\-\_\-fibonacci}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf value\-\_\-type} {\bf nth\-\_\-fibonacci} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_acc92d21c640d472b2a076ccaee3a4cbf}
+n番目のフィボナッチ数を返す 0から0,1,1,2,3,5,...
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em n} & フィボナッチ数a\-\_\-nの添字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+フィボナッチ数a\-\_\-n 
+\end{DoxyReturn}
+
+
+\-Definition at line 83 of file fibonacci.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                if(n <= 0) return 0;
+                if(n <= 2) return 1;
+
+                static const auto sqrt5 = std::sqrt(5);
+                const auto a = (1 + sqrt5) / 2;
+                const auto b = (1 - sqrt5) / 2;
+
+                return static_cast<value_type>(
+                    std::round(
+                        ( std::pow(a, n) - std::pow(b, n) ) / sqrt5 
+                        )
+                    );
+            }
+\end{DoxyCode}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_a986bf0deaa7559f361d03122eeea4c86}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}}
+\index{\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{\-::boost\-::iterator\-\_\-core\-\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}friend class \-::boost\-::iterator\-\_\-core\-\_\-access\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_a986bf0deaa7559f361d03122eeea4c86}
+for iterator\-\_\-facade 
+
+\-Definition at line 144 of file fibonacci.\-hpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_a188fdb4f867cf1bd468eca769d02e4ba}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!a0\-\_\-@{a0\-\_\-}}
+\index{a0\-\_\-@{a0\-\_\-}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{a0\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\-\_\-type} {\bf a0\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_a188fdb4f867cf1bd468eca769d02e4ba}
+イテレータが示すフィボナッチ数そのもの 
+
+\-Definition at line 148 of file fibonacci.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1fibonacci__iterator_ab72f8fd5789483ff52778966e56e0929}{\index{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}!a1\-\_\-@{a1\-\_\-}}
+\index{a1\-\_\-@{a1\-\_\-}!yuh::range_detail::fibonacci_iterator@{yuh\-::range\-\_\-detail\-::fibonacci\-\_\-iterator}}
+\subsubsection[{a1\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\-\_\-type} {\bf a1\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator_ab72f8fd5789483ff52778966e56e0929}
+
+\begin{DoxyParams}{\-Parameters}
+{\em a1} & この次のイテレータが示すべきフィボナッチ数 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 152 of file fibonacci.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{fibonacci_8hpp}{fibonacci.\-hpp}\end{DoxyCompactItemize}

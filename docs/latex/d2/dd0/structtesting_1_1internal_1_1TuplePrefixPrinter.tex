@@ -1,0 +1,73 @@
+\hypertarget{structtesting_1_1internal_1_1TuplePrefixPrinter}{\section{\-Tuple\-Prefix\-Printer$<$ \-N $>$ \-Struct \-Template \-Reference}
+\label{d2/dd0/structtesting_1_1internal_1_1TuplePrefixPrinter}\index{\-Tuple\-Prefix\-Printer$<$ N $>$@{\-Tuple\-Prefix\-Printer$<$ N $>$}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Tuple $>$ }\\static void \hyperlink{structtesting_1_1internal_1_1TuplePrefixPrinter_a471ff2966d5382e964d52f9ad0381c0b}{\-Print\-Prefix\-To} (const \-Tuple \&t,\-::std\-::ostream $\ast$os)
+\item 
+{\footnotesize template$<$typename Tuple $>$ }\\static void \hyperlink{structtesting_1_1internal_1_1TuplePrefixPrinter_a74cfd757d88ad213bcb8270b0e91a305}{\-Terse\-Print\-Prefix\-To\-Strings} (const \-Tuple \&t, \hyperlink{namespacetesting_1_1internal_a6d618e88721d4c38cbecabe0d2e8341c}{\-Strings} $\ast$strings)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$size\-\_\-t \-N$>$struct testing\-::internal\-::\-Tuple\-Prefix\-Printer$<$ N $>$}
+
+
+
+\-Definition at line 9897 of file gtest.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{structtesting_1_1internal_1_1TuplePrefixPrinter_a471ff2966d5382e964d52f9ad0381c0b}{\index{testing\-::internal\-::\-Tuple\-Prefix\-Printer@{testing\-::internal\-::\-Tuple\-Prefix\-Printer}!\-Print\-Prefix\-To@{\-Print\-Prefix\-To}}
+\index{\-Print\-Prefix\-To@{\-Print\-Prefix\-To}!testing::internal::TuplePrefixPrinter@{testing\-::internal\-::\-Tuple\-Prefix\-Printer}}
+\subsubsection[{\-Print\-Prefix\-To}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Print\-Prefix\-To} (
+\begin{DoxyParamCaption}
+\item[{const \-Tuple \&}]{t, }
+\item[{\-::std\-::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d2/dd0/structtesting_1_1internal_1_1TuplePrefixPrinter_a471ff2966d5382e964d52f9ad0381c0b}
+
+
+\-Definition at line 9900 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                            {
+    TuplePrefixPrinter<N - 1>::PrintPrefixTo(t, os);
+    *os << ", ";
+    UniversalPrinter<typename ::std::tr1::tuple_element<N - 1, Tuple>::type>
+        ::Print(::std::tr1::get<N - 1>(t), os);
+  }
+\end{DoxyCode}
+\hypertarget{structtesting_1_1internal_1_1TuplePrefixPrinter_a74cfd757d88ad213bcb8270b0e91a305}{\index{testing\-::internal\-::\-Tuple\-Prefix\-Printer@{testing\-::internal\-::\-Tuple\-Prefix\-Printer}!\-Terse\-Print\-Prefix\-To\-Strings@{\-Terse\-Print\-Prefix\-To\-Strings}}
+\index{\-Terse\-Print\-Prefix\-To\-Strings@{\-Terse\-Print\-Prefix\-To\-Strings}!testing::internal::TuplePrefixPrinter@{testing\-::internal\-::\-Tuple\-Prefix\-Printer}}
+\subsubsection[{\-Terse\-Print\-Prefix\-To\-Strings}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Terse\-Print\-Prefix\-To\-Strings} (
+\begin{DoxyParamCaption}
+\item[{const \-Tuple \&}]{t, }
+\item[{{\bf \-Strings} $\ast$}]{strings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d2/dd0/structtesting_1_1internal_1_1TuplePrefixPrinter_a74cfd757d88ad213bcb8270b0e91a305}
+
+
+\-Definition at line 9910 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                                          {
+    TuplePrefixPrinter<N - 1>::TersePrintPrefixToStrings(t, strings);
+    ::std::stringstream ss;
+    UniversalTersePrint(::std::tr1::get<N - 1>(t), &ss);
+    strings->push_back(ss.str());
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\end{DoxyCompactItemize}

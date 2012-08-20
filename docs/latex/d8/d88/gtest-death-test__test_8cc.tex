@@ -1,0 +1,196 @@
+\hypertarget{gtest-death-test__test_8cc}{\section{gtest-\/1.6.0/test/gtest-\/death-\/test\-\_\-test.cc \-File \-Reference}
+\label{d8/d88/gtest-death-test__test_8cc}\index{gtest-\/1.\-6.\-0/test/gtest-\/death-\/test\-\_\-test.\-cc@{gtest-\/1.\-6.\-0/test/gtest-\/death-\/test\-\_\-test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest-\/death-\/test.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/internal/gtest-\/filepath.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gtest-death-test__test_8cc_a8a47cdbd11c2456db464fe098d134aa0}{\-T\-E\-S\-T} (\-Conditional\-Death\-Macros\-Test, \-Warns\-When\-Death\-Tests\-Not\-Available)
+\item 
+void \hyperlink{gtest-death-test__test_8cc_afe40addf0e0bb4657d18f512092ef03b}{\-Func\-With\-Assert} (int $\ast$n)
+\item 
+\hyperlink{gtest-death-test__test_8cc_acdbff3626995270fcbcc0b97e303d742}{\-T\-E\-S\-T} (\-Conditional\-Death\-Macros\-Test, \-Assert\-Deat\-Does\-Not\-Returnh\-If\-Unsupported)
+\item 
+\hyperlink{gtest-death-test__test_8cc_aacb04a80e0263de84b203b95cc421437}{\-T\-E\-S\-T} (\-Conditional\-Death\-Macros\-Syntax\-Death\-Test, \-Single\-Statement)
+\item 
+\hyperlink{gtest-death-test__test_8cc_a8d27f7b1efa4db83935274467e17f40c}{\-T\-E\-S\-T} (\-Conditional\-Death\-Macros\-Syntax\-Death\-Test, \-Switch\-Statement)
+\item 
+\hyperlink{gtest-death-test__test_8cc_af77aa369d8ed7d7ceefda4e7b073b05a}{\-T\-E\-S\-T} (\-Not\-A\-Death\-Test, \-Test)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest-death-test__test_8cc_afe40addf0e0bb4657d18f512092ef03b}{\index{gtest-\/death-\/test\-\_\-test.\-cc@{gtest-\/death-\/test\-\_\-test.\-cc}!\-Func\-With\-Assert@{\-Func\-With\-Assert}}
+\index{\-Func\-With\-Assert@{\-Func\-With\-Assert}!gtest-death-test_test.cc@{gtest-\/death-\/test\-\_\-test.\-cc}}
+\subsubsection[{\-Func\-With\-Assert}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Func\-With\-Assert} (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{d8/d88/gtest-death-test__test_8cc_afe40addf0e0bb4657d18f512092ef03b}
+
+
+\-Definition at line 1228 of file gtest-\/death-\/test\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                            {
+  ASSERT_DEATH_IF_SUPPORTED(return;, "");
+  (*n)++;
+}
+\end{DoxyCode}
+\hypertarget{gtest-death-test__test_8cc_a8a47cdbd11c2456db464fe098d134aa0}{\index{gtest-\/death-\/test\-\_\-test.\-cc@{gtest-\/death-\/test\-\_\-test.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!gtest-death-test_test.cc@{gtest-\/death-\/test\-\_\-test.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Conditional\-Death\-Macros\-Test}]{, }
+\item[{\-Warns\-When\-Death\-Tests\-Not\-Available}]{}
+\end{DoxyParamCaption}
+)}}\label{d8/d88/gtest-death-test__test_8cc_a8a47cdbd11c2456db464fe098d134aa0}
+
+
+\-Definition at line 1199 of file gtest-\/death-\/test\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                                  {
+  // Empty statement will not crash, but that should not trigger a failure
+  // when death tests are not supported.
+  CaptureStderr();
+  EXPECT_DEATH_IF_SUPPORTED(;, "");
+  String output = GetCapturedStderr();
+  ASSERT_TRUE(NULL != strstr(output.c_str(),
+                             "Death tests are not supported on this platform"))
+      ;
+  ASSERT_TRUE(NULL != strstr(output.c_str(), ";"));
+
+  // The streamed message should not be printed as there is no test failure.
+  CaptureStderr();
+  EXPECT_DEATH_IF_SUPPORTED(;, "") << "streamed message";
+  output = GetCapturedStderr();
+  ASSERT_TRUE(NULL == strstr(output.c_str(), "streamed message"));
+
+  CaptureStderr();
+  ASSERT_DEATH_IF_SUPPORTED(;, "");  // NOLINT
+  output = GetCapturedStderr();
+  ASSERT_TRUE(NULL != strstr(output.c_str(),
+                             "Death tests are not supported on this platform"))
+      ;
+  ASSERT_TRUE(NULL != strstr(output.c_str(), ";"));
+
+  CaptureStderr();
+  ASSERT_DEATH_IF_SUPPORTED(;, "") << "streamed message";  // NOLINT
+  output = GetCapturedStderr();
+  ASSERT_TRUE(NULL == strstr(output.c_str(), "streamed message"));
+}
+\end{DoxyCode}
+\hypertarget{gtest-death-test__test_8cc_acdbff3626995270fcbcc0b97e303d742}{\index{gtest-\/death-\/test\-\_\-test.\-cc@{gtest-\/death-\/test\-\_\-test.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!gtest-death-test_test.cc@{gtest-\/death-\/test\-\_\-test.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Conditional\-Death\-Macros\-Test}]{, }
+\item[{\-Assert\-Deat\-Does\-Not\-Returnh\-If\-Unsupported}]{}
+\end{DoxyParamCaption}
+)}}\label{d8/d88/gtest-death-test__test_8cc_acdbff3626995270fcbcc0b97e303d742}
+
+
+\-Definition at line 1235 of file gtest-\/death-\/test\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                                        {
+  int n = 0;
+  FuncWithAssert(&n);
+  EXPECT_EQ(1, n);
+}
+\end{DoxyCode}
+\hypertarget{gtest-death-test__test_8cc_aacb04a80e0263de84b203b95cc421437}{\index{gtest-\/death-\/test\-\_\-test.\-cc@{gtest-\/death-\/test\-\_\-test.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!gtest-death-test_test.cc@{gtest-\/death-\/test\-\_\-test.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Conditional\-Death\-Macros\-Syntax\-Death\-Test}]{, }
+\item[{\-Single\-Statement}]{}
+\end{DoxyParamCaption}
+)}}\label{d8/d88/gtest-death-test__test_8cc_aacb04a80e0263de84b203b95cc421437}
+
+
+\-Definition at line 1247 of file gtest-\/death-\/test\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                             {
+  if (AlwaysFalse())
+    // This would fail if executed; this is a compilation test only
+    ASSERT_DEATH_IF_SUPPORTED(return, "");
+
+  if (AlwaysTrue())
+    EXPECT_DEATH_IF_SUPPORTED(_exit(1), "");
+  else
+    // This empty "else" branch is meant to ensure that EXPECT_DEATH
+    // doesn't expand into an "if" statement without an "else"
+    ;  // NOLINT
+
+  if (AlwaysFalse())
+    ASSERT_DEATH_IF_SUPPORTED(return, "") << "did not die";
+
+  if (AlwaysFalse())
+    ;  // NOLINT
+  else
+    EXPECT_DEATH_IF_SUPPORTED(_exit(1), "") << 1 << 2 << 3;
+}
+\end{DoxyCode}
+\hypertarget{gtest-death-test__test_8cc_a8d27f7b1efa4db83935274467e17f40c}{\index{gtest-\/death-\/test\-\_\-test.\-cc@{gtest-\/death-\/test\-\_\-test.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!gtest-death-test_test.cc@{gtest-\/death-\/test\-\_\-test.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Conditional\-Death\-Macros\-Syntax\-Death\-Test}]{, }
+\item[{\-Switch\-Statement}]{}
+\end{DoxyParamCaption}
+)}}\label{d8/d88/gtest-death-test__test_8cc_a8d27f7b1efa4db83935274467e17f40c}
+
+
+\-Definition at line 1270 of file gtest-\/death-\/test\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                             {
+// Microsoft compiler usually complains about switch statements without
+// case labels. We suppress that warning for this test.
+#ifdef _MSC_VER
+# pragma warning(push)
+# pragma warning(disable: 4065)
+#endif  // _MSC_VER
+
+  switch (0)
+    default:
+      ASSERT_DEATH_IF_SUPPORTED(_exit(1), "")
+          << "exit in default switch handler";
+
+  switch (0)
+    case 0:
+      EXPECT_DEATH_IF_SUPPORTED(_exit(1), "") << "exit in switch case";
+
+#ifdef _MSC_VER
+# pragma warning(pop)
+#endif  // _MSC_VER
+}
+\end{DoxyCode}
+\hypertarget{gtest-death-test__test_8cc_af77aa369d8ed7d7ceefda4e7b073b05a}{\index{gtest-\/death-\/test\-\_\-test.\-cc@{gtest-\/death-\/test\-\_\-test.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!gtest-death-test_test.cc@{gtest-\/death-\/test\-\_\-test.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Not\-A\-Death\-Test}]{, }
+\item[{\-Test}]{}
+\end{DoxyParamCaption}
+)}}\label{d8/d88/gtest-death-test__test_8cc_af77aa369d8ed7d7ceefda4e7b073b05a}
+
+
+\-Definition at line 1294 of file gtest-\/death-\/test\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+  SUCCEED();
+}
+\end{DoxyCode}

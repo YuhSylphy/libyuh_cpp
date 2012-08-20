@@ -1,0 +1,117 @@
+\hypertarget{classtesting_1_1internal_1_1ScopedTrace}{\section{\-Scoped\-Trace \-Class \-Reference}
+\label{d8/d68/classtesting_1_1internal_1_1ScopedTrace}\index{\-Scoped\-Trace@{\-Scoped\-Trace}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ScopedTrace_a4c2fc42261af156212deb572aab8e88b}{\-Scoped\-Trace} (const char $\ast$file, int line, const \hyperlink{classtesting_1_1Message}{\-Message} \&message)
+\item 
+\hyperlink{classtesting_1_1internal_1_1ScopedTrace_a0bd652af94f27e7d9b40cf9369df948c}{$\sim$\-Scoped\-Trace} ()
+\item 
+\hyperlink{classtesting_1_1internal_1_1ScopedTrace_a4c2fc42261af156212deb572aab8e88b}{\-Scoped\-Trace} (const char $\ast$file, int line, const \hyperlink{classtesting_1_1Message}{\-Message} \&message)
+\item 
+\hyperlink{classtesting_1_1internal_1_1ScopedTrace_a0bd652af94f27e7d9b40cf9369df948c}{$\sim$\-Scoped\-Trace} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ScopedTrace_a184415dcd7d5e3cc336e6eda3d650732}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1ScopedTrace}{\-Scoped\-Trace})
+\item 
+\hyperlink{classtesting_1_1internal_1_1ScopedTrace_a184415dcd7d5e3cc336e6eda3d650732}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1ScopedTrace}{\-Scoped\-Trace})
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 6850 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ScopedTrace_a4c2fc42261af156212deb572aab8e88b}{\index{testing\-::internal\-::\-Scoped\-Trace@{testing\-::internal\-::\-Scoped\-Trace}!\-Scoped\-Trace@{\-Scoped\-Trace}}
+\index{\-Scoped\-Trace@{\-Scoped\-Trace}!testing::internal::ScopedTrace@{testing\-::internal\-::\-Scoped\-Trace}}
+\subsubsection[{\-Scoped\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Scoped\-Trace} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{const {\bf \-Message} \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{d8/d68/classtesting_1_1internal_1_1ScopedTrace_a4c2fc42261af156212deb572aab8e88b}
+
+
+\-Definition at line 4812 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                           {
+  TraceInfo trace;
+  trace.file = file;
+  trace.line = line;
+  trace.message = message.GetString();
+
+  UnitTest::GetInstance()->PushGTestTrace(trace);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1ScopedTrace_a0bd652af94f27e7d9b40cf9369df948c}{\index{testing\-::internal\-::\-Scoped\-Trace@{testing\-::internal\-::\-Scoped\-Trace}!$\sim$\-Scoped\-Trace@{$\sim$\-Scoped\-Trace}}
+\index{$\sim$\-Scoped\-Trace@{$\sim$\-Scoped\-Trace}!testing::internal::ScopedTrace@{testing\-::internal\-::\-Scoped\-Trace}}
+\subsubsection[{$\sim$\-Scoped\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Scoped\-Trace} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/d68/classtesting_1_1internal_1_1ScopedTrace_a0bd652af94f27e7d9b40cf9369df948c}
+
+
+\-Definition at line 4823 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+  UnitTest::GetInstance()->PopGTestTrace();
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1ScopedTrace_a4c2fc42261af156212deb572aab8e88b}{\index{testing\-::internal\-::\-Scoped\-Trace@{testing\-::internal\-::\-Scoped\-Trace}!\-Scoped\-Trace@{\-Scoped\-Trace}}
+\index{\-Scoped\-Trace@{\-Scoped\-Trace}!testing::internal::ScopedTrace@{testing\-::internal\-::\-Scoped\-Trace}}
+\subsubsection[{\-Scoped\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Scoped\-Trace} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{const {\bf \-Message} \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{d8/d68/classtesting_1_1internal_1_1ScopedTrace_a4c2fc42261af156212deb572aab8e88b}
+\hypertarget{classtesting_1_1internal_1_1ScopedTrace_a0bd652af94f27e7d9b40cf9369df948c}{\index{testing\-::internal\-::\-Scoped\-Trace@{testing\-::internal\-::\-Scoped\-Trace}!$\sim$\-Scoped\-Trace@{$\sim$\-Scoped\-Trace}}
+\index{$\sim$\-Scoped\-Trace@{$\sim$\-Scoped\-Trace}!testing::internal::ScopedTrace@{testing\-::internal\-::\-Scoped\-Trace}}
+\subsubsection[{$\sim$\-Scoped\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Scoped\-Trace} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/d68/classtesting_1_1internal_1_1ScopedTrace_a0bd652af94f27e7d9b40cf9369df948c}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ScopedTrace_a184415dcd7d5e3cc336e6eda3d650732}{\index{testing\-::internal\-::\-Scoped\-Trace@{testing\-::internal\-::\-Scoped\-Trace}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::ScopedTrace@{testing\-::internal\-::\-Scoped\-Trace}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Scoped\-Trace}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/d68/classtesting_1_1internal_1_1ScopedTrace_a184415dcd7d5e3cc336e6eda3d650732}
+\hypertarget{classtesting_1_1internal_1_1ScopedTrace_a184415dcd7d5e3cc336e6eda3d650732}{\index{testing\-::internal\-::\-Scoped\-Trace@{testing\-::internal\-::\-Scoped\-Trace}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::ScopedTrace@{testing\-::internal\-::\-Scoped\-Trace}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Scoped\-Trace}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/d68/classtesting_1_1internal_1_1ScopedTrace_a184415dcd7d5e3cc336e6eda3d650732}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/internal/\hyperlink{gtest-internal_8h}{gtest-\/internal.\-h}\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}

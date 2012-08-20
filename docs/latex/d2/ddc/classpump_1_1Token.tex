@@ -1,0 +1,146 @@
+\hypertarget{classpump_1_1Token}{\section{\-Token \-Class \-Reference}
+\label{d2/ddc/classpump_1_1Token}\index{\-Token@{\-Token}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classpump_1_1Token_ac775ee34451fdfa742b318538164070e}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Token_aa7a4b9bc0941308e362738503137460e}{\-\_\-\-\_\-str\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Token_aff981755ef197de06774d0c1cf6cceb9}{\-Clone}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpump_1_1Token_a550769bbd4e7537ff90a656f5b0c23b2}{start}
+\item 
+\hyperlink{classpump_1_1Token_afb358f48b1646c750fb9da6c6585be2b}{end}
+\item 
+\hyperlink{classpump_1_1Token_afcc7a4b78ecd8fa7e713f8cfa0f51017}{value}
+\item 
+\hyperlink{classpump_1_1Token_afe5ef662303b6b710ea6ee1a944bad0d}{token\-\_\-type}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}Represents a token in a Pump source file.\end{DoxyVerb}
+ 
+
+\-Definition at line 137 of file pump.\-py.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classpump_1_1Token_ac775ee34451fdfa742b318538164070e}{\index{pump\-::\-Token@{pump\-::\-Token}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!pump::Token@{pump\-::\-Token}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{start = {\ttfamily \-None}, }
+\item[{}]{end = {\ttfamily \-None}, }
+\item[{}]{value = {\ttfamily \-None}, }
+\item[{}]{token\-\_\-type = {\ttfamily \-None}}
+\end{DoxyParamCaption}
+)}}\label{d2/ddc/classpump_1_1Token_ac775ee34451fdfa742b318538164070e}
+
+
+\-Definition at line 140 of file pump.\-py.
+
+
+\begin{DoxyCode}
+140 
+141   def __init__(self, start=None, end=None, value=None, token_type=None):
+142     if start is None:
+143       self.start = Eof()
+144     else:
+145       self.start = start
+146     if end is None:
+147       self.end = Eof()
+148     else:
+149       self.end = end
+150     self.value = value
+151     self.token_type = token_type
+
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classpump_1_1Token_aa7a4b9bc0941308e362738503137460e}{\index{pump\-::\-Token@{pump\-::\-Token}!\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}!pump::Token@{pump\-::\-Token}}
+\subsubsection[{\-\_\-\-\_\-str\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-str\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d2/ddc/classpump_1_1Token_aa7a4b9bc0941308e362738503137460e}
+
+
+\-Definition at line 152 of file pump.\-py.
+
+
+\begin{DoxyCode}
+152 
+153   def __str__(self):
+154     return 'Token @%s: \'%s\' type=%s' % (
+155         self.start, self.value, self.token_type)
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Token_aff981755ef197de06774d0c1cf6cceb9}{\index{pump\-::\-Token@{pump\-::\-Token}!\-Clone@{\-Clone}}
+\index{\-Clone@{\-Clone}!pump::Token@{pump\-::\-Token}}
+\subsubsection[{\-Clone}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Clone} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d2/ddc/classpump_1_1Token_aff981755ef197de06774d0c1cf6cceb9}
+\begin{DoxyVerb}Returns a copy of self.\end{DoxyVerb}
+ 
+
+\-Definition at line 156 of file pump.\-py.
+
+
+\begin{DoxyCode}
+156 
+157   def Clone(self):
+158     """Returns a copy of self."""
+159 
+160     return Token(self.start.Clone(), self.end.Clone(), self.value,
+161                  self.token_type)
+162 
+
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classpump_1_1Token_afb358f48b1646c750fb9da6c6585be2b}{\index{pump\-::\-Token@{pump\-::\-Token}!end@{end}}
+\index{end@{end}!pump::Token@{pump\-::\-Token}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end}}}\label{d2/ddc/classpump_1_1Token_afb358f48b1646c750fb9da6c6585be2b}
+
+
+\-Definition at line 140 of file pump.\-py.
+
+\hypertarget{classpump_1_1Token_a550769bbd4e7537ff90a656f5b0c23b2}{\index{pump\-::\-Token@{pump\-::\-Token}!start@{start}}
+\index{start@{start}!pump::Token@{pump\-::\-Token}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf start}}}\label{d2/ddc/classpump_1_1Token_a550769bbd4e7537ff90a656f5b0c23b2}
+
+
+\-Definition at line 140 of file pump.\-py.
+
+\hypertarget{classpump_1_1Token_afe5ef662303b6b710ea6ee1a944bad0d}{\index{pump\-::\-Token@{pump\-::\-Token}!token\-\_\-type@{token\-\_\-type}}
+\index{token\-\_\-type@{token\-\_\-type}!pump::Token@{pump\-::\-Token}}
+\subsubsection[{token\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf token\-\_\-type}}}\label{d2/ddc/classpump_1_1Token_afe5ef662303b6b710ea6ee1a944bad0d}
+
+
+\-Definition at line 140 of file pump.\-py.
+
+\hypertarget{classpump_1_1Token_afcc7a4b78ecd8fa7e713f8cfa0f51017}{\index{pump\-::\-Token@{pump\-::\-Token}!value@{value}}
+\index{value@{value}!pump::Token@{pump\-::\-Token}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value}}}\label{d2/ddc/classpump_1_1Token_afcc7a4b78ecd8fa7e713f8cfa0f51017}
+
+
+\-Definition at line 140 of file pump.\-py.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/scripts/\hyperlink{pump_8py}{pump.\-py}\end{DoxyCompactItemize}

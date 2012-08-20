@@ -1,0 +1,284 @@
+\hypertarget{prime__unittest_8cpp}{\section{test/prime\-\_\-unittest.cpp \-File \-Reference}
+\label{d6/db5/prime__unittest_8cpp}\index{test/prime\-\_\-unittest.\-cpp@{test/prime\-\_\-unittest.\-cpp}}
+}
+{\ttfamily \#include $<$gtest/gtest.\-h$>$}\*
+{\ttfamily \#include \char`\"{}../include/yuh/prime.\-h\char`\"{}}\*
+{\ttfamily \#include $<$vector$>$}\*
+{\ttfamily \#include $<$iterator$>$}\*
+{\ttfamily \#include $<$boost/range/algorithm.\-hpp$>$}\*
+{\ttfamily \#include $<$boost/range/combine.\-hpp$>$}\*
+{\ttfamily \#include $<$boost/range/irange.\-hpp$>$}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structprime__iter}{prime\-\_\-iter}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{prime__unittest_8cpp_a2502cda7f2e9e5f699f91bb7220eda71}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{structprime__iter}{prime\-\_\-iter}, dummy)
+\item 
+\hyperlink{prime__unittest_8cpp_a26996f1494bed1b3fe3234de4aec89c5}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{structprime__iter}{prime\-\_\-iter}, in\-\_\-de\-\_\-crement)
+\item 
+\hyperlink{prime__unittest_8cpp_a3eaaaf21db85d2fd3019a024c55e2bea}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{structprime__iter}{prime\-\_\-iter}, get\-\_\-prime)
+\item 
+\hyperlink{prime__unittest_8cpp_a7cbefe0dcbb8d91baaf6675f63ba956c}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{structprime__iter}{prime\-\_\-iter}, approx)
+\item 
+\hyperlink{prime__unittest_8cpp_a9690b8ff4c9c48386cacc85cedaee64c}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{structprime__iter}{prime\-\_\-iter}, expand)
+\item 
+\hyperlink{prime__unittest_8cpp_a14565c945284221a9116a9d4d6aadd22}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{structprime__iter}{prime\-\_\-iter}, huge)
+\item 
+\hyperlink{prime__unittest_8cpp_a9f179b65933d876917b10ecc0be528d9}{\-T\-E\-S\-T} (\hyperlink{classyuh_1_1prime__range}{prime\-\_\-range}, finite)
+\item 
+\hyperlink{prime__unittest_8cpp_ab8f866f53593fcb40c3a650492b2137b}{\-T\-E\-S\-T} (\hyperlink{classyuh_1_1prime__range}{prime\-\_\-range}, infinite)
+\item 
+\hyperlink{prime__unittest_8cpp_aa41f9ec1adda2b519216d06648e8b697}{\-T\-E\-S\-T} (prime, finite)
+\item 
+\hyperlink{prime__unittest_8cpp_a3e764f6cf241ec336d5997a3eb638aa6}{\-T\-E\-S\-T} (prime, infinite)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{prime__unittest_8cpp_a9f179b65933d876917b10ecc0be528d9}{\index{prime\-\_\-unittest.\-cpp@{prime\-\_\-unittest.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!prime_unittest.cpp@{prime\-\_\-unittest.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{{\bf prime\-\_\-range}}]{, }
+\item[{finite}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/db5/prime__unittest_8cpp_a9f179b65933d876917b10ecc0be528d9}
+
+
+\-Definition at line 85 of file prime\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    const auto rng = boost::combine(
+        prime_range(1, 11),
+        std::vector<long long>{2,3,5,7,11,13,17,19,23,29}
+        );
+    for( const auto& t: rng )
+    {
+        EXPECT_EQ(boost::get<0>(t), boost::get<1>(t));
+    }
+}
+\end{DoxyCode}
+\hypertarget{prime__unittest_8cpp_ab8f866f53593fcb40c3a650492b2137b}{\index{prime\-\_\-unittest.\-cpp@{prime\-\_\-unittest.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!prime_unittest.cpp@{prime\-\_\-unittest.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{{\bf prime\-\_\-range}}]{, }
+\item[{infinite}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/db5/prime__unittest_8cpp_ab8f866f53593fcb40c3a650492b2137b}
+
+
+\-Definition at line 97 of file prime\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    std::vector<long long> v{2,3,5,7,11,13,17,19,23,29};
+        
+    int i = 0;
+    for ( const auto& p: prime_range(1) )
+    {
+        if(i >= 10) break;
+        EXPECT_EQ(p, v[i]);
+        i++;
+    }
+}
+\end{DoxyCode}
+\hypertarget{prime__unittest_8cpp_aa41f9ec1adda2b519216d06648e8b697}{\index{prime\-\_\-unittest.\-cpp@{prime\-\_\-unittest.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!prime_unittest.cpp@{prime\-\_\-unittest.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{prime}]{, }
+\item[{finite}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/db5/prime__unittest_8cpp_aa41f9ec1adda2b519216d06648e8b697}
+
+
+\-Definition at line 110 of file prime\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    const auto rng = boost::combine(
+        prime(1, 11),
+        std::vector<long long>{2,3,5,7,11,13,17,19,23,29}
+        );
+    for( const auto& t: rng )
+    {
+        EXPECT_EQ(boost::get<0>(t), boost::get<1>(t));
+    }
+}
+\end{DoxyCode}
+\hypertarget{prime__unittest_8cpp_a3e764f6cf241ec336d5997a3eb638aa6}{\index{prime\-\_\-unittest.\-cpp@{prime\-\_\-unittest.\-cpp}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!prime_unittest.cpp@{prime\-\_\-unittest.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{prime}]{, }
+\item[{infinite}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/db5/prime__unittest_8cpp_a3e764f6cf241ec336d5997a3eb638aa6}
+
+
+\-Definition at line 122 of file prime\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    std::vector<long long> v{2,3,5,7,11,13,17,19,23,29};
+        
+    int i = 0;
+    for ( const auto& p: prime() )
+    {
+        if(i >= 10) break;
+        EXPECT_EQ(p, v[i]);
+        i++;
+    }
+}
+\end{DoxyCode}
+\hypertarget{prime__unittest_8cpp_a2502cda7f2e9e5f699f91bb7220eda71}{\index{prime\-\_\-unittest.\-cpp@{prime\-\_\-unittest.\-cpp}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!prime_unittest.cpp@{prime\-\_\-unittest.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf prime\-\_\-iter}}]{, }
+\item[{dummy}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/db5/prime__unittest_8cpp_a2502cda7f2e9e5f699f91bb7220eda71}
+
+
+\-Definition at line 23 of file prime\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+{}
+\end{DoxyCode}
+\hypertarget{prime__unittest_8cpp_a26996f1494bed1b3fe3234de4aec89c5}{\index{prime\-\_\-unittest.\-cpp@{prime\-\_\-unittest.\-cpp}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!prime_unittest.cpp@{prime\-\_\-unittest.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf prime\-\_\-iter}}]{, }
+\item[{in\-\_\-de\-\_\-crement}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/db5/prime__unittest_8cpp_a26996f1494bed1b3fe3234de4aec89c5}
+
+
+\-Definition at line 25 of file prime\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    range_detail::prime_iterator it;
+
+    
+    EXPECT_EQ(*it++, 2);
+    EXPECT_EQ(*it++, 3);
+    EXPECT_EQ(*it++, 5);
+    EXPECT_EQ(*it++, 7);
+    EXPECT_EQ(*it++, 11);
+    
+    EXPECT_EQ(*it--, 13);
+    EXPECT_EQ(*it--, 11);
+    EXPECT_EQ(*it--, 7);
+    EXPECT_EQ(*it--, 5);
+    EXPECT_EQ(*it--, 3);
+    EXPECT_EQ(*it--, 2);
+}
+\end{DoxyCode}
+\hypertarget{prime__unittest_8cpp_a3eaaaf21db85d2fd3019a024c55e2bea}{\index{prime\-\_\-unittest.\-cpp@{prime\-\_\-unittest.\-cpp}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!prime_unittest.cpp@{prime\-\_\-unittest.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf prime\-\_\-iter}}]{, }
+\item[{get\-\_\-prime}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/db5/prime__unittest_8cpp_a3eaaaf21db85d2fd3019a024c55e2bea}
+
+
+\-Definition at line 44 of file prime\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    const auto& p = range_detail::prime_iterator::get_prime();
+    
+    //EXPECT_EQ(p.size(), 168U);
+    //EXPECT_EQ(p.back(), 997);
+    EXPECT_EQ(p[101], 547);
+}
+\end{DoxyCode}
+\hypertarget{prime__unittest_8cpp_a7cbefe0dcbb8d91baaf6675f63ba956c}{\index{prime\-\_\-unittest.\-cpp@{prime\-\_\-unittest.\-cpp}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!prime_unittest.cpp@{prime\-\_\-unittest.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf prime\-\_\-iter}}]{, }
+\item[{approx}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/db5/prime__unittest_8cpp_a7cbefe0dcbb8d91baaf6675f63ba956c}
+
+
+\-Definition at line 53 of file prime\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    const auto approx = &range_detail::prime_iterator::prime_approx;
+    const auto & p = range_detail::prime_iterator::get_prime();
+
+    for( const auto i: boost::irange(1U, p.size()) )
+    {
+        EXPECT_GE(approx(i)*1.02, p[i]);
+    }
+}
+\end{DoxyCode}
+\hypertarget{prime__unittest_8cpp_a9690b8ff4c9c48386cacc85cedaee64c}{\index{prime\-\_\-unittest.\-cpp@{prime\-\_\-unittest.\-cpp}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!prime_unittest.cpp@{prime\-\_\-unittest.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf prime\-\_\-iter}}]{, }
+\item[{expand}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/db5/prime__unittest_8cpp_a9690b8ff4c9c48386cacc85cedaee64c}
+
+
+\-Definition at line 64 of file prime\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    range_detail::prime_iterator it(1501);
+
+    EXPECT_EQ(*it++, 12569);
+    EXPECT_EQ(*it, 12577);
+    
+    auto it2 = it;
+    std::advance(it, 3);
+    
+    EXPECT_EQ(*it2, 12577);
+    EXPECT_EQ(*it, 12601);
+    EXPECT_EQ(std::distance(it2, it), 3);
+}
+\end{DoxyCode}
+\hypertarget{prime__unittest_8cpp_a14565c945284221a9116a9d4d6aadd22}{\index{prime\-\_\-unittest.\-cpp@{prime\-\_\-unittest.\-cpp}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!prime_unittest.cpp@{prime\-\_\-unittest.\-cpp}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf prime\-\_\-iter}}]{, }
+\item[{huge}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/db5/prime__unittest_8cpp_a14565c945284221a9116a9d4d6aadd22}
+
+
+\-Definition at line 79 of file prime\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+{
+    range_detail::prime_iterator::sift(1000000);
+    std::cout << range_detail::prime_iterator::get_prime().size() << std::endl;
+}
+\end{DoxyCode}

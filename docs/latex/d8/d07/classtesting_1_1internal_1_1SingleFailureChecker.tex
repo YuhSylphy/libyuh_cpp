@@ -1,0 +1,144 @@
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker}{\section{\-Single\-Failure\-Checker \-Class \-Reference}
+\label{d8/d07/classtesting_1_1internal_1_1SingleFailureChecker}\index{\-Single\-Failure\-Checker@{\-Single\-Failure\-Checker}}
+}
+
+
+{\ttfamily \#include $<$gtest-\/spi.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_a7bcb284c71b50648c3ca4c3e7b22d8fe}{\-Single\-Failure\-Checker} (const \hyperlink{classtesting_1_1TestPartResultArray}{\-Test\-Part\-Result\-Array} $\ast$results, \hyperlink{classtesting_1_1TestPartResult_a1d1cfd8ffb84e947f82999c682b666a7}{\-Test\-Part\-Result\-::\-Type} type, const \hyperlink{namespacetesting_1_1internal_a9882e571372fc19a02d2b2949e1f1557}{string} \&substr)
+\item 
+\hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_a800e9d220e8d92357360adbe84be2736}{$\sim$\-Single\-Failure\-Checker} ()
+\item 
+\hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_a7bcb284c71b50648c3ca4c3e7b22d8fe}{\-Single\-Failure\-Checker} (const \hyperlink{classtesting_1_1TestPartResultArray}{\-Test\-Part\-Result\-Array} $\ast$results, \hyperlink{classtesting_1_1TestPartResult_a1d1cfd8ffb84e947f82999c682b666a7}{\-Test\-Part\-Result\-::\-Type} type, const \hyperlink{namespacetesting_1_1internal_a9882e571372fc19a02d2b2949e1f1557}{string} \&substr)
+\item 
+\hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_a800e9d220e8d92357360adbe84be2736}{$\sim$\-Single\-Failure\-Checker} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_aab6e5589ca8c8608dcb253e89212fc7e}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1SingleFailureChecker}{\-Single\-Failure\-Checker})
+\item 
+\hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_aab6e5589ca8c8608dcb253e89212fc7e}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1SingleFailureChecker}{\-Single\-Failure\-Checker})
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classtesting_1_1TestPartResultArray}{\-Test\-Part\-Result\-Array} $\ast$const \hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_a014e6c17ef59640f4a9607cfe331a628}{results\-\_\-}
+\item 
+const \hyperlink{classtesting_1_1TestPartResult_a1d1cfd8ffb84e947f82999c682b666a7}{\-Test\-Part\-Result\-::\-Type} \hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_a3155cc24deee3978aed78a25da6180da}{type\-\_\-}
+\item 
+const \hyperlink{namespacetesting_1_1internal_a9882e571372fc19a02d2b2949e1f1557}{string} \hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_a6d511a37e5638d646986452a9b195d23}{substr\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 169 of file gtest-\/all.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_a7bcb284c71b50648c3ca4c3e7b22d8fe}{\index{testing\-::internal\-::\-Single\-Failure\-Checker@{testing\-::internal\-::\-Single\-Failure\-Checker}!\-Single\-Failure\-Checker@{\-Single\-Failure\-Checker}}
+\index{\-Single\-Failure\-Checker@{\-Single\-Failure\-Checker}!testing::internal::SingleFailureChecker@{testing\-::internal\-::\-Single\-Failure\-Checker}}
+\subsubsection[{\-Single\-Failure\-Checker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Single\-Failure\-Checker} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Part\-Result\-Array} $\ast$}]{results, }
+\item[{{\bf \-Test\-Part\-Result\-::\-Type}}]{type, }
+\item[{const {\bf string} \&}]{substr}
+\end{DoxyParamCaption}
+)}}\label{d8/d07/classtesting_1_1internal_1_1SingleFailureChecker_a7bcb284c71b50648c3ca4c3e7b22d8fe}
+
+
+\-Definition at line 1948 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+    : results_(results),
+      type_(type),
+      substr_(substr) {}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_a800e9d220e8d92357360adbe84be2736}{\index{testing\-::internal\-::\-Single\-Failure\-Checker@{testing\-::internal\-::\-Single\-Failure\-Checker}!$\sim$\-Single\-Failure\-Checker@{$\sim$\-Single\-Failure\-Checker}}
+\index{$\sim$\-Single\-Failure\-Checker@{$\sim$\-Single\-Failure\-Checker}!testing::internal::SingleFailureChecker@{testing\-::internal\-::\-Single\-Failure\-Checker}}
+\subsubsection[{$\sim$\-Single\-Failure\-Checker}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Single\-Failure\-Checker} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/d07/classtesting_1_1internal_1_1SingleFailureChecker_a800e9d220e8d92357360adbe84be2736}
+
+
+\-Definition at line 1960 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                            {
+  EXPECT_PRED_FORMAT3(HasOneFailure, *results_, type_, substr_);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_a7bcb284c71b50648c3ca4c3e7b22d8fe}{\index{testing\-::internal\-::\-Single\-Failure\-Checker@{testing\-::internal\-::\-Single\-Failure\-Checker}!\-Single\-Failure\-Checker@{\-Single\-Failure\-Checker}}
+\index{\-Single\-Failure\-Checker@{\-Single\-Failure\-Checker}!testing::internal::SingleFailureChecker@{testing\-::internal\-::\-Single\-Failure\-Checker}}
+\subsubsection[{\-Single\-Failure\-Checker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Single\-Failure\-Checker} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Part\-Result\-Array} $\ast$}]{results, }
+\item[{{\bf \-Test\-Part\-Result\-::\-Type}}]{type, }
+\item[{const {\bf string} \&}]{substr}
+\end{DoxyParamCaption}
+)}}\label{d8/d07/classtesting_1_1internal_1_1SingleFailureChecker_a7bcb284c71b50648c3ca4c3e7b22d8fe}
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_a800e9d220e8d92357360adbe84be2736}{\index{testing\-::internal\-::\-Single\-Failure\-Checker@{testing\-::internal\-::\-Single\-Failure\-Checker}!$\sim$\-Single\-Failure\-Checker@{$\sim$\-Single\-Failure\-Checker}}
+\index{$\sim$\-Single\-Failure\-Checker@{$\sim$\-Single\-Failure\-Checker}!testing::internal::SingleFailureChecker@{testing\-::internal\-::\-Single\-Failure\-Checker}}
+\subsubsection[{$\sim$\-Single\-Failure\-Checker}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Single\-Failure\-Checker} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/d07/classtesting_1_1internal_1_1SingleFailureChecker_a800e9d220e8d92357360adbe84be2736}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_aab6e5589ca8c8608dcb253e89212fc7e}{\index{testing\-::internal\-::\-Single\-Failure\-Checker@{testing\-::internal\-::\-Single\-Failure\-Checker}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::SingleFailureChecker@{testing\-::internal\-::\-Single\-Failure\-Checker}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Single\-Failure\-Checker}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/d07/classtesting_1_1internal_1_1SingleFailureChecker_aab6e5589ca8c8608dcb253e89212fc7e}
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_aab6e5589ca8c8608dcb253e89212fc7e}{\index{testing\-::internal\-::\-Single\-Failure\-Checker@{testing\-::internal\-::\-Single\-Failure\-Checker}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::SingleFailureChecker@{testing\-::internal\-::\-Single\-Failure\-Checker}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Single\-Failure\-Checker}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/d07/classtesting_1_1internal_1_1SingleFailureChecker_aab6e5589ca8c8608dcb253e89212fc7e}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_a014e6c17ef59640f4a9607cfe331a628}{\index{testing\-::internal\-::\-Single\-Failure\-Checker@{testing\-::internal\-::\-Single\-Failure\-Checker}!results\-\_\-@{results\-\_\-}}
+\index{results\-\_\-@{results\-\_\-}!testing::internal::SingleFailureChecker@{testing\-::internal\-::\-Single\-Failure\-Checker}}
+\subsubsection[{results\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Part\-Result\-Array} $\ast$const {\bf results\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/d07/classtesting_1_1internal_1_1SingleFailureChecker_a014e6c17ef59640f4a9607cfe331a628}
+
+
+\-Definition at line 177 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_a6d511a37e5638d646986452a9b195d23}{\index{testing\-::internal\-::\-Single\-Failure\-Checker@{testing\-::internal\-::\-Single\-Failure\-Checker}!substr\-\_\-@{substr\-\_\-}}
+\index{substr\-\_\-@{substr\-\_\-}!testing::internal::SingleFailureChecker@{testing\-::internal\-::\-Single\-Failure\-Checker}}
+\subsubsection[{substr\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} {\bf substr\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/d07/classtesting_1_1internal_1_1SingleFailureChecker_a6d511a37e5638d646986452a9b195d23}
+
+
+\-Definition at line 179 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_a3155cc24deee3978aed78a25da6180da}{\index{testing\-::internal\-::\-Single\-Failure\-Checker@{testing\-::internal\-::\-Single\-Failure\-Checker}!type\-\_\-@{type\-\_\-}}
+\index{type\-\_\-@{type\-\_\-}!testing::internal::SingleFailureChecker@{testing\-::internal\-::\-Single\-Failure\-Checker}}
+\subsubsection[{type\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Part\-Result\-::\-Type} {\bf type\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/d07/classtesting_1_1internal_1_1SingleFailureChecker_a3155cc24deee3978aed78a25da6180da}
+
+
+\-Definition at line 178 of file gtest-\/all.\-cc.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/include/gtest/\hyperlink{gtest-spi_8h}{gtest-\/spi.\-h}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}

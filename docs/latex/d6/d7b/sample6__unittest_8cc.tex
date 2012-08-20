@@ -1,0 +1,63 @@
+\hypertarget{sample6__unittest_8cc}{\section{gtest-\/1.6.0/samples/sample6\-\_\-unittest.cc \-File \-Reference}
+\label{d6/d7b/sample6__unittest_8cc}\index{gtest-\/1.\-6.\-0/samples/sample6\-\_\-unittest.\-cc@{gtest-\/1.\-6.\-0/samples/sample6\-\_\-unittest.\-cc}}
+}
+{\ttfamily \#include \char`\"{}prime\-\_\-tables.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPrimeTableTest}{\-Prime\-Table\-Test$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{classPrimeTable}{\-Prime\-Table} $\ast$ \hyperlink{sample6__unittest_8cc_a17bd91d234e7c5e1116b4ecb9dc37e82}{\-Create\-Prime\-Table} ()
+\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{classPrimeTable}{\-Prime\-Table} $\ast$ \hyperlink{sample6__unittest_8cc_aeac1d362d37ba8c2fc648f256b21f1c4}{\-Create\-Prime\-Table$<$ On\-The\-Fly\-Prime\-Table $>$} ()
+\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{classPrimeTable}{\-Prime\-Table} $\ast$ \hyperlink{sample6__unittest_8cc_a1262262a4425a4827b0889da96f58126}{\-Create\-Prime\-Table$<$ Pre\-Calculated\-Prime\-Table $>$} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{sample6__unittest_8cc_a17bd91d234e7c5e1116b4ecb9dc37e82}{\index{sample6\-\_\-unittest.\-cc@{sample6\-\_\-unittest.\-cc}!\-Create\-Prime\-Table@{\-Create\-Prime\-Table}}
+\index{\-Create\-Prime\-Table@{\-Create\-Prime\-Table}!sample6_unittest.cc@{sample6\-\_\-unittest.\-cc}}
+\subsubsection[{\-Create\-Prime\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Prime\-Table}$\ast$ {\bf \-Create\-Prime\-Table} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d6/d7b/sample6__unittest_8cc_a17bd91d234e7c5e1116b4ecb9dc37e82}
+\hypertarget{sample6__unittest_8cc_aeac1d362d37ba8c2fc648f256b21f1c4}{\index{sample6\-\_\-unittest.\-cc@{sample6\-\_\-unittest.\-cc}!\-Create\-Prime\-Table$<$ On\-The\-Fly\-Prime\-Table $>$@{\-Create\-Prime\-Table$<$ On\-The\-Fly\-Prime\-Table $>$}}
+\index{\-Create\-Prime\-Table$<$ On\-The\-Fly\-Prime\-Table $>$@{\-Create\-Prime\-Table$<$ On\-The\-Fly\-Prime\-Table $>$}!sample6_unittest.cc@{sample6\-\_\-unittest.\-cc}}
+\subsubsection[{\-Create\-Prime\-Table$<$ On\-The\-Fly\-Prime\-Table $>$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Prime\-Table}$\ast$ {\bf \-Create\-Prime\-Table}$<$ {\bf \-On\-The\-Fly\-Prime\-Table} $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d6/d7b/sample6__unittest_8cc_aeac1d362d37ba8c2fc648f256b21f1c4}
+
+
+\-Definition at line 48 of file sample6\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                   {
+  return new OnTheFlyPrimeTable;
+}
+\end{DoxyCode}
+\hypertarget{sample6__unittest_8cc_a1262262a4425a4827b0889da96f58126}{\index{sample6\-\_\-unittest.\-cc@{sample6\-\_\-unittest.\-cc}!\-Create\-Prime\-Table$<$ Pre\-Calculated\-Prime\-Table $>$@{\-Create\-Prime\-Table$<$ Pre\-Calculated\-Prime\-Table $>$}}
+\index{\-Create\-Prime\-Table$<$ Pre\-Calculated\-Prime\-Table $>$@{\-Create\-Prime\-Table$<$ Pre\-Calculated\-Prime\-Table $>$}!sample6_unittest.cc@{sample6\-\_\-unittest.\-cc}}
+\subsubsection[{\-Create\-Prime\-Table$<$ Pre\-Calculated\-Prime\-Table $>$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Prime\-Table}$\ast$ {\bf \-Create\-Prime\-Table}$<$ {\bf \-Pre\-Calculated\-Prime\-Table} $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d6/d7b/sample6__unittest_8cc_a1262262a4425a4827b0889da96f58126}
+
+
+\-Definition at line 53 of file sample6\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                        {
+  return new PreCalculatedPrimeTable(10000);
+}
+\end{DoxyCode}

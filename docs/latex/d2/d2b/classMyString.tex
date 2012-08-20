@@ -1,0 +1,214 @@
+\hypertarget{classMyString}{\section{\-My\-String \-Class \-Reference}
+\label{d2/d2b/classMyString}\index{\-My\-String@{\-My\-String}}
+}
+
+
+{\ttfamily \#include $<$sample2.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMyString_a8f9af468dfdce9f5d6420c88f9752a1d}{\-My\-String} ()
+\item 
+\hyperlink{classMyString_aae8bd9471dc1c5a2620f541ed8ec4a05}{\-My\-String} (const char $\ast$a\-\_\-c\-\_\-string)
+\item 
+\hyperlink{classMyString_a5c1c02fe1fbba33276551c78946e6c81}{\-My\-String} (const \hyperlink{classMyString}{\-My\-String} \&string)
+\item 
+\hyperlink{classMyString_ac80446cc8d838f41aae5e030a1ab477f}{$\sim$\-My\-String} ()
+\item 
+const char $\ast$ \hyperlink{classMyString_ac6ca59d626468e2046b615d1d2ef62b9}{c\-\_\-string} () const 
+\item 
+size\-\_\-t \hyperlink{classMyString_a8dea62c9a8351f2d5024be715ab3f8ae}{\-Length} () const 
+\item 
+void \hyperlink{classMyString_a8a16a47ddf93ff4ffcabd4ee4ba55baf}{\-Set} (const char $\ast$\hyperlink{classMyString_ac6ca59d626468e2046b615d1d2ef62b9}{c\-\_\-string})
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{classMyString_ab2d97c7a2ef52b345237a6ce85480677}{\-Clone\-C\-String} (const char $\ast$a\-\_\-c\-\_\-string)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classMyString}{\-My\-String} \& \hyperlink{classMyString_a0a2fd8c76f308706c3e0faab850cc39f}{operator=} (const \hyperlink{classMyString}{\-My\-String} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{classMyString_a40624c60d8bdbc10c88db7dd01947a5e}{c\-\_\-string\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 41 of file sample2.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classMyString_a8f9af468dfdce9f5d6420c88f9752a1d}{\index{\-My\-String@{\-My\-String}!\-My\-String@{\-My\-String}}
+\index{\-My\-String@{\-My\-String}!MyString@{\-My\-String}}
+\subsubsection[{\-My\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-My\-String} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d2b/classMyString_a8f9af468dfdce9f5d6420c88f9752a1d}
+
+
+\-Definition at line 56 of file sample2.\-h.
+
+
+\begin{DoxyCode}
+: c_string_(NULL) {}
+\end{DoxyCode}
+\hypertarget{classMyString_aae8bd9471dc1c5a2620f541ed8ec4a05}{\index{\-My\-String@{\-My\-String}!\-My\-String@{\-My\-String}}
+\index{\-My\-String@{\-My\-String}!MyString@{\-My\-String}}
+\subsubsection[{\-My\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-My\-String} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\-\_\-c\-\_\-string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{d2/d2b/classMyString_aae8bd9471dc1c5a2620f541ed8ec4a05}
+
+
+\-Definition at line 59 of file sample2.\-h.
+
+
+\begin{DoxyCode}
+                                            : c_string_(NULL) {
+    Set(a_c_string);
+  }
+\end{DoxyCode}
+\hypertarget{classMyString_a5c1c02fe1fbba33276551c78946e6c81}{\index{\-My\-String@{\-My\-String}!\-My\-String@{\-My\-String}}
+\index{\-My\-String@{\-My\-String}!MyString@{\-My\-String}}
+\subsubsection[{\-My\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-My\-String} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-My\-String} \&}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d2b/classMyString_a5c1c02fe1fbba33276551c78946e6c81}
+
+
+\-Definition at line 64 of file sample2.\-h.
+
+
+\begin{DoxyCode}
+                                   : c_string_(NULL) {
+    Set(string.c_string_);
+  }
+\end{DoxyCode}
+\hypertarget{classMyString_ac80446cc8d838f41aae5e030a1ab477f}{\index{\-My\-String@{\-My\-String}!$\sim$\-My\-String@{$\sim$\-My\-String}}
+\index{$\sim$\-My\-String@{$\sim$\-My\-String}!MyString@{\-My\-String}}
+\subsubsection[{$\sim$\-My\-String}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-My\-String} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d2b/classMyString_ac80446cc8d838f41aae5e030a1ab477f}
+
+
+\-Definition at line 72 of file sample2.\-h.
+
+
+\begin{DoxyCode}
+{ delete[] c_string_; }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classMyString_ac6ca59d626468e2046b615d1d2ef62b9}{\index{\-My\-String@{\-My\-String}!c\-\_\-string@{c\-\_\-string}}
+\index{c\-\_\-string@{c\-\_\-string}!MyString@{\-My\-String}}
+\subsubsection[{c\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf c\-\_\-string} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d2b/classMyString_ac6ca59d626468e2046b615d1d2ef62b9}
+
+
+\-Definition at line 75 of file sample2.\-h.
+
+
+\begin{DoxyCode}
+{ return c_string_; }
+\end{DoxyCode}
+\hypertarget{classMyString_ab2d97c7a2ef52b345237a6ce85480677}{\index{\-My\-String@{\-My\-String}!\-Clone\-C\-String@{\-Clone\-C\-String}}
+\index{\-Clone\-C\-String@{\-Clone\-C\-String}!MyString@{\-My\-String}}
+\subsubsection[{\-Clone\-C\-String}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf \-Clone\-C\-String} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\-\_\-c\-\_\-string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d2/d2b/classMyString_ab2d97c7a2ef52b345237a6ce85480677}
+
+
+\-Definition at line 39 of file sample2.\-cc.
+
+
+\begin{DoxyCode}
+                                                         {
+  if (a_c_string == NULL) return NULL;
+
+  const size_t len = strlen(a_c_string);
+  char* const clone = new char[ len + 1 ];
+  memcpy(clone, a_c_string, len + 1);
+
+  return clone;
+}
+\end{DoxyCode}
+\hypertarget{classMyString_a8dea62c9a8351f2d5024be715ab3f8ae}{\index{\-My\-String@{\-My\-String}!\-Length@{\-Length}}
+\index{\-Length@{\-Length}!MyString@{\-My\-String}}
+\subsubsection[{\-Length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf \-Length} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d2b/classMyString_a8dea62c9a8351f2d5024be715ab3f8ae}
+
+
+\-Definition at line 77 of file sample2.\-h.
+
+
+\begin{DoxyCode}
+                        {
+    return c_string_ == NULL ? 0 : strlen(c_string_);
+  }
+\end{DoxyCode}
+\hypertarget{classMyString_a0a2fd8c76f308706c3e0faab850cc39f}{\index{\-My\-String@{\-My\-String}!operator=@{operator=}}
+\index{operator=@{operator=}!MyString@{\-My\-String}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-My\-String}\& operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-My\-String} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d2b/classMyString_a0a2fd8c76f308706c3e0faab850cc39f}
+\hypertarget{classMyString_a8a16a47ddf93ff4ffcabd4ee4ba55baf}{\index{\-My\-String@{\-My\-String}!\-Set@{\-Set}}
+\index{\-Set@{\-Set}!MyString@{\-My\-String}}
+\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Set} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{c\-\_\-string}
+\end{DoxyParamCaption}
+)}}\label{d2/d2b/classMyString_a8a16a47ddf93ff4ffcabd4ee4ba55baf}
+
+
+\-Definition at line 51 of file sample2.\-cc.
+
+
+\begin{DoxyCode}
+                                         {
+  // Makes sure this works when c_string == c_string_
+  const char* const temp = MyString::CloneCString(a_c_string);
+  delete[] c_string_;
+  c_string_ = temp;
+}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classMyString_a40624c60d8bdbc10c88db7dd01947a5e}{\index{\-My\-String@{\-My\-String}!c\-\_\-string\-\_\-@{c\-\_\-string\-\_\-}}
+\index{c\-\_\-string\-\_\-@{c\-\_\-string\-\_\-}!MyString@{\-My\-String}}
+\subsubsection[{c\-\_\-string\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf c\-\_\-string\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d2b/classMyString_a40624c60d8bdbc10c88db7dd01947a5e}
+
+
+\-Definition at line 43 of file sample2.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/samples/\hyperlink{sample2_8h}{sample2.\-h}\item 
+gtest-\/1.\-6.\-0/samples/\hyperlink{sample2_8cc}{sample2.\-cc}\end{DoxyCompactItemize}

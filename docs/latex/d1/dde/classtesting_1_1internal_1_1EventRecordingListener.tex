@@ -1,0 +1,396 @@
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener}{\section{\-Event\-Recording\-Listener \-Class \-Reference}
+\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener}\index{\-Event\-Recording\-Listener@{\-Event\-Recording\-Listener}}
+}
+\-Inheritance diagram for \-Event\-Recording\-Listener\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d1/dde/classtesting_1_1internal_1_1EventRecordingListener}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a307561be1e16bb9f5d011ff9ad580197}{\-Event\-Recording\-Listener} (const char $\ast$name)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a9d43d6e5c4c37ade824998de2d83bd20}{\-On\-Test\-Program\-Start} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a893298c9ef11a9aacaac0fda44acf802}{\-On\-Test\-Iteration\-Start} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&, int iteration)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a960b8082afebb8b336547c3dc6bd079f}{\-On\-Environments\-Set\-Up\-Start} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a4ab2823e779a053ad65cf7f01bb76b54}{\-On\-Environments\-Set\-Up\-End} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_ad458fc9c991a0888807d241e90da098e}{\-On\-Test\-Case\-Start} (const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} \&)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a4ee6b680b188b358efdd3705aaa67c66}{\-On\-Test\-Start} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} \&)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_af67393a10ad8d397e2c981f9d7aff7a6}{\-On\-Test\-Part\-Result} (const \hyperlink{classtesting_1_1TestPartResult}{\-Test\-Part\-Result} \&)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_afa42d87fd1a3c0377447be4791d472c9}{\-On\-Test\-End} (const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} \&)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a764828afa3c4b25fe85e9f0668f37297}{\-On\-Test\-Case\-End} (const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} \&)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a83a18f877ee8d1885a43667f00b51268}{\-On\-Environments\-Tear\-Down\-Start} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_af00cb6141021245e02c511782ce66b46}{\-On\-Environments\-Tear\-Down\-End} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a60a8d8506639e2633c5dc911ad7bc6ed}{\-On\-Test\-Iteration\-End} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&, int iteration)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a79232f629150d6a1e560f6729271e729}{\-On\-Test\-Program\-End} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a07f5a03ba5f726ae00b0d31d9a0a4170}{\-Get\-Full\-Method\-Name} (const char $\ast$name)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1EventRecordingListener_a46d25a1d56b8ab56e84b8bd0c7581e8f}{name\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 56 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a307561be1e16bb9f5d011ff9ad580197}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-Event\-Recording\-Listener@{\-Event\-Recording\-Listener}}
+\index{\-Event\-Recording\-Listener@{\-Event\-Recording\-Listener}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-Event\-Recording\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Event\-Recording\-Listener} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a307561be1e16bb9f5d011ff9ad580197}
+
+
+\-Definition at line 58 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+: name_(name) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a07f5a03ba5f726ae00b0d31d9a0a4170}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-Get\-Full\-Method\-Name@{\-Get\-Full\-Method\-Name}}
+\index{\-Get\-Full\-Method\-Name@{\-Get\-Full\-Method\-Name}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-Get\-Full\-Method\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf \-Get\-Full\-Method\-Name} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a07f5a03ba5f726ae00b0d31d9a0a4170}
+
+
+\-Definition at line 122 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                             {
+    Message message;
+    message << name_ << "." << name;
+    return message.GetString();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a4ab2823e779a053ad65cf7f01bb76b54}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Environments\-Set\-Up\-End@{\-On\-Environments\-Set\-Up\-End}}
+\index{\-On\-Environments\-Set\-Up\-End@{\-On\-Environments\-Set\-Up\-End}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Environments\-Set\-Up\-End}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Environments\-Set\-Up\-End} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a4ab2823e779a053ad65cf7f01bb76b54}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_a9ff0d48e0f7c64dea5cb0a607498d6f6}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 77 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                         {
+    g_events->push_back(GetFullMethodName("OnEnvironmentsSetUpEnd"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a960b8082afebb8b336547c3dc6bd079f}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Environments\-Set\-Up\-Start@{\-On\-Environments\-Set\-Up\-Start}}
+\index{\-On\-Environments\-Set\-Up\-Start@{\-On\-Environments\-Set\-Up\-Start}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Environments\-Set\-Up\-Start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Environments\-Set\-Up\-Start} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a960b8082afebb8b336547c3dc6bd079f}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_a070798921b8d09f891e02762287ee5b0}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 73 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                           {
+    g_events->push_back(GetFullMethodName("OnEnvironmentsSetUpStart"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_af00cb6141021245e02c511782ce66b46}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Environments\-Tear\-Down\-End@{\-On\-Environments\-Tear\-Down\-End}}
+\index{\-On\-Environments\-Tear\-Down\-End@{\-On\-Environments\-Tear\-Down\-End}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Environments\-Tear\-Down\-End}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Environments\-Tear\-Down\-End} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_af00cb6141021245e02c511782ce66b46}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_a9cc8d7ef2c9e722a301ec4cee20633e2}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 105 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                            {
+    g_events->push_back(GetFullMethodName("OnEnvironmentsTearDownEnd"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a83a18f877ee8d1885a43667f00b51268}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Environments\-Tear\-Down\-Start@{\-On\-Environments\-Tear\-Down\-Start}}
+\index{\-On\-Environments\-Tear\-Down\-Start@{\-On\-Environments\-Tear\-Down\-Start}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Environments\-Tear\-Down\-Start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Environments\-Tear\-Down\-Start} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a83a18f877ee8d1885a43667f00b51268}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_a1246b8fa84a0807afeffa6e986254ee8}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 101 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                              {
+    g_events->push_back(GetFullMethodName("OnEnvironmentsTearDownStart"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a764828afa3c4b25fe85e9f0668f37297}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Test\-Case\-End@{\-On\-Test\-Case\-End}}
+\index{\-On\-Test\-Case\-End@{\-On\-Test\-Case\-End}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Test\-Case\-End}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Case\-End} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Case} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a764828afa3c4b25fe85e9f0668f37297}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_ab92df2852da3e002303be838d8550c76}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 97 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                {
+    g_events->push_back(GetFullMethodName("OnTestCaseEnd"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_ad458fc9c991a0888807d241e90da098e}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Test\-Case\-Start@{\-On\-Test\-Case\-Start}}
+\index{\-On\-Test\-Case\-Start@{\-On\-Test\-Case\-Start}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Test\-Case\-Start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Case\-Start} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Case} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_ad458fc9c991a0888807d241e90da098e}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_aaf531e12c423fe117b7a4c6d2217dcf7}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 81 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                  {
+    g_events->push_back(GetFullMethodName("OnTestCaseStart"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_afa42d87fd1a3c0377447be4791d472c9}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Test\-End@{\-On\-Test\-End}}
+\index{\-On\-Test\-End@{\-On\-Test\-End}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Test\-End}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-End} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_afa42d87fd1a3c0377447be4791d472c9}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_a48d3993f2b69de40ecca5476ff940e24}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 93 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                            {
+    g_events->push_back(GetFullMethodName("OnTestEnd"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a60a8d8506639e2633c5dc911ad7bc6ed}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Test\-Iteration\-End@{\-On\-Test\-Iteration\-End}}
+\index{\-On\-Test\-Iteration\-End@{\-On\-Test\-Iteration\-End}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Test\-Iteration\-End}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Iteration\-End} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{, }
+\item[{int}]{iteration}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a60a8d8506639e2633c5dc911ad7bc6ed}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_a7e35fec33b744e6a410f10e2fa090015}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 109 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                 {
+    Message message;
+    message << GetFullMethodName("OnTestIterationEnd")
+            << "("  << iteration << ")";
+    g_events->push_back(message.GetString());
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a893298c9ef11a9aacaac0fda44acf802}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Test\-Iteration\-Start@{\-On\-Test\-Iteration\-Start}}
+\index{\-On\-Test\-Iteration\-Start@{\-On\-Test\-Iteration\-Start}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Test\-Iteration\-Start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Iteration\-Start} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{, }
+\item[{int}]{iteration}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a893298c9ef11a9aacaac0fda44acf802}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_ac7cacc17e8a9b6e18d7c6031df762608}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 65 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                   {
+    Message message;
+    message << GetFullMethodName("OnTestIterationStart")
+            << "(" << iteration << ")";
+    g_events->push_back(message.GetString());
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_af67393a10ad8d397e2c981f9d7aff7a6}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Test\-Part\-Result@{\-On\-Test\-Part\-Result}}
+\index{\-On\-Test\-Part\-Result@{\-On\-Test\-Part\-Result}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Test\-Part\-Result}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Part\-Result} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Part\-Result} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_af67393a10ad8d397e2c981f9d7aff7a6}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_a6897200761af7db2d3212d5d3c1571d9}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 89 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                         {
+    g_events->push_back(GetFullMethodName("OnTestPartResult"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a79232f629150d6a1e560f6729271e729}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Test\-Program\-End@{\-On\-Test\-Program\-End}}
+\index{\-On\-Test\-Program\-End@{\-On\-Test\-Program\-End}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Test\-Program\-End}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Program\-End} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a79232f629150d6a1e560f6729271e729}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_a543233908c4fd972550c7198c31c895a}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 117 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                   {
+    g_events->push_back(GetFullMethodName("OnTestProgramEnd"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a9d43d6e5c4c37ade824998de2d83bd20}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Test\-Program\-Start@{\-On\-Test\-Program\-Start}}
+\index{\-On\-Test\-Program\-Start@{\-On\-Test\-Program\-Start}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Test\-Program\-Start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Program\-Start} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a9d43d6e5c4c37ade824998de2d83bd20}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_a1dceff89a70d9e37ca025e8db3674eac}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 61 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                     {
+    g_events->push_back(GetFullMethodName("OnTestProgramStart"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a4ee6b680b188b358efdd3705aaa67c66}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!\-On\-Test\-Start@{\-On\-Test\-Start}}
+\index{\-On\-Test\-Start@{\-On\-Test\-Start}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{\-On\-Test\-Start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Start} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Info} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a4ee6b680b188b358efdd3705aaa67c66}
+
+
+\-Implements \hyperlink{classtesting_1_1TestEventListener_a02f601dff022b7d252f54f559acaf3f7}{\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 85 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                              {
+    g_events->push_back(GetFullMethodName("OnTestStart"));
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1EventRecordingListener_a46d25a1d56b8ab56e84b8bd0c7581e8f}{\index{testing\-::internal\-::\-Event\-Recording\-Listener@{testing\-::internal\-::\-Event\-Recording\-Listener}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!testing::internal::EventRecordingListener@{testing\-::internal\-::\-Event\-Recording\-Listener}}
+\subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf name\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dde/classtesting_1_1internal_1_1EventRecordingListener_a46d25a1d56b8ab56e84b8bd0c7581e8f}
+
+
+\-Definition at line 128 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest-listener__test_8cc}{gtest-\/listener\-\_\-test.\-cc}\end{DoxyCompactItemize}

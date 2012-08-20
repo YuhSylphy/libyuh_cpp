@@ -1,0 +1,115 @@
+\hypertarget{classgtest__output__test_1_1GTestOutputTest}{\section{\-G\-Test\-Output\-Test \-Class \-Reference}
+\label{d3/d67/classgtest__output__test_1_1GTestOutputTest}\index{\-G\-Test\-Output\-Test@{\-G\-Test\-Output\-Test}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__output__test_1_1GTestOutputTest_a0deb3bead04c9d17a14ba5a11699c2ff}{\-Remove\-Unsupported\-Tests}
+\item 
+def \hyperlink{classgtest__output__test_1_1GTestOutputTest_a5d0c536c75bee4e5539470548147a947}{test\-Output}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 258 of file gtest\-\_\-output\-\_\-test.\-py.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgtest__output__test_1_1GTestOutputTest_a0deb3bead04c9d17a14ba5a11699c2ff}{\index{gtest\-\_\-output\-\_\-test\-::\-G\-Test\-Output\-Test@{gtest\-\_\-output\-\_\-test\-::\-G\-Test\-Output\-Test}!\-Remove\-Unsupported\-Tests@{\-Remove\-Unsupported\-Tests}}
+\index{\-Remove\-Unsupported\-Tests@{\-Remove\-Unsupported\-Tests}!gtest_output_test::GTestOutputTest@{gtest\-\_\-output\-\_\-test\-::\-G\-Test\-Output\-Test}}
+\subsubsection[{\-Remove\-Unsupported\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Remove\-Unsupported\-Tests} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{test\-\_\-output}
+\end{DoxyParamCaption}
+)}}\label{d3/d67/classgtest__output__test_1_1GTestOutputTest_a0deb3bead04c9d17a14ba5a11699c2ff}
+
+
+\-Definition at line 259 of file gtest\-\_\-output\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+259 
+260   def RemoveUnsupportedTests(self, test_output):
+261     if not SUPPORTS_DEATH_TESTS:
+262       test_output = RemoveMatchingTests(test_output, 'DeathTest')
+263     if not SUPPORTS_TYPED_TESTS:
+264       test_output = RemoveMatchingTests(test_output, 'TypedTest')
+265       test_output = RemoveMatchingTests(test_output, 'TypedDeathTest')
+266       test_output = RemoveMatchingTests(test_output, 'TypeParamDeathTest')
+267     if not SUPPORTS_THREADS:
+268       test_output = RemoveMatchingTests(test_output,
+269                                         'ExpectFailureWithThreadsTest')
+270       test_output = RemoveMatchingTests(test_output,
+271                                         'ScopedFakeTestPartResultReporterTest')
+272       test_output = RemoveMatchingTests(test_output,
+273                                         'WorksConcurrently')
+274     if not SUPPORTS_STACK_TRACES:
+275       test_output = RemoveStackTraces(test_output)
+276 
+277     return test_output
+
+\end{DoxyCode}
+\hypertarget{classgtest__output__test_1_1GTestOutputTest_a5d0c536c75bee4e5539470548147a947}{\index{gtest\-\_\-output\-\_\-test\-::\-G\-Test\-Output\-Test@{gtest\-\_\-output\-\_\-test\-::\-G\-Test\-Output\-Test}!test\-Output@{test\-Output}}
+\index{test\-Output@{test\-Output}!gtest_output_test::GTestOutputTest@{gtest\-\_\-output\-\_\-test\-::\-G\-Test\-Output\-Test}}
+\subsubsection[{test\-Output}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Output} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d3/d67/classgtest__output__test_1_1GTestOutputTest_a5d0c536c75bee4e5539470548147a947}
+
+
+\-Definition at line 278 of file gtest\-\_\-output\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+278 
+279   def testOutput(self):
+280     output = GetOutputOfAllCommands()
+281 
+282     golden_file = open(GOLDEN_PATH, 'rb')
+283     # A mis-configured source control system can cause \r appear in EOL
+284     # sequences when we read the golden file irrespective of an operating
+285     # system used. Therefore, we need to strip those \r's from newlines
+286     # unconditionally.
+287     golden = ToUnixLineEnding(golden_file.read())
+288     golden_file.close()
+289 
+290     # We want the test to pass regardless of certain features being
+291     # supported or not.
+292 
+293     # We still have to remove type name specifics in all cases.
+294     normalized_actual = RemoveTypeInfoDetails(output)
+295     normalized_golden = RemoveTypeInfoDetails(golden)
+296 
+297     if CAN_GENERATE_GOLDEN_FILE:
+298       self.assertEqual(normalized_golden, normalized_actual)
+299     else:
+300       normalized_actual = NormalizeToCurrentPlatform(
+301           RemoveTestCounts(normalized_actual))
+302       normalized_golden = NormalizeToCurrentPlatform(
+303           RemoveTestCounts(self.RemoveUnsupportedTests(normalized_golden)))
+304 
+305       # This code is very handy when debugging golden file differences:
+306       if os.getenv('DEBUG_GTEST_OUTPUT_TEST'):
+307         open(os.path.join(
+308             gtest_test_utils.GetSourceDir(),
+309             '_gtest_output_test_normalized_actual.txt'), 'wb').write(
+310                 normalized_actual)
+311         open(os.path.join(
+312             gtest_test_utils.GetSourceDir(),
+313             '_gtest_output_test_normalized_golden.txt'), 'wb').write(
+314                 normalized_golden)
+315 
+316       self.assertEqual(normalized_golden, normalized_actual)
+317 
+
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__output__test_8py}{gtest\-\_\-output\-\_\-test.\-py}\end{DoxyCompactItemize}

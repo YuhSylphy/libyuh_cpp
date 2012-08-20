@@ -1,0 +1,187 @@
+\hypertarget{classtesting_1_1InitGoogleTestTest}{\section{\-Init\-Google\-Test\-Test \-Class \-Reference}
+\label{d7/dd1/classtesting_1_1InitGoogleTestTest}\index{\-Init\-Google\-Test\-Test@{\-Init\-Google\-Test\-Test}}
+}
+\-Inheritance diagram for \-Init\-Google\-Test\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d7/dd1/classtesting_1_1InitGoogleTestTest}
+\end{center}
+\end{figure}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtesting_1_1InitGoogleTestTest_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Char\-Type $>$ }\\static void \hyperlink{classtesting_1_1InitGoogleTestTest_ae74713d5a5d19c5572ac8c891192814f}{\-Assert\-String\-Array\-Eq} (size\-\_\-t size1, \-Char\-Type $\ast$$\ast$array1, size\-\_\-t size2, \-Char\-Type $\ast$$\ast$array2)
+\item 
+static void \hyperlink{classtesting_1_1InitGoogleTestTest_a293b8dcb094183aba2ed9433a3641f1a}{\-Check\-Flags} (const \hyperlink{structtesting_1_1Flags}{\-Flags} \&expected)
+\item 
+{\footnotesize template$<$typename Char\-Type $>$ }\\static void \hyperlink{classtesting_1_1InitGoogleTestTest_ae072e735f6e1c1ac05a2341ca9e5e479}{\-Test\-Parsing\-Flags} (int argc1, const \-Char\-Type $\ast$$\ast$argv1, int argc2, const \-Char\-Type $\ast$$\ast$argv2, const \hyperlink{structtesting_1_1Flags}{\-Flags} \&expected, bool should\-\_\-print\-\_\-help)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 5354 of file gtest\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1InitGoogleTestTest_ae74713d5a5d19c5572ac8c891192814f}{\index{testing\-::\-Init\-Google\-Test\-Test@{testing\-::\-Init\-Google\-Test\-Test}!\-Assert\-String\-Array\-Eq@{\-Assert\-String\-Array\-Eq}}
+\index{\-Assert\-String\-Array\-Eq@{\-Assert\-String\-Array\-Eq}!testing::InitGoogleTestTest@{testing\-::\-Init\-Google\-Test\-Test}}
+\subsubsection[{\-Assert\-String\-Array\-Eq}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Assert\-String\-Array\-Eq} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{size1, }
+\item[{\-Char\-Type $\ast$$\ast$}]{array1, }
+\item[{size\-\_\-t}]{size2, }
+\item[{\-Char\-Type $\ast$$\ast$}]{array2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}\label{d7/dd1/classtesting_1_1InitGoogleTestTest_ae74713d5a5d19c5572ac8c891192814f}
+
+
+\-Definition at line 5376 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                                   {
+    ASSERT_EQ(size1, size2) << " Array sizes different.";
+
+    for (size_t i = 0; i != size1; i++) {
+      ASSERT_STREQ(array1[i], array2[i]) << " where i == " << i;
+    }
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1InitGoogleTestTest_a293b8dcb094183aba2ed9433a3641f1a}{\index{testing\-::\-Init\-Google\-Test\-Test@{testing\-::\-Init\-Google\-Test\-Test}!\-Check\-Flags@{\-Check\-Flags}}
+\index{\-Check\-Flags@{\-Check\-Flags}!testing::InitGoogleTestTest@{testing\-::\-Init\-Google\-Test\-Test}}
+\subsubsection[{\-Check\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Check\-Flags} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Flags} \&}]{expected}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}\label{d7/dd1/classtesting_1_1InitGoogleTestTest_a293b8dcb094183aba2ed9433a3641f1a}
+
+
+\-Definition at line 5386 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                {
+    EXPECT_EQ(expected.also_run_disabled_tests,
+              GTEST_FLAG(also_run_disabled_tests));
+    EXPECT_EQ(expected.break_on_failure, GTEST_FLAG(break_on_failure));
+    EXPECT_EQ(expected.catch_exceptions, GTEST_FLAG(catch_exceptions));
+    EXPECT_EQ(expected.death_test_use_fork, GTEST_FLAG(death_test_use_fork));
+    EXPECT_STREQ(expected.filter, GTEST_FLAG(filter).c_str());
+    EXPECT_EQ(expected.list_tests, GTEST_FLAG(list_tests));
+    EXPECT_STREQ(expected.output, GTEST_FLAG(output).c_str());
+    EXPECT_EQ(expected.print_time, GTEST_FLAG(print_time));
+    EXPECT_EQ(expected.random_seed, GTEST_FLAG(random_seed));
+    EXPECT_EQ(expected.repeat, GTEST_FLAG(repeat));
+    EXPECT_EQ(expected.shuffle, GTEST_FLAG(shuffle));
+    EXPECT_EQ(expected.stack_trace_depth, GTEST_FLAG(stack_trace_depth));
+    EXPECT_STREQ(expected.stream_result_to,
+                 GTEST_FLAG(stream_result_to).c_str());
+    EXPECT_EQ(expected.throw_on_failure, GTEST_FLAG(throw_on_failure));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1InitGoogleTestTest_a901706a587f9ae84df8b2395fbe759cb}{\index{testing\-::\-Init\-Google\-Test\-Test@{testing\-::\-Init\-Google\-Test\-Test}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!testing::InitGoogleTestTest@{testing\-::\-Init\-Google\-Test\-Test}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d7/dd1/classtesting_1_1InitGoogleTestTest_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a1b06560e0e01a806b92c2386220d0b57}{\-Test}.
+
+
+
+\-Definition at line 5357 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    GTEST_FLAG(also_run_disabled_tests) = false;
+    GTEST_FLAG(break_on_failure) = false;
+    GTEST_FLAG(catch_exceptions) = false;
+    GTEST_FLAG(death_test_use_fork) = false;
+    GTEST_FLAG(filter) = "";
+    GTEST_FLAG(list_tests) = false;
+    GTEST_FLAG(output) = "";
+    GTEST_FLAG(print_time) = true;
+    GTEST_FLAG(random_seed) = 0;
+    GTEST_FLAG(repeat) = 1;
+    GTEST_FLAG(shuffle) = false;
+    GTEST_FLAG(stack_trace_depth) = kMaxStackTraceDepth;
+    GTEST_FLAG(stream_result_to) = "";
+    GTEST_FLAG(throw_on_failure) = false;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1InitGoogleTestTest_ae072e735f6e1c1ac05a2341ca9e5e479}{\index{testing\-::\-Init\-Google\-Test\-Test@{testing\-::\-Init\-Google\-Test\-Test}!\-Test\-Parsing\-Flags@{\-Test\-Parsing\-Flags}}
+\index{\-Test\-Parsing\-Flags@{\-Test\-Parsing\-Flags}!testing::InitGoogleTestTest@{testing\-::\-Init\-Google\-Test\-Test}}
+\subsubsection[{\-Test\-Parsing\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Test\-Parsing\-Flags} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc1, }
+\item[{const \-Char\-Type $\ast$$\ast$}]{argv1, }
+\item[{int}]{argc2, }
+\item[{const \-Char\-Type $\ast$$\ast$}]{argv2, }
+\item[{const {\bf \-Flags} \&}]{expected, }
+\item[{bool}]{should\-\_\-print\-\_\-help}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}\label{d7/dd1/classtesting_1_1InitGoogleTestTest_ae072e735f6e1c1ac05a2341ca9e5e479}
+
+
+\-Definition at line 5409 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                                                              {
+    const bool saved_help_flag = ::testing::internal::g_help_flag;
+    ::testing::internal::g_help_flag = false;
+
+#if GTEST_HAS_STREAM_REDIRECTION
+    CaptureStdout();
+#endif
+
+    // Parses the command line.
+    internal::ParseGoogleTestFlagsOnly(&argc1, const_cast<CharType**>(argv1));
+
+#if GTEST_HAS_STREAM_REDIRECTION
+    const String captured_stdout = GetCapturedStdout();
+#endif
+
+    // Verifies the flag values.
+    CheckFlags(expected);
+
+    // Verifies that the recognized flags are removed from the command
+    // line.
+    AssertStringArrayEq(argc1 + 1, argv1, argc2 + 1, argv2);
+
+    // ParseGoogleTestFlagsOnly should neither set g_help_flag nor print the
+    // help message for the flags it recognizes.
+    EXPECT_EQ(should_print_help, ::testing::internal::g_help_flag);
+
+#if GTEST_HAS_STREAM_REDIRECTION
+    const char* const expected_help_fragment =
+        "This program contains tests written using";
+    if (should_print_help) {
+      EXPECT_PRED_FORMAT2(IsSubstring, expected_help_fragment, captured_stdout)
+      ;
+    } else {
+      EXPECT_PRED_FORMAT2(IsNotSubstring,
+                          expected_help_fragment, captured_stdout);
+    }
+#endif  // GTEST_HAS_STREAM_REDIRECTION
+
+    ::testing::internal::g_help_flag = saved_help_flag;
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__unittest_8cc}{gtest\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

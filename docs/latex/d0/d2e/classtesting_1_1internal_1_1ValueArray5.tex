@@ -1,0 +1,135 @@
+\hypertarget{classtesting_1_1internal_1_1ValueArray5}{\section{\-Value\-Array5$<$ \-T1, \-T2, \-T3, \-T4, \-T5 $>$ \-Class \-Template \-Reference}
+\label{d0/d2e/classtesting_1_1internal_1_1ValueArray5}\index{\-Value\-Array5$<$ T1, T2, T3, T4, T5 $>$@{\-Value\-Array5$<$ T1, T2, T3, T4, T5 $>$}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ValueArray5_a5db12a8a5e0254fc1691e730320aaf19}{\-Value\-Array5} (\-T1 v1, \-T2 v2, \-T3 v3, \-T4 v4, \-T5 v5)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classtesting_1_1internal_1_1ValueArray5_a08ef46fa12c9dd8ef6fc630baeea89b7}{operator Param\-Generator$<$ T $>$} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtesting_1_1internal_1_1ValueArray5_a41b34504b2d244f9a3dc377b64b77c15}{operator=} (const \hyperlink{classtesting_1_1internal_1_1ValueArray5}{\-Value\-Array5} \&other)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \-T1 \hyperlink{classtesting_1_1internal_1_1ValueArray5_aac1d0654cc6c1aceb4a5d0fa7a98042e}{v1\-\_\-}
+\item 
+const \-T2 \hyperlink{classtesting_1_1internal_1_1ValueArray5_a9f0a8ce6ce2fd27e980c4c51a7a7256a}{v2\-\_\-}
+\item 
+const \-T3 \hyperlink{classtesting_1_1internal_1_1ValueArray5_a4f8257321a2eab0456239174d6712d5e}{v3\-\_\-}
+\item 
+const \-T4 \hyperlink{classtesting_1_1internal_1_1ValueArray5_aac184059fee257381ccae81d8d112f85}{v4\-\_\-}
+\item 
+const \-T5 \hyperlink{classtesting_1_1internal_1_1ValueArray5_a1f3e0ada8419ed2e17cc61e6c0c54404}{v5\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename \-T1, typename \-T2, typename \-T3, typename \-T4, typename \-T5$>$class testing\-::internal\-::\-Value\-Array5$<$ T1, T2, T3, T4, T5 $>$}
+
+
+
+\-Definition at line 10704 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ValueArray5_a5db12a8a5e0254fc1691e730320aaf19}{\index{testing\-::internal\-::\-Value\-Array5@{testing\-::internal\-::\-Value\-Array5}!\-Value\-Array5@{\-Value\-Array5}}
+\index{\-Value\-Array5@{\-Value\-Array5}!testing::internal::ValueArray5@{testing\-::internal\-::\-Value\-Array5}}
+\subsubsection[{\-Value\-Array5}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Value\-Array5} (
+\begin{DoxyParamCaption}
+\item[{\-T1}]{v1, }
+\item[{\-T2}]{v2, }
+\item[{\-T3}]{v3, }
+\item[{\-T4}]{v4, }
+\item[{\-T5}]{v5}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d2e/classtesting_1_1internal_1_1ValueArray5_a5db12a8a5e0254fc1691e730320aaf19}
+
+
+\-Definition at line 10706 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                 : v1_(v1), v2_(v2), v3_(v3),
+      v4_(v4), v5_(v5) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ValueArray5_a08ef46fa12c9dd8ef6fc630baeea89b7}{\index{testing\-::internal\-::\-Value\-Array5@{testing\-::internal\-::\-Value\-Array5}!operator Param\-Generator$<$ T $>$@{operator Param\-Generator$<$ T $>$}}
+\index{operator Param\-Generator$<$ T $>$@{operator Param\-Generator$<$ T $>$}!testing::internal::ValueArray5@{testing\-::internal\-::\-Value\-Array5}}
+\subsubsection[{operator Param\-Generator$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}operator {\bf \-Param\-Generator}$<$ \-T $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/d2e/classtesting_1_1internal_1_1ValueArray5_a08ef46fa12c9dd8ef6fc630baeea89b7}
+
+
+\-Definition at line 10710 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                     {
+    const T array[] = {v1_, v2_, v3_, v4_, v5_};
+    return ValuesIn(array);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1ValueArray5_a41b34504b2d244f9a3dc377b64b77c15}{\index{testing\-::internal\-::\-Value\-Array5@{testing\-::internal\-::\-Value\-Array5}!operator=@{operator=}}
+\index{operator=@{operator=}!testing::internal::ValueArray5@{testing\-::internal\-::\-Value\-Array5}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Value\-Array5}$<$ \-T1, \-T2, \-T3, \-T4, \-T5 $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d2e/classtesting_1_1internal_1_1ValueArray5_a41b34504b2d244f9a3dc377b64b77c15}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ValueArray5_aac1d0654cc6c1aceb4a5d0fa7a98042e}{\index{testing\-::internal\-::\-Value\-Array5@{testing\-::internal\-::\-Value\-Array5}!v1\-\_\-@{v1\-\_\-}}
+\index{v1\-\_\-@{v1\-\_\-}!testing::internal::ValueArray5@{testing\-::internal\-::\-Value\-Array5}}
+\subsubsection[{v1\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const \-T1 {\bf v1\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d2e/classtesting_1_1internal_1_1ValueArray5_aac1d0654cc6c1aceb4a5d0fa7a98042e}
+
+
+\-Definition at line 10719 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1internal_1_1ValueArray5_a9f0a8ce6ce2fd27e980c4c51a7a7256a}{\index{testing\-::internal\-::\-Value\-Array5@{testing\-::internal\-::\-Value\-Array5}!v2\-\_\-@{v2\-\_\-}}
+\index{v2\-\_\-@{v2\-\_\-}!testing::internal::ValueArray5@{testing\-::internal\-::\-Value\-Array5}}
+\subsubsection[{v2\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const \-T2 {\bf v2\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d2e/classtesting_1_1internal_1_1ValueArray5_a9f0a8ce6ce2fd27e980c4c51a7a7256a}
+
+
+\-Definition at line 10720 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1internal_1_1ValueArray5_a4f8257321a2eab0456239174d6712d5e}{\index{testing\-::internal\-::\-Value\-Array5@{testing\-::internal\-::\-Value\-Array5}!v3\-\_\-@{v3\-\_\-}}
+\index{v3\-\_\-@{v3\-\_\-}!testing::internal::ValueArray5@{testing\-::internal\-::\-Value\-Array5}}
+\subsubsection[{v3\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const \-T3 {\bf v3\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d2e/classtesting_1_1internal_1_1ValueArray5_a4f8257321a2eab0456239174d6712d5e}
+
+
+\-Definition at line 10721 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1internal_1_1ValueArray5_aac184059fee257381ccae81d8d112f85}{\index{testing\-::internal\-::\-Value\-Array5@{testing\-::internal\-::\-Value\-Array5}!v4\-\_\-@{v4\-\_\-}}
+\index{v4\-\_\-@{v4\-\_\-}!testing::internal::ValueArray5@{testing\-::internal\-::\-Value\-Array5}}
+\subsubsection[{v4\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const \-T4 {\bf v4\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d2e/classtesting_1_1internal_1_1ValueArray5_aac184059fee257381ccae81d8d112f85}
+
+
+\-Definition at line 10722 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1internal_1_1ValueArray5_a1f3e0ada8419ed2e17cc61e6c0c54404}{\index{testing\-::internal\-::\-Value\-Array5@{testing\-::internal\-::\-Value\-Array5}!v5\-\_\-@{v5\-\_\-}}
+\index{v5\-\_\-@{v5\-\_\-}!testing::internal::ValueArray5@{testing\-::internal\-::\-Value\-Array5}}
+\subsubsection[{v5\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const \-T5 {\bf v5\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d2e/classtesting_1_1internal_1_1ValueArray5_a1f3e0ada8419ed2e17cc61e6c0c54404}
+
+
+\-Definition at line 10723 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\end{DoxyCompactItemize}

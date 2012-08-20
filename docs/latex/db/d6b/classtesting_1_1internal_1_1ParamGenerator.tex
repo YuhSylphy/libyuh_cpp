@@ -1,0 +1,149 @@
+\hypertarget{classtesting_1_1internal_1_1ParamGenerator}{\section{\-Param\-Generator$<$ \-T $>$ \-Class \-Template \-Reference}
+\label{db/d6b/classtesting_1_1internal_1_1ParamGenerator}\index{\-Param\-Generator$<$ T $>$@{\-Param\-Generator$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classtesting_1_1internal_1_1ParamIterator}{\-Param\-Iterator}$<$ \-T $>$ \hyperlink{classtesting_1_1internal_1_1ParamGenerator_a6b7c61f075b1727c4b8fbc849b7d9a95}{iterator}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ParamGenerator_a5faef39fe07e2f665e1af74fb27d1899}{\-Param\-Generator} (\hyperlink{classtesting_1_1internal_1_1ParamGeneratorInterface}{\-Param\-Generator\-Interface}$<$ \-T $>$ $\ast$impl)
+\item 
+\hyperlink{classtesting_1_1internal_1_1ParamGenerator_a5b8860c4c97491d5dc73997b1dbea17d}{\-Param\-Generator} (const \hyperlink{classtesting_1_1internal_1_1ParamGenerator}{\-Param\-Generator} \&other)
+\item 
+\hyperlink{classtesting_1_1internal_1_1ParamGenerator}{\-Param\-Generator} \& \hyperlink{classtesting_1_1internal_1_1ParamGenerator_abb781ef5a7f7b199c37fbc010f1c0e88}{operator=} (const \hyperlink{classtesting_1_1internal_1_1ParamGenerator}{\-Param\-Generator} \&other)
+\item 
+\hyperlink{classtesting_1_1internal_1_1ParamGenerator_a6b7c61f075b1727c4b8fbc849b7d9a95}{iterator} \hyperlink{classtesting_1_1internal_1_1ParamGenerator_a2fcbf5359798ec294d009f286fd802e6}{begin} () const 
+\item 
+\hyperlink{classtesting_1_1internal_1_1ParamGenerator_a6b7c61f075b1727c4b8fbc849b7d9a95}{iterator} \hyperlink{classtesting_1_1internal_1_1ParamGenerator_ac0742d15ef3d775dfe617aab68aaadaa}{end} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1linked__ptr}{linked\-\_\-ptr}$<$ const \*
+\hyperlink{classtesting_1_1internal_1_1ParamGeneratorInterface}{\-Param\-Generator\-Interface}$<$ \-T $>$ $>$ \hyperlink{classtesting_1_1internal_1_1ParamGenerator_a11bd1d693fccf0893a3bc3ceef1559a4}{impl\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename \-T$>$class testing\-::internal\-::\-Param\-Generator$<$ T $>$}
+
+
+
+\-Definition at line 10093 of file gtest.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ParamGenerator_a6b7c61f075b1727c4b8fbc849b7d9a95}{\index{testing\-::internal\-::\-Param\-Generator@{testing\-::internal\-::\-Param\-Generator}!iterator@{iterator}}
+\index{iterator@{iterator}!testing::internal::ParamGenerator@{testing\-::internal\-::\-Param\-Generator}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-Param\-Iterator}$<$\-T$>$ {\bf iterator}}}\label{db/d6b/classtesting_1_1internal_1_1ParamGenerator_a6b7c61f075b1727c4b8fbc849b7d9a95}
+
+
+\-Definition at line 10095 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ParamGenerator_a5faef39fe07e2f665e1af74fb27d1899}{\index{testing\-::internal\-::\-Param\-Generator@{testing\-::internal\-::\-Param\-Generator}!\-Param\-Generator@{\-Param\-Generator}}
+\index{\-Param\-Generator@{\-Param\-Generator}!testing::internal::ParamGenerator@{testing\-::internal\-::\-Param\-Generator}}
+\subsubsection[{\-Param\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Param\-Generator} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Param\-Generator\-Interface}$<$ \-T $>$ $\ast$}]{impl}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{db/d6b/classtesting_1_1internal_1_1ParamGenerator_a5faef39fe07e2f665e1af74fb27d1899}
+
+
+\-Definition at line 10097 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+: impl_(impl) {}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1ParamGenerator_a5b8860c4c97491d5dc73997b1dbea17d}{\index{testing\-::internal\-::\-Param\-Generator@{testing\-::internal\-::\-Param\-Generator}!\-Param\-Generator@{\-Param\-Generator}}
+\index{\-Param\-Generator@{\-Param\-Generator}!testing::internal::ParamGenerator@{testing\-::internal\-::\-Param\-Generator}}
+\subsubsection[{\-Param\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Param\-Generator} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Param\-Generator}$<$ \-T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{db/d6b/classtesting_1_1internal_1_1ParamGenerator_a5b8860c4c97491d5dc73997b1dbea17d}
+
+
+\-Definition at line 10098 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+: impl_(other.impl_) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ParamGenerator_a2fcbf5359798ec294d009f286fd802e6}{\index{testing\-::internal\-::\-Param\-Generator@{testing\-::internal\-::\-Param\-Generator}!begin@{begin}}
+\index{begin@{begin}!testing::internal::ParamGenerator@{testing\-::internal\-::\-Param\-Generator}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} {\bf begin} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{db/d6b/classtesting_1_1internal_1_1ParamGenerator_a2fcbf5359798ec294d009f286fd802e6}
+
+
+\-Definition at line 10105 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return iterator(impl_->Begin()); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1ParamGenerator_ac0742d15ef3d775dfe617aab68aaadaa}{\index{testing\-::internal\-::\-Param\-Generator@{testing\-::internal\-::\-Param\-Generator}!end@{end}}
+\index{end@{end}!testing::internal::ParamGenerator@{testing\-::internal\-::\-Param\-Generator}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} {\bf end} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{db/d6b/classtesting_1_1internal_1_1ParamGenerator_ac0742d15ef3d775dfe617aab68aaadaa}
+
+
+\-Definition at line 10106 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ return iterator(impl_->End()); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1ParamGenerator_abb781ef5a7f7b199c37fbc010f1c0e88}{\index{testing\-::internal\-::\-Param\-Generator@{testing\-::internal\-::\-Param\-Generator}!operator=@{operator=}}
+\index{operator=@{operator=}!testing::internal::ParamGenerator@{testing\-::internal\-::\-Param\-Generator}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Param\-Generator}\& operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Param\-Generator}$<$ \-T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{db/d6b/classtesting_1_1internal_1_1ParamGenerator_abb781ef5a7f7b199c37fbc010f1c0e88}
+
+
+\-Definition at line 10100 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                         {
+    impl_ = other.impl_;
+    return *this;
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1ParamGenerator_a11bd1d693fccf0893a3bc3ceef1559a4}{\index{testing\-::internal\-::\-Param\-Generator@{testing\-::internal\-::\-Param\-Generator}!impl\-\_\-@{impl\-\_\-}}
+\index{impl\-\_\-@{impl\-\_\-}!testing::internal::ParamGenerator@{testing\-::internal\-::\-Param\-Generator}}
+\subsubsection[{impl\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linked\-\_\-ptr}$<$const {\bf \-Param\-Generator\-Interface}$<$\-T$>$ $>$ {\bf impl\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{db/d6b/classtesting_1_1internal_1_1ParamGenerator_a11bd1d693fccf0893a3bc3ceef1559a4}
+
+
+\-Definition at line 10109 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\end{DoxyCompactItemize}

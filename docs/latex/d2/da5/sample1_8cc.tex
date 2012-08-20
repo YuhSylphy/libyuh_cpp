@@ -1,0 +1,72 @@
+\hypertarget{sample1_8cc}{\section{gtest-\/1.6.0/samples/sample1.cc \-File \-Reference}
+\label{d2/da5/sample1_8cc}\index{gtest-\/1.\-6.\-0/samples/sample1.\-cc@{gtest-\/1.\-6.\-0/samples/sample1.\-cc}}
+}
+{\ttfamily \#include \char`\"{}sample1.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}{\-Factorial} (int n)
+\item 
+bool \hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{\-Is\-Prime} (int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}{\index{sample1.\-cc@{sample1.\-cc}!\-Factorial@{\-Factorial}}
+\index{\-Factorial@{\-Factorial}!sample1.cc@{sample1.\-cc}}
+\subsubsection[{\-Factorial}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Factorial} (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{d2/da5/sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}
+
+
+\-Definition at line 37 of file sample1.\-cc.
+
+
+\begin{DoxyCode}
+                     {
+  int result = 1;
+  for (int i = 1; i <= n; i++) {
+    result *= i;
+  }
+
+  return result;
+}
+\end{DoxyCode}
+\hypertarget{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{\index{sample1.\-cc@{sample1.\-cc}!\-Is\-Prime@{\-Is\-Prime}}
+\index{\-Is\-Prime@{\-Is\-Prime}!sample1.cc@{sample1.\-cc}}
+\subsubsection[{\-Is\-Prime}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Is\-Prime} (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{d2/da5/sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}
+
+
+\-Definition at line 47 of file sample1.\-cc.
+
+
+\begin{DoxyCode}
+                    {
+  // Trivial case 1: small numbers
+  if (n <= 1) return false;
+
+  // Trivial case 2: even numbers
+  if (n % 2 == 0) return n == 2;
+
+  // Now, we have that n is odd and n >= 3.
+
+  // Try to divide n by every odd number i, starting from 3
+  for (int i = 3; ; i += 2) {
+    // We only have to try i up to the squre root of n
+    if (i > n/i) break;
+
+    // Now, we have i <= n/i < n.
+    // If n is divisible by i, n is not prime.
+    if (n % i == 0) return false;
+  }
+
+  // n has no integer factor in the range (1, n), and thus is prime.
+  return true;
+}
+\end{DoxyCode}

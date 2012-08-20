@@ -1,0 +1,175 @@
+\hypertarget{namespacegtest__env__var__test}{\section{gtest\-\_\-env\-\_\-var\-\_\-test \-Namespace \-Reference}
+\label{dd/d84/namespacegtest__env__var__test}\index{gtest\-\_\-env\-\_\-var\-\_\-test@{gtest\-\_\-env\-\_\-var\-\_\-test}}
+}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classgtest__env__var__test_1_1GTestEnvVarTest}{\-G\-Test\-Env\-Var\-Test}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegtest__env__var__test_ad6332ca66e182fdc026b4a3320bfd5df}{\-Assert\-Eq}
+\item 
+def \hyperlink{namespacegtest__env__var__test_a6956c1471ed7a2d803a08e1b9f37fe24}{\-Set\-Env\-Var}
+\item 
+def \hyperlink{namespacegtest__env__var__test_ac0d1280b0a5b157b0cb13644bf8677d9}{\-Get\-Flag}
+\item 
+def \hyperlink{namespacegtest__env__var__test_af47985ae8c318065aede1d1b303cd6a8}{\-Test\-Flag}
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacegtest__env__var__test_a629d61dfe4da763164a4d1a2d85b0afd}{\-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'
+\item 
+string \hyperlink{namespacegtest__env__var__test_ab1b21b880253abfa3ab3dfc19b06814c}{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S} = 'nt'
+\item 
+string \hyperlink{namespacegtest__env__var__test_a90c275a505433b6e9dc2e404ee55395e}{\-I\-S\-\_\-\-L\-I\-N\-U\-X} = 'posix'
+\item 
+tuple \hyperlink{namespacegtest__env__var__test_add010199942a26d17bd560c1ce462eeb}{\-C\-O\-M\-M\-A\-N\-D} = \hyperlink{namespacegtest__test__utils_a1bdf3cac86afa675ed37629b183048e9}{gtest\-\_\-test\-\_\-utils.\-Get\-Test\-Executable\-Path}('gtest\-\_\-env\-\_\-var\-\_\-test\-\_\-')
+\item 
+tuple \hyperlink{namespacegtest__env__var__test_a199b463c0623b1b68e7b45e7b01fe16c}{environ} = os.\-environ.\-copy()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespacegtest__env__var__test_ad6332ca66e182fdc026b4a3320bfd5df}{\index{gtest\-\_\-env\-\_\-var\-\_\-test@{gtest\-\_\-env\-\_\-var\-\_\-test}!\-Assert\-Eq@{\-Assert\-Eq}}
+\index{\-Assert\-Eq@{\-Assert\-Eq}!gtest_env_var_test@{gtest\-\_\-env\-\_\-var\-\_\-test}}
+\subsubsection[{\-Assert\-Eq}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-env\-\_\-var\-\_\-test.\-Assert\-Eq} (
+\begin{DoxyParamCaption}
+\item[{}]{expected, }
+\item[{}]{actual}
+\end{DoxyParamCaption}
+)}}\label{dd/d84/namespacegtest__env__var__test_ad6332ca66e182fdc026b4a3320bfd5df}
+
+
+\-Definition at line 48 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+48 
+49 def AssertEq(expected, actual):
+50   if expected != actual:
+51     print 'Expected: %s' % (expected,)
+52     print '  Actual: %s' % (actual,)
+53     raise AssertionError
+54 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__env__var__test_ac0d1280b0a5b157b0cb13644bf8677d9}{\index{gtest\-\_\-env\-\_\-var\-\_\-test@{gtest\-\_\-env\-\_\-var\-\_\-test}!\-Get\-Flag@{\-Get\-Flag}}
+\index{\-Get\-Flag@{\-Get\-Flag}!gtest_env_var_test@{gtest\-\_\-env\-\_\-var\-\_\-test}}
+\subsubsection[{\-Get\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-env\-\_\-var\-\_\-test.\-Get\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)}}\label{dd/d84/namespacegtest__env__var__test_ac0d1280b0a5b157b0cb13644bf8677d9}
+\begin{DoxyVerb}Runs gtest_env_var_test_ and returns its output.\end{DoxyVerb}
+ 
+
+\-Definition at line 64 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+64 
+65 def GetFlag(flag):
+66   """Runs gtest_env_var_test_ and returns its output."""
+67 
+68   args = [COMMAND]
+69   if flag is not None:
+70     args += [flag]
+71   return gtest_test_utils.Subprocess(args, env=environ).output
+72 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__env__var__test_a6956c1471ed7a2d803a08e1b9f37fe24}{\index{gtest\-\_\-env\-\_\-var\-\_\-test@{gtest\-\_\-env\-\_\-var\-\_\-test}!\-Set\-Env\-Var@{\-Set\-Env\-Var}}
+\index{\-Set\-Env\-Var@{\-Set\-Env\-Var}!gtest_env_var_test@{gtest\-\_\-env\-\_\-var\-\_\-test}}
+\subsubsection[{\-Set\-Env\-Var}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-env\-\_\-var\-\_\-test.\-Set\-Env\-Var} (
+\begin{DoxyParamCaption}
+\item[{}]{env\-\_\-var, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}\label{dd/d84/namespacegtest__env__var__test_a6956c1471ed7a2d803a08e1b9f37fe24}
+\begin{DoxyVerb}Sets the env variable to 'value'; unsets it when 'value' is None.\end{DoxyVerb}
+ 
+
+\-Definition at line 55 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+55 
+56 def SetEnvVar(env_var, value):
+57   """Sets the env variable to 'value'; unsets it when 'value' is None."""
+58 
+59   if value is not None:
+60     environ[env_var] = value
+61   elif env_var in environ:
+62     del environ[env_var]
+63 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__env__var__test_af47985ae8c318065aede1d1b303cd6a8}{\index{gtest\-\_\-env\-\_\-var\-\_\-test@{gtest\-\_\-env\-\_\-var\-\_\-test}!\-Test\-Flag@{\-Test\-Flag}}
+\index{\-Test\-Flag@{\-Test\-Flag}!gtest_env_var_test@{gtest\-\_\-env\-\_\-var\-\_\-test}}
+\subsubsection[{\-Test\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-env\-\_\-var\-\_\-test.\-Test\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{flag, }
+\item[{}]{test\-\_\-val, }
+\item[{}]{default\-\_\-val}
+\end{DoxyParamCaption}
+)}}\label{dd/d84/namespacegtest__env__var__test_af47985ae8c318065aede1d1b303cd6a8}
+\begin{DoxyVerb}Verifies that the given flag is affected by the corresponding env var.\end{DoxyVerb}
+ 
+
+\-Definition at line 73 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+73 
+74 def TestFlag(flag, test_val, default_val):
+75   """Verifies that the given flag is affected by the corresponding env var."""
+76 
+77   env_var = 'GTEST_' + flag.upper()
+78   SetEnvVar(env_var, test_val)
+79   AssertEq(test_val, GetFlag(flag))
+80   SetEnvVar(env_var, None)
+81   AssertEq(default_val, GetFlag(flag))
+82 
+
+\end{DoxyCode}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{namespacegtest__env__var__test_a629d61dfe4da763164a4d1a2d85b0afd}{\index{gtest\-\_\-env\-\_\-var\-\_\-test@{gtest\-\_\-env\-\_\-var\-\_\-test}!\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}!gtest_env_var_test@{gtest\-\_\-env\-\_\-var\-\_\-test}}
+\subsubsection[{\-\_\-\-\_\-author\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'}}\label{dd/d84/namespacegtest__env__var__test_a629d61dfe4da763164a4d1a2d85b0afd}
+
+
+\-Definition at line 34 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+
+\hypertarget{namespacegtest__env__var__test_add010199942a26d17bd560c1ce462eeb}{\index{gtest\-\_\-env\-\_\-var\-\_\-test@{gtest\-\_\-env\-\_\-var\-\_\-test}!\-C\-O\-M\-M\-A\-N\-D@{\-C\-O\-M\-M\-A\-N\-D}}
+\index{\-C\-O\-M\-M\-A\-N\-D@{\-C\-O\-M\-M\-A\-N\-D}!gtest_env_var_test@{gtest\-\_\-env\-\_\-var\-\_\-test}}
+\subsubsection[{\-C\-O\-M\-M\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf \-C\-O\-M\-M\-A\-N\-D} = {\bf gtest\-\_\-test\-\_\-utils.\-Get\-Test\-Executable\-Path}('gtest\-\_\-env\-\_\-var\-\_\-test\-\_\-')}}\label{dd/d84/namespacegtest__env__var__test_add010199942a26d17bd560c1ce462eeb}
+
+
+\-Definition at line 43 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+
+\hypertarget{namespacegtest__env__var__test_a199b463c0623b1b68e7b45e7b01fe16c}{\index{gtest\-\_\-env\-\_\-var\-\_\-test@{gtest\-\_\-env\-\_\-var\-\_\-test}!environ@{environ}}
+\index{environ@{environ}!gtest_env_var_test@{gtest\-\_\-env\-\_\-var\-\_\-test}}
+\subsubsection[{environ}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf environ} = os.\-environ.\-copy()}}\label{dd/d84/namespacegtest__env__var__test_a199b463c0623b1b68e7b45e7b01fe16c}
+
+
+\-Definition at line 45 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+
+\hypertarget{namespacegtest__env__var__test_a90c275a505433b6e9dc2e404ee55395e}{\index{gtest\-\_\-env\-\_\-var\-\_\-test@{gtest\-\_\-env\-\_\-var\-\_\-test}!\-I\-S\-\_\-\-L\-I\-N\-U\-X@{\-I\-S\-\_\-\-L\-I\-N\-U\-X}}
+\index{\-I\-S\-\_\-\-L\-I\-N\-U\-X@{\-I\-S\-\_\-\-L\-I\-N\-U\-X}!gtest_env_var_test@{gtest\-\_\-env\-\_\-var\-\_\-test}}
+\subsubsection[{\-I\-S\-\_\-\-L\-I\-N\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-I\-S\-\_\-\-L\-I\-N\-U\-X} = 'posix'}}\label{dd/d84/namespacegtest__env__var__test_a90c275a505433b6e9dc2e404ee55395e}
+
+
+\-Definition at line 41 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+
+\hypertarget{namespacegtest__env__var__test_ab1b21b880253abfa3ab3dfc19b06814c}{\index{gtest\-\_\-env\-\_\-var\-\_\-test@{gtest\-\_\-env\-\_\-var\-\_\-test}!\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S@{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S}}
+\index{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S@{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S}!gtest_env_var_test@{gtest\-\_\-env\-\_\-var\-\_\-test}}
+\subsubsection[{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S} = 'nt'}}\label{dd/d84/namespacegtest__env__var__test_ab1b21b880253abfa3ab3dfc19b06814c}
+
+
+\-Definition at line 40 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+

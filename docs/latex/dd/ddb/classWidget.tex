@@ -1,0 +1,169 @@
+\hypertarget{classWidget}{\section{\-Widget \-Class \-Reference}
+\label{dd/ddb/classWidget}\index{\-Widget@{\-Widget}}
+}
+
+
+{\ttfamily \#include $<$widget.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classWidget_a609188456bedb4589b2690618606418c}{\-Widget} (int number, const std\-::string \&name)
+\item 
+\hyperlink{classWidget_ae4171a22a36c0a394704c594fd856b0e}{$\sim$\-Widget} ()
+\item 
+float \hyperlink{classWidget_add5b557122d90f9a891d6b981e3ac305}{\-Get\-Float\-Value} () const 
+\item 
+int \hyperlink{classWidget_a026ef91588c09c091efb7c40bb73d4dc}{\-Get\-Int\-Value} () const 
+\item 
+std\-::string \hyperlink{classWidget_a3995da0370e2ada1bf62a38fa44f8239}{\-Get\-String\-Value} () const 
+\item 
+void \hyperlink{classWidget_a6ccc7f701c942a62d55aecd193f4207c}{\-Get\-Char\-Ptr\-Value} (char $\ast$buffer, size\-\_\-t max\-\_\-size) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classWidget_a9a0a06520c913b964c1c812d6beae9a3}{number\-\_\-}
+\item 
+std\-::string \hyperlink{classWidget_a4d739cc5d335052eb9f5b2ca559b81d1}{name\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 42 of file widget.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classWidget_a609188456bedb4589b2690618606418c}{\index{\-Widget@{\-Widget}!\-Widget@{\-Widget}}
+\index{\-Widget@{\-Widget}!Widget@{\-Widget}}
+\subsubsection[{\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Widget} (
+\begin{DoxyParamCaption}
+\item[{int}]{number, }
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{dd/ddb/classWidget_a609188456bedb4589b2690618606418c}
+
+
+\-Definition at line 40 of file widget.\-cc.
+
+
+\begin{DoxyCode}
+    : number_(number),
+      name_(name) {}
+\end{DoxyCode}
+\hypertarget{classWidget_ae4171a22a36c0a394704c594fd856b0e}{\index{\-Widget@{\-Widget}!$\sim$\-Widget@{$\sim$\-Widget}}
+\index{$\sim$\-Widget@{$\sim$\-Widget}!Widget@{\-Widget}}
+\subsubsection[{$\sim$\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Widget} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{dd/ddb/classWidget_ae4171a22a36c0a394704c594fd856b0e}
+
+
+\-Definition at line 44 of file widget.\-cc.
+
+
+\begin{DoxyCode}
+{}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classWidget_a6ccc7f701c942a62d55aecd193f4207c}{\index{\-Widget@{\-Widget}!\-Get\-Char\-Ptr\-Value@{\-Get\-Char\-Ptr\-Value}}
+\index{\-Get\-Char\-Ptr\-Value@{\-Get\-Char\-Ptr\-Value}!Widget@{\-Widget}}
+\subsubsection[{\-Get\-Char\-Ptr\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Get\-Char\-Ptr\-Value} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{size\-\_\-t}]{max\-\_\-size}
+\end{DoxyParamCaption}
+) const}}\label{dd/ddb/classWidget_a6ccc7f701c942a62d55aecd193f4207c}
+
+
+\-Definition at line 58 of file widget.\-cc.
+
+
+\begin{DoxyCode}
+                                                                {
+  // Copy the char* representation of name_ into buffer, up to max_size.
+  strncpy(buffer, name_.c_str(), max_size-1);
+  buffer[max_size-1] = '\0';
+  return;
+}
+\end{DoxyCode}
+\hypertarget{classWidget_add5b557122d90f9a891d6b981e3ac305}{\index{\-Widget@{\-Widget}!\-Get\-Float\-Value@{\-Get\-Float\-Value}}
+\index{\-Get\-Float\-Value@{\-Get\-Float\-Value}!Widget@{\-Widget}}
+\subsubsection[{\-Get\-Float\-Value}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Get\-Float\-Value} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{dd/ddb/classWidget_add5b557122d90f9a891d6b981e3ac305}
+
+
+\-Definition at line 46 of file widget.\-cc.
+
+
+\begin{DoxyCode}
+                                  {
+  return number_;
+}
+\end{DoxyCode}
+\hypertarget{classWidget_a026ef91588c09c091efb7c40bb73d4dc}{\index{\-Widget@{\-Widget}!\-Get\-Int\-Value@{\-Get\-Int\-Value}}
+\index{\-Get\-Int\-Value@{\-Get\-Int\-Value}!Widget@{\-Widget}}
+\subsubsection[{\-Get\-Int\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Get\-Int\-Value} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{dd/ddb/classWidget_a026ef91588c09c091efb7c40bb73d4dc}
+
+
+\-Definition at line 50 of file widget.\-cc.
+
+
+\begin{DoxyCode}
+                              {
+  return static_cast<int>(number_);
+}
+\end{DoxyCode}
+\hypertarget{classWidget_a3995da0370e2ada1bf62a38fa44f8239}{\index{\-Widget@{\-Widget}!\-Get\-String\-Value@{\-Get\-String\-Value}}
+\index{\-Get\-String\-Value@{\-Get\-String\-Value}!Widget@{\-Widget}}
+\subsubsection[{\-Get\-String\-Value}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-Get\-String\-Value} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{dd/ddb/classWidget_a3995da0370e2ada1bf62a38fa44f8239}
+
+
+\-Definition at line 54 of file widget.\-cc.
+
+
+\begin{DoxyCode}
+                                       {
+  return name_;
+}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classWidget_a4d739cc5d335052eb9f5b2ca559b81d1}{\index{\-Widget@{\-Widget}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!Widget@{\-Widget}}
+\subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf name\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{dd/ddb/classWidget_a4d739cc5d335052eb9f5b2ca559b81d1}
+
+
+\-Definition at line 58 of file widget.\-h.
+
+\hypertarget{classWidget_a9a0a06520c913b964c1c812d6beae9a3}{\index{\-Widget@{\-Widget}!number\-\_\-@{number\-\_\-}}
+\index{number\-\_\-@{number\-\_\-}!Widget@{\-Widget}}
+\subsubsection[{number\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf number\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{dd/ddb/classWidget_a9a0a06520c913b964c1c812d6beae9a3}
+
+
+\-Definition at line 57 of file widget.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/xcode/\-Samples/\-Framework\-Sample/\hyperlink{widget_8h}{widget.\-h}\item 
+gtest-\/1.\-6.\-0/xcode/\-Samples/\-Framework\-Sample/\hyperlink{widget_8cc}{widget.\-cc}\end{DoxyCompactItemize}

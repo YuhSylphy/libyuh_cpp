@@ -1,0 +1,275 @@
+\hypertarget{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest}{\section{\-G\-Test\-Break\-On\-Failure\-Unit\-Test \-Class \-Reference}
+\label{d8/de1/classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest}\index{\-G\-Test\-Break\-On\-Failure\-Unit\-Test@{\-G\-Test\-Break\-On\-Failure\-Unit\-Test}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_adc02f4ab231c886fc73ece7b7ee533c1}{\-Run\-And\-Verify}
+\item 
+def \hyperlink{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a9da84d75ab4797f2c3730d5974ed3823}{test\-Default\-Behavior}
+\item 
+def \hyperlink{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a34c43c798b9dd9e170007a9018f196e2}{test\-Env\-Var}
+\item 
+def \hyperlink{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a02b1b74bbc5e2eecc6d6c4117de89a81}{test\-Flag}
+\item 
+def \hyperlink{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_acfa6c563d6c35b14e6d2749a0da630f6}{test\-Flag\-Overrides\-Env\-Var}
+\item 
+def \hyperlink{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_ae7f5f4b17545fbb6f32e7fb08d3c5866}{test\-Break\-On\-Failure\-Overrides\-Throw\-On\-Failure}
+\item 
+def \hyperlink{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a508a75b728cb09e7ae24e241896ca7a2}{test\-Catch\-Exceptions\-Does\-Not\-Interfere}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}Tests using the GTEST_BREAK_ON_FAILURE environment variable or
+the --gtest_break_on_failure flag to turn assertion failures into
+segmentation faults.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 99 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_adc02f4ab231c886fc73ece7b7ee533c1}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}!\-Run\-And\-Verify@{\-Run\-And\-Verify}}
+\index{\-Run\-And\-Verify@{\-Run\-And\-Verify}!gtest_break_on_failure_unittest::GTestBreakOnFailureUnitTest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}}
+\subsubsection[{\-Run\-And\-Verify}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Run\-And\-Verify} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{env\-\_\-var\-\_\-value, }
+\item[{}]{flag\-\_\-value, }
+\item[{}]{expect\-\_\-seg\-\_\-fault}
+\end{DoxyParamCaption}
+)}}\label{d8/de1/classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_adc02f4ab231c886fc73ece7b7ee533c1}
+\begin{DoxyVerb}Runs gtest_break_on_failure_unittest_ and verifies that it does
+(or does not) have a seg-fault.
+
+Args:
+  env_var_value:    value of the GTEST_BREAK_ON_FAILURE environment
+                variable; None if the variable should be unset.
+  flag_value:       value of the --gtest_break_on_failure flag;
+                None if the flag should not be present.
+  expect_seg_fault: 1 if the program is expected to generate a seg-fault;
+                0 otherwise.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 105 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+105 
+106   def RunAndVerify(self, env_var_value, flag_value, expect_seg_fault):
+107     """Runs gtest_break_on_failure_unittest_ and verifies that it does
+108     (or does not) have a seg-fault.
+109 
+110     Args:
+111       env_var_value:    value of the GTEST_BREAK_ON_FAILURE environment
+112                         variable; None if the variable should be unset.
+113       flag_value:       value of the --gtest_break_on_failure flag;
+114                         None if the flag should not be present.
+115       expect_seg_fault: 1 if the program is expected to generate a seg-fault;
+116                         0 otherwise.
+117     """
+118 
+119     SetEnvVar(BREAK_ON_FAILURE_ENV_VAR, env_var_value)
+120 
+121     if env_var_value is None:
+122       env_var_value_msg = ' is not set'
+123     else:
+124       env_var_value_msg = '=' + env_var_value
+125 
+126     if flag_value is None:
+127       flag = ''
+128     elif flag_value == '0':
+129       flag = '--%s=0' % BREAK_ON_FAILURE_FLAG
+130     else:
+131       flag = '--%s' % BREAK_ON_FAILURE_FLAG
+132 
+133     command = [EXE_PATH]
+134     if flag:
+135       command.append(flag)
+136 
+137     if expect_seg_fault:
+138       should_or_not = 'should'
+139     else:
+140       should_or_not = 'should not'
+141 
+142     has_seg_fault = Run(command)
+143 
+144     SetEnvVar(BREAK_ON_FAILURE_ENV_VAR, None)
+145 
+146     msg = ('when %s%s, an assertion failure in "%s" %s cause a seg-fault.' %
+147            (BREAK_ON_FAILURE_ENV_VAR, env_var_value_msg, ' '.join(command),
+148             should_or_not))
+149     self.assert_(has_seg_fault == expect_seg_fault, msg)
+
+\end{DoxyCode}
+\hypertarget{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_ae7f5f4b17545fbb6f32e7fb08d3c5866}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}!test\-Break\-On\-Failure\-Overrides\-Throw\-On\-Failure@{test\-Break\-On\-Failure\-Overrides\-Throw\-On\-Failure}}
+\index{test\-Break\-On\-Failure\-Overrides\-Throw\-On\-Failure@{test\-Break\-On\-Failure\-Overrides\-Throw\-On\-Failure}!gtest_break_on_failure_unittest::GTestBreakOnFailureUnitTest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}}
+\subsubsection[{test\-Break\-On\-Failure\-Overrides\-Throw\-On\-Failure}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Break\-On\-Failure\-Overrides\-Throw\-On\-Failure} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d8/de1/classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_ae7f5f4b17545fbb6f32e7fb08d3c5866}
+\begin{DoxyVerb}Tests that gtest_break_on_failure overrides gtest_throw_on_failure.\end{DoxyVerb}
+ 
+
+\-Definition at line 193 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+193 
+194   def testBreakOnFailureOverridesThrowOnFailure(self):
+195     """Tests that gtest_break_on_failure overrides gtest_throw_on_failure."""
+196 
+197     SetEnvVar(THROW_ON_FAILURE_ENV_VAR, '1')
+198     try:
+199       self.RunAndVerify(env_var_value=None,
+200                         flag_value='1',
+201                         expect_seg_fault=1)
+202     finally:
+203       SetEnvVar(THROW_ON_FAILURE_ENV_VAR, None)
+
+\end{DoxyCode}
+\hypertarget{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a508a75b728cb09e7ae24e241896ca7a2}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}!test\-Catch\-Exceptions\-Does\-Not\-Interfere@{test\-Catch\-Exceptions\-Does\-Not\-Interfere}}
+\index{test\-Catch\-Exceptions\-Does\-Not\-Interfere@{test\-Catch\-Exceptions\-Does\-Not\-Interfere}!gtest_break_on_failure_unittest::GTestBreakOnFailureUnitTest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}}
+\subsubsection[{test\-Catch\-Exceptions\-Does\-Not\-Interfere}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Catch\-Exceptions\-Does\-Not\-Interfere} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d8/de1/classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a508a75b728cb09e7ae24e241896ca7a2}
+\begin{DoxyVerb}Tests that gtest_catch_exceptions doesn't interfere.\end{DoxyVerb}
+ 
+
+\-Definition at line 205 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+205 
+206     def testCatchExceptionsDoesNotInterfere(self):
+207       """Tests that gtest_catch_exceptions doesn't interfere."""
+208 
+209       SetEnvVar(CATCH_EXCEPTIONS_ENV_VAR, '1')
+210       try:
+211         self.RunAndVerify(env_var_value='1',
+212                           flag_value='1',
+213                           expect_seg_fault=1)
+214       finally:
+215         SetEnvVar(CATCH_EXCEPTIONS_ENV_VAR, None)
+216 
+
+\end{DoxyCode}
+\hypertarget{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a9da84d75ab4797f2c3730d5974ed3823}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}!test\-Default\-Behavior@{test\-Default\-Behavior}}
+\index{test\-Default\-Behavior@{test\-Default\-Behavior}!gtest_break_on_failure_unittest::GTestBreakOnFailureUnitTest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}}
+\subsubsection[{test\-Default\-Behavior}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Default\-Behavior} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d8/de1/classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a9da84d75ab4797f2c3730d5974ed3823}
+\begin{DoxyVerb}Tests the behavior of the default mode.\end{DoxyVerb}
+ 
+
+\-Definition at line 150 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+150 
+151   def testDefaultBehavior(self):
+152     """Tests the behavior of the default mode."""
+153 
+154     self.RunAndVerify(env_var_value=None,
+155                       flag_value=None,
+156                       expect_seg_fault=0)
+
+\end{DoxyCode}
+\hypertarget{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a34c43c798b9dd9e170007a9018f196e2}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}!test\-Env\-Var@{test\-Env\-Var}}
+\index{test\-Env\-Var@{test\-Env\-Var}!gtest_break_on_failure_unittest::GTestBreakOnFailureUnitTest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}}
+\subsubsection[{test\-Env\-Var}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Env\-Var} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d8/de1/classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a34c43c798b9dd9e170007a9018f196e2}
+\begin{DoxyVerb}Tests using the GTEST_BREAK_ON_FAILURE environment variable.\end{DoxyVerb}
+ 
+
+\-Definition at line 157 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+157 
+158   def testEnvVar(self):
+159     """Tests using the GTEST_BREAK_ON_FAILURE environment variable."""
+160 
+161     self.RunAndVerify(env_var_value='0',
+162                       flag_value=None,
+163                       expect_seg_fault=0)
+164     self.RunAndVerify(env_var_value='1',
+165                       flag_value=None,
+166                       expect_seg_fault=1)
+
+\end{DoxyCode}
+\hypertarget{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a02b1b74bbc5e2eecc6d6c4117de89a81}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}!test\-Flag@{test\-Flag}}
+\index{test\-Flag@{test\-Flag}!gtest_break_on_failure_unittest::GTestBreakOnFailureUnitTest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}}
+\subsubsection[{test\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d8/de1/classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_a02b1b74bbc5e2eecc6d6c4117de89a81}
+\begin{DoxyVerb}Tests using the --gtest_break_on_failure flag.\end{DoxyVerb}
+ 
+
+\-Definition at line 167 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+167 
+168   def testFlag(self):
+169     """Tests using the --gtest_break_on_failure flag."""
+170 
+171     self.RunAndVerify(env_var_value=None,
+172                       flag_value='0',
+173                       expect_seg_fault=0)
+174     self.RunAndVerify(env_var_value=None,
+175                       flag_value='1',
+176                       expect_seg_fault=1)
+
+\end{DoxyCode}
+\hypertarget{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_acfa6c563d6c35b14e6d2749a0da630f6}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}!test\-Flag\-Overrides\-Env\-Var@{test\-Flag\-Overrides\-Env\-Var}}
+\index{test\-Flag\-Overrides\-Env\-Var@{test\-Flag\-Overrides\-Env\-Var}!gtest_break_on_failure_unittest::GTestBreakOnFailureUnitTest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest\-::\-G\-Test\-Break\-On\-Failure\-Unit\-Test}}
+\subsubsection[{test\-Flag\-Overrides\-Env\-Var}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Flag\-Overrides\-Env\-Var} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d8/de1/classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest_acfa6c563d6c35b14e6d2749a0da630f6}
+\begin{DoxyVerb}Tests that the flag overrides the environment variable.\end{DoxyVerb}
+ 
+
+\-Definition at line 177 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+177 
+178   def testFlagOverridesEnvVar(self):
+179     """Tests that the flag overrides the environment variable."""
+180 
+181     self.RunAndVerify(env_var_value='0',
+182                       flag_value='0',
+183                       expect_seg_fault=0)
+184     self.RunAndVerify(env_var_value='0',
+185                       flag_value='1',
+186                       expect_seg_fault=1)
+187     self.RunAndVerify(env_var_value='1',
+188                       flag_value='0',
+189                       expect_seg_fault=0)
+190     self.RunAndVerify(env_var_value='1',
+191                       flag_value='1',
+192                       expect_seg_fault=1)
+
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__break__on__failure__unittest_8py}{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py}\end{DoxyCompactItemize}

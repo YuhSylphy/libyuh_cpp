@@ -1,0 +1,145 @@
+\hypertarget{classtesting_1_1SetUpTestCaseTest}{\section{\-Set\-Up\-Test\-Case\-Test \-Class \-Reference}
+\label{d8/d3b/classtesting_1_1SetUpTestCaseTest}\index{\-Set\-Up\-Test\-Case\-Test@{\-Set\-Up\-Test\-Case\-Test}}
+}
+\-Inheritance diagram for \-Set\-Up\-Test\-Case\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d8/d3b/classtesting_1_1SetUpTestCaseTest}
+\end{center}
+\end{figure}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtesting_1_1SetUpTestCaseTest_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtesting_1_1SetUpTestCaseTest_aad8181b222f27240e9f07dcb6e620fa3}{\-Set\-Up\-Test\-Case} ()
+\item 
+static void \hyperlink{classtesting_1_1SetUpTestCaseTest_aaff0dc66f57f643a49ad3dd6bcb56916}{\-Tear\-Down\-Test\-Case} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classtesting_1_1SetUpTestCaseTest_a3dd655f1f7e3481778d86bd515be83b3}{counter\-\_\-} = 0
+\item 
+static const char $\ast$ \hyperlink{classtesting_1_1SetUpTestCaseTest_ad219f67f3c407104d4956f33eb7116be}{shared\-\_\-resource\-\_\-} = \-N\-U\-L\-L
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 5141 of file gtest\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1SetUpTestCaseTest_a901706a587f9ae84df8b2395fbe759cb}{\index{testing\-::\-Set\-Up\-Test\-Case\-Test@{testing\-::\-Set\-Up\-Test\-Case\-Test}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!testing::SetUpTestCaseTest@{testing\-::\-Set\-Up\-Test\-Case\-Test}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d8/d3b/classtesting_1_1SetUpTestCaseTest_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a1b06560e0e01a806b92c2386220d0b57}{\-Test}.
+
+
+
+\-Definition at line 5176 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    // SetUpTestCase() should be called only once, so counter_ should
+    // always be 1.
+    EXPECT_EQ(1, counter_);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1SetUpTestCaseTest_aad8181b222f27240e9f07dcb6e620fa3}{\index{testing\-::\-Set\-Up\-Test\-Case\-Test@{testing\-::\-Set\-Up\-Test\-Case\-Test}!\-Set\-Up\-Test\-Case@{\-Set\-Up\-Test\-Case}}
+\index{\-Set\-Up\-Test\-Case@{\-Set\-Up\-Test\-Case}!testing::SetUpTestCaseTest@{testing\-::\-Set\-Up\-Test\-Case\-Test}}
+\subsubsection[{\-Set\-Up\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Set\-Up\-Test\-Case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}\label{d8/d3b/classtesting_1_1SetUpTestCaseTest_aad8181b222f27240e9f07dcb6e620fa3}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_aad8181b222f27240e9f07dcb6e620fa3}{\-Test}.
+
+
+
+\-Definition at line 5145 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                              {
+    printf("Setting up the test case . . .\n");
+
+    // Initializes some shared resource.  In this simple example, we
+    // just create a C string.  More complex stuff can be done if
+    // desired.
+    shared_resource_ = "123";
+
+    // Increments the number of test cases that have been set up.
+    counter_++;
+
+    // SetUpTestCase() should be called only once.
+    EXPECT_EQ(1, counter_);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1SetUpTestCaseTest_aaff0dc66f57f643a49ad3dd6bcb56916}{\index{testing\-::\-Set\-Up\-Test\-Case\-Test@{testing\-::\-Set\-Up\-Test\-Case\-Test}!\-Tear\-Down\-Test\-Case@{\-Tear\-Down\-Test\-Case}}
+\index{\-Tear\-Down\-Test\-Case@{\-Tear\-Down\-Test\-Case}!testing::SetUpTestCaseTest@{testing\-::\-Set\-Up\-Test\-Case\-Test}}
+\subsubsection[{\-Tear\-Down\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Tear\-Down\-Test\-Case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}\label{d8/d3b/classtesting_1_1SetUpTestCaseTest_aaff0dc66f57f643a49ad3dd6bcb56916}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_aaff0dc66f57f643a49ad3dd6bcb56916}{\-Test}.
+
+
+
+\-Definition at line 5162 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                 {
+    printf("Tearing down the test case . . .\n");
+
+    // Decrements the number of test cases that have been set up.
+    counter_--;
+
+    // TearDownTestCase() should be called only once.
+    EXPECT_EQ(0, counter_);
+
+    // Cleans up the shared resource.
+    shared_resource_ = NULL;
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1SetUpTestCaseTest_a3dd655f1f7e3481778d86bd515be83b3}{\index{testing\-::\-Set\-Up\-Test\-Case\-Test@{testing\-::\-Set\-Up\-Test\-Case\-Test}!counter\-\_\-@{counter\-\_\-}}
+\index{counter\-\_\-@{counter\-\_\-}!testing::SetUpTestCaseTest@{testing\-::\-Set\-Up\-Test\-Case\-Test}}
+\subsubsection[{counter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf counter\-\_\-} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{d8/d3b/classtesting_1_1SetUpTestCaseTest_a3dd655f1f7e3481778d86bd515be83b3}
+
+
+\-Definition at line 5183 of file gtest\-\_\-unittest.\-cc.
+
+\hypertarget{classtesting_1_1SetUpTestCaseTest_ad219f67f3c407104d4956f33eb7116be}{\index{testing\-::\-Set\-Up\-Test\-Case\-Test@{testing\-::\-Set\-Up\-Test\-Case\-Test}!shared\-\_\-resource\-\_\-@{shared\-\_\-resource\-\_\-}}
+\index{shared\-\_\-resource\-\_\-@{shared\-\_\-resource\-\_\-}!testing::SetUpTestCaseTest@{testing\-::\-Set\-Up\-Test\-Case\-Test}}
+\subsubsection[{shared\-\_\-resource\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf shared\-\_\-resource\-\_\-} = \-N\-U\-L\-L\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{d8/d3b/classtesting_1_1SetUpTestCaseTest_ad219f67f3c407104d4956f33eb7116be}
+
+
+\-Definition at line 5186 of file gtest\-\_\-unittest.\-cc.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__unittest_8cc}{gtest\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

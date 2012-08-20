@@ -1,0 +1,427 @@
+\hypertarget{namespacegtest__test__utils}{\section{gtest\-\_\-test\-\_\-utils \-Namespace \-Reference}
+\label{d2/d4a/namespacegtest__test__utils}\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}}
+}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classgtest__test__utils_1_1Subprocess}{\-Subprocess}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegtest__test__utils_ad921ed375f15b035ca7419c0493b3463}{\-\_\-\-Parse\-And\-Strip\-G\-Test\-Flags}
+\item 
+def \hyperlink{namespacegtest__test__utils_a406e375483e21bcd8f6487467c70bf43}{\-Get\-Flag}
+\item 
+def \hyperlink{namespacegtest__test__utils_a61bdad46f079ed13d9102f8a8c13ea18}{\-Get\-Source\-Dir}
+\item 
+def \hyperlink{namespacegtest__test__utils_a69139a9ca084ed1cc641897636a57fad}{\-Get\-Build\-Dir}
+\item 
+def \hyperlink{namespacegtest__test__utils_ac4724db62e86d90347503275c853644d}{\-\_\-\-Remove\-Temp\-Dir}
+\item 
+def \hyperlink{namespacegtest__test__utils_a35879a886810d885b57577e813d3a333}{\-Get\-Temp\-Dir}
+\item 
+def \hyperlink{namespacegtest__test__utils_a1bdf3cac86afa675ed37629b183048e9}{\-Get\-Test\-Executable\-Path}
+\item 
+def \hyperlink{namespacegtest__test__utils_a8ff3a0bbcfecd0e0a8b3d102cb31f327}{\-Get\-Exit\-Status}
+\item 
+def \hyperlink{namespacegtest__test__utils_afffc1389d4e3b153f1a37715aced37a5}{\-Main}
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacegtest__test__utils_a629d61dfe4da763164a4d1a2d85b0afd}{\-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'
+\item 
+\hyperlink{namespacegtest__test__utils_abb53641dd3dd87362c1a92d4aa8b7a1b}{\-\_\-test\-\_\-module} = unittest
+\item 
+\hyperlink{namespacegtest__test__utils_a4a6c82f32cfeed696bda345b2d1b0492}{\-\_\-\-S\-U\-B\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E} = \-True
+\item 
+string \hyperlink{namespacegtest__test__utils_a8e9bea8be495f8832f4c6f383537be2d}{\-G\-T\-E\-S\-T\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-V\-A\-R\-\_\-\-N\-A\-M\-E} = '\-G\-T\-E\-S\-T\-\_\-\-O\-U\-T\-P\-U\-T'
+\item 
+string \hyperlink{namespacegtest__test__utils_ab1b21b880253abfa3ab3dfc19b06814c}{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S} = 'nt'
+\item 
+string \hyperlink{namespacegtest__test__utils_a090f13f753565f0975ff715f23561d2c}{\-I\-S\-\_\-\-C\-Y\-G\-W\-I\-N} = 'posix'
+\item 
+\hyperlink{namespacegtest__test__utils_a61fe0349d692eb6d4f5b94e35049b2e9}{\-Test\-Case} = \-\_\-test\-\_\-module.\-Test\-Case
+\item 
+dictionary \hyperlink{namespacegtest__test__utils_a248330712747692dbcce3fa978ed289e}{\-\_\-flag\-\_\-map}
+\item 
+\hyperlink{namespacegtest__test__utils_a59c07e23a54adb665cbc6ffb8038bd8d}{\-\_\-gtest\-\_\-flags\-\_\-are\-\_\-parsed} = \-False
+\item 
+\hyperlink{namespacegtest__test__utils_a96b285a02c0107127d6c268dbccd8999}{\-\_\-temp\-\_\-dir} = \-None
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespacegtest__test__utils_ad921ed375f15b035ca7419c0493b3463}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-\_\-\-Parse\-And\-Strip\-G\-Test\-Flags@{\-\_\-\-Parse\-And\-Strip\-G\-Test\-Flags}}
+\index{\-\_\-\-Parse\-And\-Strip\-G\-Test\-Flags@{\-\_\-\-Parse\-And\-Strip\-G\-Test\-Flags}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-\_\-\-Parse\-And\-Strip\-G\-Test\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-test\-\_\-utils.\-\_\-\-Parse\-And\-Strip\-G\-Test\-Flags} (
+\begin{DoxyParamCaption}
+\item[{}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d4a/namespacegtest__test__utils_ad921ed375f15b035ca7419c0493b3463}
+\begin{DoxyVerb}Parses and strips Google Test flags from argv.  This is idempotent.\end{DoxyVerb}
+ 
+
+\-Definition at line 71 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+71 
+72 def _ParseAndStripGTestFlags(argv):
+73   """Parses and strips Google Test flags from argv.  This is idempotent."""
+74 
+75   # Suppresses the lint complaint about a global variable since we need it
+76   # here to maintain module-wide state.
+77   global _gtest_flags_are_parsed  # pylint: disable-msg=W0603
+78   if _gtest_flags_are_parsed:
+79     return
+80 
+81   _gtest_flags_are_parsed = True
+82   for flag in _flag_map:
+83     # The environment variable overrides the default value.
+84     if flag.upper() in os.environ:
+85       _flag_map[flag] = os.environ[flag.upper()]
+86 
+87     # The command line flag overrides the environment variable.
+88     i = 1  # Skips the program name.
+89     while i < len(argv):
+90       prefix = '--' + flag + '='
+91       if argv[i].startswith(prefix):
+92         _flag_map[flag] = argv[i][len(prefix):]
+93         del argv[i]
+94         break
+95       else:
+96         # We don't increment i in case we just found a --gtest_* flag
+97         # and removed it from argv.
+98         i += 1
+99 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__test__utils_ac4724db62e86d90347503275c853644d}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-\_\-\-Remove\-Temp\-Dir@{\-\_\-\-Remove\-Temp\-Dir}}
+\index{\-\_\-\-Remove\-Temp\-Dir@{\-\_\-\-Remove\-Temp\-Dir}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-\_\-\-Remove\-Temp\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-test\-\_\-utils.\-\_\-\-Remove\-Temp\-Dir} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d4a/namespacegtest__test__utils_ac4724db62e86d90347503275c853644d}
+
+
+\-Definition at line 125 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+125 
+126 def _RemoveTempDir():
+127   if _temp_dir:
+128     shutil.rmtree(_temp_dir, ignore_errors=True)
+129 
+130 atexit.register(_RemoveTempDir)
+131 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__test__utils_a69139a9ca084ed1cc641897636a57fad}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-Get\-Build\-Dir@{\-Get\-Build\-Dir}}
+\index{\-Get\-Build\-Dir@{\-Get\-Build\-Dir}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-Get\-Build\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-test\-\_\-utils.\-Get\-Build\-Dir} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d2/d4a/namespacegtest__test__utils_a69139a9ca084ed1cc641897636a57fad}
+\begin{DoxyVerb}Returns the absolute path of the directory where the test binaries are.\end{DoxyVerb}
+ 
+
+\-Definition at line 117 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+117 
+118 def GetBuildDir():
+119   """Returns the absolute path of the directory where the test binaries are."""
+120 
+121   return os.path.abspath(GetFlag('build_dir'))
+122 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__test__utils_a8ff3a0bbcfecd0e0a8b3d102cb31f327}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-Get\-Exit\-Status@{\-Get\-Exit\-Status}}
+\index{\-Get\-Exit\-Status@{\-Get\-Exit\-Status}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-Get\-Exit\-Status}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-test\-\_\-utils.\-Get\-Exit\-Status} (
+\begin{DoxyParamCaption}
+\item[{}]{exit\-\_\-code}
+\end{DoxyParamCaption}
+)}}\label{d2/d4a/namespacegtest__test__utils_a8ff3a0bbcfecd0e0a8b3d102cb31f327}
+\begin{DoxyVerb}Returns the argument to exit(), or -1 if exit() wasn't called.
+
+Args:
+  exit_code: the result value of os.system(command).
+\end{DoxyVerb}
+ 
+
+\-Definition at line 172 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+172 
+173 def GetExitStatus(exit_code):
+174   """Returns the argument to exit(), or -1 if exit() wasn't called.
+175 
+176   Args:
+177     exit_code: the result value of os.system(command).
+178   """
+179 
+180   if os.name == 'nt':
+181     # On Windows, os.WEXITSTATUS() doesn't work and os.system() returns
+182     # the argument to exit() directly.
+183     return exit_code
+184   else:
+185     # On Unix, os.WEXITSTATUS() must be used to extract the exit status
+186     # from the result of os.system().
+187     if os.WIFEXITED(exit_code):
+188       return os.WEXITSTATUS(exit_code)
+189     else:
+190       return -1
+191 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__test__utils_a406e375483e21bcd8f6487467c70bf43}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-Get\-Flag@{\-Get\-Flag}}
+\index{\-Get\-Flag@{\-Get\-Flag}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-Get\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-test\-\_\-utils.\-Get\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)}}\label{d2/d4a/namespacegtest__test__utils_a406e375483e21bcd8f6487467c70bf43}
+\begin{DoxyVerb}Returns the value of the given flag.\end{DoxyVerb}
+ 
+
+\-Definition at line 100 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+100 
+101 def GetFlag(flag):
+102   """Returns the value of the given flag."""
+103 
+104   # In case GetFlag() is called before Main(), we always call
+105   # _ParseAndStripGTestFlags() here to make sure the --gtest_* flags
+106   # are parsed.
+107   _ParseAndStripGTestFlags(sys.argv)
+108 
+109   return _flag_map[flag]
+110 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__test__utils_a61bdad46f079ed13d9102f8a8c13ea18}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-Get\-Source\-Dir@{\-Get\-Source\-Dir}}
+\index{\-Get\-Source\-Dir@{\-Get\-Source\-Dir}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-Get\-Source\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-test\-\_\-utils.\-Get\-Source\-Dir} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d2/d4a/namespacegtest__test__utils_a61bdad46f079ed13d9102f8a8c13ea18}
+\begin{DoxyVerb}Returns the absolute path of the directory where the .py files are.\end{DoxyVerb}
+ 
+
+\-Definition at line 111 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+111 
+112 def GetSourceDir():
+113   """Returns the absolute path of the directory where the .py files are."""
+114 
+115   return os.path.abspath(GetFlag('source_dir'))
+116 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__test__utils_a35879a886810d885b57577e813d3a333}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-Get\-Temp\-Dir@{\-Get\-Temp\-Dir}}
+\index{\-Get\-Temp\-Dir@{\-Get\-Temp\-Dir}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-Get\-Temp\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-test\-\_\-utils.\-Get\-Temp\-Dir} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d2/d4a/namespacegtest__test__utils_a35879a886810d885b57577e813d3a333}
+\begin{DoxyVerb}Returns a directory for temporary files.\end{DoxyVerb}
+ 
+
+\-Definition at line 132 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+132 
+133 def GetTempDir():
+134   """Returns a directory for temporary files."""
+135 
+136   global _temp_dir
+137   if not _temp_dir:
+138     _temp_dir = tempfile.mkdtemp()
+139   return _temp_dir
+140 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__test__utils_a1bdf3cac86afa675ed37629b183048e9}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-Get\-Test\-Executable\-Path@{\-Get\-Test\-Executable\-Path}}
+\index{\-Get\-Test\-Executable\-Path@{\-Get\-Test\-Executable\-Path}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-Get\-Test\-Executable\-Path}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-test\-\_\-utils.\-Get\-Test\-Executable\-Path} (
+\begin{DoxyParamCaption}
+\item[{}]{executable\-\_\-name, }
+\item[{}]{build\-\_\-dir = {\ttfamily \-None}}
+\end{DoxyParamCaption}
+)}}\label{d2/d4a/namespacegtest__test__utils_a1bdf3cac86afa675ed37629b183048e9}
+\begin{DoxyVerb}Returns the absolute path of the test binary given its name.
+
+The function will print a message and abort the program if the resulting file
+doesn't exist.
+
+Args:
+  executable_name: name of the test binary that the test script runs.
+  build_dir:       directory where to look for executables, by default
+                   the result of GetBuildDir().
+
+Returns:
+  The absolute path of the test binary.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 141 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+141 
+142 def GetTestExecutablePath(executable_name, build_dir=None):
+143   """Returns the absolute path of the test binary given its name.
+144 
+145   The function will print a message and abort the program if the resulting file
+146   doesn't exist.
+147 
+148   Args:
+149     executable_name: name of the test binary that the test script runs.
+150     build_dir:       directory where to look for executables, by default
+151                      the result of GetBuildDir().
+152 
+153   Returns:
+154     The absolute path of the test binary.
+155   """
+156 
+157   path = os.path.abspath(os.path.join(build_dir or GetBuildDir(),
+158                                       executable_name))
+159   if (IS_WINDOWS or IS_CYGWIN) and not path.endswith('.exe'):
+160     path += '.exe'
+161 
+162   if not os.path.exists(path):
+163     message = (
+164         'Unable to find the test binary. Please make sure to provide path\n'
+165         'to the binary via the --build_dir flag or the BUILD_DIR\n'
+166         'environment variable.')
+167     print >> sys.stderr, message
+168     sys.exit(1)
+169 
+170   return path
+171 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__test__utils_afffc1389d4e3b153f1a37715aced37a5}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-Main@{\-Main}}
+\index{\-Main@{\-Main}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-Main}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-test\-\_\-utils.\-Main} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d2/d4a/namespacegtest__test__utils_afffc1389d4e3b153f1a37715aced37a5}
+\begin{DoxyVerb}Runs the unit test.\end{DoxyVerb}
+ 
+
+\-Definition at line 291 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+291 
+292 def Main():
+293   """Runs the unit test."""
+294 
+295   # We must call _ParseAndStripGTestFlags() before calling
+296   # unittest.main().  Otherwise the latter will be confused by the
+297   # --gtest_* flags.
+298   _ParseAndStripGTestFlags(sys.argv)
+299   # The tested binaries should not be writing XML output files unless the
+300   # script explicitly instructs them to.
+301   # TODO(vladl@google.com): Move this into Subprocess when we implement
+302   # passing environment into it as a parameter.
+303   if GTEST_OUTPUT_VAR_NAME in os.environ:
+304     del os.environ[GTEST_OUTPUT_VAR_NAME]
+305 
+306   _test_module.main()
+\end{DoxyCode}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{namespacegtest__test__utils_a629d61dfe4da763164a4d1a2d85b0afd}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-\_\-\-\_\-author\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'}}\label{d2/d4a/namespacegtest__test__utils_a629d61dfe4da763164a4d1a2d85b0afd}
+
+
+\-Definition at line 34 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{namespacegtest__test__utils_a248330712747692dbcce3fa978ed289e}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-\_\-flag\-\_\-map@{\-\_\-flag\-\_\-map}}
+\index{\-\_\-flag\-\_\-map@{\-\_\-flag\-\_\-map}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-\_\-flag\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}dictionary {\bf \-\_\-flag\-\_\-map}}}\label{d2/d4a/namespacegtest__test__utils_a248330712747692dbcce3fa978ed289e}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+1 {'source_dir': os.path.dirname(sys.argv[0]),
+2              'build_dir': os.path.dirname(sys.argv[0])}
+\end{DoxyCode}
+
+
+\-Definition at line 66 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{namespacegtest__test__utils_a59c07e23a54adb665cbc6ffb8038bd8d}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-\_\-gtest\-\_\-flags\-\_\-are\-\_\-parsed@{\-\_\-gtest\-\_\-flags\-\_\-are\-\_\-parsed}}
+\index{\-\_\-gtest\-\_\-flags\-\_\-are\-\_\-parsed@{\-\_\-gtest\-\_\-flags\-\_\-are\-\_\-parsed}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-\_\-gtest\-\_\-flags\-\_\-are\-\_\-parsed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-gtest\-\_\-flags\-\_\-are\-\_\-parsed} = \-False}}\label{d2/d4a/namespacegtest__test__utils_a59c07e23a54adb665cbc6ffb8038bd8d}
+
+
+\-Definition at line 68 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{namespacegtest__test__utils_a4a6c82f32cfeed696bda345b2d1b0492}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-\_\-\-S\-U\-B\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E@{\-\_\-\-S\-U\-B\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}}
+\index{\-\_\-\-S\-U\-B\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E@{\-\_\-\-S\-U\-B\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-\_\-\-S\-U\-B\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-S\-U\-B\-P\-R\-O\-C\-E\-S\-S\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E} = \-True}}\label{d2/d4a/namespacegtest__test__utils_a4a6c82f32cfeed696bda345b2d1b0492}
+
+
+\-Definition at line 48 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{namespacegtest__test__utils_a96b285a02c0107127d6c268dbccd8999}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-\_\-temp\-\_\-dir@{\-\_\-temp\-\_\-dir}}
+\index{\-\_\-temp\-\_\-dir@{\-\_\-temp\-\_\-dir}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-\_\-temp\-\_\-dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-temp\-\_\-dir} = \-None}}\label{d2/d4a/namespacegtest__test__utils_a96b285a02c0107127d6c268dbccd8999}
+
+
+\-Definition at line 123 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{namespacegtest__test__utils_abb53641dd3dd87362c1a92d4aa8b7a1b}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-\_\-test\-\_\-module@{\-\_\-test\-\_\-module}}
+\index{\-\_\-test\-\_\-module@{\-\_\-test\-\_\-module}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-\_\-test\-\_\-module}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-test\-\_\-module} = unittest}}\label{d2/d4a/namespacegtest__test__utils_abb53641dd3dd87362c1a92d4aa8b7a1b}
+
+
+\-Definition at line 42 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{namespacegtest__test__utils_a8e9bea8be495f8832f4c6f383537be2d}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-G\-T\-E\-S\-T\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-V\-A\-R\-\_\-\-N\-A\-M\-E@{\-G\-T\-E\-S\-T\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-V\-A\-R\-\_\-\-N\-A\-M\-E}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-V\-A\-R\-\_\-\-N\-A\-M\-E@{\-G\-T\-E\-S\-T\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-V\-A\-R\-\_\-\-N\-A\-M\-E}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-V\-A\-R\-\_\-\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-G\-T\-E\-S\-T\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-V\-A\-R\-\_\-\-N\-A\-M\-E} = '\-G\-T\-E\-S\-T\-\_\-\-O\-U\-T\-P\-U\-T'}}\label{d2/d4a/namespacegtest__test__utils_a8e9bea8be495f8832f4c6f383537be2d}
+
+
+\-Definition at line 54 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{namespacegtest__test__utils_a090f13f753565f0975ff715f23561d2c}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-I\-S\-\_\-\-C\-Y\-G\-W\-I\-N@{\-I\-S\-\_\-\-C\-Y\-G\-W\-I\-N}}
+\index{\-I\-S\-\_\-\-C\-Y\-G\-W\-I\-N@{\-I\-S\-\_\-\-C\-Y\-G\-W\-I\-N}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-I\-S\-\_\-\-C\-Y\-G\-W\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-I\-S\-\_\-\-C\-Y\-G\-W\-I\-N} = 'posix'}}\label{d2/d4a/namespacegtest__test__utils_a090f13f753565f0975ff715f23561d2c}
+
+
+\-Definition at line 57 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{namespacegtest__test__utils_ab1b21b880253abfa3ab3dfc19b06814c}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S@{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S}}
+\index{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S@{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S} = 'nt'}}\label{d2/d4a/namespacegtest__test__utils_ab1b21b880253abfa3ab3dfc19b06814c}
+
+
+\-Definition at line 56 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{namespacegtest__test__utils_a61fe0349d692eb6d4f5b94e35049b2e9}{\index{gtest\-\_\-test\-\_\-utils@{gtest\-\_\-test\-\_\-utils}!\-Test\-Case@{\-Test\-Case}}
+\index{\-Test\-Case@{\-Test\-Case}!gtest_test_utils@{gtest\-\_\-test\-\_\-utils}}
+\subsubsection[{\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case} = \-\_\-test\-\_\-module.\-Test\-Case}}\label{d2/d4a/namespacegtest__test__utils_a61fe0349d692eb6d4f5b94e35049b2e9}
+
+
+\-Definition at line 62 of file gtest\-\_\-test\-\_\-utils.\-py.
+

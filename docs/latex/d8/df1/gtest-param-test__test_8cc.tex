@@ -1,0 +1,69 @@
+\hypertarget{gtest-param-test__test_8cc}{\section{gtest-\/1.6.0/test/gtest-\/param-\/test\-\_\-test.cc \-File \-Reference}
+\label{d8/df1/gtest-param-test__test_8cc}\index{gtest-\/1.\-6.\-0/test/gtest-\/param-\/test\-\_\-test.\-cc@{gtest-\/1.\-6.\-0/test/gtest-\/param-\/test\-\_\-test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gtest-param-test__test_8cc_a1cb6d3685e954ff9880974422039b2b0}{\-T\-E\-S\-T} (\-Compile\-Test, \-Combine\-Is\-Defined\-Only\-When\-Gtest\-Has\-Param\-Test\-Is\-Defined)
+\item 
+int \hyperlink{gtest-param-test__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest-param-test__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{gtest-\/param-\/test\-\_\-test.\-cc@{gtest-\/param-\/test\-\_\-test.\-cc}!main@{main}}
+\index{main@{main}!gtest-param-test_test.cc@{gtest-\/param-\/test\-\_\-test.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{d8/df1/gtest-param-test__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 876 of file gtest-\/param-\/test\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+#if GTEST_HAS_PARAM_TEST
+  // Used in TestGenerationTest test case.
+  AddGlobalTestEnvironment(TestGenerationTest::Environment::Instance());
+  // Used in GeneratorEvaluationTest test case. Tests that the updated value
+  // will be picked up for instantiating tests in GeneratorEvaluationTest.
+  GeneratorEvaluationTest::set_param_value(1);
+#endif  // GTEST_HAS_PARAM_TEST
+
+  ::testing::InitGoogleTest(&argc, argv);
+
+#if GTEST_HAS_PARAM_TEST
+  // Used in GeneratorEvaluationTest test case. Tests that value updated
+  // here will NOT be used for instantiating tests in
+  // GeneratorEvaluationTest.
+  GeneratorEvaluationTest::set_param_value(2);
+#endif  // GTEST_HAS_PARAM_TEST
+
+  return RUN_ALL_TESTS();
+}
+\end{DoxyCode}
+\hypertarget{gtest-param-test__test_8cc_a1cb6d3685e954ff9880974422039b2b0}{\index{gtest-\/param-\/test\-\_\-test.\-cc@{gtest-\/param-\/test\-\_\-test.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!gtest-param-test_test.cc@{gtest-\/param-\/test\-\_\-test.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Compile\-Test}]{, }
+\item[{\-Combine\-Is\-Defined\-Only\-When\-Gtest\-Has\-Param\-Test\-Is\-Defined}]{}
+\end{DoxyParamCaption}
+)}}\label{d8/df1/gtest-param-test__test_8cc_a1cb6d3685e954ff9880974422039b2b0}
+
+
+\-Definition at line 870 of file gtest-\/param-\/test\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                                                      {
+#if GTEST_HAS_COMBINE && !GTEST_HAS_PARAM_TEST
+  FAIL() << "GTEST_HAS_COMBINE is defined while GTEST_HAS_PARAM_TEST is not\n"
+#endif
+}
+\end{DoxyCode}

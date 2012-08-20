@@ -1,0 +1,187 @@
+\hypertarget{classtesting_1_1internal_1_1Random}{\section{\-Random \-Class \-Reference}
+\label{dc/d5a/classtesting_1_1internal_1_1Random}\index{\-Random@{\-Random}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1Random_a453a5749cc9fc152efc2a17483bddb84}{\-Random} (\hyperlink{namespacetesting_1_1internal_a03df445d5850459574de6ffb6f57ae95}{\-U\-Int32} seed)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1Random_aaca1e9a7a7bc2a613347117db7ab28b1}{\-Reseed} (\hyperlink{namespacetesting_1_1internal_a03df445d5850459574de6ffb6f57ae95}{\-U\-Int32} seed)
+\item 
+\hyperlink{namespacetesting_1_1internal_a03df445d5850459574de6ffb6f57ae95}{\-U\-Int32} \hyperlink{classtesting_1_1internal_1_1Random_aeee93742520cd3aec74fc709afea415e}{\-Generate} (\hyperlink{namespacetesting_1_1internal_a03df445d5850459574de6ffb6f57ae95}{\-U\-Int32} range)
+\item 
+\hyperlink{classtesting_1_1internal_1_1Random_a453a5749cc9fc152efc2a17483bddb84}{\-Random} (\hyperlink{namespacetesting_1_1internal_a03df445d5850459574de6ffb6f57ae95}{\-U\-Int32} seed)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1Random_aaca1e9a7a7bc2a613347117db7ab28b1}{\-Reseed} (\hyperlink{namespacetesting_1_1internal_a03df445d5850459574de6ffb6f57ae95}{\-U\-Int32} seed)
+\item 
+\hyperlink{namespacetesting_1_1internal_a03df445d5850459574de6ffb6f57ae95}{\-U\-Int32} \hyperlink{classtesting_1_1internal_1_1Random_aeee93742520cd3aec74fc709afea415e}{\-Generate} (\hyperlink{namespacetesting_1_1internal_a03df445d5850459574de6ffb6f57ae95}{\-U\-Int32} range)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{namespacetesting_1_1internal_a03df445d5850459574de6ffb6f57ae95}{\-U\-Int32} \hyperlink{classtesting_1_1internal_1_1Random_ada5e9bee8921dfbbe2b6ef1661995016}{k\-Max\-Range} = 1u $<$$<$ 31
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1Random_ad076668cae461e3008515f11ca980c77}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1Random}{\-Random})
+\item 
+\hyperlink{classtesting_1_1internal_1_1Random_ad076668cae461e3008515f11ca980c77}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1Random}{\-Random})
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetesting_1_1internal_a03df445d5850459574de6ffb6f57ae95}{\-U\-Int32} \hyperlink{classtesting_1_1internal_1_1Random_a4cb6bfa4b3d348765b3b6f2038b6393b}{state\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 7430 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1Random_a453a5749cc9fc152efc2a17483bddb84}{\index{testing\-::internal\-::\-Random@{testing\-::internal\-::\-Random}!\-Random@{\-Random}}
+\index{\-Random@{\-Random}!testing::internal::Random@{testing\-::internal\-::\-Random}}
+\subsubsection[{\-Random}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Random} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-U\-Int32}}]{seed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{dc/d5a/classtesting_1_1internal_1_1Random_a453a5749cc9fc152efc2a17483bddb84}
+
+
+\-Definition at line 7434 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+: state_(seed) {}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1Random_a453a5749cc9fc152efc2a17483bddb84}{\index{testing\-::internal\-::\-Random@{testing\-::internal\-::\-Random}!\-Random@{\-Random}}
+\index{\-Random@{\-Random}!testing::internal::Random@{testing\-::internal\-::\-Random}}
+\subsubsection[{\-Random}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Random} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-U\-Int32}}]{seed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{dc/d5a/classtesting_1_1internal_1_1Random_a453a5749cc9fc152efc2a17483bddb84}
+
+
+\-Definition at line 754 of file gtest-\/internal.\-h.
+
+
+\begin{DoxyCode}
+: state_(seed) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1Random_aeee93742520cd3aec74fc709afea415e}{\index{testing\-::internal\-::\-Random@{testing\-::internal\-::\-Random}!\-Generate@{\-Generate}}
+\index{\-Generate@{\-Generate}!testing::internal::Random@{testing\-::internal\-::\-Random}}
+\subsubsection[{\-Generate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-U\-Int32} {\bf \-Generate} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-U\-Int32}}]{range}
+\end{DoxyParamCaption}
+)}}\label{dc/d5a/classtesting_1_1internal_1_1Random_aeee93742520cd3aec74fc709afea415e}
+\hypertarget{classtesting_1_1internal_1_1Random_aeee93742520cd3aec74fc709afea415e}{\index{testing\-::internal\-::\-Random@{testing\-::internal\-::\-Random}!\-Generate@{\-Generate}}
+\index{\-Generate@{\-Generate}!testing::internal::Random@{testing\-::internal\-::\-Random}}
+\subsubsection[{\-Generate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-U\-Int32} {\bf \-Generate} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-U\-Int32}}]{range}
+\end{DoxyParamCaption}
+)}}\label{dc/d5a/classtesting_1_1internal_1_1Random_aeee93742520cd3aec74fc709afea415e}
+
+
+\-Definition at line 1588 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                    {
+  // These constants are the same as are used in glibc's rand(3).
+  state_ = (1103515245U*state_ + 12345U) % kMaxRange;
+
+  GTEST_CHECK_(range > 0)
+      << "Cannot generate a number in the range [0, 0).";
+  GTEST_CHECK_(range <= kMaxRange)
+      << "Generation of a number in [0, " << range << ") was requested, "
+      << "but this can only generate numbers in [0, " << kMaxRange << ").";
+
+  // Converting via modulus introduces a bit of downward bias, but
+  // it's simple, and a linear congruential generator isn't too good
+  // to begin with.
+  return state_ % range;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1Random_ad076668cae461e3008515f11ca980c77}{\index{testing\-::internal\-::\-Random@{testing\-::internal\-::\-Random}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::Random@{testing\-::internal\-::\-Random}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Random}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{dc/d5a/classtesting_1_1internal_1_1Random_ad076668cae461e3008515f11ca980c77}
+\hypertarget{classtesting_1_1internal_1_1Random_ad076668cae461e3008515f11ca980c77}{\index{testing\-::internal\-::\-Random@{testing\-::internal\-::\-Random}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::Random@{testing\-::internal\-::\-Random}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Random}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{dc/d5a/classtesting_1_1internal_1_1Random_ad076668cae461e3008515f11ca980c77}
+\hypertarget{classtesting_1_1internal_1_1Random_aaca1e9a7a7bc2a613347117db7ab28b1}{\index{testing\-::internal\-::\-Random@{testing\-::internal\-::\-Random}!\-Reseed@{\-Reseed}}
+\index{\-Reseed@{\-Reseed}!testing::internal::Random@{testing\-::internal\-::\-Random}}
+\subsubsection[{\-Reseed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Reseed} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-U\-Int32}}]{seed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dc/d5a/classtesting_1_1internal_1_1Random_aaca1e9a7a7bc2a613347117db7ab28b1}
+
+
+\-Definition at line 756 of file gtest-\/internal.\-h.
+
+
+\begin{DoxyCode}
+{ state_ = seed; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1Random_aaca1e9a7a7bc2a613347117db7ab28b1}{\index{testing\-::internal\-::\-Random@{testing\-::internal\-::\-Random}!\-Reseed@{\-Reseed}}
+\index{\-Reseed@{\-Reseed}!testing::internal::Random@{testing\-::internal\-::\-Random}}
+\subsubsection[{\-Reseed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Reseed} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-U\-Int32}}]{seed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dc/d5a/classtesting_1_1internal_1_1Random_aaca1e9a7a7bc2a613347117db7ab28b1}
+
+
+\-Definition at line 7436 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+{ state_ = seed; }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1Random_ada5e9bee8921dfbbe2b6ef1661995016}{\index{testing\-::internal\-::\-Random@{testing\-::internal\-::\-Random}!k\-Max\-Range@{k\-Max\-Range}}
+\index{k\-Max\-Range@{k\-Max\-Range}!testing::internal::Random@{testing\-::internal\-::\-Random}}
+\subsubsection[{k\-Max\-Range}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf \-U\-Int32} {\bf k\-Max\-Range} = 1u $<$$<$ 31\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{dc/d5a/classtesting_1_1internal_1_1Random_ada5e9bee8921dfbbe2b6ef1661995016}
+
+
+\-Definition at line 7432 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1internal_1_1Random_a4cb6bfa4b3d348765b3b6f2038b6393b}{\index{testing\-::internal\-::\-Random@{testing\-::internal\-::\-Random}!state\-\_\-@{state\-\_\-}}
+\index{state\-\_\-@{state\-\_\-}!testing::internal::Random@{testing\-::internal\-::\-Random}}
+\subsubsection[{state\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-U\-Int32} {\bf state\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{dc/d5a/classtesting_1_1internal_1_1Random_a4cb6bfa4b3d348765b3b6f2038b6393b}
+
+
+\-Definition at line 7443 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/internal/\hyperlink{gtest-internal_8h}{gtest-\/internal.\-h}\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}

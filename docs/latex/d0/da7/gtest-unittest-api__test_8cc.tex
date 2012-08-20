@@ -1,0 +1,71 @@
+\hypertarget{gtest-unittest-api__test_8cc}{\section{gtest-\/1.6.0/test/gtest-\/unittest-\/api\-\_\-test.cc \-File \-Reference}
+\label{d0/da7/gtest-unittest-api__test_8cc}\index{gtest-\/1.\-6.\-0/test/gtest-\/unittest-\/api\-\_\-test.\-cc@{gtest-\/1.\-6.\-0/test/gtest-\/unittest-\/api\-\_\-test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$algorithm$>$}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtesting_1_1internal_1_1LessByName}{\-Less\-By\-Name$<$ T $>$}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1UnitTestHelper}{\-Unit\-Test\-Helper}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1FinalSuccessChecker}{\-Final\-Success\-Checker}
+\end{DoxyCompactItemize}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacetesting}{testing}
+\item 
+namespace \hyperlink{namespacetesting_1_1internal}{testing\-::internal}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetesting_1_1internal_a9ac879683abb06d1c0bba3a339ea2f40}{\-T\-E\-S\-T} (\-Api\-Test, \-Unit\-Test\-Immutable\-Accessors\-Work)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_adcfd37a66bc4cb0e8291cf46e1a6c72b}{\-Is\-Null} (const char $\ast$str)
+\item 
+\hyperlink{namespacetesting_1_1internal_a33809333fe5b5f33c2bd56ddcdd1dbb6}{\-T\-E\-S\-T} (\-Api\-Test, \-Test\-Case\-Immutable\-Accessors\-Work)
+\item 
+\hyperlink{namespacetesting_1_1internal_a459d693357db8f8f48c26a8bee3ffb84}{\-T\-E\-S\-T} (\-Api\-Test, \-Test\-Case\-Disabled\-Accessors\-Work)
+\item 
+\hyperlink{namespacetesting_1_1internal_a9ed5f89c92532506899e3908e79af4de}{\-T\-E\-S\-T} (\-Api\-Test, \-D\-I\-S\-A\-B\-L\-E\-D\-\_\-\-Dummy1)
+\item 
+\hyperlink{namespacetesting_1_1internal_a4a84433419426d1c1b87ce998267b0d4}{\-T\-E\-S\-T} (\-D\-I\-S\-A\-B\-L\-E\-D\-\_\-\-Test, \-Dummy2)
+\item 
+int \hyperlink{gtest-unittest-api__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{namespacetesting_1_1internal_aab6cd8451834790f97a7cb7f7f6ecf28}{k\-Typed\-Test\-Cases} = 0
+\item 
+const int \hyperlink{namespacetesting_1_1internal_a36ce78fee501003e1b80acbb3d4ada2c}{k\-Typed\-Tests} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest-unittest-api__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{gtest-\/unittest-\/api\-\_\-test.\-cc@{gtest-\/unittest-\/api\-\_\-test.\-cc}!main@{main}}
+\index{main@{main}!gtest-unittest-api_test.cc@{gtest-\/unittest-\/api\-\_\-test.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{d0/da7/gtest-unittest-api__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 335 of file gtest-\/unittest-\/api\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+  InitGoogleTest(&argc, argv);
+
+  AddGlobalTestEnvironment(new testing::internal::FinalSuccessChecker());
+
+  return RUN_ALL_TESTS();
+}
+\end{DoxyCode}

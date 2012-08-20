@@ -1,0 +1,106 @@
+\hypertarget{classyuh_1_1prime__range}{\section{prime\-\_\-range \-Class \-Reference}
+\label{d5/d41/classyuh_1_1prime__range}\index{prime\-\_\-range@{prime\-\_\-range}}
+}
+
+
+{\ttfamily \#include $<$prime.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1prime__range_aae62519f4eaff67463c1d2cb32e6e2fc}{prime\-\_\-range} (int first, int last)
+\item 
+\hyperlink{classyuh_1_1prime__range_ae1d6e243b47cf06c4c4b4cdc06ec2328}{prime\-\_\-range} (int first)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \*
+\hyperlink{classyuh_1_1range__detail_1_1prime__iterator}{range\-\_\-detail\-::prime\-\_\-iterator} \hyperlink{classyuh_1_1prime__range_a4906d40c1f976001edeeb74a34231811}{iterator\-\_\-t}
+\item 
+typedef boost\-::iterator\-\_\-range\*
+$<$ \hyperlink{classyuh_1_1prime__range_a4906d40c1f976001edeeb74a34231811}{iterator\-\_\-t} $>$ \hyperlink{classyuh_1_1prime__range_a9d51b0fc63206906184824c5b08403b2}{base\-\_\-t}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+素数列の範囲 無限数列・有限数列どちらも表現可能 
+
+\-Definition at line 127 of file prime.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classyuh_1_1prime__range_a9d51b0fc63206906184824c5b08403b2}{\index{yuh\-::prime\-\_\-range@{yuh\-::prime\-\_\-range}!base\-\_\-t@{base\-\_\-t}}
+\index{base\-\_\-t@{base\-\_\-t}!yuh::prime_range@{yuh\-::prime\-\_\-range}}
+\subsubsection[{base\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::iterator\-\_\-range$<${\bf iterator\-\_\-t}$>$ {\bf base\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/d41/classyuh_1_1prime__range_a9d51b0fc63206906184824c5b08403b2}
+基底クラス(iterator\-\_\-range) 
+
+\-Definition at line 137 of file prime.\-h.
+
+\hypertarget{classyuh_1_1prime__range_a4906d40c1f976001edeeb74a34231811}{\index{yuh\-::prime\-\_\-range@{yuh\-::prime\-\_\-range}!iterator\-\_\-t@{iterator\-\_\-t}}
+\index{iterator\-\_\-t@{iterator\-\_\-t}!yuh::prime_range@{yuh\-::prime\-\_\-range}}
+\subsubsection[{iterator\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf range\-\_\-detail\-::prime\-\_\-iterator} {\bf iterator\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/d41/classyuh_1_1prime__range_a4906d40c1f976001edeeb74a34231811}
+イテレータの型 
+
+\-Definition at line 133 of file prime.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1prime__range_aae62519f4eaff67463c1d2cb32e6e2fc}{\index{yuh\-::prime\-\_\-range@{yuh\-::prime\-\_\-range}!prime\-\_\-range@{prime\-\_\-range}}
+\index{prime\-\_\-range@{prime\-\_\-range}!yuh::prime_range@{yuh\-::prime\-\_\-range}}
+\subsubsection[{prime\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prime\-\_\-range} (
+\begin{DoxyParamCaption}
+\item[{int}]{first, }
+\item[{int}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d41/classyuh_1_1prime__range_aae62519f4eaff67463c1d2cb32e6e2fc}
+有限素数列 index指定 \mbox{[}first, last) 
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+{\em last} & 範囲の終わり(含まない) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, last)の素数列a\-\_\-n 
+\end{DoxyReturn}
+
+
+\-Definition at line 145 of file prime.\-h.
+
+
+\begin{DoxyCode}
+            : base_t(iterator_t(first), iterator_t(last))
+          { }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1prime__range_ae1d6e243b47cf06c4c4b4cdc06ec2328}{\index{yuh\-::prime\-\_\-range@{yuh\-::prime\-\_\-range}!prime\-\_\-range@{prime\-\_\-range}}
+\index{prime\-\_\-range@{prime\-\_\-range}!yuh::prime_range@{yuh\-::prime\-\_\-range}}
+\subsubsection[{prime\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prime\-\_\-range} (
+\begin{DoxyParamCaption}
+\item[{int}]{first}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d41/classyuh_1_1prime__range_ae1d6e243b47cf06c4c4b4cdc06ec2328}
+無限素数列 index指定 \mbox{[}first, \-Inf) 単純にalgorithmに渡したりすると無限ループなので注意 
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, \-Inf)の素数列a\-\_\-n 
+\end{DoxyReturn}
+
+
+\-Definition at line 154 of file prime.\-h.
+
+
+\begin{DoxyCode}
+            : base_t(iterator_t(first), iterator_t(0))
+          { }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{prime_8h}{prime.\-h}\end{DoxyCompactItemize}

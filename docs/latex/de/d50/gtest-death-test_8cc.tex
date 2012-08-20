@@ -1,0 +1,39 @@
+\hypertarget{gtest-death-test_8cc}{\section{gtest-\/1.6.0/src/gtest-\/death-\/test.cc \-File \-Reference}
+\label{de/d50/gtest-death-test_8cc}\index{gtest-\/1.\-6.\-0/src/gtest-\/death-\/test.\-cc@{gtest-\/1.\-6.\-0/src/gtest-\/death-\/test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest-\/death-\/test.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/internal/gtest-\/port.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/gtest-\/message.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/internal/gtest-\/string.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}src/gtest-\/internal-\/inl.\-h\char`\"{}}\*
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacetesting}{testing}
+\item 
+namespace \hyperlink{namespacetesting_1_1internal}{testing\-::internal}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gtest-death-test_8cc_a83bd232fd1077579fada92c31bb7469f}{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}~1
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetesting_aa36974bb83a6d932b9163c94630b7135}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-string\-\_\-} (death\-\_\-test\-\_\-style, internal\-::\-String\-From\-G\-Test\-Env(\char`\"{}death\-\_\-test\-\_\-style\char`\"{}, k\-Default\-Death\-Test\-Style),\char`\"{}\-Indicates how to run a death test in a forked child process\-: \char`\"{}\char`\"{}$\backslash$\char`\"{}threadsafe$\backslash$\char`\"{} (child process re-\/executes the test binary \char`\"{}\char`\"{}from the beginning, running only the specific death test) or \char`\"{}\char`\"{}$\backslash$\char`\"{}fast$\backslash$\char`\"{} (child process runs the death test immediately \char`\"{}\char`\"{}after forking).\char`\"{})
+\item 
+\hyperlink{namespacetesting_a066dbec0dbe000aa600d344feb9cba62}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-bool\-\_\-} (death\-\_\-test\-\_\-use\-\_\-fork, internal\-::\-Bool\-From\-G\-Test\-Env(\char`\"{}death\-\_\-test\-\_\-use\-\_\-fork\char`\"{}, false),\char`\"{}\-Instructs to use fork()/\-\_\-exit() instead of clone() in death tests. \char`\"{}\char`\"{}\-Ignored and always uses fork() on \-P\-O\-S\-I\-X systems where clone() is not \char`\"{}\char`\"{}implemented. \-Useful when running under valgrind or similar tools if \char`\"{}\char`\"{}those do not support clone(). \-Valgrind 3.\-3.\-1 will just fail if \char`\"{}\char`\"{}it sees an unsupported combination of clone() flags. \char`\"{}\char`\"{}\-It is not recommended to use this flag w/o valgrind though it will \char`\"{}\char`\"{}work in 99\% of the cases. \-Once valgrind is fixed, this flag will \char`\"{}\char`\"{}most likely be removed.\char`\"{})
+\item 
+\hyperlink{namespacetesting_1_1internal_a694ac3968feb2504af45c002d6d7dbf8}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-string\-\_\-} (internal\-\_\-run\-\_\-death\-\_\-test,\char`\"{}\char`\"{},\char`\"{}\-Indicates the file, line number, temporal index of \char`\"{}\char`\"{}the single death test to run, and a file descriptor to \char`\"{}\char`\"{}which a success code may be sent, all separated by \char`\"{}\char`\"{}colons.  \-This flag is specified if and only if the current \char`\"{}\char`\"{}process is a sub-\/process launched for running a thread-\/safe \char`\"{}\char`\"{}death test.  \-F\-O\-R \-I\-N\-T\-E\-R\-N\-A\-L \-U\-S\-E \-O\-N\-L\-Y.\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{gtest-death-test_8cc_a83bd232fd1077579fada92c31bb7469f}{\index{gtest-\/death-\/test.\-cc@{gtest-\/death-\/test.\-cc}!\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}!gtest-death-test.cc@{gtest-\/death-\/test.\-cc}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}~1}}\label{de/d50/gtest-death-test_8cc_a83bd232fd1077579fada92c31bb7469f}
+
+
+\-Definition at line 65 of file gtest-\/death-\/test.\-cc.
+

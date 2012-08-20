@@ -1,0 +1,55 @@
+\hypertarget{gtest-port_8cc}{\section{gtest-\/1.6.0/src/gtest-\/port.cc \-File \-Reference}
+\label{df/d09/gtest-port_8cc}\index{gtest-\/1.\-6.\-0/src/gtest-\/port.\-cc@{gtest-\/1.\-6.\-0/src/gtest-\/port.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/internal/gtest-\/port.\-h\char`\"{}}\*
+{\ttfamily \#include $<$limits.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include \char`\"{}gtest/gtest-\/spi.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/gtest-\/message.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/internal/gtest-\/internal.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/internal/gtest-\/string.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}src/gtest-\/internal-\/inl.\-h\char`\"{}}\*
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacetesting}{testing}
+\item 
+namespace \hyperlink{namespacetesting_1_1internal}{testing\-::internal}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gtest-port_8cc_a83bd232fd1077579fada92c31bb7469f}{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}~1
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{namespacetesting_1_1internal_a1a64b279303ddd2280b7d7530f229daf}{\-Get\-Thread\-Count} ()
+\item 
+\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-\-::std\-::string \hyperlink{namespacetesting_1_1internal_a6264f0605b7d7d0609eae663c58662c0}{\-Format\-File\-Location} (const char $\ast$file, int line)
+\item 
+\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-\-::std\-::string \hyperlink{namespacetesting_1_1internal_ae75f0742876f6d9ba86daf5603bf2448}{\-Format\-Compiler\-Independent\-File\-Location} (const char $\ast$file, int line)
+\item 
+static \-String \hyperlink{namespacetesting_1_1internal_a45d22c9a68e205a0ec895a1e176fa0f5}{\-Flag\-To\-Env\-Var} (const char $\ast$flag)
+\item 
+bool \hyperlink{namespacetesting_1_1internal_a3bd151d0274b216f9c2e6275ccc4a9a3}{\-Parse\-Int32} (const \-Message \&src\-\_\-text, const char $\ast$str, \-Int32 $\ast$value)
+\item 
+bool \hyperlink{namespacetesting_1_1internal_af17bf74326e1076c47455ef2618c1a1a}{\-Bool\-From\-G\-Test\-Env} (const char $\ast$flag, bool default\-\_\-value)
+\item 
+\-Int32 \hyperlink{namespacetesting_1_1internal_a960e275ac93c373f223887e57ec54381}{\-Int32\-From\-G\-Test\-Env} (const char $\ast$flag, \-Int32 default\-\_\-value)
+\item 
+const char $\ast$ \hyperlink{namespacetesting_1_1internal_a0154be115eea16783f82d3642ff27940}{\-String\-From\-G\-Test\-Env} (const char $\ast$flag, const char $\ast$default\-\_\-value)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{gtest-port_8cc_a83bd232fd1077579fada92c31bb7469f}{\index{gtest-\/port.\-cc@{gtest-\/port.\-cc}!\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}!gtest-port.cc@{gtest-\/port.\-cc}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}~1}}\label{df/d09/gtest-port_8cc_a83bd232fd1077579fada92c31bb7469f}
+
+
+\-Definition at line 64 of file gtest-\/port.\-cc.
+

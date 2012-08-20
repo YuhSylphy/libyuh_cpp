@@ -1,0 +1,201 @@
+\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest}{\section{\-G\-Test\-List\-Tests\-Unit\-Test \-Class \-Reference}
+\label{de/d42/classgtest__list__tests__unittest_1_1GTestListTestsUnitTest}\index{\-G\-Test\-List\-Tests\-Unit\-Test@{\-G\-Test\-List\-Tests\-Unit\-Test}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_adc02f4ab231c886fc73ece7b7ee533c1}{\-Run\-And\-Verify}
+\item 
+def \hyperlink{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a9da84d75ab4797f2c3730d5974ed3823}{test\-Default\-Behavior}
+\item 
+def \hyperlink{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a02b1b74bbc5e2eecc6d6c4117de89a81}{test\-Flag}
+\item 
+def \hyperlink{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a2abeb8773ea7c2af06429a8ee4a234cb}{test\-Override\-Non\-Filter\-Flags}
+\item 
+def \hyperlink{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a26c1b847d7d1abbd3812634a28315779}{test\-With\-Filter\-Flags}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}Tests using the --gtest_list_tests flag to list all tests.\end{DoxyVerb}
+ 
+
+\-Definition at line 100 of file gtest\-\_\-list\-\_\-tests\-\_\-unittest.\-py.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_adc02f4ab231c886fc73ece7b7ee533c1}{\index{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test@{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test}!\-Run\-And\-Verify@{\-Run\-And\-Verify}}
+\index{\-Run\-And\-Verify@{\-Run\-And\-Verify}!gtest_list_tests_unittest::GTestListTestsUnitTest@{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test}}
+\subsubsection[{\-Run\-And\-Verify}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Run\-And\-Verify} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{flag\-\_\-value, }
+\item[{}]{expected\-\_\-output, }
+\item[{}]{other\-\_\-flag}
+\end{DoxyParamCaption}
+)}}\label{de/d42/classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_adc02f4ab231c886fc73ece7b7ee533c1}
+\begin{DoxyVerb}Runs gtest_list_tests_unittest_ and verifies that it prints
+the correct tests.
+
+Args:
+  flag_value:       value of the --gtest_list_tests flag;
+                None if the flag should not be present.
+
+  expected_output:  the expected output after running command;
+
+  other_flag:       a different flag to be passed to command
+                along with gtest_list_tests;
+                None if the flag should not be present.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 103 of file gtest\-\_\-list\-\_\-tests\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+103 
+104   def RunAndVerify(self, flag_value, expected_output, other_flag):
+105     """Runs gtest_list_tests_unittest_ and verifies that it prints
+106     the correct tests.
+107 
+108     Args:
+109       flag_value:       value of the --gtest_list_tests flag;
+110                         None if the flag should not be present.
+111 
+112       expected_output:  the expected output after running command;
+113 
+114       other_flag:       a different flag to be passed to command
+115                         along with gtest_list_tests;
+116                         None if the flag should not be present.
+117     """
+118 
+119     if flag_value is None:
+120       flag = ''
+121       flag_expression = 'not set'
+122     elif flag_value == '0':
+123       flag = '--%s=0' % LIST_TESTS_FLAG
+124       flag_expression = '0'
+125     else:
+126       flag = '--%s' % LIST_TESTS_FLAG
+127       flag_expression = '1'
+128 
+129     args = [flag]
+130 
+131     if other_flag is not None:
+132       args += [other_flag]
+133 
+134     output = Run(args)
+135 
+136     msg = ('when %s is %s, the output of "%s" is "%s".' %
+137            (LIST_TESTS_FLAG, flag_expression, ' '.join(args), output))
+138 
+139     if expected_output is not None:
+140       self.assert_(output == expected_output, msg)
+141     else:
+142       self.assert_(output != EXPECTED_OUTPUT_NO_FILTER, msg)
+
+\end{DoxyCode}
+\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a9da84d75ab4797f2c3730d5974ed3823}{\index{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test@{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test}!test\-Default\-Behavior@{test\-Default\-Behavior}}
+\index{test\-Default\-Behavior@{test\-Default\-Behavior}!gtest_list_tests_unittest::GTestListTestsUnitTest@{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test}}
+\subsubsection[{test\-Default\-Behavior}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Default\-Behavior} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{de/d42/classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a9da84d75ab4797f2c3730d5974ed3823}
+\begin{DoxyVerb}Tests the behavior of the default mode.\end{DoxyVerb}
+ 
+
+\-Definition at line 143 of file gtest\-\_\-list\-\_\-tests\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+143 
+144   def testDefaultBehavior(self):
+145     """Tests the behavior of the default mode."""
+146 
+147     self.RunAndVerify(flag_value=None,
+148                       expected_output=None,
+149                       other_flag=None)
+
+\end{DoxyCode}
+\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a02b1b74bbc5e2eecc6d6c4117de89a81}{\index{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test@{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test}!test\-Flag@{test\-Flag}}
+\index{test\-Flag@{test\-Flag}!gtest_list_tests_unittest::GTestListTestsUnitTest@{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test}}
+\subsubsection[{test\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{de/d42/classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a02b1b74bbc5e2eecc6d6c4117de89a81}
+\begin{DoxyVerb}Tests using the --gtest_list_tests flag.\end{DoxyVerb}
+ 
+
+\-Definition at line 150 of file gtest\-\_\-list\-\_\-tests\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+150 
+151   def testFlag(self):
+152     """Tests using the --gtest_list_tests flag."""
+153 
+154     self.RunAndVerify(flag_value='0',
+155                       expected_output=None,
+156                       other_flag=None)
+157     self.RunAndVerify(flag_value='1',
+158                       expected_output=EXPECTED_OUTPUT_NO_FILTER,
+159                       other_flag=None)
+
+\end{DoxyCode}
+\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a2abeb8773ea7c2af06429a8ee4a234cb}{\index{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test@{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test}!test\-Override\-Non\-Filter\-Flags@{test\-Override\-Non\-Filter\-Flags}}
+\index{test\-Override\-Non\-Filter\-Flags@{test\-Override\-Non\-Filter\-Flags}!gtest_list_tests_unittest::GTestListTestsUnitTest@{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test}}
+\subsubsection[{test\-Override\-Non\-Filter\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Override\-Non\-Filter\-Flags} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{de/d42/classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a2abeb8773ea7c2af06429a8ee4a234cb}
+\begin{DoxyVerb}Tests that --gtest_list_tests overrides the non-filter flags.\end{DoxyVerb}
+ 
+
+\-Definition at line 160 of file gtest\-\_\-list\-\_\-tests\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+160 
+161   def testOverrideNonFilterFlags(self):
+162     """Tests that --gtest_list_tests overrides the non-filter flags."""
+163 
+164     self.RunAndVerify(flag_value='1',
+165                       expected_output=EXPECTED_OUTPUT_NO_FILTER,
+166                       other_flag='--gtest_break_on_failure')
+
+\end{DoxyCode}
+\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a26c1b847d7d1abbd3812634a28315779}{\index{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test@{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test}!test\-With\-Filter\-Flags@{test\-With\-Filter\-Flags}}
+\index{test\-With\-Filter\-Flags@{test\-With\-Filter\-Flags}!gtest_list_tests_unittest::GTestListTestsUnitTest@{gtest\-\_\-list\-\_\-tests\-\_\-unittest\-::\-G\-Test\-List\-Tests\-Unit\-Test}}
+\subsubsection[{test\-With\-Filter\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-With\-Filter\-Flags} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{de/d42/classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a26c1b847d7d1abbd3812634a28315779}
+\begin{DoxyVerb}Tests that --gtest_list_tests takes into account the
+--gtest_filter flag.\end{DoxyVerb}
+ 
+
+\-Definition at line 167 of file gtest\-\_\-list\-\_\-tests\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+167 
+168   def testWithFilterFlags(self):
+169     """Tests that --gtest_list_tests takes into account the
+170     --gtest_filter flag."""
+171 
+172     self.RunAndVerify(flag_value='1',
+173                       expected_output=EXPECTED_OUTPUT_FILTER_FOO,
+174                       other_flag='--gtest_filter=Foo*')
+175 
+
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__list__tests__unittest_8py}{gtest\-\_\-list\-\_\-tests\-\_\-unittest.\-py}\end{DoxyCompactItemize}

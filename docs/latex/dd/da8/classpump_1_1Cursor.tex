@@ -1,0 +1,289 @@
+\hypertarget{classpump_1_1Cursor}{\section{\-Cursor \-Class \-Reference}
+\label{dd/da8/classpump_1_1Cursor}\index{\-Cursor@{\-Cursor}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classpump_1_1Cursor_ac775ee34451fdfa742b318538164070e}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Cursor_a449f8fd74d358c0ad641b6c6d6917ba0}{\-\_\-\-\_\-eq\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Cursor_ad69df72a6bf0be3525fe45cd2f77f343}{\-\_\-\-\_\-ne\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Cursor_a6a45920abc8ecf2d458d174ea7304f8a}{\-\_\-\-\_\-lt\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Cursor_a83166e4aabc2805e71aef3a43f016181}{\-\_\-\-\_\-le\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Cursor_a728aec3eafa75fd847ce0bf8f954efde}{\-\_\-\-\_\-gt\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Cursor_a3ee81c22a31860655ba6bf83ff5a8f36}{\-\_\-\-\_\-ge\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Cursor_aa7a4b9bc0941308e362738503137460e}{\-\_\-\-\_\-str\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Cursor_ae92943b217d29a45ddcbbba2f7208afc}{\-\_\-\-\_\-add\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Cursor_a92f51217c100657d0bf6f97b150c0a7c}{\-\_\-\-\_\-sub\-\_\-\-\_\-}
+\item 
+def \hyperlink{classpump_1_1Cursor_aff981755ef197de06774d0c1cf6cceb9}{\-Clone}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpump_1_1Cursor_a4fa05b1f00fcde100685cc887554b93b}{line}
+\item 
+\hyperlink{classpump_1_1Cursor_ae78e6e11a40e6dba1bae097358f97d15}{column}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}Represents a position (line and column) in a text file.\end{DoxyVerb}
+ 
+
+\-Definition at line 87 of file pump.\-py.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classpump_1_1Cursor_ac775ee34451fdfa742b318538164070e}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{line = {\ttfamily -\/1}, }
+\item[{}]{column = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_ac775ee34451fdfa742b318538164070e}
+
+
+\-Definition at line 90 of file pump.\-py.
+
+
+\begin{DoxyCode}
+90 
+91   def __init__(self, line=-1, column=-1):
+92     self.line = line
+93     self.column = column
+
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classpump_1_1Cursor_ae92943b217d29a45ddcbbba2f7208afc}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-\_\-\-\_\-add\-\_\-\-\_\-@{\-\_\-\-\_\-add\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-add\-\_\-\-\_\-@{\-\_\-\-\_\-add\-\_\-\-\_\-}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-\_\-\-\_\-add\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-add\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{offset}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_ae92943b217d29a45ddcbbba2f7208afc}
+
+
+\-Definition at line 119 of file pump.\-py.
+
+
+\begin{DoxyCode}
+119 
+120   def __add__(self, offset):
+121     return Cursor(self.line, self.column + offset)
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Cursor_a449f8fd74d358c0ad641b6c6d6917ba0}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-\_\-\-\_\-eq\-\_\-\-\_\-@{\-\_\-\-\_\-eq\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-eq\-\_\-\-\_\-@{\-\_\-\-\_\-eq\-\_\-\-\_\-}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-\_\-\-\_\-eq\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-eq\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_a449f8fd74d358c0ad641b6c6d6917ba0}
+
+
+\-Definition at line 94 of file pump.\-py.
+
+
+\begin{DoxyCode}
+94 
+95   def __eq__(self, rhs):
+96     return self.line == rhs.line and self.column == rhs.column
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Cursor_a3ee81c22a31860655ba6bf83ff5a8f36}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-\_\-\-\_\-ge\-\_\-\-\_\-@{\-\_\-\-\_\-ge\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-ge\-\_\-\-\_\-@{\-\_\-\-\_\-ge\-\_\-\-\_\-}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-\_\-\-\_\-ge\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-ge\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_a3ee81c22a31860655ba6bf83ff5a8f36}
+
+
+\-Definition at line 110 of file pump.\-py.
+
+
+\begin{DoxyCode}
+110 
+111   def __ge__(self, rhs):
+112     return rhs <= self
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Cursor_a728aec3eafa75fd847ce0bf8f954efde}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-\_\-\-\_\-gt\-\_\-\-\_\-@{\-\_\-\-\_\-gt\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-gt\-\_\-\-\_\-@{\-\_\-\-\_\-gt\-\_\-\-\_\-}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-\_\-\-\_\-gt\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-gt\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_a728aec3eafa75fd847ce0bf8f954efde}
+
+
+\-Definition at line 107 of file pump.\-py.
+
+
+\begin{DoxyCode}
+107 
+108   def __gt__(self, rhs):
+109     return rhs < self
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Cursor_a83166e4aabc2805e71aef3a43f016181}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-\_\-\-\_\-le\-\_\-\-\_\-@{\-\_\-\-\_\-le\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-le\-\_\-\-\_\-@{\-\_\-\-\_\-le\-\_\-\-\_\-}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-\_\-\-\_\-le\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-le\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_a83166e4aabc2805e71aef3a43f016181}
+
+
+\-Definition at line 104 of file pump.\-py.
+
+
+\begin{DoxyCode}
+104 
+105   def __le__(self, rhs):
+106     return self < rhs or self == rhs
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Cursor_a6a45920abc8ecf2d458d174ea7304f8a}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-\_\-\-\_\-lt\-\_\-\-\_\-@{\-\_\-\-\_\-lt\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-lt\-\_\-\-\_\-@{\-\_\-\-\_\-lt\-\_\-\-\_\-}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-\_\-\-\_\-lt\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-lt\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_a6a45920abc8ecf2d458d174ea7304f8a}
+
+
+\-Definition at line 100 of file pump.\-py.
+
+
+\begin{DoxyCode}
+100 
+101   def __lt__(self, rhs):
+102     return self.line < rhs.line or (
+103         self.line == rhs.line and self.column < rhs.column)
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Cursor_ad69df72a6bf0be3525fe45cd2f77f343}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-\_\-\-\_\-ne\-\_\-\-\_\-@{\-\_\-\-\_\-ne\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-ne\-\_\-\-\_\-@{\-\_\-\-\_\-ne\-\_\-\-\_\-}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-\_\-\-\_\-ne\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-ne\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_ad69df72a6bf0be3525fe45cd2f77f343}
+
+
+\-Definition at line 97 of file pump.\-py.
+
+
+\begin{DoxyCode}
+97 
+98   def __ne__(self, rhs):
+99     return not self == rhs
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Cursor_aa7a4b9bc0941308e362738503137460e}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-\_\-\-\_\-str\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-str\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_aa7a4b9bc0941308e362738503137460e}
+
+
+\-Definition at line 113 of file pump.\-py.
+
+
+\begin{DoxyCode}
+113 
+114   def __str__(self):
+115     if self == Eof():
+116       return 'EOF'
+117     else:
+118       return '%s(%s)' % (self.line + 1, self.column)
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Cursor_a92f51217c100657d0bf6f97b150c0a7c}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-\_\-\-\_\-sub\-\_\-\-\_\-@{\-\_\-\-\_\-sub\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-sub\-\_\-\-\_\-@{\-\_\-\-\_\-sub\-\_\-\-\_\-}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-\_\-\-\_\-sub\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-sub\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{offset}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_a92f51217c100657d0bf6f97b150c0a7c}
+
+
+\-Definition at line 122 of file pump.\-py.
+
+
+\begin{DoxyCode}
+122 
+123   def __sub__(self, offset):
+124     return Cursor(self.line, self.column - offset)
+
+\end{DoxyCode}
+\hypertarget{classpump_1_1Cursor_aff981755ef197de06774d0c1cf6cceb9}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!\-Clone@{\-Clone}}
+\index{\-Clone@{\-Clone}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{\-Clone}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Clone} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/da8/classpump_1_1Cursor_aff981755ef197de06774d0c1cf6cceb9}
+\begin{DoxyVerb}Returns a copy of self.\end{DoxyVerb}
+ 
+
+\-Definition at line 125 of file pump.\-py.
+
+
+\begin{DoxyCode}
+125 
+126   def Clone(self):
+127     """Returns a copy of self."""
+128 
+129     return Cursor(self.line, self.column)
+130 
+131 
+# Special cursor to indicate the end-of-file.
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classpump_1_1Cursor_ae78e6e11a40e6dba1bae097358f97d15}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!column@{column}}
+\index{column@{column}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{column}]{\setlength{\rightskip}{0pt plus 5cm}{\bf column}}}\label{dd/da8/classpump_1_1Cursor_ae78e6e11a40e6dba1bae097358f97d15}
+
+
+\-Definition at line 90 of file pump.\-py.
+
+\hypertarget{classpump_1_1Cursor_a4fa05b1f00fcde100685cc887554b93b}{\index{pump\-::\-Cursor@{pump\-::\-Cursor}!line@{line}}
+\index{line@{line}!pump::Cursor@{pump\-::\-Cursor}}
+\subsubsection[{line}]{\setlength{\rightskip}{0pt plus 5cm}{\bf line}}}\label{dd/da8/classpump_1_1Cursor_a4fa05b1f00fcde100685cc887554b93b}
+
+
+\-Definition at line 90 of file pump.\-py.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/scripts/\hyperlink{pump_8py}{pump.\-py}\end{DoxyCompactItemize}

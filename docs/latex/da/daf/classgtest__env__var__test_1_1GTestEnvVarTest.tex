@@ -1,0 +1,57 @@
+\hypertarget{classgtest__env__var__test_1_1GTestEnvVarTest}{\section{\-G\-Test\-Env\-Var\-Test \-Class \-Reference}
+\label{da/daf/classgtest__env__var__test_1_1GTestEnvVarTest}\index{\-G\-Test\-Env\-Var\-Test@{\-G\-Test\-Env\-Var\-Test}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__env__var__test_1_1GTestEnvVarTest_ade5f7fddef0a6ad6a821e63d5c7c7963}{test\-Env\-Var\-Affects\-Flag}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 83 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgtest__env__var__test_1_1GTestEnvVarTest_ade5f7fddef0a6ad6a821e63d5c7c7963}{\index{gtest\-\_\-env\-\_\-var\-\_\-test\-::\-G\-Test\-Env\-Var\-Test@{gtest\-\_\-env\-\_\-var\-\_\-test\-::\-G\-Test\-Env\-Var\-Test}!test\-Env\-Var\-Affects\-Flag@{test\-Env\-Var\-Affects\-Flag}}
+\index{test\-Env\-Var\-Affects\-Flag@{test\-Env\-Var\-Affects\-Flag}!gtest_env_var_test::GTestEnvVarTest@{gtest\-\_\-env\-\_\-var\-\_\-test\-::\-G\-Test\-Env\-Var\-Test}}
+\subsubsection[{test\-Env\-Var\-Affects\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf test\-Env\-Var\-Affects\-Flag} (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/daf/classgtest__env__var__test_1_1GTestEnvVarTest_ade5f7fddef0a6ad6a821e63d5c7c7963}
+\begin{DoxyVerb}Tests that environment variable should affect the corresponding flag.\end{DoxyVerb}
+ 
+
+\-Definition at line 84 of file gtest\-\_\-env\-\_\-var\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+84 
+85   def testEnvVarAffectsFlag(self):
+86     """Tests that environment variable should affect the corresponding flag."""
+87 
+88     TestFlag('break_on_failure', '1', '0')
+89     TestFlag('color', 'yes', 'auto')
+90     TestFlag('filter', 'FooTest.Bar', '*')
+91     TestFlag('output', 'xml:tmp/foo.xml', '')
+92     TestFlag('print_time', '0', '1')
+93     TestFlag('repeat', '999', '1')
+94     TestFlag('throw_on_failure', '1', '0')
+95     TestFlag('death_test_style', 'threadsafe', 'fast')
+96     TestFlag('catch_exceptions', '0', '1')
+97 
+98     if IS_LINUX:
+99       TestFlag('death_test_use_fork', '1', '0')
+100       TestFlag('stack_trace_depth', '0', '100')
+101 
+
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__env__var__test_8py}{gtest\-\_\-env\-\_\-var\-\_\-test.\-py}\end{DoxyCompactItemize}

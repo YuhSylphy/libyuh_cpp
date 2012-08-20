@@ -1,0 +1,146 @@
+\hypertarget{gtest-spi_8h}{\section{gtest-\/1.6.0/include/gtest/gtest-\/spi.h \-File \-Reference}
+\label{dc/dbe/gtest-spi_8h}\index{gtest-\/1.\-6.\-0/include/gtest/gtest-\/spi.\-h@{gtest-\/1.\-6.\-0/include/gtest/gtest-\/spi.\-h}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtesting_1_1ScopedFakeTestPartResultReporter}{\-Scoped\-Fake\-Test\-Part\-Result\-Reporter}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1SingleFailureChecker}{\-Single\-Failure\-Checker}
+\end{DoxyCompactItemize}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacetesting}{testing}
+\item 
+namespace \hyperlink{namespacetesting_1_1internal}{testing\-::internal}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E}(statement, substr)
+\item 
+\#define \hyperlink{gtest-spi_8h_ad8aac5bc859b2ddc07583636ae4f45cf}{\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S}(statement, substr)
+\item 
+\#define \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E}(statement, substr)
+\item 
+\#define \hyperlink{gtest-spi_8h_a9f4cf1f150fe9facfc4cbf0bae646ee9}{\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S}(statement, substr)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{\index{gtest-\/spi.\-h@{gtest-\/spi.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E@{\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E@{\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E}!gtest-spi.h@{gtest-\/spi.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{statement, }
+\item[{}]{substr}
+\end{DoxyParamCaption}
+)}}\label{dc/dbe/gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+do { \
+    class GTestExpectFatalFailureHelper {\
+     public:\
+      static void Execute() { statement; }\
+    };\
+    ::testing::TestPartResultArray gtest_failures;\
+    ::testing::internal::SingleFailureChecker gtest_checker(\
+        &gtest_failures, ::testing::TestPartResult::kFatalFailure, (substr));\
+    {\
+      ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\
+          ::testing::ScopedFakeTestPartResultReporter:: \
+          INTERCEPT_ONLY_CURRENT_THREAD, &gtest_failures);\
+      GTestExpectFatalFailureHelper::Execute();\
+    }\
+  } while (::testing::internal::AlwaysFalse())
+\end{DoxyCode}
+
+
+\-Definition at line 138 of file gtest-\/spi.\-h.
+
+\hypertarget{gtest-spi_8h_ad8aac5bc859b2ddc07583636ae4f45cf}{\index{gtest-\/spi.\-h@{gtest-\/spi.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S@{\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S@{\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S}!gtest-spi.h@{gtest-\/spi.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S}(
+\begin{DoxyParamCaption}
+\item[{}]{statement, }
+\item[{}]{substr}
+\end{DoxyParamCaption}
+)}}\label{dc/dbe/gtest-spi_8h_ad8aac5bc859b2ddc07583636ae4f45cf}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+do { \
+    class GTestExpectFatalFailureHelper {\
+     public:\
+      static void Execute() { statement; }\
+    };\
+    ::testing::TestPartResultArray gtest_failures;\
+    ::testing::internal::SingleFailureChecker gtest_checker(\
+        &gtest_failures, ::testing::TestPartResult::kFatalFailure, (substr));\
+    {\
+      ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\
+          ::testing::ScopedFakeTestPartResultReporter:: \
+          INTERCEPT_ALL_THREADS, &gtest_failures);\
+      GTestExpectFatalFailureHelper::Execute();\
+    }\
+  } while (::testing::internal::AlwaysFalse())
+\end{DoxyCode}
+
+
+\-Definition at line 155 of file gtest-\/spi.\-h.
+
+\hypertarget{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{\index{gtest-\/spi.\-h@{gtest-\/spi.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E@{\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E@{\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E}!gtest-spi.h@{gtest-\/spi.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{statement, }
+\item[{}]{substr}
+\end{DoxyParamCaption}
+)}}\label{dc/dbe/gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+do {\
+    ::testing::TestPartResultArray gtest_failures;\
+    ::testing::internal::SingleFailureChecker gtest_checker(\
+        &gtest_failures, ::testing::TestPartResult::kNonFatalFailure, \
+        (substr));\
+    {\
+      ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\
+          ::testing::ScopedFakeTestPartResultReporter:: \
+          INTERCEPT_ONLY_CURRENT_THREAD, &gtest_failures);\
+      if (::testing::internal::AlwaysTrue()) { statement; }\
+    }\
+  } while (::testing::internal::AlwaysFalse())
+\end{DoxyCode}
+
+
+\-Definition at line 204 of file gtest-\/spi.\-h.
+
+\hypertarget{gtest-spi_8h_a9f4cf1f150fe9facfc4cbf0bae646ee9}{\index{gtest-\/spi.\-h@{gtest-\/spi.\-h}!\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S@{\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S}}
+\index{\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S@{\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S}!gtest-spi.h@{gtest-\/spi.\-h}}
+\subsubsection[{\-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-X\-P\-E\-C\-T\-\_\-\-N\-O\-N\-F\-A\-T\-A\-L\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-O\-N\-\_\-\-A\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-S}(
+\begin{DoxyParamCaption}
+\item[{}]{statement, }
+\item[{}]{substr}
+\end{DoxyParamCaption}
+)}}\label{dc/dbe/gtest-spi_8h_a9f4cf1f150fe9facfc4cbf0bae646ee9}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+do {\
+    ::testing::TestPartResultArray gtest_failures;\
+    ::testing::internal::SingleFailureChecker gtest_checker(\
+        &gtest_failures, ::testing::TestPartResult::kNonFatalFailure, \
+        (substr));\
+    {\
+      ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\
+          ::testing::ScopedFakeTestPartResultReporter::INTERCEPT_ALL_THREADS,\
+          &gtest_failures);\
+      if (::testing::internal::AlwaysTrue()) { statement; }\
+    }\
+  } while (::testing::internal::AlwaysFalse())
+\end{DoxyCode}
+
+
+\-Definition at line 218 of file gtest-\/spi.\-h.
+

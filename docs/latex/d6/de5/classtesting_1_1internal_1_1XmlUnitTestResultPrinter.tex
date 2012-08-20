@@ -1,0 +1,655 @@
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter}{\section{\-Xml\-Unit\-Test\-Result\-Printer \-Class \-Reference}
+\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter}\index{\-Xml\-Unit\-Test\-Result\-Printer@{\-Xml\-Unit\-Test\-Result\-Printer}}
+}
+\-Inheritance diagram for \-Xml\-Unit\-Test\-Result\-Printer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.675159cm]{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a7bfec56d4e2ab7d80f3f0fde70fbf255}{\-Xml\-Unit\-Test\-Result\-Printer} (const char $\ast$output\-\_\-file)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aa21b349a51378e47877ee6d153c37116}{\-On\-Test\-Iteration\-End} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&unit\-\_\-test, int iteration)
+\item 
+\hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a7bfec56d4e2ab7d80f3f0fde70fbf255}{\-Xml\-Unit\-Test\-Result\-Printer} (const char $\ast$output\-\_\-file)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a736a6086d1aca9c9d63810d73ea1ef0e}{\-On\-Test\-Iteration\-End} (const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&unit\-\_\-test, int iteration)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3369b39ed647f06785cf2d65b8d38b98}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter}{\-Xml\-Unit\-Test\-Result\-Printer})
+\item 
+\hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3369b39ed647f06785cf2d65b8d38b98}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter}{\-Xml\-Unit\-Test\-Result\-Printer})
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3d910f5c6a752c629a276a8585640795}{\-Is\-Normalizable\-Whitespace} (char c)
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfed6b1b9d7aedd2c43129c7e46e95}{\-Is\-Valid\-Xml\-Character} (char c)
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a518c5e6812aa496afd62eac740a7d251}{\-Escape\-Xml} (const char $\ast$str, bool is\-\_\-attribute)
+\item 
+static \hyperlink{namespacetesting_1_1internal_a9882e571372fc19a02d2b2949e1f1557}{string} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aa1a7bc460bd584676198c6fea285be17}{\-Remove\-Invalid\-Xml\-Characters} (const \hyperlink{namespacetesting_1_1internal_a9882e571372fc19a02d2b2949e1f1557}{string} \&str)
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a96cf735f70894f043d9f39f02bff8535}{\-Escape\-Xml\-Attribute} (const char $\ast$str)
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfca127592a1649ac9a536b7d3a2be}{\-Escape\-Xml\-Text} (const char $\ast$str)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_abe3b759db2f664b7f61500b785d9f2a4}{\-Output\-Xml\-C\-Data\-Section} (\-::std\-::ostream $\ast$stream, const char $\ast$data)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a1385d3994e1daf7d80693bc6936e9853}{\-Output\-Xml\-Test\-Info} (\-::std\-::ostream $\ast$stream, const char $\ast$test\-\_\-case\-\_\-name, const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} \&test\-\_\-info)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a99988d51cbfd1b80223fa052c673395f}{\-Print\-Xml\-Test\-Case} (\-F\-I\-L\-E $\ast$out, const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} \&test\-\_\-case)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aec193026deaa7c08c5dd5a1ef7366c19}{\-Print\-Xml\-Unit\-Test} (\-F\-I\-L\-E $\ast$out, const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&unit\-\_\-test)
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a7a77c4bf230869f9376a667fa768c294}{\-Test\-Properties\-As\-Xml\-Attributes} (const \hyperlink{classtesting_1_1TestResult}{\-Test\-Result} \&result)
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3d910f5c6a752c629a276a8585640795}{\-Is\-Normalizable\-Whitespace} (char c)
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfed6b1b9d7aedd2c43129c7e46e95}{\-Is\-Valid\-Xml\-Character} (char c)
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a98bbe277ee17bf44be89f01c9f60108b}{\-Escape\-Xml} (const char $\ast$str, bool is\-\_\-attribute)
+\item 
+static \hyperlink{namespacetesting_1_1internal_a9882e571372fc19a02d2b2949e1f1557}{string} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_ae4444a4820a2527e903703ec27e2d5aa}{\-Remove\-Invalid\-Xml\-Characters} (const \hyperlink{namespacetesting_1_1internal_a9882e571372fc19a02d2b2949e1f1557}{string} \&str)
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a96cf735f70894f043d9f39f02bff8535}{\-Escape\-Xml\-Attribute} (const char $\ast$str)
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfca127592a1649ac9a536b7d3a2be}{\-Escape\-Xml\-Text} (const char $\ast$str)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aa2a41253c92af59cd20d8296d3c08219}{\-Output\-Xml\-C\-Data\-Section} (\-::std\-::ostream $\ast$stream, const char $\ast$data)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a91c2b652b231478b116eb11c05ca4091}{\-Output\-Xml\-Test\-Info} (\-::std\-::ostream $\ast$stream, const char $\ast$test\-\_\-case\-\_\-name, const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} \&test\-\_\-info)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a58ae2058b981af1ac3d683b3355a9d06}{\-Print\-Xml\-Test\-Case} (\-F\-I\-L\-E $\ast$out, const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} \&test\-\_\-case)
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_ad0d57b193853f937319445785a4679c7}{\-Print\-Xml\-Unit\-Test} (\-F\-I\-L\-E $\ast$out, const \hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} \&unit\-\_\-test)
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a94823a58012c9c474571b9b7bcf060cf}{\-Test\-Properties\-As\-Xml\-Attributes} (const \hyperlink{classtesting_1_1TestResult}{\-Test\-Result} \&result)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a20d1d061771050add045d968a88ab3ff}{output\-\_\-file\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 4314 of file gtest-\/all.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a7bfec56d4e2ab7d80f3f0fde70fbf255}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Xml\-Unit\-Test\-Result\-Printer@{\-Xml\-Unit\-Test\-Result\-Printer}}
+\index{\-Xml\-Unit\-Test\-Result\-Printer@{\-Xml\-Unit\-Test\-Result\-Printer}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Xml\-Unit\-Test\-Result\-Printer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Xml\-Unit\-Test\-Result\-Printer} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{output\-\_\-file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a7bfec56d4e2ab7d80f3f0fde70fbf255}
+
+
+\-Definition at line 4376 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+    : output_file_(output_file) {
+  if (output_file_.c_str() == NULL || output_file_.empty()) {
+    fprintf(stderr, "XML output file may not be null\n");
+    fflush(stderr);
+    exit(EXIT_FAILURE);
+  }
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a7bfec56d4e2ab7d80f3f0fde70fbf255}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Xml\-Unit\-Test\-Result\-Printer@{\-Xml\-Unit\-Test\-Result\-Printer}}
+\index{\-Xml\-Unit\-Test\-Result\-Printer@{\-Xml\-Unit\-Test\-Result\-Printer}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Xml\-Unit\-Test\-Result\-Printer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Xml\-Unit\-Test\-Result\-Printer} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{output\-\_\-file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a7bfec56d4e2ab7d80f3f0fde70fbf255}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a98bbe277ee17bf44be89f01c9f60108b}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Escape\-Xml@{\-Escape\-Xml}}
+\index{\-Escape\-Xml@{\-Escape\-Xml}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Escape\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-String} {\bf \-Escape\-Xml} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{bool}]{is\-\_\-attribute}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a98bbe277ee17bf44be89f01c9f60108b}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a518c5e6812aa496afd62eac740a7d251}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Escape\-Xml@{\-Escape\-Xml}}
+\index{\-Escape\-Xml@{\-Escape\-Xml}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Escape\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf \-Escape\-Xml} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{bool}]{is\-\_\-attribute}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a518c5e6812aa496afd62eac740a7d251}
+
+
+\-Definition at line 4428 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                             {
+  Message m;
+
+  if (str != NULL) {
+    for (const char* src = str; *src; ++src) {
+      switch (*src) {
+        case '<':
+          m << "&lt;";
+          break;
+        case '>':
+          m << "&gt;";
+          break;
+        case '&':
+          m << "&amp;";
+          break;
+        case '\'':
+          if (is_attribute)
+            m << "&apos;";
+          else
+            m << '\'';
+          break;
+        case '"':
+          if (is_attribute)
+            m << "&quot;";
+          else
+            m << '"';
+          break;
+        default:
+          if (IsValidXmlCharacter(*src)) {
+            if (is_attribute && IsNormalizableWhitespace(*src))
+              m << String::Format("&#x%02X;", unsigned(*src));
+            else
+              m << *src;
+          }
+          break;
+      }
+    }
+  }
+
+  return m.GetString();
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a96cf735f70894f043d9f39f02bff8535}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Escape\-Xml\-Attribute@{\-Escape\-Xml\-Attribute}}
+\index{\-Escape\-Xml\-Attribute@{\-Escape\-Xml\-Attribute}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Escape\-Xml\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-String} {\bf \-Escape\-Xml\-Attribute} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a96cf735f70894f043d9f39f02bff8535}
+
+
+\-Definition at line 3038 of file gtest.\-cc.
+
+
+\begin{DoxyCode}
+                                                    {
+    return EscapeXml(str, true);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a96cf735f70894f043d9f39f02bff8535}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Escape\-Xml\-Attribute@{\-Escape\-Xml\-Attribute}}
+\index{\-Escape\-Xml\-Attribute@{\-Escape\-Xml\-Attribute}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Escape\-Xml\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-String} {\bf \-Escape\-Xml\-Attribute} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a96cf735f70894f043d9f39f02bff8535}
+
+
+\-Definition at line 4342 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                    {
+    return EscapeXml(str, true);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfca127592a1649ac9a536b7d3a2be}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Escape\-Xml\-Text@{\-Escape\-Xml\-Text}}
+\index{\-Escape\-Xml\-Text@{\-Escape\-Xml\-Text}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Escape\-Xml\-Text}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-String} {\bf \-Escape\-Xml\-Text} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfca127592a1649ac9a536b7d3a2be}
+
+
+\-Definition at line 3043 of file gtest.\-cc.
+
+
+\begin{DoxyCode}
+{ return EscapeXml(str, false); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfca127592a1649ac9a536b7d3a2be}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Escape\-Xml\-Text@{\-Escape\-Xml\-Text}}
+\index{\-Escape\-Xml\-Text@{\-Escape\-Xml\-Text}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Escape\-Xml\-Text}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-String} {\bf \-Escape\-Xml\-Text} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfca127592a1649ac9a536b7d3a2be}
+
+
+\-Definition at line 4347 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return EscapeXml(str, false); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3369b39ed647f06785cf2d65b8d38b98}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Xml\-Unit\-Test\-Result\-Printer}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3369b39ed647f06785cf2d65b8d38b98}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3369b39ed647f06785cf2d65b8d38b98}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Xml\-Unit\-Test\-Result\-Printer}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3369b39ed647f06785cf2d65b8d38b98}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3d910f5c6a752c629a276a8585640795}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Is\-Normalizable\-Whitespace@{\-Is\-Normalizable\-Whitespace}}
+\index{\-Is\-Normalizable\-Whitespace@{\-Is\-Normalizable\-Whitespace}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Is\-Normalizable\-Whitespace}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Is\-Normalizable\-Whitespace} (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3d910f5c6a752c629a276a8585640795}
+
+
+\-Definition at line 3019 of file gtest.\-cc.
+
+
+\begin{DoxyCode}
+                                               {
+    return c == 0x9 || c == 0xA || c == 0xD;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3d910f5c6a752c629a276a8585640795}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Is\-Normalizable\-Whitespace@{\-Is\-Normalizable\-Whitespace}}
+\index{\-Is\-Normalizable\-Whitespace@{\-Is\-Normalizable\-Whitespace}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Is\-Normalizable\-Whitespace}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Is\-Normalizable\-Whitespace} (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a3d910f5c6a752c629a276a8585640795}
+
+
+\-Definition at line 4323 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                               {
+    return c == 0x9 || c == 0xA || c == 0xD;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfed6b1b9d7aedd2c43129c7e46e95}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Is\-Valid\-Xml\-Character@{\-Is\-Valid\-Xml\-Character}}
+\index{\-Is\-Valid\-Xml\-Character@{\-Is\-Valid\-Xml\-Character}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Is\-Valid\-Xml\-Character}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Is\-Valid\-Xml\-Character} (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfed6b1b9d7aedd2c43129c7e46e95}
+
+
+\-Definition at line 3024 of file gtest.\-cc.
+
+
+\begin{DoxyCode}
+                                          {
+    return IsNormalizableWhitespace(c) || c >= 0x20;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfed6b1b9d7aedd2c43129c7e46e95}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Is\-Valid\-Xml\-Character@{\-Is\-Valid\-Xml\-Character}}
+\index{\-Is\-Valid\-Xml\-Character@{\-Is\-Valid\-Xml\-Character}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Is\-Valid\-Xml\-Character}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Is\-Valid\-Xml\-Character} (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a18cfed6b1b9d7aedd2c43129c7e46e95}
+
+
+\-Definition at line 4328 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                          {
+    return IsNormalizableWhitespace(c) || c >= 0x20;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a736a6086d1aca9c9d63810d73ea1ef0e}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-On\-Test\-Iteration\-End@{\-On\-Test\-Iteration\-End}}
+\index{\-On\-Test\-Iteration\-End@{\-On\-Test\-Iteration\-End}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-On\-Test\-Iteration\-End}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-On\-Test\-Iteration\-End} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{unit\-\_\-test, }
+\item[{int}]{iteration}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a736a6086d1aca9c9d63810d73ea1ef0e}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1EmptyTestEventListener_ae2104e936a08019242b519d2274237eb}{\-Empty\-Test\-Event\-Listener}.
+
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aa21b349a51378e47877ee6d153c37116}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-On\-Test\-Iteration\-End@{\-On\-Test\-Iteration\-End}}
+\index{\-On\-Test\-Iteration\-End@{\-On\-Test\-Iteration\-End}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-On\-Test\-Iteration\-End}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-On\-Test\-Iteration\-End} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Unit\-Test} \&}]{unit\-\_\-test, }
+\item[{int}]{iteration}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aa21b349a51378e47877ee6d153c37116}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1EmptyTestEventListener_ae2104e936a08019242b519d2274237eb}{\-Empty\-Test\-Event\-Listener}.
+
+
+
+\-Definition at line 4386 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                         {
+  FILE* xmlout = NULL;
+  FilePath output_file(output_file_);
+  FilePath output_dir(output_file.RemoveFileName());
+
+  if (output_dir.CreateDirectoriesRecursively()) {
+    xmlout = posix::FOpen(output_file_.c_str(), "w");
+  }
+  if (xmlout == NULL) {
+    // TODO(wan): report the reason of the failure.
+    //
+    // We don't do it for now as:
+    //
+    //   1. There is no urgent need for it.
+    //   2. It's a bit involved to make the errno variable thread-safe on
+    //      all three operating systems (Linux, Windows, and Mac OS).
+    //   3. To interpret the meaning of errno in a thread-safe way,
+    //      we need the strerror_r() function, which is not available on
+    //      Windows.
+    fprintf(stderr,
+            "Unable to open file \"%s\"\n",
+            output_file_.c_str());
+    fflush(stderr);
+    exit(EXIT_FAILURE);
+  }
+  PrintXmlUnitTest(xmlout, unit_test);
+  fclose(xmlout);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aa2a41253c92af59cd20d8296d3c08219}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Output\-Xml\-C\-Data\-Section@{\-Output\-Xml\-C\-Data\-Section}}
+\index{\-Output\-Xml\-C\-Data\-Section@{\-Output\-Xml\-C\-Data\-Section}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Output\-Xml\-C\-Data\-Section}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Output\-Xml\-C\-Data\-Section} (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream $\ast$}]{stream, }
+\item[{const char $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aa2a41253c92af59cd20d8296d3c08219}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_abe3b759db2f664b7f61500b785d9f2a4}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Output\-Xml\-C\-Data\-Section@{\-Output\-Xml\-C\-Data\-Section}}
+\index{\-Output\-Xml\-C\-Data\-Section@{\-Output\-Xml\-C\-Data\-Section}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Output\-Xml\-C\-Data\-Section}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Output\-Xml\-C\-Data\-Section} (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream $\ast$}]{stream, }
+\item[{const char $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_abe3b759db2f664b7f61500b785d9f2a4}
+
+
+\-Definition at line 4507 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                       {
+  const char* segment = data;
+  *stream << "<![CDATA[";
+  for (;;) {
+    const char* const next_segment = strstr(segment, "]]>");
+    if (next_segment != NULL) {
+      stream->write(
+          segment, static_cast<std::streamsize>(next_segment - segment));
+      *stream << "]]>]]&gt;<![CDATA[";
+      segment = next_segment + strlen("]]>");
+    } else {
+      *stream << segment;
+      break;
+    }
+  }
+  *stream << "]]>";
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a91c2b652b231478b116eb11c05ca4091}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Output\-Xml\-Test\-Info@{\-Output\-Xml\-Test\-Info}}
+\index{\-Output\-Xml\-Test\-Info@{\-Output\-Xml\-Test\-Info}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Output\-Xml\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Output\-Xml\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream $\ast$}]{stream, }
+\item[{const char $\ast$}]{test\-\_\-case\-\_\-name, }
+\item[{const {\bf \-Test\-Info} \&}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a91c2b652b231478b116eb11c05ca4091}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a1385d3994e1daf7d80693bc6936e9853}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Output\-Xml\-Test\-Info@{\-Output\-Xml\-Test\-Info}}
+\index{\-Output\-Xml\-Test\-Info@{\-Output\-Xml\-Test\-Info}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Output\-Xml\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Output\-Xml\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream $\ast$}]{stream, }
+\item[{const char $\ast$}]{test\-\_\-case\-\_\-name, }
+\item[{const {\bf \-Test\-Info} \&}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a1385d3994e1daf7d80693bc6936e9853}
+
+
+\-Definition at line 4528 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                            {
+  const TestResult& result = *test_info.result();
+  *stream << "    <testcase name=\""
+          << EscapeXmlAttribute(test_info.name()).c_str() << "\"";
+
+  if (test_info.value_param() != NULL) {
+    *stream << " value_param=\"" << EscapeXmlAttribute(test_info.value_param())
+            << "\"";
+  }
+  if (test_info.type_param() != NULL) {
+    *stream << " type_param=\"" << EscapeXmlAttribute(test_info.type_param())
+            << "\"";
+  }
+
+  *stream << " status=\""
+          << (test_info.should_run() ? "run" : "notrun")
+          << "\" time=\""
+          << FormatTimeInMillisAsSeconds(result.elapsed_time())
+          << "\" classname=\"" << EscapeXmlAttribute(test_case_name).c_str()
+          << "\"" << TestPropertiesAsXmlAttributes(result).c_str();
+
+  int failures = 0;
+  for (int i = 0; i < result.total_part_count(); ++i) {
+    const TestPartResult& part = result.GetTestPartResult(i);
+    if (part.failed()) {
+      if (++failures == 1)
+        *stream << ">\n";
+      *stream << "      <failure message=\""
+              << EscapeXmlAttribute(part.summary()).c_str()
+              << "\" type=\"\">";
+      const string location = internal::FormatCompilerIndependentFileLocation(
+          part.file_name(), part.line_number());
+      const string message = location + "\n" + part.message();
+      OutputXmlCDataSection(stream,
+                            RemoveInvalidXmlCharacters(message).c_str());
+      *stream << "</failure>\n";
+    }
+  }
+
+  if (failures == 0)
+    *stream << " />\n";
+  else
+    *stream << "    </testcase>\n";
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a58ae2058b981af1ac3d683b3355a9d06}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Print\-Xml\-Test\-Case@{\-Print\-Xml\-Test\-Case}}
+\index{\-Print\-Xml\-Test\-Case@{\-Print\-Xml\-Test\-Case}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Print\-Xml\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Print\-Xml\-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{\-F\-I\-L\-E $\ast$}]{out, }
+\item[{const {\bf \-Test\-Case} \&}]{test\-\_\-case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a58ae2058b981af1ac3d683b3355a9d06}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a99988d51cbfd1b80223fa052c673395f}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Print\-Xml\-Test\-Case@{\-Print\-Xml\-Test\-Case}}
+\index{\-Print\-Xml\-Test\-Case@{\-Print\-Xml\-Test\-Case}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Print\-Xml\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Print\-Xml\-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{\-F\-I\-L\-E $\ast$}]{out, }
+\item[{const {\bf \-Test\-Case} \&}]{test\-\_\-case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a99988d51cbfd1b80223fa052c673395f}
+
+
+\-Definition at line 4576 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                           {
+  fprintf(out,
+          "  <testsuite name=\"%s\" tests=\"%d\" failures=\"%d\" "
+          "disabled=\"%d\" ",
+          EscapeXmlAttribute(test_case.name()).c_str(),
+          test_case.total_test_count(),
+          test_case.failed_test_count(),
+          test_case.disabled_test_count());
+  fprintf(out,
+          "errors=\"0\" time=\"%s\">\n",
+          FormatTimeInMillisAsSeconds(test_case.elapsed_time()).c_str());
+  for (int i = 0; i < test_case.total_test_count(); ++i) {
+    ::std::stringstream stream;
+    OutputXmlTestInfo(&stream, test_case.name(), *test_case.GetTestInfo(i));
+    fprintf(out, "%s", StringStreamToString(&stream).c_str());
+  }
+  fprintf(out, "  </testsuite>\n");
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_ad0d57b193853f937319445785a4679c7}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Print\-Xml\-Unit\-Test@{\-Print\-Xml\-Unit\-Test}}
+\index{\-Print\-Xml\-Unit\-Test@{\-Print\-Xml\-Unit\-Test}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Print\-Xml\-Unit\-Test}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Print\-Xml\-Unit\-Test} (
+\begin{DoxyParamCaption}
+\item[{\-F\-I\-L\-E $\ast$}]{out, }
+\item[{const {\bf \-Unit\-Test} \&}]{unit\-\_\-test}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_ad0d57b193853f937319445785a4679c7}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aec193026deaa7c08c5dd5a1ef7366c19}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Print\-Xml\-Unit\-Test@{\-Print\-Xml\-Unit\-Test}}
+\index{\-Print\-Xml\-Unit\-Test@{\-Print\-Xml\-Unit\-Test}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Print\-Xml\-Unit\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Print\-Xml\-Unit\-Test} (
+\begin{DoxyParamCaption}
+\item[{\-F\-I\-L\-E $\ast$}]{out, }
+\item[{const {\bf \-Unit\-Test} \&}]{unit\-\_\-test}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aec193026deaa7c08c5dd5a1ef7366c19}
+
+
+\-Definition at line 4597 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                           {
+  fprintf(out, "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+  fprintf(out,
+          "<testsuites tests=\"%d\" failures=\"%d\" disabled=\"%d\" "
+          "errors=\"0\" time=\"%s\" ",
+          unit_test.total_test_count(),
+          unit_test.failed_test_count(),
+          unit_test.disabled_test_count(),
+          FormatTimeInMillisAsSeconds(unit_test.elapsed_time()).c_str());
+  if (GTEST_FLAG(shuffle)) {
+    fprintf(out, "random_seed=\"%d\" ", unit_test.random_seed());
+  }
+  fprintf(out, "name=\"AllTests\">\n");
+  for (int i = 0; i < unit_test.total_test_case_count(); ++i)
+    PrintXmlTestCase(out, *unit_test.GetTestCase(i));
+  fprintf(out, "</testsuites>\n");
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_ae4444a4820a2527e903703ec27e2d5aa}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Remove\-Invalid\-Xml\-Characters@{\-Remove\-Invalid\-Xml\-Characters}}
+\index{\-Remove\-Invalid\-Xml\-Characters@{\-Remove\-Invalid\-Xml\-Characters}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Remove\-Invalid\-Xml\-Characters}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf string} {\bf \-Remove\-Invalid\-Xml\-Characters} (
+\begin{DoxyParamCaption}
+\item[{const {\bf string} \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_ae4444a4820a2527e903703ec27e2d5aa}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aa1a7bc460bd584676198c6fea285be17}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Remove\-Invalid\-Xml\-Characters@{\-Remove\-Invalid\-Xml\-Characters}}
+\index{\-Remove\-Invalid\-Xml\-Characters@{\-Remove\-Invalid\-Xml\-Characters}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Remove\-Invalid\-Xml\-Characters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} {\bf \-Remove\-Invalid\-Xml\-Characters} (
+\begin{DoxyParamCaption}
+\item[{const {\bf string} \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_aa1a7bc460bd584676198c6fea285be17}
+
+
+\-Definition at line 4473 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                             {
+  string output;
+  output.reserve(str.size());
+  for (string::const_iterator it = str.begin(); it != str.end(); ++it)
+    if (IsValidXmlCharacter(*it))
+      output.push_back(*it);
+
+  return output;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a94823a58012c9c474571b9b7bcf060cf}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Test\-Properties\-As\-Xml\-Attributes@{\-Test\-Properties\-As\-Xml\-Attributes}}
+\index{\-Test\-Properties\-As\-Xml\-Attributes@{\-Test\-Properties\-As\-Xml\-Attributes}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Test\-Properties\-As\-Xml\-Attributes}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-String} {\bf \-Test\-Properties\-As\-Xml\-Attributes} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Result} \&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a94823a58012c9c474571b9b7bcf060cf}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a7a77c4bf230869f9376a667fa768c294}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!\-Test\-Properties\-As\-Xml\-Attributes@{\-Test\-Properties\-As\-Xml\-Attributes}}
+\index{\-Test\-Properties\-As\-Xml\-Attributes@{\-Test\-Properties\-As\-Xml\-Attributes}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{\-Test\-Properties\-As\-Xml\-Attributes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf \-Test\-Properties\-As\-Xml\-Attributes} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Test\-Result} \&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a7a77c4bf230869f9376a667fa768c294}
+
+
+\-Definition at line 4618 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                              {
+  Message attributes;
+  for (int i = 0; i < result.test_property_count(); ++i) {
+    const TestProperty& property = result.GetTestProperty(i);
+    attributes << " " << property.key() << "="
+        << "\"" << EscapeXmlAttribute(property.value()) << "\"";
+  }
+  return attributes.GetString();
+}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a20d1d061771050add045d968a88ab3ff}{\index{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}!output\-\_\-file\-\_\-@{output\-\_\-file\-\_\-}}
+\index{output\-\_\-file\-\_\-@{output\-\_\-file\-\_\-}!testing::internal::XmlUnitTestResultPrinter@{testing\-::internal\-::\-Xml\-Unit\-Test\-Result\-Printer}}
+\subsubsection[{output\-\_\-file\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-String} {\bf output\-\_\-file\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d6/de5/classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a20d1d061771050add045d968a88ab3ff}
+
+
+\-Definition at line 4370 of file gtest-\/all.\-cc.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}

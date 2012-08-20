@@ -1,0 +1,225 @@
+\hypertarget{classgtest__test__utils_1_1Subprocess}{\section{\-Subprocess \-Class \-Reference}
+\label{d0/d1b/classgtest__test__utils_1_1Subprocess}\index{\-Subprocess@{\-Subprocess}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__test__utils_1_1Subprocess_ac775ee34451fdfa742b318538164070e}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_ad288825273ed7192429ab0474fb2d4a0}{output}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_aaafeb0a064cb5b92ad449517611ca978}{terminated\-\_\-by\-\_\-signal}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_a46a009bc3d81c111f8dac51738168bbe}{exited}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_af5deff54993bb606e67a06d443d3f0cd}{signal}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_ab45d8ea6639edac36ac747cbf562be9a}{exit\-\_\-code}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_aae387b0ebf30b42cfeceddf86301a31e}{\-\_\-return\-\_\-code}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 192 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classgtest__test__utils_1_1Subprocess_ac775ee34451fdfa742b318538164070e}{\index{gtest\-\_\-test\-\_\-utils\-::\-Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!gtest_test_utils::Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{command, }
+\item[{}]{working\-\_\-dir = {\ttfamily \-None}, }
+\item[{}]{capture\-\_\-stderr = {\ttfamily \-True}, }
+\item[{}]{env = {\ttfamily \-None}}
+\end{DoxyParamCaption}
+)}}\label{d0/d1b/classgtest__test__utils_1_1Subprocess_ac775ee34451fdfa742b318538164070e}
+\begin{DoxyVerb}Changes into a specified directory, if provided, and executes a command.
+
+Restores the old directory afterwards.
+
+Args:
+  command:        The command to run, in the form of sys.argv.
+  working_dir:    The directory to change into.
+  capture_stderr: Determines whether to capture stderr in the output member
+              or to discard it.
+  env:            Dictionary with environment to pass to the subprocess.
+
+Returns:
+  An object that represents outcome of the executed process. It has the
+  following attributes:
+terminated_by_signal   True iff the child process has been terminated
+                       by a signal.
+signal                 Sygnal that terminated the child process.
+exited                 True iff the child process exited normally.
+exit_code              The code with which the child process exited.
+output                 Child process's stdout and stderr output
+                       combined in a string.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 193 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+193 
+194   def __init__(self, command, working_dir=None, capture_stderr=True, env=None):
+195     """Changes into a specified directory, if provided, and executes a command.
+196 
+197     Restores the old directory afterwards.
+198 
+199     Args:
+200       command:        The command to run, in the form of sys.argv.
+201       working_dir:    The directory to change into.
+202       capture_stderr: Determines whether to capture stderr in the output member
+203                       or to discard it.
+204       env:            Dictionary with environment to pass to the subprocess.
+205 
+206     Returns:
+207       An object that represents outcome of the executed process. It has the
+208       following attributes:
+209         terminated_by_signal   True iff the child process has been terminated
+210                                by a signal.
+211         signal                 Sygnal that terminated the child process.
+212         exited                 True iff the child process exited normally.
+213         exit_code              The code with which the child process exited.
+214         output                 Child process's stdout and stderr output
+215                                combined in a string.
+216     """
+217 
+218     # The subprocess module is the preferrable way of running programs
+219     # since it is available and behaves consistently on all platforms,
+220     # including Windows. But it is only available starting in python 2.4.
+221     # In earlier python versions, we revert to the popen2 module, which is
+222     # available in python 2.0 and later but doesn't provide required
+223     # functionality (Popen4) under Windows. This allows us to support Mac
+224     # OS X 10.4 Tiger, which has python 2.3 installed.
+225     if _SUBPROCESS_MODULE_AVAILABLE:
+226       if capture_stderr:
+227         stderr = subprocess.STDOUT
+228       else:
+229         stderr = subprocess.PIPE
+230 
+231       p = subprocess.Popen(command,
+232                            stdout=subprocess.PIPE, stderr=stderr,
+233                            cwd=working_dir, universal_newlines=True, env=env)
+234       # communicate returns a tuple with the file obect for the child's
+235       # output.
+236       self.output = p.communicate()[0]
+237       self._return_code = p.returncode
+238     else:
+239       old_dir = os.getcwd()
+240 
+241       def _ReplaceEnvDict(dest, src):
+242         # Changes made by os.environ.clear are not inheritable by child
+243         # processes until Python 2.6. To produce inheritable changes we have
+244         # to delete environment items with the del statement.
+245         for key in dest:
+246           del dest[key]
+247         dest.update(src)
+248 
+249       # When 'env' is not None, backup the environment variables and replace
+250       # them with the passed 'env'. When 'env' is None, we simply use the
+251       # current 'os.environ' for compatibility with the subprocess.Popen
+252       # semantics used above.
+253       if env is not None:
+254         old_environ = os.environ.copy()
+255         _ReplaceEnvDict(os.environ, env)
+256 
+257       try:
+258         if working_dir is not None:
+259           os.chdir(working_dir)
+260         if capture_stderr:
+261           p = popen2.Popen4(command)
+262         else:
+263           p = popen2.Popen3(command)
+264         p.tochild.close()
+265         self.output = p.fromchild.read()
+266         ret_code = p.wait()
+267       finally:
+268         os.chdir(old_dir)
+269 
+270         # Restore the old environment variables
+271         # if they were replaced.
+272         if env is not None:
+273           _ReplaceEnvDict(os.environ, old_environ)
+274 
+275       # Converts ret_code to match the semantics of
+276       # subprocess.Popen.returncode.
+277       if os.WIFSIGNALED(ret_code):
+278         self._return_code = -os.WTERMSIG(ret_code)
+279       else:  # os.WIFEXITED(ret_code) should return True here.
+280         self._return_code = os.WEXITSTATUS(ret_code)
+281 
+282     if self._return_code < 0:
+283       self.terminated_by_signal = True
+284       self.exited = False
+285       self.signal = -self._return_code
+286     else:
+287       self.terminated_by_signal = False
+288       self.exited = True
+289       self.exit_code = self._return_code
+290 
+
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classgtest__test__utils_1_1Subprocess_aae387b0ebf30b42cfeceddf86301a31e}{\index{gtest\-\_\-test\-\_\-utils\-::\-Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}!\-\_\-return\-\_\-code@{\-\_\-return\-\_\-code}}
+\index{\-\_\-return\-\_\-code@{\-\_\-return\-\_\-code}!gtest_test_utils::Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}}
+\subsubsection[{\-\_\-return\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-return\-\_\-code}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d1b/classgtest__test__utils_1_1Subprocess_aae387b0ebf30b42cfeceddf86301a31e}
+
+
+\-Definition at line 214 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{classgtest__test__utils_1_1Subprocess_ab45d8ea6639edac36ac747cbf562be9a}{\index{gtest\-\_\-test\-\_\-utils\-::\-Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}!exit\-\_\-code@{exit\-\_\-code}}
+\index{exit\-\_\-code@{exit\-\_\-code}!gtest_test_utils::Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}}
+\subsubsection[{exit\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}{\bf exit\-\_\-code}}}\label{d0/d1b/classgtest__test__utils_1_1Subprocess_ab45d8ea6639edac36ac747cbf562be9a}
+
+
+\-Definition at line 214 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{classgtest__test__utils_1_1Subprocess_a46a009bc3d81c111f8dac51738168bbe}{\index{gtest\-\_\-test\-\_\-utils\-::\-Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}!exited@{exited}}
+\index{exited@{exited}!gtest_test_utils::Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}}
+\subsubsection[{exited}]{\setlength{\rightskip}{0pt plus 5cm}{\bf exited}}}\label{d0/d1b/classgtest__test__utils_1_1Subprocess_a46a009bc3d81c111f8dac51738168bbe}
+
+
+\-Definition at line 214 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{classgtest__test__utils_1_1Subprocess_ad288825273ed7192429ab0474fb2d4a0}{\index{gtest\-\_\-test\-\_\-utils\-::\-Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}!output@{output}}
+\index{output@{output}!gtest_test_utils::Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}}
+\subsubsection[{output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf output}}}\label{d0/d1b/classgtest__test__utils_1_1Subprocess_ad288825273ed7192429ab0474fb2d4a0}
+
+
+\-Definition at line 214 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{classgtest__test__utils_1_1Subprocess_af5deff54993bb606e67a06d443d3f0cd}{\index{gtest\-\_\-test\-\_\-utils\-::\-Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}!signal@{signal}}
+\index{signal@{signal}!gtest_test_utils::Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}}
+\subsubsection[{signal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf signal}}}\label{d0/d1b/classgtest__test__utils_1_1Subprocess_af5deff54993bb606e67a06d443d3f0cd}
+
+
+\-Definition at line 214 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+\hypertarget{classgtest__test__utils_1_1Subprocess_aaafeb0a064cb5b92ad449517611ca978}{\index{gtest\-\_\-test\-\_\-utils\-::\-Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}!terminated\-\_\-by\-\_\-signal@{terminated\-\_\-by\-\_\-signal}}
+\index{terminated\-\_\-by\-\_\-signal@{terminated\-\_\-by\-\_\-signal}!gtest_test_utils::Subprocess@{gtest\-\_\-test\-\_\-utils\-::\-Subprocess}}
+\subsubsection[{terminated\-\_\-by\-\_\-signal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf terminated\-\_\-by\-\_\-signal}}}\label{d0/d1b/classgtest__test__utils_1_1Subprocess_aaafeb0a064cb5b92ad449517611ca978}
+
+
+\-Definition at line 214 of file gtest\-\_\-test\-\_\-utils.\-py.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__test__utils_8py}{gtest\-\_\-test\-\_\-utils.\-py}\end{DoxyCompactItemize}

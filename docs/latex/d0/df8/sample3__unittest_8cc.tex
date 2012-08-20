@@ -1,0 +1,92 @@
+\hypertarget{sample3__unittest_8cc}{\section{gtest-\/1.6.0/samples/sample3\-\_\-unittest.cc \-File \-Reference}
+\label{d0/df8/sample3__unittest_8cc}\index{gtest-\/1.\-6.\-0/samples/sample3\-\_\-unittest.\-cc@{gtest-\/1.\-6.\-0/samples/sample3\-\_\-unittest.\-cc}}
+}
+{\ttfamily \#include \char`\"{}sample3-\/inl.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classQueueTest}{\-Queue\-Test}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sample3__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{classQueueTest}{\-Queue\-Test}, \-Default\-Constructor)
+\item 
+\hyperlink{sample3__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{classQueueTest}{\-Queue\-Test}, \-Dequeue)
+\item 
+\hyperlink{sample3__unittest_8cc_ab9369b85f03de6dbf56f77d255515c8c}{\-T\-E\-S\-T\-\_\-\-F} (\hyperlink{classQueueTest}{\-Queue\-Test}, \-Map)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{sample3__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}{\index{sample3\-\_\-unittest.\-cc@{sample3\-\_\-unittest.\-cc}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!sample3_unittest.cc@{sample3\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Queue\-Test}}]{, }
+\item[{\-Default\-Constructor}]{}
+\end{DoxyParamCaption}
+)}}\label{d0/df8/sample3__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}
+
+
+\-Definition at line 123 of file sample3\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                      {
+  // You can access data in the test fixture here.
+  EXPECT_EQ(0u, q0_.Size());
+}
+\end{DoxyCode}
+\hypertarget{sample3__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}{\index{sample3\-\_\-unittest.\-cc@{sample3\-\_\-unittest.\-cc}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!sample3_unittest.cc@{sample3\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Queue\-Test}}]{, }
+\item[{\-Dequeue}]{}
+\end{DoxyParamCaption}
+)}}\label{d0/df8/sample3__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}
+
+
+\-Definition at line 129 of file sample3\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                           {
+  int * n = q0_.Dequeue();
+  EXPECT_TRUE(n == NULL);
+
+  n = q1_.Dequeue();
+  ASSERT_TRUE(n != NULL);
+  EXPECT_EQ(1, *n);
+  EXPECT_EQ(0u, q1_.Size());
+  delete n;
+
+  n = q2_.Dequeue();
+  ASSERT_TRUE(n != NULL);
+  EXPECT_EQ(2, *n);
+  EXPECT_EQ(1u, q2_.Size());
+  delete n;
+}
+\end{DoxyCode}
+\hypertarget{sample3__unittest_8cc_ab9369b85f03de6dbf56f77d255515c8c}{\index{sample3\-\_\-unittest.\-cc@{sample3\-\_\-unittest.\-cc}!\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}}
+\index{\-T\-E\-S\-T\-\_\-\-F@{\-T\-E\-S\-T\-\_\-\-F}!sample3_unittest.cc@{sample3\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T\-\_\-\-F} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Queue\-Test}}]{, }
+\item[{\-Map}]{}
+\end{DoxyParamCaption}
+)}}\label{d0/df8/sample3__unittest_8cc_ab9369b85f03de6dbf56f77d255515c8c}
+
+
+\-Definition at line 147 of file sample3\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+  MapTester(&q0_);
+  MapTester(&q1_);
+  MapTester(&q2_);
+}
+\end{DoxyCode}

@@ -1,0 +1,353 @@
+\hypertarget{gtest_8cc}{\section{gtest-\/1.6.0/src/gtest.cc \-File \-Reference}
+\label{df/d5b/gtest_8cc}\index{gtest-\/1.\-6.\-0/src/gtest.\-cc@{gtest-\/1.\-6.\-0/src/gtest.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/gtest-\/spi.\-h\char`\"{}}\*
+{\ttfamily \#include $<$ctype.\-h$>$}\*
+{\ttfamily \#include $<$math.\-h$>$}\*
+{\ttfamily \#include $<$stdarg.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$wchar.\-h$>$}\*
+{\ttfamily \#include $<$wctype.\-h$>$}\*
+{\ttfamily \#include $<$algorithm$>$}\*
+{\ttfamily \#include $<$ostream$>$}\*
+{\ttfamily \#include $<$sstream$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+{\ttfamily \#include $<$sys/time.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include \char`\"{}src/gtest-\/internal-\/inl.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1PrettyUnitTestResultPrinter}{\-Pretty\-Unit\-Test\-Result\-Printer}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1TestEventRepeater}{\-Test\-Event\-Repeater}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter}{\-Xml\-Unit\-Test\-Result\-Printer}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1TestCaseNameIs}{\-Test\-Case\-Name\-Is}
+\end{DoxyCompactItemize}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacetesting}{testing}
+\item 
+namespace \hyperlink{namespacetesting_1_1internal}{testing\-::internal}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gtest_8cc_a7c139c1711de5a69cbc934e8a082e4f9}{\-G\-T\-E\-S\-T\-\_\-\-H\-A\-S\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y\-\_\-}~1
+\item 
+\#define \hyperlink{gtest_8cc_a83bd232fd1077579fada92c31bb7469f}{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}~1
+\item 
+\#define \hyperlink{gtest_8cc_a4a5b6fbde5dd05e05dd6846ac5e5c18e}{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-\_\-\-C\-M\-P\-\_\-\-H\-E\-L\-P\-E\-R\-\_\-}(op\-\_\-name, op)
+\item 
+\#define \hyperlink{gtest_8cc_a87a475ab9e81de8b49525787665b9229}{\-G\-T\-E\-S\-T\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-}(\-Name, \-Type)
+\item 
+\#define \hyperlink{gtest_8cc_aa7da32fd7da6a8cceeed6b448cb7b5f2}{\-G\-T\-E\-S\-T\-\_\-\-R\-E\-V\-E\-R\-S\-E\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-}(\-Name, \-Type)
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacetesting_1_1internal_ae78c352c52b710a680c35b87b1c5d965}{\-G\-Test\-Color} \{ \*
+\hyperlink{namespacetesting_1_1internal_ae78c352c52b710a680c35b87b1c5d965aaeda96851415e6bb57229cf139545439}{\-C\-O\-L\-O\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T}, 
+\hyperlink{namespacetesting_1_1internal_ae78c352c52b710a680c35b87b1c5d965a55978b2a4d309f4f009fd1baa7808358}{\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D}, 
+\hyperlink{namespacetesting_1_1internal_ae78c352c52b710a680c35b87b1c5d965a125edbdad9257143fc1fabf1c686d959}{\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N}, 
+\hyperlink{namespacetesting_1_1internal_ae78c352c52b710a680c35b87b1c5d965a220df2a47a11552fb8631253ef7c3f10}{\-C\-O\-L\-O\-R\-\_\-\-Y\-E\-L\-L\-O\-W}, 
+\*
+\hyperlink{namespacetesting_1_1internal_ae78c352c52b710a680c35b87b1c5d965aaeda96851415e6bb57229cf139545439}{\-C\-O\-L\-O\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T}, 
+\hyperlink{namespacetesting_1_1internal_ae78c352c52b710a680c35b87b1c5d965a55978b2a4d309f4f009fd1baa7808358}{\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D}, 
+\hyperlink{namespacetesting_1_1internal_ae78c352c52b710a680c35b87b1c5d965a125edbdad9257143fc1fabf1c686d959}{\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N}, 
+\hyperlink{namespacetesting_1_1internal_ae78c352c52b710a680c35b87b1c5d965a220df2a47a11552fb8631253ef7c3f10}{\-C\-O\-L\-O\-R\-\_\-\-Y\-E\-L\-L\-O\-W}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetesting_a531ff780002eba452569e9460c1ef9d0}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-bool\-\_\-} (also\-\_\-run\-\_\-disabled\-\_\-tests, internal\-::\-Bool\-From\-G\-Test\-Env(\char`\"{}also\-\_\-run\-\_\-disabled\-\_\-tests\char`\"{}, false),\char`\"{}\-Run disabled tests too, in addition to the tests normally being run.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a0e26d20c87cb9c7eeeda10d6ac6721f3}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-bool\-\_\-} (break\-\_\-on\-\_\-failure, internal\-::\-Bool\-From\-G\-Test\-Env(\char`\"{}break\-\_\-on\-\_\-failure\char`\"{}, false),\char`\"{}\-True iff a failed assertion should be a debugger break-\/point.\char`\"{})
+\item 
+\hyperlink{namespacetesting_ad44717d223b0a534027184b6adb5c834}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-bool\-\_\-} (catch\-\_\-exceptions, internal\-::\-Bool\-From\-G\-Test\-Env(\char`\"{}catch\-\_\-exceptions\char`\"{}, true),\char`\"{}\-True iff \char`\"{}\-G\-T\-E\-S\-T\-\_\-\-N\-A\-M\-E\-\_\-\char`\"{} should catch exceptions and treat them as test failures.\char`\"{})
+\item 
+\hyperlink{namespacetesting_ab239ee3e29f0fe79791cdce90600cbc0}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-string\-\_\-} (color, internal\-::\-String\-From\-G\-Test\-Env(\char`\"{}color\char`\"{},\char`\"{}auto\char`\"{}),\char`\"{}\-Whether to use colors in the output.  \-Valid values\-: yes, no, \char`\"{}\char`\"{}and auto.  'auto' means to use colors if the output is \char`\"{}\char`\"{}being sent to a terminal and the \-T\-E\-R\-M environment variable \char`\"{}\char`\"{}is set to xterm, xterm-\/color, xterm-\/256color, linux or cygwin.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a7707345ca1fd050c4ae9d3315fe175b7}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-string\-\_\-} (filter, internal\-::\-String\-From\-G\-Test\-Env(\char`\"{}filter\char`\"{}, k\-Universal\-Filter),\char`\"{}\-A colon-\/separated list of glob (not regex) patterns \char`\"{}\char`\"{}for filtering the tests to run, optionally followed by a \char`\"{}\char`\"{}'-\/' and a \-: separated list of negative patterns (tests to \char`\"{}\char`\"{}exclude).  \-A test is run if it matches one of the positive \char`\"{}\char`\"{}patterns and does not match any of the negative patterns.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a3d8df49ecaf4f410df3f89fab8ad0271}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-bool\-\_\-} (list\-\_\-tests, false,\char`\"{}\-List all tests without running them.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a94af6ef4c969db54d3e40f42328eb753}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-string\-\_\-} (output, internal\-::\-String\-From\-G\-Test\-Env(\char`\"{}output\char`\"{},\char`\"{}\char`\"{}),\char`\"{}\-A format (currently must be $\backslash$\char`\"{}xml$\backslash$\char`\"{}), optionally followed \char`\"{}\char`\"{}by a colon and an output file name or directory. \-A directory \char`\"{}\char`\"{}is indicated by a trailing pathname separator. \char`\"{}\char`\"{}\-Examples\-: $\backslash$\char`\"{}xml\-:filename.\-xml$\backslash$\char`\"{}, $\backslash$\char`\"{}xml\-::directoryname/$\backslash$\char`\"{}. \char`\"{}\char`\"{}\-If a directory is specified, output files will be created \char`\"{}\char`\"{}within that directory, with file-\/names based on the test \char`\"{}\char`\"{}executable's name and, if necessary, made unique by adding \char`\"{}\char`\"{}digits.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a61406b2044994025d72ae8ef8b5122fc}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-bool\-\_\-} (print\-\_\-time, internal\-::\-Bool\-From\-G\-Test\-Env(\char`\"{}print\-\_\-time\char`\"{}, true),\char`\"{}\-True iff \char`\"{}\-G\-T\-E\-S\-T\-\_\-\-N\-A\-M\-E\-\_\-\char`\"{} should display elapsed time in text output.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a61bb802d0fec79227ae5d0d57d6d0960}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-int32\-\_\-} (random\-\_\-seed, internal\-::\-Int32\-From\-G\-Test\-Env(\char`\"{}random\-\_\-seed\char`\"{}, 0),\char`\"{}\-Random number seed to use when shuffling test orders.  \-Must be in range \char`\"{}\char`\"{}\mbox{[}1, 99999\mbox{]}, or 0 to use a seed based on the current time.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a50b0b832aca7fb92c276a1e3d31e050c}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-int32\-\_\-} (repeat, internal\-::\-Int32\-From\-G\-Test\-Env(\char`\"{}repeat\char`\"{}, 1),\char`\"{}\-How many times to repeat each test.  \-Specify a negative number \char`\"{}\char`\"{}for repeating forever.  \-Useful for shaking out flaky tests.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a5d2d141aaea64f415e0c06dac562cfc3}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-bool\-\_\-} (show\-\_\-internal\-\_\-stack\-\_\-frames, false,\char`\"{}\-True iff \char`\"{}\-G\-T\-E\-S\-T\-\_\-\-N\-A\-M\-E\-\_\-\char`\"{} should include internal stack frames when \char`\"{}\char`\"{}printing test failure stack traces.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a279842981ac3331c373ebcdcee0cfb95}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-bool\-\_\-} (shuffle, internal\-::\-Bool\-From\-G\-Test\-Env(\char`\"{}shuffle\char`\"{}, false),\char`\"{}\-True iff \char`\"{}\-G\-T\-E\-S\-T\-\_\-\-N\-A\-M\-E\-\_\-\char`\"{} should randomize tests' order on every run.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a18e317789f8ddb3b7a828ef8587f098e}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-int32\-\_\-} (stack\-\_\-trace\-\_\-depth, internal\-::\-Int32\-From\-G\-Test\-Env(\char`\"{}stack\-\_\-trace\-\_\-depth\char`\"{}, k\-Max\-Stack\-Trace\-Depth),\char`\"{}\-The maximum number of stack frames to print when an \char`\"{}\char`\"{}assertion fails.  \-The valid range is 0 through 100, inclusive.\char`\"{})
+\item 
+\hyperlink{namespacetesting_a8755450a9b287a52c02a3f1686df648c}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-string\-\_\-} (stream\-\_\-result\-\_\-to, internal\-::\-String\-From\-G\-Test\-Env(\char`\"{}stream\-\_\-result\-\_\-to\char`\"{},\char`\"{}\char`\"{}),\char`\"{}\-This flag specifies the host name and the port number on which to stream \char`\"{}\char`\"{}test results. \-Example\-: $\backslash$\char`\"{}localhost\-:555$\backslash$\char`\"{}. \-The flag is effective only on \char`\"{}\char`\"{}\-Linux.\char`\"{})
+\item 
+\hyperlink{namespacetesting_ab114e35b616ae3f73277ddc861c90b76}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-bool\-\_\-} (throw\-\_\-on\-\_\-failure, internal\-::\-Bool\-From\-G\-Test\-Env(\char`\"{}throw\-\_\-on\-\_\-failure\char`\"{}, false),\char`\"{}\-When this flag is specified, a failed assertion will throw an exception \char`\"{}\char`\"{}if exceptions are enabled or exit the program with a non-\/zero code \char`\"{}\char`\"{}otherwise.\char`\"{})
+\item 
+static bool \hyperlink{namespacetesting_1_1internal_a0554a55a03dae7d40e8ba569dac7848f}{\-G\-Test\-Is\-Initialized} ()
+\item 
+static int \hyperlink{namespacetesting_1_1internal_a9be4a7736e0e7d8754551c6a827c376d}{\-Sum\-Over\-Test\-Case\-List} (const std\-::vector$<$ \-Test\-Case $\ast$ $>$ \&case\-\_\-list, int(\-Test\-Case\-::$\ast$method)() const)
+\item 
+static bool \hyperlink{namespacetesting_1_1internal_ac961033179851d1a8ff0e009ddeece03}{\-Test\-Case\-Passed} (const \-Test\-Case $\ast$test\-\_\-case)
+\item 
+static bool \hyperlink{namespacetesting_1_1internal_a9cc56cc516fd6f9e3e1d7ab2183e5b2c}{\-Test\-Case\-Failed} (const \-Test\-Case $\ast$test\-\_\-case)
+\item 
+static bool \hyperlink{namespacetesting_1_1internal_a122ad0eb3b65d677feb96b46ee9c6848}{\-Should\-Run\-Test\-Case} (const \-Test\-Case $\ast$test\-\_\-case)
+\item 
+\hyperlink{namespacetesting_1_1internal_a05969f8c5401ec62be3a1f077c592c59}{\-G\-T\-E\-S\-T\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-M\-U\-T\-E\-X\-\_\-} (g\-\_\-linked\-\_\-ptr\-\_\-mutex)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} \-File\-Path \hyperlink{namespacetesting_1_1internal_a4fc348184f2bc16ec2270cffb38de5dc}{\-Get\-Current\-Executable\-Name} ()
+\item 
+\-Type\-Id \hyperlink{namespacetesting_1_1internal_a3e7f71e983859c908bae4ec8d593ff58}{\-Get\-Test\-Type\-Id} ()
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_a7a411c778e3dd9249e6c518dabc21ca4}{\-Has\-One\-Failure} (const char $\ast$, const char $\ast$, const char $\ast$, const \-Test\-Part\-Result\-Array \&results, \-Test\-Part\-Result\-::\-Type type, const string \&substr)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} \-Time\-In\-Millis \hyperlink{namespacetesting_1_1internal_ae0c6fd4543c65945515c42d6f43cc138}{\-Get\-Time\-In\-Millis} ()
+\item 
+static char $\ast$ \hyperlink{namespacetesting_1_1internal_a574775e3e17e34fd6bd1cc8b4516a499}{\-Clone\-String} (const char $\ast$str, size\-\_\-t length)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_a6941f23b3ce400dec4d2388cb466271c}{\-Assertion\-Success} ()
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_ac0c2a038d9ae21e130904675757fd5f3}{\-Assertion\-Failure} ()
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_a94c431f935a5149cafc9872ac0e711a9}{\-Assertion\-Failure} (const \-Message \&message)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_a1b32471fa3a4994b5e41120a349162ca}{\-Eq\-Failure} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, const \-String \&expected\-\_\-value, const \-String \&actual\-\_\-value, bool ignoring\-\_\-case)
+\item 
+\-String \hyperlink{namespacetesting_1_1internal_ab5e2ffddf04d86a4faa0253b8e1fe67e}{\-Get\-Bool\-Assertion\-Failure\-Message} (const \-Assertion\-Result \&assertion\-\_\-result, const char $\ast$expression\-\_\-text, const char $\ast$actual\-\_\-predicate\-\_\-value, const char $\ast$expected\-\_\-predicate\-\_\-value)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_a44c08eb9054d3bf89ac3e7ac0549929f}{\-Double\-Near\-Pred\-Format} (const char $\ast$expr1, const char $\ast$expr2, const char $\ast$abs\-\_\-error\-\_\-expr, double val1, double val2, double abs\-\_\-error)
+\item 
+{\footnotesize template$<$typename Raw\-Type $>$ }\\\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_a27094d26e2f0cf4bcf02d6b8e3382f70}{\-Floating\-Point\-L\-E} (const char $\ast$expr1, const char $\ast$expr2, \-Raw\-Type val1, \-Raw\-Type val2)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_a23a2d15c37bf756a5baf67922ad35172}{\-Float\-L\-E} (const char $\ast$expr1, const char $\ast$expr2, float val1, float val2)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_aa02480b781912f18f8b22ab91a905d58}{\-Double\-L\-E} (const char $\ast$expr1, const char $\ast$expr2, double val1, double val2)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_ab3ac33c050b73adde43e78111448805f}{\-Cmp\-Helper\-E\-Q} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, \-Biggest\-Int expected, \-Biggest\-Int actual)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_aac3ea8412a9d5f786b992a2b06aeb353}{\-Cmp\-Helper\-S\-T\-R\-E\-Q} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, const char $\ast$expected, const char $\ast$actual)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_aa5c3543f39545113a66c5b4d8f829fc6}{\-Cmp\-Helper\-S\-T\-R\-C\-A\-S\-E\-E\-Q} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, const char $\ast$expected, const char $\ast$actual)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_a24dfe04b51cda2637868440f0e6a7110}{\-Cmp\-Helper\-S\-T\-R\-N\-E} (const char $\ast$s1\-\_\-expression, const char $\ast$s2\-\_\-expression, const char $\ast$s1, const char $\ast$s2)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_a87ee06a47690ee4681d40e1bf6a4a3c5}{\-Cmp\-Helper\-S\-T\-R\-C\-A\-S\-E\-N\-E} (const char $\ast$s1\-\_\-expression, const char $\ast$s2\-\_\-expression, const char $\ast$s1, const char $\ast$s2)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_aa47c8fed5266f284499c1c82dd0e167e}{\-Is\-Substring} (const char $\ast$needle\-\_\-expr, const char $\ast$haystack\-\_\-expr, const char $\ast$needle, const char $\ast$haystack)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_a9b82c8fa11b142a504c9d30fa3ed3ccb}{\-Is\-Substring} (const char $\ast$needle\-\_\-expr, const char $\ast$haystack\-\_\-expr, const wchar\-\_\-t $\ast$needle, const wchar\-\_\-t $\ast$haystack)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_aeb4296c0ab6b8b4bb90dd7b28369f601}{\-Is\-Not\-Substring} (const char $\ast$needle\-\_\-expr, const char $\ast$haystack\-\_\-expr, const char $\ast$needle, const char $\ast$haystack)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_ae7bf7bebcf58a8ade5f13be1c274db1d}{\-Is\-Not\-Substring} (const char $\ast$needle\-\_\-expr, const char $\ast$haystack\-\_\-expr, const wchar\-\_\-t $\ast$needle, const wchar\-\_\-t $\ast$haystack)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_af277c788bf038cc9fd0baf33862f693d}{\-Is\-Substring} (const char $\ast$needle\-\_\-expr, const char $\ast$haystack\-\_\-expr, const \-::std\-::string \&needle, const \-::std\-::string \&haystack)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_a82240dc86e7ace0508ad37a2ac7f019b}{\-Is\-Not\-Substring} (const char $\ast$needle\-\_\-expr, const char $\ast$haystack\-\_\-expr, const \-::std\-::string \&needle, const \-::std\-::string \&haystack)
+\item 
+\-U\-Int32 \hyperlink{namespacetesting_1_1internal_ae5b8a7eede03981fb212e2a48bccea26}{\-Chop\-Low\-Bits} (\-U\-Int32 $\ast$bits, int n)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} char $\ast$ \hyperlink{namespacetesting_1_1internal_ae994812b6d35cea374d4f9754afc1659}{\-Code\-Point\-To\-Utf8} (\-U\-Int32 code\-\_\-point, char $\ast$str)
+\item 
+bool \hyperlink{namespacetesting_1_1internal_a5295827a346d31a82436982e915b70fb}{\-Is\-Utf16\-Surrogate\-Pair} (wchar\-\_\-t first, wchar\-\_\-t second)
+\item 
+\-U\-Int32 \hyperlink{namespacetesting_1_1internal_a5148378e34622f080776dafb62a40a44}{\-Create\-Code\-Point\-From\-Utf16\-Surrogate\-Pair} (wchar\-\_\-t first, wchar\-\_\-t second)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} \-String \hyperlink{namespacetesting_1_1internal_a1a297845a586bbc4f853032571736af2}{\-Wide\-String\-To\-Utf8} (const wchar\-\_\-t $\ast$str, int num\-\_\-chars)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_a56283a915608e035442712d3b92a105b}{\-Cmp\-Helper\-S\-T\-R\-E\-Q} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, const wchar\-\_\-t $\ast$expected, const wchar\-\_\-t $\ast$actual)
+\item 
+\-Assertion\-Result \hyperlink{namespacetesting_1_1internal_a7d89106441de99b36b0971c57caadc2d}{\-Cmp\-Helper\-S\-T\-R\-N\-E} (const char $\ast$s1\-\_\-expression, const char $\ast$s2\-\_\-expression, const wchar\-\_\-t $\ast$s1, const wchar\-\_\-t $\ast$s2)
+\item 
+\-String \hyperlink{namespacetesting_1_1internal_abf99dee8db2ca5a9bc512dd6cc34f048}{\-String\-Stream\-To\-String} (\-::std\-::stringstream $\ast$ss)
+\item 
+\-String \hyperlink{namespacetesting_1_1internal_a92cc3c0f16012ce7143a5c3256c00a29}{\-Append\-User\-Message} (const \-String \&gtest\-\_\-msg, const \-Message \&user\-\_\-msg)
+\item 
+static bool \hyperlink{namespacetesting_a88dd754d53baae013bf937f960e67306}{\-Test\-Part\-Fatally\-Failed} (const \-Test\-Part\-Result \&result)
+\item 
+static bool \hyperlink{namespacetesting_a650fdc14846c63608fb1c0810bf2b5ca}{\-Test\-Part\-Nonfatally\-Failed} (const \-Test\-Part\-Result \&result)
+\item 
+void \hyperlink{namespacetesting_1_1internal_a544a5c0a7bc19f664d434be72ecbdbfa}{\-Report\-Failure\-In\-Unknown\-Location} (\-Test\-Part\-Result\-::\-Type result\-\_\-type, const \-String \&message)
+\item 
+{\footnotesize template$<$class T , typename Result $>$ }\\\-Result \hyperlink{namespacetesting_1_1internal_ac7b1ac01c4703111210df6badab74591}{\-Handle\-Seh\-Exceptions\-In\-Method\-If\-Supported} (\-T $\ast$object, \-Result(\-T\-::$\ast$method)(), const char $\ast$location)
+\item 
+{\footnotesize template$<$class T , typename Result $>$ }\\\-Result \hyperlink{namespacetesting_1_1internal_a0034a1799f52bef77bb3b810af8b8969}{\-Handle\-Exceptions\-In\-Method\-If\-Supported} (\-T $\ast$object, \-Result(\-T\-::$\ast$method)(), const char $\ast$location)
+\item 
+\-Test\-Info $\ast$ \hyperlink{namespacetesting_1_1internal_a8f58f081cff056a35d18746667a16c4f}{\-Make\-And\-Register\-Test\-Info} (const char $\ast$test\-\_\-case\-\_\-name, const char $\ast$name, const char $\ast$type\-\_\-param, const char $\ast$value\-\_\-param, \-Type\-Id fixture\-\_\-class\-\_\-id, \-Set\-Up\-Test\-Case\-Func set\-\_\-up\-\_\-tc, \-Tear\-Down\-Test\-Case\-Func tear\-\_\-down\-\_\-tc, \-Test\-Factory\-Base $\ast$factory)
+\item 
+static internal\-::\-String \hyperlink{namespacetesting_aefca65bdfcf981c1e55c7d90e14a263f}{\-Format\-Countable\-Noun} (int count, const char $\ast$singular\-\_\-form, const char $\ast$plural\-\_\-form)
+\item 
+static internal\-::\-String \hyperlink{namespacetesting_a9e35e748b0be521a7c14047d3cab12b2}{\-Format\-Test\-Count} (int test\-\_\-count)
+\item 
+static internal\-::\-String \hyperlink{namespacetesting_a62a889fb8f600d386c9c75951b0a45b7}{\-Format\-Test\-Case\-Count} (int test\-\_\-case\-\_\-count)
+\item 
+static const char $\ast$ \hyperlink{namespacetesting_a3095c11c161dad676777579f3619d016}{\-Test\-Part\-Result\-Type\-To\-String} (\-Test\-Part\-Result\-::\-Type type)
+\item 
+static internal\-::\-String \hyperlink{namespacetesting_aa72a7aad5f2a9ccde41699f09348160a}{\-Print\-Test\-Part\-Result\-To\-String} (const \-Test\-Part\-Result \&test\-\_\-part\-\_\-result)
+\item 
+static void \hyperlink{namespacetesting_af2baf2fe4307d85e2124466614b0108a}{\-Print\-Test\-Part\-Result} (const \-Test\-Part\-Result \&test\-\_\-part\-\_\-result)
+\item 
+const char $\ast$ \hyperlink{namespacetesting_1_1internal_a381864cc8cad6df85e53dcee3b0cea92}{\-Get\-Ansi\-Color\-Code} (\-G\-Test\-Color color)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} bool \hyperlink{namespacetesting_1_1internal_ab0f928e61ab8ec92e75ddfcae9324c1e}{\-Should\-Use\-Color} (bool stdout\-\_\-is\-\_\-tty)
+\item 
+void \hyperlink{namespacetesting_1_1internal_a50a94fd99435d0a4dc57b7ca17860d92}{\-Colored\-Printf} (\-G\-Test\-Color color, const char $\ast$fmt,...)
+\item 
+void \hyperlink{namespacetesting_1_1internal_a75563c3d082e5343e8da2bad4e813b4d}{\-Print\-Full\-Test\-Comment\-If\-Present} (const \-Test\-Info \&test\-\_\-info)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} std\-::string \hyperlink{namespacetesting_1_1internal_a5802d68a85d566a0c82a0df5fd2aa58b}{\-Format\-Time\-In\-Millis\-As\-Seconds} (\-Time\-In\-Millis ms)
+\item 
+static void \hyperlink{namespacetesting_1_1internal_a70bc8320887c024883c4350b40891a1f}{\-Set\-Up\-Environment} (\-Environment $\ast$env)
+\item 
+static void \hyperlink{namespacetesting_1_1internal_ad03ec49f30777e3940aac9bd7ee087fd}{\-Tear\-Down\-Environment} (\-Environment $\ast$env)
+\item 
+void \hyperlink{namespacetesting_1_1internal_a656c8ec8f2ee82fa90b9ba61b6145538}{\-Write\-To\-Shard\-Status\-File\-If\-Needed} ()
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} bool \hyperlink{namespacetesting_1_1internal_a57e2697262a419061fc4cd3377a9271e}{\-Should\-Shard} (const char $\ast$total\-\_\-shards\-\_\-str, const char $\ast$shard\-\_\-index\-\_\-str, bool in\-\_\-subprocess\-\_\-for\-\_\-death\-\_\-test)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} \-Int32 \hyperlink{namespacetesting_1_1internal_afec7cf2eb159fa969f88d192ee507d23}{\-Int32\-From\-Env\-Or\-Die} (const char $\ast$env\-\_\-var, \-Int32 default\-\_\-val)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} bool \hyperlink{namespacetesting_1_1internal_ac05861de55e638fa73ea70a3f2f6f622}{\-Should\-Run\-Test\-On\-Shard} (int total\-\_\-shards, int shard\-\_\-index, int test\-\_\-id)
+\item 
+\-String \hyperlink{namespacetesting_1_1internal_aa233c580f5aa0ac5abf54608bc3366bc}{\-Get\-Current\-Os\-Stack\-Trace\-Except\-Top} (\-Unit\-Test $\ast$, int skip\-\_\-count)
+\item 
+bool \hyperlink{namespacetesting_1_1internal_a68c8009eb16c787f90cd989f57fb3a9a}{\-Is\-True} (bool condition)
+\item 
+bool \hyperlink{namespacetesting_1_1internal_a7b125f3952e08530aedb98a650ee73c1}{\-Always\-True} ()
+\item 
+bool \hyperlink{namespacetesting_1_1internal_ac490e9b0963689436d4c483653b3f93f}{\-Skip\-Prefix} (const char $\ast$prefix, const char $\ast$$\ast$pstr)
+\item 
+const char $\ast$ \hyperlink{namespacetesting_1_1internal_a5e4e5aab56cf1d77b5bf092c875142ef}{\-Parse\-Flag\-Value} (const char $\ast$str, const char $\ast$flag, bool def\-\_\-optional)
+\item 
+bool \hyperlink{namespacetesting_1_1internal_a777a3b389d36aa43396bab9e42286d0e}{\-Parse\-Bool\-Flag} (const char $\ast$str, const char $\ast$flag, bool $\ast$value)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} bool \hyperlink{namespacetesting_1_1internal_a082f2d6b59adc025b035b2c51b0fc47e}{\-Parse\-Int32\-Flag} (const char $\ast$str, const char $\ast$flag, \-Int32 $\ast$value)
+\item 
+bool \hyperlink{namespacetesting_1_1internal_ac43d360c9021a4fd0bd939f7c99e61a0}{\-Parse\-String\-Flag} (const char $\ast$str, const char $\ast$flag, \-String $\ast$value)
+\item 
+static bool \hyperlink{namespacetesting_1_1internal_aa90ded545c69ff0535f9f6a70ab45612}{\-Has\-Google\-Test\-Flag\-Prefix} (const char $\ast$str)
+\item 
+static void \hyperlink{namespacetesting_1_1internal_ad448973e8494343c56ae947eb38f21a7}{\-Print\-Color\-Encoded} (const char $\ast$str)
+\item 
+{\footnotesize template$<$typename Char\-Type $>$ }\\void \hyperlink{namespacetesting_1_1internal_ad2d2daedebbf18eb13fb9deb1f069f6e}{\-Parse\-Google\-Test\-Flags\-Only\-Impl} (int $\ast$argc, \-Char\-Type $\ast$$\ast$argv)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} void \hyperlink{namespacetesting_1_1internal_a5655276556ac09c8d184920553da3e90}{\-Parse\-Google\-Test\-Flags\-Only} (int $\ast$argc, char $\ast$$\ast$argv)
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{\-G\-T\-E\-S\-T\-\_\-\-A\-P\-I\-\_\-} void \hyperlink{namespacetesting_1_1internal_ae231639ccb18f92df31567b3eca47ac9}{\-Parse\-Google\-Test\-Flags\-Only} (int $\ast$argc, wchar\-\_\-t $\ast$$\ast$argv)
+\item 
+{\footnotesize template$<$typename Char\-Type $>$ }\\void \hyperlink{namespacetesting_1_1internal_aa955365c835d1a8f1659369249b5b1e4}{\-Init\-Google\-Test\-Impl} (int $\ast$argc, \-Char\-Type $\ast$$\ast$argv)
+\item 
+void \hyperlink{namespacetesting_a2ba4fda7f4d403cbcdf289327009a2da}{\-Init\-Google\-Test} (int $\ast$argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{namespacetesting_a971fc7a1a79f211cb0b830dd28e9dd41}{\-Init\-Google\-Test} (int $\ast$argc, wchar\-\_\-t $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{gtest_8cc_a7c139c1711de5a69cbc934e8a082e4f9}{\index{gtest.\-cc@{gtest.\-cc}!\-G\-T\-E\-S\-T\-\_\-\-H\-A\-S\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-H\-A\-S\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-H\-A\-S\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-H\-A\-S\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y\-\_\-}!gtest.cc@{gtest.\-cc}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-H\-A\-S\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-H\-A\-S\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y\-\_\-}~1}}\label{df/d5b/gtest_8cc_a7c139c1711de5a69cbc934e8a082e4f9}
+
+
+\-Definition at line 108 of file gtest.\-cc.
+
+\hypertarget{gtest_8cc_a4a5b6fbde5dd05e05dd6846ac5e5c18e}{\index{gtest.\-cc@{gtest.\-cc}!\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-\_\-\-C\-M\-P\-\_\-\-H\-E\-L\-P\-E\-R\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-\_\-\-C\-M\-P\-\_\-\-H\-E\-L\-P\-E\-R\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-\_\-\-C\-M\-P\-\_\-\-H\-E\-L\-P\-E\-R\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-\_\-\-C\-M\-P\-\_\-\-H\-E\-L\-P\-E\-R\-\_\-}!gtest.cc@{gtest.\-cc}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-\_\-\-C\-M\-P\-\_\-\-H\-E\-L\-P\-E\-R\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-\_\-\-C\-M\-P\-\_\-\-H\-E\-L\-P\-E\-R\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{op\-\_\-name, }
+\item[{}]{op}
+\end{DoxyParamCaption}
+)}}\label{df/d5b/gtest_8cc_a4a5b6fbde5dd05e05dd6846ac5e5c18e}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+AssertionResult CmpHelper##op_name(const char* expr1, const char* expr2, \
+                                   BiggestInt val1, BiggestInt val2) {\
+  if (val1 op val2) {\
+    return AssertionSuccess();\
+  } else {\
+    return AssertionFailure() \
+        << "Expected: (" << expr1 << ") " #op " (" << expr2\
+        << "), actual: " << FormatForComparisonFailureMessage(val1, val2)\
+        << " vs " << FormatForComparisonFailureMessage(val2, val1);\
+  }\
+}
+\end{DoxyCode}
+
+
+\-Definition at line 1129 of file gtest.\-cc.
+
+\hypertarget{gtest_8cc_a83bd232fd1077579fada92c31bb7469f}{\index{gtest.\-cc@{gtest.\-cc}!\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}!gtest.cc@{gtest.\-cc}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-A\-T\-I\-O\-N\-\_\-}~1}}\label{df/d5b/gtest_8cc_a83bd232fd1077579fada92c31bb7469f}
+
+
+\-Definition at line 131 of file gtest.\-cc.
+
+\hypertarget{gtest_8cc_a87a475ab9e81de8b49525787665b9229}{\index{gtest.\-cc@{gtest.\-cc}!\-G\-T\-E\-S\-T\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-}!gtest.cc@{gtest.\-cc}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{\-Name, }
+\item[{}]{\-Type}
+\end{DoxyParamCaption}
+)}}\label{df/d5b/gtest_8cc_a87a475ab9e81de8b49525787665b9229}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+void TestEventRepeater::Name(const Type& parameter) { \
+  if (forwarding_enabled_) { \
+    for (size_t i = 0; i < listeners_.size(); i++) { \
+      listeners_[i]->Name(parameter); \
+    } \
+  } \
+}
+\end{DoxyCode}
+
+
+\-Definition at line 2955 of file gtest.\-cc.
+
+\hypertarget{gtest_8cc_aa7da32fd7da6a8cceeed6b448cb7b5f2}{\index{gtest.\-cc@{gtest.\-cc}!\-G\-T\-E\-S\-T\-\_\-\-R\-E\-V\-E\-R\-S\-E\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-R\-E\-V\-E\-R\-S\-E\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-R\-E\-V\-E\-R\-S\-E\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-R\-E\-V\-E\-R\-S\-E\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-}!gtest.cc@{gtest.\-cc}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-R\-E\-V\-E\-R\-S\-E\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-T\-E\-S\-T\-\_\-\-R\-E\-V\-E\-R\-S\-E\-\_\-\-R\-E\-P\-E\-A\-T\-E\-R\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-}(
+\begin{DoxyParamCaption}
+\item[{}]{\-Name, }
+\item[{}]{\-Type}
+\end{DoxyParamCaption}
+)}}\label{df/d5b/gtest_8cc_aa7da32fd7da6a8cceeed6b448cb7b5f2}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+void TestEventRepeater::Name(const Type& parameter) { \
+  if (forwarding_enabled_) { \
+    for (int i = static_cast<int>(listeners_.size()) - 1; i >= 0; i--) { \
+      listeners_[i]->Name(parameter); \
+    } \
+  } \
+}
+\end{DoxyCode}
+
+
+\-Definition at line 2965 of file gtest.\-cc.
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{gtest_8cc_a405ae26bae83121bb8a0991436141b78}{\index{gtest.\-cc@{gtest.\-cc}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!gtest.cc@{gtest.\-cc}}
+\subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}internal\-::\-String {\bf name\-\_\-}}}\label{df/d5b/gtest_8cc_a405ae26bae83121bb8a0991436141b78}
+
+
+\-Definition at line 2289 of file gtest.\-cc.
+

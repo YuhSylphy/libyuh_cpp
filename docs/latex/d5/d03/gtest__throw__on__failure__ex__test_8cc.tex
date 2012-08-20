@@ -1,0 +1,107 @@
+\hypertarget{gtest__throw__on__failure__ex__test_8cc}{\section{gtest-\/1.6.0/test/gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.cc \-File \-Reference}
+\label{d5/d03/gtest__throw__on__failure__ex__test_8cc}\index{gtest-\/1.\-6.\-0/test/gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc@{gtest-\/1.\-6.\-0/test/gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$stdexcept$>$}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{gtest__throw__on__failure__ex__test_8cc_a78ecbe7682643ac0413d57d0b9f27fa6}{\-Fail} (const char $\ast$msg)
+\item 
+void \hyperlink{gtest__throw__on__failure__ex__test_8cc_a3ddff869a4b3365dd7a9c3727b996a1d}{\-Test\-Failure\-Throws\-Runtime\-Error} ()
+\item 
+int \hyperlink{gtest__throw__on__failure__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest__throw__on__failure__ex__test_8cc_a78ecbe7682643ac0413d57d0b9f27fa6}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc}!\-Fail@{\-Fail}}
+\index{\-Fail@{\-Fail}!gtest_throw_on_failure_ex_test.cc@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc}}
+\subsubsection[{\-Fail}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Fail} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}\label{d5/d03/gtest__throw__on__failure__ex__test_8cc_a78ecbe7682643ac0413d57d0b9f27fa6}
+
+
+\-Definition at line 45 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                           {
+  printf("FAILURE: %s\n", msg);
+  fflush(stdout);
+  exit(1);
+}
+\end{DoxyCode}
+\hypertarget{gtest__throw__on__failure__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc}!main@{main}}
+\index{main@{main}!gtest_throw_on_failure_ex_test.cc@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{d5/d03/gtest__throw__on__failure__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 81 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+  testing::InitGoogleTest(&argc, argv);
+
+  // We want to ensure that people can use Google Test assertions in
+  // other testing frameworks, as long as they initialize Google Test
+  // properly and set the thrown-on-failure mode.  Therefore, we don't
+  // use Google Test's constructs for defining and running tests
+  // (e.g. TEST and RUN_ALL_TESTS) here.
+
+  TestFailureThrowsRuntimeError();
+  return 0;
+}
+\end{DoxyCode}
+\hypertarget{gtest__throw__on__failure__ex__test_8cc_a3ddff869a4b3365dd7a9c3727b996a1d}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc}!\-Test\-Failure\-Throws\-Runtime\-Error@{\-Test\-Failure\-Throws\-Runtime\-Error}}
+\index{\-Test\-Failure\-Throws\-Runtime\-Error@{\-Test\-Failure\-Throws\-Runtime\-Error}!gtest_throw_on_failure_ex_test.cc@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc}}
+\subsubsection[{\-Test\-Failure\-Throws\-Runtime\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Test\-Failure\-Throws\-Runtime\-Error} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d5/d03/gtest__throw__on__failure__ex__test_8cc_a3ddff869a4b3365dd7a9c3727b996a1d}
+
+
+\-Definition at line 53 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-ex\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                     {
+  testing::GTEST_FLAG(throw_on_failure) = true;
+
+  // A successful assertion shouldn't throw.
+  try {
+    EXPECT_EQ(3, 3);
+  } catch(...) {
+    Fail("A successful assertion wrongfully threw.");
+  }
+
+  // A failed assertion should throw a subclass of std::runtime_error.
+  try {
+    EXPECT_EQ(2, 3) << "Expected failure";
+  } catch(const std::runtime_error& e) {
+    if (strstr(e.what(), "Expected failure") != NULL)
+      return;
+
+    printf("%s",
+           "A failed assertion did throw an exception of the right type, "
+           "but the message is incorrect.  Instead of containing \"Expected "
+           "failure\", it is:\n");
+    Fail(e.what());
+  } catch(...) {
+    Fail("A failed assertion threw the wrong type of exception.");
+  }
+  Fail("A failed assertion should've thrown but didn't.");
+}
+\end{DoxyCode}

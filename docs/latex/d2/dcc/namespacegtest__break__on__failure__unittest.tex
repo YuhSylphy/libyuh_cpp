@@ -1,0 +1,160 @@
+\hypertarget{namespacegtest__break__on__failure__unittest}{\section{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest \-Namespace \-Reference}
+\label{d2/dcc/namespacegtest__break__on__failure__unittest}\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classgtest__break__on__failure__unittest_1_1GTestBreakOnFailureUnitTest}{\-G\-Test\-Break\-On\-Failure\-Unit\-Test}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegtest__break__on__failure__unittest_ac74812cd685cbd9df906b202a0143340}{\-Set\-Env\-Var}
+\item 
+def \hyperlink{namespacegtest__break__on__failure__unittest_ae784214748d2010e70d5519ce618af5f}{\-Run}
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacegtest__break__on__failure__unittest_a629d61dfe4da763164a4d1a2d85b0afd}{\-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'
+\item 
+string \hyperlink{namespacegtest__break__on__failure__unittest_ab1b21b880253abfa3ab3dfc19b06814c}{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S} = 'nt'
+\item 
+string \hyperlink{namespacegtest__break__on__failure__unittest_a0f8ac0a1e414f3870fcb60f000f56dc6}{\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R} = '\-G\-T\-E\-S\-T\-\_\-\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E'
+\item 
+string \hyperlink{namespacegtest__break__on__failure__unittest_ad5756bb8068aa43fba10444f6af9a016}{\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-F\-L\-A\-G} = 'gtest\-\_\-break\-\_\-on\-\_\-failure'
+\item 
+string \hyperlink{namespacegtest__break__on__failure__unittest_a39a8e367b7459bf652c080053c38ed5d}{\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R} = '\-G\-T\-E\-S\-T\-\_\-\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E'
+\item 
+string \hyperlink{namespacegtest__break__on__failure__unittest_ac036692b239626aaaa6cab22424b8c9c}{\-C\-A\-T\-C\-H\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R} = '\-G\-T\-E\-S\-T\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N\-S'
+\item 
+tuple \hyperlink{namespacegtest__break__on__failure__unittest_a216df3f485400b109390103528720888}{\-E\-X\-E\-\_\-\-P\-A\-T\-H}
+\item 
+tuple \hyperlink{namespacegtest__break__on__failure__unittest_a199b463c0623b1b68e7b45e7b01fe16c}{environ} = os.\-environ.\-copy()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespacegtest__break__on__failure__unittest_ae784214748d2010e70d5519ce618af5f}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}!\-Run@{\-Run}}
+\index{\-Run@{\-Run}!gtest_break_on_failure_unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+\subsubsection[{\-Run}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-Run} (
+\begin{DoxyParamCaption}
+\item[{}]{command}
+\end{DoxyParamCaption}
+)}}\label{d2/dcc/namespacegtest__break__on__failure__unittest_ae784214748d2010e70d5519ce618af5f}
+\begin{DoxyVerb}Runs a command; returns 1 if it was killed by a signal, or 0 otherwise.\end{DoxyVerb}
+ 
+
+\-Definition at line 86 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+86 
+87 def Run(command):
+88   """Runs a command; returns 1 if it was killed by a signal, or 0 otherwise."""
+89 
+90   p = gtest_test_utils.Subprocess(command, env=environ)
+91   if p.terminated_by_signal:
+92     return 1
+93   else:
+94     return 0
+95 
+96 
+97 # The tests.
+98 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__break__on__failure__unittest_ac74812cd685cbd9df906b202a0143340}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}!\-Set\-Env\-Var@{\-Set\-Env\-Var}}
+\index{\-Set\-Env\-Var@{\-Set\-Env\-Var}!gtest_break_on_failure_unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+\subsubsection[{\-Set\-Env\-Var}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-Set\-Env\-Var} (
+\begin{DoxyParamCaption}
+\item[{}]{env\-\_\-var, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}\label{d2/dcc/namespacegtest__break__on__failure__unittest_ac74812cd685cbd9df906b202a0143340}
+\begin{DoxyVerb}Sets an environment variable to a given value; unsets it when the
+given value is None.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 75 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+
+\begin{DoxyCode}
+75 
+76 def SetEnvVar(env_var, value):
+77   """Sets an environment variable to a given value; unsets it when the
+78   given value is None.
+79   """
+80 
+81   if value is not None:
+82     environ[env_var] = value
+83   elif env_var in environ:
+84     del environ[env_var]
+85 
+
+\end{DoxyCode}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{namespacegtest__break__on__failure__unittest_a629d61dfe4da763164a4d1a2d85b0afd}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}!\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}!gtest_break_on_failure_unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+\subsubsection[{\-\_\-\-\_\-author\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'}}\label{d2/dcc/namespacegtest__break__on__failure__unittest_a629d61dfe4da763164a4d1a2d85b0afd}
+
+
+\-Definition at line 41 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+\hypertarget{namespacegtest__break__on__failure__unittest_a0f8ac0a1e414f3870fcb60f000f56dc6}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}!\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R@{\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R}}
+\index{\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R@{\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R}!gtest_break_on_failure_unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+\subsubsection[{\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R} = '\-G\-T\-E\-S\-T\-\_\-\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E'}}\label{d2/dcc/namespacegtest__break__on__failure__unittest_a0f8ac0a1e414f3870fcb60f000f56dc6}
+
+
+\-Definition at line 53 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+\hypertarget{namespacegtest__break__on__failure__unittest_ad5756bb8068aa43fba10444f6af9a016}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}!\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-F\-L\-A\-G@{\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-F\-L\-A\-G}}
+\index{\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-F\-L\-A\-G@{\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-F\-L\-A\-G}!gtest_break_on_failure_unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+\subsubsection[{\-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-F\-L\-A\-G}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-B\-R\-E\-A\-K\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-F\-L\-A\-G} = 'gtest\-\_\-break\-\_\-on\-\_\-failure'}}\label{d2/dcc/namespacegtest__break__on__failure__unittest_ad5756bb8068aa43fba10444f6af9a016}
+
+
+\-Definition at line 56 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+\hypertarget{namespacegtest__break__on__failure__unittest_ac036692b239626aaaa6cab22424b8c9c}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}!\-C\-A\-T\-C\-H\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R@{\-C\-A\-T\-C\-H\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R}}
+\index{\-C\-A\-T\-C\-H\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R@{\-C\-A\-T\-C\-H\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R}!gtest_break_on_failure_unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+\subsubsection[{\-C\-A\-T\-C\-H\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-C\-A\-T\-C\-H\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R} = '\-G\-T\-E\-S\-T\-\_\-\-C\-A\-T\-C\-H\-\_\-\-E\-X\-C\-E\-P\-T\-I\-O\-N\-S'}}\label{d2/dcc/namespacegtest__break__on__failure__unittest_ac036692b239626aaaa6cab22424b8c9c}
+
+
+\-Definition at line 62 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+\hypertarget{namespacegtest__break__on__failure__unittest_a199b463c0623b1b68e7b45e7b01fe16c}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}!environ@{environ}}
+\index{environ@{environ}!gtest_break_on_failure_unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+\subsubsection[{environ}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf environ} = os.\-environ.\-copy()}}\label{d2/dcc/namespacegtest__break__on__failure__unittest_a199b463c0623b1b68e7b45e7b01fe16c}
+
+
+\-Definition at line 72 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+\hypertarget{namespacegtest__break__on__failure__unittest_a216df3f485400b109390103528720888}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}!\-E\-X\-E\-\_\-\-P\-A\-T\-H@{\-E\-X\-E\-\_\-\-P\-A\-T\-H}}
+\index{\-E\-X\-E\-\_\-\-P\-A\-T\-H@{\-E\-X\-E\-\_\-\-P\-A\-T\-H}!gtest_break_on_failure_unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+\subsubsection[{\-E\-X\-E\-\_\-\-P\-A\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf \-E\-X\-E\-\_\-\-P\-A\-T\-H}}}\label{d2/dcc/namespacegtest__break__on__failure__unittest_a216df3f485400b109390103528720888}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+1 gtest_test_utils.GetTestExecutablePath(
+2     'gtest_break_on_failure_unittest_')
+\end{DoxyCode}
+
+
+\-Definition at line 65 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+\hypertarget{namespacegtest__break__on__failure__unittest_ab1b21b880253abfa3ab3dfc19b06814c}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}!\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S@{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S}}
+\index{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S@{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S}!gtest_break_on_failure_unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+\subsubsection[{\-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-I\-S\-\_\-\-W\-I\-N\-D\-O\-W\-S} = 'nt'}}\label{d2/dcc/namespacegtest__break__on__failure__unittest_ab1b21b880253abfa3ab3dfc19b06814c}
+
+
+\-Definition at line 50 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+
+\hypertarget{namespacegtest__break__on__failure__unittest_a39a8e367b7459bf652c080053c38ed5d}{\index{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}!\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R@{\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R}}
+\index{\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R@{\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R}!gtest_break_on_failure_unittest@{gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest}}
+\subsubsection[{\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E\-\_\-\-E\-N\-V\-\_\-\-V\-A\-R} = '\-G\-T\-E\-S\-T\-\_\-\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E'}}\label{d2/dcc/namespacegtest__break__on__failure__unittest_a39a8e367b7459bf652c080053c38ed5d}
+
+
+\-Definition at line 59 of file gtest\-\_\-break\-\_\-on\-\_\-failure\-\_\-unittest.\-py.
+

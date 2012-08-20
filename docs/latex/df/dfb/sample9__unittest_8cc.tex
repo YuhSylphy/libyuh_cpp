@@ -1,0 +1,81 @@
+\hypertarget{sample9__unittest_8cc}{\section{gtest-\/1.6.0/samples/sample9\-\_\-unittest.cc \-File \-Reference}
+\label{df/dfb/sample9__unittest_8cc}\index{gtest-\/1.\-6.\-0/samples/sample9\-\_\-unittest.\-cc@{gtest-\/1.\-6.\-0/samples/sample9\-\_\-unittest.\-cc}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sample9__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{sample9__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{sample9\-\_\-unittest.\-cc@{sample9\-\_\-unittest.\-cc}!main@{main}}
+\index{main@{main}!sample9_unittest.cc@{sample9\-\_\-unittest.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{df/dfb/sample9__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 108 of file sample9\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+  InitGoogleTest(&argc, argv);
+
+  bool terse_output = false;
+  if (argc > 1 && strcmp(argv[1], "--terse_output") == 0 )
+    terse_output = true;
+  else
+    printf("%s\n", "Run this program with --terse_output to change the way "
+           "it prints its output.");
+
+  UnitTest& unit_test = *UnitTest::GetInstance();
+
+  // If we are given the --terse_output command line flag, suppresses the
+  // standard output and attaches own result printer.
+  if (terse_output) {
+    TestEventListeners& listeners = unit_test.listeners();
+
+    // Removes the default console output listener from the list so it will
+    // not receive events from Google Test and won't print any output. Since
+    // this operation transfers ownership of the listener to the caller we
+    // have to delete it as well.
+    delete listeners.Release(listeners.default_result_printer());
+
+    // Adds the custom output listener to the list. It will now receive
+    // events from Google Test and print the alternative output. We don't
+    // have to worry about deleting it since Google Test assumes ownership
+    // over it after adding it to the list.
+    listeners.Append(new TersePrinter);
+  }
+  int ret_val = RUN_ALL_TESTS();
+
+  // This is an example of using the UnitTest reflection API to inspect test
+  // results. Here we discount failures from the tests we expected to fail.
+  int unexpectedly_failed_tests = 0;
+  for (int i = 0; i < unit_test.total_test_case_count(); ++i) {
+    const TestCase& test_case = *unit_test.GetTestCase(i);
+    for (int j = 0; j < test_case.total_test_count(); ++j) {
+      const TestInfo& test_info = *test_case.GetTestInfo(j);
+      // Counts failed tests that were not meant to fail (those without
+      // 'Fails' in the name).
+      if (test_info.result()->Failed() &&
+          strcmp(test_info.name(), "Fails") != 0) {
+        unexpectedly_failed_tests++;
+      }
+    }
+  }
+
+  // Test that were meant to fail should not affect the test program outcome.
+  if (unexpectedly_failed_tests == 0)
+    ret_val = 0;
+
+  return ret_val;
+}
+\end{DoxyCode}

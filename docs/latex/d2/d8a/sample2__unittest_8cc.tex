@@ -1,0 +1,147 @@
+\hypertarget{sample2__unittest_8cc}{\section{gtest-\/1.6.0/samples/sample2\-\_\-unittest.cc \-File \-Reference}
+\label{d2/d8a/sample2__unittest_8cc}\index{gtest-\/1.\-6.\-0/samples/sample2\-\_\-unittest.\-cc@{gtest-\/1.\-6.\-0/samples/sample2\-\_\-unittest.\-cc}}
+}
+{\ttfamily \#include \char`\"{}sample2.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sample2__unittest_8cc_aaf04f91c362407dc08c8bf377a77b4db}{\-T\-E\-S\-T} (\hyperlink{classMyString}{\-My\-String}, \-Default\-Constructor)
+\item 
+\hyperlink{sample2__unittest_8cc_a38e540508dce697cb50d6cd5f298d051}{\-T\-E\-S\-T} (\hyperlink{classMyString}{\-My\-String}, \-Constructor\-From\-C\-String)
+\item 
+\hyperlink{sample2__unittest_8cc_a79ed49ad165f76c183707325847043c1}{\-T\-E\-S\-T} (\hyperlink{classMyString}{\-My\-String}, \-Copy\-Constructor)
+\item 
+\hyperlink{sample2__unittest_8cc_afa5d617a125eb852624619a56cf7f89d}{\-T\-E\-S\-T} (\hyperlink{classMyString}{\-My\-String}, \-Set)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{k\-Hello\-String} \mbox{[}$\,$\mbox{]} = \char`\"{}\-Hello, world!\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{sample2__unittest_8cc_aaf04f91c362407dc08c8bf377a77b4db}{\index{sample2\-\_\-unittest.\-cc@{sample2\-\_\-unittest.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!sample2_unittest.cc@{sample2\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-My\-String}}]{, }
+\item[{\-Default\-Constructor}]{}
+\end{DoxyParamCaption}
+)}}\label{d2/d8a/sample2__unittest_8cc_aaf04f91c362407dc08c8bf377a77b4db}
+
+
+\-Definition at line 49 of file sample2\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                   {
+  const MyString s;
+
+  // Asserts that s.c_string() returns NULL.
+  //
+  // <TechnicalDetails>
+  //
+  // If we write NULL instead of
+  //
+  //   static_cast<const char *>(NULL)
+  //
+  // in this assertion, it will generate a warning on gcc 3.4.  The
+  // reason is that EXPECT_EQ needs to know the types of its
+  // arguments in order to print them when it fails.  Since NULL is
+  // #defined as 0, the compiler will use the formatter function for
+  // int to print it.  However, gcc thinks that NULL should be used as
+  // a pointer, not an int, and therefore complains.
+  //
+  // The root of the problem is C++'s lack of distinction between the
+  // integer number 0 and the null pointer constant.  Unfortunately,
+  // we have to live with this fact.
+  //
+  // </TechnicalDetails>
+  EXPECT_STREQ(NULL, s.c_string());
+
+  EXPECT_EQ(0u, s.Length());
+}
+\end{DoxyCode}
+\hypertarget{sample2__unittest_8cc_a38e540508dce697cb50d6cd5f298d051}{\index{sample2\-\_\-unittest.\-cc@{sample2\-\_\-unittest.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!sample2_unittest.cc@{sample2\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-My\-String}}]{, }
+\item[{\-Constructor\-From\-C\-String}]{}
+\end{DoxyParamCaption}
+)}}\label{d2/d8a/sample2__unittest_8cc_a38e540508dce697cb50d6cd5f298d051}
+
+
+\-Definition at line 80 of file sample2\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                       {
+  const MyString s(kHelloString);
+  EXPECT_TRUE(strcmp(s.c_string(), kHelloString) == 0);
+  EXPECT_EQ(sizeof(kHelloString)/sizeof(kHelloString[0]) - 1,
+            s.Length());
+}
+\end{DoxyCode}
+\hypertarget{sample2__unittest_8cc_a79ed49ad165f76c183707325847043c1}{\index{sample2\-\_\-unittest.\-cc@{sample2\-\_\-unittest.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!sample2_unittest.cc@{sample2\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-My\-String}}]{, }
+\item[{\-Copy\-Constructor}]{}
+\end{DoxyParamCaption}
+)}}\label{d2/d8a/sample2__unittest_8cc_a79ed49ad165f76c183707325847043c1}
+
+
+\-Definition at line 88 of file sample2\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+  const MyString s1(kHelloString);
+  const MyString s2 = s1;
+  EXPECT_TRUE(strcmp(s2.c_string(), kHelloString) == 0);
+}
+\end{DoxyCode}
+\hypertarget{sample2__unittest_8cc_afa5d617a125eb852624619a56cf7f89d}{\index{sample2\-\_\-unittest.\-cc@{sample2\-\_\-unittest.\-cc}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!sample2_unittest.cc@{sample2\-\_\-unittest.\-cc}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-My\-String}}]{, }
+\item[{\-Set}]{}
+\end{DoxyParamCaption}
+)}}\label{d2/d8a/sample2__unittest_8cc_afa5d617a125eb852624619a56cf7f89d}
+
+
+\-Definition at line 95 of file sample2\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                    {
+  MyString s;
+
+  s.Set(kHelloString);
+  EXPECT_TRUE(strcmp(s.c_string(), kHelloString) == 0);
+
+  // Set should work when the input pointer is the same as the one
+  // already in the MyString object.
+  s.Set(s.c_string());
+  EXPECT_TRUE(strcmp(s.c_string(), kHelloString) == 0);
+
+  // Can we set the MyString to NULL?
+  s.Set(NULL);
+  EXPECT_STREQ(NULL, s.c_string());
+}
+\end{DoxyCode}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{\index{sample2\-\_\-unittest.\-cc@{sample2\-\_\-unittest.\-cc}!k\-Hello\-String@{k\-Hello\-String}}
+\index{k\-Hello\-String@{k\-Hello\-String}!sample2_unittest.cc@{sample2\-\_\-unittest.\-cc}}
+\subsubsection[{k\-Hello\-String}]{\setlength{\rightskip}{0pt plus 5cm}const char {\bf k\-Hello\-String}\mbox{[}$\,$\mbox{]} = \char`\"{}\-Hello, world!\char`\"{}}}\label{d2/d8a/sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}
+
+
+\-Definition at line 77 of file sample2\-\_\-unittest.\-cc.
+

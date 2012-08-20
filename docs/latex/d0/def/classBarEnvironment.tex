@@ -1,0 +1,74 @@
+\hypertarget{classBarEnvironment}{\section{\-Bar\-Environment \-Class \-Reference}
+\label{d0/def/classBarEnvironment}\index{\-Bar\-Environment@{\-Bar\-Environment}}
+}
+\-Inheritance diagram for \-Bar\-Environment\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/def/classBarEnvironment}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classBarEnvironment_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\item 
+virtual void \hyperlink{classBarEnvironment_a870a092058305911f3d42df45dd657e5}{\-Tear\-Down} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 963 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classBarEnvironment_a901706a587f9ae84df8b2395fbe759cb}{\index{\-Bar\-Environment@{\-Bar\-Environment}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!BarEnvironment@{\-Bar\-Environment}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d0/def/classBarEnvironment_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Environment_a901706a587f9ae84df8b2395fbe759cb}{\-Environment}.
+
+
+
+\-Definition at line 965 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    printf("%s", "BarEnvironment::SetUp() called.\n");
+  }
+\end{DoxyCode}
+\hypertarget{classBarEnvironment_a870a092058305911f3d42df45dd657e5}{\index{\-Bar\-Environment@{\-Bar\-Environment}!\-Tear\-Down@{\-Tear\-Down}}
+\index{\-Tear\-Down@{\-Tear\-Down}!BarEnvironment@{\-Bar\-Environment}}
+\subsubsection[{\-Tear\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Tear\-Down} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d0/def/classBarEnvironment_a870a092058305911f3d42df45dd657e5}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Environment_a870a092058305911f3d42df45dd657e5}{\-Environment}.
+
+
+
+\-Definition at line 969 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+    printf("%s", "BarEnvironment::TearDown() called.\n");
+    ADD_FAILURE() << "Expected non-fatal failure.";
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__output__test___8cc}{gtest\-\_\-output\-\_\-test\-\_\-.\-cc}\end{DoxyCompactItemize}

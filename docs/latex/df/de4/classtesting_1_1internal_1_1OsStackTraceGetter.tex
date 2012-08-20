@@ -1,0 +1,200 @@
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter}{\section{\-Os\-Stack\-Trace\-Getter \-Class \-Reference}
+\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter}\index{\-Os\-Stack\-Trace\-Getter@{\-Os\-Stack\-Trace\-Getter}}
+}
+
+
+{\ttfamily \#include $<$gtest-\/internal-\/inl.\-h$>$}
+
+\-Inheritance diagram for \-Os\-Stack\-Trace\-Getter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_abff80fc4b0b474cf8fa4f44b3e5c3a9e}{\-Os\-Stack\-Trace\-Getter} ()
+\item 
+virtual \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_aaa023d94e63f7975bfbe9ca54a9acd07}{\-Current\-Stack\-Trace} (int max\-\_\-depth, int skip\-\_\-count)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_aa97e532da98f524272b1256f018c0f07}{\-Upon\-Leaving\-G\-Test} ()
+\item 
+\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_abff80fc4b0b474cf8fa4f44b3e5c3a9e}{\-Os\-Stack\-Trace\-Getter} ()
+\item 
+virtual \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_a870d7574831ade2d93875cd67ac725e6}{\-Current\-Stack\-Trace} (int max\-\_\-depth, int skip\-\_\-count)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_ad3912ec6b3c8c171975114d79a94eb05}{\-Upon\-Leaving\-G\-Test} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$const \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_adf15738d11421bb96e42bd0baa4ab1cd}{k\-Elided\-Frames\-Marker} = \char`\"{} internal frames ...\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_a763aac5392b86e245cba0766e2db06f8}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter}{\-Os\-Stack\-Trace\-Getter})
+\item 
+\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_a763aac5392b86e245cba0766e2db06f8}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter}{\-Os\-Stack\-Trace\-Getter})
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1Mutex}{\-Mutex} \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_a01268d7e44c318a733a4c6c4d08deb04}{mutex\-\_\-}
+\item 
+void $\ast$ \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetter_aaecddfab7cd60af213d15b75cc88df14}{caller\-\_\-frame\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 830 of file gtest-\/all.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_abff80fc4b0b474cf8fa4f44b3e5c3a9e}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!\-Os\-Stack\-Trace\-Getter@{\-Os\-Stack\-Trace\-Getter}}
+\index{\-Os\-Stack\-Trace\-Getter@{\-Os\-Stack\-Trace\-Getter}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{\-Os\-Stack\-Trace\-Getter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Os\-Stack\-Trace\-Getter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_abff80fc4b0b474cf8fa4f44b3e5c3a9e}
+
+
+\-Definition at line 832 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+: caller_frame_(NULL) {}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_abff80fc4b0b474cf8fa4f44b3e5c3a9e}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!\-Os\-Stack\-Trace\-Getter@{\-Os\-Stack\-Trace\-Getter}}
+\index{\-Os\-Stack\-Trace\-Getter@{\-Os\-Stack\-Trace\-Getter}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{\-Os\-Stack\-Trace\-Getter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Os\-Stack\-Trace\-Getter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_abff80fc4b0b474cf8fa4f44b3e5c3a9e}
+
+
+\-Definition at line 434 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+: caller_frame_(NULL) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_a870d7574831ade2d93875cd67ac725e6}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!\-Current\-Stack\-Trace@{\-Current\-Stack\-Trace}}
+\index{\-Current\-Stack\-Trace@{\-Current\-Stack\-Trace}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{\-Current\-Stack\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf \-String} {\bf \-Current\-Stack\-Trace} (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-\_\-depth, }
+\item[{int}]{skip\-\_\-count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_a870d7574831ade2d93875cd67ac725e6}
+
+
+\-Implements \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetterInterface_a5c5288a3dc07be69242eb5c6d3a02a2b}{\-Os\-Stack\-Trace\-Getter\-Interface}.
+
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_aaa023d94e63f7975bfbe9ca54a9acd07}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!\-Current\-Stack\-Trace@{\-Current\-Stack\-Trace}}
+\index{\-Current\-Stack\-Trace@{\-Current\-Stack\-Trace}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{\-Current\-Stack\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf \-Current\-Stack\-Trace} (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-\_\-depth, }
+\item[{int}]{skip\-\_\-count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_aaa023d94e63f7975bfbe9ca54a9acd07}
+
+
+\-Implements \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetterInterface_a5c5288a3dc07be69242eb5c6d3a02a2b}{\-Os\-Stack\-Trace\-Getter\-Interface}.
+
+
+
+\-Definition at line 4839 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                     {
+  return String("");
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_a763aac5392b86e245cba0766e2db06f8}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Os\-Stack\-Trace\-Getter}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_a763aac5392b86e245cba0766e2db06f8}
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_a763aac5392b86e245cba0766e2db06f8}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Os\-Stack\-Trace\-Getter}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_a763aac5392b86e245cba0766e2db06f8}
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_ad3912ec6b3c8c171975114d79a94eb05}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!\-Upon\-Leaving\-G\-Test@{\-Upon\-Leaving\-G\-Test}}
+\index{\-Upon\-Leaving\-G\-Test@{\-Upon\-Leaving\-G\-Test}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{\-Upon\-Leaving\-G\-Test}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Upon\-Leaving\-G\-Test} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_ad3912ec6b3c8c171975114d79a94eb05}
+
+
+\-Implements \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetterInterface_a62a522fb4e6a18ae9a8799d1cd0b8bc6}{\-Os\-Stack\-Trace\-Getter\-Interface}.
+
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_aa97e532da98f524272b1256f018c0f07}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!\-Upon\-Leaving\-G\-Test@{\-Upon\-Leaving\-G\-Test}}
+\index{\-Upon\-Leaving\-G\-Test@{\-Upon\-Leaving\-G\-Test}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{\-Upon\-Leaving\-G\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Upon\-Leaving\-G\-Test} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_aa97e532da98f524272b1256f018c0f07}
+
+
+\-Implements \hyperlink{classtesting_1_1internal_1_1OsStackTraceGetterInterface_a62a522fb4e6a18ae9a8799d1cd0b8bc6}{\-Os\-Stack\-Trace\-Getter\-Interface}.
+
+
+
+\-Definition at line 4844 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                          {
+}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_aaecddfab7cd60af213d15b75cc88df14}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!caller\-\_\-frame\-\_\-@{caller\-\_\-frame\-\_\-}}
+\index{caller\-\_\-frame\-\_\-@{caller\-\_\-frame\-\_\-}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{caller\-\_\-frame\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ {\bf caller\-\_\-frame\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_aaecddfab7cd60af213d15b75cc88df14}
+
+
+\-Definition at line 847 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_adf15738d11421bb96e42bd0baa4ab1cd}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!k\-Elided\-Frames\-Marker@{k\-Elided\-Frames\-Marker}}
+\index{k\-Elided\-Frames\-Marker@{k\-Elided\-Frames\-Marker}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{k\-Elided\-Frames\-Marker}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf k\-Elided\-Frames\-Marker} = \char`\"{} internal frames ...\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_adf15738d11421bb96e42bd0baa4ab1cd}
+
+
+\-Definition at line 838 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1OsStackTraceGetter_a01268d7e44c318a733a4c6c4d08deb04}{\index{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!testing::internal::OsStackTraceGetter@{testing\-::internal\-::\-Os\-Stack\-Trace\-Getter}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Mutex} {\bf mutex\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{df/de4/classtesting_1_1internal_1_1OsStackTraceGetter_a01268d7e44c318a733a4c6c4d08deb04}
+
+
+\-Definition at line 841 of file gtest-\/all.\-cc.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest-internal-inl_8h}{gtest-\/internal-\/inl.\-h}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}

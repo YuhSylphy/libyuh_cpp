@@ -1,0 +1,33 @@
+\hypertarget{gtest-death-test__ex__test_8cc}{\section{gtest-\/1.6.0/test/gtest-\/death-\/test\-\_\-ex\-\_\-test.cc \-File \-Reference}
+\label{de/d74/gtest-death-test__ex__test_8cc}\index{gtest-\/1.\-6.\-0/test/gtest-\/death-\/test\-\_\-ex\-\_\-test.\-cc@{gtest-\/1.\-6.\-0/test/gtest-\/death-\/test\-\_\-ex\-\_\-test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}gtest/gtest-\/death-\/test.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gtest-death-test__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gtest-death-test__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{gtest-\/death-\/test\-\_\-ex\-\_\-test.\-cc@{gtest-\/death-\/test\-\_\-ex\-\_\-test.\-cc}!main@{main}}
+\index{main@{main}!gtest-death-test_ex_test.cc@{gtest-\/death-\/test\-\_\-ex\-\_\-test.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{de/d74/gtest-death-test__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 89 of file gtest-\/death-\/test\-\_\-ex\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+  testing::InitGoogleTest(&argc, argv);
+  testing::GTEST_FLAG(catch_exceptions) = GTEST_ENABLE_CATCH_EXCEPTIONS_ != 0;
+  return RUN_ALL_TESTS();
+}
+\end{DoxyCode}

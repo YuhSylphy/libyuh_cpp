@@ -1,0 +1,124 @@
+\hypertarget{classtesting_1_1internal_1_1EqHelper_3_01true_01_4}{\section{\-Eq\-Helper$<$ true $>$ \-Class \-Template \-Reference}
+\label{dd/df9/classtesting_1_1internal_1_1EqHelper_3_01true_01_4}\index{\-Eq\-Helper$<$ true $>$@{\-Eq\-Helper$<$ true $>$}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static \hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \hyperlink{classtesting_1_1internal_1_1EqHelper_3_01true_01_4_a23490b15bf58a5b387be44daccd5435f}{\-Compare} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, const \-T1 \&expected, const \-T2 \&actual, typename \-Enable\-If$<$!\hyperlink{structtesting_1_1internal_1_1is__pointer}{is\-\_\-pointer}$<$ \-T2 $>$\-::value $>$\-::type $\ast$=0)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \hyperlink{classtesting_1_1internal_1_1EqHelper_3_01true_01_4_ae8c81bf6bf04148ff4f2e5ef7d9ec9eb}{\-Compare} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, \-Secret $\ast$, \-T $\ast$actual)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static \hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \hyperlink{classtesting_1_1internal_1_1EqHelper_3_01true_01_4_a23490b15bf58a5b387be44daccd5435f}{\-Compare} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, const \-T1 \&expected, const \-T2 \&actual, typename \-Enable\-If$<$!\hyperlink{structtesting_1_1internal_1_1is__pointer}{is\-\_\-pointer}$<$ \-T2 $>$\-::value $>$\-::type $\ast$=0)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{classtesting_1_1AssertionResult}{\-Assertion\-Result} \hyperlink{classtesting_1_1internal_1_1EqHelper_3_01true_01_4_ae8c81bf6bf04148ff4f2e5ef7d9ec9eb}{\-Compare} (const char $\ast$expected\-\_\-expression, const char $\ast$actual\-\_\-expression, \-Secret $\ast$, \-T $\ast$actual)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$$>$class testing\-::internal\-::\-Eq\-Helper$<$ true $>$}
+
+
+
+\-Definition at line 18399 of file gtest.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1EqHelper_3_01true_01_4_a23490b15bf58a5b387be44daccd5435f}{\index{testing\-::internal\-::\-Eq\-Helper$<$ true $>$@{testing\-::internal\-::\-Eq\-Helper$<$ true $>$}!\-Compare@{\-Compare}}
+\index{\-Compare@{\-Compare}!testing::internal::EqHelper< true >@{testing\-::internal\-::\-Eq\-Helper$<$ true $>$}}
+\subsubsection[{\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Assertion\-Result} {\bf \-Compare} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expected\-\_\-expression, }
+\item[{const char $\ast$}]{actual\-\_\-expression, }
+\item[{const \-T1 \&}]{expected, }
+\item[{const \-T2 \&}]{actual, }
+\item[{typename \-Enable\-If$<$!{\bf is\-\_\-pointer}$<$ \-T2 $>$\-::value $>$\-::type $\ast$}]{ = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{dd/df9/classtesting_1_1internal_1_1EqHelper_3_01true_01_4_a23490b15bf58a5b387be44daccd5435f}
+
+
+\-Definition at line 1381 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                        {
+    return CmpHelperEQ(expected_expression, actual_expression, expected,
+                       actual);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EqHelper_3_01true_01_4_ae8c81bf6bf04148ff4f2e5ef7d9ec9eb}{\index{testing\-::internal\-::\-Eq\-Helper$<$ true $>$@{testing\-::internal\-::\-Eq\-Helper$<$ true $>$}!\-Compare@{\-Compare}}
+\index{\-Compare@{\-Compare}!testing::internal::EqHelper< true >@{testing\-::internal\-::\-Eq\-Helper$<$ true $>$}}
+\subsubsection[{\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Assertion\-Result} {\bf \-Compare} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expected\-\_\-expression, }
+\item[{const char $\ast$}]{actual\-\_\-expression, }
+\item[{\-Secret $\ast$}]{, }
+\item[{\-T $\ast$}]{actual}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{dd/df9/classtesting_1_1internal_1_1EqHelper_3_01true_01_4_ae8c81bf6bf04148ff4f2e5ef7d9ec9eb}
+
+
+\-Definition at line 1399 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                 {
+    // We already know that 'expected' is a null pointer.
+    return CmpHelperEQ(expected_expression, actual_expression,
+                       static_cast<T*>(NULL), actual);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EqHelper_3_01true_01_4_a23490b15bf58a5b387be44daccd5435f}{\index{testing\-::internal\-::\-Eq\-Helper$<$ true $>$@{testing\-::internal\-::\-Eq\-Helper$<$ true $>$}!\-Compare@{\-Compare}}
+\index{\-Compare@{\-Compare}!testing::internal::EqHelper< true >@{testing\-::internal\-::\-Eq\-Helper$<$ true $>$}}
+\subsubsection[{\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Assertion\-Result} {\bf \-Compare} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expected\-\_\-expression, }
+\item[{const char $\ast$}]{actual\-\_\-expression, }
+\item[{const \-T1 \&}]{expected, }
+\item[{const \-T2 \&}]{actual, }
+\item[{typename \-Enable\-If$<$!{\bf is\-\_\-pointer}$<$ \-T2 $>$\-::value $>$\-::type $\ast$}]{ = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{dd/df9/classtesting_1_1internal_1_1EqHelper_3_01true_01_4_a23490b15bf58a5b387be44daccd5435f}
+
+
+\-Definition at line 18406 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                        {
+    return CmpHelperEQ(expected_expression, actual_expression, expected,
+                       actual);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EqHelper_3_01true_01_4_ae8c81bf6bf04148ff4f2e5ef7d9ec9eb}{\index{testing\-::internal\-::\-Eq\-Helper$<$ true $>$@{testing\-::internal\-::\-Eq\-Helper$<$ true $>$}!\-Compare@{\-Compare}}
+\index{\-Compare@{\-Compare}!testing::internal::EqHelper< true >@{testing\-::internal\-::\-Eq\-Helper$<$ true $>$}}
+\subsubsection[{\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-Assertion\-Result} {\bf \-Compare} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expected\-\_\-expression, }
+\item[{const char $\ast$}]{actual\-\_\-expression, }
+\item[{\-Secret $\ast$}]{, }
+\item[{\-T $\ast$}]{actual}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{dd/df9/classtesting_1_1internal_1_1EqHelper_3_01true_01_4_ae8c81bf6bf04148ff4f2e5ef7d9ec9eb}
+
+
+\-Definition at line 18424 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                 {
+    // We already know that 'expected' is a null pointer.
+    return CmpHelperEQ(expected_expression, actual_expression,
+                       static_cast<T*>(NULL), actual);
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/\hyperlink{include_2gtest_2gtest_8h}{gtest.\-h}\end{DoxyCompactItemize}

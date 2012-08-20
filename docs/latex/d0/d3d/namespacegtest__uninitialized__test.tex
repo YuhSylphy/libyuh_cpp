@@ -1,0 +1,113 @@
+\hypertarget{namespacegtest__uninitialized__test}{\section{gtest\-\_\-uninitialized\-\_\-test \-Namespace \-Reference}
+\label{d0/d3d/namespacegtest__uninitialized__test}\index{gtest\-\_\-uninitialized\-\_\-test@{gtest\-\_\-uninitialized\-\_\-test}}
+}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classgtest__uninitialized__test_1_1GTestUninitializedTest}{\-G\-Test\-Uninitialized\-Test}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegtest__uninitialized__test_ab32cfcfbc956a0144af3195ea69705b1}{\-Assert}
+\item 
+def \hyperlink{namespacegtest__uninitialized__test_a146e8238c753828bcf35a9fcfd0dadf5}{\-Assert\-Eq}
+\item 
+def \hyperlink{namespacegtest__uninitialized__test_a32855a192af70f4ace8c07fee8d8a7ef}{\-Test\-Exit\-Code\-And\-Output}
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacegtest__uninitialized__test_a629d61dfe4da763164a4d1a2d85b0afd}{\-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'
+\item 
+tuple \hyperlink{namespacegtest__uninitialized__test_add010199942a26d17bd560c1ce462eeb}{\-C\-O\-M\-M\-A\-N\-D} = \hyperlink{namespacegtest__test__utils_a1bdf3cac86afa675ed37629b183048e9}{gtest\-\_\-test\-\_\-utils.\-Get\-Test\-Executable\-Path}('gtest\-\_\-uninitialized\-\_\-test\-\_\-')
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespacegtest__uninitialized__test_ab32cfcfbc956a0144af3195ea69705b1}{\index{gtest\-\_\-uninitialized\-\_\-test@{gtest\-\_\-uninitialized\-\_\-test}!\-Assert@{\-Assert}}
+\index{\-Assert@{\-Assert}!gtest_uninitialized_test@{gtest\-\_\-uninitialized\-\_\-test}}
+\subsubsection[{\-Assert}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-uninitialized\-\_\-test.\-Assert} (
+\begin{DoxyParamCaption}
+\item[{}]{condition}
+\end{DoxyParamCaption}
+)}}\label{d0/d3d/namespacegtest__uninitialized__test_ab32cfcfbc956a0144af3195ea69705b1}
+
+
+\-Definition at line 42 of file gtest\-\_\-uninitialized\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+42 
+43 def Assert(condition):
+44   if not condition:
+45     raise AssertionError
+46 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__uninitialized__test_a146e8238c753828bcf35a9fcfd0dadf5}{\index{gtest\-\_\-uninitialized\-\_\-test@{gtest\-\_\-uninitialized\-\_\-test}!\-Assert\-Eq@{\-Assert\-Eq}}
+\index{\-Assert\-Eq@{\-Assert\-Eq}!gtest_uninitialized_test@{gtest\-\_\-uninitialized\-\_\-test}}
+\subsubsection[{\-Assert\-Eq}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-uninitialized\-\_\-test.\-Assert\-Eq} (
+\begin{DoxyParamCaption}
+\item[{}]{expected, }
+\item[{}]{actual}
+\end{DoxyParamCaption}
+)}}\label{d0/d3d/namespacegtest__uninitialized__test_a146e8238c753828bcf35a9fcfd0dadf5}
+
+
+\-Definition at line 47 of file gtest\-\_\-uninitialized\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+47 
+48 def AssertEq(expected, actual):
+49   if expected != actual:
+50     print 'Expected: %s' % (expected,)
+51     print '  Actual: %s' % (actual,)
+52     raise AssertionError
+53 
+
+\end{DoxyCode}
+\hypertarget{namespacegtest__uninitialized__test_a32855a192af70f4ace8c07fee8d8a7ef}{\index{gtest\-\_\-uninitialized\-\_\-test@{gtest\-\_\-uninitialized\-\_\-test}!\-Test\-Exit\-Code\-And\-Output@{\-Test\-Exit\-Code\-And\-Output}}
+\index{\-Test\-Exit\-Code\-And\-Output@{\-Test\-Exit\-Code\-And\-Output}!gtest_uninitialized_test@{gtest\-\_\-uninitialized\-\_\-test}}
+\subsubsection[{\-Test\-Exit\-Code\-And\-Output}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-uninitialized\-\_\-test.\-Test\-Exit\-Code\-And\-Output} (
+\begin{DoxyParamCaption}
+\item[{}]{command}
+\end{DoxyParamCaption}
+)}}\label{d0/d3d/namespacegtest__uninitialized__test_a32855a192af70f4ace8c07fee8d8a7ef}
+\begin{DoxyVerb}Runs the given command and verifies its exit code and output.\end{DoxyVerb}
+ 
+
+\-Definition at line 54 of file gtest\-\_\-uninitialized\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+54 
+55 def TestExitCodeAndOutput(command):
+56   """Runs the given command and verifies its exit code and output."""
+57 
+58   # Verifies that 'command' exits with code 1.
+59   p = gtest_test_utils.Subprocess(command)
+60   Assert(p.exited)
+61   AssertEq(1, p.exit_code)
+62   Assert('InitGoogleTest' in p.output)
+63 
+
+\end{DoxyCode}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{namespacegtest__uninitialized__test_a629d61dfe4da763164a4d1a2d85b0afd}{\index{gtest\-\_\-uninitialized\-\_\-test@{gtest\-\_\-uninitialized\-\_\-test}!\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}!gtest_uninitialized_test@{gtest\-\_\-uninitialized\-\_\-test}}
+\subsubsection[{\-\_\-\-\_\-author\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'}}\label{d0/d3d/namespacegtest__uninitialized__test_a629d61dfe4da763164a4d1a2d85b0afd}
+
+
+\-Definition at line 34 of file gtest\-\_\-uninitialized\-\_\-test.\-py.
+
+\hypertarget{namespacegtest__uninitialized__test_add010199942a26d17bd560c1ce462eeb}{\index{gtest\-\_\-uninitialized\-\_\-test@{gtest\-\_\-uninitialized\-\_\-test}!\-C\-O\-M\-M\-A\-N\-D@{\-C\-O\-M\-M\-A\-N\-D}}
+\index{\-C\-O\-M\-M\-A\-N\-D@{\-C\-O\-M\-M\-A\-N\-D}!gtest_uninitialized_test@{gtest\-\_\-uninitialized\-\_\-test}}
+\subsubsection[{\-C\-O\-M\-M\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf \-C\-O\-M\-M\-A\-N\-D} = {\bf gtest\-\_\-test\-\_\-utils.\-Get\-Test\-Executable\-Path}('gtest\-\_\-uninitialized\-\_\-test\-\_\-')}}\label{d0/d3d/namespacegtest__uninitialized__test_add010199942a26d17bd560c1ce462eeb}
+
+
+\-Definition at line 39 of file gtest\-\_\-uninitialized\-\_\-test.\-py.
+

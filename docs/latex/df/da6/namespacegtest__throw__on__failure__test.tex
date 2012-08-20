@@ -1,0 +1,113 @@
+\hypertarget{namespacegtest__throw__on__failure__test}{\section{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test \-Namespace \-Reference}
+\label{df/da6/namespacegtest__throw__on__failure__test}\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}}
+}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest}{\-Throw\-On\-Failure\-Test}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegtest__throw__on__failure__test_a0f37f2b5ab8495a3d9390e6faca20723}{\-Set\-Env\-Var}
+\item 
+def \hyperlink{namespacegtest__throw__on__failure__test_ad031130c86bd0aa8eee37c09bc7a9000}{\-Run}
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacegtest__throw__on__failure__test_a629d61dfe4da763164a4d1a2d85b0afd}{\-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'
+\item 
+string \hyperlink{namespacegtest__throw__on__failure__test_a70be9ce46b509a0d0cc94803b7e37994}{\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E} = 'gtest\-\_\-throw\-\_\-on\-\_\-failure'
+\item 
+tuple \hyperlink{namespacegtest__throw__on__failure__test_a216df3f485400b109390103528720888}{\-E\-X\-E\-\_\-\-P\-A\-T\-H}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespacegtest__throw__on__failure__test_ad031130c86bd0aa8eee37c09bc7a9000}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}!\-Run@{\-Run}}
+\index{\-Run@{\-Run}!gtest_throw_on_failure_test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}}
+\subsubsection[{\-Run}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-Run} (
+\begin{DoxyParamCaption}
+\item[{}]{command}
+\end{DoxyParamCaption}
+)}}\label{df/da6/namespacegtest__throw__on__failure__test_ad031130c86bd0aa8eee37c09bc7a9000}
+\begin{DoxyVerb}Runs a command; returns True/False if its exit code is/isn't 0.\end{DoxyVerb}
+ 
+
+\-Definition at line 70 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+70 
+71 def Run(command):
+72   """Runs a command; returns True/False if its exit code is/isn't 0."""
+73 
+74   print 'Running "%s". . .' % ' '.join(command)
+75   p = gtest_test_utils.Subprocess(command)
+76   return p.exited and p.exit_code == 0
+77 
+78 
+79 # The tests.  TODO(wan@google.com): refactor the class to share common
+# logic with code in gtest_break_on_failure_unittest.py.
+\end{DoxyCode}
+\hypertarget{namespacegtest__throw__on__failure__test_a0f37f2b5ab8495a3d9390e6faca20723}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}!\-Set\-Env\-Var@{\-Set\-Env\-Var}}
+\index{\-Set\-Env\-Var@{\-Set\-Env\-Var}!gtest_throw_on_failure_test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}}
+\subsubsection[{\-Set\-Env\-Var}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-Set\-Env\-Var} (
+\begin{DoxyParamCaption}
+\item[{}]{env\-\_\-var, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}\label{df/da6/namespacegtest__throw__on__failure__test_a0f37f2b5ab8495a3d9390e6faca20723}
+\begin{DoxyVerb}Sets an environment variable to a given value; unsets it when the
+given value is None.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 58 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+
+
+\begin{DoxyCode}
+58 
+59 def SetEnvVar(env_var, value):
+60   """Sets an environment variable to a given value; unsets it when the
+61   given value is None.
+62   """
+63 
+64   env_var = env_var.upper()
+65   if value is not None:
+66     os.environ[env_var] = value
+67   elif env_var in os.environ:
+68     del os.environ[env_var]
+69 
+
+\end{DoxyCode}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{namespacegtest__throw__on__failure__test_a629d61dfe4da763164a4d1a2d85b0afd}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}!\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-author\-\_\-\-\_\-@{\-\_\-\-\_\-author\-\_\-\-\_\-}!gtest_throw_on_failure_test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}}
+\subsubsection[{\-\_\-\-\_\-author\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-\_\-\-\_\-author\-\_\-\-\_\-} = 'wan@google.\-com (\-Zhanyong \-Wan)'}}\label{df/da6/namespacegtest__throw__on__failure__test_a629d61dfe4da763164a4d1a2d85b0afd}
+
+
+\-Definition at line 38 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+
+\hypertarget{namespacegtest__throw__on__failure__test_a216df3f485400b109390103528720888}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}!\-E\-X\-E\-\_\-\-P\-A\-T\-H@{\-E\-X\-E\-\_\-\-P\-A\-T\-H}}
+\index{\-E\-X\-E\-\_\-\-P\-A\-T\-H@{\-E\-X\-E\-\_\-\-P\-A\-T\-H}!gtest_throw_on_failure_test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}}
+\subsubsection[{\-E\-X\-E\-\_\-\-P\-A\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf \-E\-X\-E\-\_\-\-P\-A\-T\-H}}}\label{df/da6/namespacegtest__throw__on__failure__test_a216df3f485400b109390103528720888}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+1 gtest_test_utils.GetTestExecutablePath(
+2     'gtest_throw_on_failure_test_')
+\end{DoxyCode}
+
+
+\-Definition at line 51 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+
+\hypertarget{namespacegtest__throw__on__failure__test_a70be9ce46b509a0d0cc94803b7e37994}{\index{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}!\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E@{\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E}}
+\index{\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E@{\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E}!gtest_throw_on_failure_test@{gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test}}
+\subsubsection[{\-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-T\-H\-R\-O\-W\-\_\-\-O\-N\-\_\-\-F\-A\-I\-L\-U\-R\-E} = 'gtest\-\_\-throw\-\_\-on\-\_\-failure'}}\label{df/da6/namespacegtest__throw__on__failure__test_a70be9ce46b509a0d0cc94803b7e37994}
+
+
+\-Definition at line 47 of file gtest\-\_\-throw\-\_\-on\-\_\-failure\-\_\-test.\-py.
+

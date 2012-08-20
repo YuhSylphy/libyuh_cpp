@@ -1,0 +1,260 @@
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions}{\section{\-Unit\-Test\-Options \-Class \-Reference}
+\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions}\index{\-Unit\-Test\-Options@{\-Unit\-Test\-Options}}
+}
+
+
+{\ttfamily \#include $<$gtest-\/internal-\/inl.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_ab74136cb3ba94d7dbbda58ac081d9da2}{\-Get\-Output\-Format} ()
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a765b1715a62bfdb0eaa4063b516dbc84}{\-Get\-Absolute\-Path\-To\-Output\-File} ()
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a6ee16a491a18920bed2d8e1c5a6be381}{\-Pattern\-Matches\-String} (const char $\ast$pattern, const char $\ast$str)
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a5729694202f5ce85701d892a6c65f921}{\-Filter\-Matches\-Test} (const \hyperlink{classtesting_1_1internal_1_1String}{\-String} \&test\-\_\-case\-\_\-name, const \hyperlink{classtesting_1_1internal_1_1String}{\-String} \&test\-\_\-name)
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a2668b814cce76871ca391416634bd020}{\-Matches\-Filter} (const \hyperlink{classtesting_1_1internal_1_1String}{\-String} \&name, const char $\ast$filter)
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a514e9cdafd260d49db49a1f3635f1e06}{\-Get\-Output\-Format} ()
+\item 
+static \hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_abd15161f948226c8826bcfab3a0f1b6c}{\-Get\-Absolute\-Path\-To\-Output\-File} ()
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a6b82fa8a22631235f28e0118a5081212}{\-Pattern\-Matches\-String} (const char $\ast$pattern, const char $\ast$str)
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a85eb1600f60958c236de05eee63b0213}{\-Filter\-Matches\-Test} (const \hyperlink{classtesting_1_1internal_1_1String}{\-String} \&test\-\_\-case\-\_\-name, const \hyperlink{classtesting_1_1internal_1_1String}{\-String} \&test\-\_\-name)
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_ad1c3339c3fd45cb6900c3829932a3859}{\-Matches\-Filter} (const \hyperlink{classtesting_1_1internal_1_1String}{\-String} \&name, const char $\ast$filter)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 762 of file gtest-\/all.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_a85eb1600f60958c236de05eee63b0213}{\index{testing\-::internal\-::\-Unit\-Test\-Options@{testing\-::internal\-::\-Unit\-Test\-Options}!\-Filter\-Matches\-Test@{\-Filter\-Matches\-Test}}
+\index{\-Filter\-Matches\-Test@{\-Filter\-Matches\-Test}!testing::internal::UnitTestOptions@{testing\-::internal\-::\-Unit\-Test\-Options}}
+\subsubsection[{\-Filter\-Matches\-Test}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Filter\-Matches\-Test} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-String} \&}]{test\-\_\-case\-\_\-name, }
+\item[{const {\bf \-String} \&}]{test\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions_a85eb1600f60958c236de05eee63b0213}
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_a5729694202f5ce85701d892a6c65f921}{\index{testing\-::internal\-::\-Unit\-Test\-Options@{testing\-::internal\-::\-Unit\-Test\-Options}!\-Filter\-Matches\-Test@{\-Filter\-Matches\-Test}}
+\index{\-Filter\-Matches\-Test@{\-Filter\-Matches\-Test}!testing::internal::UnitTestOptions@{testing\-::internal\-::\-Unit\-Test\-Options}}
+\subsubsection[{\-Filter\-Matches\-Test}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Filter\-Matches\-Test} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-String} \&}]{test\-\_\-case\-\_\-name, }
+\item[{const {\bf \-String} \&}]{test\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions_a5729694202f5ce85701d892a6c65f921}
+
+
+\-Definition at line 1778 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                 {
+  const String& full_name = String::Format("%s.%s",
+                                           test_case_name.c_str(),
+                                           test_name.c_str());
+
+  // Split --gtest_filter at '-', if there is one, to separate into
+  // positive filter and negative filter portions
+  const char* const p = GTEST_FLAG(filter).c_str();
+  const char* const dash = strchr(p, '-');
+  String positive;
+  String negative;
+  if (dash == NULL) {
+    positive = GTEST_FLAG(filter).c_str();  // Whole string is a positive
+       filter
+    negative = String("");
+  } else {
+    positive = String(p, dash - p);  // Everything up to the dash
+    negative = String(dash+1);       // Everything after the dash
+    if (positive.empty()) {
+      // Treat '-test1' as the same as '*-test1'
+      positive = kUniversalFilter;
+    }
+  }
+
+  // A filter is a colon-separated list of patterns.  It matches a
+  // test if any pattern in it matches the test.
+  return (MatchesFilter(full_name, positive.c_str()) &&
+          !MatchesFilter(full_name, negative.c_str()));
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_abd15161f948226c8826bcfab3a0f1b6c}{\index{testing\-::internal\-::\-Unit\-Test\-Options@{testing\-::internal\-::\-Unit\-Test\-Options}!\-Get\-Absolute\-Path\-To\-Output\-File@{\-Get\-Absolute\-Path\-To\-Output\-File}}
+\index{\-Get\-Absolute\-Path\-To\-Output\-File@{\-Get\-Absolute\-Path\-To\-Output\-File}!testing::internal::UnitTestOptions@{testing\-::internal\-::\-Unit\-Test\-Options}}
+\subsubsection[{\-Get\-Absolute\-Path\-To\-Output\-File}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-String} {\bf \-Get\-Absolute\-Path\-To\-Output\-File} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions_abd15161f948226c8826bcfab3a0f1b6c}
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_a765b1715a62bfdb0eaa4063b516dbc84}{\index{testing\-::internal\-::\-Unit\-Test\-Options@{testing\-::internal\-::\-Unit\-Test\-Options}!\-Get\-Absolute\-Path\-To\-Output\-File@{\-Get\-Absolute\-Path\-To\-Output\-File}}
+\index{\-Get\-Absolute\-Path\-To\-Output\-File@{\-Get\-Absolute\-Path\-To\-Output\-File}!testing::internal::UnitTestOptions@{testing\-::internal\-::\-Unit\-Test\-Options}}
+\subsubsection[{\-Get\-Absolute\-Path\-To\-Output\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf \-Get\-Absolute\-Path\-To\-Output\-File} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions_a765b1715a62bfdb0eaa4063b516dbc84}
+
+
+\-Definition at line 1701 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                    {
+  const char* const gtest_output_flag = GTEST_FLAG(output).c_str();
+  if (gtest_output_flag == NULL)
+    return String("");
+
+  const char* const colon = strchr(gtest_output_flag, ':');
+  if (colon == NULL)
+    return String(internal::FilePath::ConcatPaths(
+               internal::FilePath(
+                   UnitTest::GetInstance()->original_working_dir()),
+               internal::FilePath(kDefaultOutputFile)).ToString() );
+
+  internal::FilePath output_name(colon + 1);
+  if (!output_name.IsAbsolutePath())
+    // TODO(wan@google.com): on Windows \some\path is not an absolute
+    // path (as its meaning depends on the current drive), yet the
+    // following logic for turning it into an absolute path is wrong.
+    // Fix it.
+    output_name = internal::FilePath::ConcatPaths(
+        internal::FilePath(UnitTest::GetInstance()->original_working_dir()),
+        internal::FilePath(colon + 1));
+
+  if (!output_name.IsDirectory())
+    return output_name.ToString();
+
+  internal::FilePath result(internal::FilePath::GenerateUniqueFileName(
+      output_name, internal::GetCurrentExecutableName(),
+      GetOutputFormat().c_str()));
+  return result.ToString();
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_a514e9cdafd260d49db49a1f3635f1e06}{\index{testing\-::internal\-::\-Unit\-Test\-Options@{testing\-::internal\-::\-Unit\-Test\-Options}!\-Get\-Output\-Format@{\-Get\-Output\-Format}}
+\index{\-Get\-Output\-Format@{\-Get\-Output\-Format}!testing::internal::UnitTestOptions@{testing\-::internal\-::\-Unit\-Test\-Options}}
+\subsubsection[{\-Get\-Output\-Format}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf \-String} {\bf \-Get\-Output\-Format} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions_a514e9cdafd260d49db49a1f3635f1e06}
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_ab74136cb3ba94d7dbbda58ac081d9da2}{\index{testing\-::internal\-::\-Unit\-Test\-Options@{testing\-::internal\-::\-Unit\-Test\-Options}!\-Get\-Output\-Format@{\-Get\-Output\-Format}}
+\index{\-Get\-Output\-Format@{\-Get\-Output\-Format}!testing::internal::UnitTestOptions@{testing\-::internal\-::\-Unit\-Test\-Options}}
+\subsubsection[{\-Get\-Output\-Format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf \-Get\-Output\-Format} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions_ab74136cb3ba94d7dbbda58ac081d9da2}
+
+
+\-Definition at line 1689 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                        {
+  const char* const gtest_output_flag = GTEST_FLAG(output).c_str();
+  if (gtest_output_flag == NULL) return String("");
+
+  const char* const colon = strchr(gtest_output_flag, ':');
+  return (colon == NULL) ?
+      String(gtest_output_flag) :
+      String(gtest_output_flag, colon - gtest_output_flag);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_ad1c3339c3fd45cb6900c3829932a3859}{\index{testing\-::internal\-::\-Unit\-Test\-Options@{testing\-::internal\-::\-Unit\-Test\-Options}!\-Matches\-Filter@{\-Matches\-Filter}}
+\index{\-Matches\-Filter@{\-Matches\-Filter}!testing::internal::UnitTestOptions@{testing\-::internal\-::\-Unit\-Test\-Options}}
+\subsubsection[{\-Matches\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Matches\-Filter} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-String} \&}]{name, }
+\item[{const char $\ast$}]{filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions_ad1c3339c3fd45cb6900c3829932a3859}
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_a2668b814cce76871ca391416634bd020}{\index{testing\-::internal\-::\-Unit\-Test\-Options@{testing\-::internal\-::\-Unit\-Test\-Options}!\-Matches\-Filter@{\-Matches\-Filter}}
+\index{\-Matches\-Filter@{\-Matches\-Filter}!testing::internal::UnitTestOptions@{testing\-::internal\-::\-Unit\-Test\-Options}}
+\subsubsection[{\-Matches\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Matches\-Filter} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-String} \&}]{name, }
+\item[{const char $\ast$}]{filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions_a2668b814cce76871ca391416634bd020}
+
+
+\-Definition at line 1754 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                          {
+  const char *cur_pattern = filter;
+  for (;;) {
+    if (PatternMatchesString(cur_pattern, name.c_str())) {
+      return true;
+    }
+
+    // Finds the next pattern in the filter.
+    cur_pattern = strchr(cur_pattern, ':');
+
+    // Returns if no more pattern can be found.
+    if (cur_pattern == NULL) {
+      return false;
+    }
+
+    // Skips the pattern separater (the ':' character).
+    cur_pattern++;
+  }
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_a6b82fa8a22631235f28e0118a5081212}{\index{testing\-::internal\-::\-Unit\-Test\-Options@{testing\-::internal\-::\-Unit\-Test\-Options}!\-Pattern\-Matches\-String@{\-Pattern\-Matches\-String}}
+\index{\-Pattern\-Matches\-String@{\-Pattern\-Matches\-String}!testing::internal::UnitTestOptions@{testing\-::internal\-::\-Unit\-Test\-Options}}
+\subsubsection[{\-Pattern\-Matches\-String}]{\setlength{\rightskip}{0pt plus 5cm}static bool {\bf \-Pattern\-Matches\-String} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pattern, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions_a6b82fa8a22631235f28e0118a5081212}
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_a6ee16a491a18920bed2d8e1c5a6be381}{\index{testing\-::internal\-::\-Unit\-Test\-Options@{testing\-::internal\-::\-Unit\-Test\-Options}!\-Pattern\-Matches\-String@{\-Pattern\-Matches\-String}}
+\index{\-Pattern\-Matches\-String@{\-Pattern\-Matches\-String}!testing::internal::UnitTestOptions@{testing\-::internal\-::\-Unit\-Test\-Options}}
+\subsubsection[{\-Pattern\-Matches\-String}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Pattern\-Matches\-String} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pattern, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d3/d9a/classtesting_1_1internal_1_1UnitTestOptions_a6ee16a491a18920bed2d8e1c5a6be381}
+
+
+\-Definition at line 1737 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                            {
+  switch (*pattern) {
+    case '\0':
+    case ':':  // Either ':' or '\0' marks the end of the pattern.
+      return *str == '\0';
+    case '?':  // Matches any single character.
+      return *str != '\0' && PatternMatchesString(pattern + 1, str + 1);
+    case '*':  // Matches any string (possibly empty) of characters.
+      return (*str != '\0' && PatternMatchesString(pattern, str + 1)) ||
+          PatternMatchesString(pattern + 1, str);
+    default:  // Non-special character.  Matches itself.
+      return *pattern == *str &&
+          PatternMatchesString(pattern + 1, str + 1);
+  }
+}
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest-internal-inl_8h}{gtest-\/internal-\/inl.\-h}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}

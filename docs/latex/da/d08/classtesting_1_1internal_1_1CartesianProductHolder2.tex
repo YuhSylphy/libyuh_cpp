@@ -1,0 +1,106 @@
+\hypertarget{classtesting_1_1internal_1_1CartesianProductHolder2}{\section{\-Cartesian\-Product\-Holder2$<$ \-Generator1, \-Generator2 $>$ \-Class \-Template \-Reference}
+\label{da/d08/classtesting_1_1internal_1_1CartesianProductHolder2}\index{\-Cartesian\-Product\-Holder2$<$ Generator1, Generator2 $>$@{\-Cartesian\-Product\-Holder2$<$ Generator1, Generator2 $>$}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1CartesianProductHolder2_ae0a6a0d9c3c2305717436da625b97a5f}{\-Cartesian\-Product\-Holder2} (const \-Generator1 \&g1, const \-Generator2 \&g2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\\hyperlink{classtesting_1_1internal_1_1CartesianProductHolder2_aa8c1c2ec679565453a3a7fbbddc6181b}{operator Param\-Generator$<$ \-::std\-::tr1\-::tuple$<$ T1, T2 $>$ $>$} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtesting_1_1internal_1_1CartesianProductHolder2_abb473debf0cc8e4eec854dc551a4af0a}{operator=} (const \hyperlink{classtesting_1_1internal_1_1CartesianProductHolder2}{\-Cartesian\-Product\-Holder2} \&other)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \-Generator1 \hyperlink{classtesting_1_1internal_1_1CartesianProductHolder2_a36a04c8f9e515291d6a093ab378084f7}{g1\-\_\-}
+\item 
+const \-Generator2 \hyperlink{classtesting_1_1internal_1_1CartesianProductHolder2_a6cfd9fa9a396d07747d5ebb1f05c7f22}{g2\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$class \-Generator1, class \-Generator2$>$class testing\-::internal\-::\-Cartesian\-Product\-Holder2$<$ Generator1, Generator2 $>$}
+
+
+
+\-Definition at line 15066 of file gtest.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1CartesianProductHolder2_ae0a6a0d9c3c2305717436da625b97a5f}{\index{testing\-::internal\-::\-Cartesian\-Product\-Holder2@{testing\-::internal\-::\-Cartesian\-Product\-Holder2}!\-Cartesian\-Product\-Holder2@{\-Cartesian\-Product\-Holder2}}
+\index{\-Cartesian\-Product\-Holder2@{\-Cartesian\-Product\-Holder2}!testing::internal::CartesianProductHolder2@{testing\-::internal\-::\-Cartesian\-Product\-Holder2}}
+\subsubsection[{\-Cartesian\-Product\-Holder2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cartesian\-Product\-Holder2} (
+\begin{DoxyParamCaption}
+\item[{const \-Generator1 \&}]{g1, }
+\item[{const \-Generator2 \&}]{g2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/d08/classtesting_1_1internal_1_1CartesianProductHolder2_ae0a6a0d9c3c2305717436da625b97a5f}
+
+
+\-Definition at line 15068 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+      : g1_(g1), g2_(g2) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1CartesianProductHolder2_aa8c1c2ec679565453a3a7fbbddc6181b}{\index{testing\-::internal\-::\-Cartesian\-Product\-Holder2@{testing\-::internal\-::\-Cartesian\-Product\-Holder2}!operator Param\-Generator$<$ \-::std\-::tr1\-::tuple$<$ T1, T2 $>$ $>$@{operator Param\-Generator$<$ \-::std\-::tr1\-::tuple$<$ T1, T2 $>$ $>$}}
+\index{operator Param\-Generator$<$ \-::std\-::tr1\-::tuple$<$ T1, T2 $>$ $>$@{operator Param\-Generator$<$ \-::std\-::tr1\-::tuple$<$ T1, T2 $>$ $>$}!testing::internal::CartesianProductHolder2@{testing\-::internal\-::\-Cartesian\-Product\-Holder2}}
+\subsubsection[{operator Param\-Generator$<$ \-::std\-::tr1\-::tuple$<$ T1, T2 $>$ $>$}]{\setlength{\rightskip}{0pt plus 5cm}operator {\bf \-Param\-Generator}$<$ \-::{\bf std\-::tr1\-::tuple}$<$ \-T1, \-T2 $>$ $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/d08/classtesting_1_1internal_1_1CartesianProductHolder2_aa8c1c2ec679565453a3a7fbbddc6181b}
+
+
+\-Definition at line 15071 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                         {
+    return ParamGenerator< ::std::tr1::tuple<T1, T2> >(
+        new CartesianProductGenerator2<T1, T2>(
+        static_cast<ParamGenerator<T1> >(g1_),
+        static_cast<ParamGenerator<T2> >(g2_)));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1CartesianProductHolder2_abb473debf0cc8e4eec854dc551a4af0a}{\index{testing\-::internal\-::\-Cartesian\-Product\-Holder2@{testing\-::internal\-::\-Cartesian\-Product\-Holder2}!operator=@{operator=}}
+\index{operator=@{operator=}!testing::internal::CartesianProductHolder2@{testing\-::internal\-::\-Cartesian\-Product\-Holder2}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Cartesian\-Product\-Holder2}$<$ \-Generator1, \-Generator2 $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d08/classtesting_1_1internal_1_1CartesianProductHolder2_abb473debf0cc8e4eec854dc551a4af0a}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1CartesianProductHolder2_a36a04c8f9e515291d6a093ab378084f7}{\index{testing\-::internal\-::\-Cartesian\-Product\-Holder2@{testing\-::internal\-::\-Cartesian\-Product\-Holder2}!g1\-\_\-@{g1\-\_\-}}
+\index{g1\-\_\-@{g1\-\_\-}!testing::internal::CartesianProductHolder2@{testing\-::internal\-::\-Cartesian\-Product\-Holder2}}
+\subsubsection[{g1\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const \-Generator1 {\bf g1\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d08/classtesting_1_1internal_1_1CartesianProductHolder2_a36a04c8f9e515291d6a093ab378084f7}
+
+
+\-Definition at line 15082 of file gtest.\-h.
+
+\hypertarget{classtesting_1_1internal_1_1CartesianProductHolder2_a6cfd9fa9a396d07747d5ebb1f05c7f22}{\index{testing\-::internal\-::\-Cartesian\-Product\-Holder2@{testing\-::internal\-::\-Cartesian\-Product\-Holder2}!g2\-\_\-@{g2\-\_\-}}
+\index{g2\-\_\-@{g2\-\_\-}!testing::internal::CartesianProductHolder2@{testing\-::internal\-::\-Cartesian\-Product\-Holder2}}
+\subsubsection[{g2\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const \-Generator2 {\bf g2\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d08/classtesting_1_1internal_1_1CartesianProductHolder2_a6cfd9fa9a396d07747d5ebb1f05c7f22}
+
+
+\-Definition at line 15083 of file gtest.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\end{DoxyCompactItemize}

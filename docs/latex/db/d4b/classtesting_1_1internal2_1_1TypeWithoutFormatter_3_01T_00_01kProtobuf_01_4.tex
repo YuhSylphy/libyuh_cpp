@@ -1,0 +1,76 @@
+\hypertarget{classtesting_1_1internal2_1_1TypeWithoutFormatter_3_01T_00_01kProtobuf_01_4}{\section{\-Type\-Without\-Formatter$<$ \-T, k\-Protobuf $>$ \-Class \-Template \-Reference}
+\label{db/d4b/classtesting_1_1internal2_1_1TypeWithoutFormatter_3_01T_00_01kProtobuf_01_4}\index{\-Type\-Without\-Formatter$<$ T, k\-Protobuf $>$@{\-Type\-Without\-Formatter$<$ T, k\-Protobuf $>$}}
+}
+
+
+{\ttfamily \#include $<$gtest.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtesting_1_1internal2_1_1TypeWithoutFormatter_3_01T_00_01kProtobuf_01_4_a3ac7770f918210bb197165f28880c544}{\-Print\-Value} (const \-T \&value,\-::std\-::ostream $\ast$os)
+\item 
+static void \hyperlink{classtesting_1_1internal2_1_1TypeWithoutFormatter_3_01T_00_01kProtobuf_01_4_a3ac7770f918210bb197165f28880c544}{\-Print\-Value} (const \-T \&value,\-::std\-::ostream $\ast$os)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename T$>$class testing\-::internal2\-::\-Type\-Without\-Formatter$<$ T, k\-Protobuf $>$}
+
+
+
+\-Definition at line 9332 of file gtest.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal2_1_1TypeWithoutFormatter_3_01T_00_01kProtobuf_01_4_a3ac7770f918210bb197165f28880c544}{\index{testing\-::internal2\-::\-Type\-Without\-Formatter$<$ T, k\-Protobuf $>$@{testing\-::internal2\-::\-Type\-Without\-Formatter$<$ T, k\-Protobuf $>$}!\-Print\-Value@{\-Print\-Value}}
+\index{\-Print\-Value@{\-Print\-Value}!testing::internal2::TypeWithoutFormatter< T, kProtobuf >@{testing\-::internal2\-::\-Type\-Without\-Formatter$<$ T, k\-Protobuf $>$}}
+\subsubsection[{\-Print\-Value}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Print\-Value} (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{value, }
+\item[{\-::std\-::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/d4b/classtesting_1_1internal2_1_1TypeWithoutFormatter_3_01T_00_01kProtobuf_01_4_a3ac7770f918210bb197165f28880c544}
+
+
+\-Definition at line 149 of file gtest-\/printers.\-h.
+
+
+\begin{DoxyCode}
+                                                         {
+    const ::testing::internal::string short_str = value.ShortDebugString();
+    const ::testing::internal::string pretty_str =
+        short_str.length() <= kProtobufOneLinerMaxLength ?
+        short_str : ("\n" + value.DebugString());
+    *os << ("<" + pretty_str + ">");
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal2_1_1TypeWithoutFormatter_3_01T_00_01kProtobuf_01_4_a3ac7770f918210bb197165f28880c544}{\index{testing\-::internal2\-::\-Type\-Without\-Formatter$<$ T, k\-Protobuf $>$@{testing\-::internal2\-::\-Type\-Without\-Formatter$<$ T, k\-Protobuf $>$}!\-Print\-Value@{\-Print\-Value}}
+\index{\-Print\-Value@{\-Print\-Value}!testing::internal2::TypeWithoutFormatter< T, kProtobuf >@{testing\-::internal2\-::\-Type\-Without\-Formatter$<$ T, k\-Protobuf $>$}}
+\subsubsection[{\-Print\-Value}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-Print\-Value} (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{value, }
+\item[{\-::std\-::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{db/d4b/classtesting_1_1internal2_1_1TypeWithoutFormatter_3_01T_00_01kProtobuf_01_4_a3ac7770f918210bb197165f28880c544}
+
+
+\-Definition at line 9334 of file gtest.\-h.
+
+
+\begin{DoxyCode}
+                                                         {
+    const ::testing::internal::string short_str = value.ShortDebugString();
+    const ::testing::internal::string pretty_str =
+        short_str.length() <= kProtobufOneLinerMaxLength ?
+        short_str : ("\n" + value.DebugString());
+    *os << ("<" + pretty_str + ">");
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest_8h}{gtest.\-h}\item 
+gtest-\/1.\-6.\-0/include/gtest/\hyperlink{gtest-printers_8h}{gtest-\/printers.\-h}\end{DoxyCompactItemize}

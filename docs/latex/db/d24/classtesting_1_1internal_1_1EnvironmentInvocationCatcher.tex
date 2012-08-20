@@ -1,0 +1,73 @@
+\hypertarget{classtesting_1_1internal_1_1EnvironmentInvocationCatcher}{\section{\-Environment\-Invocation\-Catcher \-Class \-Reference}
+\label{db/d24/classtesting_1_1internal_1_1EnvironmentInvocationCatcher}\index{\-Environment\-Invocation\-Catcher@{\-Environment\-Invocation\-Catcher}}
+}
+\-Inheritance diagram for \-Environment\-Invocation\-Catcher\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{db/d24/classtesting_1_1internal_1_1EnvironmentInvocationCatcher}
+\end{center}
+\end{figure}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EnvironmentInvocationCatcher_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EnvironmentInvocationCatcher_a870a092058305911f3d42df45dd657e5}{\-Tear\-Down} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 131 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1EnvironmentInvocationCatcher_a901706a587f9ae84df8b2395fbe759cb}{\index{testing\-::internal\-::\-Environment\-Invocation\-Catcher@{testing\-::internal\-::\-Environment\-Invocation\-Catcher}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!testing::internal::EnvironmentInvocationCatcher@{testing\-::internal\-::\-Environment\-Invocation\-Catcher}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{db/d24/classtesting_1_1internal_1_1EnvironmentInvocationCatcher_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Environment_a901706a587f9ae84df8b2395fbe759cb}{\-Environment}.
+
+
+
+\-Definition at line 133 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    g_events->push_back(String("Environment::SetUp"));
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1EnvironmentInvocationCatcher_a870a092058305911f3d42df45dd657e5}{\index{testing\-::internal\-::\-Environment\-Invocation\-Catcher@{testing\-::internal\-::\-Environment\-Invocation\-Catcher}!\-Tear\-Down@{\-Tear\-Down}}
+\index{\-Tear\-Down@{\-Tear\-Down}!testing::internal::EnvironmentInvocationCatcher@{testing\-::internal\-::\-Environment\-Invocation\-Catcher}}
+\subsubsection[{\-Tear\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Tear\-Down} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{db/d24/classtesting_1_1internal_1_1EnvironmentInvocationCatcher_a870a092058305911f3d42df45dd657e5}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Environment_a870a092058305911f3d42df45dd657e5}{\-Environment}.
+
+
+
+\-Definition at line 137 of file gtest-\/listener\-\_\-test.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+    g_events->push_back(String("Environment::TearDown"));
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest-listener__test_8cc}{gtest-\/listener\-\_\-test.\-cc}\end{DoxyCompactItemize}

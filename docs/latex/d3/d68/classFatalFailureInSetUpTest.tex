@@ -1,0 +1,118 @@
+\hypertarget{classFatalFailureInSetUpTest}{\section{\-Fatal\-Failure\-In\-Set\-Up\-Test \-Class \-Reference}
+\label{d3/d68/classFatalFailureInSetUpTest}\index{\-Fatal\-Failure\-In\-Set\-Up\-Test@{\-Fatal\-Failure\-In\-Set\-Up\-Test}}
+}
+\-Inheritance diagram for \-Fatal\-Failure\-In\-Set\-Up\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d3/d68/classFatalFailureInSetUpTest}
+\end{center}
+\end{figure}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classFatalFailureInSetUpTest_adaaec8391124b834302be3d8df34f3f3}{$\sim$\-Fatal\-Failure\-In\-Set\-Up\-Test} ()
+\item 
+virtual void \hyperlink{classFatalFailureInSetUpTest_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\item 
+virtual void \hyperlink{classFatalFailureInSetUpTest_a870a092058305911f3d42df45dd657e5}{\-Tear\-Down} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classFatalFailureInSetUpTest_a9f9d89fef9cb9c06f25222102d276470}{\-Deinit} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 419 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classFatalFailureInSetUpTest_adaaec8391124b834302be3d8df34f3f3}{\index{\-Fatal\-Failure\-In\-Set\-Up\-Test@{\-Fatal\-Failure\-In\-Set\-Up\-Test}!$\sim$\-Fatal\-Failure\-In\-Set\-Up\-Test@{$\sim$\-Fatal\-Failure\-In\-Set\-Up\-Test}}
+\index{$\sim$\-Fatal\-Failure\-In\-Set\-Up\-Test@{$\sim$\-Fatal\-Failure\-In\-Set\-Up\-Test}!FatalFailureInSetUpTest@{\-Fatal\-Failure\-In\-Set\-Up\-Test}}
+\subsubsection[{$\sim$\-Fatal\-Failure\-In\-Set\-Up\-Test}]{\setlength{\rightskip}{0pt plus 5cm}virtual $\sim${\bf \-Fatal\-Failure\-In\-Set\-Up\-Test} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d3/d68/classFatalFailureInSetUpTest_adaaec8391124b834302be3d8df34f3f3}
+
+
+\-Definition at line 421 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                                     {
+    Deinit();
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classFatalFailureInSetUpTest_a9f9d89fef9cb9c06f25222102d276470}{\index{\-Fatal\-Failure\-In\-Set\-Up\-Test@{\-Fatal\-Failure\-In\-Set\-Up\-Test}!\-Deinit@{\-Deinit}}
+\index{\-Deinit@{\-Deinit}!FatalFailureInSetUpTest@{\-Fatal\-Failure\-In\-Set\-Up\-Test}}
+\subsubsection[{\-Deinit}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Deinit} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d3/d68/classFatalFailureInSetUpTest_a9f9d89fef9cb9c06f25222102d276470}
+
+
+\-Definition at line 434 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                {
+    FAIL() << "Expected failure #3, in the test fixture d'tor.";
+  }
+\end{DoxyCode}
+\hypertarget{classFatalFailureInSetUpTest_a901706a587f9ae84df8b2395fbe759cb}{\index{\-Fatal\-Failure\-In\-Set\-Up\-Test@{\-Fatal\-Failure\-In\-Set\-Up\-Test}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!FatalFailureInSetUpTest@{\-Fatal\-Failure\-In\-Set\-Up\-Test}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d3/d68/classFatalFailureInSetUpTest_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a1b06560e0e01a806b92c2386220d0b57}{\-Test}.
+
+
+
+\-Definition at line 425 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    printf("(expecting 3 failures)\n");
+    FAIL() << "Expected failure #1, in SetUp().";
+  }
+\end{DoxyCode}
+\hypertarget{classFatalFailureInSetUpTest_a870a092058305911f3d42df45dd657e5}{\index{\-Fatal\-Failure\-In\-Set\-Up\-Test@{\-Fatal\-Failure\-In\-Set\-Up\-Test}!\-Tear\-Down@{\-Tear\-Down}}
+\index{\-Tear\-Down@{\-Tear\-Down}!FatalFailureInSetUpTest@{\-Fatal\-Failure\-In\-Set\-Up\-Test}}
+\subsubsection[{\-Tear\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Tear\-Down} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{d3/d68/classFatalFailureInSetUpTest_a870a092058305911f3d42df45dd657e5}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a931587596081ef8178c2b128facb0411}{\-Test}.
+
+
+
+\-Definition at line 430 of file gtest\-\_\-output\-\_\-test\-\_\-.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+    FAIL() << "Expected failure #2, in TearDown().";
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__output__test___8cc}{gtest\-\_\-output\-\_\-test\-\_\-.\-cc}\end{DoxyCompactItemize}

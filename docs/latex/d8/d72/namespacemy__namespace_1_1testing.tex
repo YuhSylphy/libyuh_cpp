@@ -1,0 +1,59 @@
+\hypertarget{namespacemy__namespace_1_1testing}{\section{my\-\_\-namespace\-:\-:testing \-Namespace \-Reference}
+\label{d8/d72/namespacemy__namespace_1_1testing}\index{my\-\_\-namespace\-::testing@{my\-\_\-namespace\-::testing}}
+}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmy__namespace_1_1testing_1_1Test}{\-Test}
+\item 
+class \hyperlink{classmy__namespace_1_1testing_1_1Message}{\-Message}
+\item 
+class \hyperlink{classmy__namespace_1_1testing_1_1AssertionResult}{\-Assertion\-Result}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacemy__namespace_1_1testing_ad673a1b79baca8e8c493774b2a4b0127}{\-T\-E\-S\-T} (\-Nested\-Testing\-Namespace\-Test, \-Success)
+\item 
+\hyperlink{namespacemy__namespace_1_1testing_aa568f6a68b9e42841f6da570ef62b623}{\-T\-E\-S\-T} (\-Nested\-Testing\-Namespace\-Test, \-Failure)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespacemy__namespace_1_1testing_ad673a1b79baca8e8c493774b2a4b0127}{\index{my\-\_\-namespace\-::testing@{my\-\_\-namespace\-::testing}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!my_namespace::testing@{my\-\_\-namespace\-::testing}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\-\_\-namespace\-::testing\-::\-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Nested\-Testing\-Namespace\-Test}]{, }
+\item[{\-Success}]{}
+\end{DoxyParamCaption}
+)}}\label{d8/d72/namespacemy__namespace_1_1testing_ad673a1b79baca8e8c493774b2a4b0127}
+
+
+\-Definition at line 6228 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                          {
+  EXPECT_EQ(1, 1) << "This shouldn't fail.";
+}
+\end{DoxyCode}
+\hypertarget{namespacemy__namespace_1_1testing_aa568f6a68b9e42841f6da570ef62b623}{\index{my\-\_\-namespace\-::testing@{my\-\_\-namespace\-::testing}!\-T\-E\-S\-T@{\-T\-E\-S\-T}}
+\index{\-T\-E\-S\-T@{\-T\-E\-S\-T}!my_namespace::testing@{my\-\_\-namespace\-::testing}}
+\subsubsection[{\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\-\_\-namespace\-::testing\-::\-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{\-Nested\-Testing\-Namespace\-Test}]{, }
+\item[{\-Failure}]{}
+\end{DoxyParamCaption}
+)}}\label{d8/d72/namespacemy__namespace_1_1testing_aa568f6a68b9e42841f6da570ef62b623}
+
+
+\-Definition at line 6233 of file gtest\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                          {
+  EXPECT_FATAL_FAILURE(FAIL() << "This failure is expected.",
+                       "This failure is expected.");
+}
+\end{DoxyCode}

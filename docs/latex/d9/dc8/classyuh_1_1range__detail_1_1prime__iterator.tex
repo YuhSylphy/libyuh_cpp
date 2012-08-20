@@ -1,0 +1,433 @@
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator}{\section{prime\-\_\-iterator \-Class \-Reference}
+\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator}\index{prime\-\_\-iterator@{prime\-\_\-iterator}}
+}
+
+
+{\ttfamily \#include $<$prime.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef base\-\_\-t\-::value\-\_\-type \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type}
+\item 
+typedef base\-\_\-t\-::difference\-\_\-type \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a9ac6039762e1b262cecb98589ffc1d75}{difference\-\_\-type}
+\item 
+typedef base\-\_\-t\-::reference \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_aa5d67140d1557795cc6c30a2849d4e05}{reference}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1prime__iterator_ac10bb4092341faec6bbf57f1a907c7e7}{prime\-\_\-iterator} (int index=1)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a58131fc2d184d593a3cd6825bca508ee}{expand} (int index)
+\item 
+static void \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a8919e76bca867296647318a8e6694b72}{sift} (\hyperlink{classyuh_1_1range__detail_1_1prime__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type} upper)
+\item 
+static const \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a2f6d1185fb0a9c5645498e79db8e809b}{decltype} (\hyperlink{classyuh_1_1range__detail_1_1prime__iterator_aff6d0a0fbc14123c0fca5a0c05d2e68c}{p\-\_\-})\&get\-\_\-prime()
+\item 
+static \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_ace7af2803e2a42c5c17c5e1210e91fa6}{prime\-\_\-approx} (size\-\_\-t n)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::iterator\-\_\-facade\*
+$<$ \hyperlink{classyuh_1_1range__detail_1_1prime__iterator}{prime\-\_\-iterator}, \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type}, \*
+boost\-::random\-\_\-access\-\_\-traversal\-\_\-tag, \*
+\hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type}, std\-::ptrdiff\-\_\-t $>$ \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_af6bf48039295b29ac1f86bd776f4a29a}{base\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_aeb2624c7a86b765725fd80cd426e147d}{increment} ()
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_af998f1201f6ff5160003144e5818b8ba}{decrement} ()
+\item 
+bool \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_ad971c0d6ccb1edb1b7753d099376cc67}{equal} (const \hyperlink{classyuh_1_1range__detail_1_1prime__iterator}{prime\-\_\-iterator} \&rhs) const 
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1prime__iterator_aa5d67140d1557795cc6c30a2849d4e05}{reference} \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a41a5655b05004c0e8e527af93d08d2a3}{dereference} () const 
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a0b477ad04db9bc38c85d68245b9886e5}{advance} (\hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a9ac6039762e1b262cecb98589ffc1d75}{difference\-\_\-type} offset)
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a9ac6039762e1b262cecb98589ffc1d75}{difference\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a4510fc76b72f1340fb6cf787d3eafe72}{distance\-\_\-to} (const \hyperlink{classyuh_1_1range__detail_1_1prime__iterator}{prime\-\_\-iterator} \&rhs) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_aaaf1ac02dfa554a3cdffc647d512a77b}{index\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::vector$<$ \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type} $>$ \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_aff6d0a0fbc14123c0fca5a0c05d2e68c}{p\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a986bf0deaa7559f361d03122eeea4c86}{\-::boost\-::iterator\-\_\-core\-\_\-access}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+素数を走査するイテレータ 
+
+\-Definition at line 17 of file prime.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_af6bf48039295b29ac1f86bd776f4a29a}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!base\-\_\-t@{base\-\_\-t}}
+\index{base\-\_\-t@{base\-\_\-t}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{base\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::iterator\-\_\-facade$<$ {\bf prime\-\_\-iterator}, {\bf prime\-\_\-type}, boost\-::random\-\_\-access\-\_\-traversal\-\_\-tag, {\bf prime\-\_\-type}, std\-::ptrdiff\-\_\-t $>$ {\bf base\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_af6bf48039295b29ac1f86bd776f4a29a}
+基底クラス(iterator\-\_\-facade) 
+
+\-Definition at line 35 of file prime.\-h.
+
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a9ac6039762e1b262cecb98589ffc1d75}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!difference\-\_\-type@{difference\-\_\-type}}
+\index{difference\-\_\-type@{difference\-\_\-type}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{difference\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::difference\-\_\-type {\bf difference\-\_\-type}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a9ac6039762e1b262cecb98589ffc1d75}
+イテレータの距離を示す型 
+
+\-Definition at line 50 of file prime.\-h.
+
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_aa5d67140d1557795cc6c30a2849d4e05}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!reference@{reference}}
+\index{reference@{reference}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::reference {\bf reference}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_aa5d67140d1557795cc6c30a2849d4e05}
+参照を剥がした際の型 
+
+\-Definition at line 54 of file prime.\-h.
+
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!value\-\_\-type@{value\-\_\-type}}
+\index{value\-\_\-type@{value\-\_\-type}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::value\-\_\-type {\bf value\-\_\-type}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}
+渡された値型 
+
+\-Definition at line 46 of file prime.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_ac10bb4092341faec6bbf57f1a907c7e7}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!prime\-\_\-iterator@{prime\-\_\-iterator}}
+\index{prime\-\_\-iterator@{prime\-\_\-iterator}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{prime\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prime\-\_\-iterator} (
+\begin{DoxyParamCaption}
+\item[{int}]{index = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_ac10bb4092341faec6bbf57f1a907c7e7}
+コンストラクタ 
+\begin{DoxyParams}{\-Parameters}
+{\em index} & 初期値(index番目の素数を表す) \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 100 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+            :index_(index)
+        {
+            expand(index);
+        }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a0b477ad04db9bc38c85d68245b9886e5}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!advance@{advance}}
+\index{advance@{advance}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{advance}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf advance} (
+\begin{DoxyParamCaption}
+\item[{{\bf difference\-\_\-type}}]{offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a0b477ad04db9bc38c85d68245b9886e5}
+for iterator\-\_\-facade 
+
+\-Definition at line 131 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            index_ += offset;
+            if(index_ < static_cast<int>(p_.size()) ) expand(index_); //
+      まだ知らない素数だったら調べて追加する
+            BOOST_ASSERT( index_ < p_.size() );
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a2f6d1185fb0a9c5645498e79db8e809b}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!decltype@{decltype}}
+\index{decltype@{decltype}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{decltype}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf decltype} (
+\begin{DoxyParamCaption}
+\item[{{\bf p\-\_\-}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a2f6d1185fb0a9c5645498e79db8e809b}
+素数リストを取得する \begin{DoxyReturn}{\-Returns}
+素数リスト(vector) 
+\end{DoxyReturn}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_af998f1201f6ff5160003144e5818b8ba}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!decrement@{decrement}}
+\index{decrement@{decrement}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{decrement}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf decrement} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_af998f1201f6ff5160003144e5818b8ba}
+operator-\/-\/で呼ばれる 
+
+\-Definition at line 114 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            if(index_ >= 0)
+                index_--;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a41a5655b05004c0e8e527af93d08d2a3}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!dereference@{dereference}}
+\index{dereference@{dereference}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{dereference}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prime\-\_\-iterator\-::reference} {\bf dereference} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a41a5655b05004c0e8e527af93d08d2a3}
+参照剥がし
+
+\begin{DoxyReturn}{\-Returns}
+このイテレータが指すフィボナッチ数 
+\end{DoxyReturn}
+
+
+\-Definition at line 125 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            BOOST_ASSERT( index_ < p_.size() );
+            return p_[index_];
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a4510fc76b72f1340fb6cf787d3eafe72}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!distance\-\_\-to@{distance\-\_\-to}}
+\index{distance\-\_\-to@{distance\-\_\-to}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{distance\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prime\-\_\-iterator\-::difference\-\_\-type} {\bf distance\-\_\-to} (
+\begin{DoxyParamCaption}
+\item[{const {\bf prime\-\_\-iterator} \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a4510fc76b72f1340fb6cf787d3eafe72}
+
+
+\-Definition at line 138 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            return rhs.index_ - index_;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_ad971c0d6ccb1edb1b7753d099376cc67}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!equal@{equal}}
+\index{equal@{equal}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{equal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf equal} (
+\begin{DoxyParamCaption}
+\item[{const {\bf prime\-\_\-iterator} \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_ad971c0d6ccb1edb1b7753d099376cc67}
+等値チェック
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & operator==の右辺に取る値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+内部表現が等しければ真 
+\end{DoxyReturn}
+
+
+\-Definition at line 120 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            return rhs.index_ == index_; 
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a58131fc2d184d593a3cd6825bca508ee}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!expand@{expand}}
+\index{expand@{expand}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{expand}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf expand} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a58131fc2d184d593a3cd6825bca508ee}
+素数リストのサイズを少なくともindex以上になるよう拡大 
+\begin{DoxyParams}{\-Parameters}
+{\em index} & このindexが確実にリストに存在するようにする \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 90 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            //概算よりちょっとだけ大きいところまで計算 無駄も出るけど
+            auto approx = prime_approx(index);
+            while( index >= static_cast<int>(p_.size()) )
+            {
+                sift(approx*=1.02);
+            }
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_aeb2624c7a86b765725fd80cd426e147d}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!increment@{increment}}
+\index{increment@{increment}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{increment}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf increment} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_aeb2624c7a86b765725fd80cd426e147d}
+operator++で呼ばれる 
+
+\-Definition at line 107 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            index_++;
+            if(index_ < static_cast<int>(p_.size()) ) expand(index_); //
+      まだ知らない素数だったら調べて追加する
+            BOOST_ASSERT( index_ < p_.size() );
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_ace7af2803e2a42c5c17c5e1210e91fa6}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!prime\-\_\-approx@{prime\-\_\-approx}}
+\index{prime\-\_\-approx@{prime\-\_\-approx}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{prime\-\_\-approx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prime\-\_\-iterator\-::value\-\_\-type} {\bf prime\-\_\-approx} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_ace7af2803e2a42c5c17c5e1210e91fa6}
+n番目の素数の概算値を返す 実際より大きいか小さいかは不明 
+
+\-Definition at line 65 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            const auto a = std::log10(n);
+            const auto b = 1.4/(a+0.49)+1.96*std::log10(a+0.49)+1.13675*(a+0.49
+      )-2.47;
+            return std::ceil(2*(b*n+n)-1);
+            /*
+              177 ：NAS6 ◆n3AmnVhjwc ：2012/05/10(木) 21:48:11.71
+              n番目の素数Pnの概算 
+              a=logn 
+              b=1.4/(a+0.49)+1.96log(a+0.49)+1.13675(a+0.49)-2.47 
+              Pn=2*(b*n+n)-1 
+              実際P 
+              a=1,Pn=29,P=29 
+              a=2,Pn=538,P=541 
+              a=3,Pn=7923,P=7919 
+              a=4,Pn=104483,P=104729 
+              a=17,Pn=4185534253400260096,P=4185296581467695669 
+            */
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a8919e76bca867296647318a8e6694b72}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!sift@{sift}}
+\index{sift@{sift}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{sift}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf sift} (
+\begin{DoxyParamCaption}
+\item[{{\bf value\-\_\-type}}]{upper}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a8919e76bca867296647318a8e6694b72}
+ふるいにかけて素数リストを生成 
+\begin{DoxyParams}{\-Parameters}
+{\em upper} & ふるいにかける値の上限 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 14 of file prime.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            std::list<value_type> candidate{};
+
+            {   //初期化
+                auto c = p_.back();
+
+                auto s = 0;
+            
+                if(c % 6 == 1) // 2,3を覗いたすべての素数は6で割るとあまり1か5
+                    s = 4;
+                else
+                    s = 2;
+            
+                auto step = [&]{
+                    c += s;           //3の倍数を除いた奇数を順にたどる
+                    s = s==2 ? 4 : 2; //ステップをスイッチ
+                };
+                step();
+            
+                for(; c < upper; step())
+                { //候補を追加していく
+                    candidate.push_back(c);
+                }
+            }
+
+            for( auto i = 3U; i < p_.size(); i++ )
+            {   //5から走査開始
+                const auto p = p_[i];
+                for ( auto it = std::begin(candidate);
+                      it != std::end(candidate);)
+                {
+                    if(p * p > *it)
+                    {   //これ以上は探しても割り切れないことがわかっているので素数リストに追加
+                        p_.push_back(*it);
+                        candidate.erase(it++);
+                    }
+                    else if(*it % p == 0)
+                    {   //割りきれてしまったので候補から除外
+                        candidate.erase(it++);
+                    }
+                    else
+                    {
+                        ++it;
+                    }
+                }
+            }
+
+            BOOST_ASSERT( candidate.size() == 0 );
+        }
+\end{DoxyCode}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a986bf0deaa7559f361d03122eeea4c86}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}}
+\index{\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{\-::boost\-::iterator\-\_\-core\-\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}friend class \-::boost\-::iterator\-\_\-core\-\_\-access\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a986bf0deaa7559f361d03122eeea4c86}
+
+
+\-Definition at line 114 of file prime.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_aaaf1ac02dfa554a3cdffc647d512a77b}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!index\-\_\-@{index\-\_\-}}
+\index{index\-\_\-@{index\-\_\-}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{index\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf index\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_aaaf1ac02dfa554a3cdffc647d512a77b}
+内部表現・index 
+
+\-Definition at line 119 of file prime.\-h.
+
+\hypertarget{classyuh_1_1range__detail_1_1prime__iterator_aff6d0a0fbc14123c0fca5a0c05d2e68c}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!p\-\_\-@{p\-\_\-}}
+\index{p\-\_\-@{p\-\_\-}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
+\subsubsection[{p\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf value\-\_\-type}$>$ {\bf p\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_aff6d0a0fbc14123c0fca5a0c05d2e68c}
+素数リスト 
+
+\-Definition at line 40 of file prime.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{prime_8h}{prime.\-h}\item 
+src/\hyperlink{prime_8cpp}{prime.\-cpp}\end{DoxyCompactItemize}

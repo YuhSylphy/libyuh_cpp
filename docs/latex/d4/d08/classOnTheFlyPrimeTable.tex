@@ -1,0 +1,88 @@
+\hypertarget{classOnTheFlyPrimeTable}{\section{\-On\-The\-Fly\-Prime\-Table \-Class \-Reference}
+\label{d4/d08/classOnTheFlyPrimeTable}\index{\-On\-The\-Fly\-Prime\-Table@{\-On\-The\-Fly\-Prime\-Table}}
+}
+
+
+{\ttfamily \#include $<$prime\-\_\-tables.\-h$>$}
+
+\-Inheritance diagram for \-On\-The\-Fly\-Prime\-Table\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d4/d08/classOnTheFlyPrimeTable}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classOnTheFlyPrimeTable_a8511f4f0202c5e13abf58e386aee2b20}{\-Is\-Prime} (int n) const 
+\item 
+virtual int \hyperlink{classOnTheFlyPrimeTable_a35b8e0007e98997525a14c34a6632be3}{\-Get\-Next\-Prime} (int p) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 56 of file prime\-\_\-tables.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classOnTheFlyPrimeTable_a35b8e0007e98997525a14c34a6632be3}{\index{\-On\-The\-Fly\-Prime\-Table@{\-On\-The\-Fly\-Prime\-Table}!\-Get\-Next\-Prime@{\-Get\-Next\-Prime}}
+\index{\-Get\-Next\-Prime@{\-Get\-Next\-Prime}!OnTheFlyPrimeTable@{\-On\-The\-Fly\-Prime\-Table}}
+\subsubsection[{\-Get\-Next\-Prime}]{\setlength{\rightskip}{0pt plus 5cm}virtual int {\bf \-Get\-Next\-Prime} (
+\begin{DoxyParamCaption}
+\item[{int}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d4/d08/classOnTheFlyPrimeTable_a35b8e0007e98997525a14c34a6632be3}
+
+
+\-Implements \hyperlink{classPrimeTable_ace1bef4952983e48a9bbe097b6181710}{\-Prime\-Table}.
+
+
+
+\-Definition at line 69 of file prime\-\_\-tables.\-h.
+
+
+\begin{DoxyCode}
+                                        {
+    for (int n = p + 1; n > 0; n++) {
+      if (IsPrime(n)) return n;
+    }
+
+    return -1;
+  }
+\end{DoxyCode}
+\hypertarget{classOnTheFlyPrimeTable_a8511f4f0202c5e13abf58e386aee2b20}{\index{\-On\-The\-Fly\-Prime\-Table@{\-On\-The\-Fly\-Prime\-Table}!\-Is\-Prime@{\-Is\-Prime}}
+\index{\-Is\-Prime@{\-Is\-Prime}!OnTheFlyPrimeTable@{\-On\-The\-Fly\-Prime\-Table}}
+\subsubsection[{\-Is\-Prime}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Is\-Prime} (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d4/d08/classOnTheFlyPrimeTable_a8511f4f0202c5e13abf58e386aee2b20}
+
+
+\-Implements \hyperlink{classPrimeTable_a5431df4c1243f67a965d16674619311c}{\-Prime\-Table}.
+
+
+
+\-Definition at line 58 of file prime\-\_\-tables.\-h.
+
+
+\begin{DoxyCode}
+                                    {
+    if (n <= 1) return false;
+
+    for (int i = 2; i*i <= n; i++) {
+      // n is divisible by an integer other than 1 and itself.
+      if ((n % i) == 0) return false;
+    }
+
+    return true;
+  }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/samples/\hyperlink{prime__tables_8h}{prime\-\_\-tables.\-h}\end{DoxyCompactItemize}

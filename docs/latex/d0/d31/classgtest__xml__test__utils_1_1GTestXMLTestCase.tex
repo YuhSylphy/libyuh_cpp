@@ -1,0 +1,277 @@
+\hypertarget{classgtest__xml__test__utils_1_1GTestXMLTestCase}{\section{\-G\-Test\-X\-M\-L\-Test\-Case \-Class \-Reference}
+\label{d0/d31/classgtest__xml__test__utils_1_1GTestXMLTestCase}\index{\-G\-Test\-X\-M\-L\-Test\-Case@{\-G\-Test\-X\-M\-L\-Test\-Case}}
+}
+\-Inheritance diagram for \-G\-Test\-X\-M\-L\-Test\-Case\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/d31/classgtest__xml__test__utils_1_1GTestXMLTestCase}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__xml__test__utils_1_1GTestXMLTestCase_a54b749d8bf072a59825202db458cdd2b}{\-Assert\-Equivalent\-Nodes}
+\item 
+def \hyperlink{classgtest__xml__test__utils_1_1GTestXMLTestCase_a321f96b173f10ef00ba182147aafa163}{\-Normalize\-Xml}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \hyperlink{classgtest__xml__test__utils_1_1GTestXMLTestCase_adecb9d1291e48bb151b7e46f14ea7df7}{identifying\-\_\-attribute}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__xml__test__utils_1_1GTestXMLTestCase_ab3de1cda0d4c2c22c771a57d8344bb32}{\-\_\-\-Get\-Children}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyVerb}
+Base class for tests of Google Test's XML output functionality.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 45 of file gtest\-\_\-xml\-\_\-test\-\_\-utils.\-py.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgtest__xml__test__utils_1_1GTestXMLTestCase_ab3de1cda0d4c2c22c771a57d8344bb32}{\index{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case@{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case}!\-\_\-\-Get\-Children@{\-\_\-\-Get\-Children}}
+\index{\-\_\-\-Get\-Children@{\-\_\-\-Get\-Children}!gtest_xml_test_utils::GTestXMLTestCase@{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case}}
+\subsubsection[{\-\_\-\-Get\-Children}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-\_\-\-Get\-Children} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/d31/classgtest__xml__test__utils_1_1GTestXMLTestCase_ab3de1cda0d4c2c22c771a57d8344bb32}
+\begin{DoxyVerb}
+Fetches all of the child nodes of element, a DOM Element object.
+Returns them as the values of a dictionary keyed by the IDs of the
+children.  For <testsuites>, <testsuite> and <testcase> elements, the ID
+is the value of their "name" attribute; for <failure> elements, it is
+the value of the "message" attribute; CDATA sections and non-whitespace
+text nodes are concatenated into a single CDATA section with ID
+"detail".  An exception is raised if any element other than the above
+four is encountered, if two child elements with the same identifying
+attributes are encountered, or if any other type of node is encountered.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 113 of file gtest\-\_\-xml\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+113 
+114   def _GetChildren(self, element):
+115     """
+116     Fetches all of the child nodes of element, a DOM Element object.
+117     Returns them as the values of a dictionary keyed by the IDs of the
+118     children.  For <testsuites>, <testsuite> and <testcase> elements, the ID
+119     is the value of their "name" attribute; for <failure> elements, it is
+120     the value of the "message" attribute; CDATA sections and non-whitespace
+121     text nodes are concatenated into a single CDATA section with ID
+122     "detail".  An exception is raised if any element other than the above
+123     four is encountered, if two child elements with the same identifying
+124     attributes are encountered, or if any other type of node is encountered.
+125     """
+126 
+127     children = {}
+128     for child in element.childNodes:
+129       if child.nodeType == Node.ELEMENT_NODE:
+130         self.assert_(child.tagName in self.identifying_attribute,
+131                      "Encountered unknown element <%s>" % child.tagName)
+132         childID = child.getAttribute(self.identifying_attribute[child.tagName])
+133         self.assert_(childID not in children)
+134         children[childID] = child
+135       elif child.nodeType in [Node.TEXT_NODE, Node.CDATA_SECTION_NODE]:
+136         if "detail" not in children:
+137           if (child.nodeType == Node.CDATA_SECTION_NODE or
+138               not child.nodeValue.isspace()):
+139             children["detail"] = child.ownerDocument.createCDATASection(
+140                 child.nodeValue)
+141         else:
+142           children["detail"].nodeValue += child.nodeValue
+143       else:
+144         self.fail("Encountered unexpected node type %d" % child.nodeType)
+145     return children
+
+\end{DoxyCode}
+\hypertarget{classgtest__xml__test__utils_1_1GTestXMLTestCase_a54b749d8bf072a59825202db458cdd2b}{\index{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case@{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case}!\-Assert\-Equivalent\-Nodes@{\-Assert\-Equivalent\-Nodes}}
+\index{\-Assert\-Equivalent\-Nodes@{\-Assert\-Equivalent\-Nodes}!gtest_xml_test_utils::GTestXMLTestCase@{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case}}
+\subsubsection[{\-Assert\-Equivalent\-Nodes}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Assert\-Equivalent\-Nodes} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{expected\-\_\-node, }
+\item[{}]{actual\-\_\-node}
+\end{DoxyParamCaption}
+)}}\label{d0/d31/classgtest__xml__test__utils_1_1GTestXMLTestCase_a54b749d8bf072a59825202db458cdd2b}
+\begin{DoxyVerb}
+Asserts that actual_node (a DOM node object) is equivalent to
+expected_node (another DOM node object), in that either both of
+them are CDATA nodes and have the same value, or both are DOM
+elements and actual_node meets all of the following conditions:
+
+*  It has the same tag name as expected_node.
+*  It has the same set of attributes as expected_node, each with
+   the same value as the corresponding attribute of expected_node.
+   Exceptions are any attribute named "time", which needs only be
+   convertible to a floating-point number and any attribute named
+   "type_param" which only has to be non-empty.
+*  It has an equivalent set of child nodes (including elements and
+   CDATA sections) as expected_node.  Note that we ignore the
+   order of the children as they are not guaranteed to be in any
+   particular order.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 51 of file gtest\-\_\-xml\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+51 
+52   def AssertEquivalentNodes(self, expected_node, actual_node):
+53     """
+54     Asserts that actual_node (a DOM node object) is equivalent to
+55     expected_node (another DOM node object), in that either both of
+56     them are CDATA nodes and have the same value, or both are DOM
+57     elements and actual_node meets all of the following conditions:
+58 
+59     *  It has the same tag name as expected_node.
+60     *  It has the same set of attributes as expected_node, each with
+61        the same value as the corresponding attribute of expected_node.
+62        Exceptions are any attribute named "time", which needs only be
+63        convertible to a floating-point number and any attribute named
+64        "type_param" which only has to be non-empty.
+65     *  It has an equivalent set of child nodes (including elements and
+66        CDATA sections) as expected_node.  Note that we ignore the
+67        order of the children as they are not guaranteed to be in any
+68        particular order.
+69     """
+70 
+71     if expected_node.nodeType == Node.CDATA_SECTION_NODE:
+72       self.assertEquals(Node.CDATA_SECTION_NODE, actual_node.nodeType)
+73       self.assertEquals(expected_node.nodeValue, actual_node.nodeValue)
+74       return
+75 
+76     self.assertEquals(Node.ELEMENT_NODE, actual_node.nodeType)
+77     self.assertEquals(Node.ELEMENT_NODE, expected_node.nodeType)
+78     self.assertEquals(expected_node.tagName, actual_node.tagName)
+79 
+80     expected_attributes = expected_node.attributes
+81     actual_attributes   = actual_node  .attributes
+82     self.assertEquals(
+83         expected_attributes.length, actual_attributes.length,
+84         "attribute numbers differ in element " + actual_node.tagName)
+85     for i in range(expected_attributes.length):
+86       expected_attr = expected_attributes.item(i)
+87       actual_attr   = actual_attributes.get(expected_attr.name)
+88       self.assert_(
+89           actual_attr is not None,
+90           "expected attribute %s not found in element %s" %
+91           (expected_attr.name, actual_node.tagName))
+92       self.assertEquals(expected_attr.value, actual_attr.value,
+93                         " values of attribute %s in element %s differ" %
+94                         (expected_attr.name, actual_node.tagName))
+95 
+96     expected_children = self._GetChildren(expected_node)
+97     actual_children = self._GetChildren(actual_node)
+98     self.assertEquals(
+99         len(expected_children), len(actual_children),
+100         "number of child elements differ in element " + actual_node.tagName)
+101     for child_id, child in expected_children.iteritems():
+102       self.assert_(child_id in actual_children,
+103                    '<%s> is not in <%s> (in element %s)' %
+104                    (child_id, actual_children, actual_node.tagName))
+105       self.AssertEquivalentNodes(child, actual_children[child_id])
+
+\end{DoxyCode}
+\hypertarget{classgtest__xml__test__utils_1_1GTestXMLTestCase_a321f96b173f10ef00ba182147aafa163}{\index{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case@{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case}!\-Normalize\-Xml@{\-Normalize\-Xml}}
+\index{\-Normalize\-Xml@{\-Normalize\-Xml}!gtest_xml_test_utils::GTestXMLTestCase@{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case}}
+\subsubsection[{\-Normalize\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}def {\bf \-Normalize\-Xml} (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{element}
+\end{DoxyParamCaption}
+)}}\label{d0/d31/classgtest__xml__test__utils_1_1GTestXMLTestCase_a321f96b173f10ef00ba182147aafa163}
+\begin{DoxyVerb}
+Normalizes Google Test's XML output to eliminate references to transient
+information that may change from run to run.
+
+*  The "time" attribute of <testsuites>, <testsuite> and <testcase>
+   elements is replaced with a single asterisk, if it contains
+   only digit characters.
+*  The "type_param" attribute of <testcase> elements is replaced with a
+   single asterisk (if it sn non-empty) as it is the type name returned
+   by the compiler and is platform dependent.
+*  The line number reported in the first line of the "message"
+   attribute of <failure> elements is replaced with a single asterisk.
+*  The directory names in file paths are removed.
+*  The stack traces are removed.
+\end{DoxyVerb}
+ 
+
+\-Definition at line 146 of file gtest\-\_\-xml\-\_\-test\-\_\-utils.\-py.
+
+
+\begin{DoxyCode}
+146 
+147   def NormalizeXml(self, element):
+148     """
+149     Normalizes Google Test's XML output to eliminate references to transient
+150     information that may change from run to run.
+151 
+152     *  The "time" attribute of <testsuites>, <testsuite> and <testcase>
+153        elements is replaced with a single asterisk, if it contains
+154        only digit characters.
+155     *  The "type_param" attribute of <testcase> elements is replaced with a
+156        single asterisk (if it sn non-empty) as it is the type name returned
+157        by the compiler and is platform dependent.
+158     *  The line number reported in the first line of the "message"
+159        attribute of <failure> elements is replaced with a single asterisk.
+160     *  The directory names in file paths are removed.
+161     *  The stack traces are removed.
+162     """
+163 
+164     if element.tagName in ("testsuites", "testsuite", "testcase"):
+165       time = element.getAttributeNode("time")
+166       time.value = re.sub(r"^\d+(\.\d+)?$", "*", time.value)
+167       type_param = element.getAttributeNode("type_param")
+168       if type_param and type_param.value:
+169         type_param.value = "*"
+170     elif element.tagName == "failure":
+171       for child in element.childNodes:
+172         if child.nodeType == Node.CDATA_SECTION_NODE:
+173           # Removes the source line number.
+174           cdata = re.sub(r"^.*[/\\](.*:)\d+\n", "\\1*\n", child.nodeValue)
+175           # Removes the actual stack trace.
+176           child.nodeValue = re.sub(r"\nStack trace:\n(.|\n)*",
+177                                    "", cdata)
+178     for child in element.childNodes:
+179       if child.nodeType == Node.ELEMENT_NODE:
+180         self.NormalizeXml(child)
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classgtest__xml__test__utils_1_1GTestXMLTestCase_adecb9d1291e48bb151b7e46f14ea7df7}{\index{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case@{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case}!identifying\-\_\-attribute@{identifying\-\_\-attribute}}
+\index{identifying\-\_\-attribute@{identifying\-\_\-attribute}!gtest_xml_test_utils::GTestXMLTestCase@{gtest\-\_\-xml\-\_\-test\-\_\-utils\-::\-G\-Test\-X\-M\-L\-Test\-Case}}
+\subsubsection[{identifying\-\_\-attribute}]{\setlength{\rightskip}{0pt plus 5cm}dictionary {\bf identifying\-\_\-attribute}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{d0/d31/classgtest__xml__test__utils_1_1GTestXMLTestCase_adecb9d1291e48bb151b7e46f14ea7df7}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+{
+    "testsuites": "name",
+    "testsuite": "name",
+    "testcase":  "name",
+    "failure":   "message",
+    }
+\end{DoxyCode}
+
+
+\-Definition at line 106 of file gtest\-\_\-xml\-\_\-test\-\_\-utils.\-py.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/test/\hyperlink{gtest__xml__test__utils_8py}{gtest\-\_\-xml\-\_\-test\-\_\-utils.\-py}\end{DoxyCompactItemize}

@@ -1,0 +1,169 @@
+\hypertarget{classQueueTest}{\section{\-Queue\-Test \-Class \-Reference}
+\label{dc/d3d/classQueueTest}\index{\-Queue\-Test@{\-Queue\-Test}}
+}
+\-Inheritance diagram for \-Queue\-Test\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{dc/d3d/classQueueTest}
+\end{center}
+\end{figure}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classQueueTest_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\item 
+void \hyperlink{classQueueTest_a8c80a59d070b3a952d1ad6204cda96a3}{\-Map\-Tester} (const \hyperlink{classQueue}{\-Queue}$<$ int $>$ $\ast$q)
+\item 
+virtual void \hyperlink{classQueueTest_a901706a587f9ae84df8b2395fbe759cb}{\-Set\-Up} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classQueueTest_ac874e206168b1b5c5f3ae74a8953ae3d}{\-Double} (int n)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQueue}{\-Queue}$<$ int $>$ \hyperlink{classQueueTest_a2dcfad38001f7e4ec3072c6a7165070d}{q0\-\_\-}
+\item 
+\hyperlink{classQueue}{\-Queue}$<$ int $>$ \hyperlink{classQueueTest_ab467b210bbd552ad64f773c8a91fef7d}{q1\-\_\-}
+\item 
+\hyperlink{classQueue}{\-Queue}$<$ int $>$ \hyperlink{classQueueTest_aa91a3d33874b8f83f6654b7ed77112da}{q2\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 70 of file sample3\-\_\-unittest.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classQueueTest_ac874e206168b1b5c5f3ae74a8953ae3d}{\index{\-Queue\-Test@{\-Queue\-Test}!\-Double@{\-Double}}
+\index{\-Double@{\-Double}!QueueTest@{\-Queue\-Test}}
+\subsubsection[{\-Double}]{\setlength{\rightskip}{0pt plus 5cm}static int {\bf \-Double} (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}\label{dc/d3d/classQueueTest_ac874e206168b1b5c5f3ae74a8953ae3d}
+
+
+\-Definition at line 91 of file sample3\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                           {
+    return 2*n;
+  }
+\end{DoxyCode}
+\hypertarget{classQueueTest_a8c80a59d070b3a952d1ad6204cda96a3}{\index{\-Queue\-Test@{\-Queue\-Test}!\-Map\-Tester@{\-Map\-Tester}}
+\index{\-Map\-Tester@{\-Map\-Tester}!QueueTest@{\-Queue\-Test}}
+\subsubsection[{\-Map\-Tester}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Map\-Tester} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Queue}$<$ int $>$ $\ast$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}\label{dc/d3d/classQueueTest_a8c80a59d070b3a952d1ad6204cda96a3}
+
+
+\-Definition at line 96 of file sample3\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                                       {
+    // Creates a new queue, where each element is twice as big as the
+    // corresponding one in q.
+    const Queue<int> * const new_q = q->Map(Double);
+
+    // Verifies that the new queue has the same size as q.
+    ASSERT_EQ(q->Size(), new_q->Size());
+
+    // Verifies the relationship between the elements of the two queues.
+    for ( const QueueNode<int> * n1 = q->Head(), * n2 = new_q->Head();
+          n1 != NULL; n1 = n1->next(), n2 = n2->next() ) {
+      EXPECT_EQ(2 * n1->element(), n2->element());
+    }
+
+    delete new_q;
+  }
+\end{DoxyCode}
+\hypertarget{classQueueTest_a901706a587f9ae84df8b2395fbe759cb}{\index{\-Queue\-Test@{\-Queue\-Test}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!QueueTest@{\-Queue\-Test}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{dc/d3d/classQueueTest_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a1b06560e0e01a806b92c2386220d0b57}{\-Test}.
+
+
+
+\-Definition at line 77 of file sample3\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    q1_.Enqueue(1);
+    q2_.Enqueue(2);
+    q2_.Enqueue(3);
+  }
+\end{DoxyCode}
+\hypertarget{classQueueTest_a901706a587f9ae84df8b2395fbe759cb}{\index{\-Queue\-Test@{\-Queue\-Test}!\-Set\-Up@{\-Set\-Up}}
+\index{\-Set\-Up@{\-Set\-Up}!QueueTest@{\-Queue\-Test}}
+\subsubsection[{\-Set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{dc/d3d/classQueueTest_a901706a587f9ae84df8b2395fbe759cb}
+
+
+\-Reimplemented from \hyperlink{classtesting_1_1Test_a1b06560e0e01a806b92c2386220d0b57}{\-Test}.
+
+
+
+\-Definition at line 146 of file sample5\-\_\-unittest.\-cc.
+
+
+\begin{DoxyCode}
+                       {
+    // First, we need to set up the super fixture (QuickTest).
+    QuickTest::SetUp();
+
+    // Second, some additional setup for this fixture.
+    q1_.Enqueue(1);
+    q2_.Enqueue(2);
+    q2_.Enqueue(3);
+  }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classQueueTest_a2dcfad38001f7e4ec3072c6a7165070d}{\index{\-Queue\-Test@{\-Queue\-Test}!q0\-\_\-@{q0\-\_\-}}
+\index{q0\-\_\-@{q0\-\_\-}!QueueTest@{\-Queue\-Test}}
+\subsubsection[{q0\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue}$<$ int $>$ {\bf q0\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{dc/d3d/classQueueTest_a2dcfad38001f7e4ec3072c6a7165070d}
+
+
+\-Definition at line 114 of file sample3\-\_\-unittest.\-cc.
+
+\hypertarget{classQueueTest_ab467b210bbd552ad64f773c8a91fef7d}{\index{\-Queue\-Test@{\-Queue\-Test}!q1\-\_\-@{q1\-\_\-}}
+\index{q1\-\_\-@{q1\-\_\-}!QueueTest@{\-Queue\-Test}}
+\subsubsection[{q1\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue}$<$ int $>$ {\bf q1\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{dc/d3d/classQueueTest_ab467b210bbd552ad64f773c8a91fef7d}
+
+
+\-Definition at line 115 of file sample3\-\_\-unittest.\-cc.
+
+\hypertarget{classQueueTest_aa91a3d33874b8f83f6654b7ed77112da}{\index{\-Queue\-Test@{\-Queue\-Test}!q2\-\_\-@{q2\-\_\-}}
+\index{q2\-\_\-@{q2\-\_\-}!QueueTest@{\-Queue\-Test}}
+\subsubsection[{q2\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue}$<$ int $>$ {\bf q2\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{dc/d3d/classQueueTest_aa91a3d33874b8f83f6654b7ed77112da}
+
+
+\-Definition at line 116 of file sample3\-\_\-unittest.\-cc.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/samples/\hyperlink{sample3__unittest_8cc}{sample3\-\_\-unittest.\-cc}\item 
+gtest-\/1.\-6.\-0/samples/\hyperlink{sample5__unittest_8cc}{sample5\-\_\-unittest.\-cc}\end{DoxyCompactItemize}

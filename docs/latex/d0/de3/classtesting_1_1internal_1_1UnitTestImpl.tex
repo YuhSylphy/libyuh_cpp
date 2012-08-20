@@ -1,0 +1,2286 @@
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl}{\section{\-Unit\-Test\-Impl \-Class \-Reference}
+\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl}\index{\-Unit\-Test\-Impl@{\-Unit\-Test\-Impl}}
+}
+
+
+{\ttfamily \#include $<$gtest-\/internal-\/inl.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543c}{\-Reaction\-To\-Sharding} \{ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}, 
+\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}, 
+\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}, 
+\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}
+ \}
+\item 
+enum \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543c}{\-Reaction\-To\-Sharding} \{ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}, 
+\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}, 
+\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}, 
+\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aee362cac8540779d6b2287bd44f15444}{\-Unit\-Test\-Impl} (\hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} $\ast$parent)
+\item 
+virtual \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a1cfa956ff0bfca1d1830454d0dd02f41}{$\sim$\-Unit\-Test\-Impl} ()
+\item 
+\hyperlink{classtesting_1_1TestPartResultReporterInterface}{\-Test\-Part\-Result\-Reporter\-Interface} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a95cd925236936aab4dd3604aaeae9b15}{\-Get\-Global\-Test\-Part\-Result\-Reporter} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a5d379c4ca61275c92e23f8605a67c918}{\-Set\-Global\-Test\-Part\-Result\-Reporter} (\hyperlink{classtesting_1_1TestPartResultReporterInterface}{\-Test\-Part\-Result\-Reporter\-Interface} $\ast$reporter)
+\item 
+\hyperlink{classtesting_1_1TestPartResultReporterInterface}{\-Test\-Part\-Result\-Reporter\-Interface} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a300e589a3266a50b3c75dc14cc9673ed}{\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ab71b8e31b6a6f77a3c80e76f1a17336c}{\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread} (\hyperlink{classtesting_1_1TestPartResultReporterInterface}{\-Test\-Part\-Result\-Reporter\-Interface} $\ast$reporter)
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a846de5ff509b207bca6a55237d035a1f}{successful\-\_\-test\-\_\-case\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a48f76adebf95bff36f0026f0a66c7057}{failed\-\_\-test\-\_\-case\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aba8c18261c58f301e1e80049a0781d84}{total\-\_\-test\-\_\-case\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_adf212bae576e88dfb77bd114f01bc117}{test\-\_\-case\-\_\-to\-\_\-run\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ab955f67bc1fe8ef62a7e72906ccece2a}{successful\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_afd8bbd35c7ee99960abb321cfdff3119}{failed\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a10ec677118627074973fc20c9271b204}{disabled\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a0eb7286957aeb126d9926c33407a15a3}{total\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aa6eccf86072f4f8ddd0bea30dfd45912}{test\-\_\-to\-\_\-run\-\_\-count} () const 
+\item 
+\hyperlink{namespacetesting_1_1internal_a9e0fb32f592d143f031a3431366adae0}{\-Time\-In\-Millis} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a4f91886b546ea9cc5ba2d374a62f3a9c}{elapsed\-\_\-time} () const 
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac97d5073365af8a73262fd9f6bf18656}{\-Passed} () const 
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a7cf078354304c964c1934f53bf2bb4d7}{\-Failed} () const 
+\item 
+const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_adced0a9df4be306d905a3f954fc3eedf}{\-Get\-Test\-Case} (int i) const 
+\item 
+\hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a04b94a3c825711103b247aa87d6b76e3}{\-Get\-Mutable\-Test\-Case} (int i)
+\item 
+\hyperlink{classtesting_1_1TestEventListeners}{\-Test\-Event\-Listeners} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a371c481b63deeb0ecd47f42b4720480b}{listeners} ()
+\item 
+\hyperlink{classtesting_1_1TestResult}{\-Test\-Result} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a385bee93ae6043262a860574aa59ba1a}{current\-\_\-test\-\_\-result} ()
+\item 
+const \hyperlink{classtesting_1_1TestResult}{\-Test\-Result} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a0cc79239ea952483734abc4999de7d8a}{ad\-\_\-hoc\-\_\-test\-\_\-result} () const 
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a965c4bc292baeaefc41238f86f36f67c}{set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter} (\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetterInterface}{\-Os\-Stack\-Trace\-Getter\-Interface} $\ast$getter)
+\item 
+\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetterInterface}{\-Os\-Stack\-Trace\-Getter\-Interface} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_accb552ad4af910904a9e48c49c5c79a2}{os\-\_\-stack\-\_\-trace\-\_\-getter} ()
+\item 
+\hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a131dbc639dae87df46e7f92daad7c183}{\-Current\-Os\-Stack\-Trace\-Except\-Top} (int skip\-\_\-count)
+\item 
+\hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a6438a25b62877163bec864df1369909b}{\-Get\-Test\-Case} (const char $\ast$test\-\_\-case\-\_\-name, const char $\ast$type\-\_\-param, \hyperlink{classtesting_1_1Test_a2df065892efeff7ca91bb2d2fbe00975}{\-Test\-::\-Set\-Up\-Test\-Case\-Func} set\-\_\-up\-\_\-tc, \hyperlink{classtesting_1_1Test_a4ae7a4e140c70dee5c9cb82e13ae570c}{\-Test\-::\-Tear\-Down\-Test\-Case\-Func} tear\-\_\-down\-\_\-tc)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a0f73735489a968e6f6d57f791a246615}{\-Add\-Test\-Info} (\hyperlink{classtesting_1_1Test_a2df065892efeff7ca91bb2d2fbe00975}{\-Test\-::\-Set\-Up\-Test\-Case\-Func} set\-\_\-up\-\_\-tc, \hyperlink{classtesting_1_1Test_a4ae7a4e140c70dee5c9cb82e13ae570c}{\-Test\-::\-Tear\-Down\-Test\-Case\-Func} tear\-\_\-down\-\_\-tc, \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a0566e56597ac7b24d29d6545d82b5f3e}{set\-\_\-current\-\_\-test\-\_\-case} (\hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$a\-\_\-current\-\_\-test\-\_\-case)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a8bfd2a1906902da5fa95a75792883177}{set\-\_\-current\-\_\-test\-\_\-info} (\hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$a\-\_\-current\-\_\-test\-\_\-info)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a42dd6cc650b930bbf73f665fbb13d515}{\-Register\-Parameterized\-Tests} ()
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a4d5d6a2e8fa3b918a284252602a98279}{\-Run\-All\-Tests} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a3f7a43dd50595257ac958e7ec9112945}{\-Clear\-Non\-Ad\-Hoc\-Test\-Result} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ab35604304840b940d31f5153986b7e19}{\-Clear\-Ad\-Hoc\-Test\-Result} ()
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_af8cfcffb71cba69a55105ddac96786aa}{\-Filter\-Tests} (\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543c}{\-Reaction\-To\-Sharding} shard\-\_\-tests)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_abc77b71cd244096a75b13b8a2d9f7d14}{\-List\-Tests\-Matching\-Filter} ()
+\item 
+const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_af774518d9be68f728e9fffb00433ce69}{current\-\_\-test\-\_\-case} () const 
+\item 
+\hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aff1e50095f685628d566cb3ac72f902f}{current\-\_\-test\-\_\-info} ()
+\item 
+const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a7e73834280234683e770ad12dc7c5ecc}{current\-\_\-test\-\_\-info} () const 
+\item 
+std\-::vector$<$ \hyperlink{classtesting_1_1Environment}{\-Environment} $\ast$ $>$ \& \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ab8c736184a052dbb4cb9e217683bae7a}{environments} ()
+\item 
+std\-::vector$<$ \hyperlink{structtesting_1_1internal_1_1TraceInfo}{\-Trace\-Info} $>$ \& \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a07ea86c2b77af0393783430499b22321}{gtest\-\_\-trace\-\_\-stack} ()
+\item 
+const std\-::vector$<$ \hyperlink{structtesting_1_1internal_1_1TraceInfo}{\-Trace\-Info} $>$ \& \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a289d5745773f4d2e5b339960d3e9ce68}{gtest\-\_\-trace\-\_\-stack} () const 
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_acc7d69fbca3370bbdd13ee2b63576030}{\-Configure\-Xml\-Output} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a3d68c6d1fdec822210f96171a3b57b47}{\-Post\-Flag\-Parsing\-Init} ()
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac0bcee84bdc839bfabd0a829642ab4f7}{random\-\_\-seed} () const 
+\item 
+\hyperlink{classtesting_1_1internal_1_1Random}{internal\-::\-Random} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a485dc510d5b4af5835231d23e5510b25}{random} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a1835112b5b9bb3931956c68f05a3cf69}{\-Shuffle\-Tests} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ae4c0afbfb6a7d13aece4c3a256a5d01d}{\-Unshuffle\-Tests} ()
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac7a9709851e6b257627f82921cbdeb7d}{catch\-\_\-exceptions} () const 
+\item 
+\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aee362cac8540779d6b2287bd44f15444}{\-Unit\-Test\-Impl} (\hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} $\ast$parent)
+\item 
+virtual \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a7ed37f715469544e5e426b89b79d07db}{$\sim$\-Unit\-Test\-Impl} ()
+\item 
+\hyperlink{classtesting_1_1TestPartResultReporterInterface}{\-Test\-Part\-Result\-Reporter\-Interface} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a8d944ff1c21128f6537597a403287b71}{\-Get\-Global\-Test\-Part\-Result\-Reporter} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a5d379c4ca61275c92e23f8605a67c918}{\-Set\-Global\-Test\-Part\-Result\-Reporter} (\hyperlink{classtesting_1_1TestPartResultReporterInterface}{\-Test\-Part\-Result\-Reporter\-Interface} $\ast$reporter)
+\item 
+\hyperlink{classtesting_1_1TestPartResultReporterInterface}{\-Test\-Part\-Result\-Reporter\-Interface} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a4e160e9e1b736e0ce1fd49918af86da5}{\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ab71b8e31b6a6f77a3c80e76f1a17336c}{\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread} (\hyperlink{classtesting_1_1TestPartResultReporterInterface}{\-Test\-Part\-Result\-Reporter\-Interface} $\ast$reporter)
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a846de5ff509b207bca6a55237d035a1f}{successful\-\_\-test\-\_\-case\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a48f76adebf95bff36f0026f0a66c7057}{failed\-\_\-test\-\_\-case\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aba8c18261c58f301e1e80049a0781d84}{total\-\_\-test\-\_\-case\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_adf212bae576e88dfb77bd114f01bc117}{test\-\_\-case\-\_\-to\-\_\-run\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ab955f67bc1fe8ef62a7e72906ccece2a}{successful\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_afd8bbd35c7ee99960abb321cfdff3119}{failed\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a10ec677118627074973fc20c9271b204}{disabled\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a0eb7286957aeb126d9926c33407a15a3}{total\-\_\-test\-\_\-count} () const 
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aa6eccf86072f4f8ddd0bea30dfd45912}{test\-\_\-to\-\_\-run\-\_\-count} () const 
+\item 
+\hyperlink{namespacetesting_1_1internal_a9e0fb32f592d143f031a3431366adae0}{\-Time\-In\-Millis} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a4f91886b546ea9cc5ba2d374a62f3a9c}{elapsed\-\_\-time} () const 
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac97d5073365af8a73262fd9f6bf18656}{\-Passed} () const 
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a7cf078354304c964c1934f53bf2bb4d7}{\-Failed} () const 
+\item 
+const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_adced0a9df4be306d905a3f954fc3eedf}{\-Get\-Test\-Case} (int i) const 
+\item 
+\hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a04b94a3c825711103b247aa87d6b76e3}{\-Get\-Mutable\-Test\-Case} (int i)
+\item 
+\hyperlink{classtesting_1_1TestEventListeners}{\-Test\-Event\-Listeners} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a371c481b63deeb0ecd47f42b4720480b}{listeners} ()
+\item 
+\hyperlink{classtesting_1_1TestResult}{\-Test\-Result} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a847c541bb624cbb8ecc3ca24e755ac7c}{current\-\_\-test\-\_\-result} ()
+\item 
+const \hyperlink{classtesting_1_1TestResult}{\-Test\-Result} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a0cc79239ea952483734abc4999de7d8a}{ad\-\_\-hoc\-\_\-test\-\_\-result} () const 
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a965c4bc292baeaefc41238f86f36f67c}{set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter} (\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetterInterface}{\-Os\-Stack\-Trace\-Getter\-Interface} $\ast$getter)
+\item 
+\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetterInterface}{\-Os\-Stack\-Trace\-Getter\-Interface} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aae448a88298f8b6c5ef2f80e53d138fc}{os\-\_\-stack\-\_\-trace\-\_\-getter} ()
+\item 
+\hyperlink{classtesting_1_1internal_1_1String}{\-String} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a131dbc639dae87df46e7f92daad7c183}{\-Current\-Os\-Stack\-Trace\-Except\-Top} (int skip\-\_\-count)
+\item 
+\hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aa19f802545df3b5cc294748b5aae3e46}{\-Get\-Test\-Case} (const char $\ast$test\-\_\-case\-\_\-name, const char $\ast$type\-\_\-param, \hyperlink{classtesting_1_1Test_a2df065892efeff7ca91bb2d2fbe00975}{\-Test\-::\-Set\-Up\-Test\-Case\-Func} set\-\_\-up\-\_\-tc, \hyperlink{classtesting_1_1Test_a4ae7a4e140c70dee5c9cb82e13ae570c}{\-Test\-::\-Tear\-Down\-Test\-Case\-Func} tear\-\_\-down\-\_\-tc)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a0f73735489a968e6f6d57f791a246615}{\-Add\-Test\-Info} (\hyperlink{classtesting_1_1Test_a2df065892efeff7ca91bb2d2fbe00975}{\-Test\-::\-Set\-Up\-Test\-Case\-Func} set\-\_\-up\-\_\-tc, \hyperlink{classtesting_1_1Test_a4ae7a4e140c70dee5c9cb82e13ae570c}{\-Test\-::\-Tear\-Down\-Test\-Case\-Func} tear\-\_\-down\-\_\-tc, \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$test\-\_\-info)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a0566e56597ac7b24d29d6545d82b5f3e}{set\-\_\-current\-\_\-test\-\_\-case} (\hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$a\-\_\-current\-\_\-test\-\_\-case)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a8bfd2a1906902da5fa95a75792883177}{set\-\_\-current\-\_\-test\-\_\-info} (\hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$a\-\_\-current\-\_\-test\-\_\-info)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a42dd6cc650b930bbf73f665fbb13d515}{\-Register\-Parameterized\-Tests} ()
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a4d5d6a2e8fa3b918a284252602a98279}{\-Run\-All\-Tests} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a3f7a43dd50595257ac958e7ec9112945}{\-Clear\-Non\-Ad\-Hoc\-Test\-Result} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ab35604304840b940d31f5153986b7e19}{\-Clear\-Ad\-Hoc\-Test\-Result} ()
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_af8cfcffb71cba69a55105ddac96786aa}{\-Filter\-Tests} (\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543c}{\-Reaction\-To\-Sharding} shard\-\_\-tests)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_abc77b71cd244096a75b13b8a2d9f7d14}{\-List\-Tests\-Matching\-Filter} ()
+\item 
+const \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_af774518d9be68f728e9fffb00433ce69}{current\-\_\-test\-\_\-case} () const 
+\item 
+\hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aff1e50095f685628d566cb3ac72f902f}{current\-\_\-test\-\_\-info} ()
+\item 
+const \hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a7e73834280234683e770ad12dc7c5ecc}{current\-\_\-test\-\_\-info} () const 
+\item 
+std\-::vector$<$ \hyperlink{classtesting_1_1Environment}{\-Environment} $\ast$ $>$ \& \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ab8c736184a052dbb4cb9e217683bae7a}{environments} ()
+\item 
+std\-::vector$<$ \hyperlink{structtesting_1_1internal_1_1TraceInfo}{\-Trace\-Info} $>$ \& \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a07ea86c2b77af0393783430499b22321}{gtest\-\_\-trace\-\_\-stack} ()
+\item 
+const std\-::vector$<$ \hyperlink{structtesting_1_1internal_1_1TraceInfo}{\-Trace\-Info} $>$ \& \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a289d5745773f4d2e5b339960d3e9ce68}{gtest\-\_\-trace\-\_\-stack} () const 
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_acc7d69fbca3370bbdd13ee2b63576030}{\-Configure\-Xml\-Output} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a3d68c6d1fdec822210f96171a3b57b47}{\-Post\-Flag\-Parsing\-Init} ()
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac0bcee84bdc839bfabd0a829642ab4f7}{random\-\_\-seed} () const 
+\item 
+\hyperlink{classtesting_1_1internal_1_1Random}{internal\-::\-Random} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a485dc510d5b4af5835231d23e5510b25}{random} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a1835112b5b9bb3931956c68f05a3cf69}{\-Shuffle\-Tests} ()
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ae4c0afbfb6a7d13aece4c3a256a5d01d}{\-Unshuffle\-Tests} ()
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac7a9709851e6b257627f82921cbdeb7d}{catch\-\_\-exceptions} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a74595949fcf89d662112e08b5e21e560}{set\-\_\-catch\-\_\-exceptions} (bool value)
+\item 
+\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aa55ac9e56273d4b29e38abe67003384f}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1UnitTestImpl}{\-Unit\-Test\-Impl})
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a74595949fcf89d662112e08b5e21e560}{set\-\_\-catch\-\_\-exceptions} (bool value)
+\item 
+\hyperlink{classtesting_1_1internal_1_1UnitTestImpl_aa55ac9e56273d4b29e38abe67003384f}{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (\hyperlink{classtesting_1_1internal_1_1UnitTestImpl}{\-Unit\-Test\-Impl})
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1UnitTest}{\-Unit\-Test} $\ast$const \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a83d5f098f3d26888da5c556f26076159}{parent\-\_\-}
+\item 
+\hyperlink{classtesting_1_1internal_1_1FilePath}{internal\-::\-File\-Path} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a31c402be948f2244efdda0e5f38fab0e}{original\-\_\-working\-\_\-dir\-\_\-}
+\item 
+\hyperlink{classtesting_1_1internal_1_1DefaultGlobalTestPartResultReporter}{\-Default\-Global\-Test\-Part\-Result\-Reporter} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a1e540a0eaad5aeab8523776cca9af7d2}{default\-\_\-global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}
+\item 
+\hyperlink{classtesting_1_1internal_1_1DefaultPerThreadTestPartResultReporter}{\-Default\-Per\-Thread\-Test\-Part\-Result\-Reporter} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a28c00f393c9383c17bd12ed8f18ed241}{default\-\_\-per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}
+\item 
+\hyperlink{classtesting_1_1TestPartResultReporterInterface}{\-Test\-Part\-Result\-Reporter\-Interface} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a733fa2b39275ffbabc99d121d88dff5c}{global\-\_\-test\-\_\-part\-\_\-result\-\_\-repoter\-\_\-}
+\item 
+\hyperlink{classtesting_1_1internal_1_1Mutex}{internal\-::\-Mutex} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a44a033b8d726114e3fb407ec77c9e409}{global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-mutex\-\_\-}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ThreadLocal}{internal\-::\-Thread\-Local}\*
+$<$ \hyperlink{classtesting_1_1TestPartResultReporterInterface}{\-Test\-Part\-Result\-Reporter\-Interface} $\ast$ $>$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a2f151c72a75fa55edeca99b3deb451e4}{per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}
+\item 
+std\-::vector$<$ \hyperlink{classtesting_1_1Environment}{\-Environment} $\ast$ $>$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a3887eb0491f4d2221cd010aff0e9c4b6}{environments\-\_\-}
+\item 
+std\-::vector$<$ \hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ $>$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ab62e4e13580e882140f8bf78a94ce669}{test\-\_\-cases\-\_\-}
+\item 
+std\-::vector$<$ int $>$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a537c435021d907aafe88070abe6db7a9}{test\-\_\-case\-\_\-indices\-\_\-}
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a93b260f5e9218dd561831f3135ac9f26}{last\-\_\-death\-\_\-test\-\_\-case\-\_\-}
+\item 
+\hyperlink{classtesting_1_1TestCase}{\-Test\-Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a1518dcaae47f97490ebd5d3efe4f70f3}{current\-\_\-test\-\_\-case\-\_\-}
+\item 
+\hyperlink{classtesting_1_1TestInfo}{\-Test\-Info} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a4c974b2eb5da1b40919bb6118c3a33f8}{current\-\_\-test\-\_\-info\-\_\-}
+\item 
+\hyperlink{classtesting_1_1TestResult}{\-Test\-Result} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ae5fbed6752ae31d54b7db28c8a84df0a}{ad\-\_\-hoc\-\_\-test\-\_\-result\-\_\-}
+\item 
+\hyperlink{classtesting_1_1TestEventListeners}{\-Test\-Event\-Listeners} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac0e313bd41c6c104cbb057d42723574b}{listeners\-\_\-}
+\item 
+\hyperlink{classtesting_1_1internal_1_1OsStackTraceGetterInterface}{\-Os\-Stack\-Trace\-Getter\-Interface} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a03a75f27d552174a5ba8f477f3f4f116}{os\-\_\-stack\-\_\-trace\-\_\-getter\-\_\-}
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_af27b4c10f54dbf7cf61814bd71e2f71d}{post\-\_\-flag\-\_\-parse\-\_\-init\-\_\-performed\-\_\-}
+\item 
+int \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a3076e24cbd93ed76f370a5a2fce53403}{random\-\_\-seed\-\_\-}
+\item 
+\hyperlink{classtesting_1_1internal_1_1Random}{internal\-::\-Random} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ac270e1191e25343bb791c94ef3331a26}{random\-\_\-}
+\item 
+\hyperlink{namespacetesting_1_1internal_a9e0fb32f592d143f031a3431366adae0}{\-Time\-In\-Millis} \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a97b9c166ebee95ae4c9ef26cf3155617}{elapsed\-\_\-time\-\_\-}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ThreadLocal}{internal\-::\-Thread\-Local}\*
+$<$ std\-::vector$<$ \hyperlink{structtesting_1_1internal_1_1TraceInfo}{\-Trace\-Info} $>$ $>$ \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a90e2c9d96f24d3430189a4b850263ad0}{gtest\-\_\-trace\-\_\-stack\-\_\-}
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_ae7865b4eb9284346a5fd86cc41dc5e3f}{catch\-\_\-exceptions\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1UnitTestImpl_a893404438388dec058dc5c02e8f9a014}{\-::testing\-::\-Unit\-Test}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 895 of file gtest-\/all.\-cc.
+
+
+
+\subsection{\-Member \-Enumeration \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543c}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Reaction\-To\-Sharding@{\-Reaction\-To\-Sharding}}
+\index{\-Reaction\-To\-Sharding@{\-Reaction\-To\-Sharding}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Reaction\-To\-Sharding}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Reaction\-To\-Sharding}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543c}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}!testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}}\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}}\item[{\em 
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}
+}]\index{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}!testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}}\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}}\item[{\em 
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}
+}]\index{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}!testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}}\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}}\item[{\em 
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}
+}]\index{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}!testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}}\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}}\item[{\em 
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 699 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                          {
+    HONOR_SHARDING_PROTOCOL,
+    IGNORE_SHARDING_PROTOCOL
+  };
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543c}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Reaction\-To\-Sharding@{\-Reaction\-To\-Sharding}}
+\index{\-Reaction\-To\-Sharding@{\-Reaction\-To\-Sharding}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Reaction\-To\-Sharding}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Reaction\-To\-Sharding}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543c}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}!testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}}\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}}\item[{\em 
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}
+}]\index{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}!testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}}\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}}\item[{\em 
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}
+}]\index{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}!testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}}\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}}\item[{\em 
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}{\-H\-O\-N\-O\-R\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543ca6f368a6bc21fd5d834c62e4624353e3b}
+}]\index{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}!testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}}\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L@{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}}\item[{\em 
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}{\-I\-G\-N\-O\-R\-E\-\_\-\-S\-H\-A\-R\-D\-I\-N\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac8d671a300e2bd293e21f8ad1612543cab68bd993c6f106edad941b182a42c36a}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 1097 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                          {
+    HONOR_SHARDING_PROTOCOL,
+    IGNORE_SHARDING_PROTOCOL
+  };
+\end{DoxyCode}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aee362cac8540779d6b2287bd44f15444}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Unit\-Test\-Impl@{\-Unit\-Test\-Impl}}
+\index{\-Unit\-Test\-Impl@{\-Unit\-Test\-Impl}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Unit\-Test\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit\-Test\-Impl} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Unit\-Test} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aee362cac8540779d6b2287bd44f15444}
+
+
+\-Definition at line 5243 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+    : parent_(parent),
+#ifdef _MSC_VER
+# pragma warning(push)                    // Saves the current warning state.
+# pragma warning(disable:4355)            // Temporarily disables warning 4355
+                                         // (using this in initializer).
+      default_global_test_part_result_reporter_(this),
+      default_per_thread_test_part_result_reporter_(this),
+# pragma warning(pop)                     // Restores the warning state again.
+#else
+      default_global_test_part_result_reporter_(this),
+      default_per_thread_test_part_result_reporter_(this),
+#endif  // _MSC_VER
+      global_test_part_result_repoter_(
+          &default_global_test_part_result_reporter_),
+      per_thread_test_part_result_reporter_(
+          &default_per_thread_test_part_result_reporter_),
+#if GTEST_HAS_PARAM_TEST
+      parameterized_test_registry_(),
+      parameterized_tests_registered_(false),
+#endif  // GTEST_HAS_PARAM_TEST
+      last_death_test_case_(-1),
+      current_test_case_(NULL),
+      current_test_info_(NULL),
+      ad_hoc_test_result_(),
+      os_stack_trace_getter_(NULL),
+      post_flag_parse_init_performed_(false),
+      random_seed_(0),  // Will be overridden by the flag before first use.
+      random_(0),  // Will be reseeded before first use.
+      elapsed_time_(0),
+#if GTEST_HAS_DEATH_TEST
+      internal_run_death_test_flag_(NULL),
+      death_test_factory_(new DefaultDeathTestFactory),
+#endif
+      // Will be overridden by the flag before first use.
+      catch_exceptions_(false) {
+  listeners()->SetDefaultResultPrinter(new PrettyUnitTestResultPrinter);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a1cfa956ff0bfca1d1830454d0dd02f41}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!$\sim$\-Unit\-Test\-Impl@{$\sim$\-Unit\-Test\-Impl}}
+\index{$\sim$\-Unit\-Test\-Impl@{$\sim$\-Unit\-Test\-Impl}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{$\sim$\-Unit\-Test\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf \-Unit\-Test\-Impl} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a1cfa956ff0bfca1d1830454d0dd02f41}
+
+
+\-Definition at line 5282 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                            {
+  // Deletes every TestCase.
+  ForEach(test_cases_, internal::Delete<TestCase>);
+
+  // Deletes every Environment.
+  ForEach(environments_, internal::Delete<Environment>);
+
+  delete os_stack_trace_getter_;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aee362cac8540779d6b2287bd44f15444}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Unit\-Test\-Impl@{\-Unit\-Test\-Impl}}
+\index{\-Unit\-Test\-Impl@{\-Unit\-Test\-Impl}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Unit\-Test\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit\-Test\-Impl} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Unit\-Test} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aee362cac8540779d6b2287bd44f15444}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a7ed37f715469544e5e426b89b79d07db}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!$\sim$\-Unit\-Test\-Impl@{$\sim$\-Unit\-Test\-Impl}}
+\index{$\sim$\-Unit\-Test\-Impl@{$\sim$\-Unit\-Test\-Impl}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{$\sim$\-Unit\-Test\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}virtual $\sim${\bf \-Unit\-Test\-Impl} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a7ed37f715469544e5e426b89b79d07db}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a0cc79239ea952483734abc4999de7d8a}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!ad\-\_\-hoc\-\_\-test\-\_\-result@{ad\-\_\-hoc\-\_\-test\-\_\-result}}
+\index{ad\-\_\-hoc\-\_\-test\-\_\-result@{ad\-\_\-hoc\-\_\-test\-\_\-result}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{ad\-\_\-hoc\-\_\-test\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Result}$\ast$ {\bf ad\-\_\-hoc\-\_\-test\-\_\-result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a0cc79239ea952483734abc4999de7d8a}
+
+
+\-Definition at line 585 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return &ad_hoc_test_result_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a0cc79239ea952483734abc4999de7d8a}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!ad\-\_\-hoc\-\_\-test\-\_\-result@{ad\-\_\-hoc\-\_\-test\-\_\-result}}
+\index{ad\-\_\-hoc\-\_\-test\-\_\-result@{ad\-\_\-hoc\-\_\-test\-\_\-result}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{ad\-\_\-hoc\-\_\-test\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Result}$\ast$ {\bf ad\-\_\-hoc\-\_\-test\-\_\-result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a0cc79239ea952483734abc4999de7d8a}
+
+
+\-Definition at line 983 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return &ad_hoc_test_result_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a0f73735489a968e6f6d57f791a246615}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Add\-Test\-Info@{\-Add\-Test\-Info}}
+\index{\-Add\-Test\-Info@{\-Add\-Test\-Info}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Add\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Add\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-::\-Set\-Up\-Test\-Case\-Func}}]{set\-\_\-up\-\_\-tc, }
+\item[{{\bf \-Test\-::\-Tear\-Down\-Test\-Case\-Func}}]{tear\-\_\-down\-\_\-tc, }
+\item[{{\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a0f73735489a968e6f6d57f791a246615}
+
+
+\-Definition at line 633 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                        {
+    // In order to support thread-safe death tests, we need to
+    // remember the original working directory when the test program
+    // was first invoked.  We cannot do this in RUN_ALL_TESTS(), as
+    // the user may have changed the current directory before calling
+    // RUN_ALL_TESTS().  Therefore we capture the current directory in
+    // AddTestInfo(), which is called to register a TEST or TEST_F
+    // before main() is reached.
+    if (original_working_dir_.IsEmpty()) {
+      original_working_dir_.Set(FilePath::GetCurrentDir());
+      GTEST_CHECK_(!original_working_dir_.IsEmpty())
+          << "Failed to get the current working directory.";
+    }
+
+    GetTestCase(test_info->test_case_name(),
+                test_info->type_param(),
+                set_up_tc,
+                tear_down_tc)->AddTestInfo(test_info);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a0f73735489a968e6f6d57f791a246615}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Add\-Test\-Info@{\-Add\-Test\-Info}}
+\index{\-Add\-Test\-Info@{\-Add\-Test\-Info}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Add\-Test\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Add\-Test\-Info} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-::\-Set\-Up\-Test\-Case\-Func}}]{set\-\_\-up\-\_\-tc, }
+\item[{{\bf \-Test\-::\-Tear\-Down\-Test\-Case\-Func}}]{tear\-\_\-down\-\_\-tc, }
+\item[{{\bf \-Test\-Info} $\ast$}]{test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a0f73735489a968e6f6d57f791a246615}
+
+
+\-Definition at line 1031 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                        {
+    // In order to support thread-safe death tests, we need to
+    // remember the original working directory when the test program
+    // was first invoked.  We cannot do this in RUN_ALL_TESTS(), as
+    // the user may have changed the current directory before calling
+    // RUN_ALL_TESTS().  Therefore we capture the current directory in
+    // AddTestInfo(), which is called to register a TEST or TEST_F
+    // before main() is reached.
+    if (original_working_dir_.IsEmpty()) {
+      original_working_dir_.Set(FilePath::GetCurrentDir());
+      GTEST_CHECK_(!original_working_dir_.IsEmpty())
+          << "Failed to get the current working directory.";
+    }
+
+    GetTestCase(test_info->test_case_name(),
+                test_info->type_param(),
+                set_up_tc,
+                tear_down_tc)->AddTestInfo(test_info);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac7a9709851e6b257627f82921cbdeb7d}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!catch\-\_\-exceptions@{catch\-\_\-exceptions}}
+\index{catch\-\_\-exceptions@{catch\-\_\-exceptions}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{catch\-\_\-exceptions}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf catch\-\_\-exceptions} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac7a9709851e6b257627f82921cbdeb7d}
+
+
+\-Definition at line 785 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return catch_exceptions_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac7a9709851e6b257627f82921cbdeb7d}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!catch\-\_\-exceptions@{catch\-\_\-exceptions}}
+\index{catch\-\_\-exceptions@{catch\-\_\-exceptions}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{catch\-\_\-exceptions}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf catch\-\_\-exceptions} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac7a9709851e6b257627f82921cbdeb7d}
+
+
+\-Definition at line 1183 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return catch_exceptions_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ab35604304840b940d31f5153986b7e19}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Clear\-Ad\-Hoc\-Test\-Result@{\-Clear\-Ad\-Hoc\-Test\-Result}}
+\index{\-Clear\-Ad\-Hoc\-Test\-Result@{\-Clear\-Ad\-Hoc\-Test\-Result}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Clear\-Ad\-Hoc\-Test\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Clear\-Ad\-Hoc\-Test\-Result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ab35604304840b940d31f5153986b7e19}
+
+
+\-Definition at line 695 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                              {
+    ad_hoc_test_result_.Clear();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ab35604304840b940d31f5153986b7e19}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Clear\-Ad\-Hoc\-Test\-Result@{\-Clear\-Ad\-Hoc\-Test\-Result}}
+\index{\-Clear\-Ad\-Hoc\-Test\-Result@{\-Clear\-Ad\-Hoc\-Test\-Result}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Clear\-Ad\-Hoc\-Test\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Clear\-Ad\-Hoc\-Test\-Result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ab35604304840b940d31f5153986b7e19}
+
+
+\-Definition at line 1093 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                              {
+    ad_hoc_test_result_.Clear();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a3f7a43dd50595257ac958e7ec9112945}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Clear\-Non\-Ad\-Hoc\-Test\-Result@{\-Clear\-Non\-Ad\-Hoc\-Test\-Result}}
+\index{\-Clear\-Non\-Ad\-Hoc\-Test\-Result@{\-Clear\-Non\-Ad\-Hoc\-Test\-Result}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Clear\-Non\-Ad\-Hoc\-Test\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Clear\-Non\-Ad\-Hoc\-Test\-Result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a3f7a43dd50595257ac958e7ec9112945}
+
+
+\-Definition at line 690 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                 {
+    ForEach(test_cases_, TestCase::ClearTestCaseResult);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a3f7a43dd50595257ac958e7ec9112945}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Clear\-Non\-Ad\-Hoc\-Test\-Result@{\-Clear\-Non\-Ad\-Hoc\-Test\-Result}}
+\index{\-Clear\-Non\-Ad\-Hoc\-Test\-Result@{\-Clear\-Non\-Ad\-Hoc\-Test\-Result}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Clear\-Non\-Ad\-Hoc\-Test\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Clear\-Non\-Ad\-Hoc\-Test\-Result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a3f7a43dd50595257ac958e7ec9112945}
+
+
+\-Definition at line 1088 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                 {
+    ForEach(test_cases_, TestCase::ClearTestCaseResult);
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_acc7d69fbca3370bbdd13ee2b63576030}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Configure\-Xml\-Output@{\-Configure\-Xml\-Output}}
+\index{\-Configure\-Xml\-Output@{\-Configure\-Xml\-Output}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Configure\-Xml\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Configure\-Xml\-Output} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_acc7d69fbca3370bbdd13ee2b63576030}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_acc7d69fbca3370bbdd13ee2b63576030}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Configure\-Xml\-Output@{\-Configure\-Xml\-Output}}
+\index{\-Configure\-Xml\-Output@{\-Configure\-Xml\-Output}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Configure\-Xml\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Configure\-Xml\-Output} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_acc7d69fbca3370bbdd13ee2b63576030}
+
+
+\-Definition at line 5303 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                      {
+  const String& output_format = UnitTestOptions::GetOutputFormat();
+  if (output_format == "xml") {
+    listeners()->SetDefaultXmlGenerator(new XmlUnitTestResultPrinter(
+        UnitTestOptions::GetAbsolutePathToOutputFile().c_str()));
+  } else if (output_format != "") {
+    printf("WARNING: unrecognized output format \"%s\" ignored.\n",
+           output_format.c_str());
+    fflush(stdout);
+  }
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_af774518d9be68f728e9fffb00433ce69}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!current\-\_\-test\-\_\-case@{current\-\_\-test\-\_\-case}}
+\index{current\-\_\-test\-\_\-case@{current\-\_\-test\-\_\-case}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{current\-\_\-test\-\_\-case}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Case}$\ast$ {\bf current\-\_\-test\-\_\-case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_af774518d9be68f728e9fffb00433ce69}
+
+
+\-Definition at line 715 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return current_test_case_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_af774518d9be68f728e9fffb00433ce69}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!current\-\_\-test\-\_\-case@{current\-\_\-test\-\_\-case}}
+\index{current\-\_\-test\-\_\-case@{current\-\_\-test\-\_\-case}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{current\-\_\-test\-\_\-case}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Case}$\ast$ {\bf current\-\_\-test\-\_\-case} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_af774518d9be68f728e9fffb00433ce69}
+
+
+\-Definition at line 1113 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return current_test_case_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aff1e50095f685628d566cb3ac72f902f}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!current\-\_\-test\-\_\-info@{current\-\_\-test\-\_\-info}}
+\index{current\-\_\-test\-\_\-info@{current\-\_\-test\-\_\-info}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{current\-\_\-test\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Info}$\ast$ {\bf current\-\_\-test\-\_\-info} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aff1e50095f685628d566cb3ac72f902f}
+
+
+\-Definition at line 716 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return current_test_info_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a7e73834280234683e770ad12dc7c5ecc}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!current\-\_\-test\-\_\-info@{current\-\_\-test\-\_\-info}}
+\index{current\-\_\-test\-\_\-info@{current\-\_\-test\-\_\-info}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{current\-\_\-test\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Info}$\ast$ {\bf current\-\_\-test\-\_\-info} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a7e73834280234683e770ad12dc7c5ecc}
+
+
+\-Definition at line 717 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return current_test_info_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aff1e50095f685628d566cb3ac72f902f}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!current\-\_\-test\-\_\-info@{current\-\_\-test\-\_\-info}}
+\index{current\-\_\-test\-\_\-info@{current\-\_\-test\-\_\-info}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{current\-\_\-test\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Info}$\ast$ {\bf current\-\_\-test\-\_\-info} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aff1e50095f685628d566cb3ac72f902f}
+
+
+\-Definition at line 1114 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return current_test_info_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a7e73834280234683e770ad12dc7c5ecc}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!current\-\_\-test\-\_\-info@{current\-\_\-test\-\_\-info}}
+\index{current\-\_\-test\-\_\-info@{current\-\_\-test\-\_\-info}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{current\-\_\-test\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Info}$\ast$ {\bf current\-\_\-test\-\_\-info} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a7e73834280234683e770ad12dc7c5ecc}
+
+
+\-Definition at line 1115 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return current_test_info_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a847c541bb624cbb8ecc3ca24e755ac7c}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!current\-\_\-test\-\_\-result@{current\-\_\-test\-\_\-result}}
+\index{current\-\_\-test\-\_\-result@{current\-\_\-test\-\_\-result}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{current\-\_\-test\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Result}$\ast$ {\bf current\-\_\-test\-\_\-result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a847c541bb624cbb8ecc3ca24e755ac7c}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a385bee93ae6043262a860574aa59ba1a}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!current\-\_\-test\-\_\-result@{current\-\_\-test\-\_\-result}}
+\index{current\-\_\-test\-\_\-result@{current\-\_\-test\-\_\-result}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{current\-\_\-test\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Result} $\ast$ {\bf current\-\_\-test\-\_\-result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a385bee93ae6043262a860574aa59ba1a}
+
+
+\-Definition at line 5781 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                              {
+  return current_test_info_ ?
+      &(current_test_info_->result_) : &ad_hoc_test_result_;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a131dbc639dae87df46e7f92daad7c183}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Current\-Os\-Stack\-Trace\-Except\-Top@{\-Current\-Os\-Stack\-Trace\-Except\-Top}}
+\index{\-Current\-Os\-Stack\-Trace\-Except\-Top@{\-Current\-Os\-Stack\-Trace\-Except\-Top}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Current\-Os\-Stack\-Trace\-Except\-Top}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf \-Current\-Os\-Stack\-Trace\-Except\-Top} (
+\begin{DoxyParamCaption}
+\item[{int}]{skip\-\_\-count}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a131dbc639dae87df46e7f92daad7c183}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a131dbc639dae87df46e7f92daad7c183}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Current\-Os\-Stack\-Trace\-Except\-Top@{\-Current\-Os\-Stack\-Trace\-Except\-Top}}
+\index{\-Current\-Os\-Stack\-Trace\-Except\-Top@{\-Current\-Os\-Stack\-Trace\-Except\-Top}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Current\-Os\-Stack\-Trace\-Except\-Top}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-String} {\bf \-Current\-Os\-Stack\-Trace\-Except\-Top} (
+\begin{DoxyParamCaption}
+\item[{int}]{skip\-\_\-count}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a131dbc639dae87df46e7f92daad7c183}
+
+
+\-Definition at line 2063 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                {
+  (void)skip_count;
+  return String("");
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a10ec677118627074973fc20c9271b204}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!disabled\-\_\-test\-\_\-count@{disabled\-\_\-test\-\_\-count}}
+\index{disabled\-\_\-test\-\_\-count@{disabled\-\_\-test\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{disabled\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf disabled\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a10ec677118627074973fc20c9271b204}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a10ec677118627074973fc20c9271b204}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!disabled\-\_\-test\-\_\-count@{disabled\-\_\-test\-\_\-count}}
+\index{disabled\-\_\-test\-\_\-count@{disabled\-\_\-test\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{disabled\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf disabled\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a10ec677118627074973fc20c9271b204}
+
+
+\-Definition at line 2039 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                            {
+  return SumOverTestCaseList(test_cases_, &TestCase::disabled_test_count);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a4f91886b546ea9cc5ba2d374a62f3a9c}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!elapsed\-\_\-time@{elapsed\-\_\-time}}
+\index{elapsed\-\_\-time@{elapsed\-\_\-time}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{elapsed\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Time\-In\-Millis} {\bf elapsed\-\_\-time} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a4f91886b546ea9cc5ba2d374a62f3a9c}
+
+
+\-Definition at line 552 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return elapsed_time_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a4f91886b546ea9cc5ba2d374a62f3a9c}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!elapsed\-\_\-time@{elapsed\-\_\-time}}
+\index{elapsed\-\_\-time@{elapsed\-\_\-time}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{elapsed\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Time\-In\-Millis} {\bf elapsed\-\_\-time} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a4f91886b546ea9cc5ba2d374a62f3a9c}
+
+
+\-Definition at line 950 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return elapsed_time_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ab8c736184a052dbb4cb9e217683bae7a}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!environments@{environments}}
+\index{environments@{environments}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{environments}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf \-Environment}$\ast$$>$\& {\bf environments} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ab8c736184a052dbb4cb9e217683bae7a}
+
+
+\-Definition at line 721 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return environments_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ab8c736184a052dbb4cb9e217683bae7a}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!environments@{environments}}
+\index{environments@{environments}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{environments}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf \-Environment}$\ast$$>$\& {\bf environments} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ab8c736184a052dbb4cb9e217683bae7a}
+
+
+\-Definition at line 1119 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return environments_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a7cf078354304c964c1934f53bf2bb4d7}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Failed@{\-Failed}}
+\index{\-Failed@{\-Failed}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Failed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Failed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a7cf078354304c964c1934f53bf2bb4d7}
+
+
+\-Definition at line 559 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                      {
+    return failed_test_case_count() > 0 || ad_hoc_test_result()->Failed();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a7cf078354304c964c1934f53bf2bb4d7}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Failed@{\-Failed}}
+\index{\-Failed@{\-Failed}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Failed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Failed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a7cf078354304c964c1934f53bf2bb4d7}
+
+
+\-Definition at line 957 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                      {
+    return failed_test_case_count() > 0 || ad_hoc_test_result()->Failed();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a48f76adebf95bff36f0026f0a66c7057}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!failed\-\_\-test\-\_\-case\-\_\-count@{failed\-\_\-test\-\_\-case\-\_\-count}}
+\index{failed\-\_\-test\-\_\-case\-\_\-count@{failed\-\_\-test\-\_\-case\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{failed\-\_\-test\-\_\-case\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf failed\-\_\-test\-\_\-case\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a48f76adebf95bff36f0026f0a66c7057}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a48f76adebf95bff36f0026f0a66c7057}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!failed\-\_\-test\-\_\-case\-\_\-count@{failed\-\_\-test\-\_\-case\-\_\-count}}
+\index{failed\-\_\-test\-\_\-case\-\_\-count@{failed\-\_\-test\-\_\-case\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{failed\-\_\-test\-\_\-case\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf failed\-\_\-test\-\_\-case\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a48f76adebf95bff36f0026f0a66c7057}
+
+
+\-Definition at line 2013 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                               {
+  return CountIf(test_cases_, TestCaseFailed);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_afd8bbd35c7ee99960abb321cfdff3119}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!failed\-\_\-test\-\_\-count@{failed\-\_\-test\-\_\-count}}
+\index{failed\-\_\-test\-\_\-count@{failed\-\_\-test\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{failed\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf failed\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_afd8bbd35c7ee99960abb321cfdff3119}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_afd8bbd35c7ee99960abb321cfdff3119}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!failed\-\_\-test\-\_\-count@{failed\-\_\-test\-\_\-count}}
+\index{failed\-\_\-test\-\_\-count@{failed\-\_\-test\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{failed\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf failed\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_afd8bbd35c7ee99960abb321cfdff3119}
+
+
+\-Definition at line 2034 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                          {
+  return SumOverTestCaseList(test_cases_, &TestCase::failed_test_count);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_af8cfcffb71cba69a55105ddac96786aa}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Filter\-Tests@{\-Filter\-Tests}}
+\index{\-Filter\-Tests@{\-Filter\-Tests}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Filter\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Filter\-Tests} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Reaction\-To\-Sharding}}]{shard\-\_\-tests}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_af8cfcffb71cba69a55105ddac96786aa}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_af8cfcffb71cba69a55105ddac96786aa}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Filter\-Tests@{\-Filter\-Tests}}
+\index{\-Filter\-Tests@{\-Filter\-Tests}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Filter\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Filter\-Tests} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Reaction\-To\-Sharding}}]{shard\-\_\-tests}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_af8cfcffb71cba69a55105ddac96786aa}
+
+
+\-Definition at line 5681 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                            {
+  const Int32 total_shards = shard_tests == HONOR_SHARDING_PROTOCOL ?
+      Int32FromEnvOrDie(kTestTotalShards, -1) : -1;
+  const Int32 shard_index = shard_tests == HONOR_SHARDING_PROTOCOL ?
+      Int32FromEnvOrDie(kTestShardIndex, -1) : -1;
+
+  // num_runnable_tests are the number of tests that will
+  // run across all shards (i.e., match filter and are not disabled).
+  // num_selected_tests are the number of tests to be run on
+  // this shard.
+  int num_runnable_tests = 0;
+  int num_selected_tests = 0;
+  for (size_t i = 0; i < test_cases_.size(); i++) {
+    TestCase* const test_case = test_cases_[i];
+    const String &test_case_name = test_case->name();
+    test_case->set_should_run(false);
+
+    for (size_t j = 0; j < test_case->test_info_list().size(); j++) {
+      TestInfo* const test_info = test_case->test_info_list()[j];
+      const String test_name(test_info->name());
+      // A test is disabled if test case name or test name matches
+      // kDisableTestFilter.
+      const bool is_disabled =
+          internal::UnitTestOptions::MatchesFilter(test_case_name,
+                                                   kDisableTestFilter) ||
+          internal::UnitTestOptions::MatchesFilter(test_name,
+                                                   kDisableTestFilter);
+      test_info->is_disabled_ = is_disabled;
+
+      const bool matches_filter =
+          internal::UnitTestOptions::FilterMatchesTest(test_case_name,
+                                                       test_name);
+      test_info->matches_filter_ = matches_filter;
+
+      const bool is_runnable =
+          (GTEST_FLAG(also_run_disabled_tests) || !is_disabled) &&
+          matches_filter;
+
+      const bool is_selected = is_runnable &&
+          (shard_tests == IGNORE_SHARDING_PROTOCOL ||
+           ShouldRunTestOnShard(total_shards, shard_index,
+                                num_runnable_tests));
+
+      num_runnable_tests += is_runnable;
+      num_selected_tests += is_selected;
+
+      test_info->should_run_ = is_selected;
+      test_case->set_should_run(test_case->should_run() || is_selected);
+    }
+  }
+  return num_selected_tests;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a8d944ff1c21128f6537597a403287b71}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Get\-Global\-Test\-Part\-Result\-Reporter@{\-Get\-Global\-Test\-Part\-Result\-Reporter}}
+\index{\-Get\-Global\-Test\-Part\-Result\-Reporter@{\-Get\-Global\-Test\-Part\-Result\-Reporter}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Get\-Global\-Test\-Part\-Result\-Reporter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Part\-Result\-Reporter\-Interface}$\ast$ {\bf \-Get\-Global\-Test\-Part\-Result\-Reporter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a8d944ff1c21128f6537597a403287b71}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a95cd925236936aab4dd3604aaeae9b15}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Get\-Global\-Test\-Part\-Result\-Reporter@{\-Get\-Global\-Test\-Part\-Result\-Reporter}}
+\index{\-Get\-Global\-Test\-Part\-Result\-Reporter@{\-Get\-Global\-Test\-Part\-Result\-Reporter}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Get\-Global\-Test\-Part\-Result\-Reporter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Part\-Result\-Reporter\-Interface} $\ast$ {\bf \-Get\-Global\-Test\-Part\-Result\-Reporter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a95cd925236936aab4dd3604aaeae9b15}
+
+
+\-Definition at line 1983 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                              {
+  internal::MutexLock lock(&global_test_part_result_reporter_mutex_);
+  return global_test_part_result_repoter_;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a04b94a3c825711103b247aa87d6b76e3}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Get\-Mutable\-Test\-Case@{\-Get\-Mutable\-Test\-Case}}
+\index{\-Get\-Mutable\-Test\-Case@{\-Get\-Mutable\-Test\-Case}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Get\-Mutable\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case}$\ast$ {\bf \-Get\-Mutable\-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a04b94a3c825711103b247aa87d6b76e3}
+
+
+\-Definition at line 572 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                      {
+    const int index = GetElementOr(test_case_indices_, i, -1);
+    return index < 0 ? NULL : test_cases_[index];
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a04b94a3c825711103b247aa87d6b76e3}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Get\-Mutable\-Test\-Case@{\-Get\-Mutable\-Test\-Case}}
+\index{\-Get\-Mutable\-Test\-Case@{\-Get\-Mutable\-Test\-Case}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Get\-Mutable\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case}$\ast$ {\bf \-Get\-Mutable\-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a04b94a3c825711103b247aa87d6b76e3}
+
+
+\-Definition at line 970 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                      {
+    const int index = GetElementOr(test_case_indices_, i, -1);
+    return index < 0 ? NULL : test_cases_[index];
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_adced0a9df4be306d905a3f954fc3eedf}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Get\-Test\-Case@{\-Get\-Test\-Case}}
+\index{\-Get\-Test\-Case@{\-Get\-Test\-Case}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Get\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Case}$\ast$ {\bf \-Get\-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_adced0a9df4be306d905a3f954fc3eedf}
+
+
+\-Definition at line 565 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                           {
+    const int index = GetElementOr(test_case_indices_, i, -1);
+    return index < 0 ? NULL : test_cases_[i];
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aa19f802545df3b5cc294748b5aae3e46}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Get\-Test\-Case@{\-Get\-Test\-Case}}
+\index{\-Get\-Test\-Case@{\-Get\-Test\-Case}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Get\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case}$\ast$ {\bf \-Get\-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{test\-\_\-case\-\_\-name, }
+\item[{const char $\ast$}]{type\-\_\-param, }
+\item[{{\bf \-Test\-::\-Set\-Up\-Test\-Case\-Func}}]{set\-\_\-up\-\_\-tc, }
+\item[{{\bf \-Test\-::\-Tear\-Down\-Test\-Case\-Func}}]{tear\-\_\-down\-\_\-tc}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aa19f802545df3b5cc294748b5aae3e46}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_adced0a9df4be306d905a3f954fc3eedf}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Get\-Test\-Case@{\-Get\-Test\-Case}}
+\index{\-Get\-Test\-Case@{\-Get\-Test\-Case}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Get\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Test\-Case}$\ast$ {\bf \-Get\-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_adced0a9df4be306d905a3f954fc3eedf}
+
+
+\-Definition at line 963 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                           {
+    const int index = GetElementOr(test_case_indices_, i, -1);
+    return index < 0 ? NULL : test_cases_[i];
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a6438a25b62877163bec864df1369909b}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Get\-Test\-Case@{\-Get\-Test\-Case}}
+\index{\-Get\-Test\-Case@{\-Get\-Test\-Case}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Get\-Test\-Case}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case} $\ast$ {\bf \-Get\-Test\-Case} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{test\-\_\-case\-\_\-name, }
+\item[{const char $\ast$}]{type\-\_\-param, }
+\item[{{\bf \-Test\-::\-Set\-Up\-Test\-Case\-Func}}]{set\-\_\-up\-\_\-tc, }
+\item[{{\bf \-Test\-::\-Tear\-Down\-Test\-Case\-Func}}]{tear\-\_\-down\-\_\-tc}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a6438a25b62877163bec864df1369909b}
+
+
+\-Definition at line 5400 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                           {
+  // Can we find a TestCase with the given name?
+  const std::vector<TestCase*>::const_iterator test_case =
+      std::find_if(test_cases_.begin(), test_cases_.end(),
+                   TestCaseNameIs(test_case_name));
+
+  if (test_case != test_cases_.end())
+    return *test_case;
+
+  // No.  Let's create one.
+  TestCase* const new_test_case =
+      new TestCase(test_case_name, type_param, set_up_tc, tear_down_tc);
+
+  // Is this a death test case?
+  if (internal::UnitTestOptions::MatchesFilter(String(test_case_name),
+                                               kDeathTestCaseFilter)) {
+    // Yes.  Inserts the test case after the last death test case
+    // defined so far.  This only works when the test cases haven't
+    // been shuffled.  Otherwise we may end up running a death test
+    // after a non-death test.
+    ++last_death_test_case_;
+    test_cases_.insert(test_cases_.begin() + last_death_test_case_,
+                       new_test_case);
+  } else {
+    // No.  Appends to the end of the list.
+    test_cases_.push_back(new_test_case);
+  }
+
+  test_case_indices_.push_back(static_cast<int>(test_case_indices_.size()));
+  return new_test_case;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a4e160e9e1b736e0ce1fd49918af86da5}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread@{\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}}
+\index{\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread@{\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Part\-Result\-Reporter\-Interface}$\ast$ {\bf \-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a4e160e9e1b736e0ce1fd49918af86da5}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a300e589a3266a50b3c75dc14cc9673ed}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread@{\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}}
+\index{\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread@{\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Part\-Result\-Reporter\-Interface} $\ast$ {\bf \-Get\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a300e589a3266a50b3c75dc14cc9673ed}
+
+
+\-Definition at line 1997 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                        {
+  return per_thread_test_part_result_reporter_.get();
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aa55ac9e56273d4b29e38abe67003384f}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Unit\-Test\-Impl}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aa55ac9e56273d4b29e38abe67003384f}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aa55ac9e56273d4b29e38abe67003384f}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}}
+\index{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-@{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-T\-E\-S\-T\-\_\-\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Unit\-Test\-Impl}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aa55ac9e56273d4b29e38abe67003384f}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a07ea86c2b77af0393783430499b22321}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!gtest\-\_\-trace\-\_\-stack@{gtest\-\_\-trace\-\_\-stack}}
+\index{gtest\-\_\-trace\-\_\-stack@{gtest\-\_\-trace\-\_\-stack}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{gtest\-\_\-trace\-\_\-stack}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf \-Trace\-Info}$>$\& {\bf gtest\-\_\-trace\-\_\-stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a07ea86c2b77af0393783430499b22321}
+
+
+\-Definition at line 724 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                            {
+    return *(gtest_trace_stack_.pointer());
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a289d5745773f4d2e5b339960d3e9ce68}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!gtest\-\_\-trace\-\_\-stack@{gtest\-\_\-trace\-\_\-stack}}
+\index{gtest\-\_\-trace\-\_\-stack@{gtest\-\_\-trace\-\_\-stack}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{gtest\-\_\-trace\-\_\-stack}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<${\bf \-Trace\-Info}$>$\& {\bf gtest\-\_\-trace\-\_\-stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a289d5745773f4d2e5b339960d3e9ce68}
+
+
+\-Definition at line 727 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                                        {
+    return gtest_trace_stack_.get();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a07ea86c2b77af0393783430499b22321}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!gtest\-\_\-trace\-\_\-stack@{gtest\-\_\-trace\-\_\-stack}}
+\index{gtest\-\_\-trace\-\_\-stack@{gtest\-\_\-trace\-\_\-stack}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{gtest\-\_\-trace\-\_\-stack}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf \-Trace\-Info}$>$\& {\bf gtest\-\_\-trace\-\_\-stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a07ea86c2b77af0393783430499b22321}
+
+
+\-Definition at line 1122 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                            {
+    return *(gtest_trace_stack_.pointer());
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a289d5745773f4d2e5b339960d3e9ce68}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!gtest\-\_\-trace\-\_\-stack@{gtest\-\_\-trace\-\_\-stack}}
+\index{gtest\-\_\-trace\-\_\-stack@{gtest\-\_\-trace\-\_\-stack}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{gtest\-\_\-trace\-\_\-stack}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<${\bf \-Trace\-Info}$>$\& {\bf gtest\-\_\-trace\-\_\-stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a289d5745773f4d2e5b339960d3e9ce68}
+
+
+\-Definition at line 1125 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                        {
+    return gtest_trace_stack_.get();
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a371c481b63deeb0ecd47f42b4720480b}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!listeners@{listeners}}
+\index{listeners@{listeners}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{listeners}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Event\-Listeners}$\ast$ {\bf listeners} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a371c481b63deeb0ecd47f42b4720480b}
+
+
+\-Definition at line 578 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return &listeners_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a371c481b63deeb0ecd47f42b4720480b}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!listeners@{listeners}}
+\index{listeners@{listeners}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{listeners}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Event\-Listeners}$\ast$ {\bf listeners} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a371c481b63deeb0ecd47f42b4720480b}
+
+
+\-Definition at line 976 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return &listeners_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_abc77b71cd244096a75b13b8a2d9f7d14}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-List\-Tests\-Matching\-Filter@{\-List\-Tests\-Matching\-Filter}}
+\index{\-List\-Tests\-Matching\-Filter@{\-List\-Tests\-Matching\-Filter}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-List\-Tests\-Matching\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-List\-Tests\-Matching\-Filter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_abc77b71cd244096a75b13b8a2d9f7d14}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_abc77b71cd244096a75b13b8a2d9f7d14}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-List\-Tests\-Matching\-Filter@{\-List\-Tests\-Matching\-Filter}}
+\index{\-List\-Tests\-Matching\-Filter@{\-List\-Tests\-Matching\-Filter}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-List\-Tests\-Matching\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-List\-Tests\-Matching\-Filter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_abc77b71cd244096a75b13b8a2d9f7d14}
+
+
+\-Definition at line 5735 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                           {
+  for (size_t i = 0; i < test_cases_.size(); i++) {
+    const TestCase* const test_case = test_cases_[i];
+    bool printed_test_case_name = false;
+
+    for (size_t j = 0; j < test_case->test_info_list().size(); j++) {
+      const TestInfo* const test_info =
+          test_case->test_info_list()[j];
+      if (test_info->matches_filter_) {
+        if (!printed_test_case_name) {
+          printed_test_case_name = true;
+          printf("%s.\n", test_case->name());
+        }
+        printf("  %s\n", test_info->name());
+      }
+    }
+  }
+  fflush(stdout);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aae448a88298f8b6c5ef2f80e53d138fc}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!os\-\_\-stack\-\_\-trace\-\_\-getter@{os\-\_\-stack\-\_\-trace\-\_\-getter}}
+\index{os\-\_\-stack\-\_\-trace\-\_\-getter@{os\-\_\-stack\-\_\-trace\-\_\-getter}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{os\-\_\-stack\-\_\-trace\-\_\-getter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Os\-Stack\-Trace\-Getter\-Interface}$\ast$ {\bf os\-\_\-stack\-\_\-trace\-\_\-getter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aae448a88298f8b6c5ef2f80e53d138fc}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_accb552ad4af910904a9e48c49c5c79a2}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!os\-\_\-stack\-\_\-trace\-\_\-getter@{os\-\_\-stack\-\_\-trace\-\_\-getter}}
+\index{os\-\_\-stack\-\_\-trace\-\_\-getter@{os\-\_\-stack\-\_\-trace\-\_\-getter}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{os\-\_\-stack\-\_\-trace\-\_\-getter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Os\-Stack\-Trace\-Getter\-Interface} $\ast$ {\bf os\-\_\-stack\-\_\-trace\-\_\-getter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_accb552ad4af910904a9e48c49c5c79a2}
+
+
+\-Definition at line 5771 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                                 {
+  if (os_stack_trace_getter_ == NULL) {
+    os_stack_trace_getter_ = new OsStackTraceGetter;
+  }
+
+  return os_stack_trace_getter_;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac97d5073365af8a73262fd9f6bf18656}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Passed@{\-Passed}}
+\index{\-Passed@{\-Passed}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Passed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Passed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac97d5073365af8a73262fd9f6bf18656}
+
+
+\-Definition at line 555 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return !Failed(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac97d5073365af8a73262fd9f6bf18656}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Passed@{\-Passed}}
+\index{\-Passed@{\-Passed}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Passed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Passed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac97d5073365af8a73262fd9f6bf18656}
+
+
+\-Definition at line 953 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return !Failed(); }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a3d68c6d1fdec822210f96171a3b57b47}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Post\-Flag\-Parsing\-Init@{\-Post\-Flag\-Parsing\-Init}}
+\index{\-Post\-Flag\-Parsing\-Init@{\-Post\-Flag\-Parsing\-Init}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Post\-Flag\-Parsing\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Post\-Flag\-Parsing\-Init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a3d68c6d1fdec822210f96171a3b57b47}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a3d68c6d1fdec822210f96171a3b57b47}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Post\-Flag\-Parsing\-Init@{\-Post\-Flag\-Parsing\-Init}}
+\index{\-Post\-Flag\-Parsing\-Init@{\-Post\-Flag\-Parsing\-Init}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Post\-Flag\-Parsing\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Post\-Flag\-Parsing\-Init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a3d68c6d1fdec822210f96171a3b57b47}
+
+
+\-Definition at line 5339 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                       {
+  // Ensures that this function does not execute more than once.
+  if (!post_flag_parse_init_performed_) {
+    post_flag_parse_init_performed_ = true;
+
+#if GTEST_HAS_DEATH_TEST
+    InitDeathTestSubprocessControlInfo();
+    SuppressTestEventsIfInSubprocess();
+#endif  // GTEST_HAS_DEATH_TEST
+
+    // Registers parameterized tests. This makes parameterized tests
+    // available to the UnitTest reflection API without running
+    // RUN_ALL_TESTS.
+    RegisterParameterizedTests();
+
+    // Configures listeners for XML output. This makes it possible for users
+    // to shut down the default XML output before invoking RUN_ALL_TESTS.
+    ConfigureXmlOutput();
+
+#if GTEST_CAN_STREAM_RESULTS_
+    // Configures listeners for streaming test results to the specified server.
+    ConfigureStreamingOutput();
+#endif  // GTEST_CAN_STREAM_RESULTS_
+  }
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a485dc510d5b4af5835231d23e5510b25}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!random@{random}}
+\index{random@{random}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}{\bf internal\-::\-Random}$\ast$ {\bf random} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a485dc510d5b4af5835231d23e5510b25}
+
+
+\-Definition at line 774 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return &random_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a485dc510d5b4af5835231d23e5510b25}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!random@{random}}
+\index{random@{random}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}{\bf internal\-::\-Random}$\ast$ {\bf random} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a485dc510d5b4af5835231d23e5510b25}
+
+
+\-Definition at line 1172 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return &random_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac0bcee84bdc839bfabd0a829642ab4f7}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!random\-\_\-seed@{random\-\_\-seed}}
+\index{random\-\_\-seed@{random\-\_\-seed}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{random\-\_\-seed}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf random\-\_\-seed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac0bcee84bdc839bfabd0a829642ab4f7}
+
+
+\-Definition at line 771 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ return random_seed_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac0bcee84bdc839bfabd0a829642ab4f7}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!random\-\_\-seed@{random\-\_\-seed}}
+\index{random\-\_\-seed@{random\-\_\-seed}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{random\-\_\-seed}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf random\-\_\-seed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac0bcee84bdc839bfabd0a829642ab4f7}
+
+
+\-Definition at line 1169 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ return random_seed_; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a42dd6cc650b930bbf73f665fbb13d515}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Register\-Parameterized\-Tests@{\-Register\-Parameterized\-Tests}}
+\index{\-Register\-Parameterized\-Tests@{\-Register\-Parameterized\-Tests}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Register\-Parameterized\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Register\-Parameterized\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a42dd6cc650b930bbf73f665fbb13d515}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a42dd6cc650b930bbf73f665fbb13d515}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Register\-Parameterized\-Tests@{\-Register\-Parameterized\-Tests}}
+\index{\-Register\-Parameterized\-Tests@{\-Register\-Parameterized\-Tests}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Register\-Parameterized\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Register\-Parameterized\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a42dd6cc650b930bbf73f665fbb13d515}
+
+
+\-Definition at line 3603 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                              {
+#if GTEST_HAS_PARAM_TEST
+  if (!parameterized_tests_registered_) {
+    parameterized_test_registry_.RegisterTests();
+    parameterized_tests_registered_ = true;
+  }
+#endif
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a4d5d6a2e8fa3b918a284252602a98279}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Run\-All\-Tests@{\-Run\-All\-Tests}}
+\index{\-Run\-All\-Tests@{\-Run\-All\-Tests}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Run\-All\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Run\-All\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a4d5d6a2e8fa3b918a284252602a98279}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a4d5d6a2e8fa3b918a284252602a98279}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Run\-All\-Tests@{\-Run\-All\-Tests}}
+\index{\-Run\-All\-Tests@{\-Run\-All\-Tests}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Run\-All\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Run\-All\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a4d5d6a2e8fa3b918a284252602a98279}
+
+
+\-Definition at line 5449 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                               {
+  // Makes sure InitGoogleTest() was called.
+  if (!GTestIsInitialized()) {
+    printf("%s",
+           "\nThis test program did NOT call ::testing::InitGoogleTest "
+           "before calling RUN_ALL_TESTS().  Please fix it.\n");
+    return false;
+  }
+
+  // Do not run any test if the --help flag was specified.
+  if (g_help_flag)
+    return true;
+
+  // Repeats the call to the post-flag parsing initialization in case the
+  // user didn't call InitGoogleTest.
+  PostFlagParsingInit();
+
+  // Even if sharding is not on, test runners may want to use the
+  // GTEST_SHARD_STATUS_FILE to query whether the test supports the sharding
+  // protocol.
+  internal::WriteToShardStatusFileIfNeeded();
+
+  // True iff we are in a subprocess for running a thread-safe-style
+  // death test.
+  bool in_subprocess_for_death_test = false;
+
+#if GTEST_HAS_DEATH_TEST
+  in_subprocess_for_death_test = (internal_run_death_test_flag_.get() != NULL);
+#endif  // GTEST_HAS_DEATH_TEST
+
+  const bool should_shard = ShouldShard(kTestTotalShards, kTestShardIndex,
+                                        in_subprocess_for_death_test);
+
+  // Compares the full test names with the filter to decide which
+  // tests to run.
+  const bool has_tests_to_run = FilterTests(should_shard
+                                              ? HONOR_SHARDING_PROTOCOL
+                                              : IGNORE_SHARDING_PROTOCOL) > 0;
+
+  // Lists the tests and exits if the --gtest_list_tests flag was specified.
+  if (GTEST_FLAG(list_tests)) {
+    // This must be called *after* FilterTests() has been called.
+    ListTestsMatchingFilter();
+    return true;
+  }
+
+  random_seed_ = GTEST_FLAG(shuffle) ?
+      GetRandomSeedFromFlag(GTEST_FLAG(random_seed)) : 0;
+
+  // True iff at least one test has failed.
+  bool failed = false;
+
+  TestEventListener* repeater = listeners()->repeater();
+
+  repeater->OnTestProgramStart(*parent_);
+
+  // How many times to repeat the tests?  We don't want to repeat them
+  // when we are inside the subprocess of a death test.
+  const int repeat = in_subprocess_for_death_test ? 1 : GTEST_FLAG(repeat);
+  // Repeats forever if the repeat count is negative.
+  const bool forever = repeat < 0;
+  for (int i = 0; forever || i != repeat; i++) {
+    // We want to preserve failures generated by ad-hoc test
+    // assertions executed before RUN_ALL_TESTS().
+    ClearNonAdHocTestResult();
+
+    const TimeInMillis start = GetTimeInMillis();
+
+    // Shuffles test cases and tests if requested.
+    if (has_tests_to_run && GTEST_FLAG(shuffle)) {
+      random()->Reseed(random_seed_);
+      // This should be done before calling OnTestIterationStart(),
+      // such that a test event listener can see the actual test order
+      // in the event.
+      ShuffleTests();
+    }
+
+    // Tells the unit test event listeners that the tests are about to start.
+    repeater->OnTestIterationStart(*parent_, i);
+
+    // Runs each test case if there is at least one test to run.
+    if (has_tests_to_run) {
+      // Sets up all environments beforehand.
+      repeater->OnEnvironmentsSetUpStart(*parent_);
+      ForEach(environments_, SetUpEnvironment);
+      repeater->OnEnvironmentsSetUpEnd(*parent_);
+
+      // Runs the tests only if there was no fatal failure during global
+      // set-up.
+      if (!Test::HasFatalFailure()) {
+        for (int test_index = 0; test_index < total_test_case_count();
+             test_index++) {
+          GetMutableTestCase(test_index)->Run();
+        }
+      }
+
+      // Tears down all environments in reverse order afterwards.
+      repeater->OnEnvironmentsTearDownStart(*parent_);
+      std::for_each(environments_.rbegin(), environments_.rend(),
+                    TearDownEnvironment);
+      repeater->OnEnvironmentsTearDownEnd(*parent_);
+    }
+
+    elapsed_time_ = GetTimeInMillis() - start;
+
+    // Tells the unit test event listener that the tests have just finished.
+    repeater->OnTestIterationEnd(*parent_, i);
+
+    // Gets the result and clears it.
+    if (!Passed()) {
+      failed = true;
+    }
+
+    // Restores the original test order after the iteration.  This
+    // allows the user to quickly repro a failure that happens in the
+    // N-th iteration without repeating the first (N - 1) iterations.
+    // This is not enclosed in "if (GTEST_FLAG(shuffle)) { ... }", in
+    // case the user somehow changes the value of the flag somewhere
+    // (it's always safe to unshuffle the tests).
+    UnshuffleTests();
+
+    if (GTEST_FLAG(shuffle)) {
+      // Picks a new random seed for each iteration.
+      random_seed_ = GetNextRandomSeed(random_seed_);
+    }
+  }
+
+  repeater->OnTestProgramEnd(*parent_);
+
+  return !failed;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a74595949fcf89d662112e08b5e21e560}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!set\-\_\-catch\-\_\-exceptions@{set\-\_\-catch\-\_\-exceptions}}
+\index{set\-\_\-catch\-\_\-exceptions@{set\-\_\-catch\-\_\-exceptions}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{set\-\_\-catch\-\_\-exceptions}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-catch\-\_\-exceptions} (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a74595949fcf89d662112e08b5e21e560}
+
+
+\-Definition at line 792 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+{ catch_exceptions_ = value; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a74595949fcf89d662112e08b5e21e560}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!set\-\_\-catch\-\_\-exceptions@{set\-\_\-catch\-\_\-exceptions}}
+\index{set\-\_\-catch\-\_\-exceptions@{set\-\_\-catch\-\_\-exceptions}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{set\-\_\-catch\-\_\-exceptions}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-catch\-\_\-exceptions} (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a74595949fcf89d662112e08b5e21e560}
+
+
+\-Definition at line 1190 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+{ catch_exceptions_ = value; }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a0566e56597ac7b24d29d6545d82b5f3e}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!set\-\_\-current\-\_\-test\-\_\-case@{set\-\_\-current\-\_\-test\-\_\-case}}
+\index{set\-\_\-current\-\_\-test\-\_\-case@{set\-\_\-current\-\_\-test\-\_\-case}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{set\-\_\-current\-\_\-test\-\_\-case}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-current\-\_\-test\-\_\-case} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Case} $\ast$}]{a\-\_\-current\-\_\-test\-\_\-case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a0566e56597ac7b24d29d6545d82b5f3e}
+
+
+\-Definition at line 664 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                                            {
+    current_test_case_ = a_current_test_case;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a0566e56597ac7b24d29d6545d82b5f3e}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!set\-\_\-current\-\_\-test\-\_\-case@{set\-\_\-current\-\_\-test\-\_\-case}}
+\index{set\-\_\-current\-\_\-test\-\_\-case@{set\-\_\-current\-\_\-test\-\_\-case}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{set\-\_\-current\-\_\-test\-\_\-case}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-current\-\_\-test\-\_\-case} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Case} $\ast$}]{a\-\_\-current\-\_\-test\-\_\-case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a0566e56597ac7b24d29d6545d82b5f3e}
+
+
+\-Definition at line 1062 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                            {
+    current_test_case_ = a_current_test_case;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a8bfd2a1906902da5fa95a75792883177}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!set\-\_\-current\-\_\-test\-\_\-info@{set\-\_\-current\-\_\-test\-\_\-info}}
+\index{set\-\_\-current\-\_\-test\-\_\-info@{set\-\_\-current\-\_\-test\-\_\-info}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{set\-\_\-current\-\_\-test\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-current\-\_\-test\-\_\-info} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Info} $\ast$}]{a\-\_\-current\-\_\-test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a8bfd2a1906902da5fa95a75792883177}
+
+
+\-Definition at line 671 of file gtest-\/internal-\/inl.\-h.
+
+
+\begin{DoxyCode}
+                                                            {
+    current_test_info_ = a_current_test_info;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a8bfd2a1906902da5fa95a75792883177}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!set\-\_\-current\-\_\-test\-\_\-info@{set\-\_\-current\-\_\-test\-\_\-info}}
+\index{set\-\_\-current\-\_\-test\-\_\-info@{set\-\_\-current\-\_\-test\-\_\-info}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{set\-\_\-current\-\_\-test\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-current\-\_\-test\-\_\-info} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Info} $\ast$}]{a\-\_\-current\-\_\-test\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a8bfd2a1906902da5fa95a75792883177}
+
+
+\-Definition at line 1069 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                            {
+    current_test_info_ = a_current_test_info;
+  }
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a965c4bc292baeaefc41238f86f36f67c}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter@{set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter}}
+\index{set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter@{set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Os\-Stack\-Trace\-Getter\-Interface} $\ast$}]{getter}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a965c4bc292baeaefc41238f86f36f67c}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a965c4bc292baeaefc41238f86f36f67c}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter@{set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter}}
+\index{set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter@{set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-os\-\_\-stack\-\_\-trace\-\_\-getter} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Os\-Stack\-Trace\-Getter\-Interface} $\ast$}]{getter}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a965c4bc292baeaefc41238f86f36f67c}
+
+
+\-Definition at line 5760 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                         {
+  if (os_stack_trace_getter_ != getter) {
+    delete os_stack_trace_getter_;
+    os_stack_trace_getter_ = getter;
+  }
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a5d379c4ca61275c92e23f8605a67c918}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Set\-Global\-Test\-Part\-Result\-Reporter@{\-Set\-Global\-Test\-Part\-Result\-Reporter}}
+\index{\-Set\-Global\-Test\-Part\-Result\-Reporter@{\-Set\-Global\-Test\-Part\-Result\-Reporter}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Set\-Global\-Test\-Part\-Result\-Reporter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Set\-Global\-Test\-Part\-Result\-Reporter} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Part\-Result\-Reporter\-Interface} $\ast$}]{reporter}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a5d379c4ca61275c92e23f8605a67c918}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a5d379c4ca61275c92e23f8605a67c918}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Set\-Global\-Test\-Part\-Result\-Reporter@{\-Set\-Global\-Test\-Part\-Result\-Reporter}}
+\index{\-Set\-Global\-Test\-Part\-Result\-Reporter@{\-Set\-Global\-Test\-Part\-Result\-Reporter}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Set\-Global\-Test\-Part\-Result\-Reporter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Set\-Global\-Test\-Part\-Result\-Reporter} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Part\-Result\-Reporter\-Interface} $\ast$}]{reporter}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a5d379c4ca61275c92e23f8605a67c918}
+
+
+\-Definition at line 1989 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                               {
+  internal::MutexLock lock(&global_test_part_result_reporter_mutex_);
+  global_test_part_result_repoter_ = reporter;
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ab71b8e31b6a6f77a3c80e76f1a17336c}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread@{\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}}
+\index{\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread@{\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Part\-Result\-Reporter\-Interface} $\ast$}]{reporter}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ab71b8e31b6a6f77a3c80e76f1a17336c}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ab71b8e31b6a6f77a3c80e76f1a17336c}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread@{\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}}
+\index{\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread@{\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Set\-Test\-Part\-Result\-Reporter\-For\-Current\-Thread} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Test\-Part\-Result\-Reporter\-Interface} $\ast$}]{reporter}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ab71b8e31b6a6f77a3c80e76f1a17336c}
+
+
+\-Definition at line 2002 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                               {
+  per_thread_test_part_result_reporter_.set(reporter);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a1835112b5b9bb3931956c68f05a3cf69}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Shuffle\-Tests@{\-Shuffle\-Tests}}
+\index{\-Shuffle\-Tests@{\-Shuffle\-Tests}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Shuffle\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Shuffle\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a1835112b5b9bb3931956c68f05a3cf69}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a1835112b5b9bb3931956c68f05a3cf69}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Shuffle\-Tests@{\-Shuffle\-Tests}}
+\index{\-Shuffle\-Tests@{\-Shuffle\-Tests}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Shuffle\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Shuffle\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a1835112b5b9bb3931956c68f05a3cf69}
+
+
+\-Definition at line 5788 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                {
+  // Shuffles the death test cases.
+  ShuffleRange(random(), 0, last_death_test_case_ + 1, &test_case_indices_);
+
+  // Shuffles the non-death test cases.
+  ShuffleRange(random(), last_death_test_case_ + 1,
+               static_cast<int>(test_cases_.size()), &test_case_indices_);
+
+  // Shuffles the tests inside each test case.
+  for (size_t i = 0; i < test_cases_.size(); i++) {
+    test_cases_[i]->ShuffleTests(random());
+  }
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a846de5ff509b207bca6a55237d035a1f}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!successful\-\_\-test\-\_\-case\-\_\-count@{successful\-\_\-test\-\_\-case\-\_\-count}}
+\index{successful\-\_\-test\-\_\-case\-\_\-count@{successful\-\_\-test\-\_\-case\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{successful\-\_\-test\-\_\-case\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf successful\-\_\-test\-\_\-case\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a846de5ff509b207bca6a55237d035a1f}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a846de5ff509b207bca6a55237d035a1f}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!successful\-\_\-test\-\_\-case\-\_\-count@{successful\-\_\-test\-\_\-case\-\_\-count}}
+\index{successful\-\_\-test\-\_\-case\-\_\-count@{successful\-\_\-test\-\_\-case\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{successful\-\_\-test\-\_\-case\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf successful\-\_\-test\-\_\-case\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a846de5ff509b207bca6a55237d035a1f}
+
+
+\-Definition at line 2008 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                                   {
+  return CountIf(test_cases_, TestCasePassed);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ab955f67bc1fe8ef62a7e72906ccece2a}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!successful\-\_\-test\-\_\-count@{successful\-\_\-test\-\_\-count}}
+\index{successful\-\_\-test\-\_\-count@{successful\-\_\-test\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{successful\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf successful\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ab955f67bc1fe8ef62a7e72906ccece2a}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ab955f67bc1fe8ef62a7e72906ccece2a}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!successful\-\_\-test\-\_\-count@{successful\-\_\-test\-\_\-count}}
+\index{successful\-\_\-test\-\_\-count@{successful\-\_\-test\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{successful\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf successful\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ab955f67bc1fe8ef62a7e72906ccece2a}
+
+
+\-Definition at line 2029 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                              {
+  return SumOverTestCaseList(test_cases_, &TestCase::successful_test_count);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_adf212bae576e88dfb77bd114f01bc117}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!test\-\_\-case\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-case\-\_\-to\-\_\-run\-\_\-count}}
+\index{test\-\_\-case\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-case\-\_\-to\-\_\-run\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{test\-\_\-case\-\_\-to\-\_\-run\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf test\-\_\-case\-\_\-to\-\_\-run\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_adf212bae576e88dfb77bd114f01bc117}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_adf212bae576e88dfb77bd114f01bc117}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!test\-\_\-case\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-case\-\_\-to\-\_\-run\-\_\-count}}
+\index{test\-\_\-case\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-case\-\_\-to\-\_\-run\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{test\-\_\-case\-\_\-to\-\_\-run\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf test\-\_\-case\-\_\-to\-\_\-run\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_adf212bae576e88dfb77bd114f01bc117}
+
+
+\-Definition at line 2024 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                               {
+  return CountIf(test_cases_, ShouldRunTestCase);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aa6eccf86072f4f8ddd0bea30dfd45912}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!test\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-to\-\_\-run\-\_\-count}}
+\index{test\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-to\-\_\-run\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{test\-\_\-to\-\_\-run\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf test\-\_\-to\-\_\-run\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aa6eccf86072f4f8ddd0bea30dfd45912}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aa6eccf86072f4f8ddd0bea30dfd45912}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!test\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-to\-\_\-run\-\_\-count}}
+\index{test\-\_\-to\-\_\-run\-\_\-count@{test\-\_\-to\-\_\-run\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{test\-\_\-to\-\_\-run\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf test\-\_\-to\-\_\-run\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aa6eccf86072f4f8ddd0bea30dfd45912}
+
+
+\-Definition at line 2049 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                          {
+  return SumOverTestCaseList(test_cases_, &TestCase::test_to_run_count);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aba8c18261c58f301e1e80049a0781d84}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!total\-\_\-test\-\_\-case\-\_\-count@{total\-\_\-test\-\_\-case\-\_\-count}}
+\index{total\-\_\-test\-\_\-case\-\_\-count@{total\-\_\-test\-\_\-case\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{total\-\_\-test\-\_\-case\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf total\-\_\-test\-\_\-case\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aba8c18261c58f301e1e80049a0781d84}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_aba8c18261c58f301e1e80049a0781d84}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!total\-\_\-test\-\_\-case\-\_\-count@{total\-\_\-test\-\_\-case\-\_\-count}}
+\index{total\-\_\-test\-\_\-case\-\_\-count@{total\-\_\-test\-\_\-case\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{total\-\_\-test\-\_\-case\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf total\-\_\-test\-\_\-case\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_aba8c18261c58f301e1e80049a0781d84}
+
+
+\-Definition at line 2018 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                              {
+  return static_cast<int>(test_cases_.size());
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a0eb7286957aeb126d9926c33407a15a3}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!total\-\_\-test\-\_\-count@{total\-\_\-test\-\_\-count}}
+\index{total\-\_\-test\-\_\-count@{total\-\_\-test\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{total\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf total\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a0eb7286957aeb126d9926c33407a15a3}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a0eb7286957aeb126d9926c33407a15a3}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!total\-\_\-test\-\_\-count@{total\-\_\-test\-\_\-count}}
+\index{total\-\_\-test\-\_\-count@{total\-\_\-test\-\_\-count}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{total\-\_\-test\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf total\-\_\-test\-\_\-count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a0eb7286957aeb126d9926c33407a15a3}
+
+
+\-Definition at line 2044 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                         {
+  return SumOverTestCaseList(test_cases_, &TestCase::total_test_count);
+}
+\end{DoxyCode}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ae4c0afbfb6a7d13aece4c3a256a5d01d}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Unshuffle\-Tests@{\-Unshuffle\-Tests}}
+\index{\-Unshuffle\-Tests@{\-Unshuffle\-Tests}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Unshuffle\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Unshuffle\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ae4c0afbfb6a7d13aece4c3a256a5d01d}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ae4c0afbfb6a7d13aece4c3a256a5d01d}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-Unshuffle\-Tests@{\-Unshuffle\-Tests}}
+\index{\-Unshuffle\-Tests@{\-Unshuffle\-Tests}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-Unshuffle\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Unshuffle\-Tests} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ae4c0afbfb6a7d13aece4c3a256a5d01d}
+
+
+\-Definition at line 5803 of file gtest-\/all.\-cc.
+
+
+\begin{DoxyCode}
+                                  {
+  for (size_t i = 0; i < test_cases_.size(); i++) {
+    // Unshuffles the tests in each test case.
+    test_cases_[i]->UnshuffleTests();
+    // Resets the index of each test case.
+    test_case_indices_[i] = static_cast<int>(i);
+  }
+}
+\end{DoxyCode}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a893404438388dec058dc5c02e8f9a014}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!\-::testing\-::\-Unit\-Test@{\-::testing\-::\-Unit\-Test}}
+\index{\-::testing\-::\-Unit\-Test@{\-::testing\-::\-Unit\-Test}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{\-::testing\-::\-Unit\-Test}]{\setlength{\rightskip}{0pt plus 5cm}friend class \-::{\bf testing\-::\-Unit\-Test}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a893404438388dec058dc5c02e8f9a014}
+
+
+\-Definition at line 1186 of file gtest-\/all.\-cc.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ae5fbed6752ae31d54b7db28c8a84df0a}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!ad\-\_\-hoc\-\_\-test\-\_\-result\-\_\-@{ad\-\_\-hoc\-\_\-test\-\_\-result\-\_\-}}
+\index{ad\-\_\-hoc\-\_\-test\-\_\-result\-\_\-@{ad\-\_\-hoc\-\_\-test\-\_\-result\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{ad\-\_\-hoc\-\_\-test\-\_\-result\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Result} {\bf ad\-\_\-hoc\-\_\-test\-\_\-result\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ae5fbed6752ae31d54b7db28c8a84df0a}
+
+
+\-Definition at line 1260 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ae7865b4eb9284346a5fd86cc41dc5e3f}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!catch\-\_\-exceptions\-\_\-@{catch\-\_\-exceptions\-\_\-}}
+\index{catch\-\_\-exceptions\-\_\-@{catch\-\_\-exceptions\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{catch\-\_\-exceptions\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf catch\-\_\-exceptions\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ae7865b4eb9284346a5fd86cc41dc5e3f}
+
+
+\-Definition at line 1296 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a1518dcaae47f97490ebd5d3efe4f70f3}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!current\-\_\-test\-\_\-case\-\_\-@{current\-\_\-test\-\_\-case\-\_\-}}
+\index{current\-\_\-test\-\_\-case\-\_\-@{current\-\_\-test\-\_\-case\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{current\-\_\-test\-\_\-case\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Case} $\ast$ {\bf current\-\_\-test\-\_\-case\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a1518dcaae47f97490ebd5d3efe4f70f3}
+
+
+\-Definition at line 1244 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a4c974b2eb5da1b40919bb6118c3a33f8}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!current\-\_\-test\-\_\-info\-\_\-@{current\-\_\-test\-\_\-info\-\_\-}}
+\index{current\-\_\-test\-\_\-info\-\_\-@{current\-\_\-test\-\_\-info\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{current\-\_\-test\-\_\-info\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Info} $\ast$ {\bf current\-\_\-test\-\_\-info\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a4c974b2eb5da1b40919bb6118c3a33f8}
+
+
+\-Definition at line 1250 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a1e540a0eaad5aeab8523776cca9af7d2}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!default\-\_\-global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-@{default\-\_\-global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}}
+\index{default\-\_\-global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-@{default\-\_\-global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{default\-\_\-global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Default\-Global\-Test\-Part\-Result\-Reporter} {\bf default\-\_\-global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a1e540a0eaad5aeab8523776cca9af7d2}
+
+
+\-Definition at line 1200 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a28c00f393c9383c17bd12ed8f18ed241}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!default\-\_\-per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-@{default\-\_\-per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}}
+\index{default\-\_\-per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-@{default\-\_\-per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{default\-\_\-per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Default\-Per\-Thread\-Test\-Part\-Result\-Reporter} {\bf default\-\_\-per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a28c00f393c9383c17bd12ed8f18ed241}
+
+
+\-Definition at line 1202 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a97b9c166ebee95ae4c9ef26cf3155617}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!elapsed\-\_\-time\-\_\-@{elapsed\-\_\-time\-\_\-}}
+\index{elapsed\-\_\-time\-\_\-@{elapsed\-\_\-time\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{elapsed\-\_\-time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Time\-In\-Millis} {\bf elapsed\-\_\-time\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a97b9c166ebee95ae4c9ef26cf3155617}
+
+
+\-Definition at line 1282 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a3887eb0491f4d2221cd010aff0e9c4b6}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!environments\-\_\-@{environments\-\_\-}}
+\index{environments\-\_\-@{environments\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{environments\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf \-Environment} $\ast$ $>$ {\bf environments\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a3887eb0491f4d2221cd010aff0e9c4b6}
+
+
+\-Definition at line 1216 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a44a033b8d726114e3fb407ec77c9e409}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-mutex\-\_\-@{global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-mutex\-\_\-}}
+\index{global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-mutex\-\_\-@{global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-mutex\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf internal\-::\-Mutex} {\bf global\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-mutex\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a44a033b8d726114e3fb407ec77c9e409}
+
+
+\-Definition at line 1208 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a733fa2b39275ffbabc99d121d88dff5c}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!global\-\_\-test\-\_\-part\-\_\-result\-\_\-repoter\-\_\-@{global\-\_\-test\-\_\-part\-\_\-result\-\_\-repoter\-\_\-}}
+\index{global\-\_\-test\-\_\-part\-\_\-result\-\_\-repoter\-\_\-@{global\-\_\-test\-\_\-part\-\_\-result\-\_\-repoter\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{global\-\_\-test\-\_\-part\-\_\-result\-\_\-repoter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Part\-Result\-Reporter\-Interface} $\ast$ {\bf global\-\_\-test\-\_\-part\-\_\-result\-\_\-repoter\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a733fa2b39275ffbabc99d121d88dff5c}
+
+
+\-Definition at line 1205 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a90e2c9d96f24d3430189a4b850263ad0}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!gtest\-\_\-trace\-\_\-stack\-\_\-@{gtest\-\_\-trace\-\_\-stack\-\_\-}}
+\index{gtest\-\_\-trace\-\_\-stack\-\_\-@{gtest\-\_\-trace\-\_\-stack\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{gtest\-\_\-trace\-\_\-stack\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf internal\-::\-Thread\-Local}$<$ std\-::vector$<$ {\bf \-Trace\-Info} $>$ $>$ {\bf gtest\-\_\-trace\-\_\-stack\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a90e2c9d96f24d3430189a4b850263ad0}
+
+
+\-Definition at line 1292 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a93b260f5e9218dd561831f3135ac9f26}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!last\-\_\-death\-\_\-test\-\_\-case\-\_\-@{last\-\_\-death\-\_\-test\-\_\-case\-\_\-}}
+\index{last\-\_\-death\-\_\-test\-\_\-case\-\_\-@{last\-\_\-death\-\_\-test\-\_\-case\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{last\-\_\-death\-\_\-test\-\_\-case\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf last\-\_\-death\-\_\-test\-\_\-case\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a93b260f5e9218dd561831f3135ac9f26}
+
+
+\-Definition at line 1238 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac0e313bd41c6c104cbb057d42723574b}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!listeners\-\_\-@{listeners\-\_\-}}
+\index{listeners\-\_\-@{listeners\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{listeners\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Test\-Event\-Listeners} {\bf listeners\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac0e313bd41c6c104cbb057d42723574b}
+
+
+\-Definition at line 1264 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a31c402be948f2244efdda0e5f38fab0e}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!original\-\_\-working\-\_\-dir\-\_\-@{original\-\_\-working\-\_\-dir\-\_\-}}
+\index{original\-\_\-working\-\_\-dir\-\_\-@{original\-\_\-working\-\_\-dir\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{original\-\_\-working\-\_\-dir\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf internal\-::\-File\-Path} {\bf original\-\_\-working\-\_\-dir\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a31c402be948f2244efdda0e5f38fab0e}
+
+
+\-Definition at line 1197 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a03a75f27d552174a5ba8f477f3f4f116}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!os\-\_\-stack\-\_\-trace\-\_\-getter\-\_\-@{os\-\_\-stack\-\_\-trace\-\_\-getter\-\_\-}}
+\index{os\-\_\-stack\-\_\-trace\-\_\-getter\-\_\-@{os\-\_\-stack\-\_\-trace\-\_\-getter\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{os\-\_\-stack\-\_\-trace\-\_\-getter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Os\-Stack\-Trace\-Getter\-Interface} $\ast$ {\bf os\-\_\-stack\-\_\-trace\-\_\-getter\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a03a75f27d552174a5ba8f477f3f4f116}
+
+
+\-Definition at line 1270 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a83d5f098f3d26888da5c556f26076159}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!parent\-\_\-@{parent\-\_\-}}
+\index{parent\-\_\-@{parent\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{parent\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Unit\-Test} $\ast$const {\bf parent\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a83d5f098f3d26888da5c556f26076159}
+
+
+\-Definition at line 1193 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a2f151c72a75fa55edeca99b3deb451e4}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-@{per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}}
+\index{per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-@{per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf internal\-::\-Thread\-Local}$<$ {\bf \-Test\-Part\-Result\-Reporter\-Interface} $\ast$ $>$ {\bf per\-\_\-thread\-\_\-test\-\_\-part\-\_\-result\-\_\-reporter\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a2f151c72a75fa55edeca99b3deb451e4}
+
+
+\-Definition at line 1212 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_af27b4c10f54dbf7cf61814bd71e2f71d}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!post\-\_\-flag\-\_\-parse\-\_\-init\-\_\-performed\-\_\-@{post\-\_\-flag\-\_\-parse\-\_\-init\-\_\-performed\-\_\-}}
+\index{post\-\_\-flag\-\_\-parse\-\_\-init\-\_\-performed\-\_\-@{post\-\_\-flag\-\_\-parse\-\_\-init\-\_\-performed\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{post\-\_\-flag\-\_\-parse\-\_\-init\-\_\-performed\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf post\-\_\-flag\-\_\-parse\-\_\-init\-\_\-performed\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_af27b4c10f54dbf7cf61814bd71e2f71d}
+
+
+\-Definition at line 1273 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ac270e1191e25343bb791c94ef3331a26}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!random\-\_\-@{random\-\_\-}}
+\index{random\-\_\-@{random\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{random\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf internal\-::\-Random} {\bf random\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ac270e1191e25343bb791c94ef3331a26}
+
+
+\-Definition at line 1279 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a3076e24cbd93ed76f370a5a2fce53403}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!random\-\_\-seed\-\_\-@{random\-\_\-seed\-\_\-}}
+\index{random\-\_\-seed\-\_\-@{random\-\_\-seed\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{random\-\_\-seed\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf random\-\_\-seed\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a3076e24cbd93ed76f370a5a2fce53403}
+
+
+\-Definition at line 1276 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_a537c435021d907aafe88070abe6db7a9}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!test\-\_\-case\-\_\-indices\-\_\-@{test\-\_\-case\-\_\-indices\-\_\-}}
+\index{test\-\_\-case\-\_\-indices\-\_\-@{test\-\_\-case\-\_\-indices\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{test\-\_\-case\-\_\-indices\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ int $>$ {\bf test\-\_\-case\-\_\-indices\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_a537c435021d907aafe88070abe6db7a9}
+
+
+\-Definition at line 1226 of file gtest-\/all.\-cc.
+
+\hypertarget{classtesting_1_1internal_1_1UnitTestImpl_ab62e4e13580e882140f8bf78a94ce669}{\index{testing\-::internal\-::\-Unit\-Test\-Impl@{testing\-::internal\-::\-Unit\-Test\-Impl}!test\-\_\-cases\-\_\-@{test\-\_\-cases\-\_\-}}
+\index{test\-\_\-cases\-\_\-@{test\-\_\-cases\-\_\-}!testing::internal::UnitTestImpl@{testing\-::internal\-::\-Unit\-Test\-Impl}}
+\subsubsection[{test\-\_\-cases\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf \-Test\-Case} $\ast$ $>$ {\bf test\-\_\-cases\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/de3/classtesting_1_1internal_1_1UnitTestImpl_ab62e4e13580e882140f8bf78a94ce669}
+
+
+\-Definition at line 1220 of file gtest-\/all.\-cc.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gtest-\/1.\-6.\-0/fused-\/src/gtest/\hyperlink{fused-src_2gtest_2gtest-all_8cc}{gtest-\/all.\-cc}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest-internal-inl_8h}{gtest-\/internal-\/inl.\-h}\item 
+gtest-\/1.\-6.\-0/src/\hyperlink{gtest_8cc}{gtest.\-cc}\end{DoxyCompactItemize}
