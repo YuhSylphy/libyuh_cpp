@@ -175,12 +175,22 @@ namespace yuh
 	 */
 	prime_range prime(int first, int last);
 
+	/**
+	 * 素因数分解
+	 * @param Integer 整数型
+	 * @param num 対象とする数
+	 * @return 素因数リスト(vector)
+	 */
 	template <typename Integer>
 	std::vector<prime_type> prime_factor(Integer num)
 	{
 		std::vector<prime_type> ret;
 		auto n = num;
-		
+	
+		//使う可能性のある素数まで篩ってリストいれておく
+		range_detail::prime_iterator::sift(std::ceil(std::sqrt(num)));
+	
+		//ただ順番に割っていくだけ
 		for ( auto p: prime() )
 		{
 			if(p*p > n) break;
@@ -191,7 +201,7 @@ namespace yuh
 				ret. push_back(p);
 			}
 		}
-		
+		//最後に残っているのも素数
 		if(n > 0) ret.push_back(n);
 
 		return ret;

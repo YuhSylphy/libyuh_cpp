@@ -144,7 +144,7 @@ TEST(factor, test)
 		EXPECT_EQ(boost::get<0>(t), boost::get<1>(t));
 	}
 
-	std::vector<int> v2{2, 2, 3, 5, 773};
+	std::vector<int> v2{2, 2, 3, 5, 19, 773};
 	auto f2 = prime_factor(
 		boost::accumulate(v2, 1, std::multiplies<int>()));
 	for ( const auto t: boost::combine(f2, v2) )
