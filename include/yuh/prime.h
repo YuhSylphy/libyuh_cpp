@@ -187,9 +187,6 @@ namespace yuh
 		std::vector<prime_type> ret;
 		auto n = num;
 	
-		//使う可能性のある素数まで篩ってリストいれておく
-		range_detail::prime_iterator::sift(std::ceil(std::sqrt(num)));
-	
 		//ただ順番に割っていくだけ
 		for ( auto p: prime() )
 		{
