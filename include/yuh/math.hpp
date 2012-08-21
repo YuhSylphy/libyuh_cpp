@@ -5,6 +5,10 @@
 
 #pragma once
 
+#include <boost/assert.hpp>
+#include <boost/range/distance.hpp>
+#include <stdexcept>
+
 namespace yuh
 {
 	/**
@@ -34,6 +38,7 @@ namespace yuh
 	/**
 	 * ピタゴラス数であるかを判定
 	 * 範囲チェック省略
+	 * @param Integer 整数型
 	 * @param a 隣辺
 	 * @param b 隣辺
 	 * @param c 斜辺
@@ -46,4 +51,25 @@ namespace yuh
 		// 意味がはっきりとはしそうなので最後まで書く
 		return a*a + b*b == c*c;
 	}
+
+	/**
+	 * ピタゴラス数であるかを判定
+	 * @param Range SinglePathRange
+	 * @param rng a,b,cを格納したSinglePathRange
+	 * @return 三つ組(a,b,c)がピタゴラス数であるか
+	 */
+	template<typename Range>
+	inline bool is_Pythagorean(const Range& rng)
+	{
+		if(boost::distance(rng) != 3) 
+			throw std::invalid_argument("is_Pythagorean: range size error");
+
+		auto it = std::begin(rng);
+		const auto& a = *it;
+		const auto& b = *(++it);
+		const auto& c = *(++it);
+
+		return a*a + b*b == c*c;
+	}
+
 }
