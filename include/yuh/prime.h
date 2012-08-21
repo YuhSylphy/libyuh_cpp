@@ -211,7 +211,7 @@ namespace yuh
 			}
 		}
 		//最後に残っているのも素数
-		if(n > 0) ret.insert(n);
+		if(n > 1) ret.insert(n);
 
 		return ret;
 	}
