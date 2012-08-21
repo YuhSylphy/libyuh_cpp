@@ -18,7 +18,7 @@ struct prime_iter
 protected:
 	virtual void SetUp()
 	{
-		range_detail::prime_iterator::sift(1000);
+		prime_sift(1000);
 	}
 };
 
@@ -80,8 +80,8 @@ TEST_F(prime_iter, expand)
 
 TEST_F(prime_iter, huge)
 {
-	range_detail::prime_iterator::sift(1000000);
-	std::cout << range_detail::prime_iterator::get_prime().size() << std::endl;
+	prime_sift(4000000);
+	//std::cout << range_detail::prime_iterator::get_prime().size() << std::endl;
 }
 
 TEST(prime_range, finite)

@@ -176,6 +176,17 @@ namespace yuh
 	prime_range prime(int first, int last);
 
 	/**
+	 * エラトステネスの篩にかけてまとめて素数リストに追加する
+	 * @param upper この数値未満の数を対象とする
+	 */
+	inline void prime_sift(prime_type upper)
+	{
+		//ただのラッパ 階層が深いのでこれだけ表に出しておく
+		range_detail::prime_iterator::sift(upper);
+	}
+	
+
+	/**
 	 * 素因数分解
 	 * @param Integer 整数型
 	 * @param num 対象とする数

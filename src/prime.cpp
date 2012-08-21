@@ -58,10 +58,10 @@ namespace yuh
 					}
 				}
 			}
-
+			
 			BOOST_ASSERT( candidate.size() == 0 );
 		}
-
+		
 		prime_iterator::value_type prime_iterator::prime_approx(size_t n)
 		{
 			const auto a = std::log10(n);
@@ -108,28 +108,28 @@ namespace yuh
 		void prime_iterator::increment()
 		{
 			index_++;
-			if(index_ <= static_cast<int>(p_.size()) ) 
+			if( index_ <= p_.size() ) 
 				expand(index_); //まだ知らない素数だったら調べて追加する
 			BOOST_ASSERT( index_ < static_cast<int>(p_.size()) );
 		}
-
+		
 		void prime_iterator::decrement()
 		{
 			if(index_ >= 0)
 				index_--;
 		}
-
+		
 		bool prime_iterator::equal(const prime_iterator& rhs) const
 		{
 			return rhs.index_ == index_; 
 		}
-
+		
 		prime_iterator::reference prime_iterator::dereference() const
 		{
 			BOOST_ASSERT( index_ < static_cast<int>(p_.size()) );
 			return p_[index_];
 		}
-
+		
 		void prime_iterator::advance(difference_type offset)
 		{
 			index_ += offset;
@@ -141,10 +141,10 @@ namespace yuh
 		{
 			return rhs.index_ - index_;
 		}
-
+		
 	} // namespace range_detail
-
-
+	
+	
 	prime_range prime(int first)
 	{
 		BOOST_ASSERT( first >= 1 );
@@ -157,5 +157,6 @@ namespace yuh
 		BOOST_ASSERT( first >= 1 );
 		return prime_range(first, last);
 	}
-
+	
 } // namespace yuh
+
