@@ -124,11 +124,14 @@ Functions</h2></td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#afc7f4ca69e0d8cb035be348d77d2a33e">is_palindromic</a> (Integer n)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Integer &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a14298c4b76f1a9d0537e7d5d67cfa784">is_Pythagorean</a> (Integer a, Integer b, Integer c)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#af94deeef5a14f79a6a51c6ca3155d03e">is_Pythagorean</a> (const Range &amp;rng)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d41/classyuh_1_1prime__range.html">prime_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#ad0e08caa71b8e5172b1535657bbc0648">prime</a> (int first=1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d41/classyuh_1_1prime__range.html">prime_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a31e810e0c57ef83ca515b12f1aac0bf3">prime</a> (int first, int last)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#ac7fcc7fa46bf6b7cf12a53a653b23317">prime_sift</a> (<a class="el" href="../../d5/d2b/namespaceyuh.html#af542f8440602da42322ddb7ea8242336">prime_type</a> upper)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Integer &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">std::multiset&lt; <a class="el" href="../../d5/d2b/namespaceyuh.html#af542f8440602da42322ddb7ea8242336">prime_type</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#afb5d08e183729831f760d6c2a27226d8">prime_factor</a> (Integer num)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#aef8d22260a5c6af5f37d206badfd3d4e">decltype</a> (range_detail::prime_iterator::get_prime()) get_prime_list()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>クラスにする程でもない数学系の関数詰め合わせ </p>
@@ -150,6 +153,30 @@ Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
+<a class="anchor" id="aef8d22260a5c6af5f37d206badfd3d4e"></a><!-- doxytag: member="yuh::decltype" ref="aef8d22260a5c6af5f37d206badfd3d4e" args="(range_detail::prime_iterator::get_prime()) get_prime_list()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d2b/namespaceyuh.html#aef8d22260a5c6af5f37d206badfd3d4e">yuh::decltype</a> </td>
+          <td>(</td>
+          <td class="paramtype">range_detail::prime_iterator::&#160;</td>
+          <td class="paramname"><em>get_prime</em>()</td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>素数リストを取得する </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>素数リスト </dd></dl>
+
+<p>Definition at line <a class="el" href="../../dd/d99/prime_8h_source.html#l00234">234</a> of file <a class="el" href="../../dd/d99/prime_8h_source.html">prime.h</a>.</p>
+<div class="fragment"><pre class="fragment">    {
+        <span class="keywordflow">return</span> range_detail::prime_iterator::get_prime();
+    }
+</pre></div>
+</div>
+</div>
 <a class="anchor" id="a11988532f81d143e1b5b74d461dd8067"></a><!-- doxytag: member="yuh::fibonacci" ref="a11988532f81d143e1b5b74d461dd8067" args="(Integer first=0)" -->
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +274,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>nが回文数かどうか </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
 <div class="fragment"><pre class="fragment">    {
         Integer c = 0;
         Integer t = n;
@@ -300,6 +327,7 @@ Functions</h2></td></tr>
 <p>ピタゴラス数であるかを判定 範囲チェック省略 </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
+    <tr><td class="paramname">Integer</td><td>整数型 </td></tr>
     <tr><td class="paramname">a</td><td>隣辺 </td></tr>
     <tr><td class="paramname">b</td><td>隣辺 </td></tr>
     <tr><td class="paramname">c</td><td>斜辺 </td></tr>
@@ -308,10 +336,49 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>三つ組(a,b,c)がピタゴラス数であるか </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
 <div class="fragment"><pre class="fragment">    {
         <span class="comment">// 途中で関数にするまでもないと思ったけど</span>
         <span class="comment">// 意味がはっきりとはしそうなので最後まで書く</span>
+        <span class="keywordflow">return</span> a*a + b*b == c*c;
+    }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="af94deeef5a14f79a6a51c6ca3155d03e"></a><!-- doxytag: member="yuh::is_Pythagorean" ref="af94deeef5a14f79a6a51c6ca3155d03e" args="(const Range &amp;rng)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d5/d2b/namespaceyuh.html#a14298c4b76f1a9d0537e7d5d67cfa784">yuh::is_Pythagorean</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Range &amp;&#160;</td>
+          <td class="paramname"><em>rng</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>ピタゴラス数であるかを判定 </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Range</td><td>SinglePathRange </td></tr>
+    <tr><td class="paramname">rng</td><td>a,b,cを格納したSinglePathRange </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>三つ組(a,b,c)がピタゴラス数であるか </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">    {
+        <span class="keywordflow">if</span>(boost::distance(rng) != 3) 
+            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;is_Pythagorean: range size error&quot;</span>);
+
+        <span class="keyword">auto</span> it = std::begin(rng);
+        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; a = *it;
+        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; b = *(++it);
+        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; c = *(++it);
+
         <span class="keywordflow">return</span> a*a + b*b == c*c;
     }
 </pre></div>
@@ -489,7 +556,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="../../d5/d2b/namespaceyuh.html">yuh</a>      </li>
 
-    <li class="footer">Generated on Wed Aug 22 2012 00:49:23 for yuh library by
+    <li class="footer">Generated on Wed Aug 22 2012 03:34:16 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

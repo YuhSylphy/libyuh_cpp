@@ -29,6 +29,8 @@ typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{pri
 \item 
 {\footnotesize template$<$typename Integer $>$ }\\bool \hyperlink{namespaceyuh_a14298c4b76f1a9d0537e7d5d67cfa784}{is\-\_\-\-Pythagorean} (\-Integer a, \-Integer b, \-Integer c)
 \item 
+{\footnotesize template$<$typename Range $>$ }\\bool \hyperlink{namespaceyuh_af94deeef5a14f79a6a51c6ca3155d03e}{is\-\_\-\-Pythagorean} (const \-Range \&rng)
+\item 
 \hyperlink{classyuh_1_1prime__range}{prime\-\_\-range} \hyperlink{namespaceyuh_ad0e08caa71b8e5172b1535657bbc0648}{prime} (int first=1)
 \item 
 \hyperlink{classyuh_1_1prime__range}{prime\-\_\-range} \hyperlink{namespaceyuh_a31e810e0c57ef83ca515b12f1aac0bf3}{prime} (int first, int last)
@@ -36,6 +38,8 @@ typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{pri
 void \hyperlink{namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}{prime\-\_\-sift} (\hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type} upper)
 \item 
 {\footnotesize template$<$typename Integer $>$ }\\std\-::multiset$<$ \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type} $>$ \hyperlink{namespaceyuh_afb5d08e183729831f760d6c2a27226d8}{prime\-\_\-factor} (\-Integer num)
+\item 
+\hyperlink{namespaceyuh_aef8d22260a5c6af5f37d206badfd3d4e}{decltype} (range\-\_\-detail\-::prime\-\_\-iterator\-::get\-\_\-prime()) get\-\_\-prime\-\_\-list()
 \end{DoxyCompactItemize}
 
 
@@ -56,6 +60,26 @@ void \hyperlink{namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}{prime\-\_\-sift}
 
 
 \subsection{\-Function \-Documentation}
+\hypertarget{namespaceyuh_aef8d22260a5c6af5f37d206badfd3d4e}{\index{yuh@{yuh}!decltype@{decltype}}
+\index{decltype@{decltype}!yuh@{yuh}}
+\subsubsection[{decltype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yuh\-::decltype} (
+\begin{DoxyParamCaption}
+\item[{range\-\_\-detail\-::prime\-\_\-iterator\-::}]{get\-\_\-prime()}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_aef8d22260a5c6af5f37d206badfd3d4e}
+素数リストを取得する \begin{DoxyReturn}{\-Returns}
+素数リスト 
+\end{DoxyReturn}
+
+
+\-Definition at line 234 of file prime.\-h.
+
+
+\begin{DoxyCode}
+    {
+        return range_detail::prime_iterator::get_prime();
+    }
+\end{DoxyCode}
 \hypertarget{namespaceyuh_a11988532f81d143e1b5b74d461dd8067}{\index{yuh@{yuh}!fibonacci@{fibonacci}}
 \index{fibonacci@{fibonacci}!yuh@{yuh}}
 \subsubsection[{fibonacci}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fibonacci\-\_\-range}$<$\-Integer$>$ {\bf yuh\-::fibonacci} (
@@ -131,7 +155,7 @@ nが回文数かどうか
 \end{DoxyReturn}
 
 
-\-Definition at line 16 of file math.\-hpp.
+\-Definition at line 20 of file math.\-hpp.
 
 
 \begin{DoxyCode}
@@ -163,6 +187,8 @@ nが回文数かどうか
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_a14298c4b76f1a9d0537e7d5d67cfa784}
 ピタゴラス数であるかを判定 範囲チェック省略 
 \begin{DoxyParams}{\-Parameters}
+{\em \-Integer} & 整数型 \\
+\hline
 {\em a} & 隣辺 \\
 \hline
 {\em b} & 隣辺 \\
@@ -175,13 +201,48 @@ nが回文数かどうか
 \end{DoxyReturn}
 
 
-\-Definition at line 43 of file math.\-hpp.
+\-Definition at line 48 of file math.\-hpp.
 
 
 \begin{DoxyCode}
     {
         // 途中で関数にするまでもないと思ったけど
         // 意味がはっきりとはしそうなので最後まで書く
+        return a*a + b*b == c*c;
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_af94deeef5a14f79a6a51c6ca3155d03e}{\index{yuh@{yuh}!is\-\_\-\-Pythagorean@{is\-\_\-\-Pythagorean}}
+\index{is\-\_\-\-Pythagorean@{is\-\_\-\-Pythagorean}!yuh@{yuh}}
+\subsubsection[{is\-\_\-\-Pythagorean}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf yuh\-::is\-\_\-\-Pythagorean} (
+\begin{DoxyParamCaption}
+\item[{const \-Range \&}]{rng}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_af94deeef5a14f79a6a51c6ca3155d03e}
+ピタゴラス数であるかを判定 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & \-Single\-Path\-Range \\
+\hline
+{\em rng} & a,b,cを格納した\-Single\-Path\-Range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+三つ組(a,b,c)がピタゴラス数であるか 
+\end{DoxyReturn}
+
+
+\-Definition at line 62 of file math.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        if(boost::distance(rng) != 3) 
+            throw std::invalid_argument("is_Pythagorean: range size error");
+
+        auto it = std::begin(rng);
+        const auto& a = *it;
+        const auto& b = *(++it);
+        const auto& c = *(++it);
+
         return a*a + b*b == c*c;
     }
 \end{DoxyCode}
