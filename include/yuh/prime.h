@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cmath>
+#include <set>
 
 #include <boost/assert.hpp>
 #include <boost/iterator/iterator_facade.hpp>
@@ -193,9 +194,9 @@ namespace yuh
 	 * @return 素因数リスト(vector)
 	 */
 	template <typename Integer>
-	std::vector<prime_type> prime_factor(Integer num)
+	std::multiset<prime_type> prime_factor(Integer num)
 	{
-		std::vector<prime_type> ret;
+		std::multiset<prime_type> ret;
 		auto n = num;
 	
 		//ただ順番に割っていくだけ
@@ -206,11 +207,11 @@ namespace yuh
 			while(n % p == 0)
 			{
 				n /= p;
-				ret. push_back(p);
+				ret.insert(p);
 			}
 		}
 		//最後に残っているのも素数
-		if(n > 0) ret.push_back(n);
+		if(n > 0) ret.insert(n);
 
 		return ret;
 	}

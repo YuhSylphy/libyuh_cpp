@@ -3,6 +3,7 @@
 #include "../include/yuh/prime.h"
 
 #include <vector>
+#include <set>
 #include <iterator>
 #include <functional>
 #include <boost/range/algorithm.hpp>
@@ -137,14 +138,14 @@ TEST(prime, infinite)
 TEST(factor, test)
 {
 	auto f1 = prime_factor(13195);
-	std::vector<int> v1{5, 7, 13, 29};
+	std::multiset<int> v1{5, 7, 13, 29};
 
 	for ( const auto t: boost::combine(f1, v1) )
 	{
 		EXPECT_EQ(boost::get<0>(t), boost::get<1>(t));
 	}
 
-	std::vector<int> v2{2, 2, 3, 5, 19, 773};
+	std::multiset<int> v2{2, 2, 3, 5, 19, 773};
 	auto f2 = prime_factor(
 		boost::accumulate(v2, 1, std::multiplies<int>()));
 	for ( const auto t: boost::combine(f2, v2) )

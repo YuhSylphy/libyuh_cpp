@@ -16,7 +16,8 @@ GPATH
 GRTAGS
 HTML
 *.d
-\#*\#
+[#]*
+.[#]*
 *~
 gtest-1.6.0/*
 *.exe
