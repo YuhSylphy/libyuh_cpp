@@ -27,7 +27,7 @@ CXXFLAGS += -g -Wall -Wextra -std=c++11
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = fibonacci_unittest prime_unittest
+TESTS = fibonacci_unittest prime_unittest math_unittest
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.

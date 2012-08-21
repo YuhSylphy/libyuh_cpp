@@ -80,7 +80,7 @@ TEST_F(prime_iter, expand)
 
 TEST_F(prime_iter, huge)
 {
-	prime_sift(4000000);
+	prime_sift(1000000);
 	//std::cout << range_detail::prime_iterator::get_prime().size() << std::endl;
 }
 
