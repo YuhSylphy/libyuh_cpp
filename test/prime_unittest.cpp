@@ -85,6 +85,11 @@ TEST_F(prime_iter, huge)
 	//std::cout << range_detail::prime_iterator::get_prime().size() << std::endl;
 }
 
+TEST_F(prime_iter, prime_list)
+{
+	EXPECT_EQ(get_prime_list()[101], 547);
+}
+
 TEST(prime_range, finite)
 {
 	const auto rng = boost::combine(
@@ -154,3 +159,4 @@ TEST(factor, test)
 	}
 
 }
+

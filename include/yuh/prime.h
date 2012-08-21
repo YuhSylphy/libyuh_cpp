@@ -226,5 +226,15 @@ namespace yuh
 
 		return ret;
     }
+
+	/**
+	 * 素数リストを取得する
+	 * @return 素数リスト
+	 */
+	inline decltype(range_detail::prime_iterator::get_prime()) get_prime_list()
+	{
+		return range_detail::prime_iterator::get_prime();
+	}
+
 }
 
