@@ -73,7 +73,7 @@ class \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a986bf0deaa7559f36
 \subsection{\-Detailed \-Description}
 素数を走査するイテレータ 
 
-\-Definition at line 17 of file prime.\-h.
+\-Definition at line 18 of file prime.\-h.
 
 
 
@@ -83,28 +83,28 @@ class \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a986bf0deaa7559f36
 \subsubsection[{base\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::iterator\-\_\-facade$<$ {\bf prime\-\_\-iterator}, {\bf prime\-\_\-type}, boost\-::random\-\_\-access\-\_\-traversal\-\_\-tag, {\bf prime\-\_\-type}, std\-::ptrdiff\-\_\-t $>$ {\bf base\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_af6bf48039295b29ac1f86bd776f4a29a}
 基底クラス(iterator\-\_\-facade) 
 
-\-Definition at line 35 of file prime.\-h.
+\-Definition at line 36 of file prime.\-h.
 
 \hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a9ac6039762e1b262cecb98589ffc1d75}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!difference\-\_\-type@{difference\-\_\-type}}
 \index{difference\-\_\-type@{difference\-\_\-type}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
 \subsubsection[{difference\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::difference\-\_\-type {\bf difference\-\_\-type}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a9ac6039762e1b262cecb98589ffc1d75}
 イテレータの距離を示す型 
 
-\-Definition at line 50 of file prime.\-h.
+\-Definition at line 51 of file prime.\-h.
 
 \hypertarget{classyuh_1_1range__detail_1_1prime__iterator_aa5d67140d1557795cc6c30a2849d4e05}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!reference@{reference}}
 \index{reference@{reference}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
 \subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::reference {\bf reference}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_aa5d67140d1557795cc6c30a2849d4e05}
 参照を剥がした際の型 
 
-\-Definition at line 54 of file prime.\-h.
+\-Definition at line 55 of file prime.\-h.
 
 \hypertarget{classyuh_1_1range__detail_1_1prime__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!value\-\_\-type@{value\-\_\-type}}
 \index{value\-\_\-type@{value\-\_\-type}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
 \subsubsection[{value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::value\-\_\-type {\bf value\-\_\-type}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}
 渡された値型 
 
-\-Definition at line 46 of file prime.\-h.
+\-Definition at line 47 of file prime.\-h.
 
 
 
@@ -142,7 +142,12 @@ class \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a986bf0deaa7559f36
 \item[{{\bf difference\-\_\-type}}]{offset}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a0b477ad04db9bc38c85d68245b9886e5}
-for iterator\-\_\-facade 
+std\-::advanceで呼ばれる？ offset分indexを進める 
+\begin{DoxyParams}{\-Parameters}
+{\em offset} & 進める距離 \\
+\hline
+\end{DoxyParams}
+
 
 \-Definition at line 133 of file prime.\-cpp.
 
@@ -213,6 +218,14 @@ operator-\/-\/で呼ばれる
 \item[{const {\bf prime\-\_\-iterator} \&}]{rhs}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a4510fc76b72f1340fb6cf787d3eafe72}
+std\-::distanceで呼ばれる？ rhsとのiteratorとしての距離を返す 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+右辺のiteratorとの距離 
+\end{DoxyReturn}
 
 
 \-Definition at line 140 of file prime.\-cpp.
@@ -405,9 +418,9 @@ n番目の素数の概算値を返す 実際より大きいか小さいかは不
 \hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a986bf0deaa7559f361d03122eeea4c86}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}}
 \index{\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
 \subsubsection[{\-::boost\-::iterator\-\_\-core\-\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}friend class \-::boost\-::iterator\-\_\-core\-\_\-access\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a986bf0deaa7559f361d03122eeea4c86}
+for iterator\-\_\-facade 
 
-
-\-Definition at line 114 of file prime.\-h.
+\-Definition at line 126 of file prime.\-h.
 
 
 
@@ -417,14 +430,14 @@ n番目の素数の概算値を返す 実際より大きいか小さいかは不
 \subsubsection[{index\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf index\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_aaaf1ac02dfa554a3cdffc647d512a77b}
 内部表現・index 
 
-\-Definition at line 119 of file prime.\-h.
+\-Definition at line 131 of file prime.\-h.
 
 \hypertarget{classyuh_1_1range__detail_1_1prime__iterator_aff6d0a0fbc14123c0fca5a0c05d2e68c}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!p\-\_\-@{p\-\_\-}}
 \index{p\-\_\-@{p\-\_\-}!yuh::range_detail::prime_iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}}
 \subsubsection[{p\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf value\-\_\-type}$>$ {\bf p\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_aff6d0a0fbc14123c0fca5a0c05d2e68c}
 素数リスト 
 
-\-Definition at line 40 of file prime.\-h.
+\-Definition at line 41 of file prime.\-h.
 
 
 

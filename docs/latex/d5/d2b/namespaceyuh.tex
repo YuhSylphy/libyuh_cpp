@@ -25,14 +25,24 @@ typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{pri
 \item 
 {\footnotesize template$<$typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}$<$ \-Integer $>$ \hyperlink{namespaceyuh_a17b1d33879798b95bdefe171df90380a}{fibonacci} (\-Integer first, \-Integer last)
 \item 
+{\footnotesize template$<$typename Integer $>$ }\\bool \hyperlink{namespaceyuh_afc7f4ca69e0d8cb035be348d77d2a33e}{is\-\_\-palindromic} (\-Integer n)
+\item 
+{\footnotesize template$<$typename Integer $>$ }\\bool \hyperlink{namespaceyuh_a14298c4b76f1a9d0537e7d5d67cfa784}{is\-\_\-\-Pythagorean} (\-Integer a, \-Integer b, \-Integer c)
+\item 
 \hyperlink{classyuh_1_1prime__range}{prime\-\_\-range} \hyperlink{namespaceyuh_ad0e08caa71b8e5172b1535657bbc0648}{prime} (int first=1)
 \item 
 \hyperlink{classyuh_1_1prime__range}{prime\-\_\-range} \hyperlink{namespaceyuh_a31e810e0c57ef83ca515b12f1aac0bf3}{prime} (int first, int last)
 \item 
 void \hyperlink{namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}{prime\-\_\-sift} (\hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type} upper)
 \item 
-{\footnotesize template$<$typename Integer $>$ }\\std\-::vector$<$ \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type} $>$ \hyperlink{namespaceyuh_a25df23e130603e9f5810c1d671e71614}{prime\-\_\-factor} (\-Integer num)
+{\footnotesize template$<$typename Integer $>$ }\\std\-::multiset$<$ \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type} $>$ \hyperlink{namespaceyuh_afb5d08e183729831f760d6c2a27226d8}{prime\-\_\-factor} (\-Integer num)
 \end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+クラスにする程でもない数学系の関数詰め合わせ \begin{DoxyAuthor}{\-Author}
+\-Yuh \-Sylphy 
+\end{DoxyAuthor}
 
 
 \subsection{\-Typedef \-Documentation}
@@ -41,7 +51,7 @@ void \hyperlink{namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}{prime\-\_\-sift}
 \subsubsection[{prime\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef long long {\bf prime\-\_\-type}}}\label{d5/d2b/namespaceyuh_af542f8440602da42322ddb7ea8242336}
 
 
-\-Definition at line 11 of file prime.\-h.
+\-Definition at line 12 of file prime.\-h.
 
 
 
@@ -104,6 +114,77 @@ n in \mbox{[}first, last)のフィボナッチ数列を表すrange
         return fibonacci_range<Integer>(first, last);
     }
 \end{DoxyCode}
+\hypertarget{namespaceyuh_afc7f4ca69e0d8cb035be348d77d2a33e}{\index{yuh@{yuh}!is\-\_\-palindromic@{is\-\_\-palindromic}}
+\index{is\-\_\-palindromic@{is\-\_\-palindromic}!yuh@{yuh}}
+\subsubsection[{is\-\_\-palindromic}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf yuh\-::is\-\_\-palindromic} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{n}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_afc7f4ca69e0d8cb035be348d77d2a33e}
+回文数なら\-True 
+\begin{DoxyParams}{\-Parameters}
+{\em n} & 非負整数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+nが回文数かどうか 
+\end{DoxyReturn}
+
+
+\-Definition at line 16 of file math.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        Integer c = 0;
+        Integer t = n;
+        const Integer base = 10;
+
+        // 10倍して桁を移す->下一桁を移す
+        while(t > 0)
+        {
+            const auto digit = t % base;
+            c *= base;
+            c += digit;
+            t = (t - digit) / base;
+        }
+        // 反転しても等しければ回文数
+        return c==n;
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a14298c4b76f1a9d0537e7d5d67cfa784}{\index{yuh@{yuh}!is\-\_\-\-Pythagorean@{is\-\_\-\-Pythagorean}}
+\index{is\-\_\-\-Pythagorean@{is\-\_\-\-Pythagorean}!yuh@{yuh}}
+\subsubsection[{is\-\_\-\-Pythagorean}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf yuh\-::is\-\_\-\-Pythagorean} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{a, }
+\item[{\-Integer}]{b, }
+\item[{\-Integer}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_a14298c4b76f1a9d0537e7d5d67cfa784}
+ピタゴラス数であるかを判定 範囲チェック省略 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & 隣辺 \\
+\hline
+{\em b} & 隣辺 \\
+\hline
+{\em c} & 斜辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+三つ組(a,b,c)がピタゴラス数であるか 
+\end{DoxyReturn}
+
+
+\-Definition at line 43 of file math.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        // 途中で関数にするまでもないと思ったけど
+        // 意味がはっきりとはしそうなので最後まで書く
+        return a*a + b*b == c*c;
+    }
+\end{DoxyCode}
 \hypertarget{namespaceyuh_ad0e08caa71b8e5172b1535657bbc0648}{\index{yuh@{yuh}!prime@{prime}}
 \index{prime@{prime}!yuh@{yuh}}
 \subsubsection[{prime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prime\-\_\-range} {\bf prime} (
@@ -164,13 +245,13 @@ n in \mbox{[}first, last)の素数列を表すrange
         return prime_range(first, last);
     }
 \end{DoxyCode}
-\hypertarget{namespaceyuh_a25df23e130603e9f5810c1d671e71614}{\index{yuh@{yuh}!prime\-\_\-factor@{prime\-\_\-factor}}
+\hypertarget{namespaceyuh_afb5d08e183729831f760d6c2a27226d8}{\index{yuh@{yuh}!prime\-\_\-factor@{prime\-\_\-factor}}
 \index{prime\-\_\-factor@{prime\-\_\-factor}!yuh@{yuh}}
-\subsubsection[{prime\-\_\-factor}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf prime\-\_\-type}$>$ {\bf yuh\-::prime\-\_\-factor} (
+\subsubsection[{prime\-\_\-factor}]{\setlength{\rightskip}{0pt plus 5cm}std\-::multiset$<${\bf prime\-\_\-type}$>$ {\bf yuh\-::prime\-\_\-factor} (
 \begin{DoxyParamCaption}
 \item[{\-Integer}]{num}
 \end{DoxyParamCaption}
-)}}\label{d5/d2b/namespaceyuh_a25df23e130603e9f5810c1d671e71614}
+)}}\label{d5/d2b/namespaceyuh_afb5d08e183729831f760d6c2a27226d8}
 素因数分解 
 \begin{DoxyParams}{\-Parameters}
 {\em \-Integer} & 整数型 \\
@@ -183,12 +264,12 @@ n in \mbox{[}first, last)の素数列を表すrange
 \end{DoxyReturn}
 
 
-\-Definition at line 196 of file prime.\-h.
+\-Definition at line 208 of file prime.\-h.
 
 
 \begin{DoxyCode}
     {
-        std::vector<prime_type> ret;
+        std::multiset<prime_type> ret;
         auto n = num;
     
         //ただ順番に割っていくだけ
@@ -199,11 +280,11 @@ n in \mbox{[}first, last)の素数列を表すrange
             while(n % p == 0)
             {
                 n /= p;
-                ret. push_back(p);
+                ret.insert(p);
             }
         }
         //最後に残っているのも素数
-        if(n > 0) ret.push_back(n);
+        if(n > 1) ret.insert(n);
 
         return ret;
     }
@@ -222,7 +303,7 @@ n in \mbox{[}first, last)の素数列を表すrange
 \end{DoxyParams}
 
 
-\-Definition at line 182 of file prime.\-h.
+\-Definition at line 194 of file prime.\-h.
 
 
 \begin{DoxyCode}

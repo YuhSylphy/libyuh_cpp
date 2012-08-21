@@ -86,32 +86,43 @@ namespace yuh
 			/**
 			 * operator++で呼ばれる
 			 */
-            void increment();
+			void increment();
 			
-            /**
+			/**
 			 * operator--で呼ばれる
 			 */
-            void decrement();
+			void decrement();
 			/**
 			 * 等値チェック
 			 *
 			 * @param rhs operator==の右辺に取る値
 			 * @return 内部表現が等しければ真 
 			 */
-            bool equal(const prime_iterator& rhs) const;
+			bool equal(const prime_iterator& rhs) const;
 			/**
 			 * 参照剥がし
 			 * 
 			 * @return このイテレータが指すフィボナッチ数
 			 */
-            reference dereference() const;
+			reference dereference() const;
 			/**
-			 * for iterator_facade
+			 * std::advanceで呼ばれる？
+			 * offset分indexを進める
+			 * @param offset 進める距離
 			 */
-            void advance(difference_type offset);
+			void advance(difference_type offset);
+	    
+			/** 
+			 * std::distanceで呼ばれる？
+			 * rhsとのiteratorとしての距離を返す
+			 * @param rhs 右辺
+			 * @return 右辺のiteratorとの距離
+			 */ 
+			difference_type distance_to(const prime_iterator& rhs) const;
 
-            difference_type distance_to(const prime_iterator& rhs) const;
-
+			/** 
+			 * for iterator_facade
+			 */ 
 			friend class ::boost::iterator_core_access;
 			
 			/**
@@ -126,37 +137,37 @@ namespace yuh
 	 * 無限数列・有限数列どちらも表現可能
 	 */
 	class prime_range
-	  : public boost::iterator_range< range_detail::prime_iterator >
-	  {
-	    /**
-	     * イテレータの型
-	     */
-	    typedef range_detail::prime_iterator iterator_t;
-	    /**
-	     * 基底クラス(iterator_range)
-	     */
-	    typedef boost::iterator_range<iterator_t> base_t;
-	  public:
-	    /**
-	     * 有限素数列 index指定 [first, last)
-	     * @param first 範囲の始め(含む)
-	     * @param last  範囲の終わり(含まない)
-	     * @return n in [first, last)の素数列a_n
-	     */
-	  prime_range(int first, int last)
-            : base_t(iterator_t(first), iterator_t(last))
-	      { }
-	    /**
-	     * 無限素数列 index指定 [first, Inf)
-	     * 単純にalgorithmに渡したりすると無限ループなので注意
-	     * @param first 範囲の始め(含む)
-	     * @return n in [first, Inf)の素数列a_n
-	     */
-	  prime_range(int first)
-            : base_t(iterator_t(first), iterator_t(0))
-	      { }
+		: public boost::iterator_range< range_detail::prime_iterator >
+    {
+		/**
+		 * イテレータの型
+		 */
+		typedef range_detail::prime_iterator iterator_t;
+		/**
+		 * 基底クラス(iterator_range)
+		 */
+		typedef boost::iterator_range<iterator_t> base_t;
+    public:
+		/**
+		 * 有限素数列 index指定 [first, last)
+		 * @param first 範囲の始め(含む)
+		 * @param last  範囲の終わり(含まない)
+		 * @return n in [first, last)の素数列a_n
+		 */
+		prime_range(int first, int last)
+			: base_t(iterator_t(first), iterator_t(last))
+			{ }
+		/**
+		 * 無限素数列 index指定 [first, Inf)
+		 * 単純にalgorithmに渡したりすると無限ループなので注意
+		 * @param first 範囲の始め(含む)
+		 * @return n in [first, Inf)の素数列a_n
+		 */
+		prime_range(int first)
+			: base_t(iterator_t(first), iterator_t(0))
+			{ }
 		
-	  };
+    };
 
 	/**
 	 * 無限素数列 index指定 [first, Inf)
@@ -194,8 +205,8 @@ namespace yuh
 	 * @return 素因数リスト(vector)
 	 */
 	template <typename Integer>
-	std::multiset<prime_type> prime_factor(Integer num)
-	{
+    std::multiset<prime_type> prime_factor(Integer num)
+    {
 		std::multiset<prime_type> ret;
 		auto n = num;
 	
@@ -214,6 +225,6 @@ namespace yuh
 		if(n > 1) ret.insert(n);
 
 		return ret;
-	}
+    }
 }
 

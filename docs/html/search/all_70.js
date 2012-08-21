@@ -6,7 +6,7 @@ var searchData=
   ['prime_2ed',['prime.d',['../df/dd9/prime_8d.html',1,'']]],
   ['prime_2eh',['prime.h',['../dd/d99/prime_8h.html',1,'']]],
   ['prime_5fapprox',['prime_approx',['../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#ace7af2803e2a42c5c17c5e1210e91fa6',1,'yuh::range_detail::prime_iterator']]],
-  ['prime_5ffactor',['prime_factor',['../d5/d2b/namespaceyuh.html#a25df23e130603e9f5810c1d671e71614',1,'yuh']]],
+  ['prime_5ffactor',['prime_factor',['../d5/d2b/namespaceyuh.html#afb5d08e183729831f760d6c2a27226d8',1,'yuh']]],
   ['prime_5fflymake_2ed',['prime_flymake.d',['../dc/dd3/prime__flymake_8d.html',1,'']]],
   ['prime_5fiterator',['prime_iterator',['../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#ac10bb4092341faec6bbf57f1a907c7e7',1,'yuh::range_detail::prime_iterator']]],
   ['prime_5fiterator',['prime_iterator',['../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html',1,'yuh::range_detail']]],

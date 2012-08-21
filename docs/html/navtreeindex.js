@@ -20,9 +20,10 @@ var NAVTREEINDEX =
 "functions_rela.html":[1,2,4],
 "files.html":[2,0],
 "d5/d14/fibonacci_8hpp.html":[2,0,0],
-"dd/d99/prime_8h.html":[2,0,1],
-"d3/d71/prime_8cpp.html":[2,0,2],
-"df/dd9/prime_8d.html":[2,0,3],
-"dc/dd3/prime__flymake_8d.html":[2,0,4],
-"db/d06/stdafx_8h.html":[2,0,5]
+"d4/d78/math_8hpp.html":[2,0,1],
+"dd/d99/prime_8h.html":[2,0,2],
+"d3/d71/prime_8cpp.html":[2,0,3],
+"df/dd9/prime_8d.html":[2,0,4],
+"dc/dd3/prime__flymake_8d.html":[2,0,5],
+"db/d06/stdafx_8h.html":[2,0,6]
 };
