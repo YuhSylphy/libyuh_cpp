@@ -122,6 +122,9 @@ Functions</h2></td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/de6/classyuh_1_1fibonacci__range.html">fibonacci_range</a>&lt; Integer &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a17b1d33879798b95bdefe171df90380a">fibonacci</a> (Integer first, Integer last)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d41/classyuh_1_1prime__range.html">prime_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#ad0e08caa71b8e5172b1535657bbc0648">prime</a> (int first=1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d41/classyuh_1_1prime__range.html">prime_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a31e810e0c57ef83ca515b12f1aac0bf3">prime</a> (int first, int last)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#ac7fcc7fa46bf6b7cf12a53a653b23317">prime_sift</a> (<a class="el" href="../../d5/d2b/namespaceyuh.html#af542f8440602da42322ddb7ea8242336">prime_type</a> upper)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename Integer &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d5/d2b/namespaceyuh.html#af542f8440602da42322ddb7ea8242336">prime_type</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a25df23e130603e9f5810c1d671e71614">prime_factor</a> (Integer num)</td></tr>
 </table>
 <hr/><h2>Typedef Documentation</h2>
 <a class="anchor" id="af542f8440602da42322ddb7ea8242336"></a><!-- doxytag: member="yuh::prime_type" ref="af542f8440602da42322ddb7ea8242336" args="" -->
@@ -237,7 +240,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>n in [first, Inf)の素数列を表すrange </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00146">146</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00148">148</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">    {
         BOOST_ASSERT( first &gt;= 1 );
         <span class="keywordflow">return</span> prime_range(first);
@@ -279,11 +282,89 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>n in [first, last)の素数列を表すrange </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00152">152</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00154">154</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">    {
         BOOST_ASSERT( first &lt;= last );
         BOOST_ASSERT( first &gt;= 1 );
         <span class="keywordflow">return</span> prime_range(first, last);
+    }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a25df23e130603e9f5810c1d671e71614"></a><!-- doxytag: member="yuh::prime_factor" ref="a25df23e130603e9f5810c1d671e71614" args="(Integer num)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d5/d2b/namespaceyuh.html#af542f8440602da42322ddb7ea8242336">prime_type</a>&gt; <a class="el" href="../../d5/d2b/namespaceyuh.html#a25df23e130603e9f5810c1d671e71614">yuh::prime_factor</a> </td>
+          <td>(</td>
+          <td class="paramtype">Integer&#160;</td>
+          <td class="paramname"><em>num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>素因数分解 </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Integer</td><td>整数型 </td></tr>
+    <tr><td class="paramname">num</td><td>対象とする数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>素因数リスト(vector) </dd></dl>
+
+<p>Definition at line <a class="el" href="../../dd/d99/prime_8h_source.html#l00196">196</a> of file <a class="el" href="../../dd/d99/prime_8h_source.html">prime.h</a>.</p>
+<div class="fragment"><pre class="fragment">    {
+        std::vector&lt;prime_type&gt; ret;
+        <span class="keyword">auto</span> n = num;
+    
+        <span class="comment">//ただ順番に割っていくだけ</span>
+        <span class="keywordflow">for</span> ( <span class="keyword">auto</span> p: <a class="code" href="../../d5/d2b/namespaceyuh.html#ad0e08caa71b8e5172b1535657bbc0648">prime</a>() )
+        {
+            <span class="keywordflow">if</span>(p*p &gt; n) <span class="keywordflow">break</span>;
+
+            <span class="keywordflow">while</span>(n % p == 0)
+            {
+                n /= p;
+                ret. push_back(p);
+            }
+        }
+        <span class="comment">//最後に残っているのも素数</span>
+        <span class="keywordflow">if</span>(n &gt; 0) ret.push_back(n);
+
+        <span class="keywordflow">return</span> ret;
+    }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="ac7fcc7fa46bf6b7cf12a53a653b23317"></a><!-- doxytag: member="yuh::prime_sift" ref="ac7fcc7fa46bf6b7cf12a53a653b23317" args="(prime_type upper)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d5/d2b/namespaceyuh.html#ac7fcc7fa46bf6b7cf12a53a653b23317">yuh::prime_sift</a> </td>
+          <td>(</td>
+          <td class="paramtype">prime_type&#160;</td>
+          <td class="paramname"><em>upper</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>エラトステネスの篩にかけてまとめて素数リストに追加する </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">upper</td><td>この数値未満の数を対象とする </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../dd/d99/prime_8h_source.html#l00182">182</a> of file <a class="el" href="../../dd/d99/prime_8h_source.html">prime.h</a>.</p>
+<div class="fragment"><pre class="fragment">    {
+        <span class="comment">//ただのラッパ 階層が深いのでこれだけ表に出しておく</span>
+        range_detail::prime_iterator::sift(upper);
     }
 </pre></div>
 </div>
@@ -308,7 +389,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="../../d5/d2b/namespaceyuh.html">yuh</a>      </li>
 
-    <li class="footer">Generated on Mon Aug 20 2012 11:13:17 for yuh library by
+    <li class="footer">Generated on Tue Aug 21 2012 10:09:22 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

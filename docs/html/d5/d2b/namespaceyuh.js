@@ -6,5 +6,7 @@ var namespaceyuh =
     [ "fibonacci", "d5/d2b/namespaceyuh.html#a11988532f81d143e1b5b74d461dd8067", null ],
     [ "fibonacci", "d5/d2b/namespaceyuh.html#a17b1d33879798b95bdefe171df90380a", null ],
     [ "prime", "d5/d2b/namespaceyuh.html#ad0e08caa71b8e5172b1535657bbc0648", null ],
-    [ "prime", "d5/d2b/namespaceyuh.html#a31e810e0c57ef83ca515b12f1aac0bf3", null ]
+    [ "prime", "d5/d2b/namespaceyuh.html#a31e810e0c57ef83ca515b12f1aac0bf3", null ],
+    [ "prime_factor", "d5/d2b/namespaceyuh.html#a25df23e130603e9f5810c1d671e71614", null ],
+    [ "prime_sift", "d5/d2b/namespaceyuh.html#ac7fcc7fa46bf6b7cf12a53a653b23317", null ]
 ];

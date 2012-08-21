@@ -243,7 +243,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00100">100</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00101">101</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">            :<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a>(index)
         {
             <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#a58131fc2d184d593a3cd6825bca508ee">expand</a>(index);
@@ -268,11 +268,11 @@ Friends</h2></td></tr>
 <div class="memdoc">
 <p>for iterator_facade </p>
 
-<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00131">131</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00133">133</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">        {
             <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> += offset;
             <span class="keywordflow">if</span>(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> &lt; static_cast&lt;int&gt;(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>.size()) ) <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#a58131fc2d184d593a3cd6825bca508ee">expand</a>(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a>); <span class="comment">//まだ知らない素数だったら調べて追加する</span>
-            BOOST_ASSERT( <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> &lt; <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>.size() );
+            BOOST_ASSERT( <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> &lt; static_cast&lt;int&gt;(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>.size()) );
         }
 </pre></div>
 </div>
@@ -311,7 +311,7 @@ Friends</h2></td></tr>
 <div class="memdoc">
 <p>operator--で呼ばれる </p>
 
-<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00114">114</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00116">116</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">        {
             <span class="keywordflow">if</span>(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> &gt;= 0)
                 <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a>--;
@@ -335,9 +335,9 @@ Friends</h2></td></tr>
 <p>参照剥がし</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>このイテレータが指すフィボナッチ数 </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00125">125</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00127">127</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">        {
-            BOOST_ASSERT( <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> &lt; <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>.size() );
+            BOOST_ASSERT( <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> &lt; static_cast&lt;int&gt;(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>.size()) );
             <span class="keywordflow">return</span> <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>[<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a>];
         }
 </pre></div>
@@ -358,7 +358,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00138">138</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00140">140</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">        {
             <span class="keywordflow">return</span> rhs.index_ - <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a>;
         }
@@ -388,7 +388,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>内部表現が等しければ真 </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00120">120</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00122">122</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">        {
             <span class="keywordflow">return</span> rhs.index_ == <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a>; 
         }
@@ -421,9 +421,10 @@ Friends</h2></td></tr>
 <div class="fragment"><pre class="fragment">        {
             <span class="comment">//概算よりちょっとだけ大きいところまで計算 無駄も出るけど</span>
             <span class="keyword">auto</span> approx = <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#ace7af2803e2a42c5c17c5e1210e91fa6">prime_approx</a>(index);
+            
             <span class="keywordflow">while</span>( index &gt;= static_cast&lt;int&gt;(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>.size()) )
             {
-                <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#a8919e76bca867296647318a8e6694b72">sift</a>(approx*=1.02);
+                <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#a8919e76bca867296647318a8e6694b72">sift</a>(approx*=1.05);
             }
         }
 </pre></div>
@@ -444,11 +445,12 @@ Friends</h2></td></tr>
 <div class="memdoc">
 <p>operator++で呼ばれる </p>
 
-<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00107">107</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d71/prime_8cpp_source.html#l00108">108</a> of file <a class="el" href="../../d3/d71/prime_8cpp_source.html">prime.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">        {
             <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a>++;
-            <span class="keywordflow">if</span>(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> &lt; static_cast&lt;int&gt;(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>.size()) ) <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#a58131fc2d184d593a3cd6825bca508ee">expand</a>(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a>); <span class="comment">//まだ知らない素数だったら調べて追加する</span>
-            BOOST_ASSERT( <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> &lt; <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>.size() );
+            <span class="keywordflow">if</span>( <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> &lt;= <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>.size() ) 
+                <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#a58131fc2d184d593a3cd6825bca508ee">expand</a>(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a>); <span class="comment">//まだ知らない素数だったら調べて追加する</span>
+            BOOST_ASSERT( <a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaaf1ac02dfa554a3cdffc647d512a77b">index_</a> &lt; static_cast&lt;int&gt;(<a class="code" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c">p_</a>.size()) );
         }
 </pre></div>
 </div>
@@ -560,7 +562,7 @@ Friends</h2></td></tr>
                     }
                 }
             }
-
+            
             BOOST_ASSERT( candidate.size() == 0 );
         }
 </pre></div>
@@ -641,7 +643,7 @@ Friends</h2></td></tr>
       <li class="navelem"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html">range_detail</a>      </li>
       <li class="navelem"><a class="el" href="../../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html">prime_iterator</a>      </li>
 
-    <li class="footer">Generated on Mon Aug 20 2012 11:13:17 for yuh library by
+    <li class="footer">Generated on Tue Aug 21 2012 10:09:23 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

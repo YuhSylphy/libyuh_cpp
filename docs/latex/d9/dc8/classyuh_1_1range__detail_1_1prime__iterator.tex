@@ -123,7 +123,7 @@ class \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a986bf0deaa7559f36
 \end{DoxyParams}
 
 
-\-Definition at line 100 of file prime.\-cpp.
+\-Definition at line 101 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
@@ -144,7 +144,7 @@ class \hyperlink{classyuh_1_1range__detail_1_1prime__iterator_a986bf0deaa7559f36
 )\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a0b477ad04db9bc38c85d68245b9886e5}
 for iterator\-\_\-facade 
 
-\-Definition at line 131 of file prime.\-cpp.
+\-Definition at line 133 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
@@ -152,7 +152,7 @@ for iterator\-\_\-facade
             index_ += offset;
             if(index_ < static_cast<int>(p_.size()) ) expand(index_); //
       まだ知らない素数だったら調べて追加する
-            BOOST_ASSERT( index_ < p_.size() );
+            BOOST_ASSERT( index_ < static_cast<int>(p_.size()) );
         }
 \end{DoxyCode}
 \hypertarget{classyuh_1_1range__detail_1_1prime__iterator_a2f6d1185fb0a9c5645498e79db8e809b}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!decltype@{decltype}}
@@ -174,7 +174,7 @@ for iterator\-\_\-facade
 )\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_af998f1201f6ff5160003144e5818b8ba}
 operator-\/-\/で呼ばれる 
 
-\-Definition at line 114 of file prime.\-cpp.
+\-Definition at line 116 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
@@ -197,12 +197,12 @@ operator-\/-\/で呼ばれる
 \end{DoxyReturn}
 
 
-\-Definition at line 125 of file prime.\-cpp.
+\-Definition at line 127 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
         {
-            BOOST_ASSERT( index_ < p_.size() );
+            BOOST_ASSERT( index_ < static_cast<int>(p_.size()) );
             return p_[index_];
         }
 \end{DoxyCode}
@@ -215,7 +215,7 @@ operator-\/-\/で呼ばれる
 ) const\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_a4510fc76b72f1340fb6cf787d3eafe72}
 
 
-\-Definition at line 138 of file prime.\-cpp.
+\-Definition at line 140 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
@@ -242,7 +242,7 @@ operator-\/-\/で呼ばれる
 \end{DoxyReturn}
 
 
-\-Definition at line 120 of file prime.\-cpp.
+\-Definition at line 122 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
@@ -271,9 +271,10 @@ operator-\/-\/で呼ばれる
         {
             //概算よりちょっとだけ大きいところまで計算 無駄も出るけど
             auto approx = prime_approx(index);
+            
             while( index >= static_cast<int>(p_.size()) )
             {
-                sift(approx*=1.02);
+                sift(approx*=1.05);
             }
         }
 \end{DoxyCode}
@@ -286,15 +287,15 @@ operator-\/-\/で呼ばれる
 )\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc8/classyuh_1_1range__detail_1_1prime__iterator_aeb2624c7a86b765725fd80cd426e147d}
 operator++で呼ばれる 
 
-\-Definition at line 107 of file prime.\-cpp.
+\-Definition at line 108 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
         {
             index_++;
-            if(index_ < static_cast<int>(p_.size()) ) expand(index_); //
-      まだ知らない素数だったら調べて追加する
-            BOOST_ASSERT( index_ < p_.size() );
+            if( index_ <= p_.size() ) 
+                expand(index_); //まだ知らない素数だったら調べて追加する
+            BOOST_ASSERT( index_ < static_cast<int>(p_.size()) );
         }
 \end{DoxyCode}
 \hypertarget{classyuh_1_1range__detail_1_1prime__iterator_ace7af2803e2a42c5c17c5e1210e91fa6}{\index{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator@{yuh\-::range\-\_\-detail\-::prime\-\_\-iterator}!prime\-\_\-approx@{prime\-\_\-approx}}
@@ -394,7 +395,7 @@ n番目の素数の概算値を返す 実際より大きいか小さいかは不
                     }
                 }
             }
-
+            
             BOOST_ASSERT( candidate.size() == 0 );
         }
 \end{DoxyCode}

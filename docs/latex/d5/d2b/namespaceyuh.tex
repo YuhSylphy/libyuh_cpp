@@ -28,6 +28,10 @@ typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{pri
 \hyperlink{classyuh_1_1prime__range}{prime\-\_\-range} \hyperlink{namespaceyuh_ad0e08caa71b8e5172b1535657bbc0648}{prime} (int first=1)
 \item 
 \hyperlink{classyuh_1_1prime__range}{prime\-\_\-range} \hyperlink{namespaceyuh_a31e810e0c57ef83ca515b12f1aac0bf3}{prime} (int first, int last)
+\item 
+void \hyperlink{namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}{prime\-\_\-sift} (\hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type} upper)
+\item 
+{\footnotesize template$<$typename Integer $>$ }\\std\-::vector$<$ \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type} $>$ \hyperlink{namespaceyuh_a25df23e130603e9f5810c1d671e71614}{prime\-\_\-factor} (\-Integer num)
 \end{DoxyCompactItemize}
 
 
@@ -119,7 +123,7 @@ n in \mbox{[}first, \-Inf)の素数列を表すrange
 \end{DoxyReturn}
 
 
-\-Definition at line 146 of file prime.\-cpp.
+\-Definition at line 148 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
@@ -150,7 +154,7 @@ n in \mbox{[}first, last)の素数列を表すrange
 \end{DoxyReturn}
 
 
-\-Definition at line 152 of file prime.\-cpp.
+\-Definition at line 154 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
@@ -158,5 +162,72 @@ n in \mbox{[}first, last)の素数列を表すrange
         BOOST_ASSERT( first <= last );
         BOOST_ASSERT( first >= 1 );
         return prime_range(first, last);
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a25df23e130603e9f5810c1d671e71614}{\index{yuh@{yuh}!prime\-\_\-factor@{prime\-\_\-factor}}
+\index{prime\-\_\-factor@{prime\-\_\-factor}!yuh@{yuh}}
+\subsubsection[{prime\-\_\-factor}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf prime\-\_\-type}$>$ {\bf yuh\-::prime\-\_\-factor} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{num}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_a25df23e130603e9f5810c1d671e71614}
+素因数分解 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Integer} & 整数型 \\
+\hline
+{\em num} & 対象とする数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+素因数リスト(vector) 
+\end{DoxyReturn}
+
+
+\-Definition at line 196 of file prime.\-h.
+
+
+\begin{DoxyCode}
+    {
+        std::vector<prime_type> ret;
+        auto n = num;
+    
+        //ただ順番に割っていくだけ
+        for ( auto p: prime() )
+        {
+            if(p*p > n) break;
+
+            while(n % p == 0)
+            {
+                n /= p;
+                ret. push_back(p);
+            }
+        }
+        //最後に残っているのも素数
+        if(n > 0) ret.push_back(n);
+
+        return ret;
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}{\index{yuh@{yuh}!prime\-\_\-sift@{prime\-\_\-sift}}
+\index{prime\-\_\-sift@{prime\-\_\-sift}!yuh@{yuh}}
+\subsubsection[{prime\-\_\-sift}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf yuh\-::prime\-\_\-sift} (
+\begin{DoxyParamCaption}
+\item[{prime\-\_\-type}]{upper}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}
+エラトステネスの篩にかけてまとめて素数リストに追加する 
+\begin{DoxyParams}{\-Parameters}
+{\em upper} & この数値未満の数を対象とする \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 182 of file prime.\-h.
+
+
+\begin{DoxyCode}
+    {
+        //ただのラッパ 階層が深いのでこれだけ表に出しておく
+        range_detail::prime_iterator::sift(upper);
     }
 \end{DoxyCode}
