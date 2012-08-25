@@ -27,7 +27,8 @@ CXXFLAGS += -g -Wall -Wextra -std=c++11
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = fibonacci_unittest prime_unittest math_unittest
+#TESTS = fibonacci_unittest prime_unittest math_unittest polygonal_unittest
+TESTS = $(patsubst %.cpp,%,$(shell ls -tr *unittest.cpp))
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -43,12 +44,17 @@ LDFLAGS=-L/home/yuh/document/cpp/yuh/libs -lyuh -lpthread
 
 DEPENDS=$(addsuffix .d, $(TESTS))
 
+TARGET=unittest
+
 # House-keeping build targets.
 
-all : $(addsuffix .exe, $(TESTS)) test
+all : $(TARGET)
+
+test:
+	./$(TARGET)
 
 clean :
-	rm -f $(TESTS) $(DEPENDS) gtest.a gtest_main.a *.o
+	rm -f $(TARGET) $(DEPENDS) gtest.a gtest_main.a *.o
 
 # Builds gtest.a and gtest_main.a.
 
@@ -92,13 +98,9 @@ gtest_main.a : gtest-all.o gtest_main.o
                        $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/$<
 
-%.exe : %.o gtest_main.a ../libs/*.a
+$(TARGET): $(addsuffix .o, $(TESTS)) gtest_main.a ../libs/lib*.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
-
-test: $(addsuffix .test, $(TESTS))
-
-%.test:
-	$(USER_DIR)/$(@:.test=.exe)
+	./$(TARGET)
 
 %.d: %.cpp
 	$(CXX) -MM $(CXXFLAGS) -I$(GTEST_DIR)/include $<  >  $@

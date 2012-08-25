@@ -106,10 +106,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d99/namespaceyuh_1_1adaptor.html">adaptor</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html">range_detail</a></td></tr>
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de6/classyuh_1_1fibonacci__range.html">fibonacci_range</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2a/classyuh_1_1polygonal__range.html">polygonal_range</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d41/classyuh_1_1prime__range.html">prime_range</a></td></tr>
 <tr><td colspan="2"><h2><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -126,6 +128,12 @@ Functions</h2></td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a14298c4b76f1a9d0537e7d5d67cfa784">is_Pythagorean</a> (Integer a, Integer b, Integer c)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#af94deeef5a14f79a6a51c6ca3155d03e">is_Pythagorean</a> (const Range &amp;rng)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename Integer &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a43d71ed08fec121213f4ad3acbdc4d26">is_square</a> (Integer n)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;size_t P, typename Integer  = int&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d5/d2a/classyuh_1_1polygonal__range.html">polygonal_range</a>&lt; P, Integer &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#ad748e41a574e1b3042a2741cf023c40c">polygonal</a> (Integer first=0)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;size_t P, typename Integer  = int&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d5/d2a/classyuh_1_1polygonal__range.html">polygonal_range</a>&lt; P, Integer &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a1af8d0faca38b0efb8ae71d0f773d3c8">polygonal</a> (Integer first, Integer last)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d41/classyuh_1_1prime__range.html">prime_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#ad0e08caa71b8e5172b1535657bbc0648">prime</a> (int first=1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d41/classyuh_1_1prime__range.html">prime_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a31e810e0c57ef83ca515b12f1aac0bf3">prime</a> (int first, int last)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#ac7fcc7fa46bf6b7cf12a53a653b23317">prime_sift</a> (<a class="el" href="../../d5/d2b/namespaceyuh.html#af542f8440602da42322ddb7ea8242336">prime_type</a> upper)</td></tr>
@@ -274,7 +282,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>nが回文数かどうか </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
 <div class="fragment"><pre class="fragment">    {
         Integer c = 0;
         Integer t = n;
@@ -336,7 +344,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>三つ組(a,b,c)がピタゴラス数であるか </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
 <div class="fragment"><pre class="fragment">    {
         <span class="comment">// 途中で関数にするまでもないと思ったけど</span>
         <span class="comment">// 意味がはっきりとはしそうなので最後まで書く</span>
@@ -369,7 +377,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>三つ組(a,b,c)がピタゴラス数であるか </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
 <div class="fragment"><pre class="fragment">    {
         <span class="keywordflow">if</span>(boost::distance(rng) != 3) 
             <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;is_Pythagorean: range size error&quot;</span>);
@@ -380,6 +388,111 @@ Functions</h2></td></tr>
         <span class="keyword">const</span> <span class="keyword">auto</span>&amp; c = *(++it);
 
         <span class="keywordflow">return</span> a*a + b*b == c*c;
+    }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a43d71ed08fec121213f4ad3acbdc4d26"></a><!-- doxytag: member="yuh::is_square" ref="a43d71ed08fec121213f4ad3acbdc4d26" args="(Integer n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d5/d2b/namespaceyuh.html#a43d71ed08fec121213f4ad3acbdc4d26">yuh::is_square</a> </td>
+          <td>(</td>
+          <td class="paramtype">Integer&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>平方数判定 </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Integer</td><td>整数型 </td></tr>
+    <tr><td class="paramname">n</td><td>チェックする値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>平方数であればtrue </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d4/d78/math_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../d4/d78/math_8hpp_source.html">math.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">    {
+        <span class="keywordflow">return</span>  n == std::pow(std::floor(std::sqrt(n)), 2);
+    }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="ad748e41a574e1b3042a2741cf023c40c"></a><!-- doxytag: member="yuh::polygonal" ref="ad748e41a574e1b3042a2741cf023c40c" args="(Integer first=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d2a/classyuh_1_1polygonal__range.html">polygonal_range</a>&lt;P, Integer&gt; <a class="el" href="../../d5/d2b/namespaceyuh.html#ad748e41a574e1b3042a2741cf023c40c">yuh::polygonal</a> </td>
+          <td>(</td>
+          <td class="paramtype">Integer&#160;</td>
+          <td class="paramname"><em>first</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>無限多角数列 index指定 [first, Inf) 単純にalgorithmに渡したりすると無限ループなので注意</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>範囲の始め(含む) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>n in [first, Inf)の多角数列を表すrange </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d7/ddc/polygonal_8hpp_source.html#l00206">206</a> of file <a class="el" href="../../d7/ddc/polygonal_8hpp_source.html">polygonal.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">    {
+        BOOST_ASSERT( first &gt;= 0 );
+        <span class="keywordflow">return</span> polygonal_range&lt;P, Integer&gt;(first);
+    }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a1af8d0faca38b0efb8ae71d0f773d3c8"></a><!-- doxytag: member="yuh::polygonal" ref="a1af8d0faca38b0efb8ae71d0f773d3c8" args="(Integer first, Integer last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d2a/classyuh_1_1polygonal__range.html">polygonal_range</a>&lt;P, Integer&gt; <a class="el" href="../../d5/d2b/namespaceyuh.html#ad748e41a574e1b3042a2741cf023c40c">yuh::polygonal</a> </td>
+          <td>(</td>
+          <td class="paramtype">Integer&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Integer&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>有限多角数列 index指定 [first, last) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>範囲の始め(含む) </td></tr>
+    <tr><td class="paramname">last</td><td>範囲の終わり(含まない) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>n in [first, last)の多角数列を表すrange </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d7/ddc/polygonal_8hpp_source.html#l00219">219</a> of file <a class="el" href="../../d7/ddc/polygonal_8hpp_source.html">polygonal.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">    {
+        BOOST_ASSERT( first &lt;= last );
+        BOOST_ASSERT( first &gt;= 0 );
+        <span class="keywordflow">return</span> polygonal_range&lt;P, Integer&gt;(first, last);
     }
 </pre></div>
 </div>
@@ -556,7 +669,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="../../d5/d2b/namespaceyuh.html">yuh</a>      </li>
 
-    <li class="footer">Generated on Wed Aug 22 2012 03:34:16 for yuh library by
+    <li class="footer">Generated on Sat Aug 25 2012 19:42:42 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

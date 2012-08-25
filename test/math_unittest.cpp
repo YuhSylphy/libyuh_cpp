@@ -33,3 +33,12 @@ TEST(math, pethagorean)
 	EXPECT_ANY_THROW(is_Pythagorean(std::array<int, 4>{{0}}));
 
 }
+
+TEST(math, square)
+{
+	EXPECT_EQ(is_square(4), true);
+	EXPECT_EQ(is_square(9), true);
+	EXPECT_EQ(is_square(144), true);
+	EXPECT_EQ(is_square(3), false);
+	EXPECT_EQ(is_square(12), false);
+}

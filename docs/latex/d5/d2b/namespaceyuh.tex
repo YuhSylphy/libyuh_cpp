@@ -4,12 +4,16 @@
 \subsection*{\-Namespaces}
 \begin{DoxyCompactItemize}
 \item 
+namespace \hyperlink{namespaceyuh_1_1adaptor}{adaptor}
+\item 
 namespace \hyperlink{namespaceyuh_1_1range__detail}{range\-\_\-detail}
 \end{DoxyCompactItemize}
 \subsection*{\-Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}
+\item 
+class \hyperlink{classyuh_1_1polygonal__range}{polygonal\-\_\-range}
 \item 
 class \hyperlink{classyuh_1_1prime__range}{prime\-\_\-range}
 \end{DoxyCompactItemize}
@@ -30,6 +34,12 @@ typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{pri
 {\footnotesize template$<$typename Integer $>$ }\\bool \hyperlink{namespaceyuh_a14298c4b76f1a9d0537e7d5d67cfa784}{is\-\_\-\-Pythagorean} (\-Integer a, \-Integer b, \-Integer c)
 \item 
 {\footnotesize template$<$typename Range $>$ }\\bool \hyperlink{namespaceyuh_af94deeef5a14f79a6a51c6ca3155d03e}{is\-\_\-\-Pythagorean} (const \-Range \&rng)
+\item 
+{\footnotesize template$<$typename Integer $>$ }\\bool \hyperlink{namespaceyuh_a43d71ed08fec121213f4ad3acbdc4d26}{is\-\_\-square} (\-Integer n)
+\item 
+{\footnotesize template$<$size\-\_\-t \-P, typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1polygonal__range}{polygonal\-\_\-range}$<$ \-P, \-Integer $>$ \hyperlink{namespaceyuh_ad748e41a574e1b3042a2741cf023c40c}{polygonal} (\-Integer first=0)
+\item 
+{\footnotesize template$<$size\-\_\-t \-P, typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1polygonal__range}{polygonal\-\_\-range}$<$ \-P, \-Integer $>$ \hyperlink{namespaceyuh_a1af8d0faca38b0efb8ae71d0f773d3c8}{polygonal} (\-Integer first, \-Integer last)
 \item 
 \hyperlink{classyuh_1_1prime__range}{prime\-\_\-range} \hyperlink{namespaceyuh_ad0e08caa71b8e5172b1535657bbc0648}{prime} (int first=1)
 \item 
@@ -155,7 +165,7 @@ nが回文数かどうか
 \end{DoxyReturn}
 
 
-\-Definition at line 20 of file math.\-hpp.
+\-Definition at line 23 of file math.\-hpp.
 
 
 \begin{DoxyCode}
@@ -201,7 +211,7 @@ nが回文数かどうか
 \end{DoxyReturn}
 
 
-\-Definition at line 48 of file math.\-hpp.
+\-Definition at line 51 of file math.\-hpp.
 
 
 \begin{DoxyCode}
@@ -230,7 +240,7 @@ nが回文数かどうか
 \end{DoxyReturn}
 
 
-\-Definition at line 62 of file math.\-hpp.
+\-Definition at line 65 of file math.\-hpp.
 
 
 \begin{DoxyCode}
@@ -244,6 +254,91 @@ nが回文数かどうか
         const auto& c = *(++it);
 
         return a*a + b*b == c*c;
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a43d71ed08fec121213f4ad3acbdc4d26}{\index{yuh@{yuh}!is\-\_\-square@{is\-\_\-square}}
+\index{is\-\_\-square@{is\-\_\-square}!yuh@{yuh}}
+\subsubsection[{is\-\_\-square}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf yuh\-::is\-\_\-square} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{n}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_a43d71ed08fec121213f4ad3acbdc4d26}
+平方数判定 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Integer} & 整数型 \\
+\hline
+{\em n} & チェックする値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+平方数であればtrue 
+\end{DoxyReturn}
+
+
+\-Definition at line 84 of file math.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        return  n == std::pow(std::floor(std::sqrt(n)), 2);
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_ad748e41a574e1b3042a2741cf023c40c}{\index{yuh@{yuh}!polygonal@{polygonal}}
+\index{polygonal@{polygonal}!yuh@{yuh}}
+\subsubsection[{polygonal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygonal\-\_\-range}$<$\-P, \-Integer$>$ {\bf yuh\-::polygonal} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{first = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_ad748e41a574e1b3042a2741cf023c40c}
+無限多角数列 index指定 \mbox{[}first, \-Inf) 単純にalgorithmに渡したりすると無限ループなので注意
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, \-Inf)の多角数列を表すrange 
+\end{DoxyReturn}
+
+
+\-Definition at line 206 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        BOOST_ASSERT( first >= 0 );
+        return polygonal_range<P, Integer>(first);
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a1af8d0faca38b0efb8ae71d0f773d3c8}{\index{yuh@{yuh}!polygonal@{polygonal}}
+\index{polygonal@{polygonal}!yuh@{yuh}}
+\subsubsection[{polygonal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygonal\-\_\-range}$<$\-P, \-Integer$>$ {\bf yuh\-::polygonal} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{first, }
+\item[{\-Integer}]{last}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_a1af8d0faca38b0efb8ae71d0f773d3c8}
+有限多角数列 index指定 \mbox{[}first, last) 
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+{\em last} & 範囲の終わり(含まない) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, last)の多角数列を表すrange 
+\end{DoxyReturn}
+
+
+\-Definition at line 219 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        BOOST_ASSERT( first <= last );
+        BOOST_ASSERT( first >= 0 );
+        return polygonal_range<P, Integer>(first, last);
     }
 \end{DoxyCode}
 \hypertarget{namespaceyuh_ad0e08caa71b8e5172b1535657bbc0648}{\index{yuh@{yuh}!prime@{prime}}

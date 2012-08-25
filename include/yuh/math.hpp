@@ -5,9 +5,12 @@
 
 #pragma once
 
+#include <cmath>
+
 #include <boost/assert.hpp>
 #include <boost/range/distance.hpp>
 #include <stdexcept>
+
 
 namespace yuh
 {
@@ -71,5 +74,15 @@ namespace yuh
 
 		return a*a + b*b == c*c;
 	}
-
+	/**
+	 * 平方数判定
+	 * @param Integer 整数型
+	 * @param n チェックする値
+	 * @return 平方数であればtrue
+	 */
+	template<typename Integer>
+	bool is_square(Integer n)
+	{
+		return 	n == std::pow(std::floor(std::sqrt(n)), 2);
+	}
 }

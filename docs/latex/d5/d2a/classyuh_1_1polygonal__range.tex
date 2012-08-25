@@ -1,0 +1,114 @@
+\hypertarget{classyuh_1_1polygonal__range}{\section{polygonal\-\_\-range$<$ \-P, \-Integer $>$ \-Class \-Template \-Reference}
+\label{d5/d2a/classyuh_1_1polygonal__range}\index{polygonal\-\_\-range$<$ P, Integer $>$@{polygonal\-\_\-range$<$ P, Integer $>$}}
+}
+
+
+{\ttfamily \#include $<$polygonal.\-hpp$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1polygonal__range_a21bf2b09c54090fdc482e34cde6571b4}{polygonal\-\_\-range} (\-Integer first, \-Integer last)
+\item 
+\hyperlink{classyuh_1_1polygonal__range_af87030a4d0bf0a744a730d346d8d70f1}{polygonal\-\_\-range} (\-Integer first)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \*
+\hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator}{range\-\_\-detail\-::polygonal\-\_\-iterator}\*
+$<$ \-P, \-Integer $>$ \hyperlink{classyuh_1_1polygonal__range_a824fcddb551991ff7719d081b900e909}{iterator\-\_\-t}
+\item 
+typedef boost\-::iterator\-\_\-range\*
+$<$ \hyperlink{classyuh_1_1polygonal__range_a824fcddb551991ff7719d081b900e909}{iterator\-\_\-t} $>$ \hyperlink{classyuh_1_1polygonal__range_a9d51b0fc63206906184824c5b08403b2}{base\-\_\-t}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$size\-\_\-t \-P, typename \-Integer$>$class yuh\-::polygonal\-\_\-range$<$ P, Integer $>$}
+
+多角数列の範囲 無限数列・有限数列どちらも表現可能 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Integer} & 多角数を表現する整数型 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 165 of file polygonal.\-hpp.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classyuh_1_1polygonal__range_a9d51b0fc63206906184824c5b08403b2}{\index{yuh\-::polygonal\-\_\-range@{yuh\-::polygonal\-\_\-range}!base\-\_\-t@{base\-\_\-t}}
+\index{base\-\_\-t@{base\-\_\-t}!yuh::polygonal_range@{yuh\-::polygonal\-\_\-range}}
+\subsubsection[{base\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::iterator\-\_\-range$<${\bf iterator\-\_\-t}$>$ {\bf base\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/d2a/classyuh_1_1polygonal__range_a9d51b0fc63206906184824c5b08403b2}
+基底クラス(iterator\-\_\-range) 
+
+\-Definition at line 175 of file polygonal.\-hpp.
+
+\hypertarget{classyuh_1_1polygonal__range_a824fcddb551991ff7719d081b900e909}{\index{yuh\-::polygonal\-\_\-range@{yuh\-::polygonal\-\_\-range}!iterator\-\_\-t@{iterator\-\_\-t}}
+\index{iterator\-\_\-t@{iterator\-\_\-t}!yuh::polygonal_range@{yuh\-::polygonal\-\_\-range}}
+\subsubsection[{iterator\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf range\-\_\-detail\-::polygonal\-\_\-iterator}$<$\-P, \-Integer$>$ {\bf iterator\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/d2a/classyuh_1_1polygonal__range_a824fcddb551991ff7719d081b900e909}
+イテレータの型 
+
+\-Definition at line 171 of file polygonal.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1polygonal__range_a21bf2b09c54090fdc482e34cde6571b4}{\index{yuh\-::polygonal\-\_\-range@{yuh\-::polygonal\-\_\-range}!polygonal\-\_\-range@{polygonal\-\_\-range}}
+\index{polygonal\-\_\-range@{polygonal\-\_\-range}!yuh::polygonal_range@{yuh\-::polygonal\-\_\-range}}
+\subsubsection[{polygonal\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygonal\-\_\-range} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{first, }
+\item[{\-Integer}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2a/classyuh_1_1polygonal__range_a21bf2b09c54090fdc482e34cde6571b4}
+有限多角数列 index指定 \mbox{[}first, last) 
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+{\em last} & 範囲の終わり(含まない) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, last)の多角数列a\-\_\-n 
+\end{DoxyReturn}
+
+
+\-Definition at line 183 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+            : base_t(iterator_t(first), iterator_t(last))
+        { }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1polygonal__range_af87030a4d0bf0a744a730d346d8d70f1}{\index{yuh\-::polygonal\-\_\-range@{yuh\-::polygonal\-\_\-range}!polygonal\-\_\-range@{polygonal\-\_\-range}}
+\index{polygonal\-\_\-range@{polygonal\-\_\-range}!yuh::polygonal_range@{yuh\-::polygonal\-\_\-range}}
+\subsubsection[{polygonal\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygonal\-\_\-range} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{first}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2a/classyuh_1_1polygonal__range_af87030a4d0bf0a744a730d346d8d70f1}
+無限多角数列 index指定 \mbox{[}first, \-Inf) 単純にalgorithmに渡したりすると無限ループなので注意 
+\begin{DoxyParams}{\-Parameters}
+{\em first} & 範囲の始め(含む) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n in \mbox{[}first, \-Inf)の多角数列a\-\_\-n 
+\end{DoxyReturn}
+
+
+\-Definition at line 192 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+            : base_t(iterator_t(first), iterator_t())
+        { }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{polygonal_8hpp}{polygonal.\-hpp}\end{DoxyCompactItemize}

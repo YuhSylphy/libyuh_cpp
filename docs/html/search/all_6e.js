@@ -1,4 +1,5 @@
 var searchData=
 [
+  ['n_5f',['n_',['../d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator.html#a27fd4ef0d3621da512b437dbe4210464',1,'yuh::range_detail::polygonal_iterator']]],
   ['nth_5ffibonacci',['nth_fibonacci',['../df/d65/classyuh_1_1range__detail_1_1fibonacci__iterator.html#acc92d21c640d472b2a076ccaee3a4cbf',1,'yuh::range_detail::fibonacci_iterator']]]
 ];

@@ -1,0 +1,345 @@
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator}{\section{polygonal\-\_\-iterator$<$ \-P, \-Integer $>$ \-Class \-Template \-Reference}
+\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator}\index{polygonal\-\_\-iterator$<$ P, Integer $>$@{polygonal\-\_\-iterator$<$ P, Integer $>$}}
+}
+
+
+{\ttfamily \#include $<$polygonal.\-hpp$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef base\-\_\-t\-::value\-\_\-type \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type}
+\item 
+typedef base\-\_\-t\-::difference\-\_\-type \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a9ac6039762e1b262cecb98589ffc1d75}{difference\-\_\-type}
+\item 
+typedef base\-\_\-t\-::reference \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_aa5d67140d1557795cc6c30a2849d4e05}{reference}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_ac2e7d0f52b31712f78a39832e3d1415a}{polygonal\-\_\-iterator} ()
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a50238cb4e9e9f468a6e3e81b857df52e}{polygonal\-\_\-iterator} (size\-\_\-t n)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boost\-::optional$<$ size\-\_\-t $>$ \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a44fa6142bea1b3aefbe6e588b9e06591}{index\-\_\-of} (\hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type} val)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::iterator\-\_\-facade\*
+$<$ \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator}{polygonal\-\_\-iterator}$<$ \-P, \*
+\-Integer $>$, \-Integer, \*
+boost\-::random\-\_\-access\-\_\-traversal\-\_\-tag, \*
+\-Integer, std\-::ptrdiff\-\_\-t $>$ \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_acd43edf91ede982ba924e46c01501792}{base\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_aeb2624c7a86b765725fd80cd426e147d}{increment} ()
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_af998f1201f6ff5160003144e5818b8ba}{decrement} ()
+\item 
+bool \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a033c7db3c22772fbc55a9a1048ad4c2d}{equal} (const \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator}{polygonal\-\_\-iterator} \&rhs) const 
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_aa5d67140d1557795cc6c30a2849d4e05}{reference} \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a1b739c629ff6d9f19e13216adc65a999}{dereference} () const 
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a0b477ad04db9bc38c85d68245b9886e5}{advance} (\hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a9ac6039762e1b262cecb98589ffc1d75}{difference\-\_\-type} offset)
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a9ac6039762e1b262cecb98589ffc1d75}{difference\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a871337725d96f0d971db5082f14fecf1}{distance\-\_\-to} (const \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator}{polygonal\-\_\-iterator} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a27fd4ef0d3621da512b437dbe4210464}{n\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator_a986bf0deaa7559f361d03122eeea4c86}{\-::boost\-::iterator\-\_\-core\-\_\-access}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$size\-\_\-t \-P, typename Integer$>$class yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator$<$ P, Integer $>$}
+
+多角数列を走査するイテレータ 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Integer} & 多角数を表現する整数型 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 21 of file polygonal.\-hpp.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_acd43edf91ede982ba924e46c01501792}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!base\-\_\-t@{base\-\_\-t}}
+\index{base\-\_\-t@{base\-\_\-t}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{base\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::iterator\-\_\-facade$<$ {\bf polygonal\-\_\-iterator}$<$\-P, \-Integer$>$, \-Integer, boost\-::random\-\_\-access\-\_\-traversal\-\_\-tag, \-Integer, std\-::ptrdiff\-\_\-t $>$ {\bf base\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_acd43edf91ede982ba924e46c01501792}
+基底クラス(iterator\-\_\-facade) 
+
+\-Definition at line 40 of file polygonal.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_a9ac6039762e1b262cecb98589ffc1d75}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!difference\-\_\-type@{difference\-\_\-type}}
+\index{difference\-\_\-type@{difference\-\_\-type}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{difference\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::difference\-\_\-type {\bf difference\-\_\-type}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_a9ac6039762e1b262cecb98589ffc1d75}
+イテレータの距離を示す型 
+
+\-Definition at line 49 of file polygonal.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_aa5d67140d1557795cc6c30a2849d4e05}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!reference@{reference}}
+\index{reference@{reference}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::reference {\bf reference}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_aa5d67140d1557795cc6c30a2849d4e05}
+参照を剥がした際の型 
+
+\-Definition at line 53 of file polygonal.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!value\-\_\-type@{value\-\_\-type}}
+\index{value\-\_\-type@{value\-\_\-type}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::value\-\_\-type {\bf value\-\_\-type}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}
+渡された値型 
+
+\-Definition at line 45 of file polygonal.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_ac2e7d0f52b31712f78a39832e3d1415a}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!polygonal\-\_\-iterator@{polygonal\-\_\-iterator}}
+\index{polygonal\-\_\-iterator@{polygonal\-\_\-iterator}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{polygonal\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygonal\-\_\-iterator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_ac2e7d0f52b31712f78a39832e3d1415a}
+無限範囲終端イテレータ用
+
+前後どちらに動かしても変化しない 
+
+\-Definition at line 60 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+: n_(0){}
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_a50238cb4e9e9f468a6e3e81b857df52e}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!polygonal\-\_\-iterator@{polygonal\-\_\-iterator}}
+\index{polygonal\-\_\-iterator@{polygonal\-\_\-iterator}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{polygonal\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygonal\-\_\-iterator} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_a50238cb4e9e9f468a6e3e81b857df52e}
+内部表現の値を直接指定する
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em a1} & イテレータが示す多角数の添字(index) \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 66 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+                                                 : 
+                n_(n) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_a0b477ad04db9bc38c85d68245b9886e5}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!advance@{advance}}
+\index{advance@{advance}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{advance}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf advance} (
+\begin{DoxyParamCaption}
+\item[{{\bf difference\-\_\-type}}]{offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_a0b477ad04db9bc38c85d68245b9886e5}
+std\-::advanceで呼ばれる 
+\begin{DoxyParams}{\-Parameters}
+{\em offset} & 移動する目標との距離 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 129 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                if(n_ <= -offset )
+                    n_ = 0;
+                else
+                    n_ += offset;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_af998f1201f6ff5160003144e5818b8ba}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!decrement@{decrement}}
+\index{decrement@{decrement}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{decrement}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf decrement} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_af998f1201f6ff5160003144e5818b8ba}
+operator-\/-\/で呼ばれる 
+
+\-Definition at line 99 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                n_--;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_a1b739c629ff6d9f19e13216adc65a999}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!dereference@{dereference}}
+\index{dereference@{dereference}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{dereference}]{\setlength{\rightskip}{0pt plus 5cm}{\bf reference} {\bf dereference} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_a1b739c629ff6d9f19e13216adc65a999}
+参照剥がし
+
+\begin{DoxyReturn}{\-Returns}
+このイテレータが指す多角数 
+\end{DoxyReturn}
+
+
+\-Definition at line 120 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return ((P-2)*n_*n_ - (P-4)*n_)/2;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_a871337725d96f0d971db5082f14fecf1}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!distance\-\_\-to@{distance\-\_\-to}}
+\index{distance\-\_\-to@{distance\-\_\-to}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{distance\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}{\bf difference\-\_\-type} {\bf distance\-\_\-to} (
+\begin{DoxyParamCaption}
+\item[{const {\bf polygonal\-\_\-iterator}$<$ \-P, \-Integer $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_a871337725d96f0d971db5082f14fecf1}
+std\-::distanceで呼ばれる 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 比較対象 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+自身とrhsの距離 
+\end{DoxyReturn}
+
+
+\-Definition at line 142 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return static_cast<std::ptrdiff_t>(rhs.n_) - n_;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_a033c7db3c22772fbc55a9a1048ad4c2d}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!equal@{equal}}
+\index{equal@{equal}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{equal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf equal} (
+\begin{DoxyParamCaption}
+\item[{const {\bf polygonal\-\_\-iterator}$<$ \-P, \-Integer $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_a033c7db3c22772fbc55a9a1048ad4c2d}
+等値チェック
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & operator==の右辺に取る値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+内部表現が等しければ真 
+\end{DoxyReturn}
+
+
+\-Definition at line 110 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return n_ == rhs.n_;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_aeb2624c7a86b765725fd80cd426e147d}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!increment@{increment}}
+\index{increment@{increment}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{increment}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf increment} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_aeb2624c7a86b765725fd80cd426e147d}
+operator++で呼ばれる 
+
+\-Definition at line 91 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                n_++;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_a44fa6142bea1b3aefbe6e588b9e06591}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!index\-\_\-of@{index\-\_\-of}}
+\index{index\-\_\-of@{index\-\_\-of}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{index\-\_\-of}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::optional$<$size\-\_\-t$>$ {\bf index\-\_\-of} (
+\begin{DoxyParamCaption}
+\item[{{\bf value\-\_\-type}}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_a44fa6142bea1b3aefbe6e588b9e06591}
+渡した値が\-P角数ならばその添字を返す 
+\begin{DoxyParams}{\-Parameters}
+{\em val} & チェックする値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-P角数ならばそのindex，でなければ無効値 
+\end{DoxyReturn}
+
+
+\-Definition at line 74 of file polygonal.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                const auto D = (P-4)*(P-4) + 8 * (P-2) * val;
+                if(is_square(D))
+                {
+                    return ( static_cast<value_type>(std::sqrt(D)) + (P-4) ) / 
+      2 * (P - 2);
+                }
+                else
+                {
+                    return boost::none;
+                }
+            }
+\end{DoxyCode}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_a986bf0deaa7559f361d03122eeea4c86}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}}
+\index{\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{\-::boost\-::iterator\-\_\-core\-\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}friend class \-::boost\-::iterator\-\_\-core\-\_\-access\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_a986bf0deaa7559f361d03122eeea4c86}
+for iterator\-\_\-facade 
+
+\-Definition at line 150 of file polygonal.\-hpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1polygonal__iterator_a27fd4ef0d3621da512b437dbe4210464}{\index{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}!n\-\_\-@{n\-\_\-}}
+\index{n\-\_\-@{n\-\_\-}!yuh::range_detail::polygonal_iterator@{yuh\-::range\-\_\-detail\-::polygonal\-\_\-iterator}}
+\subsubsection[{n\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf n\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator_a27fd4ef0d3621da512b437dbe4210464}
+イテレータが示す多角数のindex 
+
+\-Definition at line 154 of file polygonal.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{polygonal_8hpp}{polygonal.\-hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,297 @@
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator}{\section{count\-\_\-map\-\_\-iterator$<$ \-Range $>$ \-Class \-Template \-Reference}
+\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator}\index{count\-\_\-map\-\_\-iterator$<$ Range $>$@{count\-\_\-map\-\_\-iterator$<$ Range $>$}}
+}
+
+
+{\ttfamily \#include $<$count\-\_\-mapped.\-hpp$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef base\-\_\-t\-::value\-\_\-type \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type}
+\item 
+typedef base\-\_\-t\-::difference\-\_\-type \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a9ac6039762e1b262cecb98589ffc1d75}{difference\-\_\-type}
+\item 
+typedef base\-\_\-t\-::reference \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_aa5d67140d1557795cc6c30a2849d4e05}{reference}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a324b512ac91a471b6cedddcd1d4fe881}{count\-\_\-map\-\_\-iterator} (\hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}{org\-\_\-iter\-\_\-type} it, \-Range \&rng)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::iterator\-\_\-facade\*
+$<$ \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator}{count\-\_\-map\-\_\-iterator}$<$ \-Range $>$\*
+, std\-::pair$<$ typename \*
+boost\-::range\-\_\-value$<$ \-Range $>$\*
+\-::type, int $>$\*
+, boost\-::bidirectional\-\_\-traversal\-\_\-tag, \*
+std\-::pair$<$ typename \*
+boost\-::range\-\_\-value$<$ \-Range $>$\*
+\-::type, int $>$ $>$ \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_abca93b0083606f7327745d6baae94316}{base\-\_\-t}
+\item 
+typedef boost\-::range\-\_\-value\*
+$<$ \-Range $>$\-::type \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a69559cacbf423e64c6efb8e1644ea37e}{org\-\_\-value\-\_\-type}
+\item 
+typedef boost\-::range\-\_\-iterator\*
+$<$ \-Range $>$\-::type \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}{org\-\_\-iter\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_aeb2624c7a86b765725fd80cd426e147d}{increment} ()
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_af998f1201f6ff5160003144e5818b8ba}{decrement} ()
+\item 
+bool \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a2813587a105bbce5a2ff967c06449e06}{equal} (const \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator}{count\-\_\-map\-\_\-iterator} \&rhs) const 
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_aa5d67140d1557795cc6c30a2849d4e05}{reference} \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a1b739c629ff6d9f19e13216adc65a999}{dereference} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}{org\-\_\-iter\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a2946c4f061baf69bfb5b2cc1dcd80a28}{it\-\_\-}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}{org\-\_\-iter\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a9296ec46eb2f6c43cf6c5263aaf54cca}{first\-\_\-}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}{org\-\_\-iter\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a9d115442fe366e570c20b178cc577690}{last\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classyuh_1_1range__detail_1_1count__map__iterator_a986bf0deaa7559f361d03122eeea4c86}{\-::boost\-::iterator\-\_\-core\-\_\-access}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename Range$>$class yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator$<$ Range $>$}
+
+count\-\_\-map実装部\-: iterator 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 23 of file count\-\_\-mapped.\-hpp.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_abca93b0083606f7327745d6baae94316}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!base\-\_\-t@{base\-\_\-t}}
+\index{base\-\_\-t@{base\-\_\-t}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{base\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::iterator\-\_\-facade$<$ {\bf count\-\_\-map\-\_\-iterator}$<$\-Range$>$, std\-::pair$<$ typename boost\-::range\-\_\-value$<$\-Range$>$\-::type, int $>$, boost\-::bidirectional\-\_\-traversal\-\_\-tag, std\-::pair$<$ typename boost\-::range\-\_\-value$<$\-Range$>$\-::type, int $>$ $>$ {\bf base\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_abca93b0083606f7327745d6baae94316}
+基底iterator\-\_\-facade 
+
+\-Definition at line 47 of file count\-\_\-mapped.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_a9ac6039762e1b262cecb98589ffc1d75}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!difference\-\_\-type@{difference\-\_\-type}}
+\index{difference\-\_\-type@{difference\-\_\-type}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{difference\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::difference\-\_\-type {\bf difference\-\_\-type}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_a9ac6039762e1b262cecb98589ffc1d75}
+iterator間距離の型 
+
+\-Definition at line 65 of file count\-\_\-mapped.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!org\-\_\-iter\-\_\-type@{org\-\_\-iter\-\_\-type}}
+\index{org\-\_\-iter\-\_\-type@{org\-\_\-iter\-\_\-type}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{org\-\_\-iter\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::range\-\_\-iterator$<$\-Range$>$\-::type {\bf org\-\_\-iter\-\_\-type}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}
+変換元範囲のiterator型 
+
+\-Definition at line 55 of file count\-\_\-mapped.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_a69559cacbf423e64c6efb8e1644ea37e}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!org\-\_\-value\-\_\-type@{org\-\_\-value\-\_\-type}}
+\index{org\-\_\-value\-\_\-type@{org\-\_\-value\-\_\-type}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{org\-\_\-value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::range\-\_\-value$<$\-Range$>$\-::type {\bf org\-\_\-value\-\_\-type}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_a69559cacbf423e64c6efb8e1644ea37e}
+変換元範囲の値型 
+
+\-Definition at line 51 of file count\-\_\-mapped.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_aa5d67140d1557795cc6c30a2849d4e05}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!reference@{reference}}
+\index{reference@{reference}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::reference {\bf reference}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_aa5d67140d1557795cc6c30a2849d4e05}
+参照剥がしの型 その場で作って返すので非参照 
+
+\-Definition at line 70 of file count\-\_\-mapped.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!value\-\_\-type@{value\-\_\-type}}
+\index{value\-\_\-type@{value\-\_\-type}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::value\-\_\-type {\bf value\-\_\-type}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}
+値型 pair(値, 個数) 
+
+\-Definition at line 61 of file count\-\_\-mapped.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_a324b512ac91a471b6cedddcd1d4fe881}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!count\-\_\-map\-\_\-iterator@{count\-\_\-map\-\_\-iterator}}
+\index{count\-\_\-map\-\_\-iterator@{count\-\_\-map\-\_\-iterator}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{count\-\_\-map\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf count\-\_\-map\-\_\-iterator} (
+\begin{DoxyParamCaption}
+\item[{{\bf org\-\_\-iter\-\_\-type}}]{it, }
+\item[{\-Range \&}]{rng}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_a324b512ac91a471b6cedddcd1d4fe881}
+ctor 
+\begin{DoxyParams}{\-Parameters}
+{\em it} & 元範囲の指す位置 変換元範囲の値が連続している箇所の先頭，でなければ挙動がおかしくなる \\
+\hline
+{\em rng} & 元範囲そのもの \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 77 of file count\-\_\-mapped.\-hpp.
+
+
+\begin{DoxyCode}
+                : it_(it), first_(std::begin(rng)), last_(std::end(rng))
+            { }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_af998f1201f6ff5160003144e5818b8ba}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!decrement@{decrement}}
+\index{decrement@{decrement}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{decrement}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf decrement} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_af998f1201f6ff5160003144e5818b8ba}
+operator-\/-\/ 
+
+\-Definition at line 93 of file count\-\_\-mapped.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                if(it_ == first_) return;
+                const auto now = *(--it_);
+                while(true)
+                {
+                    if(it_ == first_) break;//最初の要素なのでこの前は存在しない
+                    
+                    auto pr = std::prev(it_);//前がある
+                    
+                    if(*pr != now) break; //前はあったけど違う要素だった
+                    
+                    it_ = pr;                  //同じ要素がまだ続いているので先を見なければならない
+                }
+                
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_a1b739c629ff6d9f19e13216adc65a999}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!dereference@{dereference}}
+\index{dereference@{dereference}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{dereference}]{\setlength{\rightskip}{0pt plus 5cm}{\bf reference} {\bf dereference} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_a1b739c629ff6d9f19e13216adc65a999}
+operator$\ast$ \begin{DoxyReturn}{\-Returns}
+参照剥がしの結果 pair(値, 個数) 
+\end{DoxyReturn}
+
+
+\-Definition at line 122 of file count\-\_\-mapped.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return reference(
+                    *it_,                         //第一要素は値
+                    std::distance(                //次の値の先頭との距離=個数
+                        it_,
+                        std::find_if(             //今の値と違うものの先頭を探す
+                            it_, last_,
+                            [&](org_value_type x) 
+                            {
+                                return x != *it_;
+                            })
+                        )
+                    );
+                                     
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_a2813587a105bbce5a2ff967c06449e06}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!equal@{equal}}
+\index{equal@{equal}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{equal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf equal} (
+\begin{DoxyParamCaption}
+\item[{const {\bf count\-\_\-map\-\_\-iterator}$<$ \-Range $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_a2813587a105bbce5a2ff967c06449e06}
+operator== 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 比較対象 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+等値かどうか 
+\end{DoxyReturn}
+
+
+\-Definition at line 114 of file count\-\_\-mapped.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return it_==rhs.it_;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_aeb2624c7a86b765725fd80cd426e147d}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!increment@{increment}}
+\index{increment@{increment}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{increment}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf increment} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_aeb2624c7a86b765725fd80cd426e147d}
+operator++ 
+
+\-Definition at line 85 of file count\-\_\-mapped.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                const auto now = *it_;
+                for(; it_!=last_ && *it_==now; ++it_ );
+            }
+\end{DoxyCode}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_a986bf0deaa7559f361d03122eeea4c86}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}}
+\index{\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{\-::boost\-::iterator\-\_\-core\-\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}friend class \-::boost\-::iterator\-\_\-core\-\_\-access\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_a986bf0deaa7559f361d03122eeea4c86}
+for iterator\-\_\-facade 
+
+\-Definition at line 141 of file count\-\_\-mapped.\-hpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_a9296ec46eb2f6c43cf6c5263aaf54cca}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!first\-\_\-@{first\-\_\-}}
+\index{first\-\_\-@{first\-\_\-}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{first\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf org\-\_\-iter\-\_\-type} {\bf first\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_a9296ec46eb2f6c43cf6c5263aaf54cca}
+変換\-Range先頭 
+
+\-Definition at line 149 of file count\-\_\-mapped.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_a2946c4f061baf69bfb5b2cc1dcd80a28}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!it\-\_\-@{it\-\_\-}}
+\index{it\-\_\-@{it\-\_\-}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{it\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf org\-\_\-iter\-\_\-type} {\bf it\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_a2946c4f061baf69bfb5b2cc1dcd80a28}
+現在指している元コンテナの数値の連続している先頭のもの 
+
+\-Definition at line 145 of file count\-\_\-mapped.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1count__map__iterator_a9d115442fe366e570c20b178cc577690}{\index{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}!last\-\_\-@{last\-\_\-}}
+\index{last\-\_\-@{last\-\_\-}!yuh::range_detail::count_map_iterator@{yuh\-::range\-\_\-detail\-::count\-\_\-map\-\_\-iterator}}
+\subsubsection[{last\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf org\-\_\-iter\-\_\-type} {\bf last\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/def/classyuh_1_1range__detail_1_1count__map__iterator_a9d115442fe366e570c20b178cc577690}
+変換\-Range末尾 
+
+\-Definition at line 153 of file count\-\_\-mapped.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/adaptors/\hyperlink{count__mapped_8hpp}{count\-\_\-mapped.\-hpp}\end{DoxyCompactItemize}

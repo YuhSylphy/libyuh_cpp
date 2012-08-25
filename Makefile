@@ -1,18 +1,24 @@
 #!/bin/make
 #yuh
 
-.PHONY: all clean dummy
+.PHONY: all clean distclean test
 
-all: lib test
+all: lib unittest
 
-lib: dummy
+lib: 
 	make -C src
-test: dummy
+unittest: 
 	make -C test
-clean: dummy
+
+test:
+	make -C test test
+clean: 
 	make -C src clean
 	make -C test clean
-dummy:
+distclean: 
+	make -C src distclean
+	make -C test distclean
+
 
 # SRC=$(shell ls problem*.cpp)
 # HED=$(shell ls *.h *.hpp)
