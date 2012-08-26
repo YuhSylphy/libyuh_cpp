@@ -106,14 +106,16 @@ TEST(trigonal_range, ctor_infinite)
 TEST(trigonal, infinite)
 {
 	//引数なし: 最初から
-	int i = 0;
+	int i = 1;
 	static const std::array<int,25> a {{ 
 			0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105, 
 				120,136, 153, 171, 190, 210, 231, 253, 276, 300 }};
 	for ( const auto poly: polygonal<3>() )
 	{
-		if ( i > 24 ) break;
+		if ( i >= static_cast<int>(a.size()) ) break;  
 		EXPECT_EQ(poly, a[i]);
+
+		++i;
 	}
 
 	//途中から

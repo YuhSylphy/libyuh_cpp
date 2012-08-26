@@ -203,9 +203,8 @@ namespace yuh
 	 */
 	template<size_t P, typename Integer = int>
 	polygonal_range<P, Integer>
-	polygonal(Integer first = 0)
+	polygonal(Integer first = 1)
 	{
-		std::cout << P << std::endl;
 		BOOST_ASSERT( first >= 0 );
 		return polygonal_range<P, Integer>(first);
 	}

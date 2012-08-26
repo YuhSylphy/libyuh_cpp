@@ -10,7 +10,7 @@ namespace yuh
 	namespace range_detail
 	{
 		std::vector<prime_iterator::value_type> prime_iterator::p_{ 0, 2, 3, 5, 7, 11 };
-
+		
 		void prime_iterator::sift(value_type upper)
 		{
 			std::list<value_type> candidate{};
@@ -19,7 +19,7 @@ namespace yuh
 				auto c = p_.back();
 
 				auto s = 0;
-			
+				
 				if(c % 6 == 1) // 2,3を覗いたすべての素数は6で割るとあまり1か5
 					s = 4;
 				else

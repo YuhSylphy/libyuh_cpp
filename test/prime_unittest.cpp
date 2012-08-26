@@ -13,19 +13,12 @@
 
 using namespace yuh;
 
-struct prime_iter
-	: public ::testing::Test
+TEST(prime_iter, init)
 {
-protected:
-	virtual void SetUp()
-	{
-		prime_sift(1000);
-	}
-};
+	prime_sift(1000);
+}
 
-TEST_F(prime_iter, dummy){}
-
-TEST_F(prime_iter, in_de_crement) 
+TEST(prime_iter, in_de_crement) 
 {
 	range_detail::prime_iterator it;
 
@@ -44,7 +37,7 @@ TEST_F(prime_iter, in_de_crement)
 	EXPECT_EQ(*it--, 2);
 }
 
-TEST_F(prime_iter, get_prime)
+TEST(prime_iter, get_prime)
 {
 	const auto& p = range_detail::prime_iterator::get_prime();
 	
@@ -53,7 +46,7 @@ TEST_F(prime_iter, get_prime)
 	EXPECT_EQ(p[101], 547);
 }
 
-TEST_F(prime_iter, approx)
+TEST(prime_iter, approx)
 {
 	const auto approx = &range_detail::prime_iterator::prime_approx;
 	const auto & p = range_detail::prime_iterator::get_prime();
@@ -64,7 +57,7 @@ TEST_F(prime_iter, approx)
 	}
 }
 
-TEST_F(prime_iter, expand)
+TEST(prime_iter, expand)
 {
 	range_detail::prime_iterator it(1501);
 
@@ -79,18 +72,18 @@ TEST_F(prime_iter, expand)
 	EXPECT_EQ(std::distance(it2, it), 3);
 }
 
-TEST_F(prime_iter, huge)
+TEST(prime_iter, huge)
 {
 	prime_sift(1000000);
 	//std::cout << range_detail::prime_iterator::get_prime().size() << std::endl;
 }
 
-TEST_F(prime_iter, prime_list)
+TEST(prime_iter, prime_list)
 {
 	EXPECT_EQ(get_prime_list()[101], 547);
 }
 
-TEST(prime_range, finite)
+TEST(prime_iter, finite)
 {
 	const auto rng = boost::combine(
 		prime_range(1, 11),
@@ -102,7 +95,7 @@ TEST(prime_range, finite)
 	}
 }
 
-TEST(prime_range, infinite)
+TEST(prime_iter, infinite)
 {
 	std::vector<long long> v{2,3,5,7,11,13,17,19,23,29};
 		
