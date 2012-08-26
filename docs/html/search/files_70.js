@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pair_2ehpp',['pair.hpp',['../d3/d9f/pair_8hpp.html',1,'']]],
   ['polygonal_2ehpp',['polygonal.hpp',['../d7/ddc/polygonal_8hpp.html',1,'']]],
   ['prettied_2ehpp',['prettied.hpp',['../da/d15/prettied_8hpp.html',1,'']]],
   ['prime_2ecpp',['prime.cpp',['../d3/d71/prime_8cpp.html',1,'']]],

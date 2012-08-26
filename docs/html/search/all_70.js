@@ -1,8 +1,7 @@
 var searchData=
 [
   ['p_5f',['p_',['../d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aff6d0a0fbc14123c0fca5a0c05d2e68c',1,'yuh::range_detail::prime_iterator']]],
-  ['pair_2ehpp',['pair.hpp',['../d3/d9f/pair_8hpp.html',1,'']]],
-  ['polygonal',['polygonal',['../d5/d2b/namespaceyuh.html#ad748e41a574e1b3042a2741cf023c40c',1,'yuh::polygonal(Integer first=0)'],['../d5/d2b/namespaceyuh.html#a1af8d0faca38b0efb8ae71d0f773d3c8',1,'yuh::polygonal(Integer first, Integer last)']]],
+  ['polygonal',['polygonal',['../d5/d2b/namespaceyuh.html#ac79b05fba2817ead4f0b5fd4c5a5a805',1,'yuh::polygonal(Integer first=1)'],['../d5/d2b/namespaceyuh.html#a1af8d0faca38b0efb8ae71d0f773d3c8',1,'yuh::polygonal(Integer first, Integer last)']]],
   ['polygonal_2ehpp',['polygonal.hpp',['../d7/ddc/polygonal_8hpp.html',1,'']]],
   ['polygonal_5fiterator',['polygonal_iterator',['../d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator.html',1,'yuh::range_detail']]],
   ['polygonal_5fiterator',['polygonal_iterator',['../d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator.html#ac2e7d0f52b31712f78a39832e3d1415a',1,'yuh::range_detail::polygonal_iterator::polygonal_iterator()'],['../d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator.html#a50238cb4e9e9f468a6e3e81b857df52e',1,'yuh::range_detail::polygonal_iterator::polygonal_iterator(size_t n)']]],

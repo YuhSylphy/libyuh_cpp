@@ -1,7 +1,7 @@
 
 #include <gtest/gtest.h>
 
-#include "../include/yuh/adaptors/prettied.hpp"
+#include "../include/yuh/adaptor/prettied.hpp"
 
 #include <iostream>
 #include <sstream>

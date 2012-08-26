@@ -4,13 +4,75 @@
 \subsection*{\-Functions}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename Range $>$ }\\count\-\_\-mapped\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_acb67fe5826a7f7b7ac61edf1dfcff82f}{count\-\_\-map} (\-Range \&r)
+\item 
+{\footnotesize template$<$typename Range $>$ }\\count\-\_\-mapped\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_a7832edf38320aa72804efae4522aeacb}{count\-\_\-map} (const \-Range \&r)
+\item 
 {\footnotesize template$<$typename Range , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\range\-\_\-io$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_ad5660c286c614db267091a07245d32b6}{pretty} (const \-Range \&r)
 \item 
 {\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ T $>$\-::type, boost\-::mpl\-::false\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\const \-T \& \hyperlink{namespaceyuh_1_1adaptors_a7797a297cbbdae1a1876471228638d75}{pretty} (const \-T \&t)
+\item 
+{\footnotesize template$<$typename Range $>$ }\\set\-\_\-powered\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_af3fcfee5424bbff193826b77df52f6e5}{set\-\_\-power} (\-Range \&r)
+\item 
+{\footnotesize template$<$typename Range $>$ }\\set\-\_\-powered\-\_\-range$<$ const \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_a1234598f449f8f846dd3f26fe83f6682}{set\-\_\-power} (const \-Range \&r)
 \end{DoxyCompactItemize}
 
 
 \subsection{\-Function \-Documentation}
+\hypertarget{namespaceyuh_1_1adaptors_acb67fe5826a7f7b7ac61edf1dfcff82f}{\index{yuh\-::adaptors@{yuh\-::adaptors}!count\-\_\-map@{count\-\_\-map}}
+\index{count\-\_\-map@{count\-\_\-map}!yuh::adaptors@{yuh\-::adaptors}}
+\subsubsection[{count\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}count\-\_\-mapped\-\_\-range$<$\-Range$>$ {\bf yuh\-::adaptors\-::count\-\_\-map} (
+\begin{DoxyParamCaption}
+\item[{\-Range \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_acb67fe5826a7f7b7ac61edf1dfcff82f}
+function form 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & \\
+\hline
+{\em r} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+count\-\_\-map 
+\end{DoxyReturn}
+
+
+\-Definition at line 244 of file count\-\_\-mapped.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return count_mapped_range<Range>( r );
+        }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_1_1adaptors_a7832edf38320aa72804efae4522aeacb}{\index{yuh\-::adaptors@{yuh\-::adaptors}!count\-\_\-map@{count\-\_\-map}}
+\index{count\-\_\-map@{count\-\_\-map}!yuh::adaptors@{yuh\-::adaptors}}
+\subsubsection[{count\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}count\-\_\-mapped\-\_\-range$<$\-Range$>$ {\bf yuh\-::adaptors\-::count\-\_\-map} (
+\begin{DoxyParamCaption}
+\item[{const \-Range \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_a7832edf38320aa72804efae4522aeacb}
+function form 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & \\
+\hline
+{\em r} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+count\-\_\-map 
+\end{DoxyReturn}
+
+
+\-Definition at line 256 of file count\-\_\-mapped.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return count_mapped_range<Range>( r );
+        }
+\end{DoxyCode}
 \hypertarget{namespaceyuh_1_1adaptors_ad5660c286c614db267091a07245d32b6}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
 \index{pretty@{pretty}!yuh::adaptors@{yuh\-::adaptors}}
 \subsubsection[{pretty}]{\setlength{\rightskip}{0pt plus 5cm}range\-\_\-io$<$\-Range$>$ {\bf yuh\-::adaptors\-::pretty} (
@@ -63,5 +125,59 @@ tそのもの
 \begin{DoxyCode}
         {
             return t;
+        }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_1_1adaptors_af3fcfee5424bbff193826b77df52f6e5}{\index{yuh\-::adaptors@{yuh\-::adaptors}!set\-\_\-power@{set\-\_\-power}}
+\index{set\-\_\-power@{set\-\_\-power}!yuh::adaptors@{yuh\-::adaptors}}
+\subsubsection[{set\-\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}set\-\_\-powered\-\_\-range$<$\-Range$>$ {\bf yuh\-::adaptors\-::set\-\_\-power} (
+\begin{DoxyParamCaption}
+\item[{\-Range \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_af3fcfee5424bbff193826b77df52f6e5}
+function form 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & \\
+\hline
+{\em r} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+set\-\_\-power 
+\end{DoxyReturn}
+
+
+\-Definition at line 252 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return set_powered_range<Range>( r );
+        }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_1_1adaptors_a1234598f449f8f846dd3f26fe83f6682}{\index{yuh\-::adaptors@{yuh\-::adaptors}!set\-\_\-power@{set\-\_\-power}}
+\index{set\-\_\-power@{set\-\_\-power}!yuh::adaptors@{yuh\-::adaptors}}
+\subsubsection[{set\-\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}set\-\_\-powered\-\_\-range$<$const \-Range$>$ {\bf yuh\-::adaptors\-::set\-\_\-power} (
+\begin{DoxyParamCaption}
+\item[{const \-Range \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_a1234598f449f8f846dd3f26fe83f6682}
+function form 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & \\
+\hline
+{\em r} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+set\-\_\-power 
+\end{DoxyReturn}
+
+
+\-Definition at line 264 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return set_powered_range<const Range>( r );
         }
 \end{DoxyCode}

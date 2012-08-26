@@ -103,12 +103,82 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">count_mapped_range&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#acb67fe5826a7f7b7ac61edf1dfcff82f">count_map</a> (Range &amp;r)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">count_mapped_range&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a7832edf38320aa72804efae4522aeacb">count_map</a> (const Range &amp;r)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range , typename std::enable_if&lt; std::is_same&lt; typename boost::has_range_const_iterator&lt; Range &gt;::type, boost::mpl::true_ &gt;::value &gt;::type *&amp;  = enabler&gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">range_io&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#ad5660c286c614db267091a07245d32b6">pretty</a> (const Range &amp;r)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T , typename std::enable_if&lt; std::is_same&lt; typename boost::has_range_const_iterator&lt; T &gt;::type, boost::mpl::false_ &gt;::value &gt;::type *&amp;  = enabler&gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a7797a297cbbdae1a1876471228638d75">pretty</a> (const T &amp;t)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">set_powered_range&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#af3fcfee5424bbff193826b77df52f6e5">set_power</a> (Range &amp;r)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">set_powered_range&lt; const Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a1234598f449f8f846dd3f26fe83f6682">set_power</a> (const Range &amp;r)</td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
+<a class="anchor" id="acb67fe5826a7f7b7ac61edf1dfcff82f"></a><!-- doxytag: member="yuh::adaptors::count_map" ref="acb67fe5826a7f7b7ac61edf1dfcff82f" args="(Range &amp;r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">count_mapped_range&lt;Range&gt; <a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#acb67fe5826a7f7b7ac61edf1dfcff82f">yuh::adaptors::count_map</a> </td>
+          <td>(</td>
+          <td class="paramtype">Range &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>function form </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Range</td><td></td></tr>
+    <tr><td class="paramname">r</td><td>変換元範囲 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>count_map </dd></dl>
+
+<p>Definition at line <a class="el" href="../../da/d1d/count__mapped_8hpp_source.html#l00244">244</a> of file <a class="el" href="../../da/d1d/count__mapped_8hpp_source.html">count_mapped.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">        {
+            <span class="keywordflow">return</span> count_mapped_range&lt;Range&gt;( r );
+        }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a7832edf38320aa72804efae4522aeacb"></a><!-- doxytag: member="yuh::adaptors::count_map" ref="a7832edf38320aa72804efae4522aeacb" args="(const Range &amp;r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">count_mapped_range&lt;Range&gt; <a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#acb67fe5826a7f7b7ac61edf1dfcff82f">yuh::adaptors::count_map</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Range &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>function form </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Range</td><td></td></tr>
+    <tr><td class="paramname">r</td><td>変換元範囲 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>count_map </dd></dl>
+
+<p>Definition at line <a class="el" href="../../da/d1d/count__mapped_8hpp_source.html#l00256">256</a> of file <a class="el" href="../../da/d1d/count__mapped_8hpp_source.html">count_mapped.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">        {
+            <span class="keywordflow">return</span> count_mapped_range&lt;Range&gt;( r );
+        }
+</pre></div>
+</div>
+</div>
 <a class="anchor" id="ad5660c286c614db267091a07245d32b6"></a><!-- doxytag: member="yuh::adaptors::pretty" ref="ad5660c286c614db267091a07245d32b6" args="(const Range &amp;r)" -->
 <div class="memitem">
 <div class="memproto">
@@ -171,6 +241,68 @@ Functions</h2></td></tr>
 </pre></div>
 </div>
 </div>
+<a class="anchor" id="af3fcfee5424bbff193826b77df52f6e5"></a><!-- doxytag: member="yuh::adaptors::set_power" ref="af3fcfee5424bbff193826b77df52f6e5" args="(Range &amp;r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set_powered_range&lt;Range&gt; <a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#af3fcfee5424bbff193826b77df52f6e5">yuh::adaptors::set_power</a> </td>
+          <td>(</td>
+          <td class="paramtype">Range &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>function form </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Range</td><td></td></tr>
+    <tr><td class="paramname">r</td><td>変換元範囲 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>set_power </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d4/d1e/set__powered_8hpp_source.html#l00252">252</a> of file <a class="el" href="../../d4/d1e/set__powered_8hpp_source.html">set_powered.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">        {
+            <span class="keywordflow">return</span> set_powered_range&lt;Range&gt;( r );
+        }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a1234598f449f8f846dd3f26fe83f6682"></a><!-- doxytag: member="yuh::adaptors::set_power" ref="a1234598f449f8f846dd3f26fe83f6682" args="(const Range &amp;r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set_powered_range&lt;const Range&gt; <a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#af3fcfee5424bbff193826b77df52f6e5">yuh::adaptors::set_power</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Range &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>function form </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Range</td><td></td></tr>
+    <tr><td class="paramname">r</td><td>変換元範囲 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>set_power </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d4/d1e/set__powered_8hpp_source.html#l00264">264</a> of file <a class="el" href="../../d4/d1e/set__powered_8hpp_source.html">set_powered.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">        {
+            <span class="keywordflow">return</span> set_powered_range&lt;const Range&gt;( r );
+        }
+</pre></div>
+</div>
+</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -192,7 +324,7 @@ Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="../../d5/d2b/namespaceyuh.html">yuh</a>      </li>
       <li class="navelem"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html">adaptors</a>      </li>
 
-    <li class="footer">Generated on Sun Aug 26 2012 15:06:59 for yuh library by
+    <li class="footer">Generated on Mon Aug 27 2012 12:56:46 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

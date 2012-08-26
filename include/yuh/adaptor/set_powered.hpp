@@ -222,14 +222,14 @@ namespace yuh
 		 * @return set_power
 		 */
 		template<typename Range>
-		inline set_powered_range<Range>
+		inline set_powered_range<const Range>
 		operator|( const Range& r, set_power_forwarder )
 		{
-			return set_powered_range<Range>( r );
+			return set_powered_range<const Range>( r );
 		}
 	} // namespace range_detail
 
-	namespace adaptor
+	namespace adaptors
 	{
 		namespace
 		{
@@ -260,10 +260,10 @@ namespace yuh
 		 * @return set_power
 		 */
 		template<typename Range>
-		inline set_powered_range<Range>
+		inline set_powered_range<const Range>
 		set_power( const Range& r )
 		{
-			return set_powered_range<Range>( r );
+			return set_powered_range<const Range>( r );
 		}
 	} // namespace adaptors
 } // namespace yuh

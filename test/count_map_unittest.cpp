@@ -1,7 +1,7 @@
 
 #include <gtest/gtest.h>
 
-#include "../include/yuh/adaptors/count_mapped.hpp"
+#include "../include/yuh/adaptor/count_mapped.hpp"
 
 #include <vector>
 #include <array>
@@ -56,7 +56,7 @@ TEST(count_map, direct)
 
 TEST(count_map, pipe)
 {
-	using namespace yuh::adaptor;
+	using namespace yuh::adaptors;
 	
 	std::multiset<int> s{ 2, 2, 2, 3, 3, 5, 7, 7};
 	std::vector<std::pair<const int, int> > ans {
@@ -84,13 +84,13 @@ TEST(count_map, func)
 		{2, 3}, {3, 2}, {5, 1}
 	};
 	
-	for ( auto p: boost::combine(adaptor::count_map(s), ans) )
+	for ( auto p: boost::combine(adaptors::count_map(s), ans) )
 	{
 		EXPECT_EQ(boost::get<0>(p).first, boost::get<1>(p).first);
 		EXPECT_EQ(boost::get<0>(p).second, boost::get<1>(p).second);
 	}
 	
-	for ( auto p: boost::combine(adaptor::count_map(s) | reversed, ans | reversed) )
+	for ( auto p: boost::combine(adaptors::count_map(s) | reversed, ans | reversed) )
 	{
 		EXPECT_EQ(boost::get<0>(p).first, boost::get<1>(p).first);
 		EXPECT_EQ(boost::get<0>(p).second, boost::get<1>(p).second);

@@ -4,8 +4,6 @@
 \subsection*{\-Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \hyperlink{namespaceyuh_1_1adaptor}{adaptor}
-\item 
 namespace \hyperlink{namespaceyuh_1_1adaptors}{adaptors}
 \item 
 namespace \hyperlink{namespaceyuh_1_1range__detail}{range\-\_\-detail}
@@ -31,10 +29,6 @@ typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{pri
 \item 
 {\footnotesize template$<$typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}$<$ \-Integer $>$ \hyperlink{namespaceyuh_a17b1d33879798b95bdefe171df90380a}{fibonacci} (\-Integer first, \-Integer last)
 \item 
-{\footnotesize template$<$typename T , typename U $>$ }\\ostream \& \hyperlink{namespaceyuh_a6a041724aebe4e8e1c6509d8eaa9e9cf}{operator$<$$<$} (ostream \&os, std\-::pair$<$ \-T, \-U $>$ p)
-\item 
-{\footnotesize template$<$typename Range , typename  = typename boost\-::has\-\_\-range\-\_\-iterator$<$\-Range$>$\-::type$>$ }\\ostream \& \hyperlink{namespaceyuh_af1b5747f2430fdb089dc2f4f75799746}{operator$<$$<$} (ostream \&os, \-Range \&r)
-\item 
 {\footnotesize template$<$typename Integer $>$ }\\bool \hyperlink{namespaceyuh_afc7f4ca69e0d8cb035be348d77d2a33e}{is\-\_\-palindromic} (\-Integer n)
 \item 
 {\footnotesize template$<$typename Integer $>$ }\\bool \hyperlink{namespaceyuh_a14298c4b76f1a9d0537e7d5d67cfa784}{is\-\_\-\-Pythagorean} (\-Integer a, \-Integer b, \-Integer c)
@@ -43,7 +37,7 @@ typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{pri
 \item 
 {\footnotesize template$<$typename Integer $>$ }\\bool \hyperlink{namespaceyuh_a43d71ed08fec121213f4ad3acbdc4d26}{is\-\_\-square} (\-Integer n)
 \item 
-{\footnotesize template$<$size\-\_\-t \-P, typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1polygonal__range}{polygonal\-\_\-range}$<$ \-P, \-Integer $>$ \hyperlink{namespaceyuh_ad748e41a574e1b3042a2741cf023c40c}{polygonal} (\-Integer first=0)
+{\footnotesize template$<$size\-\_\-t \-P, typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1polygonal__range}{polygonal\-\_\-range}$<$ \-P, \-Integer $>$ \hyperlink{namespaceyuh_ac79b05fba2817ead4f0b5fd4c5a5a805}{polygonal} (\-Integer first=1)
 \item 
 {\footnotesize template$<$size\-\_\-t \-P, typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1polygonal__range}{polygonal\-\_\-range}$<$ \-P, \-Integer $>$ \hyperlink{namespaceyuh_a1af8d0faca38b0efb8ae71d0f773d3c8}{polygonal} (\-Integer first, \-Integer last)
 \item 
@@ -53,14 +47,9 @@ typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{pri
 \item 
 void \hyperlink{namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}{prime\-\_\-sift} (\hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type} upper)
 \item 
-\hyperlink{namespaceyuh_aef8d22260a5c6af5f37d206badfd3d4e}{decltype} (range\-\_\-detail\-::prime\-\_\-iterator\-::get\-\_\-prime()) get\-\_\-prime\-\_\-list()
-\item 
 {\footnotesize template$<$typename Integer $>$ }\\std\-::multiset$<$ \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type} $>$ \hyperlink{namespaceyuh_afb5d08e183729831f760d6c2a27226d8}{prime\-\_\-factor} (\-Integer num)
-\end{DoxyCompactItemize}
-\subsection*{\-Variables}
-\begin{DoxyCompactItemize}
 \item 
-void $\ast$ \hyperlink{namespaceyuh_a8b379f3dbc4920262c249049dd41274d}{enabler}
+\hyperlink{namespaceyuh_aef8d22260a5c6af5f37d206badfd3d4e}{decltype} (range\-\_\-detail\-::prime\-\_\-iterator\-::get\-\_\-prime()) get\-\_\-prime\-\_\-list()
 \end{DoxyCompactItemize}
 
 
@@ -93,7 +82,7 @@ void $\ast$ \hyperlink{namespaceyuh_a8b379f3dbc4920262c249049dd41274d}{enabler}
 \end{DoxyReturn}
 
 
-\-Definition at line 204 of file prime.\-h.
+\-Definition at line 234 of file prime.\-h.
 
 
 \begin{DoxyCode}
@@ -294,59 +283,13 @@ nが回文数かどうか
         return  n == std::pow(std::floor(std::sqrt(n)), 2);
     }
 \end{DoxyCode}
-\hypertarget{namespaceyuh_a6a041724aebe4e8e1c6509d8eaa9e9cf}{\index{yuh@{yuh}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!yuh@{yuh}}
-\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& yuh\-::operator$<$$<$ (
-\begin{DoxyParamCaption}
-\item[{ostream \&}]{os, }
-\item[{std\-::pair$<$ \-T, \-U $>$}]{p}
-\end{DoxyParamCaption}
-)}}\label{d5/d2b/namespaceyuh_a6a041724aebe4e8e1c6509d8eaa9e9cf}
-
-
-\-Definition at line 10 of file pair.\-hpp.
-
-
-\begin{DoxyCode}
-    {
-        return os << boost::format("{ %||, %|| }") % p.first % p.second;
-    } 
-\end{DoxyCode}
-\hypertarget{namespaceyuh_af1b5747f2430fdb089dc2f4f75799746}{\index{yuh@{yuh}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!yuh@{yuh}}
-\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& yuh\-::operator$<$$<$ (
-\begin{DoxyParamCaption}
-\item[{ostream \&}]{os, }
-\item[{\-Range \&}]{r}
-\end{DoxyParamCaption}
-)}}\label{d5/d2b/namespaceyuh_af1b5747f2430fdb089dc2f4f75799746}
-
-
-\-Definition at line 16 of file range.\-hpp.
-
-
-\begin{DoxyCode}
-    {
-        template<typename T>
-            struct inner
-        { }
-
-        template<typename Ch, typename Tr, typename Al>
-            struct inner<std::basic_string<Ch, Tr, Al> >;
-
-        inner<Range> in;
-        
-        return os;
-//      return os << boost::format("{ %||, %|| }") % p.first % p.second;
-    } 
-\end{DoxyCode}
-\hypertarget{namespaceyuh_ad748e41a574e1b3042a2741cf023c40c}{\index{yuh@{yuh}!polygonal@{polygonal}}
+\hypertarget{namespaceyuh_ac79b05fba2817ead4f0b5fd4c5a5a805}{\index{yuh@{yuh}!polygonal@{polygonal}}
 \index{polygonal@{polygonal}!yuh@{yuh}}
 \subsubsection[{polygonal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygonal\-\_\-range}$<$\-P, \-Integer$>$ {\bf yuh\-::polygonal} (
 \begin{DoxyParamCaption}
-\item[{\-Integer}]{first = {\ttfamily 0}}
+\item[{\-Integer}]{first = {\ttfamily 1}}
 \end{DoxyParamCaption}
-)}}\label{d5/d2b/namespaceyuh_ad748e41a574e1b3042a2741cf023c40c}
+)}}\label{d5/d2b/namespaceyuh_ac79b05fba2817ead4f0b5fd4c5a5a805}
 無限多角数列 index指定 \mbox{[}first, \-Inf) 単純にalgorithmに渡したりすると無限ループなので注意
 
 
@@ -477,7 +420,7 @@ n in \mbox{[}first, last)の素数列を表すrange
 \end{DoxyReturn}
 
 
-\-Definition at line 216 of file prime.\-h.
+\-Definition at line 208 of file prime.\-h.
 
 
 \begin{DoxyCode}
@@ -525,9 +468,3 @@ n in \mbox{[}first, last)の素数列を表すrange
         range_detail::prime_iterator::sift(upper);
     }
 \end{DoxyCode}
-
-
-\subsection{\-Variable \-Documentation}
-\hypertarget{namespaceyuh_a8b379f3dbc4920262c249049dd41274d}{\index{yuh@{yuh}!enabler@{enabler}}
-\index{enabler@{enabler}!yuh@{yuh}}
-\subsubsection[{enabler}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf enabler}}}\label{d5/d2b/namespaceyuh_a8b379f3dbc4920262c249049dd41274d}

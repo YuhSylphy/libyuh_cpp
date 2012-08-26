@@ -1,7 +1,7 @@
 var count__mapped_8hpp =
 [
-    [ "count_map", "dc/d99/namespaceyuh_1_1adaptor.html#a5edf72c7c8ff28406b185ebd854843cd", null ],
-    [ "count_map", "dc/d99/namespaceyuh_1_1adaptor.html#ae351d4d766916d1a1d25b7305cea7213", null ],
+    [ "count_map", "de/d55/namespaceyuh_1_1adaptors.html#acb67fe5826a7f7b7ac61edf1dfcff82f", null ],
+    [ "count_map", "de/d55/namespaceyuh_1_1adaptors.html#a7832edf38320aa72804efae4522aeacb", null ],
     [ "operator|", "da/dda/namespaceyuh_1_1range__detail.html#a128712717771a96265117e448135e6b8", null ],
     [ "operator|", "da/dda/namespaceyuh_1_1range__detail.html#abf270b3295a983c29653957120b0d172", null ]
 ];

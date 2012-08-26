@@ -1,7 +1,8 @@
 
 #include <gtest/gtest.h>
 
-#include "../include/yuh/adaptors/set_powered.hpp"
+#include "../include/yuh/adaptor/set_powered.hpp"
+#include "../include/yuh/adaptor/prettied.hpp"
 
 #include <iostream>
 #include <vector>
@@ -47,7 +48,7 @@ TEST(set_power, direct)
 
 TEST(set_power, pipe)
 {
-	using namespace yuh::adaptor;
+	using namespace yuh::adaptors;
 	
 	std::vector<int> s{ 1, 2, 3 };
 	std::vector<std::vector<int> > ans {
@@ -73,12 +74,12 @@ TEST(set_power, func)
 		{}, {1}, {2}, {1, 2}, {3}, {1, 3}, {2, 3}, {1, 2, 3}
 	};
 	
-	for ( auto t: boost::combine(adaptor::set_power(s), ans) )
+	for ( auto t: boost::combine(adaptors::set_power(s), ans) )
 	{
         EXPECT_TRUE(boost::equal(boost::get<0>(t), boost::get<1>(t)));
 	}
 	
-	for ( auto t: boost::combine(adaptor::set_power(s) | reversed, ans | reversed) )
+	for ( auto t: boost::combine(adaptors::set_power(s) | reversed, ans | reversed) )
 	{
         EXPECT_TRUE(boost::equal(boost::get<0>(t), boost::get<1>(t)));
 	}

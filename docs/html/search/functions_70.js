@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['polygonal',['polygonal',['../d5/d2b/namespaceyuh.html#ad748e41a574e1b3042a2741cf023c40c',1,'yuh::polygonal(Integer first=0)'],['../d5/d2b/namespaceyuh.html#a1af8d0faca38b0efb8ae71d0f773d3c8',1,'yuh::polygonal(Integer first, Integer last)']]],
+  ['polygonal',['polygonal',['../d5/d2b/namespaceyuh.html#ac79b05fba2817ead4f0b5fd4c5a5a805',1,'yuh::polygonal(Integer first=1)'],['../d5/d2b/namespaceyuh.html#a1af8d0faca38b0efb8ae71d0f773d3c8',1,'yuh::polygonal(Integer first, Integer last)']]],
   ['polygonal_5fiterator',['polygonal_iterator',['../d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator.html#ac2e7d0f52b31712f78a39832e3d1415a',1,'yuh::range_detail::polygonal_iterator::polygonal_iterator()'],['../d9/d0c/classyuh_1_1range__detail_1_1polygonal__iterator.html#a50238cb4e9e9f468a6e3e81b857df52e',1,'yuh::range_detail::polygonal_iterator::polygonal_iterator(size_t n)']]],
   ['polygonal_5frange',['polygonal_range',['../d5/d2a/classyuh_1_1polygonal__range.html#a21bf2b09c54090fdc482e34cde6571b4',1,'yuh::polygonal_range::polygonal_range(Integer first, Integer last)'],['../d5/d2a/classyuh_1_1polygonal__range.html#af87030a4d0bf0a744a730d346d8d70f1',1,'yuh::polygonal_range::polygonal_range(Integer first)']]],
   ['pretty',['pretty',['../de/d55/namespaceyuh_1_1adaptors.html#ad5660c286c614db267091a07245d32b6',1,'yuh::adaptors::pretty(const Range &amp;r)'],['../de/d55/namespaceyuh_1_1adaptors.html#a7797a297cbbdae1a1876471228638d75',1,'yuh::adaptors::pretty(const T &amp;t)']]],

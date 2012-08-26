@@ -221,7 +221,7 @@ namespace yuh
 		}
 	} // namespace range_detail
 
-	namespace adaptor
+	namespace adaptors
 	{
 		namespace
 		{
