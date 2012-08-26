@@ -114,8 +114,6 @@ TEST(trigonal, infinite)
 	{
 		if ( i > 24 ) break;
 		EXPECT_EQ(poly, a[i]);
-
-		i++;
 	}
 
 	//途中から

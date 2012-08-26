@@ -7,6 +7,10 @@
 {\footnotesize template$<$typename Range $>$ }\\count\-\_\-mapped\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptor_a5edf72c7c8ff28406b185ebd854843cd}{count\-\_\-map} (\-Range \&r)
 \item 
 {\footnotesize template$<$typename Range $>$ }\\count\-\_\-mapped\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptor_ae351d4d766916d1a1d25b7305cea7213}{count\-\_\-map} (const \-Range \&r)
+\item 
+{\footnotesize template$<$typename Range $>$ }\\set\-\_\-powered\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptor_a98d3a8ea8bbac7236b4ac76fc916fec9}{set\-\_\-power} (\-Range \&r)
+\item 
+{\footnotesize template$<$typename Range $>$ }\\set\-\_\-powered\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptor_ab00d669175e5b5f50b9cce11a3b76e33}{set\-\_\-power} (const \-Range \&r)
 \end{DoxyCompactItemize}
 
 
@@ -63,5 +67,59 @@ count\-\_\-map
 \begin{DoxyCode}
         {
             return count_mapped_range<Range>( r );
+        }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_1_1adaptor_a98d3a8ea8bbac7236b4ac76fc916fec9}{\index{yuh\-::adaptor@{yuh\-::adaptor}!set\-\_\-power@{set\-\_\-power}}
+\index{set\-\_\-power@{set\-\_\-power}!yuh::adaptor@{yuh\-::adaptor}}
+\subsubsection[{set\-\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}set\-\_\-powered\-\_\-range$<$\-Range$>$ {\bf yuh\-::adaptor\-::set\-\_\-power} (
+\begin{DoxyParamCaption}
+\item[{\-Range \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dc/d99/namespaceyuh_1_1adaptor_a98d3a8ea8bbac7236b4ac76fc916fec9}
+function form 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & \\
+\hline
+{\em r} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+set\-\_\-power 
+\end{DoxyReturn}
+
+
+\-Definition at line 252 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return set_powered_range<Range>( r );
+        }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_1_1adaptor_ab00d669175e5b5f50b9cce11a3b76e33}{\index{yuh\-::adaptor@{yuh\-::adaptor}!set\-\_\-power@{set\-\_\-power}}
+\index{set\-\_\-power@{set\-\_\-power}!yuh::adaptor@{yuh\-::adaptor}}
+\subsubsection[{set\-\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}set\-\_\-powered\-\_\-range$<$\-Range$>$ {\bf yuh\-::adaptor\-::set\-\_\-power} (
+\begin{DoxyParamCaption}
+\item[{const \-Range \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dc/d99/namespaceyuh_1_1adaptor_ab00d669175e5b5f50b9cce11a3b76e33}
+function form 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & \\
+\hline
+{\em r} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+set\-\_\-power 
+\end{DoxyReturn}
+
+
+\-Definition at line 264 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return set_powered_range<Range>( r );
         }
 \end{DoxyCode}

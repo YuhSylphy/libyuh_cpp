@@ -1,0 +1,67 @@
+\hypertarget{namespaceyuh_1_1adaptors}{\section{yuh\-:\-:adaptors \-Namespace \-Reference}
+\label{de/d55/namespaceyuh_1_1adaptors}\index{yuh\-::adaptors@{yuh\-::adaptors}}
+}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Range , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\range\-\_\-io$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_ad5660c286c614db267091a07245d32b6}{pretty} (const \-Range \&r)
+\item 
+{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ T $>$\-::type, boost\-::mpl\-::false\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\const \-T \& \hyperlink{namespaceyuh_1_1adaptors_a7797a297cbbdae1a1876471228638d75}{pretty} (const \-T \&t)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespaceyuh_1_1adaptors_ad5660c286c614db267091a07245d32b6}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
+\index{pretty@{pretty}!yuh::adaptors@{yuh\-::adaptors}}
+\subsubsection[{pretty}]{\setlength{\rightskip}{0pt plus 5cm}range\-\_\-io$<$\-Range$>$ {\bf yuh\-::adaptors\-::pretty} (
+\begin{DoxyParamCaption}
+\item[{const \-Range \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_ad5660c286c614db267091a07245d32b6}
+範囲をrange\-\_\-ioでくるんで出力可能にする 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & 範囲型 \\
+\hline
+{\em r} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+range\-\_\-io 
+\end{DoxyReturn}
+
+
+\-Definition at line 45 of file prettied.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return range_io<Range>(r);
+        }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_1_1adaptors_a7797a297cbbdae1a1876471228638d75}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
+\index{pretty@{pretty}!yuh::adaptors@{yuh\-::adaptors}}
+\subsubsection[{pretty}]{\setlength{\rightskip}{0pt plus 5cm}const \-T\& {\bf yuh\-::adaptors\-::pretty} (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_a7797a297cbbdae1a1876471228638d75}
+rangeではないものは素通しする 
+\begin{DoxyParams}{\-Parameters}
+{\em \-T} & 値型 \\
+\hline
+{\em t} & \-Rangeでないオブジェクト \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+tそのもの 
+\end{DoxyReturn}
+
+
+\-Definition at line 63 of file prettied.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return t;
+        }
+\end{DoxyCode}

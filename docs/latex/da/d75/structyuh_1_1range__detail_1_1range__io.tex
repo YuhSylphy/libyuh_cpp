@@ -1,0 +1,105 @@
+\hypertarget{structyuh_1_1range__detail_1_1range__io}{\section{range\-\_\-io$<$ \-Range $>$ \-Struct \-Template \-Reference}
+\label{da/d75/structyuh_1_1range__detail_1_1range__io}\index{range\-\_\-io$<$ Range $>$@{range\-\_\-io$<$ Range $>$}}
+}
+
+
+{\ttfamily \#include $<$prettied.\-hpp$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structyuh_1_1range__detail_1_1range__io_a380ab6cfecb5051591a6b12311764a14}{range\-\_\-io} (const \-Range \&rng)
+\item 
+{\footnotesize template$<$typename Ch , typename Tr $>$ }\\std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \& \hyperlink{structyuh_1_1range__detail_1_1range__io_a052a6e871c2df8d90729645678be1d4d}{output} (std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \&os) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \-Range \& \hyperlink{structyuh_1_1range__detail_1_1range__io_a1dc23cf32ae84636d442489c9629b987}{rng\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename Range$>$struct yuh\-::range\-\_\-detail\-::range\-\_\-io$<$ Range $>$}
+
+範囲出力実装部 
+
+\-Definition at line 77 of file prettied.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{structyuh_1_1range__detail_1_1range__io_a380ab6cfecb5051591a6b12311764a14}{\index{yuh\-::range\-\_\-detail\-::range\-\_\-io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}!range\-\_\-io@{range\-\_\-io}}
+\index{range\-\_\-io@{range\-\_\-io}!yuh::range_detail::range_io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}}
+\subsubsection[{range\-\_\-io}]{\setlength{\rightskip}{0pt plus 5cm}{\bf range\-\_\-io} (
+\begin{DoxyParamCaption}
+\item[{const \-Range \&}]{rng}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/d75/structyuh_1_1range__detail_1_1range__io_a380ab6cfecb5051591a6b12311764a14}
+ctor 
+\begin{DoxyParams}{\-Parameters}
+{\em rng} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 83 of file prettied.\-hpp.
+
+
+\begin{DoxyCode}
+:rng_(rng){}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{structyuh_1_1range__detail_1_1range__io_a052a6e871c2df8d90729645678be1d4d}{\index{yuh\-::range\-\_\-detail\-::range\-\_\-io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}!output@{output}}
+\index{output@{output}!yuh::range_detail::range_io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}}
+\subsubsection[{output}]{\setlength{\rightskip}{0pt plus 5cm}std\-::basic\-\_\-ostream$<$\-Ch, \-Tr$>$\& {\bf output} (
+\begin{DoxyParamCaption}
+\item[{std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/d75/structyuh_1_1range__detail_1_1range__io_a052a6e871c2df8d90729645678be1d4d}
+operator$<$$<$から呼び出す 
+\begin{DoxyParams}{\-Parameters}
+{\em os} & 出力先 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+os 
+\end{DoxyReturn}
+
+
+\-Definition at line 91 of file prettied.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                os << "{ ";
+                auto it = std::begin(rng_);
+                const auto last = std::end(rng_);
+                if (it != last)
+                { 
+                    os << pretty(*it);
+                    for( ++it ; it != last ; ++it )
+                    {
+                        os << ", " << pretty(*it);
+                    }
+                }
+                return os << " }";
+            }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{structyuh_1_1range__detail_1_1range__io_a1dc23cf32ae84636d442489c9629b987}{\index{yuh\-::range\-\_\-detail\-::range\-\_\-io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}!rng\-\_\-@{rng\-\_\-}}
+\index{rng\-\_\-@{rng\-\_\-}!yuh::range_detail::range_io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}}
+\subsubsection[{rng\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const \-Range\& {\bf rng\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d75/structyuh_1_1range__detail_1_1range__io_a1dc23cf32ae84636d442489c9629b987}
+対象範囲 
+
+\-Definition at line 110 of file prettied.\-hpp.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/adaptors/\hyperlink{prettied_8hpp}{prettied.\-hpp}\end{DoxyCompactItemize}

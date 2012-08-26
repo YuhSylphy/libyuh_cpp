@@ -1,6 +1,8 @@
 var searchData=
 [
+  ['pair_2ehpp',['pair.hpp',['../d3/d9f/pair_8hpp.html',1,'']]],
   ['polygonal_2ehpp',['polygonal.hpp',['../d7/ddc/polygonal_8hpp.html',1,'']]],
+  ['prettied_2ehpp',['prettied.hpp',['../da/d15/prettied_8hpp.html',1,'']]],
   ['prime_2ecpp',['prime.cpp',['../d3/d71/prime_8cpp.html',1,'']]],
   ['prime_2ed',['prime.d',['../df/dd9/prime_8d.html',1,'']]],
   ['prime_2eh',['prime.h',['../dd/d99/prime_8h.html',1,'']]],

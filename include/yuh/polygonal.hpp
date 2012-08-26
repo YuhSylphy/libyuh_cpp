@@ -205,6 +205,7 @@ namespace yuh
 	polygonal_range<P, Integer>
 	polygonal(Integer first = 0)
 	{
+		std::cout << P << std::endl;
 		BOOST_ASSERT( first >= 0 );
 		return polygonal_range<P, Integer>(first);
 	}

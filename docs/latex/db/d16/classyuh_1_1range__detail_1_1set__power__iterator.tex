@@ -1,0 +1,316 @@
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator}{\section{set\-\_\-power\-\_\-iterator$<$ \-Range $>$ \-Class \-Template \-Reference}
+\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator}\index{set\-\_\-power\-\_\-iterator$<$ Range $>$@{set\-\_\-power\-\_\-iterator$<$ Range $>$}}
+}
+
+
+{\ttfamily \#include $<$set\-\_\-powered.\-hpp$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef base\-\_\-t\-::value\-\_\-type \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{value\-\_\-type}
+\item 
+typedef base\-\_\-t\-::difference\-\_\-type \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a9ac6039762e1b262cecb98589ffc1d75}{difference\-\_\-type}
+\item 
+typedef base\-\_\-t\-::reference \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_aa5d67140d1557795cc6c30a2849d4e05}{reference}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_ae6b3cd64e33a1344b83ad8277222cac8}{set\-\_\-power\-\_\-iterator} (\-Range \&rng, bool is\-\_\-first=false)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::iterator\-\_\-facade\*
+$<$ \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator}{set\-\_\-power\-\_\-iterator}$<$ \-Range $>$\*
+, std\-::vector$<$ typename \*
+boost\-::range\-\_\-value$<$ \-Range $>$\*
+\-::type $>$\*
+, boost\-::bidirectional\-\_\-traversal\-\_\-tag, \*
+std\-::vector$<$ typename \*
+boost\-::range\-\_\-value$<$ \-Range $>$\*
+\-::type $>$ $>$ \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a66fa2f0147f406817dd3c1c24a015477}{base\-\_\-t}
+\item 
+typedef boost\-::range\-\_\-value\*
+$<$ \-Range $>$\-::type \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a69559cacbf423e64c6efb8e1644ea37e}{org\-\_\-value\-\_\-type}
+\item 
+typedef boost\-::range\-\_\-iterator\*
+$<$ \-Range $>$\-::type \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}{org\-\_\-iter\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_aeb2624c7a86b765725fd80cd426e147d}{increment} ()
+\item 
+void \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_af998f1201f6ff5160003144e5818b8ba}{decrement} ()
+\item 
+bool \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_af305d02e5f0f255a93af284ab45a9960}{equal} (const \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator}{set\-\_\-power\-\_\-iterator} \&rhs) const 
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_aa5d67140d1557795cc6c30a2849d4e05}{reference} \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a1b739c629ff6d9f19e13216adc65a999}{dereference} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}{org\-\_\-iter\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a9296ec46eb2f6c43cf6c5263aaf54cca}{first\-\_\-}
+\item 
+\hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}{org\-\_\-iter\-\_\-type} \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a9d115442fe366e570c20b178cc577690}{last\-\_\-}
+\item 
+std\-::deque$<$ bool $>$ \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a54539438ea4c794db488afe8afa24452}{flags\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator_a986bf0deaa7559f361d03122eeea4c86}{\-::boost\-::iterator\-\_\-core\-\_\-access}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename Range$>$class yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator$<$ Range $>$}
+
+set\-\_\-power実装部\-: iterator 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 25 of file set\-\_\-powered.\-hpp.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_a66fa2f0147f406817dd3c1c24a015477}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!base\-\_\-t@{base\-\_\-t}}
+\index{base\-\_\-t@{base\-\_\-t}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{base\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::iterator\-\_\-facade$<$ {\bf set\-\_\-power\-\_\-iterator}$<$\-Range$>$, std\-::vector$<$typename boost\-::range\-\_\-value$<$\-Range$>$\-::type $>$, boost\-::bidirectional\-\_\-traversal\-\_\-tag, std\-::vector$<$typename boost\-::range\-\_\-value$<$\-Range$>$\-::type $>$ $>$ {\bf base\-\_\-t}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_a66fa2f0147f406817dd3c1c24a015477}
+基底iterator\-\_\-facade 
+
+\-Definition at line 41 of file set\-\_\-powered.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_a9ac6039762e1b262cecb98589ffc1d75}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!difference\-\_\-type@{difference\-\_\-type}}
+\index{difference\-\_\-type@{difference\-\_\-type}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{difference\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::difference\-\_\-type {\bf difference\-\_\-type}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_a9ac6039762e1b262cecb98589ffc1d75}
+iterator間距離の型 
+
+\-Definition at line 58 of file set\-\_\-powered.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!org\-\_\-iter\-\_\-type@{org\-\_\-iter\-\_\-type}}
+\index{org\-\_\-iter\-\_\-type@{org\-\_\-iter\-\_\-type}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{org\-\_\-iter\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::range\-\_\-iterator$<$\-Range$>$\-::type {\bf org\-\_\-iter\-\_\-type}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_a7d85ad9a5f85d7a869dd7ea9557eee8b}
+変換元範囲のiterator型 
+
+\-Definition at line 49 of file set\-\_\-powered.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_a69559cacbf423e64c6efb8e1644ea37e}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!org\-\_\-value\-\_\-type@{org\-\_\-value\-\_\-type}}
+\index{org\-\_\-value\-\_\-type@{org\-\_\-value\-\_\-type}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{org\-\_\-value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::range\-\_\-value$<$\-Range$>$\-::type {\bf org\-\_\-value\-\_\-type}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_a69559cacbf423e64c6efb8e1644ea37e}
+変換元範囲の値型 
+
+\-Definition at line 45 of file set\-\_\-powered.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_aa5d67140d1557795cc6c30a2849d4e05}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!reference@{reference}}
+\index{reference@{reference}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::reference {\bf reference}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_aa5d67140d1557795cc6c30a2849d4e05}
+参照剥がしの型 その場で作って返すので非参照 
+
+\-Definition at line 63 of file set\-\_\-powered.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!value\-\_\-type@{value\-\_\-type}}
+\index{value\-\_\-type@{value\-\_\-type}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef base\-\_\-t\-::value\-\_\-type {\bf value\-\_\-type}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_ab7468d4ed49b58c84d6c1b71779fb43e}
+値型 元の集合のsubset 
+
+\-Definition at line 54 of file set\-\_\-powered.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_ae6b3cd64e33a1344b83ad8277222cac8}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!set\-\_\-power\-\_\-iterator@{set\-\_\-power\-\_\-iterator}}
+\index{set\-\_\-power\-\_\-iterator@{set\-\_\-power\-\_\-iterator}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{set\-\_\-power\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf set\-\_\-power\-\_\-iterator} (
+\begin{DoxyParamCaption}
+\item[{\-Range \&}]{rng, }
+\item[{bool}]{is\-\_\-first = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_ae6b3cd64e33a1344b83ad8277222cac8}
+ctor 
+\begin{DoxyParams}{\-Parameters}
+{\em it} & 元範囲の指す位置 変換元範囲の値が連続している箇所の先頭，でなければ挙動がおかしくなる \\
+\hline
+{\em rng} & 元範囲そのもの \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 69 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+                : first_(std::begin(rng)), last_(std::end(rng)),
+                  flags_(std::distance(first_, last_)+1)
+            {
+                flags_.back() = !is_first;
+            }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_af998f1201f6ff5160003144e5818b8ba}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!decrement@{decrement}}
+\index{decrement@{decrement}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{decrement}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf decrement} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_af998f1201f6ff5160003144e5818b8ba}
+operator-\/-\/ 
+
+\-Definition at line 92 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                const auto it = 
+                    boost::find(flags_, true);
+                if(it == std::end(flags_)) return;       //全部0なので先頭
+                
+                std::fill(std::begin(flags_), it, true); //この範囲は全部立てる
+                *it = false; //ここだけ下ろす(繰り下がり
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_a1b739c629ff6d9f19e13216adc65a999}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!dereference@{dereference}}
+\index{dereference@{dereference}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{dereference}]{\setlength{\rightskip}{0pt plus 5cm}{\bf reference} {\bf dereference} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_a1b739c629ff6d9f19e13216adc65a999}
+operator$\ast$ \begin{DoxyReturn}{\-Returns}
+参照剥がしの結果 pair(値, 個数) 
+\end{DoxyReturn}
+
+
+\-Definition at line 114 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                reference ret;
+                ret.reserve(boost::count(flags_, true)); //trueの分だけ領域用意
+                
+                // boost::copy(
+                //  boost::combine(
+                //      boost::iterator_range(first_, last_),
+                //      flags_) //flagくっつけて
+                //  |+ filter([](boost::tuple<org_value_type, bool>& t) { 
+                //          return boost::get<1>(t); //trueのもの抽出
+                //      })
+                //  |+ transform([](boost::tuple<org_value_type, bool>& t) {
+                //          return boost::get<0>(t); //値だけに変換
+                //      }),
+                //  std::back_inserter(ret)  //追加して行く
+                //  );
+
+                for( const auto& t: boost::combine(
+                         std::make_pair(first_,last_), 
+                         std::make_pair(std::begin(flags_), std::prev(std::end(
+      flags_))) 
+                         ) )
+                         
+                {   //regular operatorとか使ってみたけどこっちのほうがかなり簡潔である
+                    const auto& val = boost::get<0>(t);
+                    const auto flag = boost::get<1>(t);
+                    
+                    if(flag) ret.push_back(val);
+                }
+                
+                return ret;
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_af305d02e5f0f255a93af284ab45a9960}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!equal@{equal}}
+\index{equal@{equal}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{equal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf equal} (
+\begin{DoxyParamCaption}
+\item[{const {\bf set\-\_\-power\-\_\-iterator}$<$ \-Range $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_af305d02e5f0f255a93af284ab45a9960}
+operator== 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 比較対象 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+等値かどうか 
+\end{DoxyReturn}
+
+
+\-Definition at line 106 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return boost::equal(flags_, rhs.flags_);
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_aeb2624c7a86b765725fd80cd426e147d}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!increment@{increment}}
+\index{increment@{increment}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{increment}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf increment} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_aeb2624c7a86b765725fd80cd426e147d}
+operator++ 
+
+\-Definition at line 79 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                if(flags_.back()) return;                // 終端フラグが立っている
+                const auto it = boost::find(flags_, false);
+                
+                if(it == std::end(flags_)) return;       //
+      全部1なので終端…って，ここにかかったらおかしいけれど
+                
+                std::fill(std::begin(flags_), it, false); //この範囲は全部下ろす
+                *it = true; //ここだけ立てる(繰り上がり
+            }
+\end{DoxyCode}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_a986bf0deaa7559f361d03122eeea4c86}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}}
+\index{\-::boost\-::iterator\-\_\-core\-\_\-access@{\-::boost\-::iterator\-\_\-core\-\_\-access}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{\-::boost\-::iterator\-\_\-core\-\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}friend class \-::boost\-::iterator\-\_\-core\-\_\-access\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_a986bf0deaa7559f361d03122eeea4c86}
+for iterator\-\_\-facade 
+
+\-Definition at line 149 of file set\-\_\-powered.\-hpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_a9296ec46eb2f6c43cf6c5263aaf54cca}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!first\-\_\-@{first\-\_\-}}
+\index{first\-\_\-@{first\-\_\-}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{first\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf org\-\_\-iter\-\_\-type} {\bf first\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_a9296ec46eb2f6c43cf6c5263aaf54cca}
+変換\-Range先頭 
+
+\-Definition at line 153 of file set\-\_\-powered.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_a54539438ea4c794db488afe8afa24452}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!flags\-\_\-@{flags\-\_\-}}
+\index{flags\-\_\-@{flags\-\_\-}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{flags\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::deque$<$bool$>$ {\bf flags\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_a54539438ea4c794db488afe8afa24452}
+現在指している元コンテナの数値の連続している先頭のもの 
+
+\-Definition at line 161 of file set\-\_\-powered.\-hpp.
+
+\hypertarget{classyuh_1_1range__detail_1_1set__power__iterator_a9d115442fe366e570c20b178cc577690}{\index{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}!last\-\_\-@{last\-\_\-}}
+\index{last\-\_\-@{last\-\_\-}!yuh::range_detail::set_power_iterator@{yuh\-::range\-\_\-detail\-::set\-\_\-power\-\_\-iterator}}
+\subsubsection[{last\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf org\-\_\-iter\-\_\-type} {\bf last\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{db/d16/classyuh_1_1range__detail_1_1set__power__iterator_a9d115442fe366e570c20b178cc577690}
+変換\-Range末尾 
+
+\-Definition at line 157 of file set\-\_\-powered.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/adaptors/\hyperlink{set__powered_8hpp}{set\-\_\-powered.\-hpp}\end{DoxyCompactItemize}

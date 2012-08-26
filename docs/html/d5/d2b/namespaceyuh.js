@@ -11,10 +11,13 @@ var namespaceyuh =
     [ "is_Pythagorean", "d5/d2b/namespaceyuh.html#a14298c4b76f1a9d0537e7d5d67cfa784", null ],
     [ "is_Pythagorean", "d5/d2b/namespaceyuh.html#af94deeef5a14f79a6a51c6ca3155d03e", null ],
     [ "is_square", "d5/d2b/namespaceyuh.html#a43d71ed08fec121213f4ad3acbdc4d26", null ],
+    [ "operator<<", "d5/d2b/namespaceyuh.html#a6a041724aebe4e8e1c6509d8eaa9e9cf", null ],
+    [ "operator<<", "d5/d2b/namespaceyuh.html#af1b5747f2430fdb089dc2f4f75799746", null ],
     [ "polygonal", "d5/d2b/namespaceyuh.html#ad748e41a574e1b3042a2741cf023c40c", null ],
     [ "polygonal", "d5/d2b/namespaceyuh.html#a1af8d0faca38b0efb8ae71d0f773d3c8", null ],
     [ "prime", "d5/d2b/namespaceyuh.html#ad0e08caa71b8e5172b1535657bbc0648", null ],
     [ "prime", "d5/d2b/namespaceyuh.html#a31e810e0c57ef83ca515b12f1aac0bf3", null ],
     [ "prime_factor", "d5/d2b/namespaceyuh.html#afb5d08e183729831f760d6c2a27226d8", null ],
-    [ "prime_sift", "d5/d2b/namespaceyuh.html#ac7fcc7fa46bf6b7cf12a53a653b23317", null ]
+    [ "prime_sift", "d5/d2b/namespaceyuh.html#ac7fcc7fa46bf6b7cf12a53a653b23317", null ],
+    [ "enabler", "d5/d2b/namespaceyuh.html#a8b379f3dbc4920262c249049dd41274d", null ]
 ];

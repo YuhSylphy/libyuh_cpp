@@ -10,6 +10,16 @@ class \hyperlink{classyuh_1_1range__detail_1_1count__mapped__range}{count\-\_\-m
 \item 
 struct \hyperlink{structyuh_1_1range__detail_1_1count__map__forwarder}{count\-\_\-map\-\_\-forwarder}
 \item 
+struct \hyperlink{structyuh_1_1range__detail_1_1range__io}{range\-\_\-io}
+\item 
+struct \hyperlink{structyuh_1_1range__detail_1_1pretty__forwarder}{pretty\-\_\-forwarder}
+\item 
+class \hyperlink{classyuh_1_1range__detail_1_1set__power__iterator}{set\-\_\-power\-\_\-iterator}
+\item 
+class \hyperlink{classyuh_1_1range__detail_1_1set__powered__range}{set\-\_\-powered\-\_\-range}
+\item 
+struct \hyperlink{structyuh_1_1range__detail_1_1set__power__forwarder}{set\-\_\-power\-\_\-forwarder}
+\item 
 class \hyperlink{classyuh_1_1range__detail_1_1fibonacci__iterator}{fibonacci\-\_\-iterator}
 \item 
 class \hyperlink{classyuh_1_1range__detail_1_1polygonal__iterator}{polygonal\-\_\-iterator}
@@ -22,6 +32,14 @@ class \hyperlink{classyuh_1_1range__detail_1_1prime__iterator}{prime\-\_\-iterat
 {\footnotesize template$<$typename Range $>$ }\\\hyperlink{classyuh_1_1range__detail_1_1count__mapped__range}{count\-\_\-mapped\-\_\-range}$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1range__detail_a128712717771a96265117e448135e6b8}{operator$|$} (\-Range \&r, \hyperlink{structyuh_1_1range__detail_1_1count__map__forwarder}{count\-\_\-map\-\_\-forwarder})
 \item 
 {\footnotesize template$<$typename Range $>$ }\\\hyperlink{classyuh_1_1range__detail_1_1count__mapped__range}{count\-\_\-mapped\-\_\-range}$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1range__detail_abf270b3295a983c29653957120b0d172}{operator$|$} (const \-Range \&r, \hyperlink{structyuh_1_1range__detail_1_1count__map__forwarder}{count\-\_\-map\-\_\-forwarder})
+\item 
+{\footnotesize template$<$typename Ch , typename Tr , typename Range $>$ }\\std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \& \hyperlink{namespaceyuh_1_1range__detail_a6a69e861128439de1b09739e9d88d6c6}{operator$<$$<$} (std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \&os, const \hyperlink{structyuh_1_1range__detail_1_1range__io}{range\-\_\-io}$<$ \-Range $>$ \&r)
+\item 
+{\footnotesize template$<$typename Range , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\\hyperlink{structyuh_1_1range__detail_1_1range__io}{range\-\_\-io}$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1range__detail_a7ee9acf371d7ed5f8107b04dde451cd8}{operator$|$} (const \-Range \&r, \hyperlink{structyuh_1_1range__detail_1_1pretty__forwarder}{pretty\-\_\-forwarder})
+\item 
+{\footnotesize template$<$typename Range $>$ }\\\hyperlink{classyuh_1_1range__detail_1_1set__powered__range}{set\-\_\-powered\-\_\-range}$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1range__detail_ade0b1e4024c0bba4ebcc9ba0a977512a}{operator$|$} (\-Range \&r, \hyperlink{structyuh_1_1range__detail_1_1set__power__forwarder}{set\-\_\-power\-\_\-forwarder})
+\item 
+{\footnotesize template$<$typename Range $>$ }\\\hyperlink{classyuh_1_1range__detail_1_1set__powered__range}{set\-\_\-powered\-\_\-range}$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1range__detail_aca64755da20b86ac12d89e1c46cb67c2}{operator$|$} (const \-Range \&r, \hyperlink{structyuh_1_1range__detail_1_1set__power__forwarder}{set\-\_\-power\-\_\-forwarder})
 \item 
 const \hyperlink{namespaceyuh_1_1range__detail_ad56595bb0a2f86711343b5cb75e816f5}{decltype} (\hyperlink{classyuh_1_1range__detail_1_1prime__iterator_aff6d0a0fbc14123c0fca5a0c05d2e68c}{prime\-\_\-iterator\-::p\-\_\-})\&\hyperlink{classyuh_1_1range__detail_1_1prime__iterator}{prime\-\_\-iterator}
 \end{DoxyCompactItemize}
@@ -43,6 +61,59 @@ const \hyperlink{namespaceyuh_1_1range__detail_ad56595bb0a2f86711343b5cb75e816f5
 \begin{DoxyCode}
         {
             return p_;
+        }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_1_1range__detail_a6a69e861128439de1b09739e9d88d6c6}{\index{yuh\-::range\-\_\-detail@{yuh\-::range\-\_\-detail}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!yuh::range_detail@{yuh\-::range\-\_\-detail}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::basic\-\_\-ostream$<$\-Ch, \-Tr$>$\& yuh\-::range\-\_\-detail\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \&}]{os, }
+\item[{const range\-\_\-io$<$ \-Range $>$ \&}]{r}
+\end{DoxyParamCaption}
+)}}\label{da/dda/namespaceyuh_1_1range__detail_a6a69e861128439de1b09739e9d88d6c6}
+ストリーム出力 
+\begin{DoxyParams}{\-Parameters}
+{\em os} & 出力先 \\
+\hline
+{\em r} & 出力する範囲 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+os 
+\end{DoxyReturn}
+
+
+\-Definition at line 121 of file prettied.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return r.output(os);
+        }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_1_1range__detail_a7ee9acf371d7ed5f8107b04dde451cd8}{\index{yuh\-::range\-\_\-detail@{yuh\-::range\-\_\-detail}!operator$|$@{operator$|$}}
+\index{operator$|$@{operator$|$}!yuh::range_detail@{yuh\-::range\-\_\-detail}}
+\subsubsection[{operator$|$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf range\-\_\-io}$<$\-Range$>$ yuh\-::range\-\_\-detail\-::operator$|$ (
+\begin{DoxyParamCaption}
+\item[{const \-Range \&}]{r, }
+\item[{pretty\-\_\-forwarder}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/dda/namespaceyuh_1_1range__detail_a7ee9acf371d7ed5f8107b04dde451cd8}
+pipe operator 出力可能なオブジェクトに変換する 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & 範囲型 \\
+\hline
+{\em r} & 対象範囲 preturn range\-\_\-ioオブジェクト \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 149 of file prettied.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return range_io<Range>(r);
         }
 \end{DoxyCode}
 \hypertarget{namespaceyuh_1_1range__detail_a128712717771a96265117e448135e6b8}{\index{yuh\-::range\-\_\-detail@{yuh\-::range\-\_\-detail}!operator$|$@{operator$|$}}
@@ -73,6 +144,34 @@ count\-\_\-map
             return count_mapped_range<Range>( r );
         }
 \end{DoxyCode}
+\hypertarget{namespaceyuh_1_1range__detail_ade0b1e4024c0bba4ebcc9ba0a977512a}{\index{yuh\-::range\-\_\-detail@{yuh\-::range\-\_\-detail}!operator$|$@{operator$|$}}
+\index{operator$|$@{operator$|$}!yuh::range_detail@{yuh\-::range\-\_\-detail}}
+\subsubsection[{operator$|$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf set\-\_\-powered\-\_\-range}$<$\-Range$>$ yuh\-::range\-\_\-detail\-::operator$|$ (
+\begin{DoxyParamCaption}
+\item[{\-Range \&}]{r, }
+\item[{set\-\_\-power\-\_\-forwarder}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/dda/namespaceyuh_1_1range__detail_ade0b1e4024c0bba4ebcc9ba0a977512a}
+pipe operator 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & \\
+\hline
+{\em r} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+set\-\_\-power 
+\end{DoxyReturn}
+
+
+\-Definition at line 214 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return set_powered_range<Range>( r );
+        }
+\end{DoxyCode}
 \hypertarget{namespaceyuh_1_1range__detail_abf270b3295a983c29653957120b0d172}{\index{yuh\-::range\-\_\-detail@{yuh\-::range\-\_\-detail}!operator$|$@{operator$|$}}
 \index{operator$|$@{operator$|$}!yuh::range_detail@{yuh\-::range\-\_\-detail}}
 \subsubsection[{operator$|$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf count\-\_\-mapped\-\_\-range}$<$\-Range$>$ yuh\-::range\-\_\-detail\-::operator$|$ (
@@ -99,5 +198,33 @@ count\-\_\-map
 \begin{DoxyCode}
         {
             return count_mapped_range<Range>( r );
+        }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_1_1range__detail_aca64755da20b86ac12d89e1c46cb67c2}{\index{yuh\-::range\-\_\-detail@{yuh\-::range\-\_\-detail}!operator$|$@{operator$|$}}
+\index{operator$|$@{operator$|$}!yuh::range_detail@{yuh\-::range\-\_\-detail}}
+\subsubsection[{operator$|$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf set\-\_\-powered\-\_\-range}$<$\-Range$>$ yuh\-::range\-\_\-detail\-::operator$|$ (
+\begin{DoxyParamCaption}
+\item[{const \-Range \&}]{r, }
+\item[{set\-\_\-power\-\_\-forwarder}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/dda/namespaceyuh_1_1range__detail_aca64755da20b86ac12d89e1c46cb67c2}
+pipe operator 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Range} & \\
+\hline
+{\em r} & 変換元範囲 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+set\-\_\-power 
+\end{DoxyReturn}
+
+
+\-Definition at line 226 of file set\-\_\-powered.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return set_powered_range<Range>( r );
         }
 \end{DoxyCode}
