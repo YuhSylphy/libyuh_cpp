@@ -214,10 +214,10 @@ namespace yuh
 		 * @return count_map
 		 */
 		template<typename Range>
-		inline count_mapped_range<Range>
+		inline count_mapped_range<const Range>
 		operator|( const Range& r, count_map_forwarder )
 		{
-			return count_mapped_range<Range>( r );
+			return count_mapped_range<const Range>( r );
 		}
 	} // namespace range_detail
 
@@ -252,10 +252,10 @@ namespace yuh
 		 * @return count_map
 		 */
 		template<typename Range>
-		inline count_mapped_range<Range>
+		inline count_mapped_range<const Range>
 		count_map( const Range& r )
 		{
-			return count_mapped_range<Range>( r );
+			return count_mapped_range<const Range>( r );
 		}
 	} // namespace adaptors
 } // namespace yuh
