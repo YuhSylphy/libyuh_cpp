@@ -1,7 +1,7 @@
 #pragma once
 #include <type_traits>
 #include <boost/range/has_range_iterator.hpp>
-
+#include <boost/format.hpp>
 
 namespace yuh
 {
@@ -42,9 +42,15 @@ namespace yuh
 					boost::mpl::true_
 					>::value
 				> ::type *& = enabler >
-		inline range_io<Range> pretty(const Range& r)
+		inline range_io<Range> pretty(
+			const Range& r,
+			const std::string& fmt = "%||",
+			const std::string& opn = "{ ",
+			const std::string& cls = " }",
+			const std::string& sep = ", "
+			)
 		{
-			return range_io<Range>(r);
+			return range_io<Range>(r, fmt, opn, cls, sep);
 		}
 		/**
 		 * rangeではないものは素通しする
@@ -60,12 +66,18 @@ namespace yuh
 					boost::mpl::false_
 					>::value
 				> ::type *& = enabler >
-		inline const T& pretty(const T& t)
+		inline const T& pretty(
+			const T& t,
+			const std::string& = "%||",
+			const std::string& = "{ ",
+			const std::string& = " }",
+			const std::string& = ", "
+			)
 		{
 			return t;
 		}
 
-} // namespace adaptors
+	} // namespace adaptors
 
 	namespace range_detail
 	{
@@ -80,7 +92,17 @@ namespace yuh
 			 * ctor
 			 * @param rng 変換元範囲
 			 */
-			range_io(const Range& rng):rng_(rng){}
+			range_io(
+				const Range& rng,
+				const std::string& fmt = "%||",
+				const std::string& opn = "{ ",
+				const std::string& cls = " }",
+				const std::string& sep = ", "
+				) : 
+				rng_(rng),
+				fmt_(fmt), opn_(opn), 
+				cls_(cls), sep_(sep)
+			{}
 
 			/**
 			 * operator<<から呼び出す
@@ -88,26 +110,45 @@ namespace yuh
 			 * @return os
 			 */
 			template<typename Ch, typename Tr>
-			std::basic_ostream<Ch, Tr>& output(std::basic_ostream<Ch, Tr>&os) const
+			std::basic_ostream<Ch, Tr>& output(
+				std::basic_ostream<Ch, Tr>& os) const
 			{
-				os << "{ ";
+				os << opn_;
 				auto it = std::begin(rng_);
 				const auto last = std::end(rng_);
 				if (it != last)
 				{ 
-					os << pretty(*it);
+					os << (boost::format(fmt_) % pretty(*it, fmt_, opn_, cls_, sep_));
 					for( ++it ; it != last ; ++it )
 					{
-						os << ", " << pretty(*it);
+						os << sep_ << 
+							(boost::format(fmt_) % pretty(*it, fmt_, opn_, cls_, sep_));
 					}
 				}
-				return os << " }";
+				return os << cls_;
 			}
 		private:
 			/**
 			 * 対象範囲
 			 */
 			const Range& rng_;
+			/**
+			 * boost::format フォーマット文字列
+			 */
+			std::string fmt_;
+			/**
+			 * 開き括弧
+			 */
+			std::string opn_;
+			/**
+			 * 閉じ括弧
+			 */
+			std::string cls_;
+			/**
+			 * 区切り文字列
+			 */
+			std::string sep_;
+			
 		};
 	
 		/**
@@ -128,7 +169,116 @@ namespace yuh
 		 */
 		struct pretty_forwarder 
 		{
+			/**
+			 * ctor
+			 * @param fmt フォーマット文字列
+			 * @param opn 開き括弧
+			 * @param cls 閉じ括弧
+			 * @param sep 区切り文字列
+			 */
+			pretty_forwarder(
+				const std::string& fmt = "%||",
+				const std::string& opn = "{ ",
+				const std::string& cls = " }",
+				const std::string& sep = ", "
+				) : fmt_(fmt), opn_(opn), 
+					cls_(cls), sep_(sep) {}
 
+			/**
+			 * フォーマット文字列だけ一時設定
+			 */
+			pretty_forwarder operator()(
+				const std::string& fmt
+				) const 
+			{
+				return pretty_forwarder(fmt, opn_, cls_, sep_);
+			}
+			/**
+			 * 括弧，区切り文字列を一時設定
+			 */
+			pretty_forwarder operator()(
+				const std::string& opn,
+				const std::string& sep,
+				const std::string& cls
+				) const 
+			{
+				return pretty_forwarder(fmt_, opn, cls, sep);
+			}
+			/**
+			 * 各パラメータを一時的に設定
+			 */
+			pretty_forwarder operator()(
+				const std::string& fmt,
+				const std::string& opn,
+				const std::string& sep,
+				const std::string& cls
+				) const
+			{
+				return pretty_forwarder(fmt, opn, cls, sep);
+			}
+
+			/**
+			 * フォーマット文字列だけ一時設定
+			 */
+			pretty_forwarder& format(
+				const std::string& fmt
+				) 
+			{
+				fmt_ = fmt;
+				return *this;
+			}
+			/**
+			 * 括弧，区切り文字列を一時設定
+			 */
+			pretty_forwarder& format(
+				const std::string& opn,
+				const std::string& sep,
+				const std::string& cls
+				) 
+			{
+				opn_ = opn;
+				cls_ = cls;
+				sep_ = sep;
+				return *this;
+			}
+			/**
+			 * 各パラメータを一時的に設定
+			 */
+			pretty_forwarder& format(
+				const std::string& fmt,
+				const std::string& opn,
+				const std::string& sep,
+				const std::string& cls
+				) 
+			{
+				fmt_ = fmt;
+				opn_ = opn;
+				cls_ = cls;
+				sep_ = sep;
+				return *this;
+			}
+
+			const std::string getFmt() const { return fmt_; }
+			const std::string getOpn() const { return opn_; }
+			const std::string getCls() const { return cls_; }
+			const std::string getSep() const { return sep_; }
+		private:
+			/**
+			 * boost::format フォーマット文字列
+			 */
+			std::string fmt_;
+			/**
+			 * 開き括弧
+			 */
+			std::string opn_;
+			/**
+			 * 閉じ括弧
+			 */
+			std::string cls_;
+			/**
+			 * 区切り文字列
+			 */
+			std::string sep_;
 		};
 		
 		/**
@@ -146,9 +296,11 @@ namespace yuh
 					>::value
 				> ::type *& = enabler >
 		inline range_io<Range> 
-		operator|(const Range& r, pretty_forwarder)
+		operator|(const Range& r, pretty_forwarder f)
 		{
-			return range_io<Range>(r);
+			return range_io<Range>(
+				r,
+				f.getFmt(), f.getOpn(), f.getCls(), f.getSep());
 		}
 	
 	} // namespace range_detail
