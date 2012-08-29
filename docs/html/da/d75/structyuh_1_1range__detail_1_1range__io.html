@@ -109,12 +109,16 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a380ab6cfecb5051591a6b12311764a14">range_io</a> (const Range &amp;rng)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a565467d40387e95eda349445c59fe9af">range_io</a> (const Range &amp;rng, const std::string &amp;fmt=&quot;%||&quot;, const std::string &amp;opn=&quot;{ &quot;, const std::string &amp;cls=&quot; }&quot;, const std::string &amp;sep=&quot;, &quot;)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Ch , typename Tr &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; Ch, Tr &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a052a6e871c2df8d90729645678be1d4d">output</a> (std::basic_ostream&lt; Ch, Tr &gt; &amp;os) const </td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const Range &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a1dc23cf32ae84636d442489c9629b987">rng_</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a5c63eb77f1b985d706bcb6dd96d0b0c4">fmt_</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a551279ac03e367c8394c7e2b2c78aa3e">opn_</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#ac1750e01b56a52147effe52c4e83e247">cls_</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#ae5b41e2a505b540f0b9a6e995030bcba">sep_</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Range&gt;<br/>
@@ -122,9 +126,9 @@ struct yuh::range_detail::range_io&lt; Range &gt;</h3>
 
 <p>範囲出力実装部 </p>
 
-<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a380ab6cfecb5051591a6b12311764a14"></a><!-- doxytag: member="yuh::range_detail::range_io::range_io" ref="a380ab6cfecb5051591a6b12311764a14" args="(const Range &amp;rng)" -->
+<a class="anchor" id="a565467d40387e95eda349445c59fe9af"></a><!-- doxytag: member="yuh::range_detail::range_io::range_io" ref="a565467d40387e95eda349445c59fe9af" args="(const Range &amp;rng, const std::string &amp;fmt=&quot;%||&quot;, const std::string &amp;opn=&quot;{ &quot;, const std::string &amp;cls=&quot; }&quot;, const std::string &amp;sep=&quot;, &quot;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -132,8 +136,36 @@ struct yuh::range_detail::range_io&lt; Range &gt;</h3>
           <td class="memname"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html">range_io</a> </td>
           <td>(</td>
           <td class="paramtype">const Range &amp;&#160;</td>
-          <td class="paramname"><em>rng</em></td><td>)</td>
-          <td><code> [inline]</code></td>
+          <td class="paramname"><em>rng</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fmt</em> = <code>&quot;%||&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>opn</em> = <code>&quot;{&#160;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cls</em> = <code>&quot;&#160;}&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>sep</em> = <code>&quot;,&#160;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -146,8 +178,15 @@ struct yuh::range_detail::range_io&lt; Range &gt;</h3>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
-<div class="fragment"><pre class="fragment">:<a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a1dc23cf32ae84636d442489c9629b987">rng_</a>(rng){}
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00086">86</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">                                        { <span class="stringliteral">&quot;,</span>
+<span class="stringliteral">                const std::string&amp; cls = &quot;</span> }<span class="stringliteral">&quot;,</span>
+<span class="stringliteral">                const std::string&amp; sep = &quot;</span>, <span class="stringliteral">&quot;</span>
+<span class="stringliteral">                ) : </span>
+<span class="stringliteral">                rng_(rng),</span>
+<span class="stringliteral">                fmt_(fmt), opn_(opn), </span>
+<span class="stringliteral">                cls_(cls), sep_(sep)</span>
+<span class="stringliteral">            {}</span>
 </pre></div>
 </div>
 </div>
@@ -175,25 +214,74 @@ struct yuh::range_detail::range_io&lt; Range &gt;</h3>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>os </dd></dl>
 
-<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
 <div class="fragment"><pre class="fragment">            {
-                os &lt;&lt; <span class="stringliteral">&quot;{ &quot;</span>;
+                os &lt;&lt; <a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a551279ac03e367c8394c7e2b2c78aa3e">opn_</a>;
                 <span class="keyword">auto</span> it = std::begin(<a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a1dc23cf32ae84636d442489c9629b987">rng_</a>);
                 <span class="keyword">const</span> <span class="keyword">auto</span> last = std::end(<a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a1dc23cf32ae84636d442489c9629b987">rng_</a>);
                 <span class="keywordflow">if</span> (it != last)
                 { 
-                    os &lt;&lt; <a class="code" href="../../de/d55/namespaceyuh_1_1adaptors.html#ad5660c286c614db267091a07245d32b6">pretty</a>(*it);
+                    os &lt;&lt; (boost::format(<a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a5c63eb77f1b985d706bcb6dd96d0b0c4">fmt_</a>) % <a class="code" href="../../de/d55/namespaceyuh_1_1adaptors.html#a1144c5d97c9a22ad2974a9b92d72a83a">pretty</a>(*it, <a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a5c63eb77f1b985d706bcb6dd96d0b0c4">fmt_</a>, opn_, <a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#ac1750e01b56a52147effe52c4e83e247">cls_</a>, <a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#ae5b41e2a505b540f0b9a6e995030bcba">sep_</a>));
                     <span class="keywordflow">for</span>( ++it ; it != last ; ++it )
                     {
-                        os &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code" href="../../de/d55/namespaceyuh_1_1adaptors.html#ad5660c286c614db267091a07245d32b6">pretty</a>(*it);
+                        os &lt;&lt; <a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#ae5b41e2a505b540f0b9a6e995030bcba">sep_</a> &lt;&lt; 
+                            (boost::format(<a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a5c63eb77f1b985d706bcb6dd96d0b0c4">fmt_</a>) % <a class="code" href="../../de/d55/namespaceyuh_1_1adaptors.html#a1144c5d97c9a22ad2974a9b92d72a83a">pretty</a>(*it, <a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a5c63eb77f1b985d706bcb6dd96d0b0c4">fmt_</a>, opn_, <a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#ac1750e01b56a52147effe52c4e83e247">cls_</a>, <a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#ae5b41e2a505b540f0b9a6e995030bcba">sep_</a>));
                     }
                 }
-                <span class="keywordflow">return</span> os &lt;&lt; <span class="stringliteral">&quot; }&quot;</span>;
+                <span class="keywordflow">return</span> os &lt;&lt; <a class="code" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#ac1750e01b56a52147effe52c4e83e247">cls_</a>;
             }
 </pre></div>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ac1750e01b56a52147effe52c4e83e247"></a><!-- doxytag: member="yuh::range_detail::range_io::cls_" ref="ac1750e01b56a52147effe52c4e83e247" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#ac1750e01b56a52147effe52c4e83e247">cls_</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>閉じ括弧 </p>
+
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00137">137</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c63eb77f1b985d706bcb6dd96d0b0c4"></a><!-- doxytag: member="yuh::range_detail::range_io::fmt_" ref="a5c63eb77f1b985d706bcb6dd96d0b0c4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a5c63eb77f1b985d706bcb6dd96d0b0c4">fmt_</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>boost::format フォーマット文字列 </p>
+
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00129">129</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a551279ac03e367c8394c7e2b2c78aa3e"></a><!-- doxytag: member="yuh::range_detail::range_io::opn_" ref="a551279ac03e367c8394c7e2b2c78aa3e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#a551279ac03e367c8394c7e2b2c78aa3e">opn_</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>開き括弧 </p>
+
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00133">133</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1dc23cf32ae84636d442489c9629b987"></a><!-- doxytag: member="yuh::range_detail::range_io::rng_" ref="a1dc23cf32ae84636d442489c9629b987" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +294,23 @@ struct yuh::range_detail::range_io&lt; Range &gt;</h3>
 <div class="memdoc">
 <p>対象範囲 </p>
 
-<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00110">110</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5b41e2a505b540f0b9a6e995030bcba"></a><!-- doxytag: member="yuh::range_detail::range_io::sep_" ref="ae5b41e2a505b540f0b9a6e995030bcba" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html#ae5b41e2a505b540f0b9a6e995030bcba">sep_</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>区切り文字列 </p>
+
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
 
 </div>
 </div>
@@ -235,7 +339,7 @@ struct yuh::range_detail::range_io&lt; Range &gt;</h3>
       <li class="navelem"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html">range_detail</a>      </li>
       <li class="navelem"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html">range_io</a>      </li>
 
-    <li class="footer">Generated on Mon Aug 27 2012 12:56:46 for yuh library by
+    <li class="footer">Generated on Wed Aug 29 2012 23:58:36 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

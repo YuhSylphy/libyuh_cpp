@@ -106,11 +106,11 @@ Functions</h2></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">count_mapped_range&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#acb67fe5826a7f7b7ac61edf1dfcff82f">count_map</a> (Range &amp;r)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">count_mapped_range&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a7832edf38320aa72804efae4522aeacb">count_map</a> (const Range &amp;r)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">count_mapped_range&lt; const Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a6b46059339338da677245db0a97006c6">count_map</a> (const Range &amp;r)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range , typename std::enable_if&lt; std::is_same&lt; typename boost::has_range_const_iterator&lt; Range &gt;::type, boost::mpl::true_ &gt;::value &gt;::type *&amp;  = enabler&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">range_io&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#ad5660c286c614db267091a07245d32b6">pretty</a> (const Range &amp;r)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">range_io&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a1144c5d97c9a22ad2974a9b92d72a83a">pretty</a> (const Range &amp;r, const std::string &amp;fmt=&quot;%||&quot;, const std::string &amp;opn=&quot;{ &quot;, const std::string &amp;cls=&quot; }&quot;, const std::string &amp;sep=&quot;, &quot;)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T , typename std::enable_if&lt; std::is_same&lt; typename boost::has_range_const_iterator&lt; T &gt;::type, boost::mpl::false_ &gt;::value &gt;::type *&amp;  = enabler&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a7797a297cbbdae1a1876471228638d75">pretty</a> (const T &amp;t)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#aae2589510dae0b03d7cf37a7a85eec69">pretty</a> (const T &amp;t, const std::string &amp;=&quot;%||&quot;, const std::string &amp;=&quot;{ &quot;, const std::string &amp;=&quot; }&quot;, const std::string &amp;=&quot;, &quot;)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">set_powered_range&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#af3fcfee5424bbff193826b77df52f6e5">set_power</a> (Range &amp;r)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
@@ -148,12 +148,12 @@ Functions</h2></td></tr>
 </pre></div>
 </div>
 </div>
-<a class="anchor" id="a7832edf38320aa72804efae4522aeacb"></a><!-- doxytag: member="yuh::adaptors::count_map" ref="a7832edf38320aa72804efae4522aeacb" args="(const Range &amp;r)" -->
+<a class="anchor" id="a6b46059339338da677245db0a97006c6"></a><!-- doxytag: member="yuh::adaptors::count_map" ref="a6b46059339338da677245db0a97006c6" args="(const Range &amp;r)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">count_mapped_range&lt;Range&gt; <a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#acb67fe5826a7f7b7ac61edf1dfcff82f">yuh::adaptors::count_map</a> </td>
+          <td class="memname">count_mapped_range&lt;const Range&gt; <a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#acb67fe5826a7f7b7ac61edf1dfcff82f">yuh::adaptors::count_map</a> </td>
           <td>(</td>
           <td class="paramtype">const Range &amp;&#160;</td>
           <td class="paramname"><em>r</em></td><td>)</td>
@@ -174,21 +174,49 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="../../da/d1d/count__mapped_8hpp_source.html#l00256">256</a> of file <a class="el" href="../../da/d1d/count__mapped_8hpp_source.html">count_mapped.hpp</a>.</p>
 <div class="fragment"><pre class="fragment">        {
-            <span class="keywordflow">return</span> count_mapped_range&lt;Range&gt;( r );
+            <span class="keywordflow">return</span> count_mapped_range&lt;const Range&gt;( r );
         }
 </pre></div>
 </div>
 </div>
-<a class="anchor" id="ad5660c286c614db267091a07245d32b6"></a><!-- doxytag: member="yuh::adaptors::pretty" ref="ad5660c286c614db267091a07245d32b6" args="(const Range &amp;r)" -->
+<a class="anchor" id="a1144c5d97c9a22ad2974a9b92d72a83a"></a><!-- doxytag: member="yuh::adaptors::pretty" ref="a1144c5d97c9a22ad2974a9b92d72a83a" args="(const Range &amp;r, const std::string &amp;fmt=&quot;%||&quot;, const std::string &amp;opn=&quot;{ &quot;, const std::string &amp;cls=&quot; }&quot;, const std::string &amp;sep=&quot;, &quot;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">range_io&lt;Range&gt; <a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#ad5660c286c614db267091a07245d32b6">yuh::adaptors::pretty</a> </td>
+          <td class="memname">range_io&lt;Range&gt; <a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a1144c5d97c9a22ad2974a9b92d72a83a">yuh::adaptors::pretty</a> </td>
           <td>(</td>
           <td class="paramtype">const Range &amp;&#160;</td>
-          <td class="paramname"><em>r</em></td><td>)</td>
-          <td><code> [inline]</code></td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fmt</em> = <code>&quot;%||&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>opn</em> = <code>&quot;{&#160;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cls</em> = <code>&quot;&#160;}&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>sep</em> = <code>&quot;,&#160;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -203,23 +231,55 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>range_io </dd></dl>
 
-<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
-<div class="fragment"><pre class="fragment">        {
-            <span class="keywordflow">return</span> range_io&lt;Range&gt;(r);
-        }
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">                                    { <span class="stringliteral">&quot;,</span>
+<span class="stringliteral">            const std::string&amp; cls = &quot;</span> }<span class="stringliteral">&quot;,</span>
+<span class="stringliteral">            const std::string&amp; sep = &quot;</span>, <span class="stringliteral">&quot;</span>
+<span class="stringliteral">            )</span>
+<span class="stringliteral">        {</span>
+<span class="stringliteral">            return range_io&lt;Range&gt;(r, fmt, opn, cls, sep);</span>
+<span class="stringliteral">        }</span>
 </pre></div>
 </div>
 </div>
-<a class="anchor" id="a7797a297cbbdae1a1876471228638d75"></a><!-- doxytag: member="yuh::adaptors::pretty" ref="a7797a297cbbdae1a1876471228638d75" args="(const T &amp;t)" -->
+<a class="anchor" id="aae2589510dae0b03d7cf37a7a85eec69"></a><!-- doxytag: member="yuh::adaptors::pretty" ref="aae2589510dae0b03d7cf37a7a85eec69" args="(const T &amp;t, const std::string &amp;=&quot;%||&quot;, const std::string &amp;=&quot;{ &quot;, const std::string &amp;=&quot; }&quot;, const std::string &amp;=&quot;, &quot;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const T&amp; <a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#ad5660c286c614db267091a07245d32b6">yuh::adaptors::pretty</a> </td>
+          <td class="memname">const T&amp; <a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a1144c5d97c9a22ad2974a9b92d72a83a">yuh::adaptors::pretty</a> </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>t</em></td><td>)</td>
-          <td><code> [inline]</code></td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"> = <code>&quot;%||&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"> = <code>&quot;{&#160;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"> = <code>&quot;&#160;}&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"> = <code>&quot;,&#160;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -234,10 +294,14 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>tそのもの </dd></dl>
 
-<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00063">63</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
-<div class="fragment"><pre class="fragment">        {
-            <span class="keywordflow">return</span> t;
-        }
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00060">60</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">                                { <span class="stringliteral">&quot;,</span>
+<span class="stringliteral">            const std::string&amp; = &quot;</span> }<span class="stringliteral">&quot;,</span>
+<span class="stringliteral">            const std::string&amp; = &quot;</span>, <span class="stringliteral">&quot;</span>
+<span class="stringliteral">            )</span>
+<span class="stringliteral">        {</span>
+<span class="stringliteral">            return t;</span>
+<span class="stringliteral">        }</span>
 </pre></div>
 </div>
 </div>
@@ -324,7 +388,7 @@ Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="../../d5/d2b/namespaceyuh.html">yuh</a>      </li>
       <li class="navelem"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html">adaptors</a>      </li>
 
-    <li class="footer">Generated on Mon Aug 27 2012 12:56:46 for yuh library by
+    <li class="footer">Generated on Wed Aug 29 2012 23:58:36 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

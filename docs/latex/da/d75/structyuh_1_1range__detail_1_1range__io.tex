@@ -8,7 +8,7 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structyuh_1_1range__detail_1_1range__io_a380ab6cfecb5051591a6b12311764a14}{range\-\_\-io} (const \-Range \&rng)
+\hyperlink{structyuh_1_1range__detail_1_1range__io_a565467d40387e95eda349445c59fe9af}{range\-\_\-io} (const \-Range \&rng, const std\-::string \&fmt=\char`\"{}\%$|$$|$\char`\"{}, const std\-::string \&opn=\char`\"{}\{ \char`\"{}, const std\-::string \&cls=\char`\"{} \}\char`\"{}, const std\-::string \&sep=\char`\"{}, \char`\"{})
 \item 
 {\footnotesize template$<$typename Ch , typename Tr $>$ }\\std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \& \hyperlink{structyuh_1_1range__detail_1_1range__io_a052a6e871c2df8d90729645678be1d4d}{output} (std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \&os) const 
 \end{DoxyCompactItemize}
@@ -16,26 +16,38 @@
 \begin{DoxyCompactItemize}
 \item 
 const \-Range \& \hyperlink{structyuh_1_1range__detail_1_1range__io_a1dc23cf32ae84636d442489c9629b987}{rng\-\_\-}
+\item 
+std\-::string \hyperlink{structyuh_1_1range__detail_1_1range__io_a5c63eb77f1b985d706bcb6dd96d0b0c4}{fmt\-\_\-}
+\item 
+std\-::string \hyperlink{structyuh_1_1range__detail_1_1range__io_a551279ac03e367c8394c7e2b2c78aa3e}{opn\-\_\-}
+\item 
+std\-::string \hyperlink{structyuh_1_1range__detail_1_1range__io_ac1750e01b56a52147effe52c4e83e247}{cls\-\_\-}
+\item 
+std\-::string \hyperlink{structyuh_1_1range__detail_1_1range__io_ae5b41e2a505b540f0b9a6e995030bcba}{sep\-\_\-}
 \end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
-\subsubsection*{template$<$typename Range$>$struct yuh\-::range\-\_\-detail\-::range\-\_\-io$<$ Range $>$}
+\subsubsection*{template$<$typename \-Range$>$struct yuh\-::range\-\_\-detail\-::range\-\_\-io$<$ Range $>$}
 
 範囲出力実装部 
 
-\-Definition at line 77 of file prettied.\-hpp.
+\-Definition at line 80 of file prettied.\-hpp.
 
 
 
 \subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{structyuh_1_1range__detail_1_1range__io_a380ab6cfecb5051591a6b12311764a14}{\index{yuh\-::range\-\_\-detail\-::range\-\_\-io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}!range\-\_\-io@{range\-\_\-io}}
+\hypertarget{structyuh_1_1range__detail_1_1range__io_a565467d40387e95eda349445c59fe9af}{\index{yuh\-::range\-\_\-detail\-::range\-\_\-io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}!range\-\_\-io@{range\-\_\-io}}
 \index{range\-\_\-io@{range\-\_\-io}!yuh::range_detail::range_io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}}
 \subsubsection[{range\-\_\-io}]{\setlength{\rightskip}{0pt plus 5cm}{\bf range\-\_\-io} (
 \begin{DoxyParamCaption}
-\item[{const \-Range \&}]{rng}
+\item[{const \-Range \&}]{rng, }
+\item[{const std\-::string \&}]{fmt = {\ttfamily \char`\"{}\%$|$$|$\char`\"{}}, }
+\item[{const std\-::string \&}]{opn = {\ttfamily \char`\"{}\{~\char`\"{}}, }
+\item[{const std\-::string \&}]{cls = {\ttfamily \char`\"{}~\}\char`\"{}}, }
+\item[{const std\-::string \&}]{sep = {\ttfamily \char`\"{},~\char`\"{}}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/d75/structyuh_1_1range__detail_1_1range__io_a380ab6cfecb5051591a6b12311764a14}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{da/d75/structyuh_1_1range__detail_1_1range__io_a565467d40387e95eda349445c59fe9af}
 ctor 
 \begin{DoxyParams}{\-Parameters}
 {\em rng} & 変換元範囲 \\
@@ -43,11 +55,18 @@ ctor
 \end{DoxyParams}
 
 
-\-Definition at line 83 of file prettied.\-hpp.
+\-Definition at line 86 of file prettied.\-hpp.
 
 
 \begin{DoxyCode}
-:rng_(rng){}
+                                        { ",
+                const std::string& cls = " }",
+                const std::string& sep = ", "
+                ) : 
+                rng_(rng),
+                fmt_(fmt), opn_(opn), 
+                cls_(cls), sep_(sep)
+            {}
 \end{DoxyCode}
 
 
@@ -69,34 +88,65 @@ os
 \end{DoxyReturn}
 
 
-\-Definition at line 91 of file prettied.\-hpp.
+\-Definition at line 104 of file prettied.\-hpp.
 
 
 \begin{DoxyCode}
             {
-                os << "{ ";
+                os << opn_;
                 auto it = std::begin(rng_);
                 const auto last = std::end(rng_);
                 if (it != last)
                 { 
-                    os << pretty(*it);
+                    os << (boost::format(fmt_) % pretty(*it, fmt_, opn_, cls_, 
+      sep_));
                     for( ++it ; it != last ; ++it )
                     {
-                        os << ", " << pretty(*it);
+                        os << sep_ << 
+                            (boost::format(fmt_) % pretty(*it, fmt_, opn_, cls_
+      , sep_));
                     }
                 }
-                return os << " }";
+                return os << cls_;
             }
 \end{DoxyCode}
 
 
 \subsection{\-Member \-Data \-Documentation}
+\hypertarget{structyuh_1_1range__detail_1_1range__io_ac1750e01b56a52147effe52c4e83e247}{\index{yuh\-::range\-\_\-detail\-::range\-\_\-io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}!cls\-\_\-@{cls\-\_\-}}
+\index{cls\-\_\-@{cls\-\_\-}!yuh::range_detail::range_io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}}
+\subsubsection[{cls\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf cls\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d75/structyuh_1_1range__detail_1_1range__io_ac1750e01b56a52147effe52c4e83e247}
+閉じ括弧 
+
+\-Definition at line 137 of file prettied.\-hpp.
+
+\hypertarget{structyuh_1_1range__detail_1_1range__io_a5c63eb77f1b985d706bcb6dd96d0b0c4}{\index{yuh\-::range\-\_\-detail\-::range\-\_\-io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}!fmt\-\_\-@{fmt\-\_\-}}
+\index{fmt\-\_\-@{fmt\-\_\-}!yuh::range_detail::range_io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}}
+\subsubsection[{fmt\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf fmt\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d75/structyuh_1_1range__detail_1_1range__io_a5c63eb77f1b985d706bcb6dd96d0b0c4}
+boost\-::format フォーマット文字列 
+
+\-Definition at line 129 of file prettied.\-hpp.
+
+\hypertarget{structyuh_1_1range__detail_1_1range__io_a551279ac03e367c8394c7e2b2c78aa3e}{\index{yuh\-::range\-\_\-detail\-::range\-\_\-io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}!opn\-\_\-@{opn\-\_\-}}
+\index{opn\-\_\-@{opn\-\_\-}!yuh::range_detail::range_io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}}
+\subsubsection[{opn\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf opn\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d75/structyuh_1_1range__detail_1_1range__io_a551279ac03e367c8394c7e2b2c78aa3e}
+開き括弧 
+
+\-Definition at line 133 of file prettied.\-hpp.
+
 \hypertarget{structyuh_1_1range__detail_1_1range__io_a1dc23cf32ae84636d442489c9629b987}{\index{yuh\-::range\-\_\-detail\-::range\-\_\-io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}!rng\-\_\-@{rng\-\_\-}}
 \index{rng\-\_\-@{rng\-\_\-}!yuh::range_detail::range_io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}}
 \subsubsection[{rng\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const \-Range\& {\bf rng\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d75/structyuh_1_1range__detail_1_1range__io_a1dc23cf32ae84636d442489c9629b987}
 対象範囲 
 
-\-Definition at line 110 of file prettied.\-hpp.
+\-Definition at line 125 of file prettied.\-hpp.
+
+\hypertarget{structyuh_1_1range__detail_1_1range__io_ae5b41e2a505b540f0b9a6e995030bcba}{\index{yuh\-::range\-\_\-detail\-::range\-\_\-io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}!sep\-\_\-@{sep\-\_\-}}
+\index{sep\-\_\-@{sep\-\_\-}!yuh::range_detail::range_io@{yuh\-::range\-\_\-detail\-::range\-\_\-io}}
+\subsubsection[{sep\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf sep\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{da/d75/structyuh_1_1range__detail_1_1range__io_ae5b41e2a505b540f0b9a6e995030bcba}
+区切り文字列 
+
+\-Definition at line 141 of file prettied.\-hpp.
 
 
 

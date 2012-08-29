@@ -3,23 +3,14 @@
 #include <boost/range/has_range_iterator.hpp>
 #include <boost/format.hpp>
 
+#include "../detail/enabler.h"
+
 namespace yuh
 {
 	namespace range_detail
 	{
 		template<typename Range>
 		struct range_io;
-	}
-
-	namespace
-	{
-		/**
-		 * Never defined: for TMP
-		 */
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wunneeded-internal-declaration"
-		extern void * enabler ; //警告されても実体作っちゃうと無駄だし宣言は必要
-#pragma clang diagnostic pop
 	}
 
 	namespace adaptors

@@ -1,0 +1,1009 @@
+\hypertarget{classyuh_1_1bignum}{\section{bignum \-Class \-Reference}
+\label{d7/d6b/classyuh_1_1bignum}\index{bignum@{bignum}}
+}
+
+
+{\ttfamily \#include $<$bignum.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\-\_\-t \hyperlink{classyuh_1_1bignum_a918fd2d7b4fcfb6452272f1477745a53}{digit\-\_\-t}
+\item 
+typedef uint64\-\_\-t \hyperlink{classyuh_1_1bignum_ac439f7dc1f74e035e0543cc184a57445}{twice\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Integer , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ Integer $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\\hyperlink{classyuh_1_1bignum_a3554dd27e1fe3080ba13d1d00027ad10}{bignum} (\-Integer n)
+\item 
+{\footnotesize template$<$typename Range , typename  = typename boost\-::range\-\_\-value$<$\-Range$>$\-::type$>$ }\\\hyperlink{classyuh_1_1bignum_ad2eacd50d8b775d6282ac9351caf6de7}{bignum} (bool sign, const \-Range \&r)
+\item 
+\hyperlink{classyuh_1_1bignum_a77569117e90017e1321762d1aeea9b2d}{bignum} (const std\-::string \&str)
+\item 
+\hyperlink{classyuh_1_1bignum_a3a59b58aa80ba093158db51368576cf6}{bignum} (const \hyperlink{classyuh_1_1bignum}{bignum} \&rhs)
+\item 
+std\-::string \hyperlink{classyuh_1_1bignum_a997e0898c1383045eb31a48897167be7}{hex} () const 
+\item 
+std\-::string \hyperlink{classyuh_1_1bignum_aa48c39f92bc04eded742f5310c74aafe}{to\-\_\-string} () const 
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \& \hyperlink{classyuh_1_1bignum_a94b78c9c2332ec544c9762dc6d1dde34}{operator$<$$<$=} (int rhs)
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{classyuh_1_1bignum_a5db6aaaa47216a6f79dfbcc5b7220763}{operator$<$$<$} (int rhs) const 
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \& \hyperlink{classyuh_1_1bignum_a9f1e31abd2b4c1cab7753316e8257789}{operator$>$$>$=} (int rhs)
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{classyuh_1_1bignum_a8cc3991be4b4f038754d4c6fb2e91224}{operator$>$$>$} (int rhs) const 
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{classyuh_1_1bignum_abba394358fb666e0cb639e6c8e56cca0}{operator-\/} () const 
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{classyuh_1_1bignum_a7f7a8b06fdb52877ad5069639753c17f}{operator+} () const 
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \& \hyperlink{classyuh_1_1bignum_ae133fb5a0dbf20c5a367428a7298cd45}{operator+=} (const \hyperlink{classyuh_1_1bignum}{bignum} \&rhs)
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \& \hyperlink{classyuh_1_1bignum_a557d6469a8fa7fe2a9c43f47c2e0a397}{operator+=} (\hyperlink{classyuh_1_1bignum}{bignum} \&\&rhs)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{classyuh_1_1bignum_a660d0dc06426a82c02f4fc6193ae9645}{operator+} (const \-T \&rhs) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{classyuh_1_1bignum_a942f849ccfd705e1286d56407aa33a29}{operator+} (\-T \&\&rhs) const 
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \& \hyperlink{classyuh_1_1bignum_acc6e61a9b35a338baaf46dd69ab31a51}{operator-\/=} (const \hyperlink{classyuh_1_1bignum}{bignum} \&rhs)
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \& \hyperlink{classyuh_1_1bignum_a7700ce4f82ad4b8babfbf222872cd2da}{operator-\/=} (\hyperlink{classyuh_1_1bignum}{bignum} \&\&rhs)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{classyuh_1_1bignum_a9a1a2bced2e21dd21fb454805269e393}{operator-\/} (const \-T \&rhs) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{classyuh_1_1bignum_a041e21a9b9fac16e91a885c826231015}{operator-\/} (\-T \&\&rhs) const 
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \& \hyperlink{classyuh_1_1bignum_a86173f9b9d3c4f31818dd690d970d74d}{operator/=} (\hyperlink{classyuh_1_1bignum_a918fd2d7b4fcfb6452272f1477745a53}{digit\-\_\-t} rhs)
+\item 
+bool \hyperlink{classyuh_1_1bignum_a4c1c326141df7d0b500cd9611de09651}{operator!=} (const \hyperlink{classyuh_1_1bignum}{bignum} \&rhs) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classyuh_1_1bignum_a4f6bae68dc463f483799107172061444}{operator==} (const \-T \&rhs) const 
+\item 
+bool \hyperlink{classyuh_1_1bignum_a87acfbb9e05a7e9397fb4197f1aef15e}{operator$<$} (const \hyperlink{classyuh_1_1bignum}{bignum} \&rhs) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classyuh_1_1bignum_a310350936155d69f5221385286b8d41a}{operator$>$} (const \-T \&rhs) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classyuh_1_1bignum_a9b2f684eb4afa9b87a675f6e08b2e736}{operator$<$=} (const \-T \&rhs) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classyuh_1_1bignum_a5dd21374e4d89562f17cfbdd1871b071}{operator$>$=} (const \-T \&rhs) const 
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{classyuh_1_1bignum_acc6083b33ba866bc4a6fff75dc174d47}{abs} () const 
+\item 
+std\-::ostream \& \hyperlink{classyuh_1_1bignum_a69af91144248517b0357cc4ab7ffa52c}{output} (std\-::ostream \&os) const 
+\item 
+void \hyperlink{classyuh_1_1bignum_ad64d450e413ed7795476254d1425b677}{swap} (\hyperlink{classyuh_1_1bignum}{bignum} \&rhs)  throw ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classyuh_1_1bignum_abf0bf01a903f906b194bf9f01ff2aab8}{sign\-\_\-}
+\item 
+std\-::deque$<$ \hyperlink{classyuh_1_1bignum_a918fd2d7b4fcfb6452272f1477745a53}{digit\-\_\-t} $>$ \hyperlink{classyuh_1_1bignum_af9e1efe49c7f3e8ca8889493abee7cfa}{d\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 14 of file bignum.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classyuh_1_1bignum_a918fd2d7b4fcfb6452272f1477745a53}{\index{yuh\-::bignum@{yuh\-::bignum}!digit\-\_\-t@{digit\-\_\-t}}
+\index{digit\-\_\-t@{digit\-\_\-t}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{digit\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint32\-\_\-t {\bf digit\-\_\-t}}}\label{d7/d6b/classyuh_1_1bignum_a918fd2d7b4fcfb6452272f1477745a53}
+
+
+\-Definition at line 17 of file bignum.\-h.
+
+\hypertarget{classyuh_1_1bignum_ac439f7dc1f74e035e0543cc184a57445}{\index{yuh\-::bignum@{yuh\-::bignum}!twice\-\_\-t@{twice\-\_\-t}}
+\index{twice\-\_\-t@{twice\-\_\-t}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{twice\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint64\-\_\-t {\bf twice\-\_\-t}}}\label{d7/d6b/classyuh_1_1bignum_ac439f7dc1f74e035e0543cc184a57445}
+
+
+\-Definition at line 18 of file bignum.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1bignum_a3554dd27e1fe3080ba13d1d00027ad10}{\index{yuh\-::bignum@{yuh\-::bignum}!bignum@{bignum}}
+\index{bignum@{bignum}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{bignum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} (
+\begin{DoxyParamCaption}
+\item[{\-Integer}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a3554dd27e1fe3080ba13d1d00027ad10}
+
+
+\-Definition at line 27 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+            : sign_( n < 0 ), d_(1)
+#pragma clang diagnostic pop
+        {
+            d_[0] = sign_? -n: n;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_ad2eacd50d8b775d6282ac9351caf6de7}{\index{yuh\-::bignum@{yuh\-::bignum}!bignum@{bignum}}
+\index{bignum@{bignum}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{bignum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} (
+\begin{DoxyParamCaption}
+\item[{bool}]{sign, }
+\item[{const \-Range \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_ad2eacd50d8b775d6282ac9351caf6de7}
+
+
+\-Definition at line 44 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        : sign_(sign), d_(0)
+        {
+            boost::copy(r, std::back_inserter(d_));
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a77569117e90017e1321762d1aeea9b2d}{\index{yuh\-::bignum@{yuh\-::bignum}!bignum@{bignum}}
+\index{bignum@{bignum}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{bignum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)}}\label{d7/d6b/classyuh_1_1bignum_a77569117e90017e1321762d1aeea9b2d}
+from string リテラルの対応がめんどくさいのでwstringやらは必要になったらオーバーロードする 
+\begin{DoxyParams}{\-Parameters}
+{\em str} & 整数を表す文字列 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 217 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+        : sign_(false), d_(1)
+    {
+        auto it = std::begin(str);
+
+        switch(*it)
+        {
+        case '-':
+            sign_ = true;
+        case '+':
+            ++it;
+        default:
+            break;
+        }
+
+        std::for_each(
+            it, std::end(str),
+            [this](char c)
+            {
+                auto digit = static_cast<digit_t>(c) - '0';
+                
+                auto tmp = *this << 3; //*8
+                *this<<=1;             //*2
+                *this+=tmp;            //*10
+                
+                d_[0]+=digit;
+            });
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a3a59b58aa80ba093158db51368576cf6}{\index{yuh\-::bignum@{yuh\-::bignum}!bignum@{bignum}}
+\index{bignum@{bignum}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{bignum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} (
+\begin{DoxyParamCaption}
+\item[{const {\bf bignum} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a3a59b58aa80ba093158db51368576cf6}
+copy ctor 
+
+\-Definition at line 60 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+            : sign_(rhs.sign_), d_(rhs.d_) {}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1bignum_acc6083b33ba866bc4a6fff75dc174d47}{\index{yuh\-::bignum@{yuh\-::bignum}!abs@{abs}}
+\index{abs@{abs}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{abs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} {\bf abs} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_acc6083b33ba866bc4a6fff75dc174d47}
+絶対値 \begin{DoxyReturn}{\-Returns}
+符号をfalseにしたもの 
+\end{DoxyReturn}
+
+
+\-Definition at line 235 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        {
+            bignum ret(*this);
+            ret.sign_ = false;
+            return ret;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a997e0898c1383045eb31a48897167be7}{\index{yuh\-::bignum@{yuh\-::bignum}!hex@{hex}}
+\index{hex@{hex}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{hex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf hex} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d7/d6b/classyuh_1_1bignum_a997e0898c1383045eb31a48897167be7}
+十六進文字列化 \begin{DoxyReturn}{\-Returns}
+十六進文字列 
+\end{DoxyReturn}
+
+
+\-Definition at line 14 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        std::string ret((sign_?1:0) + 8*d_.size(), '\0');
+        
+        auto it = std::begin(ret);
+
+        if(sign_)
+        {
+            *it = '-';
+            ++it;
+        }
+
+        for( auto x: d_ | reversed )
+        {
+            boost::copy(
+                (boost::format("%|08X|") % x).str(),
+                it
+                );
+            std::advance(it, 8);
+        }
+
+        return ret;
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a4c1c326141df7d0b500cd9611de09651}{\index{yuh\-::bignum@{yuh\-::bignum}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf bignum} \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a4c1c326141df7d0b500cd9611de09651}
+非等値 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 return $\ast$this != rhs \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 187 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return sign_!=rhs.sign_ || d_!=rhs.d_; }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a7f7a8b06fdb52877ad5069639753c17f}{\index{yuh\-::bignum@{yuh\-::bignum}!operator+@{operator+}}
+\index{operator+@{operator+}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} operator+ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a7f7a8b06fdb52877ad5069639753c17f}
+単項プラス 
+
+\-Definition at line 113 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { 
+            return *this;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a660d0dc06426a82c02f4fc6193ae9645}{\index{yuh\-::bignum@{yuh\-::bignum}!operator+@{operator+}}
+\index{operator+@{operator+}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} operator+ (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a660d0dc06426a82c02f4fc6193ae9645}
+加算代入 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+自身 
+\end{DoxyReturn}
+
+
+\-Definition at line 136 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return bignum(*this)+=rhs; }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a942f849ccfd705e1286d56407aa33a29}{\index{yuh\-::bignum@{yuh\-::bignum}!operator+@{operator+}}
+\index{operator+@{operator+}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} operator+ (
+\begin{DoxyParamCaption}
+\item[{\-T \&\&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a942f849ccfd705e1286d56407aa33a29}
+加算代入 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+自身 
+\end{DoxyReturn}
+
+
+\-Definition at line 144 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return bignum(*this)+=rhs; }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_ae133fb5a0dbf20c5a367428a7298cd45}{\index{yuh\-::bignum@{yuh\-::bignum}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} \& operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf bignum} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{d7/d6b/classyuh_1_1bignum_ae133fb5a0dbf20c5a367428a7298cd45}
+加算代入 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+自身 
+\end{DoxyReturn}
+
+
+\-Definition at line 112 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        if( sign_ != rhs.sign_ ) 
+            return *this-=(-rhs); 
+        
+        twice_t C = 0;
+        twice_t mask = (1LL << 32) - 1;
+
+        if ( rhs.d_.size() > d_.size() )
+        {
+            d_.resize(rhs.d_.size(), 0U);
+        }
+
+        uint32_t i = 0;
+        for( ; i < rhs.d_.size(); ++i)
+        {
+            const twice_t t = C + d_[i] + rhs.d_[i];
+            d_[i] = mask & t;
+            C = t >> 32;
+        }
+        
+        for( ; i < d_.size() && C > 0; ++i )
+        {
+            const twice_t t = C + d_[i];
+            d_[i] = mask & t;
+            C = t >> 32;
+        }
+
+        if(C>0)
+        {
+            d_.push_back(static_cast<digit_t>(C));
+        }
+        
+        return *this;
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a557d6469a8fa7fe2a9c43f47c2e0a397}{\index{yuh\-::bignum@{yuh\-::bignum}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum}\& operator+= (
+\begin{DoxyParamCaption}
+\item[{{\bf bignum} \&\&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a557d6469a8fa7fe2a9c43f47c2e0a397}
+加算代入 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+自身 
+\end{DoxyReturn}
+
+
+\-Definition at line 128 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return *this+=rhs; }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_abba394358fb666e0cb639e6c8e56cca0}{\index{yuh\-::bignum@{yuh\-::bignum}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} operator-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_abba394358fb666e0cb639e6c8e56cca0}
+単項マイナス 
+
+\-Definition at line 104 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { 
+            bignum ret(*this);
+            ret.sign_ = !sign_;
+            return ret;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a9a1a2bced2e21dd21fb454805269e393}{\index{yuh\-::bignum@{yuh\-::bignum}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a9a1a2bced2e21dd21fb454805269e393}
+減算 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+結果rvalue 
+\end{DoxyReturn}
+
+
+\-Definition at line 165 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return bignum(*this)-=rhs; }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a041e21a9b9fac16e91a885c826231015}{\index{yuh\-::bignum@{yuh\-::bignum}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{\-T \&\&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a041e21a9b9fac16e91a885c826231015}
+減算 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+結果rvalue 
+\end{DoxyReturn}
+
+
+\-Definition at line 173 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return bignum(*this)-=rhs; }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_acc6e61a9b35a338baaf46dd69ab31a51}{\index{yuh\-::bignum@{yuh\-::bignum}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} \& operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf bignum} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{d7/d6b/classyuh_1_1bignum_acc6e61a9b35a338baaf46dd69ab31a51}
+減算代入 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+自身 
+\end{DoxyReturn}
+
+
+\-Definition at line 148 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        if ( sign_ != rhs.sign_ )
+            return *this+=(-rhs);
+        if ( sign_ ? (*this > rhs) : (*this < rhs) )
+        { // 絶対値が引く数のが大きい
+            *this = (-rhs) - (-(*this));
+            return *this;
+        }
+        
+        digit_t B = 0;
+        twice_t mask = (1LL << 32) - 1;
+
+        if ( rhs.d_.size() > d_.size() )
+        {   //サイズ違い
+            d_.resize(rhs.d_.size(), 0U);
+        }
+
+        uint32_t i = 0;
+        for( ; i < rhs.d_.size(); ++i )
+        {
+            const twice_t t = (1LL << 32) + d_[i] - rhs.d_[i] - B;
+            d_[i] = mask & t;
+            B = 1 - (t >> 32);
+        }
+        for( ; i < d_.size() && B > 0; ++i )
+        {
+            const twice_t t = (1LL << 32) + d_[i] - B;
+            d_[i] = mask & t;
+            B = 1 - (t >> 32);
+
+        }
+        if( B > 0 )
+        {   //チェックしてるから無いはずだけど．
+            sign_ = !sign_;
+        }
+
+        // 上のほうが0なのではずす
+        while( d_.back() == 0U && d_.size() > 1U ) d_.pop_back();
+
+        return *this;
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a7700ce4f82ad4b8babfbf222872cd2da}{\index{yuh\-::bignum@{yuh\-::bignum}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum}\& operator-\/= (
+\begin{DoxyParamCaption}
+\item[{{\bf bignum} \&\&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a7700ce4f82ad4b8babfbf222872cd2da}
+減算代入 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+自身 
+\end{DoxyReturn}
+
+
+\-Definition at line 157 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return *this-=rhs; }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a86173f9b9d3c4f31818dd690d970d74d}{\index{yuh\-::bignum@{yuh\-::bignum}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} \& operator/= (
+\begin{DoxyParamCaption}
+\item[{{\bf digit\-\_\-t}}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{d7/d6b/classyuh_1_1bignum_a86173f9b9d3c4f31818dd690d970d74d}
+除算. わる数は一桁分だけ 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+商 
+\end{DoxyReturn}
+
+
+\-Definition at line 197 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        std::deque<digit_t> deq;
+        twice_t d; // 割られる数
+        for( auto x: d_ | reversed ) // 上位から
+        {
+            d <<= 32; // 前回の余りをシフトしておいて
+            d += x;   // 次の桁を足すと今回の割られる数
+            deq.push_front(d / rhs); // 商を追加
+            d %= rhs; // 余りが次の割られる数に
+        }
+        std::swap(d_, deq);
+
+        // 上のほうが0なのではずす
+        while( d_.back() == 0U && d_.size() > 1U ) d_.pop_back();
+        
+        // std::cout << "div " << this->hex() << std::endl;
+        return *this;
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a87acfbb9e05a7e9397fb4197f1aef15e}{\index{yuh\-::bignum@{yuh\-::bignum}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf bignum} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}}\label{d7/d6b/classyuh_1_1bignum_a87acfbb9e05a7e9397fb4197f1aef15e}
+operator$<$ 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 return $\ast$this $<$ rhs \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 38 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        if(sign_!=rhs.sign_) return sign_; //符号違い，こちらがマイナスでtrue
+        bool ret; // 以下とりあえず正として
+        if(d_.size()!=rhs.d_.size()) ret = d_.size() < rhs.d_.size(); //
+      長いほうがでっかい
+        else
+        {
+            int i = d_.size() - 1;
+            for( ; i >= 0; --i )
+            {
+                if(d_[i] != rhs.d_[i])
+                {
+                    ret = d_[i] < rhs.d_[i];
+                    break;
+                }
+            } 
+            if (i < 0) return false; // 一致
+        }
+        return sign_ ? !ret : ret; //負だったら逆
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a5db6aaaa47216a6f79dfbcc5b7220763}{\index{yuh\-::bignum@{yuh\-::bignum}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a5db6aaaa47216a6f79dfbcc5b7220763}
+左シフト 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & シフト桁数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+結果rvalue 
+\end{DoxyReturn}
+
+
+\-Definition at line 86 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return bignum(*this)<<=rhs; }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a94b78c9c2332ec544c9762dc6d1dde34}{\index{yuh\-::bignum@{yuh\-::bignum}!operator$<$$<$=@{operator$<$$<$=}}
+\index{operator$<$$<$=@{operator$<$$<$=}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator$<$$<$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} \& operator$<$$<$= (
+\begin{DoxyParamCaption}
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{d7/d6b/classyuh_1_1bignum_a94b78c9c2332ec544c9762dc6d1dde34}
+左シフト代入 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & シフト桁数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+自身 
+\end{DoxyReturn}
+
+
+\-Definition at line 59 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        auto x = rhs;
+        // std::cout << rhs << (d_ | prettied("0x%|08X|", "[", " ", "]" )) <<
+       std::endl;
+        for (; x >= 32; x-=32) d_.push_front(0U);
+
+        digit_t mask = ((1U << x)-1) << ( 32 - x ); //上位rhsビット
+            
+        if( 0 <  (d_.back() & mask) )
+        {   //繰り上がりあり
+            d_.push_back(0U);
+        }
+            
+        auto prev = d_.rbegin();
+        auto it = std::next(prev);
+            
+        *prev <<= rhs;
+        for ( ; it!=d_.rend(); ++it )
+        {
+            *prev |= (*it & mask) >> (32 - rhs);
+            *it <<= rhs;
+            prev = it;
+        }
+        
+        return *this;
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a9b2f684eb4afa9b87a675f6e08b2e736}{\index{yuh\-::bignum@{yuh\-::bignum}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a9b2f684eb4afa9b87a675f6e08b2e736}
+operator$<$= 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 return $\ast$this $<$= rhs \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 220 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return !(rhs < *this); }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a4f6bae68dc463f483799107172061444}{\index{yuh\-::bignum@{yuh\-::bignum}!operator==@{operator==}}
+\index{operator==@{operator==}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a4f6bae68dc463f483799107172061444}
+非等値 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 return $\ast$this == rhs \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 196 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return !(*this!=rhs); }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a310350936155d69f5221385286b8d41a}{\index{yuh\-::bignum@{yuh\-::bignum}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a310350936155d69f5221385286b8d41a}
+operator$>$ 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 return $\ast$this $>$ rhs \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 212 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return (rhs < *this); } 
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a5dd21374e4d89562f17cfbdd1871b071}{\index{yuh\-::bignum@{yuh\-::bignum}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator$>$=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const \-T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a5dd21374e4d89562f17cfbdd1871b071}
+operator$>$= 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 return $\ast$this $>$= rhs \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 228 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return !(*this < rhs); }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a8cc3991be4b4f038754d4c6fb2e91224}{\index{yuh\-::bignum@{yuh\-::bignum}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a8cc3991be4b4f038754d4c6fb2e91224}
+右シフト 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & シフト桁数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+結果rvalue 
+\end{DoxyReturn}
+
+
+\-Definition at line 99 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        { return bignum(*this)>>=rhs; }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a9f1e31abd2b4c1cab7753316e8257789}{\index{yuh\-::bignum@{yuh\-::bignum}!operator$>$$>$=@{operator$>$$>$=}}
+\index{operator$>$$>$=@{operator$>$$>$=}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{operator$>$$>$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} \& operator$>$$>$= (
+\begin{DoxyParamCaption}
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{d7/d6b/classyuh_1_1bignum_a9f1e31abd2b4c1cab7753316e8257789}
+右シフト代入 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & シフト桁数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+自身 
+\end{DoxyReturn}
+
+
+\-Definition at line 86 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        auto x = rhs;
+        for (; x >= 32; x-=32) d_.pop_front();
+
+        digit_t mask = (1U << x)-1; //下位rhsビット
+            
+        auto prev = d_.begin();
+        auto it = std::next(prev);
+            
+        *prev >>= rhs;
+        for ( ; it!=d_.end(); ++it )
+        {
+            *prev |= (*it & mask) << (32 - rhs);
+            *it >>= rhs;
+            prev = it;
+        }
+        // std::cout << (d_ | prettied("%|08X|")) << std::endl;
+        if ( 0 == d_.back() && d_.size() > 1U )
+        {
+            d_.pop_back();
+        }
+        
+        return *this;
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_a69af91144248517b0357cc4ab7ffa52c}{\index{yuh\-::bignum@{yuh\-::bignum}!output@{output}}
+\index{output@{output}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{output}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& {\bf output} (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a69af91144248517b0357cc4ab7ffa52c}
+出力 
+\begin{DoxyParams}{\-Parameters}
+{\em os} & 出力先ストリーム \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+osそのもの 
+\end{DoxyReturn}
+
+
+\-Definition at line 246 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+        {
+            return os << this->to_string();
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_ad64d450e413ed7795476254d1425b677}{\index{yuh\-::bignum@{yuh\-::bignum}!swap@{swap}}
+\index{swap@{swap}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf swap} (
+\begin{DoxyParamCaption}
+\item[{{\bf bignum} \&}]{rhs}
+\end{DoxyParamCaption}
+)  throw ()}}\label{d7/d6b/classyuh_1_1bignum_ad64d450e413ed7795476254d1425b677}
+swap 
+\begin{DoxyParams}{\-Parameters}
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 292 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        std::swap(sign_, rhs.sign_);
+        std::swap(d_, rhs.d_);
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1bignum_aa48c39f92bc04eded742f5310c74aafe}{\index{yuh\-::bignum@{yuh\-::bignum}!to\-\_\-string@{to\-\_\-string}}
+\index{to\-\_\-string@{to\-\_\-string}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{to\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf to\-\_\-string} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d7/d6b/classyuh_1_1bignum_aa48c39f92bc04eded742f5310c74aafe}
+十進文字列化 \begin{DoxyReturn}{\-Returns}
+十進文字列 
+\end{DoxyReturn}
+
+
+\-Definition at line 250 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        static const auto log2 = 0.301029996;
+
+        int i = 31;
+        for(; (d_.back() & ( 1<<i )) == 0; --i );
+        const auto width =  //幅最大値，のはず
+            1 + //floor->ceil
+            static_cast<digit_t>(
+                log2 * 
+                (32 * (d_.size() - 1) + i + 1 ) //桁数
+                ) 
+            + (sign_?1:0);
+        
+        std::string ret(width, '\0');
+        
+        auto it = ret.rbegin();
+        auto tmp = *this;
+        static const bignum zero(0);
+        if(sign_) 
+        {
+            ret[0] = '-';
+            tmp.sign_=false;
+        }
+
+        while(tmp != zero)
+        {
+            auto q = bignum(tmp) /= 10;
+            auto r = (tmp - ((q<<3)+(q<<1))).d_[0]; 
+            *it = static_cast<char>('0' + r);
+            tmp.swap(q);
+            ++it;
+        }
+
+        return ret;
+    }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1bignum_af9e1efe49c7f3e8ca8889493abee7cfa}{\index{yuh\-::bignum@{yuh\-::bignum}!d\-\_\-@{d\-\_\-}}
+\index{d\-\_\-@{d\-\_\-}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{d\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::deque$<${\bf digit\-\_\-t}$>$ {\bf d\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_af9e1efe49c7f3e8ca8889493abee7cfa}
+32bit毎内部表現 
+
+\-Definition at line 263 of file bignum.\-h.
+
+\hypertarget{classyuh_1_1bignum_abf0bf01a903f906b194bf9f01ff2aab8}{\index{yuh\-::bignum@{yuh\-::bignum}!sign\-\_\-@{sign\-\_\-}}
+\index{sign\-\_\-@{sign\-\_\-}!yuh::bignum@{yuh\-::bignum}}
+\subsubsection[{sign\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf sign\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_abf0bf01a903f906b194bf9f01ff2aab8}
+符号 
+
+\-Definition at line 259 of file bignum.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{bignum_8h}{bignum.\-h}\item 
+src/\hyperlink{bignum_8cpp}{bignum.\-cpp}\end{DoxyCompactItemize}

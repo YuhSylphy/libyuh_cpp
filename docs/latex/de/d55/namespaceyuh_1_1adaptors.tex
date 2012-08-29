@@ -6,11 +6,11 @@
 \item 
 {\footnotesize template$<$typename Range $>$ }\\count\-\_\-mapped\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_acb67fe5826a7f7b7ac61edf1dfcff82f}{count\-\_\-map} (\-Range \&r)
 \item 
-{\footnotesize template$<$typename Range $>$ }\\count\-\_\-mapped\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_a7832edf38320aa72804efae4522aeacb}{count\-\_\-map} (const \-Range \&r)
+{\footnotesize template$<$typename Range $>$ }\\count\-\_\-mapped\-\_\-range$<$ const \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_a6b46059339338da677245db0a97006c6}{count\-\_\-map} (const \-Range \&r)
 \item 
-{\footnotesize template$<$typename Range , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\range\-\_\-io$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_ad5660c286c614db267091a07245d32b6}{pretty} (const \-Range \&r)
+{\footnotesize template$<$typename Range , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\range\-\_\-io$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_a1144c5d97c9a22ad2974a9b92d72a83a}{pretty} (const \-Range \&r, const std\-::string \&fmt=\char`\"{}\%$|$$|$\char`\"{}, const std\-::string \&opn=\char`\"{}\{ \char`\"{}, const std\-::string \&cls=\char`\"{} \}\char`\"{}, const std\-::string \&sep=\char`\"{}, \char`\"{})
 \item 
-{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ T $>$\-::type, boost\-::mpl\-::false\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\const \-T \& \hyperlink{namespaceyuh_1_1adaptors_a7797a297cbbdae1a1876471228638d75}{pretty} (const \-T \&t)
+{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ T $>$\-::type, boost\-::mpl\-::false\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\const \-T \& \hyperlink{namespaceyuh_1_1adaptors_aae2589510dae0b03d7cf37a7a85eec69}{pretty} (const \-T \&t, const std\-::string \&=\char`\"{}\%$|$$|$\char`\"{}, const std\-::string \&=\char`\"{}\{ \char`\"{}, const std\-::string \&=\char`\"{} \}\char`\"{}, const std\-::string \&=\char`\"{}, \char`\"{})
 \item 
 {\footnotesize template$<$typename Range $>$ }\\set\-\_\-powered\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_af3fcfee5424bbff193826b77df52f6e5}{set\-\_\-power} (\-Range \&r)
 \item 
@@ -46,13 +46,13 @@ count\-\_\-map
             return count_mapped_range<Range>( r );
         }
 \end{DoxyCode}
-\hypertarget{namespaceyuh_1_1adaptors_a7832edf38320aa72804efae4522aeacb}{\index{yuh\-::adaptors@{yuh\-::adaptors}!count\-\_\-map@{count\-\_\-map}}
+\hypertarget{namespaceyuh_1_1adaptors_a6b46059339338da677245db0a97006c6}{\index{yuh\-::adaptors@{yuh\-::adaptors}!count\-\_\-map@{count\-\_\-map}}
 \index{count\-\_\-map@{count\-\_\-map}!yuh::adaptors@{yuh\-::adaptors}}
-\subsubsection[{count\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}count\-\_\-mapped\-\_\-range$<$\-Range$>$ {\bf yuh\-::adaptors\-::count\-\_\-map} (
+\subsubsection[{count\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}count\-\_\-mapped\-\_\-range$<$const \-Range$>$ {\bf yuh\-::adaptors\-::count\-\_\-map} (
 \begin{DoxyParamCaption}
 \item[{const \-Range \&}]{r}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_a7832edf38320aa72804efae4522aeacb}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_a6b46059339338da677245db0a97006c6}
 function form 
 \begin{DoxyParams}{\-Parameters}
 {\em \-Range} & \\
@@ -70,16 +70,20 @@ count\-\_\-map
 
 \begin{DoxyCode}
         {
-            return count_mapped_range<Range>( r );
+            return count_mapped_range<const Range>( r );
         }
 \end{DoxyCode}
-\hypertarget{namespaceyuh_1_1adaptors_ad5660c286c614db267091a07245d32b6}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
+\hypertarget{namespaceyuh_1_1adaptors_a1144c5d97c9a22ad2974a9b92d72a83a}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
 \index{pretty@{pretty}!yuh::adaptors@{yuh\-::adaptors}}
 \subsubsection[{pretty}]{\setlength{\rightskip}{0pt plus 5cm}range\-\_\-io$<$\-Range$>$ {\bf yuh\-::adaptors\-::pretty} (
 \begin{DoxyParamCaption}
-\item[{const \-Range \&}]{r}
+\item[{const \-Range \&}]{r, }
+\item[{const std\-::string \&}]{fmt = {\ttfamily \char`\"{}\%$|$$|$\char`\"{}}, }
+\item[{const std\-::string \&}]{opn = {\ttfamily \char`\"{}\{~\char`\"{}}, }
+\item[{const std\-::string \&}]{cls = {\ttfamily \char`\"{}~\}\char`\"{}}, }
+\item[{const std\-::string \&}]{sep = {\ttfamily \char`\"{},~\char`\"{}}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_ad5660c286c614db267091a07245d32b6}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_a1144c5d97c9a22ad2974a9b92d72a83a}
 範囲をrange\-\_\-ioでくるんで出力可能にする 
 \begin{DoxyParams}{\-Parameters}
 {\em \-Range} & 範囲型 \\
@@ -92,21 +96,29 @@ range\-\_\-io
 \end{DoxyReturn}
 
 
-\-Definition at line 45 of file prettied.\-hpp.
+\-Definition at line 36 of file prettied.\-hpp.
 
 
 \begin{DoxyCode}
+                                    { ",
+            const std::string& cls = " }",
+            const std::string& sep = ", "
+            )
         {
-            return range_io<Range>(r);
+            return range_io<Range>(r, fmt, opn, cls, sep);
         }
 \end{DoxyCode}
-\hypertarget{namespaceyuh_1_1adaptors_a7797a297cbbdae1a1876471228638d75}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
+\hypertarget{namespaceyuh_1_1adaptors_aae2589510dae0b03d7cf37a7a85eec69}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
 \index{pretty@{pretty}!yuh::adaptors@{yuh\-::adaptors}}
 \subsubsection[{pretty}]{\setlength{\rightskip}{0pt plus 5cm}const \-T\& {\bf yuh\-::adaptors\-::pretty} (
 \begin{DoxyParamCaption}
-\item[{const \-T \&}]{t}
+\item[{const \-T \&}]{t, }
+\item[{const std\-::string \&}]{ = {\ttfamily \char`\"{}\%$|$$|$\char`\"{}}, }
+\item[{const std\-::string \&}]{ = {\ttfamily \char`\"{}\{~\char`\"{}}, }
+\item[{const std\-::string \&}]{ = {\ttfamily \char`\"{}~\}\char`\"{}}, }
+\item[{const std\-::string \&}]{ = {\ttfamily \char`\"{},~\char`\"{}}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_a7797a297cbbdae1a1876471228638d75}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_aae2589510dae0b03d7cf37a7a85eec69}
 rangeではないものは素通しする 
 \begin{DoxyParams}{\-Parameters}
 {\em \-T} & 値型 \\
@@ -119,10 +131,14 @@ tそのもの
 \end{DoxyReturn}
 
 
-\-Definition at line 63 of file prettied.\-hpp.
+\-Definition at line 60 of file prettied.\-hpp.
 
 
 \begin{DoxyCode}
+                                { ",
+            const std::string& = " }",
+            const std::string& = ", "
+            )
         {
             return t;
         }

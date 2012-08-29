@@ -11,6 +11,8 @@ namespace \hyperlink{namespaceyuh_1_1range__detail}{range\-\_\-detail}
 \subsection*{\-Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \hyperlink{classyuh_1_1bignum}{bignum}
+\item 
 class \hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}
 \item 
 class \hyperlink{classyuh_1_1polygonal__range}{polygonal\-\_\-range}
@@ -24,6 +26,12 @@ typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{pri
 \end{DoxyCompactItemize}
 \subsection*{\-Functions}
 \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceyuh_aa193df2583649f98adcb61639763872d}{swap} (\hyperlink{classyuh_1_1bignum}{bignum} \&lhs, \hyperlink{classyuh_1_1bignum}{bignum} \&rhs)  throw ()
+\item 
+\hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{namespaceyuh_aa5ca9c97a6e2f8461ef346724d9f4a3c}{operator\char`\"{}\char`\"{}\-\_\-\-B} (const char $\ast$)
+\item 
+std\-::ostream \& \hyperlink{namespaceyuh_a1fe067954dcd4572b8d2472b8457814d}{operator$<$$<$} (std\-::ostream \&os, const \hyperlink{classyuh_1_1bignum}{bignum} \&rhs)
 \item 
 {\footnotesize template$<$typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}$<$ \-Integer $>$ \hyperlink{namespaceyuh_a11988532f81d143e1b5b74d461dd8067}{fibonacci} (\-Integer first=0)
 \item 
@@ -283,6 +291,51 @@ nが回文数かどうか
         return  n == std::pow(std::floor(std::sqrt(n)), 2);
     }
 \end{DoxyCode}
+\hypertarget{namespaceyuh_aa5ca9c97a6e2f8461ef346724d9f4a3c}{\index{yuh@{yuh}!operator\char`\"{}\char`\"{}\-\_\-\-B@{operator""""\-\_\-\-B}}
+\index{operator\char`\"{}\char`\"{}\-\_\-\-B@{operator""""\-\_\-\-B}!yuh@{yuh}}
+\subsubsection[{operator""""\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bignum} operator\char`\"{}\char`\"{}\-\_\-\-B (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_aa5ca9c97a6e2f8461ef346724d9f4a3c}
+ユーザ定義リテラル\-\_\-\-B 
+
+\-Definition at line 287 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+        return bignum(std::string(str));
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a1fe067954dcd4572b8d2472b8457814d}{\index{yuh@{yuh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!yuh@{yuh}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& yuh\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os, }
+\item[{const bignum \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_a1fe067954dcd4572b8d2472b8457814d}
+出力ストリーム to\-\_\-stringの結果を出力 
+\begin{DoxyParams}{\-Parameters}
+{\em os} & 出力先 \\
+\hline
+{\em rhs} & 出力するbignum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+os 
+\end{DoxyReturn}
+
+
+\-Definition at line 284 of file bignum.\-h.
+
+
+\begin{DoxyCode}
+    {
+        return rhs.output(os);
+    }
+\end{DoxyCode}
 \hypertarget{namespaceyuh_ac79b05fba2817ead4f0b5fd4c5a5a805}{\index{yuh@{yuh}!polygonal@{polygonal}}
 \index{polygonal@{polygonal}!yuh@{yuh}}
 \subsubsection[{polygonal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygonal\-\_\-range}$<$\-P, \-Integer$>$ {\bf yuh\-::polygonal} (
@@ -467,4 +520,27 @@ n in \mbox{[}first, last)の素数列を表すrange
         //ただのラッパ 階層が深いのでこれだけ表に出しておく
         range_detail::prime_iterator::sift(upper);
     }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_aa193df2583649f98adcb61639763872d}{\index{yuh@{yuh}!swap@{swap}}
+\index{swap@{swap}!yuh@{yuh}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf swap} (
+\begin{DoxyParamCaption}
+\item[{bignum \&}]{lhs, }
+\item[{bignum \&}]{rhs}
+\end{DoxyParamCaption}
+)  throw ()}}\label{d5/d2b/namespaceyuh_aa193df2583649f98adcb61639763872d}
+global swap overload 
+\begin{DoxyParams}{\-Parameters}
+{\em lhs} & 左辺 \\
+\hline
+{\em rhs} & 右辺 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 298 of file bignum.\-cpp.
+
+
+\begin{DoxyCode}
+    { lhs.swap(rhs); }
 \end{DoxyCode}

@@ -103,6 +103,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;type_traits&gt;</code><br/>
 <code>#include &lt;boost/range/has_range_iterator.hpp&gt;</code><br/>
+<code>#include &lt;boost/format.hpp&gt;</code><br/>
+<code>#include &quot;<a class="el" href="../../db/d53/enabler_8h_source.html">../detail/enabler.h</a>&quot;</code><br/>
 </div>
 <p><a href="../../da/d15/prettied_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -118,13 +120,13 @@ Namespaces</h2></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range , typename std::enable_if&lt; std::is_same&lt; typename boost::has_range_const_iterator&lt; Range &gt;::type, boost::mpl::true_ &gt;::value &gt;::type *&amp;  = enabler&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">range_io&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#ad5660c286c614db267091a07245d32b6">pretty</a> (const Range &amp;r)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">range_io&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a1144c5d97c9a22ad2974a9b92d72a83a">pretty</a> (const Range &amp;r, const std::string &amp;fmt=&quot;%||&quot;, const std::string &amp;opn=&quot;{ &quot;, const std::string &amp;cls=&quot; }&quot;, const std::string &amp;sep=&quot;, &quot;)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T , typename std::enable_if&lt; std::is_same&lt; typename boost::has_range_const_iterator&lt; T &gt;::type, boost::mpl::false_ &gt;::value &gt;::type *&amp;  = enabler&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#a7797a297cbbdae1a1876471228638d75">pretty</a> (const T &amp;t)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d55/namespaceyuh_1_1adaptors.html#aae2589510dae0b03d7cf37a7a85eec69">pretty</a> (const T &amp;t, const std::string &amp;=&quot;%||&quot;, const std::string &amp;=&quot;{ &quot;, const std::string &amp;=&quot; }&quot;, const std::string &amp;=&quot;, &quot;)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Ch , typename Tr , typename Range &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; Ch, Tr &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html#a6a69e861128439de1b09739e9d88d6c6">operator&lt;&lt;</a> (std::basic_ostream&lt; Ch, Tr &gt; &amp;os, const range_io&lt; Range &gt; &amp;r)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range , typename std::enable_if&lt; std::is_same&lt; typename boost::has_range_const_iterator&lt; Range &gt;::type, boost::mpl::true_ &gt;::value &gt;::type *&amp;  = enabler&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">range_io&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html#a7ee9acf371d7ed5f8107b04dde451cd8">operator|</a> (const Range &amp;r, pretty_forwarder)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">range_io&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html#a80175b98364b0c303ffdfcb32617ce4d">operator|</a> (const Range &amp;r, pretty_forwarder f)</td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -146,7 +148,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="../../da/d15/prettied_8hpp.html">prettied.hpp</a>      </li>
 
-    <li class="footer">Generated on Mon Aug 27 2012 12:56:46 for yuh library by
+    <li class="footer">Generated on Wed Aug 29 2012 23:58:36 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

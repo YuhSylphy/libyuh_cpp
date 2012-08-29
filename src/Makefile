@@ -1,7 +1,7 @@
 #!/bin/make
 #yuh/src
 
-SRC=$(shell ls *.cpp)
+SRC=$(shell ls *.cpp | grep -v flymake)
 OBJS=$(patsubst %.cpp,%.o,$(SRC))
 DEPENDS=$(patsubst %.o,%.d,$(OBJS))
 

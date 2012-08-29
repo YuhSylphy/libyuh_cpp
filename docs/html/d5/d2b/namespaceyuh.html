@@ -110,6 +110,7 @@ Namespaces</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html">range_detail</a></td></tr>
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d6b/classyuh_1_1bignum.html">bignum</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de6/classyuh_1_1fibonacci__range.html">fibonacci_range</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2a/classyuh_1_1polygonal__range.html">polygonal_range</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d41/classyuh_1_1prime__range.html">prime_range</a></td></tr>
@@ -118,6 +119,9 @@ Typedefs</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#af542f8440602da42322ddb7ea8242336">prime_type</a></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#aa193df2583649f98adcb61639763872d">swap</a> (<a class="el" href="../../d7/d6b/classyuh_1_1bignum.html">bignum</a> &amp;lhs, <a class="el" href="../../d7/d6b/classyuh_1_1bignum.html">bignum</a> &amp;rhs)  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d6b/classyuh_1_1bignum.html">bignum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#aa5ca9c97a6e2f8461ef346724d9f4a3c">operator&quot;&quot;_B</a> (const char *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a1fe067954dcd4572b8d2472b8457814d">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="../../d7/d6b/classyuh_1_1bignum.html">bignum</a> &amp;rhs)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Integer  = int&gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/de6/classyuh_1_1fibonacci__range.html">fibonacci_range</a>&lt; Integer &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d2b/namespaceyuh.html#a11988532f81d143e1b5b74d461dd8067">fibonacci</a> (Integer first=0)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Integer  = int&gt; </td></tr>
@@ -423,6 +427,70 @@ Functions</h2></td></tr>
 </pre></div>
 </div>
 </div>
+<a class="anchor" id="aa5ca9c97a6e2f8461ef346724d9f4a3c"></a><!-- doxytag: member="yuh::operator&quot;&quot;_B" ref="aa5ca9c97a6e2f8461ef346724d9f4a3c" args="(const char *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d6b/classyuh_1_1bignum.html">bignum</a> operator&quot;&quot;_B </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>ユーザ定義リテラル_B </p>
+
+<p>Definition at line <a class="el" href="../../d2/d67/bignum_8cpp_source.html#l00287">287</a> of file <a class="el" href="../../d2/d67/bignum_8cpp_source.html">bignum.cpp</a>.</p>
+<div class="fragment"><pre class="fragment">    {
+        <span class="keywordflow">return</span> bignum(std::string(str));
+    }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a1fe067954dcd4572b8d2472b8457814d"></a><!-- doxytag: member="yuh::operator&lt;&lt;" ref="a1fe067954dcd4572b8d2472b8457814d" args="(std::ostream &amp;os, const bignum &amp;rhs)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; yuh::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bignum &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>出力ストリーム to_stringの結果を出力 </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>出力先 </td></tr>
+    <tr><td class="paramname">rhs</td><td>出力するbignum </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>os </dd></dl>
+
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00284">284</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<div class="fragment"><pre class="fragment">    {
+        <span class="keywordflow">return</span> rhs.output(os);
+    }
+</pre></div>
+</div>
+</div>
 <a class="anchor" id="ac79b05fba2817ead4f0b5fd4c5a5a805"></a><!-- doxytag: member="yuh::polygonal" ref="ac79b05fba2817ead4f0b5fd4c5a5a805" args="(Integer first=1)" -->
 <div class="memitem">
 <div class="memproto">
@@ -649,6 +717,44 @@ Functions</h2></td></tr>
 </pre></div>
 </div>
 </div>
+<a class="anchor" id="aa193df2583649f98adcb61639763872d"></a><!-- doxytag: member="yuh::swap" ref="aa193df2583649f98adcb61639763872d" args="(bignum &amp;lhs, bignum &amp;rhs)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d5/d2b/namespaceyuh.html#aa193df2583649f98adcb61639763872d">swap</a> </td>
+          <td>(</td>
+          <td class="paramtype">bignum &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bignum &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>global swap overload </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>左辺 </td></tr>
+    <tr><td class="paramname">rhs</td><td>右辺 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d2/d67/bignum_8cpp_source.html#l00298">298</a> of file <a class="el" href="../../d2/d67/bignum_8cpp_source.html">bignum.cpp</a>.</p>
+<div class="fragment"><pre class="fragment">    { lhs.swap(rhs); }
+</pre></div>
+</div>
+</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -669,7 +775,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="../../d5/d2b/namespaceyuh.html">yuh</a>      </li>
 
-    <li class="footer">Generated on Mon Aug 27 2012 12:56:46 for yuh library by
+    <li class="footer">Generated on Wed Aug 29 2012 23:58:36 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

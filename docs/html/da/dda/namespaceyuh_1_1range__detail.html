@@ -120,11 +120,11 @@ Functions</h2></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9d/classyuh_1_1range__detail_1_1count__mapped__range.html">count_mapped_range</a>&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html#a128712717771a96265117e448135e6b8">operator|</a> (Range &amp;r, <a class="el" href="../../da/d5c/structyuh_1_1range__detail_1_1count__map__forwarder.html">count_map_forwarder</a>)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9d/classyuh_1_1range__detail_1_1count__mapped__range.html">count_mapped_range</a>&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html#abf270b3295a983c29653957120b0d172">operator|</a> (const Range &amp;r, <a class="el" href="../../da/d5c/structyuh_1_1range__detail_1_1count__map__forwarder.html">count_map_forwarder</a>)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9d/classyuh_1_1range__detail_1_1count__mapped__range.html">count_mapped_range</a>&lt; const Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html#a5be2a0d7d9e02960bca7acc73d610efc">operator|</a> (const Range &amp;r, <a class="el" href="../../da/d5c/structyuh_1_1range__detail_1_1count__map__forwarder.html">count_map_forwarder</a>)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Ch , typename Tr , typename Range &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; Ch, Tr &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html#a6a69e861128439de1b09739e9d88d6c6">operator&lt;&lt;</a> (std::basic_ostream&lt; Ch, Tr &gt; &amp;os, const <a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html">range_io</a>&lt; Range &gt; &amp;r)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range , typename std::enable_if&lt; std::is_same&lt; typename boost::has_range_const_iterator&lt; Range &gt;::type, boost::mpl::true_ &gt;::value &gt;::type *&amp;  = enabler&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html">range_io</a>&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html#a7ee9acf371d7ed5f8107b04dde451cd8">operator|</a> (const Range &amp;r, <a class="el" href="../../db/d79/structyuh_1_1range__detail_1_1pretty__forwarder.html">pretty_forwarder</a>)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html">range_io</a>&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html#a80175b98364b0c303ffdfcb32617ce4d">operator|</a> (const Range &amp;r, <a class="el" href="../../db/d79/structyuh_1_1range__detail_1_1pretty__forwarder.html">pretty_forwarder</a> f)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../df/db5/classyuh_1_1range__detail_1_1set__powered__range.html">set_powered_range</a>&lt; Range &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html#ade0b1e4024c0bba4ebcc9ba0a977512a">operator|</a> (Range &amp;r, <a class="el" href="../../d4/d42/structyuh_1_1range__detail_1_1set__power__forwarder.html">set_power_forwarder</a>)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
@@ -188,49 +188,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>os </dd></dl>
 
-<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00121">121</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
 <div class="fragment"><pre class="fragment">        {
             <span class="keywordflow">return</span> r.output(os);
-        }
-</pre></div>
-</div>
-</div>
-<a class="anchor" id="a7ee9acf371d7ed5f8107b04dde451cd8"></a><!-- doxytag: member="yuh::range_detail::operator|" ref="a7ee9acf371d7ed5f8107b04dde451cd8" args="(const Range &amp;r, pretty_forwarder)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html">range_io</a>&lt;Range&gt; yuh::range_detail::operator| </td>
-          <td>(</td>
-          <td class="paramtype">const Range &amp;&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">pretty_forwarder&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>pipe operator 出力可能なオブジェクトに変換する </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Range</td><td>範囲型 </td></tr>
-    <tr><td class="paramname">r</td><td>対象範囲 preturn range_ioオブジェクト </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
-<div class="fragment"><pre class="fragment">        {
-            <span class="keywordflow">return</span> range_io&lt;Range&gt;(r);
         }
 </pre></div>
 </div>
@@ -317,12 +277,12 @@ Functions</h2></td></tr>
 </pre></div>
 </div>
 </div>
-<a class="anchor" id="abf270b3295a983c29653957120b0d172"></a><!-- doxytag: member="yuh::range_detail::operator|" ref="abf270b3295a983c29653957120b0d172" args="(const Range &amp;r, count_map_forwarder)" -->
+<a class="anchor" id="a5be2a0d7d9e02960bca7acc73d610efc"></a><!-- doxytag: member="yuh::range_detail::operator|" ref="a5be2a0d7d9e02960bca7acc73d610efc" args="(const Range &amp;r, count_map_forwarder)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d9d/classyuh_1_1range__detail_1_1count__mapped__range.html">count_mapped_range</a>&lt;Range&gt; yuh::range_detail::operator| </td>
+          <td class="memname"><a class="el" href="../../dc/d9d/classyuh_1_1range__detail_1_1count__mapped__range.html">count_mapped_range</a>&lt;const Range&gt; yuh::range_detail::operator| </td>
           <td>(</td>
           <td class="paramtype">const Range &amp;&#160;</td>
           <td class="paramname"><em>r</em>, </td>
@@ -353,7 +313,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="../../da/d1d/count__mapped_8hpp_source.html#l00218">218</a> of file <a class="el" href="../../da/d1d/count__mapped_8hpp_source.html">count_mapped.hpp</a>.</p>
 <div class="fragment"><pre class="fragment">        {
-            <span class="keywordflow">return</span> count_mapped_range&lt;Range&gt;( r );
+            <span class="keywordflow">return</span> count_mapped_range&lt;const Range&gt;( r );
         }
 </pre></div>
 </div>
@@ -399,6 +359,48 @@ Functions</h2></td></tr>
 </pre></div>
 </div>
 </div>
+<a class="anchor" id="a80175b98364b0c303ffdfcb32617ce4d"></a><!-- doxytag: member="yuh::range_detail::operator|" ref="a80175b98364b0c303ffdfcb32617ce4d" args="(const Range &amp;r, pretty_forwarder f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d75/structyuh_1_1range__detail_1_1range__io.html">range_io</a>&lt;Range&gt; yuh::range_detail::operator| </td>
+          <td>(</td>
+          <td class="paramtype">const Range &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pretty_forwarder&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>pipe operator 出力可能なオブジェクトに変換する </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Range</td><td>範囲型 </td></tr>
+    <tr><td class="paramname">r</td><td>対象範囲 preturn range_ioオブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../da/d15/prettied_8hpp_source.html#l00290">290</a> of file <a class="el" href="../../da/d15/prettied_8hpp_source.html">prettied.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">        {
+            <span class="keywordflow">return</span> range_io&lt;Range&gt;(
+                r,
+                f.getFmt(), f.getOpn(), f.getCls(), f.getSep());
+        }
+</pre></div>
+</div>
+</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -420,7 +422,7 @@ Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="../../d5/d2b/namespaceyuh.html">yuh</a>      </li>
       <li class="navelem"><a class="el" href="../../da/dda/namespaceyuh_1_1range__detail.html">range_detail</a>      </li>
 
-    <li class="footer">Generated on Mon Aug 27 2012 12:56:46 for yuh library by
+    <li class="footer">Generated on Wed Aug 29 2012 23:58:36 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
