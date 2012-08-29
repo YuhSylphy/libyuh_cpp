@@ -1,5 +1,6 @@
 #pragma once
 #include <type_traits>
+#include <iterator>
 #include <boost/range/has_range_iterator.hpp>
 #include <boost/format.hpp>
 
@@ -219,7 +220,7 @@ namespace yuh
 				return *this;
 			}
 			/**
-			 * 括弧，区切り文字列を一時設定
+			 * 括弧，区切り文字列を設定
 			 */
 			pretty_forwarder& format(
 				const std::string& opn,
@@ -233,7 +234,7 @@ namespace yuh
 				return *this;
 			}
 			/**
-			 * 各パラメータを一時的に設定
+			 * 各パラメータを設定
 			 */
 			pretty_forwarder& format(
 				const std::string& fmt,
@@ -304,7 +305,7 @@ namespace yuh
 			 * pipe 
 			 * 受け取ったRangeをストリーム出力できる形式に
 			 */
-			const auto prettied =
+			auto prettied =
 				range_detail::pretty_forwarder();
 		}
 	}
