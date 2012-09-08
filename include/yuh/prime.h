@@ -1,11 +1,19 @@
-#pragma once
+﻿#pragma once
 
 #include <cmath>
 #include <set>
+#include <vector>
 
 #include <boost/assert.hpp>
 #include <boost/iterator/iterator_facade.hpp>
 #include <boost/range/iterator_range.hpp>
+
+#ifdef _MSC_VER
+#define TYPENAME
+#else
+#define TYPENAME typename
+#endif
+
 
 namespace yuh
 {
@@ -40,19 +48,22 @@ namespace yuh
 			 */
 			static std::vector<value_type> p_;
 			
+#ifdef _MSC_VER
+			friend struct prime_initializer;
+#endif
 		public:
 			/**
-			 * 渡された値型
+			 * 渡された値型 
 			 */
-			typedef typename base_t::value_type value_type;
+			typedef TYPENAME base_t::value_type value_type;
 			/**
-			 * イテレータの距離を示す型
+			 * イテレータの距離を示す型 
 			 */
-			typedef typename base_t::difference_type difference_type;
+			typedef TYPENAME base_t::difference_type difference_type;
 			/**
-			 * 参照を剥がした際の型
+			 * 参照を剥がした際の型 
 			 */
-			typedef typename base_t::reference reference;
+			typedef TYPENAME base_t::reference reference;
 
 			/**
 			 * コンストラクタ

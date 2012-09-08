@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <type_traits>
 #include <iterator>
 #include <boost/range/has_range_iterator.hpp>
@@ -27,13 +27,16 @@ namespace yuh
 		 * @return range_io
 		 */
 		template <
-			typename Range, 
-			typename std::enable_if<
+			typename Range
+#ifndef _MSC_VER
+			, typename std::enable_if<
 				std::is_same<
 					typename boost::has_range_const_iterator<Range>::type, 
 					boost::mpl::true_
 					>::value
-				> ::type *& = enabler >
+				> ::type *& = enabler 
+#endif
+			>
 		inline range_io<Range> pretty(
 			const Range& r,
 			const std::string& fmt = "%||",
@@ -51,13 +54,16 @@ namespace yuh
 		 * @return tそのもの
 		 */
 		template<
-			typename T, 
-			typename std::enable_if<
+			typename T
+#ifndef _MSC_VER
+			, typename std::enable_if<
 				std::is_same<
 					typename boost::has_range_const_iterator<T>::type, 
 					boost::mpl::false_
 					>::value
-				> ::type *& = enabler >
+				> ::type *& = enabler 
+#endif
+		>
 		inline const T& pretty(
 			const T& t,
 			const std::string& = "%||",
@@ -280,13 +286,16 @@ namespace yuh
 		 * preturn range_ioオブジェクト
 		 */
 		template <
-			typename Range, 
-			typename std::enable_if<
+			typename Range
+#ifndef _MSC_VER
+			, typename std::enable_if<
 				std::is_same<
 					typename boost::has_range_const_iterator<Range>::type, 
 					boost::mpl::true_
 					>::value
-				> ::type *& = enabler >
+				> ::type *& = enabler 
+#endif
+			>
 		inline range_io<Range> 
 		operator|(const Range& r, pretty_forwarder f)
 		{

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "../include/yuh/bignum.h"
 
 #include <boost/range/adaptor/reversed.hpp>
@@ -126,14 +126,14 @@ namespace yuh
 		for( ; i < rhs.d_.size(); ++i)
 		{
 			const twice_t t = C + d_[i] + rhs.d_[i];
-			d_[i] = mask & t;
+			d_[i] = static_cast<digit_t>(mask & t);
 			C = t >> 32;
 		}
 		
 		for( ; i < d_.size() && C > 0; ++i )
 		{
 			const twice_t t = C + d_[i];
-			d_[i] = mask & t;
+			d_[i] = static_cast<digit_t>(mask & t);
 			C = t >> 32;
 		}
 
@@ -167,13 +167,13 @@ namespace yuh
 		for( ; i < rhs.d_.size(); ++i )
 		{
 			const twice_t t = (1LL << 32) + d_[i] - rhs.d_[i] - B;
-			d_[i] = mask & t;
+			d_[i] = static_cast<digit_t>(mask & t);
 			B = 1 - (t >> 32);
 		}
 		for( ; i < d_.size() && B > 0; ++i )
 		{
 			const twice_t t = (1LL << 32) + d_[i] - B;
-			d_[i] = mask & t;
+			d_[i] = static_cast<digit_t>(mask & t);
 			B = 1 - (t >> 32);
 
 		}
@@ -197,12 +197,12 @@ namespace yuh
 	bignum& bignum::operator/=(digit_t rhs)
 	{
 		std::deque<digit_t> deq;
-		twice_t d; // 割られる数
+		twice_t d = 0; // 割られる数
 		for( auto x: d_ | reversed ) // 上位から
 		{
 			d <<= 32; // 前回の余りをシフトしておいて
 			d += x;   // 次の桁を足すと今回の割られる数
-			deq.push_front(d / rhs); // 商を追加
+			deq.push_front(static_cast<digit_t>(d / rhs)); // 商を追加
 			d %= rhs; // 余りが次の割られる数に
 		}
 		std::swap(d_, deq);
@@ -284,10 +284,12 @@ namespace yuh
 		return ret;
 	}
 
+#ifndef _MSC_VER
 	bignum operator"" _B(const char* str)
 	{
 		return bignum(std::string(str));
 	}
+#endif
 	
 	void bignum::swap(bignum& rhs) throw()
 	{

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <type_traits>
 #include <deque>
 #include <string>
@@ -22,13 +22,20 @@ namespace yuh
 		 * @param Integer 整数型 32bitを超えるものは未対応 多分切り捨てられる
 		 * @param n 変換元
 		 */
-		template<typename Integer, 
-				 typename std::enable_if<std::is_integral<Integer>::value>::type *& = enabler>
+		template<typename Integer
+#ifndef _MSC_VER
+				, typename std::enable_if<std::is_integral<Integer>::value>::type *& = enabler
+#endif
+		>
 		bignum(Integer n)
+#ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wtautological-compare"
-			: sign_( n < 0 ), d_(1)
+#endif
+		: sign_( n < 0 ), d_(1)
+#ifdef __clang__
 #pragma clang diagnostic pop
+#endif
 		{
 			d_[0] = sign_? -n: n;
 		}
@@ -39,8 +46,11 @@ namespace yuh
 		 * @param sign 符号
 		 * @param r 32bit毎の符号なし整数列
 		 */
-		template<typename Range, 
-				 typename = typename boost::range_value<Range>::type>
+		template<typename Range
+#ifndef _MSC_VER
+			, typename = typename boost::range_value<Range>::type
+#endif
+		>
 		bignum(bool sign, const Range& r)
 		: sign_(sign), d_(0)
 		{
@@ -268,11 +278,13 @@ namespace yuh
 	 * @param rhs 右辺
 	 */
 	void swap(bignum&lhs, bignum&rhs) throw();
-	
+
+#ifndef _MSC_VER
 	/**
 	 * ユーザ定義リテラル_B
 	 */
 	bignum operator"" _B(const char*);
+#endif
 
 	/**
 	 * 出力ストリーム

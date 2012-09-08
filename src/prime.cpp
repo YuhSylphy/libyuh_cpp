@@ -1,3 +1,5 @@
+﻿#include "stdafx.h"
+
 #include "../include/yuh/prime.h"
 
 #include <vector>
@@ -9,11 +11,26 @@ namespace yuh
 {
 	namespace range_detail
 	{
+#ifdef _MSC_VER
+		std::vector<prime_iterator::value_type> prime_iterator::p_;
+		struct prime_initializer
+		{
+			prime_initializer()
+			{
+				prime_iterator::p_.push_back(0);
+				prime_iterator::p_.push_back(2);
+				prime_iterator::p_.push_back(3);
+				prime_iterator::p_.push_back(5);
+				prime_iterator::p_.push_back(7);
+				prime_iterator::p_.push_back(11);
+			}
+		}static const prime_initer;
+#else
 		std::vector<prime_iterator::value_type> prime_iterator::p_{ 0, 2, 3, 5, 7, 11 };
-		
+#endif	
 		void prime_iterator::sift(value_type upper)
 		{
-			std::list<value_type> candidate{};
+			std::list<value_type> candidate;
 
 			{   //初期化
 				auto c = p_.back();
