@@ -20,6 +20,7 @@ namespace yuh
 		{
 			using range_detail::range_io;
 		}
+
 		/**
 		 * 範囲をrange_ioでくるんで出力可能にする
 		 * @param Range 範囲型
@@ -43,6 +44,14 @@ namespace yuh
 			const std::string& opn = "{ ",
 			const std::string& cls = " }",
 			const std::string& sep = ", "
+#ifdef _MSC_VER
+			, typename std::enable_if<
+				std::is_same<
+					typename boost::has_range_const_iterator<Range>::type, 
+					boost::mpl::true_
+					>::value
+				> ::type *& = enabler
+#endif
 			)
 		{
 			return range_io<Range>(r, fmt, opn, cls, sep);
@@ -70,9 +79,32 @@ namespace yuh
 			const std::string& = "{ ",
 			const std::string& = " }",
 			const std::string& = ", "
+#ifdef _MSC_VER
+			, typename std::enable_if<
+				std::is_same<
+					typename boost::has_range_const_iterator<T>::type, 
+					boost::mpl::false_
+					>::value
+				> ::type *& = enabler 
+#endif
 			)
 		{
 			return t;
+		}
+
+		template<typename Ch, typename Tr>
+		inline std::basic_string<Ch, Tr> const& pretty(
+			std::basic_string<Ch, Tr> const& str,
+			const std::string& = "%||",
+			const std::string& = "{ ",
+			const std::string& = " }",
+			const std::string& = ", "
+#ifdef _MSC_VER
+			, void* =0
+#endif
+			)
+		{
+			return str;
 		}
 
 	} // namespace adaptors

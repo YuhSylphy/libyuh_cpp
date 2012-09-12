@@ -43,3 +43,4 @@ TestResults
 *.opensdf
 *.filters
 *.suo
+*.user

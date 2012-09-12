@@ -83,7 +83,7 @@ namespace yuh
 		{
 			const auto a = std::log10(n);
 			const auto b = 1.4/(a+0.49)+1.96*std::log10(a+0.49)+1.13675*(a+0.49)-2.47;
-			return std::ceil(2*(b*n+n)-1);
+			return static_cast<value_type>(std::ceil(2*(b*n+n)-1));
 			/*
 			  177 ：NAS6 ◆n3AmnVhjwc ：2012/05/10(木) 21:48:11.71
 			  n番目の素数Pnの概算 
@@ -111,7 +111,7 @@ namespace yuh
 			
 			while( index >= static_cast<int>(p_.size()) )
 			{
-				sift(approx*=1.05);
+				sift( approx = static_cast<decltype(approx)>(approx * 1.05) );
 			}
 		}
 
@@ -125,7 +125,7 @@ namespace yuh
 		void prime_iterator::increment()
 		{
 			index_++;
-			if( index_ <= p_.size() ) 
+			if( index_ <= static_cast<int>(p_.size()) ) 
 				expand(index_); //まだ知らない素数だったら調べて追加する
 			BOOST_ASSERT( index_ < static_cast<int>(p_.size()) );
 		}

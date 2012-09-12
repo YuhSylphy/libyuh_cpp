@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VSTest", "VSTest\VSTest.vcxproj", "{78E2DFEE-F615-47C3-8B3A-59C3BC7224AC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AB342F3B-C185-4866-914C-8B497DA488A5} = {AB342F3B-C185-4866-914C-8B497DA488A5}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libyuh", "vcxproj\libyuh.vcxproj", "{AB342F3B-C185-4866-914C-8B497DA488A5}"
 EndProject
