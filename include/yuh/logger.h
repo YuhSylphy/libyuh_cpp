@@ -9,9 +9,10 @@
 #include <boost/range/algorithm.hpp>
 #include <boost/filesystem.hpp>
 
-#include <thread>
+#include <boost/thread.hpp>
+#include <boost/chrono.hpp>
 #include <atomic>
-#include <chrono>
+
 #include <fstream>
 
 //ユニットテスト用
@@ -20,10 +21,8 @@ namespace VSTest
 	class logger_unittest;
 }
 
-
 namespace yuh
 {
-
 	namespace detail
 	{
 		/**
@@ -82,7 +81,7 @@ namespace yuh
 			/**
 			* チェック待機時間
 			*/
-			std::chrono::milliseconds interval_;
+			boost::chrono::milliseconds interval_;
 			/**
 			* スレッド終了フラグ
 			*/
@@ -90,7 +89,7 @@ namespace yuh
 			/**
 			* スレッド
 			*/
-			std::thread thread_;
+			boost::thread thread_;
 
 			//テスト用
 			friend class VSTest::logger_unittest;
@@ -118,7 +117,7 @@ namespace yuh
 			}
 			);
 
-			thread_ = std::thread(&logger::thread_loop, this); 
+			thread_ = boost::thread(&logger::thread_loop, this); 
 		}
 
 		template<typename T>

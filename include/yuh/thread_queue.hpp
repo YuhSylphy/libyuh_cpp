@@ -3,6 +3,9 @@
 #include <thread>
 #include <mutex>
 
+#ifndef _MSC_VER
+#define _STD std::
+#endif
 
 namespace yuh
 {
@@ -290,3 +293,7 @@ namespace yuh
 		return (!(lhs < rhs));
 	}
 }
+
+#ifndef _MSC_VER
+#undef _STD
+#endif

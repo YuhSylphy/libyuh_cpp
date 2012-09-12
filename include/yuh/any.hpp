@@ -205,7 +205,7 @@ namespace yuh
     template<typename ValueType>
     ValueType any_cast(any & operand)
     {
-        typedef BOOST_DEDUCED_TYPENAME remove_reference<ValueType>::type nonref;
+        typedef BOOST_DEDUCED_TYPENAME boost::remove_reference<ValueType>::type nonref;
 
 #ifdef BOOST_NO_TEMPLATE_PARTIAL_SPECIALIZATION
         // If 'nonref' is still reference type, it means the user has not
@@ -226,7 +226,7 @@ namespace yuh
     template<typename ValueType>
     inline ValueType any_cast(const any & operand)
     {
-        typedef BOOST_DEDUCED_TYPENAME remove_reference<ValueType>::type nonref;
+        typedef BOOST_DEDUCED_TYPENAME boost::remove_reference<ValueType>::type nonref;
 
 #ifdef BOOST_NO_TEMPLATE_PARTIAL_SPECIALIZATION
         // The comment in the above version of 'any_cast' explains when this

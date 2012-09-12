@@ -12,11 +12,13 @@ namespace yuh
 	namespace detail
 	{
 		logger::logger()
-			: interval_(100)
+			: q_()
+			, ofs_()
+			, interval_(100)
 			, end_flag_(true)
 			, thread_()
 		{
-			thread_ = std::thread(&logger::thread_loop, this); //move
+			thread_ = boost::thread(&logger::thread_loop, this); //move
 		}
 
 
@@ -54,7 +56,7 @@ namespace yuh
 				//メイン処理
 				output();
 
-				std::this_thread::sleep_for(interval_);
+				boost::this_thread::sleep_for(interval_);
 			}
 		}
 	}
