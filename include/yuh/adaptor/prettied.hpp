@@ -30,8 +30,8 @@ namespace yuh
 		template <
 			typename Range
 #ifndef _MSC_VER
-			, typename std::enable_if<
-				std::is_same<
+			, typename ::std::enable_if<
+				::std::is_same<
 					typename boost::has_range_const_iterator<Range>::type, 
 					boost::mpl::true_
 					>::value
@@ -40,13 +40,13 @@ namespace yuh
 			>
 		inline range_io<Range> pretty(
 			const Range& r,
-			const std::string& fmt = "%||",
-			const std::string& opn = "{ ",
-			const std::string& cls = " }",
-			const std::string& sep = ", "
+			const ::std::string& fmt = "%||",
+			const ::std::string& opn = "{ ",
+			const ::std::string& cls = " }",
+			const ::std::string& sep = ", "
 #ifdef _MSC_VER
-			, typename std::enable_if<
-				std::is_same<
+			, typename ::std::enable_if<
+				::std::is_same<
 					typename boost::has_range_const_iterator<Range>::type, 
 					boost::mpl::true_
 					>::value
@@ -65,8 +65,8 @@ namespace yuh
 		template<
 			typename T
 #ifndef _MSC_VER
-			, typename std::enable_if<
-				std::is_same<
+			, typename ::std::enable_if<
+				::std::is_same<
 					typename boost::has_range_const_iterator<T>::type, 
 					boost::mpl::false_
 					>::value
@@ -75,13 +75,13 @@ namespace yuh
 		>
 		inline const T& pretty(
 			const T& t,
-			const std::string& = "%||",
-			const std::string& = "{ ",
-			const std::string& = " }",
-			const std::string& = ", "
+			const ::std::string& = "%||",
+			const ::std::string& = "{ ",
+			const ::std::string& = " }",
+			const ::std::string& = ", "
 #ifdef _MSC_VER
-			, typename std::enable_if<
-				std::is_same<
+			, typename ::std::enable_if<
+				::std::is_same<
 					typename boost::has_range_const_iterator<T>::type, 
 					boost::mpl::false_
 					>::value
@@ -93,12 +93,12 @@ namespace yuh
 		}
 
 		template<typename Ch, typename Tr>
-		inline std::basic_string<Ch, Tr> const& pretty(
-			std::basic_string<Ch, Tr> const& str,
-			const std::string& = "%||",
-			const std::string& = "{ ",
-			const std::string& = " }",
-			const std::string& = ", "
+		inline ::std::basic_string<Ch, Tr> const& pretty(
+			::std::basic_string<Ch, Tr> const& str,
+			const ::std::string& = "%||",
+			const ::std::string& = "{ ",
+			const ::std::string& = " }",
+			const ::std::string& = ", "
 #ifdef _MSC_VER
 			, void* =0
 #endif
@@ -124,10 +124,10 @@ namespace yuh
 			 */
 			range_io(
 				const Range& rng,
-				const std::string& fmt = "%||",
-				const std::string& opn = "{ ",
-				const std::string& cls = " }",
-				const std::string& sep = ", "
+				const ::std::string& fmt = "%||",
+				const ::std::string& opn = "{ ",
+				const ::std::string& cls = " }",
+				const ::std::string& sep = ", "
 				) : 
 				rng_(rng),
 				fmt_(fmt), opn_(opn), 
@@ -140,12 +140,12 @@ namespace yuh
 			 * @return os
 			 */
 			template<typename Ch, typename Tr>
-			std::basic_ostream<Ch, Tr>& output(
-				std::basic_ostream<Ch, Tr>& os) const
+			::std::basic_ostream<Ch, Tr>& output(
+				::std::basic_ostream<Ch, Tr>& os) const
 			{
 				os << opn_;
-				auto it = std::begin(rng_);
-				const auto last = std::end(rng_);
+				auto it = ::std::begin(rng_);
+				const auto last = ::std::end(rng_);
 				if (it != last)
 				{ 
 					os << (boost::format(fmt_) % pretty(*it, fmt_, opn_, cls_, sep_));
@@ -165,19 +165,19 @@ namespace yuh
 			/**
 			 * boost::format フォーマット文字列
 			 */
-			std::string fmt_;
+			::std::string fmt_;
 			/**
 			 * 開き括弧
 			 */
-			std::string opn_;
+			::std::string opn_;
 			/**
 			 * 閉じ括弧
 			 */
-			std::string cls_;
+			::std::string cls_;
 			/**
 			 * 区切り文字列
 			 */
-			std::string sep_;
+			::std::string sep_;
 			
 		};
 	
@@ -188,8 +188,8 @@ namespace yuh
 		 * @return os
 		 */
 		template<typename Ch, typename Tr, typename Range>
-		std::basic_ostream<Ch, Tr> & 
-		operator<<(std::basic_ostream<Ch, Tr>& os, const range_io<Range>&r)
+		::std::basic_ostream<Ch, Tr> & 
+		operator<<(::std::basic_ostream<Ch, Tr>& os, const range_io<Range>&r)
 		{
 			return r.output(os);
 		}
@@ -207,10 +207,10 @@ namespace yuh
 			 * @param sep 区切り文字列
 			 */
 			pretty_forwarder(
-				const std::string& fmt = "%||",
-				const std::string& opn = "{ ",
-				const std::string& cls = " }",
-				const std::string& sep = ", "
+				const ::std::string& fmt = "%||",
+				const ::std::string& opn = "{ ",
+				const ::std::string& cls = " }",
+				const ::std::string& sep = ", "
 				) : fmt_(fmt), opn_(opn), 
 					cls_(cls), sep_(sep) {}
 
@@ -218,7 +218,7 @@ namespace yuh
 			 * フォーマット文字列だけ一時設定
 			 */
 			pretty_forwarder operator()(
-				const std::string& fmt
+				const ::std::string& fmt
 				) const 
 			{
 				return pretty_forwarder(fmt, opn_, cls_, sep_);
@@ -227,9 +227,9 @@ namespace yuh
 			 * 括弧，区切り文字列を一時設定
 			 */
 			pretty_forwarder operator()(
-				const std::string& opn,
-				const std::string& sep,
-				const std::string& cls
+				const ::std::string& opn,
+				const ::std::string& sep,
+				const ::std::string& cls
 				) const 
 			{
 				return pretty_forwarder(fmt_, opn, cls, sep);
@@ -238,10 +238,10 @@ namespace yuh
 			 * 各パラメータを一時的に設定
 			 */
 			pretty_forwarder operator()(
-				const std::string& fmt,
-				const std::string& opn,
-				const std::string& sep,
-				const std::string& cls
+				const ::std::string& fmt,
+				const ::std::string& opn,
+				const ::std::string& sep,
+				const ::std::string& cls
 				) const
 			{
 				return pretty_forwarder(fmt, opn, cls, sep);
@@ -251,7 +251,7 @@ namespace yuh
 			 * フォーマット文字列だけ一時設定
 			 */
 			pretty_forwarder& format(
-				const std::string& fmt
+				const ::std::string& fmt
 				) 
 			{
 				fmt_ = fmt;
@@ -261,9 +261,9 @@ namespace yuh
 			 * 括弧，区切り文字列を設定
 			 */
 			pretty_forwarder& format(
-				const std::string& opn,
-				const std::string& sep,
-				const std::string& cls
+				const ::std::string& opn,
+				const ::std::string& sep,
+				const ::std::string& cls
 				) 
 			{
 				opn_ = opn;
@@ -275,10 +275,10 @@ namespace yuh
 			 * 各パラメータを設定
 			 */
 			pretty_forwarder& format(
-				const std::string& fmt,
-				const std::string& opn,
-				const std::string& sep,
-				const std::string& cls
+				const ::std::string& fmt,
+				const ::std::string& opn,
+				const ::std::string& sep,
+				const ::std::string& cls
 				) 
 			{
 				fmt_ = fmt;
@@ -288,27 +288,27 @@ namespace yuh
 				return *this;
 			}
 
-			const std::string getFmt() const { return fmt_; }
-			const std::string getOpn() const { return opn_; }
-			const std::string getCls() const { return cls_; }
-			const std::string getSep() const { return sep_; }
+			const ::std::string getFmt() const { return fmt_; }
+			const ::std::string getOpn() const { return opn_; }
+			const ::std::string getCls() const { return cls_; }
+			const ::std::string getSep() const { return sep_; }
 		private:
 			/**
 			 * boost::format フォーマット文字列
 			 */
-			std::string fmt_;
+			::std::string fmt_;
 			/**
 			 * 開き括弧
 			 */
-			std::string opn_;
+			::std::string opn_;
 			/**
 			 * 閉じ括弧
 			 */
-			std::string cls_;
+			::std::string cls_;
 			/**
 			 * 区切り文字列
 			 */
-			std::string sep_;
+			::std::string sep_;
 		};
 		
 		/**
@@ -320,8 +320,8 @@ namespace yuh
 		template <
 			typename Range
 #ifndef _MSC_VER
-			, typename std::enable_if<
-				std::is_same<
+			, typename ::std::enable_if<
+				::std::is_same<
 					typename boost::has_range_const_iterator<Range>::type, 
 					boost::mpl::true_
 					>::value

@@ -62,7 +62,7 @@ namespace yuh
 
         any & swap(any & rhs)
         {
-            std::swap(content, rhs.content);
+            ::std::swap(content, rhs.content);
             return *this;
         }
 
@@ -86,7 +86,7 @@ namespace yuh
             return !content;
         }
 
-        const std::type_info & type() const
+        const ::std::type_info & type() const
         {
             return content ? content->type() : typeid(void);
         }
@@ -107,12 +107,12 @@ namespace yuh
 
         public: // queries
 
-            virtual const std::type_info & type() const = 0;
+            virtual const ::std::type_info & type() const = 0;
 
             virtual placeholder * clone() const = 0;
 
 			//’Ç‰Á
-			virtual std::ostream& output(std::ostream& os) = 0;
+			virtual ::std::ostream& output(::std::ostream& os) = 0;
         };
 
         template<typename ValueType>
@@ -127,7 +127,7 @@ namespace yuh
 
         public: // queries
 
-            virtual const std::type_info & type() const
+            virtual const ::std::type_info & type() const
             {
                 return typeid(ValueType);
             }
@@ -138,7 +138,7 @@ namespace yuh
             }
 
 			//’Ç‰Á
-			virtual std::ostream& output(std::ostream& os)
+			virtual ::std::ostream& output(::std::ostream& os)
 			{
 				return (os << held);
 			}
@@ -161,7 +161,7 @@ namespace yuh
         template<typename ValueType>
         friend ValueType * unsafe_any_cast(any *);
 
-		friend std::ostream& operator<<(std::ostream&, const any&);
+		friend ::std::ostream& operator<<(::std::ostream&, const any&);
 
 #else
 
@@ -173,7 +173,7 @@ namespace yuh
 
     };
 
-    class bad_any_cast : public std::bad_cast
+    class bad_any_cast : public ::std::bad_cast
     {
     public:
         virtual const char * what() const throw()
@@ -188,7 +188,7 @@ namespace yuh
     {
         return operand && 
 #ifdef BOOST_AUX_ANY_TYPE_ID_NAME
-            std::strcmp(operand->type().name(), typeid(ValueType).name()) == 0
+            ::std::strcmp(operand->type().name(), typeid(ValueType).name()) == 0
 #else
             operand->type() == typeid(ValueType)
 #endif
@@ -254,7 +254,7 @@ namespace yuh
         return unsafe_any_cast<ValueType>(const_cast<any *>(operand));
     }
 
-	inline std::ostream& operator<<(std::ostream& os, const any& a)
+	inline ::std::ostream& operator<<(::std::ostream& os, const any& a)
 	{
 		return a.content->output(os);
 	}
