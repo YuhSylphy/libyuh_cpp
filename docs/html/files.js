@@ -1,17 +1,32 @@
 var files =
 [
+    [ "include/yuh/algorithm.hpp", "de/d55/algorithm_8hpp.html", "de/d55/algorithm_8hpp" ],
+    [ "include/yuh/any.hpp", "d2/d62/any_8hpp.html", "d2/d62/any_8hpp" ],
     [ "include/yuh/bignum.h", "dd/da2/bignum_8h.html", "dd/da2/bignum_8h" ],
+    [ "include/yuh/cartesian.hpp", "df/d58/cartesian_8hpp.html", "df/d58/cartesian_8hpp" ],
     [ "include/yuh/fibonacci.hpp", "d5/d14/fibonacci_8hpp.html", "d5/d14/fibonacci_8hpp" ],
+    [ "include/yuh/logger.h", "d1/d8c/logger_8h.html", "d1/d8c/logger_8h" ],
     [ "include/yuh/math.hpp", "d4/d78/math_8hpp.html", "d4/d78/math_8hpp" ],
     [ "include/yuh/polygonal.hpp", "d7/ddc/polygonal_8hpp.html", "d7/ddc/polygonal_8hpp" ],
     [ "include/yuh/prime.h", "dd/d99/prime_8h.html", "dd/d99/prime_8h" ],
+    [ "include/yuh/singleton.hpp", "de/d6d/singleton_8hpp.html", null ],
+    [ "include/yuh/thread_queue.hpp", "d1/d01/thread__queue_8hpp.html", "d1/d01/thread__queue_8hpp" ],
     [ "include/yuh/adaptor/count_mapped.hpp", "da/d1d/count__mapped_8hpp.html", "da/d1d/count__mapped_8hpp" ],
     [ "include/yuh/adaptor/prettied.hpp", "da/d15/prettied_8hpp.html", "da/d15/prettied_8hpp" ],
     [ "include/yuh/adaptor/set_powered.hpp", "d4/d1e/set__powered_8hpp.html", "d4/d1e/set__powered_8hpp" ],
     [ "include/yuh/detail/enabler.h", "db/d53/enabler_8h.html", null ],
     [ "src/bignum.cpp", "d2/d67/bignum_8cpp.html", "d2/d67/bignum_8cpp" ],
     [ "src/bignum.d", "d5/d31/bignum_8d.html", null ],
+    [ "src/logger.cpp", "d3/d30/logger_8cpp.html", null ],
+    [ "src/logger.d", "db/d7a/logger_8d.html", null ],
     [ "src/prime.cpp", "d3/d71/prime_8cpp.html", "d3/d71/prime_8cpp" ],
     [ "src/prime.d", "df/dd9/prime_8d.html", null ],
-    [ "src/stdafx.h", "db/d06/stdafx_8h.html", null ]
+    [ "src/stdafx.h", "d5/d5a/src_2stdafx_8h.html", null ],
+    [ "vcxproj/stdafx.cpp", "d4/d57/vcxproj_2stdafx_8cpp.html", null ],
+    [ "vcxproj/stdafx.h", "d1/dc4/vcxproj_2stdafx_8h.html", "d1/dc4/vcxproj_2stdafx_8h" ],
+    [ "vcxproj/targetver.h", "db/d82/vcxproj_2targetver_8h.html", null ],
+    [ "VSTest/logger_unittest.cpp", "d4/db5/logger__unittest_8cpp.html", "d4/db5/logger__unittest_8cpp" ],
+    [ "VSTest/stdafx.cpp", "dd/d76/VSTest_2stdafx_8cpp.html", null ],
+    [ "VSTest/stdafx.h", "df/dd0/VSTest_2stdafx_8h.html", null ],
+    [ "VSTest/targetver.h", "d1/d51/VSTest_2targetver_8h.html", null ]
 ];

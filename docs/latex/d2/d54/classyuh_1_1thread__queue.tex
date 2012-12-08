@@ -1,0 +1,645 @@
+\hypertarget{classyuh_1_1thread__queue}{\section{thread\-\_\-queue$<$ \-T, \-Container $>$ \-Class \-Template \-Reference}
+\label{d2/d54/classyuh_1_1thread__queue}\index{thread\-\_\-queue$<$ T, Container $>$@{thread\-\_\-queue$<$ T, Container $>$}}
+}
+
+
+{\ttfamily \#include $<$thread\-\_\-queue.\-hpp$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \*
+\-Container $>$ \hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type}
+\item 
+typedef std\-::queue$<$ \-T, \-Container $>$ \hyperlink{classyuh_1_1thread__queue_a7298798dd8d5df210bee3a306107bd43}{\-Queue}
+\item 
+typedef \-Queue\-::container\-\_\-type \hyperlink{classyuh_1_1thread__queue_a533ae1bede764ab6e544a525d66d6cea}{container\-\_\-type}
+\item 
+typedef \-Queue\-::value\-\_\-type \hyperlink{classyuh_1_1thread__queue_a6e0ae4bff8abfada948f8f378e5c701f}{value\-\_\-type}
+\item 
+typedef \-Queue\-::size\-\_\-type \hyperlink{classyuh_1_1thread__queue_a8e7cd930c132420fd043346d2357cc1a}{size\-\_\-type}
+\item 
+typedef \-Queue\-::reference \hyperlink{classyuh_1_1thread__queue_a2290230a4818fa015496b463bf8e4b0c}{reference}
+\item 
+typedef \-Queue\-::const\-\_\-reference \hyperlink{classyuh_1_1thread__queue_aa25405d259f1bdab8c36b1d9f5a444cc}{const\-\_\-reference}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1thread__queue_a351f4b74ea3eeed9ca3c3ce324bb4a34}{thread\-\_\-queue} ()
+\item 
+\hyperlink{classyuh_1_1thread__queue_ae5e81148c88c2f92f26f2fdcba53ab4f}{thread\-\_\-queue} (const \hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type} \&rhs)
+\item 
+\hyperlink{classyuh_1_1thread__queue_a30b22be83754798f68406e65549bd395}{thread\-\_\-queue} (const \-Container \&cont)
+\item 
+\hyperlink{classyuh_1_1thread__queue_aac3815e091e8b16591e50b95a6e37465}{thread\-\_\-queue} (const \hyperlink{classyuh_1_1thread__queue_a7298798dd8d5df210bee3a306107bd43}{\-Queue} \&que)
+\item 
+\hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type} \& \hyperlink{classyuh_1_1thread__queue_a082c6a98eff4a65fb915cf7692dbec1c}{operator=} (const \hyperlink{classyuh_1_1thread__queue_a7298798dd8d5df210bee3a306107bd43}{\-Queue} \&rhs)
+\item 
+\hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type} \& \hyperlink{classyuh_1_1thread__queue_a94c67d88412045c793e496e90458bfe3}{operator=} (const \hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type} \&rhs)
+\item 
+\hyperlink{classyuh_1_1thread__queue_a9af3c5bbf864342fe018092124a27a94}{thread\-\_\-queue} (\hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type} \&\&rhs)
+\item 
+\hyperlink{classyuh_1_1thread__queue_ae5bbd4613c1cb48d2f888cccbbb61b91}{thread\-\_\-queue} (\-Container \&\&cont)
+\item 
+\hyperlink{classyuh_1_1thread__queue_acb4e7069c35004c605abba5156243268}{thread\-\_\-queue} (\hyperlink{classyuh_1_1thread__queue_a7298798dd8d5df210bee3a306107bd43}{\-Queue} \&\&que)
+\item 
+{\footnotesize template$<$class Alloc $>$ }\\\hyperlink{classyuh_1_1thread__queue_a4710558fa7e478dc387bde5632684950}{thread\-\_\-queue} (\-Container \&\&cont, const \-Alloc \&al, typename std\-::enable\-\_\-if$<$ std\-::uses\-\_\-allocator$<$ \-Container, \-Alloc $>$\-::value, void $>$\-::type $\ast$$\ast$=0)
+\item 
+{\footnotesize template$<$class Alloc $>$ }\\\hyperlink{classyuh_1_1thread__queue_a74596208e366b52c6dda2a5fe171ad5c}{thread\-\_\-queue} (\hyperlink{classyuh_1_1thread__queue_a7298798dd8d5df210bee3a306107bd43}{\-Queue} \&\&que, const \-Alloc \&al, typename std\-::enable\-\_\-if$<$ std\-::uses\-\_\-allocator$<$ \-Container, \-Alloc $>$\-::value, void $>$\-::type $\ast$$\ast$=0)
+\item 
+{\footnotesize template$<$class Alloc $>$ }\\\hyperlink{classyuh_1_1thread__queue_ad3248bfac93ae6ef75eba7c502c1d9da}{thread\-\_\-queue} (\hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type} \&\&rhs, const \-Alloc \&al, typename std\-::enable\-\_\-if$<$ std\-::uses\-\_\-allocator$<$ \-Container, \-Alloc $>$\-::value, void $>$\-::type $\ast$$\ast$=0)
+\item 
+\hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type} \& \hyperlink{classyuh_1_1thread__queue_a16bfde6f4c24d447f3fa6e61fea90249}{operator=} (\hyperlink{classyuh_1_1thread__queue_a7298798dd8d5df210bee3a306107bd43}{\-Queue} \&\&rhs)
+\item 
+\hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type} \& \hyperlink{classyuh_1_1thread__queue_a48ac1b0f763a86c1ad67ed1b2082eff9}{operator=} (\hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type} \&\&rhs)
+\item 
+void \hyperlink{classyuh_1_1thread__queue_a7d18cf385d63185a187e3aae42a704ee}{push} (\hyperlink{classyuh_1_1thread__queue_a6e0ae4bff8abfada948f8f378e5c701f}{value\-\_\-type} \&\&val)
+\item 
+bool \hyperlink{classyuh_1_1thread__queue_ac6e61de369e994009e36f344f99c15ad}{empty} () const 
+\item 
+\hyperlink{classyuh_1_1thread__queue_a8e7cd930c132420fd043346d2357cc1a}{size\-\_\-type} \hyperlink{classyuh_1_1thread__queue_a503ab01f6c0142145d3434f6924714e7}{size} () const 
+\item 
+\hyperlink{classyuh_1_1thread__queue_a2290230a4818fa015496b463bf8e4b0c}{reference} \hyperlink{classyuh_1_1thread__queue_a6a48363b4355f6f5b441637774f79a59}{front} ()
+\item 
+\hyperlink{classyuh_1_1thread__queue_aa25405d259f1bdab8c36b1d9f5a444cc}{const\-\_\-reference} \hyperlink{classyuh_1_1thread__queue_a1b5b57596df7e42e35dcd646906cb438}{front} () const 
+\item 
+\hyperlink{classyuh_1_1thread__queue_a2290230a4818fa015496b463bf8e4b0c}{reference} \hyperlink{classyuh_1_1thread__queue_af71e6c1eccbc12e9339c00a86a981a43}{back} ()
+\item 
+\hyperlink{classyuh_1_1thread__queue_aa25405d259f1bdab8c36b1d9f5a444cc}{const\-\_\-reference} \hyperlink{classyuh_1_1thread__queue_af181aa8839ff8d5867941fd0f0d214b6}{back} () const 
+\item 
+void \hyperlink{classyuh_1_1thread__queue_a7b58bc3c70024c68440d0d8465b9f80d}{push} (const \hyperlink{classyuh_1_1thread__queue_a6e0ae4bff8abfada948f8f378e5c701f}{value\-\_\-type} \&val)
+\item 
+void \hyperlink{classyuh_1_1thread__queue_a312e7f6c761a199c1369fbe651e084f0}{pop} ()
+\item 
+const \-Container \& \hyperlink{classyuh_1_1thread__queue_ade63bed704a7d2ae3b7087fc14864941}{\-\_\-\-Get\-\_\-container} () const 
+\item 
+const \hyperlink{classyuh_1_1thread__queue_a7298798dd8d5df210bee3a306107bd43}{\-Queue} \& \hyperlink{classyuh_1_1thread__queue_a1eb9c6b51435a911107097f15e19c233}{\-\_\-\-Get\-\_\-queue} () const 
+\item 
+void \hyperlink{classyuh_1_1thread__queue_accf0d7b5496638eebcd777de62feb9a4}{swap} (\hyperlink{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{this\-\_\-type} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1thread__queue_a7298798dd8d5df210bee3a306107bd43}{\-Queue} \hyperlink{classyuh_1_1thread__queue_ab2e35c005c3ff9aeb95720a050b31c35}{q}
+\item 
+std\-::mutex \hyperlink{classyuh_1_1thread__queue_aeef4a7229a433a6ef6c6a8960b5fe413}{mtx\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename \-T, typename \-Container = std\-::deque$<$\-T$>$$>$class yuh\-::thread\-\_\-queue$<$ T, Container $>$}
+
+
+
+\-Definition at line 13 of file thread\-\_\-queue.\-hpp.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{classyuh_1_1thread__queue_aa25405d259f1bdab8c36b1d9f5a444cc}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!const\-\_\-reference@{const\-\_\-reference}}
+\index{const\-\_\-reference@{const\-\_\-reference}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{const\-\_\-reference}]{\setlength{\rightskip}{0pt plus 5cm}typedef \-Queue\-::const\-\_\-reference {\bf const\-\_\-reference}}}\label{d2/d54/classyuh_1_1thread__queue_aa25405d259f1bdab8c36b1d9f5a444cc}
+
+
+\-Definition at line 22 of file thread\-\_\-queue.\-hpp.
+
+\hypertarget{classyuh_1_1thread__queue_a533ae1bede764ab6e544a525d66d6cea}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!container\-\_\-type@{container\-\_\-type}}
+\index{container\-\_\-type@{container\-\_\-type}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{container\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef \-Queue\-::container\-\_\-type {\bf container\-\_\-type}}}\label{d2/d54/classyuh_1_1thread__queue_a533ae1bede764ab6e544a525d66d6cea}
+
+
+\-Definition at line 18 of file thread\-\_\-queue.\-hpp.
+
+\hypertarget{classyuh_1_1thread__queue_a7298798dd8d5df210bee3a306107bd43}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!\-Queue@{\-Queue}}
+\index{\-Queue@{\-Queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::queue$<$\-T, \-Container$>$ {\bf \-Queue}}}\label{d2/d54/classyuh_1_1thread__queue_a7298798dd8d5df210bee3a306107bd43}
+
+
+\-Definition at line 17 of file thread\-\_\-queue.\-hpp.
+
+\hypertarget{classyuh_1_1thread__queue_a2290230a4818fa015496b463bf8e4b0c}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!reference@{reference}}
+\index{reference@{reference}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}typedef \-Queue\-::reference {\bf reference}}}\label{d2/d54/classyuh_1_1thread__queue_a2290230a4818fa015496b463bf8e4b0c}
+
+
+\-Definition at line 21 of file thread\-\_\-queue.\-hpp.
+
+\hypertarget{classyuh_1_1thread__queue_a8e7cd930c132420fd043346d2357cc1a}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!size\-\_\-type@{size\-\_\-type}}
+\index{size\-\_\-type@{size\-\_\-type}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{size\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef \-Queue\-::size\-\_\-type {\bf size\-\_\-type}}}\label{d2/d54/classyuh_1_1thread__queue_a8e7cd930c132420fd043346d2357cc1a}
+
+
+\-Definition at line 20 of file thread\-\_\-queue.\-hpp.
+
+\hypertarget{classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!this\-\_\-type@{this\-\_\-type}}
+\index{this\-\_\-type@{this\-\_\-type}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{this\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf thread\-\_\-queue}$<$\-T, \-Container$>$ {\bf this\-\_\-type}}}\label{d2/d54/classyuh_1_1thread__queue_a0b6cc122d5afe5dba8a2622add14ec45}
+
+
+\-Definition at line 16 of file thread\-\_\-queue.\-hpp.
+
+\hypertarget{classyuh_1_1thread__queue_a6e0ae4bff8abfada948f8f378e5c701f}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!value\-\_\-type@{value\-\_\-type}}
+\index{value\-\_\-type@{value\-\_\-type}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef \-Queue\-::value\-\_\-type {\bf value\-\_\-type}}}\label{d2/d54/classyuh_1_1thread__queue_a6e0ae4bff8abfada948f8f378e5c701f}
+
+
+\-Definition at line 19 of file thread\-\_\-queue.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1thread__queue_a351f4b74ea3eeed9ca3c3ce324bb4a34}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!thread\-\_\-queue@{thread\-\_\-queue}}
+\index{thread\-\_\-queue@{thread\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{thread\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thread\-\_\-queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a351f4b74ea3eeed9ca3c3ce324bb4a34}
+
+
+\-Definition at line 24 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+            : q()
+        {   // construct with empty container
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_ae5e81148c88c2f92f26f2fdcba53ab4f}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!thread\-\_\-queue@{thread\-\_\-queue}}
+\index{thread\-\_\-queue@{thread\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{thread\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thread\-\_\-queue} (
+\begin{DoxyParamCaption}
+\item[{const {\bf this\-\_\-type} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_ae5e81148c88c2f92f26f2fdcba53ab4f}
+
+
+\-Definition at line 29 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+            : q(rhs.q)
+        {   // construct by copying rhs container
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a30b22be83754798f68406e65549bd395}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!thread\-\_\-queue@{thread\-\_\-queue}}
+\index{thread\-\_\-queue@{thread\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{thread\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thread\-\_\-queue} (
+\begin{DoxyParamCaption}
+\item[{const \-Container \&}]{cont}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a30b22be83754798f68406e65549bd395}
+
+
+\-Definition at line 34 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+            : q(cont)
+        {   // construct by copying specified container
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_aac3815e091e8b16591e50b95a6e37465}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!thread\-\_\-queue@{thread\-\_\-queue}}
+\index{thread\-\_\-queue@{thread\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{thread\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thread\-\_\-queue} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Queue} \&}]{que}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_aac3815e091e8b16591e50b95a6e37465}
+
+
+\-Definition at line 39 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+            : q(que)
+        {   // construct by copying specified queue
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a9af3c5bbf864342fe018092124a27a94}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!thread\-\_\-queue@{thread\-\_\-queue}}
+\index{thread\-\_\-queue@{thread\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{thread\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thread\-\_\-queue} (
+\begin{DoxyParamCaption}
+\item[{{\bf this\-\_\-type} \&\&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a9af3c5bbf864342fe018092124a27a94}
+
+
+\-Definition at line 91 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+            : q(_STD move(rhs.q))
+        {   // construct by moving rhs
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_ae5bbd4613c1cb48d2f888cccbbb61b91}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!thread\-\_\-queue@{thread\-\_\-queue}}
+\index{thread\-\_\-queue@{thread\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{thread\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thread\-\_\-queue} (
+\begin{DoxyParamCaption}
+\item[{\-Container \&\&}]{cont}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_ae5bbd4613c1cb48d2f888cccbbb61b91}
+
+
+\-Definition at line 96 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+            : q(_STD move(cont))
+        {   // construct by moving specified container
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_acb4e7069c35004c605abba5156243268}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!thread\-\_\-queue@{thread\-\_\-queue}}
+\index{thread\-\_\-queue@{thread\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{thread\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thread\-\_\-queue} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Queue} \&\&}]{que}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, explicit\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_acb4e7069c35004c605abba5156243268}
+
+
+\-Definition at line 101 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+            : q(_STD move(que))
+        {   // construct by moving specified queue
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a4710558fa7e478dc387bde5632684950}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!thread\-\_\-queue@{thread\-\_\-queue}}
+\index{thread\-\_\-queue@{thread\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{thread\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thread\-\_\-queue} (
+\begin{DoxyParamCaption}
+\item[{\-Container \&\&}]{cont, }
+\item[{const \-Alloc \&}]{al, }
+\item[{typename std\-::enable\-\_\-if$<$ std\-::uses\-\_\-allocator$<$ \-Container, \-Alloc $>$\-::value, void $>$\-::type $\ast$$\ast$}]{ = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a4710558fa7e478dc387bde5632684950}
+
+
+\-Definition at line 107 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+            : q(_STD move(cont), al)
+        {   // construct by moving specified container, allocator
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a74596208e366b52c6dda2a5fe171ad5c}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!thread\-\_\-queue@{thread\-\_\-queue}}
+\index{thread\-\_\-queue@{thread\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{thread\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thread\-\_\-queue} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Queue} \&\&}]{que, }
+\item[{const \-Alloc \&}]{al, }
+\item[{typename std\-::enable\-\_\-if$<$ std\-::uses\-\_\-allocator$<$ \-Container, \-Alloc $>$\-::value, void $>$\-::type $\ast$$\ast$}]{ = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a74596208e366b52c6dda2a5fe171ad5c}
+
+
+\-Definition at line 115 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+            : q(_STD move(que), al)
+        {   // construct by moving specified container, allocator
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_ad3248bfac93ae6ef75eba7c502c1d9da}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!thread\-\_\-queue@{thread\-\_\-queue}}
+\index{thread\-\_\-queue@{thread\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{thread\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thread\-\_\-queue} (
+\begin{DoxyParamCaption}
+\item[{{\bf this\-\_\-type} \&\&}]{rhs, }
+\item[{const \-Alloc \&}]{al, }
+\item[{typename std\-::enable\-\_\-if$<$ std\-::uses\-\_\-allocator$<$ \-Container, \-Alloc $>$\-::value, void $>$\-::type $\ast$$\ast$}]{ = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_ad3248bfac93ae6ef75eba7c502c1d9da}
+
+
+\-Definition at line 123 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+            : q(_STD move(rhs.q), al)
+        {   // construct by moving rhs container, allocator
+        }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1thread__queue_ade63bed704a7d2ae3b7087fc14864941}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!\-\_\-\-Get\-\_\-container@{\-\_\-\-Get\-\_\-container}}
+\index{\-\_\-\-Get\-\_\-container@{\-\_\-\-Get\-\_\-container}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{\-\_\-\-Get\-\_\-container}]{\setlength{\rightskip}{0pt plus 5cm}const \-Container\& {\bf \-\_\-\-Get\-\_\-container} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_ade63bed704a7d2ae3b7087fc14864941}
+
+
+\-Definition at line 210 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // get reference to container
+            return (q._Get_container());
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a1eb9c6b51435a911107097f15e19c233}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!\-\_\-\-Get\-\_\-queue@{\-\_\-\-Get\-\_\-queue}}
+\index{\-\_\-\-Get\-\_\-queue@{\-\_\-\-Get\-\_\-queue}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{\-\_\-\-Get\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Queue}\& {\bf \-\_\-\-Get\-\_\-queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a1eb9c6b51435a911107097f15e19c233}
+
+
+\-Definition at line 215 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // get reference to container
+            return (q);
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_af71e6c1eccbc12e9339c00a86a981a43}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!back@{back}}
+\index{back@{back}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{back}]{\setlength{\rightskip}{0pt plus 5cm}{\bf reference} {\bf back} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_af71e6c1eccbc12e9339c00a86a981a43}
+
+
+\-Definition at line 186 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // return last element of mutable queue
+            std::lock_guard<std::mutex> lock(mtx_);
+            return (q.back());
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_af181aa8839ff8d5867941fd0f0d214b6}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!back@{back}}
+\index{back@{back}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{back}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\-\_\-reference} {\bf back} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_af181aa8839ff8d5867941fd0f0d214b6}
+
+
+\-Definition at line 192 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // return last element of nonmutable queue
+            std::lock_guard<std::mutex> lock(mtx_);
+            return (q.back());
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_ac6e61de369e994009e36f344f99c15ad}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!empty@{empty}}
+\index{empty@{empty}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_ac6e61de369e994009e36f344f99c15ad}
+
+
+\-Definition at line 162 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // test if queue is empty
+            std::lock_guard<std::mutex> lock(mtx_);
+            return (q.empty());
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a6a48363b4355f6f5b441637774f79a59}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!front@{front}}
+\index{front@{front}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{front}]{\setlength{\rightskip}{0pt plus 5cm}{\bf reference} {\bf front} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a6a48363b4355f6f5b441637774f79a59}
+
+
+\-Definition at line 174 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // return first element of mutable queue
+            std::lock_guard<std::mutex> lock(mtx_);
+            return (q.front());
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a1b5b57596df7e42e35dcd646906cb438}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!front@{front}}
+\index{front@{front}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{front}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\-\_\-reference} {\bf front} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a1b5b57596df7e42e35dcd646906cb438}
+
+
+\-Definition at line 180 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // return first element of nonmutable queue
+            std::lock_guard<std::mutex> lock(mtx_);
+            return (q.front());
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a082c6a98eff4a65fb915cf7692dbec1c}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!operator=@{operator=}}
+\index{operator=@{operator=}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf this\-\_\-type}\& operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Queue} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a082c6a98eff4a65fb915cf7692dbec1c}
+
+
+\-Definition at line 44 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // assign by copying rhs
+            q = rhs;
+            return (*this);
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a94c67d88412045c793e496e90458bfe3}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!operator=@{operator=}}
+\index{operator=@{operator=}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf this\-\_\-type}\& operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf this\-\_\-type} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a94c67d88412045c793e496e90458bfe3}
+
+
+\-Definition at line 50 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // assign by copying rhs
+            std::lock_guard<std::mutex> lock(mtx_);
+            q = rhs.q;
+            return (*this);
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a16bfde6f4c24d447f3fa6e61fea90249}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!operator=@{operator=}}
+\index{operator=@{operator=}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf this\-\_\-type}\& operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Queue} \&\&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a16bfde6f4c24d447f3fa6e61fea90249}
+
+
+\-Definition at line 130 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // assign by moving rhs
+            std::lock_guard<std::mutex> lock(mtx_);
+            q = _STD move(rhs);
+            return (*this);
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a48ac1b0f763a86c1ad67ed1b2082eff9}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!operator=@{operator=}}
+\index{operator=@{operator=}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf this\-\_\-type}\& operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf this\-\_\-type} \&\&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a48ac1b0f763a86c1ad67ed1b2082eff9}
+
+
+\-Definition at line 137 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // assign by moving rhs
+            std::lock_guard<std::mutex> lock(mtx_);
+            q = _STD move(rhs.q);
+            return (*this);
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a312e7f6c761a199c1369fbe651e084f0}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!pop@{pop}}
+\index{pop@{pop}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf pop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a312e7f6c761a199c1369fbe651e084f0}
+
+
+\-Definition at line 204 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // erase element at end
+            std::lock_guard<std::mutex> lock(mtx_);
+            q.pop();
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a7d18cf385d63185a187e3aae42a704ee}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!push@{push}}
+\index{push@{push}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf push} (
+\begin{DoxyParamCaption}
+\item[{{\bf value\-\_\-type} \&\&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a7d18cf385d63185a187e3aae42a704ee}
+
+
+\-Definition at line 144 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // insert element at beginning
+            std::lock_guard<std::mutex> lock(mtx_);
+            q.push(_STD move(val));
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a7b58bc3c70024c68440d0d8465b9f80d}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!push@{push}}
+\index{push@{push}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf push} (
+\begin{DoxyParamCaption}
+\item[{const {\bf value\-\_\-type} \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a7b58bc3c70024c68440d0d8465b9f80d}
+
+
+\-Definition at line 198 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // insert element at beginning
+            std::lock_guard<std::mutex> lock(mtx_);
+            q.push(val);
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_a503ab01f6c0142145d3434f6924714e7}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!size@{size}}
+\index{size@{size}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-type} {\bf size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_a503ab01f6c0142145d3434f6924714e7}
+
+
+\-Definition at line 168 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // return length of queue
+            std::lock_guard<std::mutex> lock(mtx_);
+            return (q.size());
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1thread__queue_accf0d7b5496638eebcd777de62feb9a4}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!swap@{swap}}
+\index{swap@{swap}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf swap} (
+\begin{DoxyParamCaption}
+\item[{{\bf this\-\_\-type} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_accf0d7b5496638eebcd777de62feb9a4}
+
+
+\-Definition at line 220 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+        {   // exchange contents with rhs
+            std::unique_lock<std::mutex> ll(mtx_, std::defer_lock);
+            std::unique_lock<std::mutex> lr(rhs.mtx_, std::defer_lock);
+
+            std::lock(ll, lr);
+
+            q.swap(rhs.q);
+        }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1thread__queue_aeef4a7229a433a6ef6c6a8960b5fe413}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!mtx\-\_\-@{mtx\-\_\-}}
+\index{mtx\-\_\-@{mtx\-\_\-}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{mtx\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex {\bf mtx\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}mutable, protected\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_aeef4a7229a433a6ef6c6a8960b5fe413}
+
+
+\-Definition at line 233 of file thread\-\_\-queue.\-hpp.
+
+\hypertarget{classyuh_1_1thread__queue_ab2e35c005c3ff9aeb95720a050b31c35}{\index{yuh\-::thread\-\_\-queue@{yuh\-::thread\-\_\-queue}!q@{q}}
+\index{q@{q}!yuh::thread_queue@{yuh\-::thread\-\_\-queue}}
+\subsubsection[{q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue} {\bf q}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{d2/d54/classyuh_1_1thread__queue_ab2e35c005c3ff9aeb95720a050b31c35}
+
+
+\-Definition at line 232 of file thread\-\_\-queue.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{thread__queue_8hpp}{thread\-\_\-queue.\-hpp}\end{DoxyCompactItemize}

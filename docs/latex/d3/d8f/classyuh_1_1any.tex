@@ -1,0 +1,296 @@
+\hypertarget{classyuh_1_1any}{\section{any \-Class \-Reference}
+\label{d3/d8f/classyuh_1_1any}\index{any@{any}}
+}
+
+
+{\ttfamily \#include $<$any.\-hpp$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classyuh_1_1any_1_1holder}{holder}
+\item 
+class \hyperlink{classyuh_1_1any_1_1placeholder}{placeholder}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1any_aa950afcee01981fe0485ce00ff0e8e8c}{any} ()
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\\hyperlink{classyuh_1_1any_a700dae3684fcca0cd46bd9ce24ccb528}{any} (const \-Value\-Type \&value)
+\item 
+\hyperlink{classyuh_1_1any_a36d3267e1d837189f7ccbddaaa06be23}{any} (const \hyperlink{classyuh_1_1any}{any} \&other)
+\item 
+\hyperlink{classyuh_1_1any_a482cedc26b5489cbeb3a72323b1337b3}{$\sim$any} ()
+\item 
+\hyperlink{classyuh_1_1any}{any} \& \hyperlink{classyuh_1_1any_a11657f64049ddea2a46109f848425f1b}{swap} (\hyperlink{classyuh_1_1any}{any} \&rhs)
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\\hyperlink{classyuh_1_1any}{any} \& \hyperlink{classyuh_1_1any_a58614fd09494090a7cb519db1b4beafa}{operator=} (const \-Value\-Type \&rhs)
+\item 
+\hyperlink{classyuh_1_1any}{any} \& \hyperlink{classyuh_1_1any_a9fbe87764bba201c1876be924480f14a}{operator=} (\hyperlink{classyuh_1_1any}{any} rhs)
+\item 
+bool \hyperlink{classyuh_1_1any_ac6e61de369e994009e36f344f99c15ad}{empty} () const 
+\item 
+const \-::std\-::type\-\_\-info \& \hyperlink{classyuh_1_1any_a2d709b576828ffca9e12f72caf300eb5}{type} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1any_1_1placeholder}{placeholder} $\ast$ \hyperlink{classyuh_1_1any_a77d199447e4ef7883094740e398c7b09}{content}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\\-Value\-Type $\ast$ \hyperlink{classyuh_1_1any_a38141c8c9bab51eaa9849386141488e2}{any\-\_\-cast} (\hyperlink{classyuh_1_1any}{any} $\ast$)
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\\-Value\-Type $\ast$ \hyperlink{classyuh_1_1any_a4820674b6fe4bc0e1c1bfe7c413c93e1}{unsafe\-\_\-any\-\_\-cast} (\hyperlink{classyuh_1_1any}{any} $\ast$)
+\item 
+friend\-::std\-::ostream \& \hyperlink{classyuh_1_1any_a4a29a522e34da14e462e36528cfe727c}{operator$<$$<$} (\-::std\-::ostream \&, const \hyperlink{classyuh_1_1any}{any} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 36 of file any.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1any_aa950afcee01981fe0485ce00ff0e8e8c}{\index{yuh\-::any@{yuh\-::any}!any@{any}}
+\index{any@{any}!yuh::any@{yuh\-::any}}
+\subsubsection[{any}]{\setlength{\rightskip}{0pt plus 5cm}{\bf any} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_aa950afcee01981fe0485ce00ff0e8e8c}
+
+
+\-Definition at line 40 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+          : content(0)
+        {
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_a700dae3684fcca0cd46bd9ce24ccb528}{\index{yuh\-::any@{yuh\-::any}!any@{any}}
+\index{any@{any}!yuh::any@{yuh\-::any}}
+\subsubsection[{any}]{\setlength{\rightskip}{0pt plus 5cm}{\bf any} (
+\begin{DoxyParamCaption}
+\item[{const \-Value\-Type \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a700dae3684fcca0cd46bd9ce24ccb528}
+
+
+\-Definition at line 46 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+          : content(new holder<ValueType>(value))
+        {
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_a36d3267e1d837189f7ccbddaaa06be23}{\index{yuh\-::any@{yuh\-::any}!any@{any}}
+\index{any@{any}!yuh::any@{yuh\-::any}}
+\subsubsection[{any}]{\setlength{\rightskip}{0pt plus 5cm}{\bf any} (
+\begin{DoxyParamCaption}
+\item[{const {\bf any} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a36d3267e1d837189f7ccbddaaa06be23}
+
+
+\-Definition at line 51 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+          : content(other.content ? other.content->clone() : 0)
+        {
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_a482cedc26b5489cbeb3a72323b1337b3}{\index{yuh\-::any@{yuh\-::any}!$\sim$any@{$\sim$any}}
+\index{$\sim$any@{$\sim$any}!yuh::any@{yuh\-::any}}
+\subsubsection[{$\sim$any}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf any} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a482cedc26b5489cbeb3a72323b1337b3}
+
+
+\-Definition at line 56 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            delete content;
+        }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1any_ac6e61de369e994009e36f344f99c15ad}{\index{yuh\-::any@{yuh\-::any}!empty@{empty}}
+\index{empty@{empty}!yuh::any@{yuh\-::any}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_ac6e61de369e994009e36f344f99c15ad}
+
+
+\-Definition at line 84 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return !content;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_a58614fd09494090a7cb519db1b4beafa}{\index{yuh\-::any@{yuh\-::any}!operator=@{operator=}}
+\index{operator=@{operator=}!yuh::any@{yuh\-::any}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf any}\& operator= (
+\begin{DoxyParamCaption}
+\item[{const \-Value\-Type \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a58614fd09494090a7cb519db1b4beafa}
+
+
+\-Definition at line 70 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            any(rhs).swap(*this);
+            return *this;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_a9fbe87764bba201c1876be924480f14a}{\index{yuh\-::any@{yuh\-::any}!operator=@{operator=}}
+\index{operator=@{operator=}!yuh::any@{yuh\-::any}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf any}\& operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf any}}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a9fbe87764bba201c1876be924480f14a}
+
+
+\-Definition at line 76 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            rhs.swap(*this);
+            return *this;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_a11657f64049ddea2a46109f848425f1b}{\index{yuh\-::any@{yuh\-::any}!swap@{swap}}
+\index{swap@{swap}!yuh::any@{yuh\-::any}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf any}\& {\bf swap} (
+\begin{DoxyParamCaption}
+\item[{{\bf any} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a11657f64049ddea2a46109f848425f1b}
+
+
+\-Definition at line 63 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            ::std::swap(content, rhs.content);
+            return *this;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_a2d709b576828ffca9e12f72caf300eb5}{\index{yuh\-::any@{yuh\-::any}!type@{type}}
+\index{type@{type}!yuh::any@{yuh\-::any}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}const \-::std\-::type\-\_\-info\& {\bf type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a2d709b576828ffca9e12f72caf300eb5}
+
+
+\-Definition at line 89 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+        {
+            return content ? content->type() : typeid(void);
+        }
+\end{DoxyCode}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classyuh_1_1any_a38141c8c9bab51eaa9849386141488e2}{\index{yuh\-::any@{yuh\-::any}!any\-\_\-cast@{any\-\_\-cast}}
+\index{any\-\_\-cast@{any\-\_\-cast}!yuh::any@{yuh\-::any}}
+\subsubsection[{any\-\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}\-Value\-Type$\ast$ {\bf any\-\_\-cast} (
+\begin{DoxyParamCaption}
+\item[{{\bf any} $\ast$}]{operand}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a38141c8c9bab51eaa9849386141488e2}
+
+
+\-Definition at line 187 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        return operand && 
+#ifdef BOOST_AUX_ANY_TYPE_ID_NAME
+            ::std::strcmp(operand->type().name(), typeid(ValueType).name()) == 
+      0
+#else
+            operand->type() == typeid(ValueType)
+#endif
+            ? &static_cast<any::holder<ValueType> *>(operand->content)->held
+            : 0;
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_a4a29a522e34da14e462e36528cfe727c}{\index{yuh\-::any@{yuh\-::any}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!yuh::any@{yuh\-::any}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}\-::std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream \&}]{os, }
+\item[{const {\bf any} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a4a29a522e34da14e462e36528cfe727c}
+
+
+\-Definition at line 257 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        return a.content->output(os);
+    }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_a4820674b6fe4bc0e1c1bfe7c413c93e1}{\index{yuh\-::any@{yuh\-::any}!unsafe\-\_\-any\-\_\-cast@{unsafe\-\_\-any\-\_\-cast}}
+\index{unsafe\-\_\-any\-\_\-cast@{unsafe\-\_\-any\-\_\-cast}!yuh::any@{yuh\-::any}}
+\subsubsection[{unsafe\-\_\-any\-\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}\-Value\-Type$\ast$ {\bf unsafe\-\_\-any\-\_\-cast} (
+\begin{DoxyParamCaption}
+\item[{{\bf any} $\ast$}]{operand}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a4820674b6fe4bc0e1c1bfe7c413c93e1}
+
+
+\-Definition at line 246 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        return &static_cast<any::holder<ValueType> *>(operand->content)->held;
+    }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1any_a77d199447e4ef7883094740e398c7b09}{\index{yuh\-::any@{yuh\-::any}!content@{content}}
+\index{content@{content}!yuh::any@{yuh\-::any}}
+\subsubsection[{content}]{\setlength{\rightskip}{0pt plus 5cm}{\bf placeholder}$\ast$ {\bf content}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d3/d8f/classyuh_1_1any_a77d199447e4ef7883094740e398c7b09}
+
+
+\-Definition at line 172 of file any.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{any_8hpp}{any.\-hpp}\end{DoxyCompactItemize}

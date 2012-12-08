@@ -1,0 +1,323 @@
+\hypertarget{classyuh_1_1detail_1_1logger}{\section{logger \-Class \-Reference}
+\label{d1/dce/classyuh_1_1detail_1_1logger}\index{logger@{logger}}
+}
+
+
+{\ttfamily \#include $<$logger.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1detail_1_1logger_abc46b52b3bf194874ba4ebd9c415415a}{$\sim$logger} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classyuh_1_1detail_1_1logger}{logger} \& \hyperlink{classyuh_1_1detail_1_1logger_ac0b044fa4008d42252e0342a7a83461f}{operator()} (int n, \-T const \&data)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1detail_1_1logger_a97e3b3adabf67bc7d3650ed14214ddaa}{logger} ()
+\item 
+{\footnotesize template$<$typename Range $>$ }\\\hyperlink{classyuh_1_1detail_1_1logger_ab5ad71f6923679744edb73c33af936ca}{logger} (\-Range \&rng, int interval\-\_\-milliseconds=100)
+\item 
+\hyperlink{classyuh_1_1detail_1_1logger_a96bb29b740d2079eff2a343b96ba8fe6}{logger} (const \hyperlink{classyuh_1_1detail_1_1logger}{logger} \&)
+\item 
+\hyperlink{classyuh_1_1detail_1_1logger_a9a213af89763057907f1d6c5a65d9eae}{logger} (\hyperlink{classyuh_1_1detail_1_1logger}{logger} \&\&)
+\item 
+\hyperlink{classyuh_1_1detail_1_1logger}{logger} \& \hyperlink{classyuh_1_1detail_1_1logger_aeadd53088e5adb387e95cdcfb5301a06}{operator=} (const \hyperlink{classyuh_1_1detail_1_1logger}{logger} \&)
+\item 
+\hyperlink{classyuh_1_1detail_1_1logger}{logger} \& \hyperlink{classyuh_1_1detail_1_1logger_a99e78de8d2b06cf46095a56c4b607e42}{operator=} (\hyperlink{classyuh_1_1detail_1_1logger}{logger} \&\&)
+\item 
+void \hyperlink{classyuh_1_1detail_1_1logger_aaab9f2249ce35dc29648607974a17cc9}{thread\-\_\-loop} ()
+\item 
+void \hyperlink{classyuh_1_1detail_1_1logger_a7437b254e19e7e12fc2ec99945f4ecea}{output} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \hyperlink{classyuh_1_1any}{any} $>$ $>$ \hyperlink{classyuh_1_1detail_1_1logger_af2b7d7f50e13fa5e21ae7dbaaaf56d81}{q\-\_\-}
+\item 
+std\-::vector$<$ std\-::ofstream $>$ \hyperlink{classyuh_1_1detail_1_1logger_a281aed45a8c2b369a0e5965cdb00c273}{ofs\-\_\-}
+\item 
+boost\-::chrono\-::milliseconds \hyperlink{classyuh_1_1detail_1_1logger_a2ae4364eadd2ae03f6ffb965d0622d21}{interval\-\_\-}
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classyuh_1_1detail_1_1logger_a91290cb294b9bbefd56c3a97bf00dcab}{end\-\_\-flag\-\_\-}
+\item 
+boost\-::thread \hyperlink{classyuh_1_1detail_1_1logger_a813cb749320df26fae57fc171a765178}{thread\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classyuh_1_1detail_1_1logger_a697b2e01800239e686ae61d7129fb769}{\-V\-S\-Test\-::logger\-\_\-unittest}
+\item 
+class \hyperlink{classyuh_1_1detail_1_1logger_a568e0733d4add58a1c20947fbc9f8ad5}{singleton$<$ logger $>$}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+ログ 
+
+\-Definition at line 31 of file logger.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1detail_1_1logger_abc46b52b3bf194874ba4ebd9c415415a}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!$\sim$logger@{$\sim$logger}}
+\index{$\sim$logger@{$\sim$logger}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{$\sim$logger}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf logger} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d1/dce/classyuh_1_1detail_1_1logger_abc46b52b3bf194874ba4ebd9c415415a}
+
+
+\-Definition at line 25 of file logger.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            end_flag_ = false;
+            thread_.join(); //ここで停止
+
+            //後処理
+            output();
+            boost::for_each(
+                ofs_, 
+                [](std::ofstream& ofs){ ofs.close(); }
+            );
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1detail_1_1logger_a97e3b3adabf67bc7d3650ed14214ddaa}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!logger@{logger}}
+\index{logger@{logger}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a97e3b3adabf67bc7d3650ed14214ddaa}
+
+
+\-Definition at line 14 of file logger.\-cpp.
+
+
+\begin{DoxyCode}
+            : q_()
+            , ofs_()
+            , interval_(100)
+            , end_flag_(true)
+            , thread_()
+        {
+            thread_ = boost::thread(&logger::thread_loop, this); //move
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1detail_1_1logger_ab5ad71f6923679744edb73c33af936ca}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!logger@{logger}}
+\index{logger@{logger}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} (
+\begin{DoxyParamCaption}
+\item[{\-Range \&}]{rng, }
+\item[{int}]{interval\-\_\-milliseconds = {\ttfamily 100}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_ab5ad71f6923679744edb73c33af936ca}
+ctor 
+\begin{DoxyParams}{\-Parameters}
+{\em rng} & 出力先ファイル名リスト \\
+\hline
+{\em interval\-\_\-milliseconds} & 出力チェック間隔 \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 101 of file logger.\-h.
+
+
+\begin{DoxyCode}
+            : q_(boost::size(filenames))
+            , ofs_(0)
+            , interval_(interval_milliseconds)
+            , end_flag_(true)
+            , thread_()
+        {
+            ofs_.reserve(q_.size());
+            boost::for_each(
+                filenames, 
+                [&](std::string const& str) { 
+                    auto p = boost::filesystem::absolute(
+      boost::filesystem::path(str));
+                    if ( !boost::filesystem::exists(p.parent_path()) )
+                        boost::filesystem::create_directories(p.parent_path());
+
+                    ofs_.emplace_back(p.string()); 
+            }
+            );
+
+            thread_ = boost::thread(&logger::thread_loop, this); 
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1detail_1_1logger_a96bb29b740d2079eff2a343b96ba8fe6}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!logger@{logger}}
+\index{logger@{logger}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} (
+\begin{DoxyParamCaption}
+\item[{const {\bf logger} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a96bb29b740d2079eff2a343b96ba8fe6}
+\hypertarget{classyuh_1_1detail_1_1logger_a9a213af89763057907f1d6c5a65d9eae}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!logger@{logger}}
+\index{logger@{logger}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} (
+\begin{DoxyParamCaption}
+\item[{{\bf logger} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a9a213af89763057907f1d6c5a65d9eae}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1detail_1_1logger_ac0b044fa4008d42252e0342a7a83461f}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!operator()@{operator()}}
+\index{operator()@{operator()}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} \& operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{\-T const \&}]{data}
+\end{DoxyParamCaption}
+)}}\label{d1/dce/classyuh_1_1detail_1_1logger_ac0b044fa4008d42252e0342a7a83461f}
+出力queueにpush 
+\begin{DoxyParams}{\-Parameters}
+{\em n} & queue番号 \\
+\hline
+{\em data} & 出力データ ストリーム出力operator$<$$<$に対応していればなんでも \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+自身 ()を連結していける 
+\end{DoxyReturn}
+
+
+\-Definition at line 124 of file logger.\-h.
+
+
+\begin{DoxyCode}
+        {
+            q_[n].push(data);
+            return *this;
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1detail_1_1logger_aeadd53088e5adb387e95cdcfb5301a06}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!operator=@{operator=}}
+\index{operator=@{operator=}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger}\& operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf logger} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_aeadd53088e5adb387e95cdcfb5301a06}
+\hypertarget{classyuh_1_1detail_1_1logger_a99e78de8d2b06cf46095a56c4b607e42}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!operator=@{operator=}}
+\index{operator=@{operator=}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger}\& operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf logger} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a99e78de8d2b06cf46095a56c4b607e42}
+\hypertarget{classyuh_1_1detail_1_1logger_a7437b254e19e7e12fc2ec99945f4ecea}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!output@{output}}
+\index{output@{output}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{output}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf output} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a7437b254e19e7e12fc2ec99945f4ecea}
+内部用出力処理 
+
+\-Definition at line 38 of file logger.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            for( auto t: boost::combine(q_, ofs_) )
+            {
+                auto& q = boost::get<0>(t);
+                auto& ofs = boost::get<1>(t);
+                while(!q.empty())
+                {
+                    ofs << q.front() << std::endl;
+                    q.pop();
+                }
+            }
+        }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1detail_1_1logger_aaab9f2249ce35dc29648607974a17cc9}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!thread\-\_\-loop@{thread\-\_\-loop}}
+\index{thread\-\_\-loop@{thread\-\_\-loop}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{thread\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf thread\-\_\-loop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_aaab9f2249ce35dc29648607974a17cc9}
+ループ関数 bgで出力していく 
+
+\-Definition at line 52 of file logger.\-cpp.
+
+
+\begin{DoxyCode}
+        {
+            while(end_flag_)
+            {
+                //メイン処理
+                output();
+
+                boost::this_thread::sleep_for(interval_);
+            }
+        }
+\end{DoxyCode}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classyuh_1_1detail_1_1logger_a568e0733d4add58a1c20947fbc9f8ad5}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!singleton$<$ logger $>$@{singleton$<$ logger $>$}}
+\index{singleton$<$ logger $>$@{singleton$<$ logger $>$}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{singleton$<$ logger $>$}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf singleton}$<$ {\bf logger} $>$\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a568e0733d4add58a1c20947fbc9f8ad5}
+
+
+\-Definition at line 97 of file logger.\-h.
+
+\hypertarget{classyuh_1_1detail_1_1logger_a697b2e01800239e686ae61d7129fb769}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!\-V\-S\-Test\-::logger\-\_\-unittest@{\-V\-S\-Test\-::logger\-\_\-unittest}}
+\index{\-V\-S\-Test\-::logger\-\_\-unittest@{\-V\-S\-Test\-::logger\-\_\-unittest}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{\-V\-S\-Test\-::logger\-\_\-unittest}]{\setlength{\rightskip}{0pt plus 5cm}friend class \-V\-S\-Test\-::logger\-\_\-unittest\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a697b2e01800239e686ae61d7129fb769}
+
+
+\-Definition at line 95 of file logger.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1detail_1_1logger_a91290cb294b9bbefd56c3a97bf00dcab}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!end\-\_\-flag\-\_\-@{end\-\_\-flag\-\_\-}}
+\index{end\-\_\-flag\-\_\-@{end\-\_\-flag\-\_\-}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{end\-\_\-flag\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ {\bf end\-\_\-flag\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a91290cb294b9bbefd56c3a97bf00dcab}
+スレッド終了フラグ 
+
+\-Definition at line 88 of file logger.\-h.
+
+\hypertarget{classyuh_1_1detail_1_1logger_a2ae4364eadd2ae03f6ffb965d0622d21}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!interval\-\_\-@{interval\-\_\-}}
+\index{interval\-\_\-@{interval\-\_\-}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{interval\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::chrono\-::milliseconds {\bf interval\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a2ae4364eadd2ae03f6ffb965d0622d21}
+チェック待機時間 
+
+\-Definition at line 84 of file logger.\-h.
+
+\hypertarget{classyuh_1_1detail_1_1logger_a281aed45a8c2b369a0e5965cdb00c273}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!ofs\-\_\-@{ofs\-\_\-}}
+\index{ofs\-\_\-@{ofs\-\_\-}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{ofs\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::ofstream$>$ {\bf ofs\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a281aed45a8c2b369a0e5965cdb00c273}
+出力ストリームリスト 
+
+\-Definition at line 79 of file logger.\-h.
+
+\hypertarget{classyuh_1_1detail_1_1logger_af2b7d7f50e13fa5e21ae7dbaaaf56d81}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!q\-\_\-@{q\-\_\-}}
+\index{q\-\_\-@{q\-\_\-}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{q\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf thread\-\_\-queue}$<${\bf any}$>$ $>$ {\bf q\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_af2b7d7f50e13fa5e21ae7dbaaaf56d81}
+出力用queueリスト 
+
+\-Definition at line 75 of file logger.\-h.
+
+\hypertarget{classyuh_1_1detail_1_1logger_a813cb749320df26fae57fc171a765178}{\index{yuh\-::detail\-::logger@{yuh\-::detail\-::logger}!thread\-\_\-@{thread\-\_\-}}
+\index{thread\-\_\-@{thread\-\_\-}!yuh::detail::logger@{yuh\-::detail\-::logger}}
+\subsubsection[{thread\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::thread {\bf thread\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/dce/classyuh_1_1detail_1_1logger_a813cb749320df26fae57fc171a765178}
+スレッド 
+
+\-Definition at line 92 of file logger.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{logger_8h}{logger.\-h}\item 
+src/\hyperlink{logger_8cpp}{logger.\-cpp}\end{DoxyCompactItemize}

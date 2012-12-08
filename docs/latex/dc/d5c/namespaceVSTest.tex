@@ -1,0 +1,81 @@
+\hypertarget{namespaceVSTest}{\section{\-V\-S\-Test \-Namespace \-Reference}
+\label{dc/d5c/namespaceVSTest}\index{\-V\-S\-Test@{\-V\-S\-Test}}
+}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceVSTest_acd29a83e9e9e57f6ed0b1c13fbeac4fb}{\-T\-E\-S\-T\-\_\-\-C\-L\-A\-S\-S} (logger\-\_\-unittest)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespaceVSTest_acd29a83e9e9e57f6ed0b1c13fbeac4fb}{\index{\-V\-S\-Test@{\-V\-S\-Test}!\-T\-E\-S\-T\-\_\-\-C\-L\-A\-S\-S@{\-T\-E\-S\-T\-\_\-\-C\-L\-A\-S\-S}}
+\index{\-T\-E\-S\-T\-\_\-\-C\-L\-A\-S\-S@{\-T\-E\-S\-T\-\_\-\-C\-L\-A\-S\-S}!VSTest@{\-V\-S\-Test}}
+\subsubsection[{\-T\-E\-S\-T\-\_\-\-C\-L\-A\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-V\-S\-Test\-::\-T\-E\-S\-T\-\_\-\-C\-L\-A\-S\-S} (
+\begin{DoxyParamCaption}
+\item[{logger\-\_\-unittest}]{}
+\end{DoxyParamCaption}
+)}}\label{dc/d5c/namespaceVSTest_acd29a83e9e9e57f6ed0b1c13fbeac4fb}
+
+
+\-Definition at line 24 of file logger\-\_\-unittest.\-cpp.
+
+
+\begin{DoxyCode}
+    {
+    public:
+        
+        TEST_METHOD(ctor)
+        {
+            // TODO: テスト コードをここに挿入します
+
+            std::array<std::string, 3> filenames = {
+                "data/file1.txt",
+                "data/file2.txt",
+                "data/file3.txt",
+            };
+            {
+                yuh::detail::logger logger(filenames);
+
+                logger(0, 3)(0, 3.14)(0, std::string("pi"));
+                logger(1, std::string("test"));
+                logger(2, filenames | prettied("", ",", ""));
+            }
+
+            std::ifstream ifs(filenames[0]);
+            std::string buf;
+            std::getline(ifs, buf);
+            Assert::AreEqual(std::string("3"), buf);
+            std::getline(ifs, buf);
+            Assert::AreEqual(std::string("3.14"), buf);
+            std::getline(ifs, buf);
+            Assert::AreEqual(std::string("pi"), buf);
+            ifs.close();
+
+            ifs.open(filenames[1]);
+            std::getline(ifs, buf);
+            Assert::AreEqual(std::string("test"), buf);
+            ifs.close();
+
+        }
+
+        TEST_METHOD(singleton)
+        {
+            std::array<std::string, 3> filenames = {
+                "data/s1.txt",
+                "data/s2.txt",
+            };
+
+            yuh::logger::init_emplace(filenames);
+            {
+                yuh::logger::inst()(0, std::string("test1"));
+                yuh::logger::inst()(0, std::string("test2"));
+                yuh::logger::inst()(0, std::string("test3"));
+                yuh::logger::inst()(0, std::string("test4"));
+                yuh::logger::inst()(1, std::string(""));
+            }
+
+            yuh::logger::reset();
+        }
+    };
+\end{DoxyCode}

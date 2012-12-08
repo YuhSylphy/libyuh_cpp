@@ -1,13 +1,6 @@
 var searchData=
 [
-  ['q0_5f',['q0_',['../dc/d3d/classQueueTest.html#a2dcfad38001f7e4ec3072c6a7165070d',1,'QueueTest']]],
-  ['q1_5f',['q1_',['../dc/d3d/classQueueTest.html#ab467b210bbd552ad64f773c8a91fef7d',1,'QueueTest']]],
-  ['q2_5f',['q2_',['../dc/d3d/classQueueTest.html#aa91a3d33874b8f83f6654b7ed77112da',1,'QueueTest']]],
-  ['queue',['Queue',['../d7/d56/classQueue.html',1,'Queue&lt; E &gt;'],['../d7/d56/classQueue.html#a9419268280646dc4ab7b01d6fa3741c8',1,'Queue::Queue()'],['../d7/d56/classQueue.html#aafce87119954d48c508a3f35ba392e44',1,'Queue::Queue(const Queue &amp;)']]],
-  ['queue_3c_20e_20_3e',['Queue< E >',['../d0/d98/classQueueNode.html#ad4336229b1d7c3626e4ba69f236b202d',1,'QueueNode']]],
-  ['queue_3c_20int_20_3e',['Queue< int >',['../d7/d56/classQueue.html',1,'']]],
-  ['queuenode',['QueueNode',['../d0/d98/classQueueNode.html',1,'QueueNode&lt; E &gt;'],['../d0/d98/classQueueNode.html#a4bdf3156732737b62d778f526eef9b2c',1,'QueueNode::QueueNode(const E &amp;an_element)'],['../d0/d98/classQueueNode.html#a62d4b20a7713191fb1e41f80a23e00e3',1,'QueueNode::QueueNode(const QueueNode &amp;)']]],
-  ['queuenode_3c_20int_20_3e',['QueueNode< int >',['../d0/d98/classQueueNode.html',1,'']]],
-  ['queuetest',['QueueTest',['../dc/d3d/classQueueTest.html',1,'']]],
-  ['quicktest',['QuickTest',['../dd/df0/classQuickTest.html',1,'']]]
+  ['q',['q',['../d2/d54/classyuh_1_1thread__queue.html#ab2e35c005c3ff9aeb95720a050b31c35',1,'yuh::thread_queue']]],
+  ['q_5f',['q_',['../d1/dce/classyuh_1_1detail_1_1logger.html#af2b7d7f50e13fa5e21ae7dbaaaf56d81',1,'yuh::detail::logger']]],
+  ['queue',['Queue',['../d2/d54/classyuh_1_1thread__queue.html#a7298798dd8d5df210bee3a306107bd43',1,'yuh::thread_queue']]]
 ];

@@ -1,0 +1,55 @@
+\hypertarget{namespaceboost}{\section{boost \-Namespace \-Reference}
+\label{d4/da9/namespaceboost}\index{boost@{boost}}
+}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Random\-Access\-Range , typename Uniform\-Random\-Number\-Generator $>$ }\\\-Random\-Access\-Range \& \hyperlink{namespaceboost_a49789a73addc201070c2196f87a48774}{shuffle} (\-Random\-Access\-Range \&rng, \-Uniform\-Random\-Number\-Generator \&\&g)
+\item 
+{\footnotesize template$<$typename Random\-Access\-Range , typename Uniform\-Random\-Number\-Generator $>$ }\\\-Random\-Access\-Range const \& \hyperlink{namespaceboost_a277b0680f4cf1c7226b6387e5fdf9e1c}{shuffle} (\-Random\-Access\-Range const \&rng, \-Uniform\-Random\-Number\-Generator \&\&g)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespaceboost_a49789a73addc201070c2196f87a48774}{\index{boost@{boost}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!boost@{boost}}
+\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}\-Random\-Access\-Range\& {\bf boost\-::shuffle} (
+\begin{DoxyParamCaption}
+\item[{\-Random\-Access\-Range \&}]{rng, }
+\item[{\-Uniform\-Random\-Number\-Generator \&\&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d4/da9/namespaceboost_a49789a73addc201070c2196f87a48774}
+
+
+\-Definition at line 8 of file algorithm.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        BOOST_RANGE_CONCEPT_ASSERT(( 
+      RandomAccessRangeConcept<RandomAccessRange> ));
+        ::std::shuffle(boost::begin(rng), boost::end(rng), g);
+        return rng;
+    }
+\end{DoxyCode}
+\hypertarget{namespaceboost_a277b0680f4cf1c7226b6387e5fdf9e1c}{\index{boost@{boost}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!boost@{boost}}
+\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}\-Random\-Access\-Range const\& {\bf boost\-::shuffle} (
+\begin{DoxyParamCaption}
+\item[{\-Random\-Access\-Range const \&}]{rng, }
+\item[{\-Uniform\-Random\-Number\-Generator \&\&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d4/da9/namespaceboost_a277b0680f4cf1c7226b6387e5fdf9e1c}
+
+
+\-Definition at line 20 of file algorithm.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        BOOST_RANGE_CONCEPT_ASSERT(( RandomAccessRangeConcept<RandomAccessRange
+       const> ));
+        ::std::shuffle(boost::begin(rng), boost::end(rng), g);
+        return rng;
+    }
+\end{DoxyCode}

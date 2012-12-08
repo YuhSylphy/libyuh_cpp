@@ -2,6 +2,7 @@
 \label{da/d15/prettied_8hpp}\index{include/yuh/adaptor/prettied.\-hpp@{include/yuh/adaptor/prettied.\-hpp}}
 }
 {\ttfamily \#include $<$type\-\_\-traits$>$}\*
+{\ttfamily \#include $<$iterator$>$}\*
 {\ttfamily \#include $<$boost/range/has\-\_\-range\-\_\-iterator.\-hpp$>$}\*
 {\ttfamily \#include $<$boost/format.\-hpp$>$}\*
 {\ttfamily \#include \char`\"{}../detail/enabler.\-h\char`\"{}}\*
@@ -24,11 +25,14 @@ namespace \hyperlink{namespaceyuh_1_1adaptors}{yuh\-::adaptors}
 \subsection*{\-Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Range , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\range\-\_\-io$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_a1144c5d97c9a22ad2974a9b92d72a83a}{pretty} (const \-Range \&r, const std\-::string \&fmt=\char`\"{}\%$|$$|$\char`\"{}, const std\-::string \&opn=\char`\"{}\{ \char`\"{}, const std\-::string \&cls=\char`\"{} \}\char`\"{}, const std\-::string \&sep=\char`\"{}, \char`\"{})
+{\footnotesize template$<$typename Range , typename\-::std\-::enable\-\_\-if$<$ \-::std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\range\-\_\-io$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_ab9de0351a2c9fea583ddd62cbe4b97f1}{pretty} (const \-Range \&r, const \-::std\-::string \&fmt=\char`\"{}\%$|$$|$\char`\"{}, const \-::std\-::string \&opn=\char`\"{}\{ \char`\"{}, const \-::std\-::string \&cls=\char`\"{} \}\char`\"{}, const \-::std\-::string \&sep=\char`\"{}, \char`\"{})
 \item 
-{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ T $>$\-::type, boost\-::mpl\-::false\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\const \-T \& \hyperlink{namespaceyuh_1_1adaptors_aae2589510dae0b03d7cf37a7a85eec69}{pretty} (const \-T \&t, const std\-::string \&=\char`\"{}\%$|$$|$\char`\"{}, const std\-::string \&=\char`\"{}\{ \char`\"{}, const std\-::string \&=\char`\"{} \}\char`\"{}, const std\-::string \&=\char`\"{}, \char`\"{})
+{\footnotesize template$<$typename T , typename\-::std\-::enable\-\_\-if$<$ \-::std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ T $>$\-::type, boost\-::mpl\-::false\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\const \-T \& \hyperlink{namespaceyuh_1_1adaptors_ace5fee35d088aaea74d020e1ef20582f}{pretty} (const \-T \&t, const \-::std\-::string \&=\char`\"{}\%$|$$|$\char`\"{}, const \-::std\-::string \&=\char`\"{}\{ \char`\"{}, const \-::std\-::string \&=\char`\"{} \}\char`\"{}, const \-::std\-::string \&=\char`\"{}, \char`\"{})
 \item 
-{\footnotesize template$<$typename Ch , typename Tr , typename Range $>$ }\\std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \& \hyperlink{namespaceyuh_1_1range__detail_a6a69e861128439de1b09739e9d88d6c6}{operator$<$$<$} (std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \&os, const range\-\_\-io$<$ \-Range $>$ \&r)
+{\footnotesize template$<$typename Ch , typename Tr $>$ }\\inline\-::std\-::basic\-\_\-string$<$ \-Ch, \*
+\-Tr $>$ const \& \hyperlink{namespaceyuh_1_1adaptors_a3a73e2b7964e4d628cf7f67ea3c93981}{pretty} (\-::std\-::basic\-\_\-string$<$ \-Ch, \-Tr $>$ const \&str, const \-::std\-::string \&=\char`\"{}\%$|$$|$\char`\"{}, const \-::std\-::string \&=\char`\"{}\{ \char`\"{}, const \-::std\-::string \&=\char`\"{} \}\char`\"{}, const \-::std\-::string \&=\char`\"{}, \char`\"{})
 \item 
-{\footnotesize template$<$typename Range , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\range\-\_\-io$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1range__detail_a80175b98364b0c303ffdfcb32617ce4d}{operator$|$} (const \-Range \&r, pretty\-\_\-forwarder f)
+{\footnotesize template$<$typename Ch , typename Tr , typename Range $>$ }\\\-::std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \& \hyperlink{namespaceyuh_1_1range__detail_aab6775f4b199987b34c5ceb60336262f}{operator$<$$<$} (\-::std\-::basic\-\_\-ostream$<$ \-Ch, \-Tr $>$ \&os, const range\-\_\-io$<$ \-Range $>$ \&r)
+\item 
+{\footnotesize template$<$typename Range , typename\-::std\-::enable\-\_\-if$<$ \-::std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\range\-\_\-io$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1range__detail_a80175b98364b0c303ffdfcb32617ce4d}{operator$|$} (const \-Range \&r, pretty\-\_\-forwarder f)
 \end{DoxyCompactItemize}
