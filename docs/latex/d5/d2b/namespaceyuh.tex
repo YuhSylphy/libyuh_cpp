@@ -6,10 +6,16 @@
 \item 
 namespace \hyperlink{namespaceyuh_1_1adaptors}{adaptors}
 \item 
+namespace \hyperlink{namespaceyuh_1_1detail}{detail}
+\item 
 namespace \hyperlink{namespaceyuh_1_1range__detail}{range\-\_\-detail}
 \end{DoxyCompactItemize}
 \subsection*{\-Classes}
 \begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classyuh_1_1any}{any}
+\item 
+class \hyperlink{classyuh_1_1bad__any__cast}{bad\-\_\-any\-\_\-cast}
 \item 
 class \hyperlink{classyuh_1_1bignum}{bignum}
 \item 
@@ -18,20 +24,42 @@ class \hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}
 class \hyperlink{classyuh_1_1polygonal__range}{polygonal\-\_\-range}
 \item 
 class \hyperlink{classyuh_1_1prime__range}{prime\-\_\-range}
+\item 
+class \hyperlink{classyuh_1_1singleton}{singleton}
+\item 
+class \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}
 \end{DoxyCompactItemize}
 \subsection*{\-Typedefs}
 \begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classyuh_1_1singleton}{singleton}$<$ \hyperlink{classyuh_1_1detail_1_1logger}{detail\-::logger} $>$ \hyperlink{namespaceyuh_a3ab03e295f13e50ad34282511114d186}{logger}
 \item 
 typedef long long \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type}
 \end{DoxyCompactItemize}
 \subsection*{\-Functions}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\\-Value\-Type $\ast$ \hyperlink{namespaceyuh_a1487bbf77dc336991025682f279ee186}{any\-\_\-cast} (\hyperlink{classyuh_1_1any}{any} $\ast$operand)
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\const \-Value\-Type $\ast$ \hyperlink{namespaceyuh_afcf58d96b738d63f59f457cb7a408300}{any\-\_\-cast} (const \hyperlink{classyuh_1_1any}{any} $\ast$operand)
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\\-Value\-Type \hyperlink{namespaceyuh_a26fb722b89b4bd877ac0a45557197300}{any\-\_\-cast} (\hyperlink{classyuh_1_1any}{any} \&operand)
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\\-Value\-Type \hyperlink{namespaceyuh_a4022d9d928efe991fb8725cef52cde4a}{any\-\_\-cast} (const \hyperlink{classyuh_1_1any}{any} \&operand)
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\\-Value\-Type $\ast$ \hyperlink{namespaceyuh_ad72d3b8a727efe68d300bb6f91a3d85a}{unsafe\-\_\-any\-\_\-cast} (\hyperlink{classyuh_1_1any}{any} $\ast$operand)
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\const \-Value\-Type $\ast$ \hyperlink{namespaceyuh_a1e4530cf87293d06d58291053f365d01}{unsafe\-\_\-any\-\_\-cast} (const \hyperlink{classyuh_1_1any}{any} $\ast$operand)
+\item 
+inline\-::std\-::ostream \& \hyperlink{namespaceyuh_aa95ffb9b508c97ed18bd470d6b1f62f3}{operator$<$$<$} (\-::std\-::ostream \&os, const \hyperlink{classyuh_1_1any}{any} \&a)
+\item 
 void \hyperlink{namespaceyuh_aa193df2583649f98adcb61639763872d}{swap} (\hyperlink{classyuh_1_1bignum}{bignum} \&lhs, \hyperlink{classyuh_1_1bignum}{bignum} \&rhs)  throw ()
 \item 
 \hyperlink{classyuh_1_1bignum}{bignum} \hyperlink{namespaceyuh_aa5ca9c97a6e2f8461ef346724d9f4a3c}{operator\char`\"{}\char`\"{}\-\_\-\-B} (const char $\ast$)
 \item 
 std\-::ostream \& \hyperlink{namespaceyuh_a1fe067954dcd4572b8d2472b8457814d}{operator$<$$<$} (std\-::ostream \&os, const \hyperlink{classyuh_1_1bignum}{bignum} \&rhs)
+\item 
+{\footnotesize template$<$typename... \-Args$>$ }\\cartesian\-\_\-range$<$ \-Args...$>$ \hyperlink{namespaceyuh_a2bc780cfdd2490f69414d902752eeaa9}{cartesian} (\-Args \&...args)
 \item 
 {\footnotesize template$<$typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1fibonacci__range}{fibonacci\-\_\-range}$<$ \-Integer $>$ \hyperlink{namespaceyuh_a11988532f81d143e1b5b74d461dd8067}{fibonacci} (\-Integer first=0)
 \item 
@@ -44,6 +72,8 @@ std\-::ostream \& \hyperlink{namespaceyuh_a1fe067954dcd4572b8d2472b8457814d}{ope
 {\footnotesize template$<$typename Range $>$ }\\bool \hyperlink{namespaceyuh_af94deeef5a14f79a6a51c6ca3155d03e}{is\-\_\-\-Pythagorean} (const \-Range \&rng)
 \item 
 {\footnotesize template$<$typename Integer $>$ }\\bool \hyperlink{namespaceyuh_a43d71ed08fec121213f4ad3acbdc4d26}{is\-\_\-square} (\-Integer n)
+\item 
+{\footnotesize template$<$typename Integer $>$ }\\\-Integer \hyperlink{namespaceyuh_a275c6c9f73e9d7d9589fea9e2e93aacf}{comb} (\-Integer const n, \-Integer const r)
 \item 
 {\footnotesize template$<$size\-\_\-t \-P, typename Integer  = int$>$ }\\\hyperlink{classyuh_1_1polygonal__range}{polygonal\-\_\-range}$<$ \-P, \-Integer $>$ \hyperlink{namespaceyuh_ac79b05fba2817ead4f0b5fd4c5a5a805}{polygonal} (\-Integer first=1)
 \item 
@@ -58,6 +88,18 @@ void \hyperlink{namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}{prime\-\_\-sift}
 {\footnotesize template$<$typename Integer $>$ }\\std\-::multiset$<$ \hyperlink{namespaceyuh_af542f8440602da42322ddb7ea8242336}{prime\-\_\-type} $>$ \hyperlink{namespaceyuh_afb5d08e183729831f760d6c2a27226d8}{prime\-\_\-factor} (\-Integer num)
 \item 
 \hyperlink{namespaceyuh_aef8d22260a5c6af5f37d206badfd3d4e}{decltype} (range\-\_\-detail\-::prime\-\_\-iterator\-::get\-\_\-prime()) get\-\_\-prime\-\_\-list()
+\item 
+{\footnotesize template$<$class T , class Container $>$ }\\bool \hyperlink{namespaceyuh_a421c2841854b1b12fc7b0d52949db27c}{operator==} (const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&lhs, const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&rhs)
+\item 
+{\footnotesize template$<$class T , class Container $>$ }\\bool \hyperlink{namespaceyuh_a48b3691ecd13037fbba83d342e372dc9}{operator!=} (const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&lhs, const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&rhs)
+\item 
+{\footnotesize template$<$class T , class Container $>$ }\\bool \hyperlink{namespaceyuh_a8be12521082844890227cb3244ef0f9d}{operator$<$} (const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&lhs, const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&rhs)
+\item 
+{\footnotesize template$<$class T , class Container $>$ }\\bool \hyperlink{namespaceyuh_a90c7552eaca11ce5f0d3d1e55b3e31a4}{operator$>$} (const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&lhs, const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&rhs)
+\item 
+{\footnotesize template$<$class T , class Container $>$ }\\bool \hyperlink{namespaceyuh_aba0d432a07a5b925326f546cf7fa695f}{operator$<$=} (const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&lhs, const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&rhs)
+\item 
+{\footnotesize template$<$class T , class Container $>$ }\\bool \hyperlink{namespaceyuh_ac900ae8e985fb9b865c99e3a2ab84d07}{operator$>$=} (const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&lhs, const \hyperlink{classyuh_1_1thread__queue}{thread\-\_\-queue}$<$ \-T, \-Container $>$ \&rhs)
 \end{DoxyCompactItemize}
 
 
@@ -68,16 +110,191 @@ void \hyperlink{namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}{prime\-\_\-sift}
 
 
 \subsection{\-Typedef \-Documentation}
+\hypertarget{namespaceyuh_a3ab03e295f13e50ad34282511114d186}{\index{yuh@{yuh}!logger@{logger}}
+\index{logger@{logger}!yuh@{yuh}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf singleton}$<${\bf detail\-::logger}$>$ {\bf logger}}}\label{d5/d2b/namespaceyuh_a3ab03e295f13e50ad34282511114d186}
+シングルトンオブジェクト 
+
+\-Definition at line 133 of file logger.\-h.
+
 \hypertarget{namespaceyuh_af542f8440602da42322ddb7ea8242336}{\index{yuh@{yuh}!prime\-\_\-type@{prime\-\_\-type}}
 \index{prime\-\_\-type@{prime\-\_\-type}!yuh@{yuh}}
 \subsubsection[{prime\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef long long {\bf prime\-\_\-type}}}\label{d5/d2b/namespaceyuh_af542f8440602da42322ddb7ea8242336}
 
 
-\-Definition at line 12 of file prime.\-h.
+\-Definition at line 21 of file prime.\-h.
 
 
 
 \subsection{\-Function \-Documentation}
+\hypertarget{namespaceyuh_a1487bbf77dc336991025682f279ee186}{\index{yuh@{yuh}!any\-\_\-cast@{any\-\_\-cast}}
+\index{any\-\_\-cast@{any\-\_\-cast}!yuh@{yuh}}
+\subsubsection[{any\-\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}\-Value\-Type$\ast$ {\bf yuh\-::any\-\_\-cast} (
+\begin{DoxyParamCaption}
+\item[{any $\ast$}]{operand}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_a1487bbf77dc336991025682f279ee186}
+
+
+\-Definition at line 187 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        return operand && 
+#ifdef BOOST_AUX_ANY_TYPE_ID_NAME
+            ::std::strcmp(operand->type().name(), typeid(ValueType).name()) == 
+      0
+#else
+            operand->type() == typeid(ValueType)
+#endif
+            ? &static_cast<any::holder<ValueType> *>(operand->content)->held
+            : 0;
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_afcf58d96b738d63f59f457cb7a408300}{\index{yuh@{yuh}!any\-\_\-cast@{any\-\_\-cast}}
+\index{any\-\_\-cast@{any\-\_\-cast}!yuh@{yuh}}
+\subsubsection[{any\-\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}const \-Value\-Type$\ast$ {\bf yuh\-::any\-\_\-cast} (
+\begin{DoxyParamCaption}
+\item[{const any $\ast$}]{operand}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_afcf58d96b738d63f59f457cb7a408300}
+
+
+\-Definition at line 200 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        return any_cast<ValueType>(const_cast<any *>(operand));
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a26fb722b89b4bd877ac0a45557197300}{\index{yuh@{yuh}!any\-\_\-cast@{any\-\_\-cast}}
+\index{any\-\_\-cast@{any\-\_\-cast}!yuh@{yuh}}
+\subsubsection[{any\-\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}\-Value\-Type {\bf yuh\-::any\-\_\-cast} (
+\begin{DoxyParamCaption}
+\item[{any \&}]{operand}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_a26fb722b89b4bd877ac0a45557197300}
+
+
+\-Definition at line 206 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        typedef BOOST_DEDUCED_TYPENAME boost::remove_reference<ValueType>::type
+       nonref;
+
+#ifdef BOOST_NO_TEMPLATE_PARTIAL_SPECIALIZATION
+        // If 'nonref' is still reference type, it means the user has not
+        // specialized 'remove_reference'.
+
+        // Please use BOOST_BROKEN_COMPILER_TYPE_TRAITS_SPECIALIZATION macro
+        // to generate specialization of remove_reference for your class
+        // See type traits library documentation for details
+        BOOST_STATIC_ASSERT(!is_reference<nonref>::value);
+#endif
+
+        nonref * result = any_cast<nonref>(&operand);
+        if(!result)
+            boost::throw_exception(bad_any_cast());
+        return *result;
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a4022d9d928efe991fb8725cef52cde4a}{\index{yuh@{yuh}!any\-\_\-cast@{any\-\_\-cast}}
+\index{any\-\_\-cast@{any\-\_\-cast}!yuh@{yuh}}
+\subsubsection[{any\-\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}\-Value\-Type {\bf yuh\-::any\-\_\-cast} (
+\begin{DoxyParamCaption}
+\item[{const any \&}]{operand}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_a4022d9d928efe991fb8725cef52cde4a}
+
+
+\-Definition at line 227 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        typedef BOOST_DEDUCED_TYPENAME boost::remove_reference<ValueType>::type
+       nonref;
+
+#ifdef BOOST_NO_TEMPLATE_PARTIAL_SPECIALIZATION
+        // The comment in the above version of 'any_cast' explains when this
+        // assert is fired and what to do.
+        BOOST_STATIC_ASSERT(!is_reference<nonref>::value);
+#endif
+
+        return any_cast<const nonref &>(const_cast<any &>(operand));
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a2bc780cfdd2490f69414d902752eeaa9}{\index{yuh@{yuh}!cartesian@{cartesian}}
+\index{cartesian@{cartesian}!yuh@{yuh}}
+\subsubsection[{cartesian}]{\setlength{\rightskip}{0pt plus 5cm}cartesian\-\_\-range$<$\-Args...$>$ {\bf yuh\-::cartesian} (
+\begin{DoxyParamCaption}
+\item[{\-Args \&...}]{args}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_a2bc780cfdd2490f69414d902752eeaa9}
+
+
+\-Definition at line 254 of file cartesian.\-hpp.
+
+
+\begin{DoxyCode}
+{
+    detail::cartesian_iterator<Args...> it(args...) ;
+    return cartesian_range<Args...>(
+        it,
+        it.make_end_iterator()
+        );
+}
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a275c6c9f73e9d7d9589fea9e2e93aacf}{\index{yuh@{yuh}!comb@{comb}}
+\index{comb@{comb}!yuh@{yuh}}
+\subsubsection[{comb}]{\setlength{\rightskip}{0pt plus 5cm}\-Integer {\bf yuh\-::comb} (
+\begin{DoxyParamCaption}
+\item[{\-Integer const}]{n, }
+\item[{\-Integer const}]{r}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_a275c6c9f73e9d7d9589fea9e2e93aacf}
+組合せ n\-Cr. 範囲外は知らない． 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Integer} & 整数型 \\
+\hline
+{\em n} & 引数 \\
+\hline
+{\em r} & 引数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+n\-Cr 
+\end{DoxyReturn}
+
+
+\-Definition at line 99 of file math.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        Integer ret = 1;
+
+        // static ifはやく欲しい．メタ関数だけでここ符号有無で分岐させるのは面倒すぎる
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wtautological-compare"
+#endif
+        if( n < 0 | r < 0 ) return 0;
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+
+        for( auto i: boost::irange( static_cast<Integer>(1), r + 1 ) )
+        {   //漸化式を素直に
+            ret = ret * (n - i + 1) / i;
+        }
+        return ret;
+    }
+\end{DoxyCode}
 \hypertarget{namespaceyuh_aef8d22260a5c6af5f37d206badfd3d4e}{\index{yuh@{yuh}!decltype@{decltype}}
 \index{decltype@{decltype}!yuh@{yuh}}
 \subsubsection[{decltype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yuh\-::decltype} (
@@ -90,7 +307,7 @@ void \hyperlink{namespaceyuh_ac7fcc7fa46bf6b7cf12a53a653b23317}{prime\-\_\-sift}
 \end{DoxyReturn}
 
 
-\-Definition at line 234 of file prime.\-h.
+\-Definition at line 246 of file prime.\-h.
 
 
 \begin{DoxyCode}
@@ -173,7 +390,7 @@ nが回文数かどうか
 \end{DoxyReturn}
 
 
-\-Definition at line 23 of file math.\-hpp.
+\-Definition at line 24 of file math.\-hpp.
 
 
 \begin{DoxyCode}
@@ -219,7 +436,7 @@ nが回文数かどうか
 \end{DoxyReturn}
 
 
-\-Definition at line 51 of file math.\-hpp.
+\-Definition at line 52 of file math.\-hpp.
 
 
 \begin{DoxyCode}
@@ -248,7 +465,7 @@ nが回文数かどうか
 \end{DoxyReturn}
 
 
-\-Definition at line 65 of file math.\-hpp.
+\-Definition at line 66 of file math.\-hpp.
 
 
 \begin{DoxyCode}
@@ -283,12 +500,30 @@ nが回文数かどうか
 \end{DoxyReturn}
 
 
-\-Definition at line 84 of file math.\-hpp.
+\-Definition at line 85 of file math.\-hpp.
 
 
 \begin{DoxyCode}
     {
         return  n == std::pow(std::floor(std::sqrt(n)), 2);
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a48b3691ecd13037fbba83d342e372dc9}{\index{yuh@{yuh}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!yuh@{yuh}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool yuh\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{lhs, }
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_a48b3691ecd13037fbba83d342e372dc9}
+
+
+\-Definition at line 258 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+    {   // test for queue inequality
+        return (!(lhs == rhs));
     }
 \end{DoxyCode}
 \hypertarget{namespaceyuh_aa5ca9c97a6e2f8461ef346724d9f4a3c}{\index{yuh@{yuh}!operator\char`\"{}\char`\"{}\-\_\-\-B@{operator""""\-\_\-\-B}}
@@ -300,12 +535,48 @@ nが回文数かどうか
 )}}\label{d5/d2b/namespaceyuh_aa5ca9c97a6e2f8461ef346724d9f4a3c}
 ユーザ定義リテラル\-\_\-\-B 
 
-\-Definition at line 287 of file bignum.\-cpp.
+\-Definition at line 288 of file bignum.\-cpp.
 
 
 \begin{DoxyCode}
     {
         return bignum(std::string(str));
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a8be12521082844890227cb3244ef0f9d}{\index{yuh@{yuh}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!yuh@{yuh}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool yuh\-::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{lhs, }
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_a8be12521082844890227cb3244ef0f9d}
+
+
+\-Definition at line 266 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+    {   // test if lhs < rhs for queues
+        return (lhs._Get_queue() < rhs._Get_queue());
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_aa95ffb9b508c97ed18bd470d6b1f62f3}{\index{yuh@{yuh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!yuh@{yuh}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}inline \-::std\-::ostream\& yuh\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream \&}]{os, }
+\item[{const any \&}]{a}
+\end{DoxyParamCaption}
+)}}\label{d5/d2b/namespaceyuh_aa95ffb9b508c97ed18bd470d6b1f62f3}
+
+
+\-Definition at line 257 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        return a.content->output(os);
     }
 \end{DoxyCode}
 \hypertarget{namespaceyuh_a1fe067954dcd4572b8d2472b8457814d}{\index{yuh@{yuh}!operator$<$$<$@{operator$<$$<$}}
@@ -328,12 +599,84 @@ os
 \end{DoxyReturn}
 
 
-\-Definition at line 284 of file bignum.\-h.
+\-Definition at line 296 of file bignum.\-h.
 
 
 \begin{DoxyCode}
     {
         return rhs.output(os);
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_aba0d432a07a5b925326f546cf7fa695f}{\index{yuh@{yuh}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!yuh@{yuh}}
+\subsubsection[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}bool yuh\-::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{lhs, }
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_aba0d432a07a5b925326f546cf7fa695f}
+
+
+\-Definition at line 282 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+    {   // test if lhs <= rhs for queues
+        return (!(rhs < lhs));
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a421c2841854b1b12fc7b0d52949db27c}{\index{yuh@{yuh}!operator==@{operator==}}
+\index{operator==@{operator==}!yuh@{yuh}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool yuh\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{lhs, }
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_a421c2841854b1b12fc7b0d52949db27c}
+
+
+\-Definition at line 250 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+    {   // test for queue equality
+        return (lhs._Get_queue() == rhs._Get_queue());
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a90c7552eaca11ce5f0d3d1e55b3e31a4}{\index{yuh@{yuh}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!yuh@{yuh}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}bool yuh\-::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{lhs, }
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_a90c7552eaca11ce5f0d3d1e55b3e31a4}
+
+
+\-Definition at line 274 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+    {   // test if lhs > rhs for queues
+        return (rhs < lhs);
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_ac900ae8e985fb9b865c99e3a2ab84d07}{\index{yuh@{yuh}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!yuh@{yuh}}
+\subsubsection[{operator$>$=}]{\setlength{\rightskip}{0pt plus 5cm}bool yuh\-::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{lhs, }
+\item[{const thread\-\_\-queue$<$ \-T, \-Container $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_ac900ae8e985fb9b865c99e3a2ab84d07}
+
+
+\-Definition at line 290 of file thread\-\_\-queue.\-hpp.
+
+
+\begin{DoxyCode}
+    {   // test if lhs >= rhs for queues
+        return (!(lhs < rhs));
     }
 \end{DoxyCode}
 \hypertarget{namespaceyuh_ac79b05fba2817ead4f0b5fd4c5a5a805}{\index{yuh@{yuh}!polygonal@{polygonal}}
@@ -413,7 +756,7 @@ n in \mbox{[}first, \-Inf)の素数列を表すrange
 \end{DoxyReturn}
 
 
-\-Definition at line 148 of file prime.\-cpp.
+\-Definition at line 165 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
@@ -444,7 +787,7 @@ n in \mbox{[}first, last)の素数列を表すrange
 \end{DoxyReturn}
 
 
-\-Definition at line 154 of file prime.\-cpp.
+\-Definition at line 171 of file prime.\-cpp.
 
 
 \begin{DoxyCode}
@@ -473,7 +816,7 @@ n in \mbox{[}first, last)の素数列を表すrange
 \end{DoxyReturn}
 
 
-\-Definition at line 208 of file prime.\-h.
+\-Definition at line 220 of file prime.\-h.
 
 
 \begin{DoxyCode}
@@ -512,7 +855,7 @@ n in \mbox{[}first, last)の素数列を表すrange
 \end{DoxyParams}
 
 
-\-Definition at line 194 of file prime.\-h.
+\-Definition at line 206 of file prime.\-h.
 
 
 \begin{DoxyCode}
@@ -538,9 +881,43 @@ global swap overload
 \end{DoxyParams}
 
 
-\-Definition at line 298 of file bignum.\-cpp.
+\-Definition at line 300 of file bignum.\-cpp.
 
 
 \begin{DoxyCode}
     { lhs.swap(rhs); }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_ad72d3b8a727efe68d300bb6f91a3d85a}{\index{yuh@{yuh}!unsafe\-\_\-any\-\_\-cast@{unsafe\-\_\-any\-\_\-cast}}
+\index{unsafe\-\_\-any\-\_\-cast@{unsafe\-\_\-any\-\_\-cast}!yuh@{yuh}}
+\subsubsection[{unsafe\-\_\-any\-\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}\-Value\-Type$\ast$ {\bf yuh\-::unsafe\-\_\-any\-\_\-cast} (
+\begin{DoxyParamCaption}
+\item[{any $\ast$}]{operand}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_ad72d3b8a727efe68d300bb6f91a3d85a}
+
+
+\-Definition at line 246 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        return &static_cast<any::holder<ValueType> *>(operand->content)->held;
+    }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_a1e4530cf87293d06d58291053f365d01}{\index{yuh@{yuh}!unsafe\-\_\-any\-\_\-cast@{unsafe\-\_\-any\-\_\-cast}}
+\index{unsafe\-\_\-any\-\_\-cast@{unsafe\-\_\-any\-\_\-cast}!yuh@{yuh}}
+\subsubsection[{unsafe\-\_\-any\-\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}const \-Value\-Type$\ast$ {\bf yuh\-::unsafe\-\_\-any\-\_\-cast} (
+\begin{DoxyParamCaption}
+\item[{const any $\ast$}]{operand}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d5/d2b/namespaceyuh_a1e4530cf87293d06d58291053f365d01}
+
+
+\-Definition at line 252 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+    {
+        return unsafe_any_cast<ValueType>(const_cast<any *>(operand));
+    }
 \end{DoxyCode}

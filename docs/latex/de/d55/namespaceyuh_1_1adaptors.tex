@@ -8,9 +8,12 @@
 \item 
 {\footnotesize template$<$typename Range $>$ }\\count\-\_\-mapped\-\_\-range$<$ const \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_a6b46059339338da677245db0a97006c6}{count\-\_\-map} (const \-Range \&r)
 \item 
-{\footnotesize template$<$typename Range , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\range\-\_\-io$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_a1144c5d97c9a22ad2974a9b92d72a83a}{pretty} (const \-Range \&r, const std\-::string \&fmt=\char`\"{}\%$|$$|$\char`\"{}, const std\-::string \&opn=\char`\"{}\{ \char`\"{}, const std\-::string \&cls=\char`\"{} \}\char`\"{}, const std\-::string \&sep=\char`\"{}, \char`\"{})
+{\footnotesize template$<$typename Range , typename\-::std\-::enable\-\_\-if$<$ \-::std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ Range $>$\-::type, boost\-::mpl\-::true\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\range\-\_\-io$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_ab9de0351a2c9fea583ddd62cbe4b97f1}{pretty} (const \-Range \&r, const \-::std\-::string \&fmt=\char`\"{}\%$|$$|$\char`\"{}, const \-::std\-::string \&opn=\char`\"{}\{ \char`\"{}, const \-::std\-::string \&cls=\char`\"{} \}\char`\"{}, const \-::std\-::string \&sep=\char`\"{}, \char`\"{})
 \item 
-{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ T $>$\-::type, boost\-::mpl\-::false\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\const \-T \& \hyperlink{namespaceyuh_1_1adaptors_aae2589510dae0b03d7cf37a7a85eec69}{pretty} (const \-T \&t, const std\-::string \&=\char`\"{}\%$|$$|$\char`\"{}, const std\-::string \&=\char`\"{}\{ \char`\"{}, const std\-::string \&=\char`\"{} \}\char`\"{}, const std\-::string \&=\char`\"{}, \char`\"{})
+{\footnotesize template$<$typename T , typename\-::std\-::enable\-\_\-if$<$ \-::std\-::is\-\_\-same$<$ typename boost\-::has\-\_\-range\-\_\-const\-\_\-iterator$<$ T $>$\-::type, boost\-::mpl\-::false\-\_\- $>$\-::value $>$\-::type $\ast$\&  = enabler$>$ }\\const \-T \& \hyperlink{namespaceyuh_1_1adaptors_ace5fee35d088aaea74d020e1ef20582f}{pretty} (const \-T \&t, const \-::std\-::string \&=\char`\"{}\%$|$$|$\char`\"{}, const \-::std\-::string \&=\char`\"{}\{ \char`\"{}, const \-::std\-::string \&=\char`\"{} \}\char`\"{}, const \-::std\-::string \&=\char`\"{}, \char`\"{})
+\item 
+{\footnotesize template$<$typename Ch , typename Tr $>$ }\\inline\-::std\-::basic\-\_\-string$<$ \-Ch, \*
+\-Tr $>$ const \& \hyperlink{namespaceyuh_1_1adaptors_a3a73e2b7964e4d628cf7f67ea3c93981}{pretty} (\-::std\-::basic\-\_\-string$<$ \-Ch, \-Tr $>$ const \&str, const \-::std\-::string \&=\char`\"{}\%$|$$|$\char`\"{}, const \-::std\-::string \&=\char`\"{}\{ \char`\"{}, const \-::std\-::string \&=\char`\"{} \}\char`\"{}, const \-::std\-::string \&=\char`\"{}, \char`\"{})
 \item 
 {\footnotesize template$<$typename Range $>$ }\\set\-\_\-powered\-\_\-range$<$ \-Range $>$ \hyperlink{namespaceyuh_1_1adaptors_af3fcfee5424bbff193826b77df52f6e5}{set\-\_\-power} (\-Range \&r)
 \item 
@@ -73,17 +76,17 @@ count\-\_\-map
             return count_mapped_range<const Range>( r );
         }
 \end{DoxyCode}
-\hypertarget{namespaceyuh_1_1adaptors_a1144c5d97c9a22ad2974a9b92d72a83a}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
+\hypertarget{namespaceyuh_1_1adaptors_ab9de0351a2c9fea583ddd62cbe4b97f1}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
 \index{pretty@{pretty}!yuh::adaptors@{yuh\-::adaptors}}
 \subsubsection[{pretty}]{\setlength{\rightskip}{0pt plus 5cm}range\-\_\-io$<$\-Range$>$ {\bf yuh\-::adaptors\-::pretty} (
 \begin{DoxyParamCaption}
 \item[{const \-Range \&}]{r, }
-\item[{const std\-::string \&}]{fmt = {\ttfamily \char`\"{}\%$|$$|$\char`\"{}}, }
-\item[{const std\-::string \&}]{opn = {\ttfamily \char`\"{}\{~\char`\"{}}, }
-\item[{const std\-::string \&}]{cls = {\ttfamily \char`\"{}~\}\char`\"{}}, }
-\item[{const std\-::string \&}]{sep = {\ttfamily \char`\"{},~\char`\"{}}}
+\item[{const \-::std\-::string \&}]{fmt = {\ttfamily \char`\"{}\%$|$$|$\char`\"{}}, }
+\item[{const \-::std\-::string \&}]{opn = {\ttfamily \char`\"{}\{~\char`\"{}}, }
+\item[{const \-::std\-::string \&}]{cls = {\ttfamily \char`\"{}~\}\char`\"{}}, }
+\item[{const \-::std\-::string \&}]{sep = {\ttfamily \char`\"{},~\char`\"{}}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_a1144c5d97c9a22ad2974a9b92d72a83a}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_ab9de0351a2c9fea583ddd62cbe4b97f1}
 範囲をrange\-\_\-ioでくるんで出力可能にする 
 \begin{DoxyParams}{\-Parameters}
 {\em \-Range} & 範囲型 \\
@@ -96,29 +99,37 @@ range\-\_\-io
 \end{DoxyReturn}
 
 
-\-Definition at line 36 of file prettied.\-hpp.
+\-Definition at line 41 of file prettied.\-hpp.
 
 
 \begin{DoxyCode}
                                     { ",
-            const std::string& cls = " }",
-            const std::string& sep = ", "
+            const ::std::string& cls = " }",
+            const ::std::string& sep = ", "
+#ifdef _MSC_VER
+            , typename ::std::enable_if<
+                ::std::is_same<
+                    typename boost::has_range_const_iterator<Range>::type, 
+                    boost::mpl::true_
+                    >::value
+                > ::type *& = enabler
+#endif
             )
         {
             return range_io<Range>(r, fmt, opn, cls, sep);
         }
 \end{DoxyCode}
-\hypertarget{namespaceyuh_1_1adaptors_aae2589510dae0b03d7cf37a7a85eec69}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
+\hypertarget{namespaceyuh_1_1adaptors_ace5fee35d088aaea74d020e1ef20582f}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
 \index{pretty@{pretty}!yuh::adaptors@{yuh\-::adaptors}}
 \subsubsection[{pretty}]{\setlength{\rightskip}{0pt plus 5cm}const \-T\& {\bf yuh\-::adaptors\-::pretty} (
 \begin{DoxyParamCaption}
 \item[{const \-T \&}]{t, }
-\item[{const std\-::string \&}]{ = {\ttfamily \char`\"{}\%$|$$|$\char`\"{}}, }
-\item[{const std\-::string \&}]{ = {\ttfamily \char`\"{}\{~\char`\"{}}, }
-\item[{const std\-::string \&}]{ = {\ttfamily \char`\"{}~\}\char`\"{}}, }
-\item[{const std\-::string \&}]{ = {\ttfamily \char`\"{},~\char`\"{}}}
+\item[{const \-::std\-::string \&}]{ = {\ttfamily \char`\"{}\%$|$$|$\char`\"{}}, }
+\item[{const \-::std\-::string \&}]{ = {\ttfamily \char`\"{}\{~\char`\"{}}, }
+\item[{const \-::std\-::string \&}]{ = {\ttfamily \char`\"{}~\}\char`\"{}}, }
+\item[{const \-::std\-::string \&}]{ = {\ttfamily \char`\"{},~\char`\"{}}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_aae2589510dae0b03d7cf37a7a85eec69}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{de/d55/namespaceyuh_1_1adaptors_ace5fee35d088aaea74d020e1ef20582f}
 rangeではないものは素通しする 
 \begin{DoxyParams}{\-Parameters}
 {\em \-T} & 値型 \\
@@ -131,16 +142,52 @@ tそのもの
 \end{DoxyReturn}
 
 
-\-Definition at line 60 of file prettied.\-hpp.
+\-Definition at line 76 of file prettied.\-hpp.
 
 
 \begin{DoxyCode}
                                 { ",
-            const std::string& = " }",
-            const std::string& = ", "
+            const ::std::string& = " }",
+            const ::std::string& = ", "
+#ifdef _MSC_VER
+            , typename ::std::enable_if<
+                ::std::is_same<
+                    typename boost::has_range_const_iterator<T>::type, 
+                    boost::mpl::false_
+                    >::value
+                > ::type *& = enabler 
+#endif
             )
         {
             return t;
+        }
+\end{DoxyCode}
+\hypertarget{namespaceyuh_1_1adaptors_a3a73e2b7964e4d628cf7f67ea3c93981}{\index{yuh\-::adaptors@{yuh\-::adaptors}!pretty@{pretty}}
+\index{pretty@{pretty}!yuh::adaptors@{yuh\-::adaptors}}
+\subsubsection[{pretty}]{\setlength{\rightskip}{0pt plus 5cm}inline \-::std\-::basic\-\_\-string$<$\-Ch, \-Tr$>$ const\& {\bf yuh\-::adaptors\-::pretty} (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::basic\-\_\-string$<$ \-Ch, \-Tr $>$ const \&}]{str, }
+\item[{const \-::std\-::string \&}]{ = {\ttfamily \char`\"{}\%$|$$|$\char`\"{}}, }
+\item[{const \-::std\-::string \&}]{ = {\ttfamily \char`\"{}\{~\char`\"{}}, }
+\item[{const \-::std\-::string \&}]{ = {\ttfamily \char`\"{}~\}\char`\"{}}, }
+\item[{const \-::std\-::string \&}]{ = {\ttfamily \char`\"{},~\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{de/d55/namespaceyuh_1_1adaptors_a3a73e2b7964e4d628cf7f67ea3c93981}
+
+
+\-Definition at line 96 of file prettied.\-hpp.
+
+
+\begin{DoxyCode}
+                                { ",
+            const ::std::string& = " }",
+            const ::std::string& = ", "
+#ifdef _MSC_VER
+            , void* =0
+#endif
+            )
+        {
+            return str;
         }
 \end{DoxyCode}
 \hypertarget{namespaceyuh_1_1adaptors_af3fcfee5424bbff193826b77df52f6e5}{\index{yuh\-::adaptors@{yuh\-::adaptors}!set\-\_\-power@{set\-\_\-power}}

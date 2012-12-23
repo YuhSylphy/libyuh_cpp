@@ -42,3 +42,19 @@ TEST(math, square)
 	EXPECT_EQ(is_square(3), false);
 	EXPECT_EQ(is_square(12), false);
 }
+
+TEST(math, combination)
+{
+	EXPECT_EQ(comb(4, 2), 6);
+	EXPECT_EQ(comb(5, 2), 10);
+	EXPECT_EQ(comb(40LL, 20LL), 137846528820LL);
+	EXPECT_EQ(comb(39LLU, 19LLU), 68923264410LLU);
+	EXPECT_EQ(comb(50LLU, 11LLU), 37353738800LLU);
+	
+	EXPECT_EQ(comb(4, 4), 1);
+
+//	EXPECT_EQ(comb(10, 12), 0);
+//	EXPECT_EQ(comb(10, -2), 0);
+	//EXPECT_EQ(comb(-5, -2), 0);
+
+}

@@ -77,6 +77,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -209,9 +210,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00027">27</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
-<div class="fragment"><pre class="fragment">            : <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#abf0bf01a903f906b194bf9f01ff2aab8">sign_</a>( n &lt; 0 ), <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>(1)
-<span class="preprocessor">#pragma clang diagnostic pop</span>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00030">30</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<div class="fragment"><pre class="fragment">        : <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#abf0bf01a903f906b194bf9f01ff2aab8">sign_</a>( n &lt; 0 ), <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>(1)
+<span class="preprocessor">#ifdef __clang__</span>
+<span class="preprocessor"></span><span class="preprocessor">#pragma clang diagnostic pop</span>
+<span class="preprocessor"></span><span class="preprocessor">#endif</span>
 <span class="preprocessor"></span>        {
             <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[0] = <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#abf0bf01a903f906b194bf9f01ff2aab8">sign_</a>? -n: n;
         }
@@ -243,7 +246,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00044">44</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00054">54</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        : <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#abf0bf01a903f906b194bf9f01ff2aab8">sign_</a>(sign), <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>(0)
         {
             boost::copy(r, std::back_inserter(<a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>));
@@ -320,7 +323,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>copy ctor </p>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00060">60</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00070">70</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">            : <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#abf0bf01a903f906b194bf9f01ff2aab8">sign_</a>(rhs.sign_), <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>(rhs.d_) {}
 </pre></div>
 </div>
@@ -342,7 +345,7 @@ Private Attributes</h2></td></tr>
 <p>絶対値 </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>符号をfalseにしたもの </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00235">235</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00245">245</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        {
             <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a3554dd27e1fe3080ba13d1d00027ad10">bignum</a> ret(*<span class="keyword">this</span>);
             ret.sign_ = <span class="keyword">false</span>;
@@ -415,7 +418,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00187">187</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00197">197</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#abf0bf01a903f906b194bf9f01ff2aab8">sign_</a>!=rhs.sign_ || <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>!=rhs.d_; }
 </pre></div>
 </div>
@@ -435,7 +438,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>単項プラス </p>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00113">113</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00123">123</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { 
             <span class="keywordflow">return</span> *<span class="keyword">this</span>;
         }
@@ -465,7 +468,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>自身 </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00136">136</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00146">146</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a3554dd27e1fe3080ba13d1d00027ad10">bignum</a>(*<span class="keyword">this</span>)+=rhs; }
 </pre></div>
 </div>
@@ -493,7 +496,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>自身 </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00144">144</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00154">154</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a3554dd27e1fe3080ba13d1d00027ad10">bignum</a>(*<span class="keyword">this</span>)+=rhs; }
 </pre></div>
 </div>
@@ -538,14 +541,14 @@ Private Attributes</h2></td></tr>
         <span class="keywordflow">for</span>( ; i &lt; rhs.d_.size(); ++i)
         {
             <span class="keyword">const</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#ac439f7dc1f74e035e0543cc184a57445">twice_t</a> t = C + <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[i] + rhs.d_[i];
-            <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[i] = mask &amp; t;
+            <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[i] = <span class="keyword">static_cast&lt;</span><a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a918fd2d7b4fcfb6452272f1477745a53">digit_t</a><span class="keyword">&gt;</span>(mask &amp; t);
             C = t &gt;&gt; 32;
         }
         
         <span class="keywordflow">for</span>( ; i &lt; <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>.size() &amp;&amp; C &gt; 0; ++i )
         {
             <span class="keyword">const</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#ac439f7dc1f74e035e0543cc184a57445">twice_t</a> t = C + <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[i];
-            d_[i] = mask &amp; t;
+            d_[i] = <span class="keyword">static_cast&lt;</span><a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a918fd2d7b4fcfb6452272f1477745a53">digit_t</a><span class="keyword">&gt;</span>(mask &amp; t);
             C = t &gt;&gt; 32;
         }
 
@@ -582,7 +585,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>自身 </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00128">128</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00138">138</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> *<span class="keyword">this</span>+=rhs; }
 </pre></div>
 </div>
@@ -602,7 +605,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>単項マイナス </p>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00104">104</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00114">114</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { 
             <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a3554dd27e1fe3080ba13d1d00027ad10">bignum</a> ret(*<span class="keyword">this</span>);
             ret.sign_ = !<a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#abf0bf01a903f906b194bf9f01ff2aab8">sign_</a>;
@@ -634,7 +637,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>結果rvalue </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00165">165</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00175">175</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a3554dd27e1fe3080ba13d1d00027ad10">bignum</a>(*<span class="keyword">this</span>)-=rhs; }
 </pre></div>
 </div>
@@ -662,7 +665,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>結果rvalue </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00173">173</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00183">183</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a3554dd27e1fe3080ba13d1d00027ad10">bignum</a>(*<span class="keyword">this</span>)-=rhs; }
 </pre></div>
 </div>
@@ -712,13 +715,13 @@ Private Attributes</h2></td></tr>
         <span class="keywordflow">for</span>( ; i &lt; rhs.d_.size(); ++i )
         {
             <span class="keyword">const</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#ac439f7dc1f74e035e0543cc184a57445">twice_t</a> t = (1LL &lt;&lt; 32) + <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[i] - rhs.d_[i] - B;
-            <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[i] = mask &amp; t;
+            <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[i] = static_cast&lt;digit_t&gt;(mask &amp; t);
             B = 1 - (t &gt;&gt; 32);
         }
         <span class="keywordflow">for</span>( ; i &lt; <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>.size() &amp;&amp; B &gt; 0; ++i )
         {
             <span class="keyword">const</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#ac439f7dc1f74e035e0543cc184a57445">twice_t</a> t = (1LL &lt;&lt; 32) + <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[i] - B;
-            <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[i] = mask &amp; t;
+            <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>[i] = <span class="keyword">static_cast&lt;</span><a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a918fd2d7b4fcfb6452272f1477745a53">digit_t</a><span class="keyword">&gt;</span>(mask &amp; t);
             B = 1 - (t &gt;&gt; 32);
 
         }
@@ -758,7 +761,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>自身 </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00157">157</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00167">167</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> *<span class="keyword">this</span>-=rhs; }
 </pre></div>
 </div>
@@ -789,12 +792,12 @@ Private Attributes</h2></td></tr>
 <p>Definition at line <a class="el" href="../../d2/d67/bignum_8cpp_source.html#l00197">197</a> of file <a class="el" href="../../d2/d67/bignum_8cpp_source.html">bignum.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">    {
         std::deque&lt;digit_t&gt; deq;
-        <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#ac439f7dc1f74e035e0543cc184a57445">twice_t</a> d; <span class="comment">// 割られる数</span>
+        <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#ac439f7dc1f74e035e0543cc184a57445">twice_t</a> d = 0; <span class="comment">// 割られる数</span>
         <span class="keywordflow">for</span>( <span class="keyword">auto</span> x: <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a> | reversed ) <span class="comment">// 上位から</span>
         {
             d &lt;&lt;= 32; <span class="comment">// 前回の余りをシフトしておいて</span>
             d += x;   <span class="comment">// 次の桁を足すと今回の割られる数</span>
-            deq.push_front(d / rhs); <span class="comment">// 商を追加</span>
+            deq.push_front(static_cast&lt;digit_t&gt;(d / rhs)); <span class="comment">// 商を追加</span>
             d %= rhs; <span class="comment">// 余りが次の割られる数に</span>
         }
         <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#ad64d450e413ed7795476254d1425b677">std::swap</a>(<a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>, deq);
@@ -876,7 +879,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>結果rvalue </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00086">86</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00096">96</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a3554dd27e1fe3080ba13d1d00027ad10">bignum</a>(*<span class="keyword">this</span>)&lt;&lt;=rhs; }
 </pre></div>
 </div>
@@ -955,7 +958,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00220">220</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00230">230</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> !(rhs &lt; *<span class="keyword">this</span>); }
 </pre></div>
 </div>
@@ -982,7 +985,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00196">196</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00206">206</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> !(*<span class="keyword">this</span>!=rhs); }
 </pre></div>
 </div>
@@ -1009,7 +1012,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00212">212</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00222">222</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> (rhs &lt; *<span class="keyword">this</span>); } 
 </pre></div>
 </div>
@@ -1036,7 +1039,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00228">228</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00238">238</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> !(*<span class="keyword">this</span> &lt; rhs); }
 </pre></div>
 </div>
@@ -1064,7 +1067,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>結果rvalue </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00099">99</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00109">109</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        { <span class="keywordflow">return</span> <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#a3554dd27e1fe3080ba13d1d00027ad10">bignum</a>(*<span class="keyword">this</span>)&gt;&gt;=rhs; }
 </pre></div>
 </div>
@@ -1143,7 +1146,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>osそのもの </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00246">246</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00256">256</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 <div class="fragment"><pre class="fragment">        {
             <span class="keywordflow">return</span> os &lt;&lt; this-&gt;<a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#aa48c39f92bc04eded742f5310c74aafe">to_string</a>();
         }
@@ -1172,7 +1175,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d2/d67/bignum_8cpp_source.html#l00292">292</a> of file <a class="el" href="../../d2/d67/bignum_8cpp_source.html">bignum.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d67/bignum_8cpp_source.html#l00294">294</a> of file <a class="el" href="../../d2/d67/bignum_8cpp_source.html">bignum.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">    {
         <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#ad64d450e413ed7795476254d1425b677">std::swap</a>(<a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#abf0bf01a903f906b194bf9f01ff2aab8">sign_</a>, rhs.sign_);
         <a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#ad64d450e413ed7795476254d1425b677">std::swap</a>(<a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#af9e1efe49c7f3e8ca8889493abee7cfa">d_</a>, rhs.d_);
@@ -1248,7 +1251,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>32bit毎内部表現 </p>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00263">263</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00273">273</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 
 </div>
 </div>
@@ -1264,7 +1267,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>符号 </p>
 
-<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00259">259</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/da2/bignum_8h_source.html#l00269">269</a> of file <a class="el" href="../../dd/da2/bignum_8h_source.html">bignum.h</a>.</p>
 
 </div>
 </div>
@@ -1279,7 +1282,7 @@ Private Attributes</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -1293,7 +1296,7 @@ Private Attributes</h2></td></tr>
       <li class="navelem"><a class="el" href="../../d5/d2b/namespaceyuh.html">yuh</a>      </li>
       <li class="navelem"><a class="el" href="../../d7/d6b/classyuh_1_1bignum.html">bignum</a>      </li>
 
-    <li class="footer">Generated on Wed Aug 29 2012 23:58:36 for yuh library by
+    <li class="footer">Generated on Sun Dec 9 2012 06:35:13 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

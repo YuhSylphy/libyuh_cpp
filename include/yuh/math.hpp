@@ -9,6 +9,7 @@
 
 #include <boost/assert.hpp>
 #include <boost/range/distance.hpp>
+#include <boost/range/irange.hpp>
 #include <stdexcept>
 
 
@@ -84,5 +85,35 @@ namespace yuh
 	bool is_square(Integer n)
 	{
 		return 	n == std::pow(std::floor(std::sqrt(n)), 2);
+	}
+
+	/**
+	 * 組合せ nCr.
+	 * 範囲外は知らない．
+	 * @param Integer 整数型
+	 * @param n 引数
+	 * @param r 引数
+	 * @return nCr
+	 */
+	template<typename Integer>
+	Integer comb(Integer const n, Integer const r)
+	{
+		Integer ret = 1;
+
+		// static ifはやく欲しい．メタ関数だけでここ符号有無で分岐させるのは面倒すぎる
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wtautological-compare"
+#endif
+		if( n < 0 | r < 0 ) return 0;
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+
+		for( auto i: boost::irange( static_cast<Integer>(1), r + 1 ) )
+		{   //漸化式を素直に
+			ret = ret * (n - i + 1) / i;
+		}
+		return ret;
 	}
 }

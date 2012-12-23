@@ -1,0 +1,201 @@
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator}{\section{cartesian\-\_\-iterator$<$ \-Args $>$ \-Struct \-Template \-Reference}
+\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator}\index{cartesian\-\_\-iterator$<$ Args $>$@{cartesian\-\_\-iterator$<$ Args $>$}}
+}
+
+
+{\ttfamily \#include $<$cartesian.\-hpp$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structyuh_1_1detail_1_1cartesian__iterator_a980ea5f727d9c050f396566913129d2a}{cartesian\-\_\-iterator} (\-Args \&...args)
+\item 
+\hyperlink{structyuh_1_1detail_1_1cartesian__iterator}{cartesian\-\_\-iterator} \hyperlink{structyuh_1_1detail_1_1cartesian__iterator_ae3db79b394b18be19791dbab0fd1b082}{make\-\_\-end\-\_\-iterator} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\-\_\-t \-Index$>$ }\\std\-::enable\-\_\-if$<$ sizeof...(\-Args)==\hyperlink{structyuh_1_1detail_1_1cartesian__iterator_ad246a90285e74f351a7fb7afc43c0348}{\-Index}, \*
+\hyperlink{structyuh_1_1detail_1_1cartesian__iterator}{cartesian\-\_\-iterator} \& $>$\-::type \hyperlink{structyuh_1_1detail_1_1cartesian__iterator_a479f62e7fb7c7e0fd89c7e0077c75e3b}{end} ()
+\item 
+{\footnotesize template$<$size\-\_\-t \-Index$>$ }\\std\-::enable\-\_\-if$<$ (sizeof...(\-Args) $>$\*
+ \hyperlink{structyuh_1_1detail_1_1cartesian__iterator}{cartesian\-\_\-iterator} \&\-::type \hyperlink{structyuh_1_1detail_1_1cartesian__iterator_a2f9f75275bfe5e3e62356697e349ecfe}{end} ()
+\item 
+{\footnotesize template$<$size\-\_\-t \-Index$>$ }\\std\-::enable\-\_\-if$<$ sizeof...(\-Args)==\hyperlink{structyuh_1_1detail_1_1cartesian__iterator_ad246a90285e74f351a7fb7afc43c0348}{\-Index}, \*
+\hyperlink{structyuh_1_1detail_1_1cartesian__iterator}{cartesian\-\_\-iterator} \& $>$\-::type \hyperlink{structyuh_1_1detail_1_1cartesian__iterator_a19d2f45314be468caa73b12f582ce2b1}{begin} ()
+\item 
+{\footnotesize template$<$size\-\_\-t \-Index$>$ }\\std\-::enable\-\_\-if$<$ (sizeof...(\-Args) $>$\*
+ \hyperlink{structyuh_1_1detail_1_1cartesian__iterator}{cartesian\-\_\-iterator} \&\-::type \hyperlink{structyuh_1_1detail_1_1cartesian__iterator_a6938d0f40b5cc13a1161c4a1360892c8}{begin} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structyuh_1_1detail_1_1reference__tuple}{reference\-\_\-tuple}$<$ \-Args...$>$\-::type \hyperlink{structyuh_1_1detail_1_1cartesian__iterator_ad2ccb094e1179a6053313017b093b100}{rng\-\_\-}
+\item 
+\hyperlink{structyuh_1_1detail_1_1iterator__tuple}{iterator\-\_\-tuple}$<$ \-Args...$>$\-::type \hyperlink{structyuh_1_1detail_1_1cartesian__iterator_a3be2fc4dce5bf688bebabf6767e81a80}{it\-\_\-}
+\item 
+std\-::enable\-\_\-if$<$ (sizeof...(\-Args) $>$ \hyperlink{structyuh_1_1detail_1_1cartesian__iterator_ad246a90285e74f351a7fb7afc43c0348}{\-Index}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{structyuh_1_1detail_1_1cartesian__iterator_ac09f73e325921cc50ebcd96bed0f8096}{boost\-::iterator\-\_\-core\-\_\-access}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename... \-Args$>$struct yuh\-::detail\-::cartesian\-\_\-iterator$<$ Args $>$}
+
+
+
+\-Definition at line 89 of file cartesian.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator_a980ea5f727d9c050f396566913129d2a}{\index{yuh\-::detail\-::cartesian\-\_\-iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}!cartesian\-\_\-iterator@{cartesian\-\_\-iterator}}
+\index{cartesian\-\_\-iterator@{cartesian\-\_\-iterator}!yuh::detail::cartesian_iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}}
+\subsubsection[{cartesian\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cartesian\-\_\-iterator} (
+\begin{DoxyParamCaption}
+\item[{\-Args \&...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator_a980ea5f727d9c050f396566913129d2a}
+
+
+\-Definition at line 98 of file cartesian.\-hpp.
+
+
+\begin{DoxyCode}
+                : rng_(args...),
+                  it_()
+            { begin<0>(); }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator_a19d2f45314be468caa73b12f582ce2b1}{\index{yuh\-::detail\-::cartesian\-\_\-iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}!begin@{begin}}
+\index{begin@{begin}!yuh::detail::cartesian_iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}std\-::enable\-\_\-if$<$ sizeof...(\-Args) == {\bf \-Index}, {\bf cartesian\-\_\-iterator}\& $>$\-::type {\bf begin} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator_a19d2f45314be468caa73b12f582ce2b1}
+
+
+\-Definition at line 135 of file cartesian.\-hpp.
+
+
+\begin{DoxyCode}
+                {
+                    return *this;
+                }
+\end{DoxyCode}
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator_a6938d0f40b5cc13a1161c4a1360892c8}{\index{yuh\-::detail\-::cartesian\-\_\-iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}!begin@{begin}}
+\index{begin@{begin}!yuh::detail::cartesian_iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}std\-::enable\-\_\-if$<$ (sizeof...(\-Args) $>$ {\bf cartesian\-\_\-iterator}\& \-::type {\bf begin} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator_a6938d0f40b5cc13a1161c4a1360892c8}
+
+
+\-Definition at line 144 of file cartesian.\-hpp.
+
+
+\begin{DoxyCode}
+                {
+                    std::get<Index>(it_) = std::begin(std::get<Index>(rng_));
+                    return begin<Index+1>();
+                }
+\end{DoxyCode}
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator_a479f62e7fb7c7e0fd89c7e0077c75e3b}{\index{yuh\-::detail\-::cartesian\-\_\-iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}!end@{end}}
+\index{end@{end}!yuh::detail::cartesian_iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}std\-::enable\-\_\-if$<$ sizeof...(\-Args) == {\bf \-Index}, {\bf cartesian\-\_\-iterator}\& $>$\-::type {\bf end} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator_a479f62e7fb7c7e0fd89c7e0077c75e3b}
+
+
+\-Definition at line 117 of file cartesian.\-hpp.
+
+
+\begin{DoxyCode}
+                {
+                    return *this;
+                }
+\end{DoxyCode}
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator_a2f9f75275bfe5e3e62356697e349ecfe}{\index{yuh\-::detail\-::cartesian\-\_\-iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}!end@{end}}
+\index{end@{end}!yuh::detail::cartesian_iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}std\-::enable\-\_\-if$<$ (sizeof...(\-Args) $>$ {\bf cartesian\-\_\-iterator}\& \-::type {\bf end} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator_a2f9f75275bfe5e3e62356697e349ecfe}
+
+
+\-Definition at line 126 of file cartesian.\-hpp.
+
+
+\begin{DoxyCode}
+                {
+                    std::get<Index>(it_) = std::end(std::get<Index>(rng_));
+                    return end<Index+1>();
+                }
+\end{DoxyCode}
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator_ae3db79b394b18be19791dbab0fd1b082}{\index{yuh\-::detail\-::cartesian\-\_\-iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}!make\-\_\-end\-\_\-iterator@{make\-\_\-end\-\_\-iterator}}
+\index{make\-\_\-end\-\_\-iterator@{make\-\_\-end\-\_\-iterator}!yuh::detail::cartesian_iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}}
+\subsubsection[{make\-\_\-end\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cartesian\-\_\-iterator} {\bf make\-\_\-end\-\_\-iterator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator_ae3db79b394b18be19791dbab0fd1b082}
+
+
+\-Definition at line 104 of file cartesian.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return cartesian_iterator(*this).end<0>();
+            }
+\end{DoxyCode}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator_ac09f73e325921cc50ebcd96bed0f8096}{\index{yuh\-::detail\-::cartesian\-\_\-iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}!boost\-::iterator\-\_\-core\-\_\-access@{boost\-::iterator\-\_\-core\-\_\-access}}
+\index{boost\-::iterator\-\_\-core\-\_\-access@{boost\-::iterator\-\_\-core\-\_\-access}!yuh::detail::cartesian_iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}}
+\subsubsection[{boost\-::iterator\-\_\-core\-\_\-access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\-::iterator\-\_\-core\-\_\-access\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator_ac09f73e325921cc50ebcd96bed0f8096}
+
+
+\-Definition at line 109 of file cartesian.\-hpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator_ad246a90285e74f351a7fb7afc43c0348}{\index{yuh\-::detail\-::cartesian\-\_\-iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}!\-Index@{\-Index}}
+\index{\-Index@{\-Index}!yuh::detail::cartesian_iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}}
+\subsubsection[{\-Index}]{\setlength{\rightskip}{0pt plus 5cm}std\-::enable\-\_\-if$<$ (sizeof...(\-Args) $>$ {\bf \-Index}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator_ad246a90285e74f351a7fb7afc43c0348}
+
+
+\-Definition at line 124 of file cartesian.\-hpp.
+
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator_a3be2fc4dce5bf688bebabf6767e81a80}{\index{yuh\-::detail\-::cartesian\-\_\-iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}!it\-\_\-@{it\-\_\-}}
+\index{it\-\_\-@{it\-\_\-}!yuh::detail::cartesian_iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}}
+\subsubsection[{it\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator\-\_\-tuple}$<$\-Args...$>$\-::type {\bf it\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator_a3be2fc4dce5bf688bebabf6767e81a80}
+
+
+\-Definition at line 111 of file cartesian.\-hpp.
+
+\hypertarget{structyuh_1_1detail_1_1cartesian__iterator_ad2ccb094e1179a6053313017b093b100}{\index{yuh\-::detail\-::cartesian\-\_\-iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}!rng\-\_\-@{rng\-\_\-}}
+\index{rng\-\_\-@{rng\-\_\-}!yuh::detail::cartesian_iterator@{yuh\-::detail\-::cartesian\-\_\-iterator}}
+\subsubsection[{rng\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf reference\-\_\-tuple}$<$\-Args...$>$\-::type {\bf rng\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d4/dcb/structyuh_1_1detail_1_1cartesian__iterator_ad2ccb094e1179a6053313017b093b100}
+
+
+\-Definition at line 110 of file cartesian.\-hpp.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{cartesian_8hpp}{cartesian.\-hpp}\end{DoxyCompactItemize}

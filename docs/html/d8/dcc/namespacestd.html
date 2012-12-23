@@ -104,8 +104,42 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcc/namespacestd.html#ae255e9984a1eef43dfe3d977beaa2e29">swap</a> (<a class="el" href="../../d7/d6b/classyuh_1_1bignum.html">yuh::bignum</a> &amp;lhs, <a class="el" href="../../d7/d6b/classyuh_1_1bignum.html">yuh::bignum</a> &amp;rhs)  throw ()</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class T , class Container &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/dcc/namespacestd.html#a271586d645dfe0b2225649c69c00400c">swap</a> (<a class="el" href="../../d2/d54/classyuh_1_1thread__queue.html">yuh::thread_queue</a>&lt; T, Container &gt; &amp;lhs, <a class="el" href="../../d2/d54/classyuh_1_1thread__queue.html">yuh::thread_queue</a>&lt; T, Container &gt; &amp;rhs)</td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a271586d645dfe0b2225649c69c00400c"></a><!-- doxytag: member="std::swap" ref="a271586d645dfe0b2225649c69c00400c" args="(yuh::thread_queue&lt; T, Container &gt; &amp;lhs, yuh::thread_queue&lt; T, Container &gt; &amp;rhs)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d8/dcc/namespacestd.html#ae255e9984a1eef43dfe3d977beaa2e29">std::swap</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d54/classyuh_1_1thread__queue.html">yuh::thread_queue</a>&lt; T, Container &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d54/classyuh_1_1thread__queue.html">yuh::thread_queue</a>&lt; T, Container &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../d1/d01/thread__queue_8hpp_source.html#l00240">240</a> of file <a class="el" href="../../d1/d01/thread__queue_8hpp_source.html">thread_queue.hpp</a>.</p>
+<div class="fragment"><pre class="fragment">    {   <span class="comment">// swap lhs and rhs queues</span>
+        lhs.<a class="code" href="../../d2/d54/classyuh_1_1thread__queue.html#accf0d7b5496638eebcd777de62feb9a4">swap</a>(rhs);
+    }
+</pre></div>
+</div>
+</div>
 <a class="anchor" id="ae255e9984a1eef43dfe3d977beaa2e29"></a><!-- doxytag: member="std::swap" ref="ae255e9984a1eef43dfe3d977beaa2e29" args="(yuh::bignum &amp;lhs, yuh::bignum &amp;rhs)" -->
 <div class="memitem">
 <div class="memproto">
@@ -139,7 +173,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d2/d67/bignum_8cpp_source.html#l00305">305</a> of file <a class="el" href="../../d2/d67/bignum_8cpp_source.html">bignum.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d67/bignum_8cpp_source.html#l00307">307</a> of file <a class="el" href="../../d2/d67/bignum_8cpp_source.html">bignum.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">    { lhs.<a class="code" href="../../d7/d6b/classyuh_1_1bignum.html#ad64d450e413ed7795476254d1425b677">swap</a>(rhs); }
 </pre></div>
 </div>
@@ -151,7 +185,7 @@ Functions</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -164,7 +198,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="../../d8/dcc/namespacestd.html">std</a>      </li>
 
-    <li class="footer">Generated on Wed Aug 29 2012 23:58:36 for yuh library by
+    <li class="footer">Generated on Sun Dec 9 2012 06:35:12 for yuh library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

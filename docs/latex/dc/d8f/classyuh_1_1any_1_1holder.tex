@@ -1,0 +1,147 @@
+\hypertarget{classyuh_1_1any_1_1holder}{\section{any\-:\-:holder$<$ \-Value\-Type $>$ \-Class \-Template \-Reference}
+\label{dc/d8f/classyuh_1_1any_1_1holder}\index{any\-::holder$<$ Value\-Type $>$@{any\-::holder$<$ Value\-Type $>$}}
+}
+\-Inheritance diagram for any\-:\-:holder$<$ \-Value\-Type $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dc/d8f/classyuh_1_1any_1_1holder}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1any_1_1holder_a4240001abf3fba918bc650ddb5e38239}{holder} (const \-Value\-Type \&value)
+\item 
+virtual const \-::std\-::type\-\_\-info \& \hyperlink{classyuh_1_1any_1_1holder_a46bcccb2325469ae16d103be16abd4b9}{type} () const 
+\item 
+virtual \hyperlink{classyuh_1_1any_1_1placeholder}{placeholder} $\ast$ \hyperlink{classyuh_1_1any_1_1holder_a43bd5da15700b27a731a7ec02428eeef}{clone} () const 
+\item 
+virtual \-::std\-::ostream \& \hyperlink{classyuh_1_1any_1_1holder_ae2b1d2c000a3620614d1dc4d367d073d}{output} (\-::std\-::ostream \&os)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-Value\-Type \hyperlink{classyuh_1_1any_1_1holder_a54a9c5b6e9b85a2a37a16b07905414db}{held}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classyuh_1_1any_1_1holder}{holder} \& \hyperlink{classyuh_1_1any_1_1holder_abde5b12649b80ab7d49fc350d1436850}{operator=} (const \hyperlink{classyuh_1_1any_1_1holder}{holder} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename Value\-Type$>$class yuh\-::any\-::holder$<$ Value\-Type $>$}
+
+
+
+\-Definition at line 119 of file any.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classyuh_1_1any_1_1holder_a4240001abf3fba918bc650ddb5e38239}{\index{yuh\-::any\-::holder@{yuh\-::any\-::holder}!holder@{holder}}
+\index{holder@{holder}!yuh::any::holder@{yuh\-::any\-::holder}}
+\subsubsection[{holder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf holder} (
+\begin{DoxyParamCaption}
+\item[{const \-Value\-Type \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{dc/d8f/classyuh_1_1any_1_1holder_a4240001abf3fba918bc650ddb5e38239}
+
+
+\-Definition at line 123 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+              : held(value)
+            {
+            }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1any_1_1holder_a43bd5da15700b27a731a7ec02428eeef}{\index{yuh\-::any\-::holder@{yuh\-::any\-::holder}!clone@{clone}}
+\index{clone@{clone}!yuh::any::holder@{yuh\-::any\-::holder}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf placeholder}$\ast$ {\bf clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{dc/d8f/classyuh_1_1any_1_1holder_a43bd5da15700b27a731a7ec02428eeef}
+
+
+\-Implements \hyperlink{classyuh_1_1any_1_1placeholder_a1fc9bedc2d9ce8e1f30cd8298bf5427c}{any\-::placeholder}.
+
+
+
+\-Definition at line 135 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return new holder(held);
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_1_1holder_abde5b12649b80ab7d49fc350d1436850}{\index{yuh\-::any\-::holder@{yuh\-::any\-::holder}!operator=@{operator=}}
+\index{operator=@{operator=}!yuh::any::holder@{yuh\-::any\-::holder}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf holder}\& operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf holder}$<$ \-Value\-Type $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{dc/d8f/classyuh_1_1any_1_1holder_abde5b12649b80ab7d49fc350d1436850}
+\hypertarget{classyuh_1_1any_1_1holder_ae2b1d2c000a3620614d1dc4d367d073d}{\index{yuh\-::any\-::holder@{yuh\-::any\-::holder}!output@{output}}
+\index{output@{output}!yuh::any::holder@{yuh\-::any\-::holder}}
+\subsubsection[{output}]{\setlength{\rightskip}{0pt plus 5cm}virtual \-::std\-::ostream\& {\bf output} (
+\begin{DoxyParamCaption}
+\item[{\-::std\-::ostream \&}]{os}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{dc/d8f/classyuh_1_1any_1_1holder_ae2b1d2c000a3620614d1dc4d367d073d}
+
+
+\-Implements \hyperlink{classyuh_1_1any_1_1placeholder_ab55031a8c69345b947e629f9c5306845}{any\-::placeholder}.
+
+
+
+\-Definition at line 141 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return (os << held);
+            }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1any_1_1holder_a46bcccb2325469ae16d103be16abd4b9}{\index{yuh\-::any\-::holder@{yuh\-::any\-::holder}!type@{type}}
+\index{type@{type}!yuh::any::holder@{yuh\-::any\-::holder}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}virtual const \-::std\-::type\-\_\-info\& {\bf type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{dc/d8f/classyuh_1_1any_1_1holder_a46bcccb2325469ae16d103be16abd4b9}
+
+
+\-Implements \hyperlink{classyuh_1_1any_1_1placeholder_a70b3b61833519a452b860d9f6192fc0d}{any\-::placeholder}.
+
+
+
+\-Definition at line 130 of file any.\-hpp.
+
+
+\begin{DoxyCode}
+            {
+                return typeid(ValueType);
+            }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1any_1_1holder_a54a9c5b6e9b85a2a37a16b07905414db}{\index{yuh\-::any\-::holder@{yuh\-::any\-::holder}!held@{held}}
+\index{held@{held}!yuh::any::holder@{yuh\-::any\-::holder}}
+\subsubsection[{held}]{\setlength{\rightskip}{0pt plus 5cm}\-Value\-Type {\bf held}}}\label{dc/d8f/classyuh_1_1any_1_1holder_a54a9c5b6e9b85a2a37a16b07905414db}
+
+
+\-Definition at line 148 of file any.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{any_8hpp}{any.\-hpp}\end{DoxyCompactItemize}

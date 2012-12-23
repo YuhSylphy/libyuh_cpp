@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bar',['bar',['../dd/d69/namespacebar.html',1,'']]]
+  ['boost',['boost',['../d4/da9/namespaceboost.html',1,'']]]
 ];

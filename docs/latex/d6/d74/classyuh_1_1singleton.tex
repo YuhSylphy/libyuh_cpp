@@ -1,0 +1,93 @@
+\hypertarget{classyuh_1_1singleton}{\section{singleton$<$ \-T $>$ \-Class \-Template \-Reference}
+\label{d6/d74/classyuh_1_1singleton}\index{singleton$<$ T $>$@{singleton$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$singleton.\-hpp$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \-T \& \hyperlink{classyuh_1_1singleton_a9abdb11bae25383ca82ab9120a98b854}{inst} ()
+\item 
+static void \hyperlink{classyuh_1_1singleton_ae3eda3db44a1dce7d1cc5537cf3718a9}{init} (\-T \&val)
+\item 
+static void \hyperlink{classyuh_1_1singleton_ab9d3f06dc4ef871fad50465095b5ea32}{reset} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::unique\-\_\-ptr$<$ \-T $>$ \hyperlink{classyuh_1_1singleton_ab140218705c341f7a002c67475827e27}{inst\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename T$>$class yuh\-::singleton$<$ T $>$}
+
+
+
+\-Definition at line 7 of file singleton.\-hpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classyuh_1_1singleton_ae3eda3db44a1dce7d1cc5537cf3718a9}{\index{yuh\-::singleton@{yuh\-::singleton}!init@{init}}
+\index{init@{init}!yuh::singleton@{yuh\-::singleton}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf init} (
+\begin{DoxyParamCaption}
+\item[{\-T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d6/d74/classyuh_1_1singleton_ae3eda3db44a1dce7d1cc5537cf3718a9}
+É\-RÉsÅ\mbox{[}É\-RÉìÉ\-XÉgÉâÉ\-NÉ$^\wedge$égóp 
+
+\-Definition at line 30 of file singleton.\-hpp.
+
+
+\begin{DoxyCode}
+{ inst_.reset( new T(val) ); }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1singleton_a9abdb11bae25383ca82ab9120a98b854}{\index{yuh\-::singleton@{yuh\-::singleton}!inst@{inst}}
+\index{inst@{inst}!yuh::singleton@{yuh\-::singleton}}
+\subsubsection[{inst}]{\setlength{\rightskip}{0pt plus 5cm}static \-T\& {\bf inst} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d6/d74/classyuh_1_1singleton_a9abdb11bae25383ca82ab9120a98b854}
+
+
+\-Definition at line 10 of file singleton.\-hpp.
+
+
+\begin{DoxyCode}
+{ return *inst_; }
+\end{DoxyCode}
+\hypertarget{classyuh_1_1singleton_ab9d3f06dc4ef871fad50465095b5ea32}{\index{yuh\-::singleton@{yuh\-::singleton}!reset@{reset}}
+\index{reset@{reset}!yuh::singleton@{yuh\-::singleton}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf reset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d6/d74/classyuh_1_1singleton_ab9d3f06dc4ef871fad50465095b5ea32}
+É\-IÉuÉ\-WÉ\-FÉ\-NÉgâï˙ 
+
+\-Definition at line 34 of file singleton.\-hpp.
+
+
+\begin{DoxyCode}
+{ inst_.reset(); }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classyuh_1_1singleton_ab140218705c341f7a002c67475827e27}{\index{yuh\-::singleton@{yuh\-::singleton}!inst\-\_\-@{inst\-\_\-}}
+\index{inst\-\_\-@{inst\-\_\-}!yuh::singleton@{yuh\-::singleton}}
+\subsubsection[{inst\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<$ \-T $>$ {\bf inst\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{d6/d74/classyuh_1_1singleton_ab140218705c341f7a002c67475827e27}
+
+
+\-Definition at line 36 of file singleton.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/yuh/\hyperlink{singleton_8hpp}{singleton.\-hpp}\end{DoxyCompactItemize}

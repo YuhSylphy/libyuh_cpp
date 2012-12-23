@@ -118,12 +118,14 @@ std\-::deque$<$ \hyperlink{classyuh_1_1bignum_a918fd2d7b4fcfb6452272f1477745a53}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a3554dd27e1fe3080ba13d1d00027ad10}
 
 
-\-Definition at line 27 of file bignum.\-h.
+\-Definition at line 30 of file bignum.\-h.
 
 
 \begin{DoxyCode}
-            : sign_( n < 0 ), d_(1)
+        : sign_( n < 0 ), d_(1)
+#ifdef __clang__
 #pragma clang diagnostic pop
+#endif
         {
             d_[0] = sign_? -n: n;
         }
@@ -138,7 +140,7 @@ std\-::deque$<$ \hyperlink{classyuh_1_1bignum_a918fd2d7b4fcfb6452272f1477745a53}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_ad2eacd50d8b775d6282ac9351caf6de7}
 
 
-\-Definition at line 44 of file bignum.\-h.
+\-Definition at line 54 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -202,7 +204,7 @@ from string リテラルの対応がめんどくさいのでwstringやらは必�
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a3a59b58aa80ba093158db51368576cf6}
 copy ctor 
 
-\-Definition at line 60 of file bignum.\-h.
+\-Definition at line 70 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -223,7 +225,7 @@ copy ctor
 \end{DoxyReturn}
 
 
-\-Definition at line 235 of file bignum.\-h.
+\-Definition at line 245 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -286,7 +288,7 @@ copy ctor
 \end{DoxyParams}
 
 
-\-Definition at line 187 of file bignum.\-h.
+\-Definition at line 197 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -301,7 +303,7 @@ copy ctor
 ) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_a7f7a8b06fdb52877ad5069639753c17f}
 単項プラス 
 
-\-Definition at line 113 of file bignum.\-h.
+\-Definition at line 123 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -326,7 +328,7 @@ copy ctor
 \end{DoxyReturn}
 
 
-\-Definition at line 136 of file bignum.\-h.
+\-Definition at line 146 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -349,7 +351,7 @@ copy ctor
 \end{DoxyReturn}
 
 
-\-Definition at line 144 of file bignum.\-h.
+\-Definition at line 154 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -392,14 +394,14 @@ copy ctor
         for( ; i < rhs.d_.size(); ++i)
         {
             const twice_t t = C + d_[i] + rhs.d_[i];
-            d_[i] = mask & t;
+            d_[i] = static_cast<digit_t>(mask & t);
             C = t >> 32;
         }
         
         for( ; i < d_.size() && C > 0; ++i )
         {
             const twice_t t = C + d_[i];
-            d_[i] = mask & t;
+            d_[i] = static_cast<digit_t>(mask & t);
             C = t >> 32;
         }
 
@@ -428,7 +430,7 @@ copy ctor
 \end{DoxyReturn}
 
 
-\-Definition at line 128 of file bignum.\-h.
+\-Definition at line 138 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -443,7 +445,7 @@ copy ctor
 ) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_abba394358fb666e0cb639e6c8e56cca0}
 単項マイナス 
 
-\-Definition at line 104 of file bignum.\-h.
+\-Definition at line 114 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -470,7 +472,7 @@ copy ctor
 \end{DoxyReturn}
 
 
-\-Definition at line 165 of file bignum.\-h.
+\-Definition at line 175 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -493,7 +495,7 @@ copy ctor
 \end{DoxyReturn}
 
 
-\-Definition at line 173 of file bignum.\-h.
+\-Definition at line 183 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -541,13 +543,13 @@ copy ctor
         for( ; i < rhs.d_.size(); ++i )
         {
             const twice_t t = (1LL << 32) + d_[i] - rhs.d_[i] - B;
-            d_[i] = mask & t;
+            d_[i] = static_cast<digit_t>(mask & t);
             B = 1 - (t >> 32);
         }
         for( ; i < d_.size() && B > 0; ++i )
         {
             const twice_t t = (1LL << 32) + d_[i] - B;
-            d_[i] = mask & t;
+            d_[i] = static_cast<digit_t>(mask & t);
             B = 1 - (t >> 32);
 
         }
@@ -579,7 +581,7 @@ copy ctor
 \end{DoxyReturn}
 
 
-\-Definition at line 157 of file bignum.\-h.
+\-Definition at line 167 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -608,12 +610,12 @@ copy ctor
 \begin{DoxyCode}
     {
         std::deque<digit_t> deq;
-        twice_t d; // 割られる数
+        twice_t d = 0; // 割られる数
         for( auto x: d_ | reversed ) // 上位から
         {
             d <<= 32; // 前回の余りをシフトしておいて
             d += x;   // 次の桁を足すと今回の割られる数
-            deq.push_front(d / rhs); // 商を追加
+            deq.push_front(static_cast<digit_t>(d / rhs)); // 商を追加
             d %= rhs; // 余りが次の割られる数に
         }
         std::swap(d_, deq);
@@ -681,7 +683,7 @@ operator$<$
 \end{DoxyReturn}
 
 
-\-Definition at line 86 of file bignum.\-h.
+\-Definition at line 96 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -749,7 +751,7 @@ operator$<$=
 \end{DoxyParams}
 
 
-\-Definition at line 220 of file bignum.\-h.
+\-Definition at line 230 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -769,7 +771,7 @@ operator$<$=
 \end{DoxyParams}
 
 
-\-Definition at line 196 of file bignum.\-h.
+\-Definition at line 206 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -789,7 +791,7 @@ operator$>$
 \end{DoxyParams}
 
 
-\-Definition at line 212 of file bignum.\-h.
+\-Definition at line 222 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -809,7 +811,7 @@ operator$>$=
 \end{DoxyParams}
 
 
-\-Definition at line 228 of file bignum.\-h.
+\-Definition at line 238 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -832,7 +834,7 @@ operator$>$=
 \end{DoxyReturn}
 
 
-\-Definition at line 99 of file bignum.\-h.
+\-Definition at line 109 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -901,7 +903,7 @@ osそのもの
 \end{DoxyReturn}
 
 
-\-Definition at line 246 of file bignum.\-h.
+\-Definition at line 256 of file bignum.\-h.
 
 
 \begin{DoxyCode}
@@ -923,7 +925,7 @@ swap
 \end{DoxyParams}
 
 
-\-Definition at line 292 of file bignum.\-cpp.
+\-Definition at line 294 of file bignum.\-cpp.
 
 
 \begin{DoxyCode}
@@ -992,14 +994,14 @@ swap
 \subsubsection[{d\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::deque$<${\bf digit\-\_\-t}$>$ {\bf d\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_af9e1efe49c7f3e8ca8889493abee7cfa}
 32bit毎内部表現 
 
-\-Definition at line 263 of file bignum.\-h.
+\-Definition at line 273 of file bignum.\-h.
 
 \hypertarget{classyuh_1_1bignum_abf0bf01a903f906b194bf9f01ff2aab8}{\index{yuh\-::bignum@{yuh\-::bignum}!sign\-\_\-@{sign\-\_\-}}
 \index{sign\-\_\-@{sign\-\_\-}!yuh::bignum@{yuh\-::bignum}}
 \subsubsection[{sign\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf sign\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d7/d6b/classyuh_1_1bignum_abf0bf01a903f906b194bf9f01ff2aab8}
 符号 
 
-\-Definition at line 259 of file bignum.\-h.
+\-Definition at line 269 of file bignum.\-h.
 
 
 

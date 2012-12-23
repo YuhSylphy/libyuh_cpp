@@ -1,9 +1,9 @@
 var classyuh_1_1range__detail_1_1prime__iterator =
 [
     [ "base_t", "d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#af6bf48039295b29ac1f86bd776f4a29a", null ],
-    [ "difference_type", "d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#a9ac6039762e1b262cecb98589ffc1d75", null ],
-    [ "reference", "d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aa5d67140d1557795cc6c30a2849d4e05", null ],
-    [ "value_type", "d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#ab7468d4ed49b58c84d6c1b71779fb43e", null ],
+    [ "difference_type", "d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#a18e7411e8bb12bf0d225a2ed55ce31c8", null ],
+    [ "reference", "d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#ad1e39b66edf20cbb5c89ccb28ff834b6", null ],
+    [ "value_type", "d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#aaa801ea9fe09398ea8c5beb1324edadf", null ],
     [ "prime_iterator", "d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#ac10bb4092341faec6bbf57f1a907c7e7", null ],
     [ "advance", "d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#a0b477ad04db9bc38c85d68245b9886e5", null ],
     [ "decltype", "d9/dc8/classyuh_1_1range__detail_1_1prime__iterator.html#a2f6d1185fb0a9c5645498e79db8e809b", null ],
