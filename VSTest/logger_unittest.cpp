@@ -12,12 +12,14 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace yuh::adaptors;
 
-//namespace yuh
-//{
-//	namespace {
-//		void* enabler;
-//	}
-//}
+#ifdef _DEBUG
+namespace yuh
+{
+	namespace {
+		void* enabler;
+	}
+}
+#endif
 
 namespace VSTest
 {
