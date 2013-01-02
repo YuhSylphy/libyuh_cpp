@@ -16,9 +16,9 @@ namespace yuh
 			auto length = std::min(
 				boost::distance(rng1), 
 				boost::distance(rng2));
-			return boost::combine(
-				rng1 | boost::adaptors::taken(length),
-				rng2 | boost::adaptors::taken(length) );
+			auto t1 = rng1 | boost::adaptors::taken(length);
+			auto t2 = rng2 | boost::adaptors::taken(length);
+			return boost::combine(t1, t2);
 		}
 	}
 
@@ -30,20 +30,20 @@ namespace yuh
 	}
 	template<typename Range1, typename Range2>
 	auto combine(Range1 const& rng1, Range2& rng2) 
-		-> decltype(detail::combine_delegater<Range1, Range2>(rng1, rng2))
+		-> decltype(detail::combine_delegater<Range1 const, Range2>(rng1, rng2))
 	{
-		return detail::combine_delegater<Range1, Range2>(rng1, rng2);
+		return detail::combine_delegater<Range1 const, Range2>(rng1, rng2);
 	}
 	template<typename Range1, typename Range2>
 	auto combine(Range1& rng1, Range2 const& rng2) 
-		-> decltype(detail::combine_delegater<Range1, Range2>(rng1, rng2))
+		-> decltype(detail::combine_delegater<Range1, Range2 const>(rng1, rng2))
 	{
-		return detail::combine_delegater<Range1, Range2>(rng1, rng2);
+		return detail::combine_delegater<Range1, Range2 const>(rng1, rng2);
 	}
 	template<typename Range1, typename Range2>
 	auto combine(Range1 const& rng1, Range2 const& rng2) 
-		-> decltype(detail::combine_delegater<Range1, Range2>(rng1, rng2))
+		-> decltype(detail::combine_delegater<Range1 const, Range2 const>(rng1, rng2))
 	{
-		return detail::combine_delegater<Range1, Range2>(rng1, rng2);
+		return detail::combine_delegater<Range1 const, Range2 const>(rng1, rng2);
 	}
 }
