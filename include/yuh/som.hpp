@@ -14,7 +14,7 @@
 #include <boost/range/adaptor/regular_extension/transformed.hpp>
 #include <boost/range/adaptor/filtered.hpp>
 #include <boost/range/adaptor/regular_extension/filtered.hpp>
-#include <boost/range/experimental/as_container.hpp>
+#include <boost/range/as_container.hpp>
 #include <boost/algorithm/cxx11/all_of.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/format.hpp>
@@ -42,7 +42,7 @@ namespace yuh
 	public:
 		typedef std::function<double(Input const&, Ref const&)> distance;
 		/** T => (index, rate) */
-		typedef std::function<std::vector<std::tuple<std::vector<int>, double>>(int)> neighbor;
+		typedef std::function<std::vector<std::tuple<int, double>>(int, int, std::vector<int>const&)> neighbor;
 		typedef std::function<Ref(Ref const&, double, int, Input const&)> update;
 
 	private:
@@ -194,11 +194,12 @@ namespace yuh
 			return std::sqrt(boost::accumulate(yuh::combine(input, ref), .0, euc_func()));
 		}
 		/**
-		 * 近傍関数/矩形固定
+		 * 近傍関数/矩形固定 二次元
+		 * @param winner 勝者ノードのインデックス
 		 * @param T ターン数(未使用
 		 * @return 矩形範囲
 		 */
-		static std::vector<std::tuple<std::vector<int>, double>> rect_neighbor(int T)
+		static std::vector<std::tuple<int, double>> rect_neighbor(int winner, int T, std::vector<int> const& dim)
 		{ 
 			double const angle = .05;
 			double const touched = .1;
@@ -209,36 +210,103 @@ namespace yuh
 				return ret;
 			};
 
-			std::vector<std::tuple<std::vector<int>, double>> const ret = boost::irange(-1, 2) 
-				| iorate::product(boost::irange(-1, 2))
-				| transformed([&](boost::tuple<int, int> t){ return vec(boost::get<0>(t),  boost::get<1>(t));	})
-				| transformed([=](std::vector<int> vec) -> std::tuple<std::vector<int>, double>
+			// 勝者
+			std::vector<int> pos = rad_extract(winner, dim);
+
+			std::vector<std::tuple<int, double>> ret =
+				  boost::irange(-1, 2) 
+				| iorate::product(boost::irange(-1, 2))									// (x, y)の列
+				| transformed([&](boost::tuple<int, int> t)
+				{ 
+					return vec(boost::get<0>(t),  boost::get<1>(t)); 	
+				} )					// vectorに変換
+				| transformed([=](std::vector<int> v)
 				{
-					switch (boost::accumulate(vec | transformed([](int i){return i*i;}), 0))
+					double rate = .0;
+					switch (boost::accumulate(v | transformed([](int i){return i*i;}), 0))
 					{
-					case 0: return std::make_tuple(vec, just);
-					case 1: return std::make_tuple(vec, touched);
-					case 2: return std::make_tuple(vec, angle);
+					case 0: rate = just;    break;
+					case 1: rate = touched; break;
+					case 2: rate = angle;   break;
 					default: throw std::exception("rect_neighbor 矩形範囲外");
 					}
-				})
+					return std::make_tuple(v, rate);
+				} )						// rateを付与
+				| transformed([&](std::tuple<std::vector<int>, double> t) 
+				{
+					auto v = std::get<0>(t);
+					boost::for_each(boost::combine(v, pos),
+						[](boost::tuple<int&, int> s) {
+							boost::get<0>(s) += boost::get<1>(s);
+						});
+					return std::make_tuple(v, std::get<1>(t));
+				} )	// 勝者ノード中心に移動
+				| filtered([&](std::tuple<std::vector<int>, double> t)
+				{
+					auto& v = std::get<0>(t);
+					return boost::algorithm::all_of(
+						boost::combine(v, dim),
+						[](boost::tuple<int, int> s) {
+							return 0 <= boost::get<0>(s) && boost::get<0>(s) < boost::get<1>(s);
+						});
+				} )		// 範囲外カット
+				| transformed([&](std::tuple<std::vector<int>, double> t) 
+				{
+					return std::make_tuple(rad_compress(std::get<0>(t), dim), std::get<1>(t));
+				} )	// 座標表現圧縮
 				| boost::as_container;
 
 			return ret;
 		}
 
 		/**
-		 * 近傍関数/矩形固定
+		 * 近傍関数/矩形固定 二次元
+		 * @param winner 勝者ノードのインデックス
 		 * @param T ターン数(未使用
 		 * @return 矩形範囲
 		 */
-		static std::vector<std::tuple<std::vector<int>, double>> rect_neighbor(int T)
-		{ 
-
+		template<size_t c_n, size_t c_d, size_t T>
+		static std::vector<std::tuple<int, double>> quad_neighbor(int winner, int t, std::vector<int> const& dim)
+		{
+			static_assert( c_d > 0, "c_d requires to be > 0: quad_neighbor");
+			static const double c = static_cast<double>(c_n) / c_d;
+			auto dis_2 = [](std::vector<int> const&w, std::vector<int> const&m)
+			{
+				return boost::accumulate(
+						  boost::combine(w, m) 
+						| transformed([](boost::tuple<int, int> const& t) { return std::pow(boost::get<0>(t) - boost::get<1>(t), 2); }), 
+						.0);
+			};
+			double const alpha = t >= T ? 1 - static_cast<double>(T-1) / T : 1 - static_cast<double>(t) / T;
+			auto win = rad_extract(winner, dim);
+			std::vector<std::tuple<int, double>> ret = 
+				  boost::irange(0, boost::accumulate(dim, 1, std::multiplies<int>()))
+				| transformed([&](int index)
+				{
+					auto v = som::rad_extract(index, dim);
+					return std::make_tuple(index, 
+						c * std::exp(- dis_2(win, v) / (alpha * alpha) ) );
+				} )
+				| boost::as_container
+				;
+			return ret;
 		}
+
 #pragma endregion
 
 #pragma region method
+		template<typename Range>
+		inline int rad_compress(Range const& rng)
+		{
+			return rad_compress(rng, ref_dim_);
+		}
+
+		template<typename T>
+		inline std::vector<T> rad_extract(T n)
+		{
+			return rad_extract(n, ref_dim_);
+		}
+
 		/**
 		 * 1ステップ
 		 * @param input 入力ベクトル
@@ -251,44 +319,14 @@ namespace yuh
 				[&](Ref& x, Ref& y)->bool{return d_(input, x) < d_(input, y);}
 			);
 			auto index = std::distance(std::begin(refs_), m);
-			auto pos = rad_extract(index, ref_dim_);
-			//boost::foreach(
-			//	th_(t_, rad_conv(m, ref_dim_[0], ref_dim_.size())), //近傍
-			//	[](std::tuple<std::vector<int>, double>){}
-			//	//[&](::std::tuple<::std::vector<int>, double>& t) -> void{
-			//	//	auto index = rad_conv(std::get<0>(t), ref_dim_[0]); //近傍のindex
-			//	//	auto rate = std::get<1>(t);//影響比率
-
-			//	//	refs_[index] = update_(refs_[index], rate, t_, input);
-			//	//}
-			//);
+			auto pos = rad_extract(index);
 
 			// 近傍
-			std::vector<std::tuple<std::vector<int>, double>> neighbor = 
-				  th_(t_)
-				| transformed([&](std::tuple<std::vector<int>, double> t) {
-					auto& v = std::get<0>(t);
-					boost::for_each(boost::combine(v, pos),
-						[](boost::tuple<int&, int> s) {
-							boost::get<0>(s) += boost::get<1>(s);
-						});
-					return t;
-				} )
-				| filtered([&](std::tuple<std::vector<int>, double> t)
-				{
-					auto& v = std::get<0>(t);
-					return boost::algorithm::all_of(
-						boost::combine(v, ref_dim_),
-						[](boost::tuple<int, int> s) {
-							return 0 <= boost::get<0>(s) && boost::get<0>(s) < boost::get<1>(s);
-						});
-				} )
-				| boost::as_container;
-				;
+			auto neighbor = th_(index, t_, ref_dim_);
 
 			for ( auto& t: neighbor )
 			{
-				auto index = rad_compress(std::get<0>(t), ref_dim_); //近傍のindex
+				auto index = std::get<0>(t); //近傍のindex
 				auto rate = std::get<1>(t);//影響比率
 
 				refs_[index] = update_(refs_[index], rate, t_, input);
@@ -298,6 +336,7 @@ namespace yuh
 
 			return m;
 		}
+
 #pragma endregion
 	};
 }

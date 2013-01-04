@@ -74,8 +74,8 @@ namespace VSTest
 		{
 			std::vector<int> vi = oven::initial_values(1,2,3,4,5);
 
-			range_view(vi);
-			range_view(vi | transformed([](int i){ return i+1; }));
+			//range_view(vi);
+			//range_view(vi | transformed([](int i){ return i+1; }));
 
 			std::vector<std::tuple<int, int>> vt = oven::initial_values(
 				std::make_tuple(1, 2),
@@ -85,18 +85,19 @@ namespace VSTest
 				std::make_tuple(9, 0)
 				);
 			auto t_view = [](std::tuple<int, int> const& x){ return boost::format("(%||, %||) ") % std::get<0>(x) % std::get<1>(x); };
-			range_view(vt, t_view);
-			range_view(vt | transformed([](std::tuple<int, int> t){
-				std::get<0>(t)++;
-				std::get<1>(t)++;
-				return t; 
-				}), t_view);
+			//range_view(vt, t_view);
+			//range_view(vt | transformed([](std::tuple<int, int> t){
+			//	std::get<0>(t)++;
+			//	std::get<1>(t)++;
+			//	return t; 
+			//	}), t_view);
 
 
 			auto const vec = [](int x, int y){
 				std::vector<int> ret = oven::initial_values(x, y);
 				return ret;
 			};
+
 			auto tv_view = [](std::tuple<std::vector<int>, int> const& x)
 			{ return boost::format("({%||, %||}, %||) ") % std::get<0>(x)[0] % std::get<0>(x)[1] % std::get<1>(x); };
 			std::vector<std::tuple<std::vector<int>, int>> vtv = oven::initial_values(
@@ -104,13 +105,13 @@ namespace VSTest
 				std::make_tuple(vec(3, 4), 5),
 				std::make_tuple(vec(6, 7), 8)
 				);
-			range_view(vtv, tv_view);
-			range_view(vtv | transformed([](std::tuple<std::vector<int>, int> t){
-				std::get<0>(t)[0]++;
-				std::get<0>(t)[1]++;
-				std::get<1>(t)++;
-				return t; 
-				}),	tv_view);
+			//range_view(vtv, tv_view);
+			//range_view(vtv | transformed([](std::tuple<std::vector<int>, int> t){
+			//	std::get<0>(t)[0]++;
+			//	std::get<0>(t)[1]++;
+			//	std::get<1>(t)++;
+			//	return t; 
+			//	}),	tv_view);
 
 		}
 	};
