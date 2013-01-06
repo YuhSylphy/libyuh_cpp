@@ -11,3 +11,4 @@
 #include "CppUnitTest.h"
 
 // TODO: プログラムに必要な追加ヘッダーをここで参照してください。
+#define BOOST_RESULT_OF_USE_DECLTYPE

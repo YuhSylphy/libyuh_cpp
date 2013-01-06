@@ -98,6 +98,7 @@
     <ClInclude Include="..\include\yuh\math.hpp" />
     <ClInclude Include="..\include\yuh\polygonal.hpp" />
     <ClInclude Include="..\include\yuh\prime.h" />
+    <ClInclude Include="..\include\yuh\selection.hpp" />
     <ClInclude Include="..\include\yuh\singleton.hpp" />
     <ClInclude Include="..\include\yuh\som.hpp" />
     <ClInclude Include="..\include\yuh\thread_queue.hpp" />

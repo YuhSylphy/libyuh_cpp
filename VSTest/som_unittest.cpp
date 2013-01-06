@@ -384,22 +384,22 @@ namespace VSTest
 					[](color const& col, double r, int t, color const& input){ return (col + (input - col) * r).normalize(); }
 				);
 
-				html(s.refs());
-				for( auto c: boost::iteration(rndcol(), boost::regular(rndcol)) | taken(10000))
-				{
-					s.step(c);
-				}
-				html(s.refs());
-				for( auto c: boost::iteration(rndcol(), boost::regular(rndcol)) | taken(10000))
-				{
-					s.step(c);
-				}
-				html(s.refs());
-				for( auto c: boost::iteration(rndcol(), boost::regular(rndcol)) | taken(10000))
-				{
-					s.step(c);
-				}
-				html(s.refs());
+				//html(s.refs());
+				//for( auto c: boost::iteration(rndcol(), boost::regular(rndcol)) | taken(10000))
+				//{
+				//	s.step(c);
+				//}
+				//html(s.refs());
+				//for( auto c: boost::iteration(rndcol(), boost::regular(rndcol)) | taken(10000))
+				//{
+				//	s.step(c);
+				//}
+				//html(s.refs());
+				//for( auto c: boost::iteration(rndcol(), boost::regular(rndcol)) | taken(10000))
+				//{
+				//	s.step(c);
+				//}
+				//html(s.refs());
 				//for( auto c: boost::iteration(rndcol(), boost::regular(rndcol)) | taken(10000))
 				//{
 				//	s.step(c);
