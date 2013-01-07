@@ -29,7 +29,7 @@ namespace yuh
 		 */
 		template <
 			typename Range
-#ifndef _MSC_VER
+#ifndef BOOST_MSVC
 			, typename ::std::enable_if<
 				::std::is_same<
 					typename boost::has_range_const_iterator<Range>::type, 
@@ -38,20 +38,21 @@ namespace yuh
 				> ::type *& = enabler 
 #endif
 			>
-		inline range_io<Range> pretty(
+		inline 
+#ifndef BOOST_MSVC
+		range_io<Range> 
+#else
+		typename ::std::enable_if<
+			boost::has_range_const_iterator<Range>::value,
+			range_io<Range>
+				>::type
+#endif		
+		pretty(
 			const Range& r,
 			const ::std::string& fmt = "%||",
 			const ::std::string& opn = "{ ",
 			const ::std::string& cls = " }",
 			const ::std::string& sep = ", "
-#ifdef _MSC_VER
-			, typename ::std::enable_if<
-				::std::is_same<
-					typename boost::has_range_const_iterator<Range>::type, 
-					boost::mpl::true_
-					>::value
-				> ::type *& = enabler
-#endif
 			)
 		{
 			return range_io<Range>(r, fmt, opn, cls, sep);
@@ -64,7 +65,7 @@ namespace yuh
 		 */
 		template<
 			typename T
-#ifndef _MSC_VER
+#ifndef BOOST_MSVC
 			, typename ::std::enable_if<
 				::std::is_same<
 					typename boost::has_range_const_iterator<T>::type, 
@@ -73,20 +74,21 @@ namespace yuh
 				> ::type *& = enabler 
 #endif
 		>
-		inline const T& pretty(
+		inline 
+#ifndef BOOST_MSVC
+		T const& 
+#else
+		typename ::std::enable_if<
+			!boost::has_range_const_iterator<T>::value,
+			T const&
+				>::type
+#endif		
+		pretty(
 			const T& t,
 			const ::std::string& = "%||",
 			const ::std::string& = "{ ",
 			const ::std::string& = " }",
 			const ::std::string& = ", "
-#ifdef _MSC_VER
-			, typename ::std::enable_if<
-				::std::is_same<
-					typename boost::has_range_const_iterator<T>::type, 
-					boost::mpl::false_
-					>::value
-				> ::type *& = enabler 
-#endif
 			)
 		{
 			return t;
@@ -99,9 +101,6 @@ namespace yuh
 			const ::std::string& = "{ ",
 			const ::std::string& = " }",
 			const ::std::string& = ", "
-#ifdef _MSC_VER
-			, void* =0
-#endif
 			)
 		{
 			return str;
@@ -248,7 +247,19 @@ namespace yuh
 			}
 
 			/**
-			 * フォーマット文字列だけ一時設定
+			 * フォーマット文字列初期設定
+			 */
+			pretty_forwarder& format() 
+			{
+				fmt_ = "%||";
+				opn_ = "{ ";
+				cls_ = " }";
+				sep_ = ", ";
+				return *this;
+			}
+			/**
+			/**
+			 * フォーマット文字列だけ設定
 			 */
 			pretty_forwarder& format(
 				const ::std::string& fmt
@@ -319,7 +330,7 @@ namespace yuh
 		 */
 		template <
 			typename Range
-#ifndef _MSC_VER
+#ifndef BOOST_MSVC
 			, typename ::std::enable_if<
 				::std::is_same<
 					typename boost::has_range_const_iterator<Range>::type, 
@@ -328,12 +339,51 @@ namespace yuh
 				> ::type *& = enabler 
 #endif
 			>
-		inline range_io<Range> 
+		inline 
+#ifndef BOOST_MSVC
+		range_io<Range> 
+#else
+		typename ::std::enable_if<
+			boost::has_range_const_iterator<Range>::value,
+			range_io<Range>
+				>::type
+#endif
 		operator|(const Range& r, pretty_forwarder f)
 		{
 			return range_io<Range>(
 				r,
 				f.getFmt(), f.getOpn(), f.getCls(), f.getSep());
+		}
+	
+		/**
+		 * pipe operator 出力可能なオブジェクトに変換する
+		 * @param Range 範囲型
+		 * @param r 対象範囲
+		 * preturn range_ioオブジェクト
+		 */
+		template <
+			typename T
+#ifndef BOOST_MSVC
+			, typename ::std::enable_if<
+				::std::is_same<
+					typename boost::has_range_const_iterator<T>::type, 
+					boost::mpl::false_
+					>::value
+				> ::type *& = enabler 
+#endif
+			>
+		inline 
+#ifndef BOOST_MSVC
+		T const &
+#else
+		typename ::std::enable_if<
+			!boost::has_range_const_iterator<T>::value,
+			T const&
+				>::type
+#endif
+		operator|(const T& t, pretty_forwarder)
+		{
+			return t;
 		}
 	
 	} // namespace range_detail

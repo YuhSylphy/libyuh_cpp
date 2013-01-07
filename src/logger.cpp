@@ -55,7 +55,7 @@ namespace yuh
 					while( !q.empty() ) // 空になるまで
 					{
 						// ofs << q.front() << std::endl;
-						ss << (q.front()/** | yuh::adaptors::prettied*/)  << std::endl; // stringとして保存
+						ss << ( q.front() | yuh::adaptors::prettied )  << std::endl; // stringとして保存
 						q.pop();
 					}
 

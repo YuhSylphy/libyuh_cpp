@@ -98,6 +98,7 @@
   <ItemGroup>
     <ClCompile Include="lockfree_queue_unittest.cpp" />
     <ClCompile Include="logger_unittest.cpp" />
+    <ClCompile Include="prettied_unittest.cpp" />
     <ClCompile Include="selection_unittest.cpp" />
     <ClCompile Include="som_unittest.cpp" />
     <ClCompile Include="stdafx.cpp">
