@@ -87,7 +87,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libyuh.lib;yuh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libyuh.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -96,6 +96,7 @@
     <ClInclude Include="test_logger.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="lockfree_queue_unittest.cpp" />
     <ClCompile Include="logger_unittest.cpp" />
     <ClCompile Include="selection_unittest.cpp" />
     <ClCompile Include="som_unittest.cpp" />

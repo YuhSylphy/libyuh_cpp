@@ -5,6 +5,11 @@
 
 #include <yuh/adaptor/prettied.hpp>
 
+#include <pstade/oven/initial_values.hpp>
+
+#include <boost/range/irange.hpp>
+#include <boost/format.hpp>
+#include <future>
 
 #include <string>
 #include <array>
@@ -13,14 +18,17 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace yuh::adaptors;
 
-#ifdef _DEBUG
+namespace oven = pstade::oven;
+using namespace yuh::adaptors;
+
+// #ifdef _DEBUG
 namespace yuh
 {
 	namespace {
 		void* enabler;
 	}
 }
-#endif
+// #endif
 
 namespace VSTest
 {
@@ -28,7 +36,7 @@ namespace VSTest
 	{
 	public:
 		
-		TEST_METHOD(ctor)
+		TEST_METHOD(logger_ctor)
 		{
 			// TODO: テスト コードをここに挿入します
 
@@ -64,7 +72,7 @@ namespace VSTest
 
 		}
 
-		TEST_METHOD(singleton)
+		TEST_METHOD(logger_singleton)
 		{
 			std::array<std::string, 3> filenames = {
 				"data/s1.txt",
@@ -73,11 +81,32 @@ namespace VSTest
 
 			yuh::logger::init_emplace(filenames);
 			{
-				yuh::logger::inst()(0, std::string("test1"));
-				yuh::logger::inst()(0, std::string("test2"));
-				yuh::logger::inst()(0, std::string("test3"));
-				yuh::logger::inst()(0, std::string("test4"));
-				yuh::logger::inst()(1, std::string(""));
+				int const num = 100;
+				auto test1 = [&](){
+					for( auto i: boost::irange(0, num) )
+					{
+						yuh::logger::inst()(0, i);
+					}
+				};
+				auto test2 = [&](){
+					for( auto i: boost::irange(0, num) )
+					{
+						std::vector<int> buf = oven::initial_values(i, i+1);
+						yuh::logger::inst()(1, i+1);
+					}
+				};
+
+				auto f1 = std::async(test1);
+				auto f2 = std::async(test2);
+				//yuh::logger::inst()(0, std::string("test1"));
+				//yuh::logger::inst()(0, std::string("test2"));
+				//yuh::logger::inst()(0, std::string("test3"));
+				//yuh::logger::inst()(0, std::string("test4"));
+				//yuh::logger::inst()(1, std::string(""));
+				//yuh::logger::inst()(1, 'a');
+				//yuh::logger::inst()(1, std::string(""));
+				//yuh::logger::inst()(1, 'b');
+				//yuh::logger::inst()(1, std::string(""));
 			}
 
 			yuh::logger::reset();

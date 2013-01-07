@@ -23,6 +23,8 @@
 #include <boost/range/iteration.hpp>
 #include <boost/range/regular.hpp>
 
+
+
 #include <array>
 #include <random>
 
@@ -119,7 +121,7 @@ namespace VSTest
 	{
 	public:
 		
-		TEST_METHOD(SOM_ctor)
+		TEST_METHOD(som_ctor)
 		{
 			// TODO: テスト コードをここに挿入します
 			som s(
@@ -133,7 +135,7 @@ namespace VSTest
 			Assert::AreEqual(900U, s.refs().size());
 		}
 
-		TEST_METHOD(RadConv_n_to_inf)
+		TEST_METHOD(som_RadConv_n_to_inf)
 		{
 			std::vector<int> v = oven::initial_values(2,3,5);
 
@@ -144,7 +146,7 @@ namespace VSTest
 			Assert::AreEqual(expected, actual);
 		}
 
-		TEST_METHOD(RadConv_inf_to_n)
+		TEST_METHOD(som_RadConv_inf_to_n)
 		{
 			std::vector<int> v = oven::initial_values(2,3,5);
 
@@ -164,7 +166,7 @@ namespace VSTest
 			}
 		}
 
-		TEST_METHOD(Step)
+		TEST_METHOD(som_Step)
 		{
 			som s(
 				oven::initial_values(30, 30), 
@@ -177,7 +179,7 @@ namespace VSTest
 			s.step(i);
 		}
 
-		TEST_METHOD(Euclidean_distance)
+		TEST_METHOD(som_Euclidean_distance)
 		{
 			Input x = {{1,2,3,0,0,0,0}};
 			Ref y = {{4,5,6,0,0,0,0}};
@@ -188,7 +190,7 @@ namespace VSTest
 				.01
 				);
 		}
-		TEST_METHOD(Rect_neighbor)
+		TEST_METHOD(som_Rect_neighbor)
 		{
 			double const angle = .05;
 			double const touched = .1;
@@ -284,7 +286,7 @@ namespace VSTest
 
 		//}
 
-		TEST_METHOD(Quad_neighbor)
+		TEST_METHOD(som_Quad_neighbor)
 		{
 			auto const vec = [](int x, int y){
 				std::vector<int> ret = oven::initial_values(x, y);
@@ -304,7 +306,7 @@ namespace VSTest
 
 		}
 
-		TEST_METHOD(COLOR_SOM)
+		TEST_METHOD(som_COLOR_SOM)
 		{
 			using namespace boost::adaptors;
 			typedef yuh::som<color, color> colsom;

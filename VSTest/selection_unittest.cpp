@@ -36,7 +36,7 @@ namespace VSTest
 			std::mt19937 rnd(123456789);
 			std::vector<int> count(5);
 
-			for ( auto i: boost::irange(0, 50000) )
+			for ( auto i: boost::irange(0, 50000) ) //確率的だから正しい値でチェックとか不可
 			{
 				count[yuh::rouletteSel(
 					oven::initial_values(.2,.2,.2,.2,.2)
@@ -46,7 +46,7 @@ namespace VSTest
 
 			for( auto c: count )
 			{
-				Logger::WriteMessage((boost::format("%|| ") % c).str().c_str());
+				// Logger::WriteMessage((boost::format("%|| ") % c).str().c_str());
 			}
 
 		}

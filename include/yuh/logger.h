@@ -4,7 +4,6 @@
 #include "any.hpp"
 #include "singleton.hpp"
 
-
 #include <boost/range.hpp>
 #include <boost/range/algorithm.hpp>
 #include <boost/filesystem.hpp>
@@ -67,7 +66,7 @@ namespace yuh
 			/**
 			* 内部用出力処理
 			*/
-			void output();
+			bool output();
 
 			/**
 			* 出力用queueリスト
