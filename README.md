@@ -3,7 +3,7 @@ libyuh_cpp
 
 自分用C++ライブラリ
 
-- VSTest
+- VSTest/  
     ユニットテストコード(CppUnitTestFramework, Visual Studio 2012)
 - docs/  
     doxygenによるドキュメント．詳細はこちらで
@@ -13,7 +13,7 @@ libyuh_cpp
     実装部ソース
 - test/  
     ユニットテストコード(google test)
-- vcxproj
+- vcxproj/  
     Visual Studio用ソリューションファイルほか
 
 test以下のビルドにはtestと同じ階層にgtest-1.6.0が必要です．
