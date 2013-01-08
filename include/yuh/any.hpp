@@ -20,6 +20,9 @@
 #include <boost/throw_exception.hpp>
 #include <boost/static_assert.hpp>
 
+//’Ç‰Á
+#include <yuh/adaptor/prettied.hpp>
+
 // See boost/python/type_id.hpp
 // TODO: add BOOST_TYPEID_COMPARE_BY_NAME to config.hpp
 # if (defined(__GNUC__) && __GNUC__ >= 3) \
@@ -140,7 +143,7 @@ namespace yuh
 			//’Ç‰Á
 			virtual ::std::ostream& output(::std::ostream& os)
 			{
-				return (os << held);
+				return (os << (held | adaptors::prettied));
 			}
 
         public: // representation

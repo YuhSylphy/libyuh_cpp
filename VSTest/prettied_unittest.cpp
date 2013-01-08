@@ -156,5 +156,24 @@ namespace VSTest
 
 		}
 
+		TEST_METHOD(prettied_string)
+		{
+			std::stringstream ss;
+			std::string str("tester");
+			std::vector<std::string> vec = oven::initial_values(
+				std::string("one"),
+				std::string("two"),
+				std::string("three")
+				);
+
+			ss << (str | prettied);
+			Assert::AreEqual(std::string("tester"), ss.str());
+			ss.str("");
+
+			ss << (vec | prettied);
+			Assert::AreEqual(std::string("{ one, two, three }"), ss.str());
+			ss.str("");
+		}
+
 	};
 }

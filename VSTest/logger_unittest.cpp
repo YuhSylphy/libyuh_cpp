@@ -82,17 +82,19 @@ namespace VSTest
 			yuh::logger::init_emplace(filenames);
 			{
 				int const num = 100;
+
 				auto test1 = [&](){
 					for( auto i: boost::irange(0, num) )
 					{
 						yuh::logger::inst()(0, i);
 					}
 				};
+
 				auto test2 = [&](){
 					for( auto i: boost::irange(0, num) )
 					{
 						std::vector<int> buf = oven::initial_values(i, i+1);
-						yuh::logger::inst()(1, i+1);
+						// yuh::logger::inst()(1, buf | prettied);
 					}
 				};
 
@@ -107,9 +109,28 @@ namespace VSTest
 				//yuh::logger::inst()(1, std::string(""));
 				//yuh::logger::inst()(1, 'b');
 				//yuh::logger::inst()(1, std::string(""));
+				f1.get();
+				f2.get();
 			}
+
+
+			yuh::logger::reset();
+		}		
+		TEST_METHOD(logger_range)
+		{
+			std::array<std::string, 1> filenames = {
+				"data/range.txt",
+			};
+
+			yuh::logger::init_emplace(filenames);
+			{
+				std::vector<int> vec = oven::initial_values(1, 2, 3);
+				yuh::logger::inst()(0, vec);
+			}
+
 
 			yuh::logger::reset();
 		}
+
 	};
 }

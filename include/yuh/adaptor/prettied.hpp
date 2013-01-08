@@ -43,7 +43,8 @@ namespace yuh
 		range_io<Range> 
 #else
 		typename ::std::enable_if<
-			boost::has_range_const_iterator<Range>::value,
+			boost::has_range_const_iterator<Range>::value
+			&& !std::is_same<std::string, Range>::value,
 			range_io<Range>
 				>::type
 #endif		
@@ -79,7 +80,8 @@ namespace yuh
 		T const& 
 #else
 		typename ::std::enable_if<
-			!boost::has_range_const_iterator<T>::value,
+			!boost::has_range_const_iterator<T>::value 
+			|| std::is_same<std::string, T>::value,
 			T const&
 				>::type
 #endif		
@@ -344,7 +346,8 @@ namespace yuh
 		range_io<Range> 
 #else
 		typename ::std::enable_if<
-			boost::has_range_const_iterator<Range>::value,
+			boost::has_range_const_iterator<Range>::value 
+			&& !std::is_same<std::string, Range>::value,
 			range_io<Range>
 				>::type
 #endif
@@ -377,7 +380,8 @@ namespace yuh
 		T const &
 #else
 		typename ::std::enable_if<
-			!boost::has_range_const_iterator<T>::value,
+			!boost::has_range_const_iterator<T>::value 
+			|| std::is_same<std::string, T>::value,
 			T const&
 				>::type
 #endif

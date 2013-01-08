@@ -6,6 +6,7 @@
 
 #include <boost/range.hpp>
 #include <boost/range/algorithm.hpp>
+#include <boost/range/as_container.hpp>
 #include <boost/filesystem.hpp>
 
 #include <boost/thread.hpp>
@@ -36,13 +37,30 @@ namespace yuh
 			~logger();
 
 			/**
-			* 出力queueにpush
+			* 出力queueにpush ストリーム出力operator<<に対応していればなんでも
 			* @param n queue番号
-			* @param data 出力データ ストリーム出力operator<<に対応していればなんでも
+			* @param data 出力データ 非Range or string
 			* @return 自身 ()を連結していける
 			*/
 			template<typename T>
-			logger& operator()(int n, T const& data);
+			typename std::enable_if<
+				!boost::has_range_const_iterator<T>::value	//非Range
+				|| std::is_same<std::string, T>::value,		//Rangeだけどstringもこっち
+				logger&>::type
+				operator()(int n, T const& data);
+
+			/**
+			* 出力queueにpush ストリーム出力operator<<に対応していればなんでも
+			* @param n queue番号
+			* @param data 出力データ Range
+			* @return 自身 ()を連結していける
+			*/
+			template<typename T>
+			typename std::enable_if<
+				boost::has_range_const_iterator<T>::value	//Range
+				&& !std::is_same<std::string, T>::value,	//Rangeだけどstringは排除
+				logger&>::type
+				operator()(int n, T const& data);
 
 		private:
 			logger();
@@ -120,9 +138,25 @@ namespace yuh
 		}
 
 		template<typename T>
-		logger& logger::operator()(int n, T const& data)
+		typename std::enable_if<
+			!boost::has_range_const_iterator<T>::value	//非Range
+			|| std::is_same<std::string, T>::value,		//Rangeだけどstringもこっち
+			logger&>::type
+			logger::operator()(int n, T const& data)
 		{
 			q_[n].push(data);
+			return *this;
+		}
+
+		template<typename T>
+		typename std::enable_if<
+			boost::has_range_const_iterator<T>::value	//Range
+			&& !std::is_same<std::string, T>::value,	//Rangeだけどstringは排除
+			logger&>::type
+			logger::operator()(int n, T const& data)
+		{
+			std::vector<boost::range_value<T>::type> vec = data | boost::as_container;
+			q_[n].push(vec); // ここでError
 			return *this;
 		}
 	} // namespace detail
