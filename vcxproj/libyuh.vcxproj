@@ -92,6 +92,7 @@
     <ClInclude Include="..\include\yuh\any.hpp" />
     <ClInclude Include="..\include\yuh\bignum.h" />
     <ClInclude Include="..\include\yuh\combine.hpp" />
+    <ClInclude Include="..\include\yuh\console.h" />
     <ClInclude Include="..\include\yuh\detail\enabler.h" />
     <ClInclude Include="..\include\yuh\fibonacci.hpp" />
     <ClInclude Include="..\include\yuh\logger.h" />
@@ -107,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\bignum.cpp" />
+    <ClCompile Include="..\src\console.cpp" />
     <ClCompile Include="..\src\logger.cpp" />
     <ClCompile Include="..\src\prime.cpp" />
     <ClCompile Include="stdafx.cpp">
