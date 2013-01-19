@@ -16,6 +16,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 #include "test_logger.h"
 
+#ifndef _DEBUG
 
 
 namespace lockfree = boost::lockfree;
@@ -92,3 +93,5 @@ namespace VSTest
 
 	};
 }
+
+#endif

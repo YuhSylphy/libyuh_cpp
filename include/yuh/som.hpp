@@ -4,6 +4,8 @@
 
 #include <product.hpp>
 
+#include <yuh/combine.hpp>
+
 #include <boost/range/algorithm.hpp>
 #include <boost/range/numeric.hpp>
 #include <boost/range/irange.hpp>
@@ -15,6 +17,7 @@
 #include <boost/range/adaptor/filtered.hpp>
 #include <boost/range/adaptor/regular_extension/filtered.hpp>
 #include <boost/range/as_container.hpp>
+
 #include <boost/algorithm/cxx11/all_of.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/format.hpp>
@@ -22,11 +25,34 @@
 
 #include <vector>
 #include <functional>
+#include <unordered_map>
 
+
+#include <yuh/combine.hpp>
+
+#include <pstade/oven/initial_values.hpp>
+
+#include <boost/range/algorithm.hpp>
+#include <boost/range/numeric.hpp>
+#include <boost/range/adaptor/transformed.hpp>
+#include <boost/range/adaptor/regular_extension/transformed.hpp>
+#include <boost/range/adaptor/filtered.hpp>
+#include <boost/range/adaptor/regular_extension/filtered.hpp>
+#include <boost/range/adaptor/taken.hpp>
+#include <boost/range/as_container.hpp>
+#include <boost/algorithm/cxx11/all_of.hpp>
+#include <boost/range/iteration.hpp>
+#include <boost/range/regular.hpp>
+#include <boost/functional/hash.hpp>
+
+
+#include <array>
+#include <random>
 
 namespace yuh
 {
 	using namespace boost::adaptors;
+	namespace oven = pstade::oven;
 	/**
 	 * 自己組織化マップ
 	 * @param Input 入力ベクトル型
@@ -40,6 +66,9 @@ namespace yuh
 	class som
 	{
 	public:
+		typedef Input input_type;
+		typedef Ref ref_type;
+
 		typedef std::function<double(Input const&, Ref const&)> distance;
 		/** T => (index, rate) */
 		typedef std::function<std::vector<std::tuple<int, double>>(int, int, std::vector<int>const&)> neighbor;
@@ -77,6 +106,24 @@ namespace yuh
 		 * 更新式
 		 */
 		update update_;
+
+		struct hash_int_vector
+		{
+			size_t operator()(std::vector<int>const& v)
+			{
+				return boost::accumulate(
+					v,
+					0U,
+					[](size_t h, int x){ boost::hash_combine(h, x); return h; }
+					);
+
+			}
+		};
+
+		std::vector<std::vector<int>> extract_tbl_;
+
+		std::unordered_map<std::vector<int>, int, hash_int_vector> compress_tbl_;
+		 
 
 #pragma endregion
 	public:
@@ -117,6 +164,7 @@ namespace yuh
 			, d_(dist)
 			, th_(th)
 			, update_(update)
+			
 		{
 			// 次元数
 			ref_dim_.reserve(boost::distance(size));
@@ -126,6 +174,23 @@ namespace yuh
 			auto l = boost::accumulate(ref_dim_, 1, std::multiplies<int>());
 			refs_.reserve(l);
 			std::generate_n(std::back_inserter(refs_), l, factory);
+
+
+			boost::for_each(
+				boost::irange(0, l),
+				[&](int n){
+					std::vector<int> ret;
+					ret.reserve(boost::distance(ref_dim_));
+					for ( auto b: ref_dim_ )
+					{
+						ret.push_back( n % b );
+						n /= b;
+					}
+
+					compress_tbl_[ret] = n;
+					extract_tbl_.push_back(ret);
+				}
+			);
 		}
 #pragma endregion
 
@@ -191,7 +256,7 @@ namespace yuh
 		 */
 		static double euc_dist(Input const& input, Ref const& ref) 
 		{
-			return std::sqrt(boost::accumulate(yuh::combine(input, ref), .0, euc_func()));
+			return std::sqrt(boost::accumulate(boost::combine(input, ref), .0, euc_func()));
 		}
 		/**
 		 * 近傍関数/矩形固定 二次元
@@ -249,7 +314,7 @@ namespace yuh
 						[](boost::tuple<int, int> s) {
 							return 0 <= boost::get<0>(s) && boost::get<0>(s) < boost::get<1>(s);
 						});
-				} )		// 範囲外カット
+				} )		// 範囲外カット 
 				| transformed([&](std::tuple<std::vector<int>, double> t) 
 				{
 					return std::make_tuple(rad_compress(std::get<0>(t), dim), std::get<1>(t));
@@ -292,19 +357,21 @@ namespace yuh
 			return ret;
 		}
 
-#pragma endregion
+#pragma endregion 
 
 #pragma region method
 		template<typename Range>
 		inline int rad_compress(Range const& rng)
 		{
-			return rad_compress(rng, ref_dim_);
+			return compress_tbl_[rng | boost::as_container];
+			//return rad_compress(rng, ref_dim_);
 		}
 
 		template<typename T>
 		inline std::vector<T> rad_extract(T n)
 		{
-			return rad_extract(n, ref_dim_);
+			return extract_tbl_[n];
+			//return rad_extract(n, ref_dim_);
 		}
 
 		/**

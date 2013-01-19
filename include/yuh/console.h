@@ -93,7 +93,7 @@ namespace yuh
 			}
 		}
 
-		inline void setKey(int x, int y)
+		inline void setPos(int x, int y)
 		{
 			COORD coord = { x, y };
 
