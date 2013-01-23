@@ -135,23 +135,28 @@ namespace VSTest
 			Assert::AreEqual(900U, s.refs().size());
 		}
 
-		TEST_METHOD(som_RadConv_n_to_inf)
+		TEST_METHOD(som_RadConv_compress)
 		{
 			std::vector<int> v = oven::initial_values(2,3,5);
 
 			std::vector<int> n = oven::initial_values(7,7,7);
+
+			som::set_rad_map(n);
+			
 			auto expected = v[2] * n[1] * n[0] + v[1] * n[0] + v[0];
 			auto actual = som::rad_compress(v, n);
 
 			Assert::AreEqual(expected, actual);
 		}
 
-		TEST_METHOD(som_RadConv_inf_to_n)
+		TEST_METHOD(som_RadConv_extract)
 		{
 			std::vector<int> v = oven::initial_values(2,3,5);
 
 			std::vector<int> n = oven::initial_values(7,7,7);
 			int x = v[2] * n[1] * n[0] + v[1] * n[0] + v[0];
+
+			som::set_rad_map(n);
 
 			auto& expected = v;
 			auto actual = som::rad_extract(x, n);
@@ -288,10 +293,12 @@ namespace VSTest
 
 		TEST_METHOD(som_Quad_neighbor)
 		{
+
 			auto const vec = [](int x, int y){
 				std::vector<int> ret = oven::initial_values(x, y);
 				return ret;
 			};
+			som::set_rad_map(vec(7, 7));
 			
 			std::vector<int> dim = vec(7, 7);
 			{

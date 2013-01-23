@@ -53,6 +53,21 @@ namespace yuh
 {
 	using namespace boost::adaptors;
 	namespace oven = pstade::oven;
+
+	struct hash_int_vector
+	{
+		inline size_t operator()(std::vector<int>const& v)
+		{
+			return boost::accumulate(
+				v,
+				0U,
+				[](size_t h, int x){ boost::hash_combine(h, x); return h; }
+				);
+
+		}
+	};
+
+
 	/**
 	 * 自己組織化マップ
 	 * @param Input 入力ベクトル型
@@ -107,23 +122,22 @@ namespace yuh
 		 */
 		update update_;
 
-		struct hash_int_vector
-		{
-			size_t operator()(std::vector<int>const& v)
-			{
-				return boost::accumulate(
-					v,
-					0U,
-					[](size_t h, int x){ boost::hash_combine(h, x); return h; }
-					);
-
-			}
-		};
-
 		std::vector<std::vector<int>> extract_tbl_;
 
+		static std::unordered_map<
+			std::vector<int>, 
+			std::vector<std::vector<int>>,
+			hash_int_vector
+			> extract_map_;
+
 		std::unordered_map<std::vector<int>, int, hash_int_vector> compress_tbl_;
-		 
+
+		static std::unordered_map<
+			std::vector<int>,
+			std::unordered_map<std::vector<int>, int, hash_int_vector>,
+			hash_int_vector
+			> compress_map_;
+	 
 
 #pragma endregion
 	public:
@@ -175,22 +189,7 @@ namespace yuh
 			refs_.reserve(l);
 			std::generate_n(std::back_inserter(refs_), l, factory);
 
-
-			boost::for_each(
-				boost::irange(0, l),
-				[&](int n){
-					std::vector<int> ret;
-					ret.reserve(boost::distance(ref_dim_));
-					for ( auto b: ref_dim_ )
-					{
-						ret.push_back( n % b );
-						n /= b;
-					}
-
-					compress_tbl_[ret] = n;
-					extract_tbl_.push_back(ret);
-				}
-			);
+			set_rad_map(ref_dim_);
 		}
 #pragma endregion
 
@@ -201,19 +200,20 @@ namespace yuh
 		 * @param base 基数
 		 * @return 圧縮後整数
 		 */
-		template<typename Range, typename RangeB>
-		static int rad_compress(Range const& rng, RangeB const& base)
+		//template<typename Range, typename RangeB>
+		static int rad_compress(std::vector<int> const& rng, std::vector<int> const& base)
 		{
-			BOOST_CONCEPT_ASSERT(( boost::ForwardRangeConcept<Range> ));
-			BOOST_CONCEPT_ASSERT(( boost::ForwardRangeConcept<RangeB> ));
-			typedef boost::range_value<Range>::type value;
-			typedef boost::range_value<RangeB>::type base_type;
-			return boost::accumulate(
-				boost::combine(base, rng) | reversed, 0, 
-				[&](int ret, boost::tuple<base_type, value> x){
-					return ret * boost::get<0>(x) + boost::get<1>(x);
-				}
-			);
+			//BOOST_CONCEPT_ASSERT(( boost::ForwardRangeConcept<Range> ));
+			//BOOST_CONCEPT_ASSERT(( boost::ForwardRangeConcept<RangeB> ));
+			//typedef boost::range_value<Range>::type value;
+			//typedef boost::range_value<RangeB>::type base_type;
+			//return boost::accumulate(
+			//	boost::combine(base, rng) | reversed, 0, 
+			//	[&](int ret, boost::tuple<base_type, value> x){
+			//		return ret * boost::get<0>(x) + boost::get<1>(x);
+			//	}
+			//);
+			return compress_map_[base][rng];
 		}
 
 		/**
@@ -223,19 +223,51 @@ namespace yuh
 		 * @param len 配列長
 		 * @return 基数に応じたサイズlenのvector
 		 */
-		template<typename T, typename Range>
-		static std::vector<T> rad_extract(T n, Range const& base)
+		//template<typename T, typename Range>
+		static std::vector<int> rad_extract(int n, std::vector<int> const& base)
 		{
-			BOOST_CONCEPT_ASSERT(( std::is_integral<T> ));
-			std::vector<T> ret;
-			ret.reserve(boost::distance(base));
-			for ( auto b: base )
-			{
-				ret.push_back( n % b );
-				n /= b;
-			}
+			//BOOST_CONCEPT_ASSERT(( std::is_integral<T> ));
+			//std::vector<T> ret;
+			//ret.reserve(boost::distance(base));
+			//for ( auto b: base )
+			//{
+			//	ret.push_back( n % b );
+			//	n /= b;
+			//}
 
-			return ret;
+			//return ret;
+			auto ext = extract_map_[base];
+			return extract_map_[base][n];
+		}
+
+		static void set_rad_map(std::vector<int> const& ref_dim)
+		{
+			if(compress_map_.find(ref_dim) == compress_map_.end())
+			{
+				compress_map_[ref_dim] = 
+					typename std::identity<decltype(compress_map_)>::type::mapped_type();
+				extract_map_[ref_dim] = 
+					typename std::identity<decltype(extract_map_)>::type::mapped_type();
+				auto l = boost::accumulate(ref_dim, 1, std::multiplies<int>());
+
+				boost::for_each(
+					boost::irange(0, l),
+					[&](int n){
+						std::vector<int> ret;
+						int t = n;
+						ret.reserve(boost::distance(ref_dim));
+						for ( auto b: ref_dim )
+						{
+							ret.push_back( t % b );
+							t /= b;
+						}
+
+						compress_map_[ref_dim][ret] = n;
+						extract_map_[ref_dim].push_back(ret);
+
+					}
+				);
+			}
 		}
 
 	private:
@@ -256,7 +288,11 @@ namespace yuh
 		 */
 		static double euc_dist(Input const& input, Ref const& ref) 
 		{
-			return std::sqrt(boost::accumulate(boost::combine(input, ref), .0, euc_func()));
+			return 
+				// std::sqrt( //よく考えたらこれ余計じゃなかろうか
+				boost::accumulate(boost::combine(input, ref), .0, euc_func())
+				// )
+				;
 		}
 		/**
 		 * 近傍関数/矩形固定 二次元
@@ -363,15 +399,25 @@ namespace yuh
 		template<typename Range>
 		inline int rad_compress(Range const& rng)
 		{
-			return compress_tbl_[rng | boost::as_container];
-			//return rad_compress(rng, ref_dim_);
+			//return compress_tbl_[rng | boost::as_container];
+			return rad_compress(rng, ref_dim_);
 		}
 
-		template<typename T>
-		inline std::vector<T> rad_extract(T n)
+		//template<typename T>
+		//inline std::vector<T> rad_extract(T n)
+		std::vector<int> rad_extract(int n)
 		{
-			return extract_tbl_[n];
+			//return extract_tbl_[n];
 			//return rad_extract(n, ref_dim_);
+			return extract_map_[ref_dim_][n];
+		}
+
+		template<typename T, typename Distance>
+		typename std::vector<Ref>::iterator winner(T const& input, Distance d)
+		{
+			return boost::min_element(refs_, 
+				[&](Ref& x, Ref& y)->bool{return d(input, x) < d(input, y);}
+			);
 		}
 
 		/**
@@ -382,10 +428,8 @@ namespace yuh
 		typename std::vector<Ref>::iterator step(Input const& input)
 		{
 			using std::placeholders::_1;
-			auto m = boost::min_element(refs_, 
-				[&](Ref& x, Ref& y)->bool{return d_(input, x) < d_(input, y);}
-			);
-			auto index = std::distance(std::begin(refs_), m);
+			auto m = winner(input, d_);
+			int index = std::distance(std::begin(refs_), m);
 			auto pos = rad_extract(index);
 
 			// 近傍
@@ -396,7 +440,9 @@ namespace yuh
 				auto index = std::get<0>(t); //近傍のindex
 				auto rate = std::get<1>(t);//影響比率
 
-				refs_[index] = update_(refs_[index], rate, t_, input);
+				auto up = update_(refs_[index], rate, t_, input);
+				assert(refs_[index].size() == up.size());
+				refs_[index] = up;
 			}
 
 			t_++;
@@ -406,4 +452,25 @@ namespace yuh
 
 #pragma endregion
 	};
+
+	template<
+		typename Input,
+		typename Ref
+	>
+	std::unordered_map<
+		std::vector<int>, 
+		std::vector<std::vector<int>>,
+		hash_int_vector
+		> som<Input, Ref>::extract_map_;
+
+	template<
+		typename Input,
+		typename Ref
+	>
+	std::unordered_map<
+		std::vector<int>,
+		std::unordered_map<std::vector<int>, int, hash_int_vector>,
+		hash_int_vector
+		> som<Input, Ref>::compress_map_;
+
 }
