@@ -128,8 +128,8 @@ namespace VSTest
 				oven::initial_values(30, 30), 
 				[](){ return Ref(); }, 
 				[](Input const&, Ref const&){ return .0; },
-				[](int, int, std::vector<int>const&){ return std::vector<std::tuple<int, double>>(); },
-				[](Ref const&, double, int, Input const&){ return Ref(); }
+				[](int, uint64_t, std::vector<int>const&){ return std::vector<std::tuple<int, double>>(); },
+				[](Ref const&, double, uint64_t, Input const&){ return Ref(); }
 			);
 
 			Assert::AreEqual(900U, s.refs().size());
@@ -178,7 +178,7 @@ namespace VSTest
 				[](){ return Ref(); }, 
 				som::euc_dist,
 				som::rect_neighbor,
-				[](Ref const&, double, int, Input const&){ return Ref(); }
+				[](Ref const&, double, uint64_t, Input const&){ return Ref(); }
 			);
 			std::array<int,8> i = {{0,0,1,1,3,3,5,6}};
 			s.step(i);
@@ -190,7 +190,7 @@ namespace VSTest
 			Ref y = {{4,5,6,0,0,0,0}};
 
 			Assert::AreEqual(
-				std::sqrt(27),
+				27.0,
 				som::euc_dist(x, y),
 				.01
 				);
@@ -390,7 +390,7 @@ namespace VSTest
 							); 
 					},
 					colsom::quad_neighbor<1, 1, 20000>,
-					[](color const& col, double r, int t, color const& input){ return (col + (input - col) * r).normalize(); }
+					[](color const& col, double r, uint64_t t, color const& input){ return (col + (input - col) * r).normalize(); }
 				);
 
 				//html(s.refs());

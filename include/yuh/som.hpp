@@ -86,8 +86,8 @@ namespace yuh
 
 		typedef std::function<double(Input const&, Ref const&)> distance;
 		/** T => (index, rate) */
-		typedef std::function<std::vector<std::tuple<int, double>>(int, int, std::vector<int>const&)> neighbor;
-		typedef std::function<Ref(Ref const&, double, int, Input const&)> update;
+		typedef std::function<std::vector<std::tuple<int, double>>(int, uint64_t, std::vector<int>const&)> neighbor;
+		typedef std::function<Ref(Ref const&, double, uint64_t, Input const&)> update;
 
 	private:
 
@@ -95,7 +95,7 @@ namespace yuh
 		/**
 		 * 経過学習回数
 		 */
-		int t_;
+		uint64_t t_;
 
 		/**
 		 * 参照ベクトルリスト
@@ -300,7 +300,7 @@ namespace yuh
 		 * @param T ターン数(未使用
 		 * @return 矩形範囲
 		 */
-		static std::vector<std::tuple<int, double>> rect_neighbor(int winner, int T, std::vector<int> const& dim)
+		static std::vector<std::tuple<int, double>> rect_neighbor(int winner, uint64_t T, std::vector<int> const& dim)
 		{ 
 			double const angle = .05;
 			double const touched = .1;
@@ -366,8 +366,76 @@ namespace yuh
 		 * @param T ターン数(未使用
 		 * @return 矩形範囲
 		 */
+		static std::vector<std::tuple<int, double>> rect_neighbor_ex(int winner, uint64_t t, std::vector<int> const& dim)
+		{ 
+			double rate = 1/std::sqrt(t+1);
+
+			double angle = .2 * rate;
+			double touched = .28 * rate;
+			double just = .4 * rate;
+
+			auto const vec = [](int x, int y){
+				std::vector<int> ret = oven::initial_values(x, y);
+				return ret;
+			};
+
+			// 勝者
+			std::vector<int> pos = rad_extract(winner, dim);
+
+			std::vector<std::tuple<int, double>> ret =
+				  boost::irange(-1, 2) 
+				| iorate::product(boost::irange(-1, 2))									// (x, y)の列
+				| transformed([&](boost::tuple<int, int> t)
+				{ 
+					return vec(boost::get<0>(t),  boost::get<1>(t)); 	
+				} )					// vectorに変換
+				| transformed([=](std::vector<int> v)
+				{
+					double rate = .0;
+					switch (boost::accumulate(v | transformed([](int i){return i*i;}), 0))
+					{
+					case 0: rate = just;    break;
+					case 1: rate = touched; break;
+					case 2: rate = angle;   break;
+					default: throw std::exception("rect_neighbor 矩形範囲外");
+					}
+					return std::make_tuple(v, rate);
+				} )						// rateを付与
+				| transformed([&](std::tuple<std::vector<int>, double> t) 
+				{
+					auto v = std::get<0>(t);
+					boost::for_each(boost::combine(v, pos),
+						[](boost::tuple<int&, int> s) {
+							boost::get<0>(s) += boost::get<1>(s);
+						});
+					return std::make_tuple(v, std::get<1>(t));
+				} )	// 勝者ノード中心に移動
+				| filtered([&](std::tuple<std::vector<int>, double> t)
+				{
+					auto& v = std::get<0>(t);
+					return boost::algorithm::all_of(
+						boost::combine(v, dim),
+						[](boost::tuple<int, int> s) {
+							return 0 <= boost::get<0>(s) && boost::get<0>(s) < boost::get<1>(s);
+						});
+				} )		// 範囲外カット 
+				| transformed([&](std::tuple<std::vector<int>, double> t) 
+				{
+					return std::make_tuple(rad_compress(std::get<0>(t), dim), std::get<1>(t));
+				} )	// 座標表現圧縮
+				| boost::as_container;
+
+			return ret;
+		}
+
+		/**
+		 * 近傍関数/矩形固定 二次元
+		 * @param winner 勝者ノードのインデックス
+		 * @param T ターン数(未使用
+		 * @return 矩形範囲
+		 */
 		template<size_t c_n, size_t c_d, size_t T>
-		static std::vector<std::tuple<int, double>> quad_neighbor(int winner, int t, std::vector<int> const& dim)
+		static std::vector<std::tuple<int, double>> quad_neighbor(int winner, uint64_t t, std::vector<int> const& dim)
 		{
 			static_assert( c_d > 0, "c_d requires to be > 0: quad_neighbor");
 			static const double c = static_cast<double>(c_n) / c_d;

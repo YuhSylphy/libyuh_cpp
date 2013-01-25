@@ -97,6 +97,7 @@
     <ClInclude Include="..\include\yuh\fibonacci.hpp" />
     <ClInclude Include="..\include\yuh\logger.h" />
     <ClInclude Include="..\include\yuh\math.hpp" />
+    <ClInclude Include="..\include\yuh\moving_average.hpp" />
     <ClInclude Include="..\include\yuh\polygonal.hpp" />
     <ClInclude Include="..\include\yuh\prime.h" />
     <ClInclude Include="..\include\yuh\selection.hpp" />
